@@ -1,2 +1,3 @@
-# zola-themes-collection
-[WIP] A curated directory of themes for Zola to choose from.
+# Zola Themes Collection
+
+[A curated directory of themes for Zola](https://salif.github.io/zola-themes-collection/)
