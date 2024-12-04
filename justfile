@@ -145,6 +145,7 @@ gh-pages:
 	{{ just }} demo-build-all data-update demo-remove-gitignore
 	if test -d docs; then {{ rm }} -rf docs; fi;
 	{{ zola }} build -o docs
+	printf '' > docs/.nojekyll
 	{{ git }} add ./docs/ ./static/demo/ ./static/screenshots/
 	{{ git }} merge --continue
 	{{ git }} push
