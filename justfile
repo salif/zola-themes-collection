@@ -48,10 +48,7 @@ demo-build path url=demo_url:
 	if test -d ZTC_PUBLIC; then {{ rm }} -rf ZTC_PUBLIC; fi
 	if test -d "${ZTC_DEMO}"; then {{ rm }} -rf "${ZTC_DEMO}"; fi 
 	if {{ zola }} build -u "{{ url }}/${ZTC_DEMO_NAME}/" -o ZTC_PUBLIC
-	then
-		printf '*' > "ZTC_PUBLIC/.gitignore"
-		mv ZTC_PUBLIC "${ZTC_DEMO}"
-	fi
+	then mv ZTC_PUBLIC "${ZTC_DEMO}"; fi
 	{{ rm }} -rf ZTC_PUBLIC
 
 [group('build')]
@@ -133,20 +130,22 @@ submodule-update-all:
 	{{ git }} submodule update --remote --merge
 
 [group('push')]
-demo-remove-gitignore:
-	find static/demo -mindepth 1 -maxdepth 1 -type d | xargs -I {} \
-		sh -c "{{ rm }} -f '{}/.gitignore'"
+fix-docs-dir:
+	find docs/demo -mindepth 1 -maxdepth 1 -type d | xargs -I {} \
+		sh -c "if test -f '{}/robots.txt'; then {{ rm }} -f '{}/robots.txt'; fi;"
+	printf '' > docs/.nojekyll
 
 [group('push'), confirm]
 gh-pages:
 	{{ git }} diff --cached --quiet
 	{{ git }} switch gh-pages
 	{{ git }} merge main -X theirs --no-commit
-	{{ just }} demo-build-all data-update demo-remove-gitignore
-	if test -d docs; then {{ rm }} -rf docs; fi;
+	{{ just }} demo-build-all data-update
+	{{ rm }} -rf docs
 	{{ zola }} build -o docs
-	printf '' > docs/.nojekyll
-	{{ git }} add ./docs/ ./static/demo/ ./static/screenshots/
+	{{ just }} fix-docs-dir
+	{{ git }} add ./docs
 	{{ git }} merge --continue
 	{{ git }} push
+	{{ rm }} -rf docs
 	{{ git }} switch -
