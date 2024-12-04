@@ -4,7 +4,8 @@
 
 ## Theme requirements
 
-- `config.toml` file
+- have a `config.toml` file
+- have a `theme.toml` file
 - no commited `public` directory
-- no `load_data` using `public` or `.git/HEAD` directories
-- commits after `2024-08-01`
+- no `load_data` from `public` or `.git/HEAD`
+- have commits after `2024-08-01`
