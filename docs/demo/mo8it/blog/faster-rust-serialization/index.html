@@ -11,30 +11,30 @@
 
         <link rel="icon"
               type="image/x-icon"
-              href="data-update/mo8it/images/logo.svg?v=1733357250">
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg?v=1733358224">
 
-        <link href="data-update/mo8it/main.css?v=1733357250"
+        <link href="https://salif.github.io/zola-themes-collection/demo/mo8it/main.css?v=1733358224"
               rel="stylesheet">
 
         <link rel="alternate"
               type="application/atom+xml"
               title="Blog | mo8it.com"
-              href="data-update/mo8it/atom.xml">
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it/atom.xml">
 
         <meta property="og:title" content="Faster Rust Serialization">
         <meta property="og:description" content="How to speed up serialization in Rust by more than 2x">
         <meta property="og:image"
-              content="data-update/mo8it/images/logo.svg?v=1733357250">
-        <meta property="og:url" content="data-update/mo8it/blog/faster-rust-serialization/">
+              content="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg?v=1733358224">
+        <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/">
     </head>
 
     <body class="flex flex-col p-3 mx-auto min-h-screen text-lg text-gray-100 break-words bg-gray-900 lg:px-5 2xl:container">
         <header class="flex gap-x-6 items-center py-2 px-2.5 mb-1 bg-gray-800 rounded-full">
             <a class="transition duration-500 hover:scale-110"
-               href="data-update/mo8it"
+               href="https://salif.github.io/zola-themes-collection/demo/mo8it"
                aria-hidden="true">
                 <img class="m-0 w-12 h-12 rounded-full"
-                     src="data-update/mo8it/images/logo.svg"
+                     src="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg"
                      alt="">
             </a>
 
@@ -59,7 +59,7 @@
     <div class="mt-2 mb-4 text-sm leading-normal text-gray-300">
         <time datetime="2023-10-25">2023-10-25</time><time datetime="2023-10-26">, updated: 2023-10-26</time><p class="my-0">
             Tags:
-            <a href="data-update/mo8it/tags/rust">#rust</a></p>
+            <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/tags/rust">#rust</a></p>
 
         <p class="my-0">Reading time: ~12min</p>
 
@@ -99,43 +99,43 @@ You are already wasting much less resources by using Rust instead of a language 
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#the-problem">The problem</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#the-problem">The problem</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#implementing-serialize">Implementing Serialize</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#implementing-serialize">Implementing Serialize</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#get-used-to-it">Get used to it</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#get-used-to-it">Get used to it</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#formatters">Formatters</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#formatters">Formatters</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#sequence-formatters">Sequence formatters</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#sequence-formatters">Sequence formatters</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#when-to-use-formatters">When to use formatters</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#when-to-use-formatters">When to use formatters</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#outlook">Outlook</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#outlook">Outlook</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#conclusion">Conclusion</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#conclusion">Conclusion</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/faster-rust-serialization/#appendix">Appendix</a>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#appendix">Appendix</a>
                                     <ul class="my-0 ml-5 list-none">
                                         
                                             
-                                                <li><a class="text-base" href="data-update/mo8it/blog/faster-rust-serialization/#benchmarking-strategy">Benchmarking strategy</a></li>
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/#benchmarking-strategy">Benchmarking strategy</a></li>
                                             
                                         
                                     </ul>
@@ -232,7 +232,7 @@ But the derived default implementation would serialize an instance to the follow
 </span></code></pre>
 <p>Let's benchmark both methods!</p>
 <p>The following line chart shows the ratio of the time that <code>naive</code> takes to serialize <code>N</code> names in comparison with <code>manual_serialize</code>:</p>
-<p><img src="data-update/mo8it/blog/faster-rust-serialization/speedup.svg" alt="The speedup from the benchmark results" /></p>
+<p><img src="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/speedup.svg" alt="The speedup from the benchmark results" /></p>
 <p>We get a speedup between 1.25x and <strong>2.25x</strong> 🚀</p>
 <p>The speedup depends on the number of names <code>N</code>.
 There is a tendency of higher speedups for higher <code>N</code> values.</p>
@@ -326,7 +326,7 @@ The important thing is that <code>Arguments</code> implements <code>Display</cod
 </span></code></pre>
 <p>We map each <code>&amp;Name</code> to <code>FullNameFormatter(&amp;Name)</code> and collect the map into a vector which is then passed to the serializer.</p>
 <p>Check out the benchmark results in the chart below to see that this method has almost the same performance as the one before:</p>
-<p><img src="data-update/mo8it/blog/faster-rust-serialization/time.svg" alt="The time of every method from the benchmark results" /></p>
+<p><img src="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/time.svg" alt="The time of every method from the benchmark results" /></p>
 <p>There is no real performance difference because wrapper types are a zero cost abstraction in Rust.</p>
 <p>But actually, there should be an additional cost not related to the wrapper type itself.
 If you zoom into the chart above, you should see that this method has slightly worse performance than <code>manual_serialize</code> for low <code>N</code> values 😱</p>
@@ -426,7 +426,7 @@ But the results for low values were good!</p>
 This means that I had to try the next dependency in the exponent which is a quadratic one: <code>2^((20 - log2(N))^2 / 20)</code>.
 The division through 20 keeps the value for <code>log2(N) = 0</code> unchanged in comparison with the linear dependency.
 You can see the shape of both formulas in the chart below:</p>
-<p><img src="data-update/mo8it/blog/faster-rust-serialization/bench_iterations.svg" alt="A chart showing the number of benchmark iterations over the number of names N" /></p>
+<p><img src="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/faster-rust-serialization/bench_iterations.svg" alt="A chart showing the number of benchmark iterations over the number of names N" /></p>
 <p>Of course, the exponent has to be an integer to get an integer for the number of iterations.
 Therefore, the division in the exponent is an integer division and its result is also visualized in the chart above.</p>
 <p>This strategy resulted in times in the range of millisconds for all values of <code>N</code> and the huge randomness was eliminated.
@@ -444,13 +444,13 @@ Of course, I divided the time through the number of iterations for each <code>N<
             
     
     <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
-       href="data-update/mo8it/blog/privacy/">Next post: Killing in the name of Privacy<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">How an AD blocker killed my work of months and how is this related to telemetry in FOSS</span></a>
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/privacy/">Next post: Killing in the name of Privacy<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">How an AD blocker killed my work of months and how is this related to telemetry in FOSS</span></a>
 
 
             
     
     <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
-       href="data-update/mo8it/blog/teaching-rust/">Previous post: Teaching Rust in 5 days<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">Can you learn Rust in 5 days? And how was my experience teaching Rust at my university?</span></a>
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/teaching-rust/">Previous post: Teaching Rust in 5 days<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">Can you learn Rust in 5 days? And how was my experience teaching Rust at my university?</span></a>
 
 
         </nav>
@@ -469,7 +469,7 @@ Of course, I divided the time through the number of iterations for each <code>N<
 
         <footer class="pt-2 pb-3 mt-auto">
             <img class="m-0 mx-auto w-20 h-20"
-                 src="data-update/mo8it/images/happy_ferris.svg"
+                 src="https://salif.github.io/zola-themes-collection/demo/mo8it/images/happy_ferris.svg"
                  alt="">
 
             <nav class="flex flex-col gap-y-3 justify-around py-3 text-center bg-gray-800 rounded sm:flex-row sm:rounded-full">

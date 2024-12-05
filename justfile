@@ -139,8 +139,9 @@ fix-docs-dir:
 gh-pages:
 	{{ git }} diff --cached --quiet
 	{{ git }} switch gh-pages
-	{{ git }} merge main -X theirs --no-commit
-	{{ just }} demo-build-all data-update
+	{{ git }} merge main -X theirs --no-ff --no-commit
+	{{ just }} demo-build-all
+	{{ just }} data-update
 	{{ rm }} -rf docs
 	{{ zola }} build -o docs
 	{{ just }} fix-docs-dir

@@ -11,30 +11,30 @@
 
         <link rel="icon"
               type="image/x-icon"
-              href="data-update/mo8it/images/logo.svg?v=1733357250">
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg?v=1733358224">
 
-        <link href="data-update/mo8it/main.css?v=1733357250"
+        <link href="https://salif.github.io/zola-themes-collection/demo/mo8it/main.css?v=1733358224"
               rel="stylesheet">
 
         <link rel="alternate"
               type="application/atom+xml"
               title="Blog | mo8it.com"
-              href="data-update/mo8it/atom.xml">
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it/atom.xml">
 
         <meta property="og:title" content="SQLx integration in Axum">
         <meta property="og:description" content="How to integrate SQLx in an Axum backend to interact with a database">
         <meta property="og:image"
-              content="data-update/mo8it/images/logo.svg?v=1733357250">
-        <meta property="og:url" content="data-update/mo8it/blog/sqlx-integration-in-axum/">
+              content="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg?v=1733358224">
+        <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/">
     </head>
 
     <body class="flex flex-col p-3 mx-auto min-h-screen text-lg text-gray-100 break-words bg-gray-900 lg:px-5 2xl:container">
         <header class="flex gap-x-6 items-center py-2 px-2.5 mb-1 bg-gray-800 rounded-full">
             <a class="transition duration-500 hover:scale-110"
-               href="data-update/mo8it"
+               href="https://salif.github.io/zola-themes-collection/demo/mo8it"
                aria-hidden="true">
                 <img class="m-0 w-12 h-12 rounded-full"
-                     src="data-update/mo8it/images/logo.svg"
+                     src="https://salif.github.io/zola-themes-collection/demo/mo8it/images/logo.svg"
                      alt="">
             </a>
 
@@ -59,7 +59,7 @@
     <div class="mt-2 mb-4 text-sm leading-normal text-gray-300">
         <time datetime="2023-05-29">2023-05-29</time><p class="my-0">
             Tags:
-            <a href="data-update/mo8it/tags/rust">#rust</a><span class="pr-1.5">,</span><a href="data-update/mo8it/tags/axum">#axum</a><span class="pr-1.5">,</span><a href="data-update/mo8it/tags/web">#web</a><span class="pr-1.5">,</span><a href="data-update/mo8it/tags/database">#database</a></p>
+            <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/tags/rust">#rust</a><span class="pr-1.5">,</span><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/tags/axum">#axum</a><span class="pr-1.5">,</span><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/tags/web">#web</a><span class="pr-1.5">,</span><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/tags/database">#database</a></p>
 
         <p class="my-0">Reading time: ~7min</p>
 
@@ -70,12 +70,12 @@
 
         <p>SQLx is an awesome crate for interacting with databases in Rust with compile time checks.
 In this blog post, we will learn how to use it in an Axum backend to store and retrieve data from a database.</p>
-<p>The example will be storing submitted contact forms from the <a href="data-update/mo8it/blog/getting-started-with-rust-backends/">previous post about Axum</a>.</p>
+<p>The example will be storing submitted contact forms from the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/getting-started-with-rust-backends/">previous post about Axum</a>.</p>
 <p>During the SQLx integration, we will learn about states and returning JSON in Axum.</p>
 <span id="continue-reading"></span><div class="rounded-xl bg-yellow-400/20">
     <div class="px-2 pt-2 pb-1 my-3 text-white">
         <p class="font-bold">⚠️ Warning ⚠️</p>
-        <p>This blog post builds on the <a href="data-update/mo8it/blog/getting-started-with-rust-backends/">post about Axum</a> and the <a href="data-update/mo8it/blog/sqlx-interacting-with-databases-in-rust/">post about SQLx</a>. <strong>Read both of them first before continuing!</strong> 🤓</p>
+        <p>This blog post builds on the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/getting-started-with-rust-backends/">post about Axum</a> and the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-interacting-with-databases-in-rust/">post about SQLx</a>. <strong>Read both of them first before continuing!</strong> 🤓</p>
 
     </div>
 </div>
@@ -92,19 +92,19 @@ In this blog post, we will learn how to use it in an Axum backend to store and r
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#base-project">Base project</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#base-project">Base project</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#sqlx-preparation">SQLx preparation</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#sqlx-preparation">SQLx preparation</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#dependencies">Dependencies</a>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#dependencies">Dependencies</a>
                                     <ul class="my-0 ml-5 list-none">
                                         
                                             
-                                                <li><a class="text-base" href="data-update/mo8it/blog/sqlx-integration-in-axum/#imports">Imports</a></li>
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#imports">Imports</a></li>
                                             
                                         
                                     </ul>
@@ -112,19 +112,19 @@ In this blog post, we will learn how to use it in an Axum backend to store and r
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#states">States</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#states">States</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#inserting-into-the-database">Inserting into the database</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#inserting-into-the-database">Inserting into the database</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#reading-from-the-database">Reading from the database</a></li>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#reading-from-the-database">Reading from the database</a></li>
                         
                     
                         
-                            <li><a href="data-update/mo8it/blog/sqlx-integration-in-axum/#summary">Summary</a>
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-integration-in-axum/#summary">Summary</a>
                                     <ul class="my-0 ml-5 list-none">
                                         
                                             
@@ -146,12 +146,12 @@ In a real project, you should do <strong>proper error handling!</strong></p>
 <p>I will assume that you are familiar with the first few chapters of <a href="https://doc.rust-lang.org/stable/book">the Rust book</a> and know the basics of async Rust with <code>tokio</code>.</p>
 <h2 id="base-project"><a class="text-white no-underline transition-none hover:underline"
    href="#base-project">Base project</a></h2>
-<p>The example extends the small Axum backend built in the <a href="data-update/mo8it/blog/getting-started-with-rust-backends/">blog post about Axum</a>.
+<p>The example extends the small Axum backend built in the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/getting-started-with-rust-backends/">blog post about Axum</a>.
 Use the <a href="https://codeberg.org/mo8it/blog_demos/src/branch/main/getting-started-with-rust-backends"><strong>code of that post</strong></a> as a starting point.</p>
 <p>You can clone the whole repository and start extending in the <code>getting-started-with-rust-backends</code> directory.</p>
 <h2 id="sqlx-preparation"><a class="text-white no-underline transition-none hover:underline"
    href="#sqlx-preparation">SQLx preparation</a></h2>
-<p><strong>The steps in this section are analogous to the <a href="data-update/mo8it/blog/sqlx-interacting-with-databases-in-rust/">blog post about SQLx</a> where they are explained properly.</strong></p>
+<p><strong>The steps in this section are analogous to the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-interacting-with-databases-in-rust/">blog post about SQLx</a> where they are explained properly.</strong></p>
 <p>First, run a PostgreSQL database <code>postgres</code> at the host <code>127.0.0.1</code> (localhost) on port <code>5432</code> with the username <code>postgres</code> and the password <code>CHANGE_ME</code>.</p>
 <p>Now, tell SQLx how to connect to the database by storing the following environment variable in the file <code>.env</code>:</p>
 <pre style="background-color:#212733;color:#ccc9c2;"><code><span>DATABASE_URL=postgresql://postgres:CHANGE_ME@127.0.0.1:5432/postgres
@@ -236,7 +236,7 @@ It has to implement <code>Clone</code> because Axum clones it for every handler 
 </span><span>    }
 </span><span>}
 </span></code></pre>
-<p>The constructor adds the variable <code>DATABASE_URL</code> from the <code>.env</code> file to the environment variables and creates the pool as described in the <a href="data-update/mo8it/blog/sqlx-interacting-with-databases-in-rust/">post about SQLx</a>.</p>
+<p>The constructor adds the variable <code>DATABASE_URL</code> from the <code>.env</code> file to the environment variables and creates the pool as described in the <a href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-interacting-with-databases-in-rust/">post about SQLx</a>.</p>
 <p>Our state is almost ready...</p>
 <p>Did you ask yourself why the struct is called <code>AppStateInner</code>? 🤔</p>
 <p>We have said that a state has to implement <code>Clone</code>, but our struct does not implement it yet!</p>
@@ -377,13 +377,13 @@ The handler <code>index</code> in our example stays untouched.</p>
             
     
     <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
-       href="data-update/mo8it/blog/rust-vs-julia/">Next post: Rust vs Julia in scientific computing<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">Does Julia solve the two-language problem and when should you use Rust instead?</span></a>
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/rust-vs-julia/">Next post: Rust vs Julia in scientific computing<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">Does Julia solve the two-language problem and when should you use Rust instead?</span></a>
 
 
             
     
     <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
-       href="data-update/mo8it/blog/sqlx-interacting-with-databases-in-rust/">Previous post: SQLx - Interacting with databases in Rust<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">How to interact with databases in Rust with SQLx</span></a>
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it/blog/sqlx-interacting-with-databases-in-rust/">Previous post: SQLx - Interacting with databases in Rust<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">How to interact with databases in Rust with SQLx</span></a>
 
 
         </nav>
@@ -402,7 +402,7 @@ The handler <code>index</code> in our example stays untouched.</p>
 
         <footer class="pt-2 pb-3 mt-auto">
             <img class="m-0 mx-auto w-20 h-20"
-                 src="data-update/mo8it/images/happy_ferris.svg"
+                 src="https://salif.github.io/zola-themes-collection/demo/mo8it/images/happy_ferris.svg"
                  alt="">
 
             <nav class="flex flex-col gap-y-3 justify-around py-3 text-center bg-gray-800 rounded sm:flex-row sm:rounded-full">
