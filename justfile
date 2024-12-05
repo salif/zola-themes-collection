@@ -133,6 +133,7 @@ submodule-update-all:
 fix-docs-dir:
 	find docs/demo -mindepth 1 -maxdepth 1 -type d | xargs -I {} \
 		sh -c "if test -f '{}/robots.txt'; then {{ rm }} -f '{}/robots.txt'; fi;"
+	{{ rm }} -f docs/screenshots/.gitignore
 	printf '' > docs/.nojekyll
 
 [group('push'), confirm]
