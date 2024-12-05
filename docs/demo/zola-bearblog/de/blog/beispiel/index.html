@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wortbergen | Zola ʕ•ᴥ•ʔ Bear Blog</title>
+  <meta name="title" content="Wortbergen">
+<meta name="description" content="Ein Zola-theme basiert auf Bear Blog.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>
+    :root {
+    --width: 800px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  nav span.active {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  pre code {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+  /* blog post list */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+  .tags {
+    font-size: smaller;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="lang" aria-label="Sprache">
+        <a href="data-update/zola-bearblog/blog/beispiel/" hreflang="en" lang="en">English</a>
+        <span class="active">Deutsch</span>
+  </nav>
+  <a href="data-update/zola-bearblog/de/" class="title">
+    <h1>Zola ʕ•ᴥ•ʔ Bear Blog</h1>
+  </a>
+  <nav aria-label="Site">
+      <a href="data-update/zola-bearblog/de/">Startseite</a>
+      <a href="data-update/zola-bearblog/de/bear/">Bear</a>
+      <a href="data-update/zola-bearblog/de/zola/">Zola</a>
+      <a href="data-update/zola-bearblog/de/blog/">Blog</a>
+  </nav>
+</header>
+<h1>Wortbergen</h1>
+      <p>
+        <i>
+          <time datetime="2024-08-18T00:00:00+00:00" pubdate>2024-08-18</time>
+        </i>
+      </p>
+  <main>
+    <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien
+und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in
+Buchstabhausen an der Küste des Semantik, eines großen
+Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort
+und versorgt sie mit den nötigen Regelialien.</p>
+<p>Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in
+den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion
+werden die Blindtexte beherrscht – ein geradezu unorthographisches
+Leben.</p>
+<p>Eines Tages aber beschloß eine kleine Zeile Blindtext, ihr Name war
+Lorem Ipsum, hinaus zu gehen in die weite Grammatik. Der große Oxmox
+riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden
+Fragezeichen und hinterhältigen Semikoli, doch das Blindtextchen ließ
+sich nicht beirren.</p>
+<p>Es packte seine sieben Versalien, schob sich sein Initial in den
+Gürtel und machte sich auf den Weg. Als es die ersten Hügel des
+Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf
+die Skyline seiner Heimatstadt Buchstabhausen, die Headline von
+Alphabetdorf und die Subline seiner eigenen Straße, der
+Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange,
+dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. Die Copy
+warnte das Blindtextchen, da, wo sie herkäme wäre sie</p>
+
+  </main>
+  <p>
+        Tags:
+          <a href="data-update/zola-bearblog/de/tags/test/">#test</a>
+  </p>
+<footer>
+    Erstellt mit <a href="https://codeberg.org/alanpearce/zola-bearblog">Zola ʕ•ᴥ•ʔ Bear</a>
+</footer>
+</body>
+</html>

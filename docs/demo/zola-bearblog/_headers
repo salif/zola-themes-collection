@@ -1,0 +1,13 @@
+# This _headers file is used to set headers on cloudflare pages: https://developers.cloudflare.com/pages/configuration/headers/
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy (disabled everything except autoplay, local-fonts, screen-wake-lock, speaker-selection)
+# opt out of Federated Learning of Cohorts (aka "FLoC") - https://amifloced.org/
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=63072000; includeSubdomains
+  Permissions-Policy: interest-cohort=(), accelerometer=(), ambient-light-sensor=(), battery=(), bluetooth=(), browsing-topics=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), serial=(), storage-access=(), sync-xhr=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()
+  Content-Security-Policy: default-src 'none'; img-src 'self'; object-src 'none'; script-src 'none'; style-src 'sha256-p5EfRIhWJi7Zh7WJil3mpIVCZvcu+zebWbMe6B0so8A='; form-action 'none'; base-uri 'self'; frame-ancestors 'none'
+  Cross-Origin-Resource-Policy: same-site
+  Cache-Control: max-age=300, s-maxage=86400, stale-while-revalidate

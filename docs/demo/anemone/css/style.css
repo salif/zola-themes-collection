@@ -1,0 +1,105 @@
+#nav-bar {
+  padding: .625rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  gap: .25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end
+}
+
+#footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accent-data {
+  color: var(--accent);
+}
+
+.theme-transition {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.tags-data {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-end
+}
+
+.title-list li {
+  margin-bottom: .375rem;
+}
+
+/* icons settings */
+.icons {
+  width: 1.3rem;
+  height: 1.3rem;
+  aspect-ratio: 1/1;
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--text);
+  fill: var(--text);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icons:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+/* footnotes */
+.footnote-definition {
+  margin: 0 0 0 .125rem;
+}
+
+.footnote-definition-label {
+  color: var(--accent);
+}
+
+.footnote-definition p {
+  display: inline;
+  margin: .625rem 0 0 .625rem;
+}
+
+/* general classes */
+.no-style {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0
+}
+
+.no-style:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.center {
+  text-align: center;
+}
+
+.center img {
+  display: block;
+  margin: 1rem auto;
+}
+
+.float-right {
+  float: right
+}
+
+.float-left {
+  float: left
+}
+
+/* shortcodes css */
+.webring {
+  margin: .375rem;
+}

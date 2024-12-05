@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Foundation for Advanced Research on Trantor">
+  <meta property="og:description" content>
+  <meta property="og:url" content="data-update/researchlab/">
+  <meta property="og:site_name" content="Foundation for Advanced Research on Trantor">
+  <title>Foundation for Advanced Research on Trantor</title>
+  <link rel="icon" type="image/svg+xml" href="data-update/researchlab/img/favicon.jpg">
+  <link rel="stylesheet" href="data-update/researchlab/css/tailwind.min.css">
+  <link rel="stylesheet" href="data-update/researchlab/css/typography.min.css">
+  <link rel="stylesheet" href="data-update/researchlab/css/main.css">
+  <script defer src="data-update/researchlab/js/diagram/mermaid.min.js" integrity="sha384-6YRSKOSMk3x6Bn7ihZ903Mt9EwSxoy5KrU1CkzT3d+j0C/qKp0DFgG4lKsnqH1Nm"></script>
+  <script defer src="data-update/researchlab/js/diagram/mermaid-config.js" integrity="sha384-a2dvU77ShDwnty4gFDSjoOf0XwhvkFWC40MdpQWNfbFljoJNaGFYCpamXrQqClO1"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="fixed top-0 left-0 w-full shadow z-50" style="background-color: #000000;">
+	<nav class="mx-auto flex max-w-screen-2xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+		<div class="flex items-center">
+			<a href="https:&#x2F;&#x2F;codeberg.org&#x2F;plaublin&#x2F;researchlab" target="_blank" class="-m-1.5 p-1.5">
+				<img class="h-10 w-auto" src="data-update/researchlab/img/logo.jpg" alt="Trantor University">
+			</a>
+			<div class="border-l h-8 mx-4" style="border-color: #666;"></div>
+			<a id="menu-title" class="block font-semibold w-48" style="color: #ffffff;">Foundation for Advanced Research on Trantor</a>
+		</div>
+
+
+		<!-- Mobile menu, show/hide based on menu open state. -->
+		<div class="flex lg:hidden">
+			<button type="button" id="mobile-menu-open" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5" style="background-color: #d7083b; color: #ffffff">
+				<span class="sr-only">Open main menu</span>
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
+		</div>
+		<div class="hidden lg:flex lg:gap-x-12">
+			
+				
+					<a id="menu-top" class="text-sm/6 font-semibold" style="color: #ffffff;">Top</a>
+				
+			
+				
+					<div class="relative">
+						<button id="about-research-laboratory-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							About Us
+							<svg id="about-research-laboratory-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="about-research-laboratory-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-about" class="block font-semibold" style="color: #ffffff;">
+												About
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-organization" class="block font-semibold" style="color: #ffffff;">
+												Organization
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-public-research-fraud-prevention" class="block font-semibold" style="color: #ffffff;">
+												Public research fraud prevention
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<a id="menu-members" class="text-sm/6 font-semibold" style="color: #ffffff;">Members</a>
+				
+			
+				
+					<div class="relative">
+						<button id="activities-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							Activities
+							<svg id="activities-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="activities-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-projects" class="block font-semibold" style="color: #ffffff;">
+												Projects
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-publications" class="block font-semibold" style="color: #ffffff;">
+												Publications
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-oss-poc" class="block font-semibold" style="color: #ffffff;">
+												OSS &#x2F; PoC
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-seminars" class="block font-semibold" style="color: #ffffff;">
+												Seminars
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<div class="relative">
+						<button id="career-internship-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							Career &#x2F; Internship
+							<svg id="career-internship-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="career-internship-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-researcher" class="block font-semibold" style="color: #ffffff;">
+												Researcher
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-postdoctoral-researcher" class="block font-semibold" style="color: #ffffff;">
+												Postdoctoral researcher
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-internship" class="block font-semibold" style="color: #ffffff;">
+												Internship
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-part-time" class="block font-semibold" style="color: #ffffff;">
+												Part-time
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<a id="menu-news" class="text-sm/6 font-semibold" style="color: #ffffff;">News</a>
+				
+			
+		</div>
+		<div class="hidden lg:flex lg:flex-2 lg:justify-end">
+			<div class="flex space-x-1 p-1 rounded-full w-32" style="background-color: #666;" id="language-toggle">
+				<button id="ja-btn" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">日本語</button>
+				<button id="en-btn" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">English</button>
+			</div>
+		</div>
+	</nav>
+
+	<div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+		<!-- Background backdrop, show/hide based on slide-over state. -->
+		<div class="fixed inset-0 z-10"></div>
+		<div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-4 py-4 sm:max-w-sm sm:ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center">
+					<a href="https:&#x2F;&#x2F;codeberg.org&#x2F;plaublin&#x2F;researchlab" target="_blank" class="-m-1.5 p-1.5">
+						<img class="h-10 w-auto" src="data-update/researchlab/img/logo.jpg" alt="Trantor University">
+					</a>
+					<div class="border-l h-8 mx-4" style="border-color: #666;"></div>
+					<a id="menu-title-mobile" class="block font-semibold w-64" style="color: #ffffff;">Foundation for Advanced Research on Trantor</a>
+				</div>
+				<button type="button" id="mobile-menu-close" class="-m-2.5 rounded-md p-2.5" style="background-color: #d7083b; color: #ffffff">
+					<span class="sr-only">Close menu</span>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
+			<div class="mt-6 flow-root">
+				<div class="-my-6 divide-y divide-gray-500/10">
+					<div class="space-y-2 py-6">
+						
+							
+								<a id="menu-mobile-top" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">Top</a>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="about-research-laboratory-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										About Us
+										<svg id="about-research-laboratory-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="about-research-laboratory-dropdown-mobile">
+										
+											<a id="menu-mobile-about" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">About</a>
+										
+											<a id="menu-mobile-organization" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Organization</a>
+										
+											<a id="menu-mobile-public-research-fraud-prevention" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Public research fraud prevention</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<a id="menu-mobile-members" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">Members</a>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="activities-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										Activities
+										<svg id="activities-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="activities-dropdown-mobile">
+										
+											<a id="menu-mobile-projects" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Projects</a>
+										
+											<a id="menu-mobile-publications" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Publications</a>
+										
+											<a id="menu-mobile-oss-poc" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">OSS &#x2F; PoC</a>
+										
+											<a id="menu-mobile-seminars" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Seminars</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="career-internship-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										Career &#x2F; Internship
+										<svg id="career-internship-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="career-internship-dropdown-mobile">
+										
+											<a id="menu-mobile-researcher" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Researcher</a>
+										
+											<a id="menu-mobile-postdoctoral-researcher" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Postdoctoral researcher</a>
+										
+											<a id="menu-mobile-internship" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Internship</a>
+										
+											<a id="menu-mobile-part-time" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Part-time</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<a id="menu-mobile-news" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">News</a>
+							
+						
+					</div>
+					<div class="py-6">
+						<div class="flex space-x-1 p-1 rounded-full w-32" style="background-color: #666;" id="language-toggle-mobile">
+							<button id="ja-btn-mobile" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">日本語</button>
+							<button id="en-btn-mobile" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">English</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	function langRoute(toRoute) {
+		let to = toRoute
+		if (toRoute === '/') {
+			to = ''
+		}
+		if ("en" === 'ja') {
+			return `data-update/researchlab//${to}`
+		} else {
+			return`data-update/researchlab//en/${to}`
+		}
+	}
+
+	const dropdownMenu = []
+	
+		
+		
+			document.getElementById('menu-top').href = langRoute('/')
+			document.getElementById('menu-mobile-top').href = langRoute('/')
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("about-research-laboratory-btn"),
+				dropdown: document.getElementById('about-research-laboratory-dropdown'),
+				icon: document.getElementById('about-research-laboratory-icon'),
+				btnMobile: document.getElementById("about-research-laboratory-btn-mobile"),
+				dropdownMobile: document.getElementById('about-research-laboratory-dropdown-mobile'),
+				iconMobile: document.getElementById('about-research-laboratory-icon-mobile')
+			})
+			
+				document.getElementById('menu-about').href = langRoute('about')
+				document.getElementById('menu-mobile-about').href = langRoute('about')
+			
+				document.getElementById('menu-organization').href = langRoute('organization')
+				document.getElementById('menu-mobile-organization').href = langRoute('organization')
+			
+				document.getElementById('menu-public-research-fraud-prevention').href = langRoute('public-research-fraud')
+				document.getElementById('menu-mobile-public-research-fraud-prevention').href = langRoute('public-research-fraud')
+			
+		
+		
+	
+		
+		
+			document.getElementById('menu-members').href = langRoute('members')
+			document.getElementById('menu-mobile-members').href = langRoute('members')
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("activities-btn"),
+				dropdown: document.getElementById('activities-dropdown'),
+				icon: document.getElementById('activities-icon'),
+				btnMobile: document.getElementById("activities-btn-mobile"),
+				dropdownMobile: document.getElementById('activities-dropdown-mobile'),
+				iconMobile: document.getElementById('activities-icon-mobile')
+			})
+			
+				document.getElementById('menu-projects').href = langRoute('projects')
+				document.getElementById('menu-mobile-projects').href = langRoute('projects')
+			
+				document.getElementById('menu-publications').href = langRoute('publications')
+				document.getElementById('menu-mobile-publications').href = langRoute('publications')
+			
+				document.getElementById('menu-oss-poc').href = langRoute('oss-poc')
+				document.getElementById('menu-mobile-oss-poc').href = langRoute('oss-poc')
+			
+				document.getElementById('menu-seminars').href = langRoute('seminars')
+				document.getElementById('menu-mobile-seminars').href = langRoute('seminars')
+			
+		
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("career-internship-btn"),
+				dropdown: document.getElementById('career-internship-dropdown'),
+				icon: document.getElementById('career-internship-icon'),
+				btnMobile: document.getElementById("career-internship-btn-mobile"),
+				dropdownMobile: document.getElementById('career-internship-dropdown-mobile'),
+				iconMobile: document.getElementById('career-internship-icon-mobile')
+			})
+			
+				document.getElementById('menu-researcher').href = langRoute('researcher')
+				document.getElementById('menu-mobile-researcher').href = langRoute('researcher')
+			
+				document.getElementById('menu-postdoctoral-researcher').href = langRoute('postdoc')
+				document.getElementById('menu-mobile-postdoctoral-researcher').href = langRoute('postdoc')
+			
+				document.getElementById('menu-internship').href = langRoute('internship')
+				document.getElementById('menu-mobile-internship').href = langRoute('internship')
+			
+				document.getElementById('menu-part-time').href = langRoute('part-time')
+				document.getElementById('menu-mobile-part-time').href = langRoute('part-time')
+			
+		
+		
+	
+		
+		
+			document.getElementById('menu-news').href = langRoute('news')
+			document.getElementById('menu-mobile-news').href = langRoute('news')
+		
+	
+
+	dropdownMenu.forEach((obj, index) => {
+		obj.btn.addEventListener('click', (event) => {
+			event.stopPropagation()
+			dropdownMenu.forEach((subObj, subIndex) => {
+				if (index !== subIndex) {
+					if (!subObj.dropdown.classList.contains('hidden')) {
+						subObj.dropdown.classList.toggle('hidden')
+						subObj.icon.classList.toggle('rotate-180')
+					}
+				}
+			})
+			obj.dropdown.classList.toggle('hidden')
+			obj.icon.classList.toggle('rotate-180')
+		})
+		obj.btnMobile.addEventListener('click', (event) => {
+			event.stopPropagation()
+			dropdownMenu.forEach((subObjMobile, subIndexMobile) => {
+				if (index !== subIndexMobile) {
+					if (!subObjMobile.dropdownMobile.classList.contains('hidden')) {
+						subObjMobile.dropdownMobile.classList.toggle('hidden')
+						subObjMobile.iconMobile.classList.toggle('rotate-180')
+					}
+				}
+			})
+			obj.dropdownMobile.classList.toggle('hidden')
+			obj.iconMobile.classList.toggle('rotate-180')
+		})
+	})
+
+	document.addEventListener("click", (event) => {
+		dropdownMenu.forEach((obj, index) => {
+			dropdownMenu.forEach((subObj, subIndex) => {
+				if (!subObj.dropdown.classList.contains('hidden')) {
+					if (!obj.btn.contains(event.target)) {
+						subObj.dropdown.classList.toggle('hidden')
+						subObj.icon.classList.toggle('rotate-180')
+					}
+				}
+			})
+		})
+	})
+
+	const mobileMenuOpen = document.getElementById('mobile-menu-open')
+	const mobileMenuClose = document.getElementById('mobile-menu-close')
+	const mobileMenu = document.getElementById('mobile-menu')
+	mobileMenuOpen.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden')
+	})
+	mobileMenuClose.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden')
+	})
+
+	const jaBtn = document.getElementById('ja-btn')
+	const enBtn = document.getElementById('en-btn')
+
+	const jaBtnMobile = document.getElementById('ja-btn-mobile')
+	const enBtnMobile = document.getElementById('en-btn-mobile')
+
+	if ("en" === "ja") {
+		jaBtn.style.backgroundColor = "#d7083b"
+		enBtn.style.removeProperty("background-color")
+		jaBtnMobile.style.backgroundColor = "#d7083b"
+		enBtnMobile.style.removeProperty("background-color")
+	} else {
+		enBtn.style.backgroundColor = "#d7083b"
+		jaBtn.style.removeProperty("background-color")
+		enBtnMobile.style.backgroundColor = "#d7083b"
+		jaBtnMobile.style.removeProperty("background-color")
+	}
+
+	function toggleLanguage(selectedLang) {
+		if (selectedLang === "ja") {
+			jaBtn.style.backgroundColor = "#d7083b"
+			enBtn.style.removeProperty("background-color")
+			jaBtnMobile.style.backgroundColor = "#d7083b"
+			enBtnMobile.style.removeProperty("background-color")
+			if ("en" !== 'ja') {
+				window.history.pushState({}, "", window.location.href.replace("/en/", `/`))
+				window.location.reload()
+			}
+		} else {
+			enBtn.style.backgroundColor = "#d7083b"
+			jaBtn.style.removeProperty("background-color")
+			enBtnMobile.style.backgroundColor = "#d7083b"
+			jaBtnMobile.style.removeProperty("background-color")
+			language = 'en'
+			if ("en" !== 'en') {
+				window.history.pushState({}, "", window.location.href.replace("data-update/researchlab/", "data-update/researchlab//en"))
+				window.location.reload()
+			}
+		}
+	}
+
+	jaBtn.addEventListener('click', () => toggleLanguage('ja'))
+	enBtn.addEventListener('click', () => toggleLanguage('en'))
+
+	jaBtnMobile.addEventListener('click', () => toggleLanguage('ja'))
+	enBtnMobile.addEventListener('click', () => toggleLanguage('en'))
+
+
+	document.getElementById('menu-title').href = langRoute('')
+	document.getElementById('menu-title-mobile').href = langRoute('')
+</script>
+
+  <main class="container mx-auto p-4 pt-28 flex-grow">
+    
+  <div class="prose mx-auto">
+    <h1 class="text-3xl font-bold mt-4 mb-2">Publications</h1>
+    
+  </div>
+
+  
+  
+    <div class="max-w-2xl mx-auto mt-4 mb-2">
+
+      <div class="relative pb-8">
+        <div id="selectBox" class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer" onclick="toggleDropdown()">
+          <div id="selectedItems" class="flex flex-wrap gap-2 text-gray-500">
+            Select categories
+          </div>
+          <svg id="arrowIcon" class="w-5 h-5 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+          </svg>
+        </div>
+
+        <!-- Dropdown List -->
+        <ul id="dropdown" class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden">
+          
+            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+              <input type="checkbox" id="Journal" value="Journal" class="mr-2" onclick="updateSelectedItems('Journal')" />
+              <label for="Journal" class="cursor-pointer w-full">Journal</label>
+            </li>
+          
+            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+              <input type="checkbox" id="Computer Vision" value="Computer Vision" class="mr-2" onclick="updateSelectedItems('Computer Vision')" />
+              <label for="Computer Vision" class="cursor-pointer w-full">Computer Vision</label>
+            </li>
+          
+            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+              <input type="checkbox" id="Natural Language Processing" value="Natural Language Processing" class="mr-2" onclick="updateSelectedItems('Natural Language Processing')" />
+              <label for="Natural Language Processing" class="cursor-pointer w-full">Natural Language Processing</label>
+            </li>
+          
+            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+              <input type="checkbox" id="Robotics" value="Robotics" class="mr-2" onclick="updateSelectedItems('Robotics')" />
+              <label for="Robotics" class="cursor-pointer w-full">Robotics</label>
+            </li>
+          
+            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+              <input type="checkbox" id="Artificial Intelligence" value="Artificial Intelligence" class="mr-2" onclick="updateSelectedItems('Artificial Intelligence')" />
+              <label for="Artificial Intelligence" class="cursor-pointer w-full">Artificial Intelligence</label>
+            </li>
+          
+        </ul>
+      </div>
+
+      <div id="bib" class="grid gap-8">
+        <!-- Keep the commented code until we have a stable version!! -->
+        <!-- 
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold">A Novel Approach to Deep Learning for Computer Vision</h3>
+              <br />
+              <div>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Computer Vision</span>
+                
+              </div>
+              <br />
+              <p>Argyre, Vasiliki and Katsuragi, Kaida</p>
+              <p class="text-gray-600 italic">Journal of Computer Vision</p>
+              <p class="text-gray-600">Publication year: 2024</p>
+              <br />
+              <div class="flex justify-end space-x-4">
+                <button onclick="toggleModal(true, `@article{argyre2024anovel,
+doi = {00.0000&#x2F;000-0-000-00000-0_00},
+booktitle = {Journal of Computer Vision},
+author = {Argyre, Vasiliki and Katsuragi, Kaida},
+year = {2024},
+title = {A Novel Approach to Deep Learning for Computer Vision}
+}`)" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>
+                </button>
+                
+                  <a href="#" download class="inline-flex items-center">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>                
+                  </a>
+                
+                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>                            
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold">Efficient Algorithms for Natural Language Processing</h3>
+              <br />
+              <div>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Natural Language Processing</span>
+                
+              </div>
+              <br />
+              <p>Corvin, Vasiliki and Namarie, Lirien</p>
+              <p class="text-gray-600 italic">Journal of Natural Language Processing</p>
+              <p class="text-gray-600">Publication year: 2023</p>
+              <br />
+              <div class="flex justify-end space-x-4">
+                <button onclick="toggleModal(true, `@article{corvin2023efficient,
+doi = {00.0000&#x2F;000-0-000-00000-0_00},
+booktitle = {Journal of Natural Language Processing},
+author = {Corvin, Vasiliki and Namarie, Lirien},
+year = {2023},
+title = {Efficient Algorithms for Natural Language Processing}
+}`)" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>
+                </button>
+                
+                  <a href="#" download class="inline-flex items-center">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>                
+                  </a>
+                
+                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>                            
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold">A Survey of Robotics and Artificial Intelligence</h3>
+              <br />
+              <div>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Robotics</span>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Artificial Intelligence</span>
+                
+              </div>
+              <br />
+              <p>Argyre, Vasiliki and Katsuragi, Kaida</p>
+              <p class="text-gray-600 italic">Journal of Robotics and Artificial Intelligence</p>
+              <p class="text-gray-600">Publication year: 2022</p>
+              <br />
+              <div class="flex justify-end space-x-4">
+                <button onclick="toggleModal(true, `@article{argyre2022asurvey,
+doi = {00.0000&#x2F;000-0-000-00000-0_00},
+booktitle = {Journal of Robotics and Artificial Intelligence},
+author = {Argyre, Vasiliki and Katsuragi, Kaida},
+year = {2022},
+title = {A Survey of Robotics and Artificial Intelligence}
+}`)" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>
+                </button>
+                
+                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>                            
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-4">
+              <h3 class="text-xl font-semibold">Adaptive Learning in Autonomous Robotics: A Comprehensive Review</h3>
+              <br />
+              <div>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
+                
+                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Robotics</span>
+                
+              </div>
+              <br />
+              <p>Vonn, E. and Smith, J</p>
+              <p class="text-gray-600 italic">Journal of Robotics Research</p>
+              <p class="text-gray-600">Publication year: 2021</p>
+              <br />
+              <div class="flex justify-end space-x-4">
+                <button onclick="toggleModal(true, `@article{vonn2020adaptive,
+doi = {00.0000&#x2F;000-0-000-00000-0_00},
+booktitle = {Journal of Robotics Research},
+author = {Vonn, E. and Smith, J},
+year = {2021},
+title = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}
+}`)" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>
+                </button>
+                
+                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>                            
+                </a>
+              </div>
+            </div>
+          </div>
+         -->
+
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" onclick="toggleModal(false)" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+      <div onclick="event.stopPropagation()" class="bg-white rounded-lg shadow-lg p-4">
+        <div class="flex justify-between items-center space-x-4">
+          <h3 id="modal-title" class="text-lg font-semibold text-gray-900">BibTex</h3>
+          <button class="text-gray-500 hover:text-gray-900" onclick="toggleModal(false)">
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>          
+          </button>
+        </div>
+        <hr />
+        <div class="mt-4 text-gray-700">
+          <pre><code id="modal-code"></code></pre>
+        </div>
+      </div>
+    </div>
+  
+
+
+  <script>
+    function toggleModal(show, code) {
+      const modal = document.getElementById("modal")
+      const modalCode = document.getElementById("modal-code")
+      if (code) {
+        modalCode.textContent = code
+      }
+      modal.classList.toggle("hidden", !show)
+    }
+
+    const backgroundColors = [
+      "rgb(248 250 252)", "rgb(249 250 251)", "rgb(250 250 250)", "rgb(250 250 250)", "rgb(250 250 249)", "rgb(254 242 242)",
+      "rgb(255 247 237)", "rgb(255 251 235)", "rgb(254 252 232)", "rgb(247 254 231)", "rgb(240 253 244)", "rgb(236 253 245)",
+      "rgb(240 253 250)", "rgb(236 254 255)", "rgb(240 249 255)", "rgb(239 246 255)", "rgb(238 242 255)", "rgb(245 243 255)", 
+      "rgb(250 245 255)", "rgb(253 244 255)", "rgb(253 242 248)", "rgb(255 241 242)"
+    ]
+
+    const textColors = [
+      "rgb(71 85 105)", "rgb(75 85 99)", "rgb(82 82 91)", "rgb(82 82 82)", "rgb(87 83 78)", "rgb(220 38 38)",
+      "rgb(234 88 12)", "rgb(217 119 6)", "rgb(202 138 4)", "rgb(101 163 13)", "rgb(22 163 74)", "rgb(5 150 105)",
+      "rgb(13 148 136)", "rgb(8 145 178)", "rgb(2 132 199)", "rgb(37 99 235)", "rgb(79 70 229)", "rgb(124 58 237)", 
+      "rgb(147 51 234)", "rgb(192 38 211)", "rgb(219 39 119)", "rgb(225 29 72)"
+    ]
+
+    let categoryToColor = {}
+    
+      categoryToColor["Journal"] = {
+        backgroundColor: backgroundColors.pop(),
+        textColor: textColors.pop(),
+      }
+    
+      categoryToColor["Computer Vision"] = {
+        backgroundColor: backgroundColors.pop(),
+        textColor: textColors.pop(),
+      }
+    
+      categoryToColor["Natural Language Processing"] = {
+        backgroundColor: backgroundColors.pop(),
+        textColor: textColors.pop(),
+      }
+    
+      categoryToColor["Robotics"] = {
+        backgroundColor: backgroundColors.pop(),
+        textColor: textColors.pop(),
+      }
+    
+      categoryToColor["Artificial Intelligence"] = {
+        backgroundColor: backgroundColors.pop(),
+        textColor: textColors.pop(),
+      }
+    
+
+    function setCategoryColor(category) {
+      const parentDiv = document.getElementById('bib')
+      const spans = parentDiv.querySelectorAll('span')
+      spans.forEach((span, index) => {
+        span.style.backgroundColor = categoryToColor[span.innerText].backgroundColor
+        span.style.color = categoryToColor[span.innerText].textColor
+      })
+    }
+
+    const dropdown = document.getElementById("dropdown")
+    const selectBox = document.getElementById("selectBox")
+    const selectedItems = document.getElementById("selectedItems")
+    const arrowIcon = document.getElementById("arrowIcon")
+
+    const selectedValues = []
+
+    if (selectedValues.length === 0) {
+      const checkboxes = document.querySelectorAll('#dropdown input[type="checkbox"]')
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+      })
+    }
+
+    function toggleDropdown() {
+      dropdown.classList.toggle("hidden")
+      arrowIcon.classList.toggle("rotate-180")
+    }
+
+    function updateSelectedItems(value) {
+      const index = selectedValues.indexOf(value)
+
+      if (index === -1) {
+        selectedValues.push(value)
+      } else {
+        selectedValues.splice(index, 1)
+      }
+
+      renderSelectedItems()
+      filterBibs()
+    }
+
+    function renderSelectedItems() {
+      if (selectedValues.length === 0) {
+        selectedItems.innerHTML = "Select categories"
+        selectedItems.classList.add("text-gray-500")
+      } else {
+        selectedItems.innerHTML = selectedValues
+          .map(value => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium" style="background-color: ${categoryToColor[value].backgroundColor}; color: ${categoryToColor[value].textColor};">${value}</span>`)
+          .join(" ")
+        selectedItems.classList.remove("text-gray-500")
+      }
+    }
+
+    function filterBibs() {
+      const filteredBibsContainer = document.getElementById("bib");
+
+      const filteredBibs = []
+      let bibJSON = {}
+      
+        bibJSON = JSON.parse('{"title":"A Novel Approach to Deep Learning for Computer Vision","year":2024,"author":"Argyre, Vasiliki and Katsuragi, Kaida","cite":"Journal of Computer Vision","doi":"00.0000/000-0-000-00000-0_00","downloadUrl":"#","category":["Journal","Computer Vision"],"bibtex":"@article{argyre2024anovel,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Computer Vision},\nauthor = {Argyre, Vasiliki and Katsuragi, Kaida},\nyear = {2024},\ntitle = {A Novel Approach to Deep Learning for Computer Vision}\n}"}'.replace(/\n/g, "\\n"))
+        if (selectedValues.length === 0) {
+          filteredBibs.push(bibJSON)
+        } else {
+          if (
+            selectedValues.some(val => {
+              
+                if ("Journal" == val) {
+                  return true
+                }
+              
+                if ("Computer Vision" == val) {
+                  return true
+                }
+              
+              return false
+            })
+          )
+          {
+            filteredBibs.push(bibJSON)
+          }
+        }
+      
+        bibJSON = JSON.parse('{"title":"Efficient Algorithms for Natural Language Processing","year":2023,"author":"Corvin, Vasiliki and Namarie, Lirien","cite":"Journal of Natural Language Processing","doi":"00.0000/000-0-000-00000-0_00","downloadUrl":"#","category":["Journal","Natural Language Processing"],"bibtex":"@article{corvin2023efficient,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Natural Language Processing},\nauthor = {Corvin, Vasiliki and Namarie, Lirien},\nyear = {2023},\ntitle = {Efficient Algorithms for Natural Language Processing}\n}"}'.replace(/\n/g, "\\n"))
+        if (selectedValues.length === 0) {
+          filteredBibs.push(bibJSON)
+        } else {
+          if (
+            selectedValues.some(val => {
+              
+                if ("Journal" == val) {
+                  return true
+                }
+              
+                if ("Natural Language Processing" == val) {
+                  return true
+                }
+              
+              return false
+            })
+          )
+          {
+            filteredBibs.push(bibJSON)
+          }
+        }
+      
+        bibJSON = JSON.parse('{"title":"A Survey of Robotics and Artificial Intelligence","year":2022,"author":"Argyre, Vasiliki and Katsuragi, Kaida","cite":"Journal of Robotics and Artificial Intelligence","doi":"00.0000/000-0-000-00000-0_00","category":["Journal","Robotics","Artificial Intelligence"],"bibtex":"@article{argyre2022asurvey,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Robotics and Artificial Intelligence},\nauthor = {Argyre, Vasiliki and Katsuragi, Kaida},\nyear = {2022},\ntitle = {A Survey of Robotics and Artificial Intelligence}\n}"}'.replace(/\n/g, "\\n"))
+        if (selectedValues.length === 0) {
+          filteredBibs.push(bibJSON)
+        } else {
+          if (
+            selectedValues.some(val => {
+              
+                if ("Journal" == val) {
+                  return true
+                }
+              
+                if ("Robotics" == val) {
+                  return true
+                }
+              
+                if ("Artificial Intelligence" == val) {
+                  return true
+                }
+              
+              return false
+            })
+          )
+          {
+            filteredBibs.push(bibJSON)
+          }
+        }
+      
+        bibJSON = JSON.parse('{"title":"Adaptive Learning in Autonomous Robotics: A Comprehensive Review","year":2021,"author":"Vonn, E. and Smith, J","cite":"Journal of Robotics Research","doi":"00.0000/000-0-000-00000-0_00","category":["Journal","Robotics"],"bibtex":"@article{vonn2020adaptive,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Robotics Research},\nauthor = {Vonn, E. and Smith, J},\nyear = {2021},\ntitle = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}\n}"}'.replace(/\n/g, "\\n"))
+        if (selectedValues.length === 0) {
+          filteredBibs.push(bibJSON)
+        } else {
+          if (
+            selectedValues.some(val => {
+              
+                if ("Journal" == val) {
+                  return true
+                }
+              
+                if ("Robotics" == val) {
+                  return true
+                }
+              
+              return false
+            })
+          )
+          {
+            filteredBibs.push(bibJSON)
+          }
+        }
+      
+
+      // Render filtered bibs
+      if (filteredBibs.length) {
+        filteredBibsContainer.innerHTML = filteredBibs
+          .map(bib => `
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div class="p-4">
+                <h3 class="text-xl font-semibold">${bib.title}</h3>
+                <br />
+                <div>
+                ${bib.category.map(category => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">${category}</span>`).join(" ")}
+                </div>
+                <br />
+                <p>${bib.author}</p>
+                <p class="text-gray-600 italic">${bib.cite} (${bib.year})</p>
+                <div class="flex justify-end space-x-4">
+                  <button onclick="toggleModal(true, ${"`"+bib.bibtex+"`"})" class="inline-flex items-center">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                    </svg>
+                  </button>
+                  ${bib.downloadUrl ? `
+                    <a href="${bib.downloadUrl}" download class="inline-flex items-center">
+                      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                      </svg>                
+                    </a>
+                  ` : ''} 
+                  <a href="https://doi.org/${bib.doi}" target="_blank" class="inline-flex items-center">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>                            
+                  </a>
+                </div>
+              </div>
+            </div>
+          `)
+          .join("")
+        setCategoryColor()
+      }
+    }
+
+    filterBibs()
+    
+    document.addEventListener("click", (event) => {
+      if (selectBox) {
+        if (!selectBox.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.classList.add("hidden")
+          arrowIcon.classList.remove("rotate-180")
+        }
+      }
+    })
+  </script>
+
+    
+
+  </main>
+  <button id="scrollUpBtn" class="hidden fixed bottom-32 right-5 p-3 rounded-full shadow-lg transition duration-300" style="background-color: #666; color: #ffffff;">
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+</button>
+
+<script>
+    window.onscroll = function() {
+        const scrollUpBtn = document.getElementById("scrollUpBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollUpBtn.style.display = "block";
+        } else {
+            scrollUpBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    document.getElementById("scrollUpBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>
+  <footer class="shadow" style="background-color: #000000;">
+  <div class="container mx-auto flex max-w-screen-2xl items-center justify-between p-4 lg:px-8">
+    <div class="text-center md:text-left">
+		<span class="text-sm" style="color: #ffffff;">&#169; Trantor University</span>
+    </div>
+
+	 <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left"><a href="#" data-encoded-email="YWRtaW5AZmFydC50cg==" style="color: #ffffff;">Contact us</a></div>
+
+    <script src="data-update/researchlab/js/decodeMail.js" async></script><div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+	   
+      <a href="https:&#x2F;&#x2F;duckduckgo.com" style="color: #ffffff;">Privacy policy</a>
+    </div>
+	 
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://github.com" target="_blank"><img loading="lazy" alt="github" title="github" src="data-update/researchlab/social_icons/github.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://gitlab.com" target="_blank"><img loading="lazy" alt="gitlab" title="gitlab" src="data-update/researchlab/social_icons/gitlab.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://scholar.google.com" target="_blank"><img loading="lazy" alt="scholar" title="scholar" src="data-update/researchlab/social_icons/google-scholar.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://linkedin.com" target="_blank"><img loading="lazy" alt="linkedin" title="linkedin" src="data-update/researchlab/social_icons/linkedin.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://mastodon.org" target="_blank"><img loading="lazy" alt="mastodon" title="mastodon" src="data-update/researchlab/social_icons/mastodon.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://riot.im" target="_blank"><img loading="lazy" alt="matrix" title="matrix" src="data-update/researchlab/social_icons/matrix.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://slack.com" target="_blank"><img loading="lazy" alt="slack" title="slack" src="data-update/researchlab/social_icons/slack.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://x.com" target="_blank"><img loading="lazy" alt="x" title="x" src="data-update/researchlab/social_icons/x.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://youtube.com" target="_blank"><img loading="lazy" alt="youtube" title="youtube" src="data-update/researchlab/social_icons/youtube.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+
+	 
+	 <div class="text-center md:text-left">
+		 <span class="text-sm" style="color: #ffffff;">Powered by <em><a href="https://codeberg.org/plaublin/researchlab/">researchlab</a></em>, a <em><a href="https://www.getzola.org/">Zola</a></em> theme</span>
+	 </div>
+	 
+  </div>
+</footer>
+
+</body>
+</html>

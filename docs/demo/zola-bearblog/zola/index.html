@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zola | Zola ʕ•ᴥ•ʔ Bear Blog</title>
+  <meta name="title" content="Zola">
+<meta name="description" content="A Zola-theme based on Bear Blog.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>
+    :root {
+    --width: 800px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  nav span.active {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  pre code {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+  /* blog post list */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+  .tags {
+    font-size: smaller;
+  }
+
+  </style>
+</head>
+<body>
+  <header>
+  <nav class="lang" aria-label="language">
+        <span class="active">English</span>
+        <a href="data-update/zola-bearblog/de/zola/" hreflang="de" lang="de">Deutsch</a>
+  </nav>
+  <a href="data-update/zola-bearblog/" class="title">
+    <h1>Zola ʕ•ᴥ•ʔ Bear Blog</h1>
+  </a>
+  <nav aria-label="site">
+      <a href="data-update/zola-bearblog/">Home</a>
+      <a href="data-update/zola-bearblog/bear/">Bear</a>
+      <a href="data-update/zola-bearblog/zola/">Zola</a>
+      <a href="data-update/zola-bearblog/blog/">Blog</a>
+  </nav>
+</header>
+<h1>Zola</h1>
+  <main>
+    <h2 id="no-dependencies">No dependencies</h2>
+<p>Zola comes as a single executable with Sass compilation, syntax
+highlighting, table of contents and many other features that
+traditionally require setting up a dev environment or adding some
+JavaScript libraries to your site.</p>
+<h2 id="blazing-fast">Blazing fast</h2>
+<p>The average site will be generated in less than a second, including
+Sass compilation and syntax highlighting.</p>
+<h2 id="scalable">Scalable</h2>
+<p>Zola renders your whole site as static files, making it trivial to
+handle any kind of traffic you will throw at it at no cost without
+having to worry about managing a server or a database.</p>
+<h2 id="easy-to-use">Easy to use</h2>
+<p>From the CLI to the template engine, everything is designed to be
+intuitive. Don't take my word for it though, look at the documentation
+and see for yourself.</p>
+<h2 id="flexible">Flexible</h2>
+<p>Zola gets out of your way so you can focus on your content, be it a
+blog, a knowledge base, a landing page or a combination of them.</p>
+<h2 id="augmented-markdown">Augmented Markdown</h2>
+<p>Zola comes with shortcodes and internal links to make it easier to
+write your content.</p>
+
+  </main>
+  <p>
+  </p>
+<footer>
+    Made with <a href="https://codeberg.org/alanpearce/zola-bearblog">Zola ʕ•ᴥ•ʔ Bear</a>
+</footer>
+</body>
+</html>

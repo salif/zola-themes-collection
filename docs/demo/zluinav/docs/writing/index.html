@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="data-update/zluinav/css/theme.css">
+<script src="data-update/zluinav/scripts/theme.js"></script>
+<title>Writing – Documentation – UI Navigation</title>
+</head>
+<body>
+<a href="data-update/zluinav/lang">Change language</a>
+<a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#zlfooter" class="skip-link">Skip to footer</a>
+
+<nav id="navigation" role="navigation" aria-label="Main menu">
+<h2>Main menu</h2>
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav" accesskey="h">Home</a></li>
+<li><a href="data-update/zluinav/docs">Documentation</a></li>
+<li><a href="data-update/zluinav/blog">Blog</a></li>
+</ul>
+</nav>
+
+<nav roll="navigation" aria-label=Documentation>
+<h2>Documentation</h2>
+<ul style="list-style-type:none;">
+<li><a aria-current="page"href="data-update/zluinav/docs/writing/">Writing</a></li>
+<li><a href="data-update/zluinav/docs/blocks/">Blocks</a></li>
+<li><a href="data-update/zluinav/docs/templates/">Templates</a></li>
+<li><a href="data-update/zluinav/docs/documentation/">Documentation Site</a></li>
+</ul>
+<h3>Extra Variables</h3>
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/extra_variables/config/">Config Variables</a></li>
+<li><a href="data-update/zluinav/docs/extra_variables/post/">Post Page Variables</a></li>
+</ul>
+<h3>Macros</h3>
+<p>This is a list of available macros that are located in mcs directory.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="data-update/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="data-update/zluinav/docs/macros/post/">Post</a></li>
+<li><a href="data-update/zluinav/docs/macros/translator/">Translator</a></li>
+</ul>
+<h3>Shortcodes</h3>
+<p>This is a list of available shortcodes that are located in shortcodes directory that can be used in your markdown files to obtain information.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/shortcodes/audio/">Audio</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/details/">Details</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/geturl/">Geturl</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
+</ul>
+</nav>
+<main>
+<div id="mainc">
+<h1 id="Writing">Writing</h1>
+<p>In page content, you can add variables that will be replaced with the value when the site builds.
+Variables are defined by <code>%variable_name%</code>. For example, <code>This page is named %title% and was published on %date%, and was last updated on %updated%.</code></p>
+<p>You can render the variable name itself by prefixing with <code>/</code>. For example, <code>%/title%</code> will be rendered as <code>%title%</code> without replacing its value.</p>
+<p>Variable rendering is done by <a href="data-update/zluinav/docs/macros/content/">content macro</a>.</p>
+<p>Here is a list of supported variables:</p>
+<ul>
+<li><code>title</code>: title of the page.</li>
+<li><code>description</code>: description, if available.</li>
+<li><code>link</code>: the permalink to the page.</li>
+<li><code>date</code>: the published date of the page, if available.</li>
+<li><code>updated</code>: the updated date of the page, if available.</li>
+</ul>
+<p>Returned variable will be empty if the variable is not defined or failed to retrieve, so make sure you know it is defined!</p>
+</div>
+</main>
+<div id="zlfooter">
+<footer>
+<p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>
+</footer>
+</div>
+<script src="data-update/zluinav/scripts/copy.js"></script>
+</body>
+</html>

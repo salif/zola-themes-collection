@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="data-update/zluinav/css/theme.css">
+<script src="data-update/zluinav/scripts/theme.js"></script>
+<title>Config Variables – Documentation – UI Navigation</title>
+</head>
+<body>
+<a href="data-update/zluinav/lang">Change language</a>
+<a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#zlfooter" class="skip-link">Skip to footer</a>
+
+<nav id="navigation" role="navigation" aria-label="Main menu">
+<h2>Main menu</h2>
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav" accesskey="h">Home</a></li>
+<li><a href="data-update/zluinav/docs">Documentation</a></li>
+<li><a href="data-update/zluinav/blog">Blog</a></li>
+</ul>
+</nav>
+
+<nav roll="navigation" aria-label=Documentation>
+<h2>Documentation</h2>
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/writing/">Writing</a></li>
+<li><a href="data-update/zluinav/docs/blocks/">Blocks</a></li>
+<li><a href="data-update/zluinav/docs/templates/">Templates</a></li>
+<li><a href="data-update/zluinav/docs/documentation/">Documentation Site</a></li>
+</ul>
+<h3>Extra Variables</h3>
+<ul style="list-style-type:none;">
+<li><a aria-current="page"href="data-update/zluinav/docs/extra_variables/config/">Config Variables</a></li>
+<li><a href="data-update/zluinav/docs/extra_variables/post/">Post Page Variables</a></li>
+</ul>
+<h3>Macros</h3>
+<p>This is a list of available macros that are located in mcs directory.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="data-update/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="data-update/zluinav/docs/macros/post/">Post</a></li>
+<li><a href="data-update/zluinav/docs/macros/translator/">Translator</a></li>
+</ul>
+<h3>Shortcodes</h3>
+<p>This is a list of available shortcodes that are located in shortcodes directory that can be used in your markdown files to obtain information.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="data-update/zluinav/docs/shortcodes/audio/">Audio</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/details/">Details</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/geturl/">Geturl</a></li>
+<li><a href="data-update/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
+</ul>
+</nav>
+<main>
+<div id="mainc">
+<h1 id="Extra_Config_Variables">Extra Config Variables</h1>
+<p>These variables must be set under <code>extra</code> object of the config. If they are not set, the default values will be used from the <a href="https://github.com/harrymkt/zluinav/blob/main/theme.toml">theme.toml</a>.</p>
+<h2 id="tr_path">tr_path</h2>
+<p>The path where language TOML files are stored, default is "langs".</p>
+<h2 id="title_sep">title_sep</h2>
+<p>Title separator, default is " – ".</p>
+<h2 id="nav">nav</h2>
+<p>A list of inline tables for navigation.</p>
+<p>Each navigation item has the following properties:</p>
+<ul>
+<li>
+<p><code>name</code>(string) required: the name to display.</p>
+</li>
+<li>
+<p><code>url</code>(string) required: the URL to navigate. Slashes should be used for internal paths.</p>
+<p>Use <code>.l.</code> to reference the current language, for instance, <code>/.l./blog/</code></p>
+</li>
+<li>
+<p><code>key</code>(string) optional: the access key for the item.</p>
+</li>
+<li>
+<p><code>title</code>(string) optional: the title to set on the title attribute.</p>
+</li>
+<li>
+<p><code>id</code>(string) optional: the translation ID. If this is not provided, the name will be used instead.</p>
+</li>
+</ul>
+<p>If you set the nav as empty or do not set at all, the navigation menu will be disabled, as well as skip to navigation link.</p>
+<p>Example navigation:</p>
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">nav = [
+  {name = &quot;Home&quot;, url = &quot;&#x2F;&quot;},
+  {name = &quot;Blog&quot;, url = &quot;&#x2F;blog&#x2F;&quot;},
+  # Translated page
+  {name = &quot;Multilingual&quot;, url = &quot;&#x2F;.l.&#x2F;multilingual&#x2F;&quot;}
+]
+</code></pre>
+<p>You can also use another style, like this, which is the same as the demo configuration:</p>
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[[extra.nav]]
+  name = &quot;Home&quot;
+  url = &quot;&#x2F;.l.&#x2F;&quot;
+  key = &quot;h&quot;
+  id = &quot;nav1&quot;
+[[extra.nav]]
+  name = &quot;Documentation&quot;
+  url = &quot;&#x2F;.l.&#x2F;docs&quot;
+  id = &quot;nav2&quot;
+[[extra.nav]]
+  name = &quot;Blog&quot;
+  url = &quot;&#x2F;.l.&#x2F;blog&quot;
+  id = &quot;nav3&quot;
+</code></pre>
+</div>
+</main>
+<div id="zlfooter">
+<footer>
+<p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>
+</footer>
+</div>
+<script src="data-update/zluinav/scripts/copy.js"></script>
+</body>
+</html>

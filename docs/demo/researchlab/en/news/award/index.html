@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content>
+  <meta name="keywords" content>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Foundation for Advanced Research on Trantor">
+  <meta property="og:description" content>
+  <meta property="og:url" content="data-update/researchlab/">
+  <meta property="og:site_name" content="Foundation for Advanced Research on Trantor">
+  <title>Foundation for Advanced Research on Trantor</title>
+  <link rel="icon" type="image/svg+xml" href="data-update/researchlab/img/favicon.jpg">
+  <link rel="stylesheet" href="data-update/researchlab/css/tailwind.min.css">
+  <link rel="stylesheet" href="data-update/researchlab/css/typography.min.css">
+  <link rel="stylesheet" href="data-update/researchlab/css/main.css">
+  <script defer src="data-update/researchlab/js/diagram/mermaid.min.js" integrity="sha384-6YRSKOSMk3x6Bn7ihZ903Mt9EwSxoy5KrU1CkzT3d+j0C/qKp0DFgG4lKsnqH1Nm"></script>
+  <script defer src="data-update/researchlab/js/diagram/mermaid-config.js" integrity="sha384-a2dvU77ShDwnty4gFDSjoOf0XwhvkFWC40MdpQWNfbFljoJNaGFYCpamXrQqClO1"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="fixed top-0 left-0 w-full shadow z-50" style="background-color: #000000;">
+	<nav class="mx-auto flex max-w-screen-2xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+		<div class="flex items-center">
+			<a href="https:&#x2F;&#x2F;codeberg.org&#x2F;plaublin&#x2F;researchlab" target="_blank" class="-m-1.5 p-1.5">
+				<img class="h-10 w-auto" src="data-update/researchlab/img/logo.jpg" alt="Trantor University">
+			</a>
+			<div class="border-l h-8 mx-4" style="border-color: #666;"></div>
+			<a id="menu-title" class="block font-semibold w-48" style="color: #ffffff;">Foundation for Advanced Research on Trantor</a>
+		</div>
+
+
+		<!-- Mobile menu, show/hide based on menu open state. -->
+		<div class="flex lg:hidden">
+			<button type="button" id="mobile-menu-open" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5" style="background-color: #d7083b; color: #ffffff">
+				<span class="sr-only">Open main menu</span>
+				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+				</svg>
+			</button>
+		</div>
+		<div class="hidden lg:flex lg:gap-x-12">
+			
+				
+					<a id="menu-top" class="text-sm/6 font-semibold" style="color: #ffffff;">Top</a>
+				
+			
+				
+					<div class="relative">
+						<button id="about-research-laboratory-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							About Us
+							<svg id="about-research-laboratory-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="about-research-laboratory-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-about" class="block font-semibold" style="color: #ffffff;">
+												About
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-organization" class="block font-semibold" style="color: #ffffff;">
+												Organization
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-public-research-fraud-prevention" class="block font-semibold" style="color: #ffffff;">
+												Public research fraud prevention
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<a id="menu-members" class="text-sm/6 font-semibold" style="color: #ffffff;">Members</a>
+				
+			
+				
+					<div class="relative">
+						<button id="activities-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							Activities
+							<svg id="activities-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="activities-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-projects" class="block font-semibold" style="color: #ffffff;">
+												Projects
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-publications" class="block font-semibold" style="color: #ffffff;">
+												Publications
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-oss-poc" class="block font-semibold" style="color: #ffffff;">
+												OSS &#x2F; PoC
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-seminars" class="block font-semibold" style="color: #ffffff;">
+												Seminars
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<div class="relative">
+						<button id="career-internship-btn" type="button" class="flex items-center gap-x-1 text-sm/6 font-semibold" style="color: #ffffff;" aria-expanded="false">
+							Career &#x2F; Internship
+							<svg id="career-internship-icon" class="h-5 w-5 transform flex-none" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+						</button>
+						<div id="career-internship-dropdown" class="hidden absolute -left-8 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-3xl shadow-lg ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+							<div class="p-4">
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-researcher" class="block font-semibold" style="color: #ffffff;">
+												Researcher
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-postdoctoral-researcher" class="block font-semibold" style="color: #ffffff;">
+												Postdoctoral researcher
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-internship" class="block font-semibold" style="color: #ffffff;">
+												Internship
+											</a>
+										</div>
+									</div>
+								
+									<div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6">
+										<div class="flex-auto">
+											<a id="menu-part-time" class="block font-semibold" style="color: #ffffff;">
+												Part-time
+											</a>
+										</div>
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				
+			
+				
+					<a id="menu-news" class="text-sm/6 font-semibold" style="color: #ffffff;">News</a>
+				
+			
+		</div>
+		<div class="hidden lg:flex lg:flex-2 lg:justify-end">
+			<div class="flex space-x-1 p-1 rounded-full w-32" style="background-color: #666;" id="language-toggle">
+				<button id="ja-btn" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">日本語</button>
+				<button id="en-btn" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">English</button>
+			</div>
+		</div>
+	</nav>
+
+	<div id="mobile-menu" class="lg:hidden hidden" role="dialog" aria-modal="true">
+		<!-- Background backdrop, show/hide based on slide-over state. -->
+		<div class="fixed inset-0 z-10"></div>
+		<div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-4 py-4 sm:max-w-sm sm:ring-1" style="background-color: #000000; --tw-ring-color: #d7083b;">
+			<div class="flex items-center justify-between">
+				<div class="flex items-center">
+					<a href="https:&#x2F;&#x2F;codeberg.org&#x2F;plaublin&#x2F;researchlab" target="_blank" class="-m-1.5 p-1.5">
+						<img class="h-10 w-auto" src="data-update/researchlab/img/logo.jpg" alt="Trantor University">
+					</a>
+					<div class="border-l h-8 mx-4" style="border-color: #666;"></div>
+					<a id="menu-title-mobile" class="block font-semibold w-64" style="color: #ffffff;">Foundation for Advanced Research on Trantor</a>
+				</div>
+				<button type="button" id="mobile-menu-close" class="-m-2.5 rounded-md p-2.5" style="background-color: #d7083b; color: #ffffff">
+					<span class="sr-only">Close menu</span>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
+			<div class="mt-6 flow-root">
+				<div class="-my-6 divide-y divide-gray-500/10">
+					<div class="space-y-2 py-6">
+						
+							
+								<a id="menu-mobile-top" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">Top</a>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="about-research-laboratory-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										About Us
+										<svg id="about-research-laboratory-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="about-research-laboratory-dropdown-mobile">
+										
+											<a id="menu-mobile-about" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">About</a>
+										
+											<a id="menu-mobile-organization" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Organization</a>
+										
+											<a id="menu-mobile-public-research-fraud-prevention" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Public research fraud prevention</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<a id="menu-mobile-members" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">Members</a>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="activities-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										Activities
+										<svg id="activities-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="activities-dropdown-mobile">
+										
+											<a id="menu-mobile-projects" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Projects</a>
+										
+											<a id="menu-mobile-publications" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Publications</a>
+										
+											<a id="menu-mobile-oss-poc" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">OSS &#x2F; PoC</a>
+										
+											<a id="menu-mobile-seminars" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Seminars</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<div class="-mx-3">
+									<button type="button" id="career-internship-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+										Career &#x2F; Internship
+										<svg id="career-internship-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
+											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+										</svg>
+									</button>
+									<div class="mt-2 space-y-2 hidden" id="career-internship-dropdown-mobile">
+										
+											<a id="menu-mobile-researcher" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Researcher</a>
+										
+											<a id="menu-mobile-postdoctoral-researcher" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Postdoctoral researcher</a>
+										
+											<a id="menu-mobile-internship" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Internship</a>
+										
+											<a id="menu-mobile-part-time" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold" style="color: #ffffff;">Part-time</a>
+										
+									</div>
+								</div>
+							
+						
+							
+								<a id="menu-mobile-news" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold" style="color: #ffffff;">News</a>
+							
+						
+					</div>
+					<div class="py-6">
+						<div class="flex space-x-1 p-1 rounded-full w-32" style="background-color: #666;" id="language-toggle-mobile">
+							<button id="ja-btn-mobile" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">日本語</button>
+							<button id="en-btn-mobile" class="w-1/2 py-1 text-sm font-semibold rounded-full" style="color: #ffffff;">English</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script>
+	function langRoute(toRoute) {
+		let to = toRoute
+		if (toRoute === '/') {
+			to = ''
+		}
+		if ("en" === 'ja') {
+			return `data-update/researchlab//${to}`
+		} else {
+			return`data-update/researchlab//en/${to}`
+		}
+	}
+
+	const dropdownMenu = []
+	
+		
+		
+			document.getElementById('menu-top').href = langRoute('/')
+			document.getElementById('menu-mobile-top').href = langRoute('/')
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("about-research-laboratory-btn"),
+				dropdown: document.getElementById('about-research-laboratory-dropdown'),
+				icon: document.getElementById('about-research-laboratory-icon'),
+				btnMobile: document.getElementById("about-research-laboratory-btn-mobile"),
+				dropdownMobile: document.getElementById('about-research-laboratory-dropdown-mobile'),
+				iconMobile: document.getElementById('about-research-laboratory-icon-mobile')
+			})
+			
+				document.getElementById('menu-about').href = langRoute('about')
+				document.getElementById('menu-mobile-about').href = langRoute('about')
+			
+				document.getElementById('menu-organization').href = langRoute('organization')
+				document.getElementById('menu-mobile-organization').href = langRoute('organization')
+			
+				document.getElementById('menu-public-research-fraud-prevention').href = langRoute('public-research-fraud')
+				document.getElementById('menu-mobile-public-research-fraud-prevention').href = langRoute('public-research-fraud')
+			
+		
+		
+	
+		
+		
+			document.getElementById('menu-members').href = langRoute('members')
+			document.getElementById('menu-mobile-members').href = langRoute('members')
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("activities-btn"),
+				dropdown: document.getElementById('activities-dropdown'),
+				icon: document.getElementById('activities-icon'),
+				btnMobile: document.getElementById("activities-btn-mobile"),
+				dropdownMobile: document.getElementById('activities-dropdown-mobile'),
+				iconMobile: document.getElementById('activities-icon-mobile')
+			})
+			
+				document.getElementById('menu-projects').href = langRoute('projects')
+				document.getElementById('menu-mobile-projects').href = langRoute('projects')
+			
+				document.getElementById('menu-publications').href = langRoute('publications')
+				document.getElementById('menu-mobile-publications').href = langRoute('publications')
+			
+				document.getElementById('menu-oss-poc').href = langRoute('oss-poc')
+				document.getElementById('menu-mobile-oss-poc').href = langRoute('oss-poc')
+			
+				document.getElementById('menu-seminars').href = langRoute('seminars')
+				document.getElementById('menu-mobile-seminars').href = langRoute('seminars')
+			
+		
+		
+	
+		
+			dropdownMenu.push({
+				btn: document.getElementById("career-internship-btn"),
+				dropdown: document.getElementById('career-internship-dropdown'),
+				icon: document.getElementById('career-internship-icon'),
+				btnMobile: document.getElementById("career-internship-btn-mobile"),
+				dropdownMobile: document.getElementById('career-internship-dropdown-mobile'),
+				iconMobile: document.getElementById('career-internship-icon-mobile')
+			})
+			
+				document.getElementById('menu-researcher').href = langRoute('researcher')
+				document.getElementById('menu-mobile-researcher').href = langRoute('researcher')
+			
+				document.getElementById('menu-postdoctoral-researcher').href = langRoute('postdoc')
+				document.getElementById('menu-mobile-postdoctoral-researcher').href = langRoute('postdoc')
+			
+				document.getElementById('menu-internship').href = langRoute('internship')
+				document.getElementById('menu-mobile-internship').href = langRoute('internship')
+			
+				document.getElementById('menu-part-time').href = langRoute('part-time')
+				document.getElementById('menu-mobile-part-time').href = langRoute('part-time')
+			
+		
+		
+	
+		
+		
+			document.getElementById('menu-news').href = langRoute('news')
+			document.getElementById('menu-mobile-news').href = langRoute('news')
+		
+	
+
+	dropdownMenu.forEach((obj, index) => {
+		obj.btn.addEventListener('click', (event) => {
+			event.stopPropagation()
+			dropdownMenu.forEach((subObj, subIndex) => {
+				if (index !== subIndex) {
+					if (!subObj.dropdown.classList.contains('hidden')) {
+						subObj.dropdown.classList.toggle('hidden')
+						subObj.icon.classList.toggle('rotate-180')
+					}
+				}
+			})
+			obj.dropdown.classList.toggle('hidden')
+			obj.icon.classList.toggle('rotate-180')
+		})
+		obj.btnMobile.addEventListener('click', (event) => {
+			event.stopPropagation()
+			dropdownMenu.forEach((subObjMobile, subIndexMobile) => {
+				if (index !== subIndexMobile) {
+					if (!subObjMobile.dropdownMobile.classList.contains('hidden')) {
+						subObjMobile.dropdownMobile.classList.toggle('hidden')
+						subObjMobile.iconMobile.classList.toggle('rotate-180')
+					}
+				}
+			})
+			obj.dropdownMobile.classList.toggle('hidden')
+			obj.iconMobile.classList.toggle('rotate-180')
+		})
+	})
+
+	document.addEventListener("click", (event) => {
+		dropdownMenu.forEach((obj, index) => {
+			dropdownMenu.forEach((subObj, subIndex) => {
+				if (!subObj.dropdown.classList.contains('hidden')) {
+					if (!obj.btn.contains(event.target)) {
+						subObj.dropdown.classList.toggle('hidden')
+						subObj.icon.classList.toggle('rotate-180')
+					}
+				}
+			})
+		})
+	})
+
+	const mobileMenuOpen = document.getElementById('mobile-menu-open')
+	const mobileMenuClose = document.getElementById('mobile-menu-close')
+	const mobileMenu = document.getElementById('mobile-menu')
+	mobileMenuOpen.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden')
+	})
+	mobileMenuClose.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden')
+	})
+
+	const jaBtn = document.getElementById('ja-btn')
+	const enBtn = document.getElementById('en-btn')
+
+	const jaBtnMobile = document.getElementById('ja-btn-mobile')
+	const enBtnMobile = document.getElementById('en-btn-mobile')
+
+	if ("en" === "ja") {
+		jaBtn.style.backgroundColor = "#d7083b"
+		enBtn.style.removeProperty("background-color")
+		jaBtnMobile.style.backgroundColor = "#d7083b"
+		enBtnMobile.style.removeProperty("background-color")
+	} else {
+		enBtn.style.backgroundColor = "#d7083b"
+		jaBtn.style.removeProperty("background-color")
+		enBtnMobile.style.backgroundColor = "#d7083b"
+		jaBtnMobile.style.removeProperty("background-color")
+	}
+
+	function toggleLanguage(selectedLang) {
+		if (selectedLang === "ja") {
+			jaBtn.style.backgroundColor = "#d7083b"
+			enBtn.style.removeProperty("background-color")
+			jaBtnMobile.style.backgroundColor = "#d7083b"
+			enBtnMobile.style.removeProperty("background-color")
+			if ("en" !== 'ja') {
+				window.history.pushState({}, "", window.location.href.replace("/en/", `/`))
+				window.location.reload()
+			}
+		} else {
+			enBtn.style.backgroundColor = "#d7083b"
+			jaBtn.style.removeProperty("background-color")
+			enBtnMobile.style.backgroundColor = "#d7083b"
+			jaBtnMobile.style.removeProperty("background-color")
+			language = 'en'
+			if ("en" !== 'en') {
+				window.history.pushState({}, "", window.location.href.replace("data-update/researchlab/", "data-update/researchlab//en"))
+				window.location.reload()
+			}
+		}
+	}
+
+	jaBtn.addEventListener('click', () => toggleLanguage('ja'))
+	enBtn.addEventListener('click', () => toggleLanguage('en'))
+
+	jaBtnMobile.addEventListener('click', () => toggleLanguage('ja'))
+	enBtnMobile.addEventListener('click', () => toggleLanguage('en'))
+
+
+	document.getElementById('menu-title').href = langRoute('')
+	document.getElementById('menu-title-mobile').href = langRoute('')
+</script>
+
+  <main class="container mx-auto p-4 pt-28 flex-grow">
+    
+  
+  <div class="prose mx-auto">
+    <h1 class="text-3xl font-bold mt-4 mb-2">FART Researchers Honored with Prestigious Award for Computer Science Contributions</h1>
+  </div>
+
+  <div class="max-w-2xl mx-auto py-12">
+    <div class="grid gap-8">
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2024-03-15</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART Researchers Develop Novel AI-Powered Diagnostic Tool for Early Detection of System Anomalies</h1>
+				    <br />
+            <div class="prose">
+              <p>A team of researchers at FART, led by Dr. Vasiliki Argyre, has developed a new
+AI-powered diagnostic tool that can detect anomalies in complex systems at an
+early stage.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2024-02-20</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART Partners with Galactic Empire&#x27;s Ministry of Technology to Develop Advanced Cybersecurity Platform</h1>
+				    <br />
+            <div class="prose">
+              <p>FART has partnered with the Galactic Empire's Ministry of Technology to develop
+a advanced cybersecurity platform that uses machine learning and data analytics
+to detect and prevent cyber threats.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2024-01-10</p>
+				    <br />
+            <h3 class="text-xl font-semibold">Quantum Leap: FART Researchers Make Breakthrough in Quantum Computing</h1>
+				    <br />
+            <div class="prose">
+              <p>A team of researchers at FART, led by Dr. Kaida Katsuragi, has published a
+breakthrough paper on quantum computing that demonstrates a new approach to
+quantum error correction.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2023-12-15</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART Hosts Galaxy&#x27;s Top AI and Robotics Experts at International Conference</h1>
+				    <br />
+            <div class="prose">
+              <p>FART hosted an international conference on artificial intelligence and
+robotics, which brought together leading researchers and experts from around
+the galaxy to discuss the latest advances in the field.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2023-11-20</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART&#x27;s Computer Vision System Paves the Way for Advanced Autonomous Systems</h1>
+				    <br />
+            <div class="prose">
+              <p>A team of researchers at FART, led by Dr. Elwes Corvin, has developed a novel
+computer vision system for autonomous systems that can detect and respond to
+complex scenarios.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2023-10-10</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART and Ministry of Technology Team Up to Develop Advanced Data Analytics Platform</h1>
+				    <br />
+            <div class="prose">
+              <p>FART has partnered with the Galactic Empire's Ministry of Technology to develop
+a advanced data analytics platform that uses machine learning and data
+analytics to optimize data-driven decision making.</p>
+
+            </div>
+          </div>
+        </div>
+      
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="p-4">
+            <p class="text-gray-600">2023-09-12</p>
+				    <br />
+            <h3 class="text-xl font-semibold">FART Researchers Honored with Prestigious Award for Computer Science Contributions</h1>
+				    <br />
+            <div class="prose">
+              <p>A team of researchers at FART, led by Dr. Vasiliki Argyre, has received a
+prestigious award for outstanding contributions to computer science from the
+Galactic Empire's Academy of Sciences.</p>
+
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  </main>
+  <button id="scrollUpBtn" class="hidden fixed bottom-32 right-5 p-3 rounded-full shadow-lg transition duration-300" style="background-color: #666; color: #ffffff;">
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+</button>
+
+<script>
+    window.onscroll = function() {
+        const scrollUpBtn = document.getElementById("scrollUpBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollUpBtn.style.display = "block";
+        } else {
+            scrollUpBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    document.getElementById("scrollUpBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>
+  <footer class="shadow" style="background-color: #000000;">
+  <div class="container mx-auto flex max-w-screen-2xl items-center justify-between p-4 lg:px-8">
+    <div class="text-center md:text-left">
+		<span class="text-sm" style="color: #ffffff;">&#169; Trantor University</span>
+    </div>
+
+	 <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left"><a href="#" data-encoded-email="YWRtaW5AZmFydC50cg==" style="color: #ffffff;">Contact us</a></div>
+
+    <script src="data-update/researchlab/js/decodeMail.js" async></script><div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left">
+	   
+      <a href="https:&#x2F;&#x2F;duckduckgo.com" style="color: #ffffff;">Privacy policy</a>
+    </div>
+	 
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://github.com" target="_blank"><img loading="lazy" alt="github" title="github" src="data-update/researchlab/social_icons/github.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://gitlab.com" target="_blank"><img loading="lazy" alt="gitlab" title="gitlab" src="data-update/researchlab/social_icons/gitlab.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://scholar.google.com" target="_blank"><img loading="lazy" alt="scholar" title="scholar" src="data-update/researchlab/social_icons/google-scholar.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://linkedin.com" target="_blank"><img loading="lazy" alt="linkedin" title="linkedin" src="data-update/researchlab/social_icons/linkedin.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://mastodon.org" target="_blank"><img loading="lazy" alt="mastodon" title="mastodon" src="data-update/researchlab/social_icons/mastodon.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://riot.im" target="_blank"><img loading="lazy" alt="matrix" title="matrix" src="data-update/researchlab/social_icons/matrix.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://slack.com" target="_blank"><img loading="lazy" alt="slack" title="slack" src="data-update/researchlab/social_icons/slack.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://x.com" target="_blank"><img loading="lazy" alt="x" title="x" src="data-update/researchlab/social_icons/x.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+    <div class="flex space-x-4 justify-center md:justify-start">
+	 <a href="https://youtube.com" target="_blank"><img loading="lazy" alt="youtube" title="youtube" src="data-update/researchlab/social_icons/youtube.svg" class="w-5 h-5" style="filter: invert(1);" ></a>
+    </div>
+
+	 
+	 <div class="text-center md:text-left">
+		 <span class="text-sm" style="color: #ffffff;">Powered by <em><a href="https://codeberg.org/plaublin/researchlab/">researchlab</a></em>, a <em><a href="https://www.getzola.org/">Zola</a></em> theme</span>
+	 </div>
+	 
+  </div>
+</footer>
+
+</body>
+</html>
