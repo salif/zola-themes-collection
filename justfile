@@ -203,7 +203,7 @@ submodule-update-all:
 
 [group('push'), script('zx')]
 fix-docs-dir:
-	const demos = await glob("docs/static/demo/*", { onlyDirectories: true })
+	const demos = await glob("docs/demo/*", { onlyDirectories: true })
 	for (const demo of demos) {
 		const robotsTxtPath = path.join(demo, "robots.txt")
 		if (await fs.pathExists(robotsTxtPath))
@@ -226,5 +226,4 @@ gh-pages:
 	command {{ git }} add docs
 	command {{ git }} merge --continue
 	command {{ git }} push
-	command {{ rm }} -rf docs
 	command {{ git }} switch -
