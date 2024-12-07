@@ -14,6 +14,11 @@
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/screenshot.png" />
+  <meta property="og:image:alt" content="A screenshot of this website." />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="2720" />
+  <meta property="og:image:height" content="1530" />
 
   <meta name="theme-color" data-light="#f4f4f5" data-dark="#1f2937" content="#f4f4f5" />
 
@@ -60,7 +65,26 @@
         ></button>
       </div>
       
+      <div aria-label="Menu" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+      
     </div>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://github.com/salif/zola-themes-collection">Repository</a>
+        </li>
+      </menu>
+      <!-- Header Nav inject -->
+      
+    </nav>
     
   </div>
 </header>
@@ -83,7 +107,7 @@
 
 <div class="not-prose block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h3 class="my-2 text-xl font-bold text-black dark:text-white">zola-bearblog</h3>
-  <p><picture><source srcset='./screenshots/light-zola-bearblog.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zola-bearblog.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zola-bearblog.png' alt='Screenshot of the zola-bearblog theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zola-bearblog' rel='noopener' target='_blank' class='underline'>Live Demo</a>  <a href='https://codeberg.org/alanpearce/zola-bearblog' rel='noopener' target='_blank' class='underline'>Repository</a>  <details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/alanpearce/zola-bearblog themes/zola-bearblog</code></details></menu></p>
+  <p><picture><source srcset='./screenshots/light-zola-bearblog.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zola-bearblog.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zola-bearblog.png' alt='Screenshot of the zola-bearblog theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zola-bearblog' rel='noopener' target='_blank' class='underline'>Live Demo</a>  <a href='https://codeberg.org/alanpearce/zola-bearblog' rel='noopener' target='_blank' class='underline'>Repository</a>  <details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog</code></details></menu></p>
   <div class="my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
       
@@ -226,7 +250,7 @@
 
 <div class="not-prose block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h3 class="my-2 text-xl font-bold text-black dark:text-white">apollo</h3>
-  <p><picture><source srcset='./screenshots/light-apollo.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-apollo.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-apollo.png' alt='Screenshot of the apollo theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/apollo' rel='noopener' target='_blank' class='underline'>Live Demo</a>  <a href='https://github.com/not-matthias/apollo' rel='noopener' target='_blank' class='underline'>Repository</a>  <details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/not-matthias/apollo themes/apollo</code></details></menu></p>
+  <p><picture><source srcset='./screenshots/light-apollo.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-apollo.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-apollo.png' alt='Screenshot of the apollo theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/apollo' rel='noopener' target='_blank' class='underline'>Live Demo</a>  <a href='https://github.com/not-matthias/apollo' rel='noopener' target='_blank' class='underline'>Repository</a>  <details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/not-matthias/apollo.git themes/apollo</code></details></menu></p>
   <div class="my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
       
@@ -398,7 +422,7 @@
 
     <footer class="mx-auto flex lg:h-[4rem] max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2024">2024</time>
+  © <time datetime="2024">2024</time> ztc
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

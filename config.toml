@@ -7,6 +7,7 @@ build_search_index = false
 compile_sass = false
 generate_feeds = false
 generate_robots_txt = false
+author = "ztc"
 
 title = "Zola Themes"
 description = "A curated directory of themes for Zola to choose from."
@@ -43,6 +44,7 @@ index_format = "elasticlunr_javascript"
 math = false
 mermaid = false
 comment = false
+header_menu_name = "main"
 disable_default_favicon = true
 header_buttons = ["site_title", "theme_button"]
 
@@ -57,6 +59,15 @@ header_blur = false
 header_color = "#f4f4f5"
 # The custom header color in dark mode, only available when `header_blur` is false
 header_dark_color = "#1f2937"
+
+[extra.menus]
+main = [
+  { url = "https://github.com/salif/zola-themes-collection", name = "Repository" },
+]
+
+[extra.profiles.ztc.open_graph]
+image = "screenshot.png"
+image_alt = "A screenshot of this website."
 
 [extra.footer]
 since = 2024
