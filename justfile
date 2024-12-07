@@ -14,7 +14,7 @@ browser := "brave"
 _:
 	command {{ just }} --list --unsorted
 
-[private, script('zx')]
+[private, script('./node_modules/.bin/zx')]
 themes-js cmd *args:
 	$.verbose = true
 	const allThemes = await glob("themes/*", { onlyDirectories: true })
@@ -89,7 +89,7 @@ build-demo-all base_url=demo_base_url: (themes-js "build-demo-all" "['"+base_url
 [group('build')]
 build-demo path base_url=demo_base_url: (themes-js "build-demo" "['"+path+"','"+base_url+"']")
 
-[group('build'), script('zx')]
+[group('build'), script('./node_modules/.bin/zx')]
 remove-demo-all:
 	const demos = await glob("static/demo/*", { onlyDirectories: true })
 	for (const demo of demos) {
@@ -110,7 +110,7 @@ screenshot name mode="dark" url=local_base_url:
 	mat2 --inplace "static/screenshots/{{ mode }}-{{ name }}.png"
 
 [group('screenshot')]
-[script('zx')]
+[script('./node_modules/.bin/zx')]
 screenshots-missing:
 	const demos = await glob("static/demo/*", { onlyDirectories: true })
 	const output = []
@@ -130,15 +130,33 @@ screenshots-missing:
 
 [private]
 local-test-all:
-	command {{ just }} build-demo-all '{{ local_base_url }}' data-update '{{ local_base_url }}'
+	command {{ just }} build-demo-all '{{ local_base_url }}' update-data '{{ local_base_url }}'
 	command {{ zola }} serve --open
 
 [group('build')]
-data-update url=demo_base_url:
+update-data url=demo_base_url:
 	#!/usr/bin/env node
 	"use strict";
 	const fs = require('fs');
-	const parseGitmodules = (content) => {
+	const path = require('path');
+	const TOML = require(process.cwd() + '/node_modules/@iarna/toml');
+	const baseURL = "{{ url }}";
+	const sep = new Map([
+		["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
+		]);
+	function main() {
+		const gitmodulesContent = fs.readFileSync('.gitmodules', 'utf8');
+		const parsed = parseGitmodules(gitmodulesContent);
+		const data = [];
+		for (const theme of Object.values(parsed)) {
+			const themeInfo = readThemeInfo(theme);
+			if (null != themeInfo) data.push(themeInfo);
+			else console.error(theme);
+		}
+		fs.writeFileSync('content/home/data.toml', TOML.stringify({ project: data }));
+	}
+	main();
+	function parseGitmodules(content) {
 		const lines = content.split('\n');
 		const result = {};
 		let currentSubmodule = null;
@@ -156,34 +174,76 @@ data-update url=demo_base_url:
 		});
 		return result;
 	};
-	const gitmodulesContent = fs.readFileSync('.gitmodules', 'utf8');
-	const parsed = parseGitmodules(gitmodulesContent);
-	const sep = new Map([["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio"]]);
-	const data = [];
-	Object.values(parsed).forEach( theme => {
-		let themeName = theme.path;
-		if (themeName.startsWith("themes/"))
-			themeName = themeName.substring(7);
-		else
-			return;
+	function onlyIf(v, ifFalse, ifTrue) {
+		if (undefined == v || v.length == 0) return ifFalse;
+		else return ifTrue;
+	}
+	function readThemeInfo(theme) {
+		if (!theme.path.startsWith("themes/")) return;
+		const themeName = theme.path.substring(7);
+		let themeTomlPath = path.join(theme.path, "theme.toml");
+		const themeInfo = {};
 		if (sep.has(themeName)) {
-			theme.url = sep.get(themeName);
+			themeInfo.clone = sep.get(themeName);
+			themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
+		} else {
+			themeInfo.clone = theme.url;
 		}
-		let themeLink = theme.url;
-		if (themeLink.endsWith(".git"))
-			themeLink = themeLink.substring(0, themeLink.length - 4);
-		data.push(
-			'[[project]]\nname = "' + themeName + '"\ndesc = "<picture>' +
-			"<source srcset='./screenshots/light-" + themeName + ".png' media='(prefers-color-scheme: light)'/>" +
-			"<source srcset='./screenshots/dark-" + themeName + ".png' media='(prefers-color-scheme: dark)'/>" +
-			"<img src='./screenshots/light-" + themeName + ".png' alt='Screenshot of the " + themeName + " theme'/>" +
-			"</picture><menu class='mt-1'><a href='" + new URL(themeName, '{{ url }}').href + "' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;" +
-			"<a href='" + themeLink + "' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;" +
-			"<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary>" +
-			'<code>git submodule add ' + theme.url + ' ' + theme.path + '</code></details></menu>' +
-			'"\ntags = []\nlinks = []\n');
-		});
-	fs.writeFileSync('content/home/data.toml', data.join("\n"));
+		themeInfo.repo = themeInfo.clone.endsWith(".git") ?
+			themeInfo.clone.substring(0, themeInfo.clone.length - 4) :
+			themeInfo.clone;
+		let themeToml = {};
+		if (fs.existsSync(themeTomlPath)) {
+			try {
+				themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
+			} catch (err) {
+				console.error(err);
+			}
+		} else {
+			console.warn(themeTomlPath);
+		}
+		themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name);
+		themeInfo.description = onlyIf(themeToml.description, "",  themeToml.description);
+		themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags;
+		themeInfo.license = themeToml.license;
+		themeInfo.homepage = onlyIf(themeToml.homepage, themeToml.repo, themeToml.homepage);
+		themeInfo.demo = themeToml.demo;
+		themeInfo.minVersion = themeToml.min_version;
+		themeInfo.authorName = themeToml.author?.name;
+		themeInfo.authorHomepage = themeToml.author?.homepage;
+		themeInfo.originalRepo = themeToml.original?.repo;
+		const newDetails = (name, content) => `<details style='display: inline-block;'><summary class='not-prose' ` +
+	`style='list-style-type: none; display: none;' id='${name}-${themeName}'></summary>
+	${content}
+	</details>`;
+		const newJS = (name) => "const b=document.getElementById('" + name + "').parentElement;" +
+				"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
+		const themeDetails = newDetails("info", `
+	### Info` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
+	- **Author**: ${themeInfo.authorName}`), `
+	- **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
+	- **License**: ${themeInfo.license}
+	- **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
+	- **Off. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
+	- **Min version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
+	- **Original**: <${themeInfo.originalRepo}>
+	`)) + newDetails("install", `
+	### Installation instructions
+	\`git submodule add ${themeInfo.clone} themes/${themeName}\``);
+		return {
+			theme: themeName,
+			name: themeInfo.name,
+			desc: themeInfo.description,
+			tags: themeInfo.tags,
+			details: themeDetails,
+			links: [
+				{ name: "Live Demo", url: new URL(themeName + "/", baseURL).href },
+				{ name: "Repository", url: themeInfo.repo },
+				{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },
+				{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName) },
+			],
+		};
+	}
 
 [group('help')]
 submodule-remove path:
@@ -201,7 +261,7 @@ submodule-add url name: && (build-check "themes/"+name)
 submodule-update-all:
 	command {{ git }} submodule update --remote --merge
 
-[group('push'), script('zx')]
+[group('push'), script('./node_modules/.bin/zx')]
 fix-docs-dir:
 	const demos = await glob("docs/demo/*", { onlyDirectories: true })
 	for (const demo of demos) {
@@ -219,7 +279,7 @@ gh-pages:
 	command {{ git }} switch gh-pages
 	command {{ git }} merge main -X theirs --no-ff --no-commit
 	command {{ just }} build-demo-all '{{ demo_base_url }}' \
-		screenshots-missing data-update '{{ demo_base_url }}'
+		screenshots-missing update-data '{{ demo_base_url }}'
 	command {{ rm }} -rf docs
 	command {{ zola }} build -o docs
 	command {{ just }} fix-docs-dir

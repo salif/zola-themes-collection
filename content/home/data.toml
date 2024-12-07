@@ -1,143 +1,921 @@
 [[project]]
-name = "zola-bearblog"
-desc = "<picture><source srcset='./screenshots/light-zola-bearblog.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zola-bearblog.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zola-bearblog.png' alt='Screenshot of the zola-bearblog theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zola-bearblog' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/alanpearce/zola-bearblog' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/alanpearce/zola-bearblog themes/zola-bearblog</code></details></menu>"
-tags = []
-links = []
+theme = "zola-bearblog"
+name = "Bear"
+desc = "Bear blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
+
+### Info
+- **Author**: [Alan Pearce](https://alanpearce.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
+- **Off. Live Demo**: <https://zola-bearblog.vercel.app/>
+- **Min version**: 0.4.0
+- **Original**: <https://github.com/janraasch/hugo-bearblog/>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zola-bearblog/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/alanpearce/zola-bearblog"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zola-bearblog"
+  js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zola-bearblog"
+  js = "const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "tabi"
 name = "tabi"
-desc = "<picture><source srcset='./screenshots/light-tabi.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-tabi.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-tabi.png' alt='Screenshot of the tabi theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/tabi' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/welpo/tabi' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/welpo/tabi.git themes/tabi</code></details></menu>"
-tags = []
-links = []
+desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
+
+### Info
+- **Author**: [Óscar Fernández](https://osc.garden)
+- **License**: MIT
+- **Homepage**: <https://github.com/welpo/tabi>
+- **Off. Live Demo**: <https://welpo.github.io/tabi>
+- **Min version**: 0.17.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/welpo/tabi.git themes/tabi`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/tabi/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/welpo/tabi"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-tabi"
+  js = "const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-tabi"
+  js = "const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "duckquill"
-desc = "<picture><source srcset='./screenshots/light-duckquill.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-duckquill.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-duckquill.png' alt='Screenshot of the duckquill theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/duckquill' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/daudix/duckquill' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill</code></details></menu>"
-tags = []
-links = []
+theme = "duckquill"
+name = "Duckquill"
+desc = "Modern, pretty, and clean theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
+
+### Info
+- **Author**: [David Lapshin](https://daudix.one)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/daudix/duckquill>
+- **Off. Live Demo**: <https://duckquill.daudix.one>
+- **Min version**: 0.19.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/duckquill/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/daudix/duckquill"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-duckquill"
+  js = "const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-duckquill"
+  js = "const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "linkita"
-desc = "<picture><source srcset='./screenshots/light-linkita.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-linkita.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-linkita.png' alt='Screenshot of the linkita theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/linkita' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/salif/linkita' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/salif/linkita.git themes/linkita</code></details></menu>"
-tags = []
-links = []
+theme = "linkita"
+name = "Linkita"
+desc = "A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly."
+tags = [ "Blog", "SEO-friendly", "Multilingual", "Responsive" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-linkita'></summary>
+
+### Info
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/salif/linkita>
+- **Off. Live Demo**: <https://salif.github.io/linkita/en/>
+- **Min version**: 0.19.0
+- **Original**: <https://github.com/st1020/kita>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/salif/linkita.git themes/linkita`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/linkita/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/linkita"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-linkita"
+  js = "const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-linkita"
+  js = "const b=document.getElementById('install-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "zola-pulladidoks-theme"
-desc = "<picture><source srcset='./screenshots/light-zola-pulladidoks-theme.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zola-pulladidoks-theme.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zola-pulladidoks-theme.png' alt='Screenshot of the zola-pulladidoks-theme theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zola-pulladidoks-theme' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/ShawnPConroy/zola-pulladidoks-theme' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme</code></details></menu>"
-tags = []
-links = []
+theme = "zola-pulladidoks-theme"
+name = "adidoks"
+desc = "AdiDoks is a Zola theme helping you build modern documentation."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-pulladidoks-theme'></summary>
+
+### Info
+- **Author**: [Aaran Xu](https://github.com/aaranxu)
+- **License**: MIT
+- **Homepage**: <https://github.com/aaranxu/adidoks>
+- **Off. Live Demo**: <https://adidoks.netlify.app/>
+- **Min version**: 0.15.0
+- **Original**: <https://github.com/h-enk/doks>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-pulladidoks-theme'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zola-pulladidoks-theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/ShawnPConroy/zola-pulladidoks-theme"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zola-pulladidoks-theme"
+  js = "const b=document.getElementById('info-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zola-pulladidoks-theme"
+  js = "const b=document.getElementById('install-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "mabuya"
-desc = "<picture><source srcset='./screenshots/light-mabuya.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-mabuya.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-mabuya.png' alt='Screenshot of the mabuya theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/mabuya' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/semanticdata/mabuya' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya</code></details></menu>"
-tags = []
-links = []
+theme = "mabuya"
+name = "Mabuya"
+desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
+
+### Info
+- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/mabuya>
+- **Off. Live Demo**: <https://mabuya.vercel.app/>
+- **Min version**: 0.18.0
+- **Original**: <https://github.com/chesterhow/tale>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/mabuya/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/semanticdata/mabuya"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-mabuya"
+  js = "const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-mabuya"
+  js = "const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "researchlab"
 name = "researchlab"
-desc = "<picture><source srcset='./screenshots/light-researchlab.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-researchlab.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-researchlab.png' alt='Screenshot of the researchlab theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/researchlab' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/plaublin/researchlab' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab</code></details></menu>"
-tags = []
-links = []
+desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
+
+### Info
+- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/plaublin/researchlab>
+- **Off. Live Demo**: <https://plaublin.codeberg.page/researchlab/@pages>
+- **Min version**: 0.19.2
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/plaublin/researchlab"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-researchlab"
+  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-researchlab"
+  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "zluinav"
-desc = "<picture><source srcset='./screenshots/light-zluinav.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zluinav.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zluinav.png' alt='Screenshot of the zluinav theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zluinav' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/harrymkt/zluinav' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav</code></details></menu>"
-tags = []
-links = []
+theme = "zluinav"
+name = "UI Navigation"
+desc = "A multilingual theme designed for accessibility rather than visual."
+tags = [ "blind", "multilingual", "accessible", "responsive" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
+
+### Info
+- **Author**: [Harry Min Khant](https://harrymkt.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/harrymkt/zluinav>
+- **Off. Live Demo**: <https://harrymkt.github.io/zluinav>
+- **Min version**: 0.19.2
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/harrymkt/zluinav"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zluinav"
+  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zluinav"
+  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "hacker"
-desc = "<picture><source srcset='./screenshots/light-hacker.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-hacker.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-hacker.png' alt='Screenshot of the hacker theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/hacker' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/en9inerd/zola-hacker' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker</code></details></menu>"
-tags = []
-links = []
+theme = "hacker"
+name = "zola-hacker"
+desc = "Hacker is a theme for Zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hacker'></summary>
+
+### Info
+- **Author**: [Vladimir Loskutov](https://github.com/en9inerd)
+- **License**: MIT
+- **Homepage**: <https://github.com/en9inerd/zola-hacker>
+- **Off. Live Demo**: <https://zola-hacker.enginerd.io/>
+- **Min version**: 0.19.1
+- **Original**: <https://github.com/pages-themes/hacker>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/hacker/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/en9inerd/zola-hacker"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-hacker"
+  js = "const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-hacker"
+  js = "const b=document.getElementById('install-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "hook"
-desc = "<picture><source srcset='./screenshots/light-hook.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-hook.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-hook.png' alt='Screenshot of the hook theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/hook' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/InputUsername/zola-hook' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/InputUsername/zola-hook.git themes/hook</code></details></menu>"
-tags = []
-links = []
+theme = "hook"
+name = "Hook"
+desc = "Clean and simple personal site/blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
+
+### Info
+- **Author**: [Koen Bolhuis](https://koen.bolhu.is)
+- **License**: MIT
+- **Homepage**: <https://github.com/InputUsername/zola-hook>
+- **Off. Live Demo**: <https://inputusername.github.io/zola-hook/>
+- **Min version**: 0.15.2
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/InputUsername/zola-hook.git themes/hook`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/hook/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/InputUsername/zola-hook"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-hook"
+  js = "const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-hook"
+  js = "const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "mo8it"
 name = "mo8it"
-desc = "<picture><source srcset='./screenshots/light-mo8it.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-mo8it.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-mo8it.png' alt='Screenshot of the mo8it theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/mo8it' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/salif/zola-mo8it' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/salif/zola-mo8it.git themes/mo8it</code></details></menu>"
-tags = []
-links = []
+desc = "mo8it.com"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mo8it'></summary>
+
+### Info
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: AGPLv3
+- **Homepage**: <https://codeberg.org/salif/zola-mo8it>
+- **Off. Live Demo**: <https://mo8it.com>
+- **Min version**: 0.19.0
+- **Original**: <https://codeberg.org/mo8it/website>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/salif/zola-mo8it.git themes/mo8it`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/mo8it/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/zola-mo8it"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-mo8it"
+  js = "const b=document.getElementById('info-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-mo8it"
+  js = "const b=document.getElementById('install-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "apollo"
 name = "apollo"
-desc = "<picture><source srcset='./screenshots/light-apollo.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-apollo.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-apollo.png' alt='Screenshot of the apollo theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/apollo' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/not-matthias/apollo' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/not-matthias/apollo themes/apollo</code></details></menu>"
-tags = []
-links = []
+desc = "Modern and minimalistic blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
+
+### Info
+- **Author**: [not-matthias](https://github.com/not-matthias)
+- **License**: MIT
+- **Homepage**: <https://github.com/not-matthias/apollo>
+- **Off. Live Demo**: <https://not-matthias.github.io/apollo>
+- **Min version**: 0.14.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/not-matthias/apollo.git themes/apollo`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/not-matthias/apollo"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-apollo"
+  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-apollo"
+  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "terminimal"
 name = "terminimal"
-desc = "<picture><source srcset='./screenshots/light-terminimal.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-terminimal.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-terminimal.png' alt='Screenshot of the terminimal theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/terminimal' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/pawroman/zola-theme-terminimal' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal</code></details></menu>"
-tags = []
-links = []
+desc = "A simple, minimal retro theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
+
+### Info
+- **Author**: [Paweł Romanowski](https://github.com/pawroman)
+- **License**: MIT
+- **Homepage**: <https://github.com/pawroman/zola-theme-terminimal>
+- **Off. Live Demo**: <https://pawroman.github.io/zola-theme-terminimal/>
+- **Min version**: 0.11.0
+- **Original**: <https://github.com/panr/hugo-theme-terminal>
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/terminimal/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/pawroman/zola-theme-terminimal"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-terminimal"
+  js = "const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-terminimal"
+  js = "const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "anemone"
 name = "anemone"
-desc = "<picture><source srcset='./screenshots/light-anemone.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-anemone.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-anemone.png' alt='Screenshot of the anemone theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/anemone' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/Speyll/anemone' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/Speyll/anemone.git themes/anemone</code></details></menu>"
-tags = []
-links = []
+desc = "A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anemone'></summary>
+
+### Info
+- **Author**: [Speyll](https://speyllsite.pages.dev/)
+- **License**: MIT
+- **Homepage**: <https://github.com/Speyll/anemone>
+- **Off. Live Demo**: <https://anemone.pages.dev>
+- **Min version**: 0.4.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anemone'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/Speyll/anemone.git themes/anemone`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/anemone/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/Speyll/anemone"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-anemone"
+  js = "const b=document.getElementById('info-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-anemone"
+  js = "const b=document.getElementById('install-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "abridge"
 name = "abridge"
-desc = "<picture><source srcset='./screenshots/light-abridge.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-abridge.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-abridge.png' alt='Screenshot of the abridge theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/abridge' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/jieiku/abridge' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/jieiku/abridge.git themes/abridge</code></details></menu>"
-tags = []
-links = []
+desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
+
+### Info
+- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jieiku/abridge>
+- **Off. Live Demo**: <https://abridge.pages.dev/>
+- **Min version**: 0.19.1
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/jieiku/abridge.git themes/abridge`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jieiku/abridge"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-abridge"
+  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-abridge"
+  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "sandbox"
-desc = "<picture><source srcset='./screenshots/light-sandbox.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-sandbox.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-sandbox.png' alt='Screenshot of the sandbox theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/sandbox' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/semanticdata/zola-sandbox' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/semanticdata/zola-sandbox.git themes/sandbox</code></details></menu>"
-tags = []
-links = []
+theme = "sandbox"
+name = "Sandbox"
+desc = "Sandbox is a theme for Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
+
+### Info
+- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/zola-sandbox>
+- **Off. Live Demo**: <https://zola-sandbox.vercel.app/>
+- **Min version**: 0.18.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/semanticdata/zola-sandbox.git themes/sandbox`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/sandbox/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/semanticdata/zola-sandbox"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-sandbox"
+  js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-sandbox"
+  js = "const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "olivine"
-desc = "<picture><source srcset='./screenshots/light-olivine.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-olivine.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-olivine.png' alt='Screenshot of the olivine theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/olivine' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/dongryul-kim/olivine' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine</code></details></menu>"
-tags = []
-links = []
+theme = "olivine"
+name = "Olivine"
+desc = "A Zola theme for a personal knowledge base"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
+
+### Info
+- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
+- **License**: MIT
+- **Homepage**: <https://github.com/>
+- **Min version**: 0.17.2
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/olivine/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/dongryul-kim/olivine"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-olivine"
+  js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-olivine"
+  js = "const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "project-portfolio"
-desc = "<picture><source srcset='./screenshots/light-project-portfolio.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-project-portfolio.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-project-portfolio.png' alt='Screenshot of the project-portfolio theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/project-portfolio' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/awinterstein/zola-theme-project-portfolio' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/awinterstein/zola-theme-project-portfolio themes/project-portfolio</code></details></menu>"
-tags = []
-links = []
+theme = "project-portfolio"
+name = "Project Portfolio"
+desc = "Theme for a project portfolio (based on Tailwind CSS)."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+
+### Info
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
+- **Off. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
+- **Min version**: 0.9.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/awinterstein/zola-theme-project-portfolio"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-project-portfolio"
+  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-project-portfolio"
+  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "academic-paper"
-desc = "<picture><source srcset='./screenshots/light-academic-paper.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-academic-paper.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-academic-paper.png' alt='Screenshot of the academic-paper theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/academic-paper' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/aterenin/academic-paper' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper</code></details></menu>"
-tags = []
-links = []
+theme = "academic-paper"
+name = "Academic Paper"
+desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
+
+### Info
+- **Author**: [Alexander Terenin](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-paper>
+- **Off. Live Demo**: <https://aterenin.github.io/academic-paper>
+- **Min version**: 0.18.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-paper"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-paper"
+  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-paper"
+  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-name = "academic-workshop"
-desc = "<picture><source srcset='./screenshots/light-academic-workshop.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-academic-workshop.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-academic-workshop.png' alt='Screenshot of the academic-workshop theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/academic-workshop' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/aterenin/academic-workshop' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop</code></details></menu>"
-tags = []
-links = []
+theme = "academic-workshop"
+name = "Academic Workshop"
+desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
+
+### Info
+- **Author**: [Alexander Terein](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-workshop>
+- **Off. Live Demo**: <https://aterenin.github.io/academic-workshop>
+- **Min version**: 0.18.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-workshop"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-workshop"
+  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-workshop"
+  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "zallery"
 name = "zallery"
-desc = "<picture><source srcset='./screenshots/light-zallery.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-zallery.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-zallery.png' alt='Screenshot of the zallery theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/zallery' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/gamingrobot/zallery' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/gamingrobot/zallery.git themes/zallery</code></details></menu>"
-tags = []
-links = []
+desc = "Gallery theme for zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zallery'></summary>
+
+### Info
+- **Author**: [Morgan Creekmore](https://creekmore.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/gamingrobot/zallery>
+- **Off. Live Demo**: <https://gamingrobot.github.io/zallery-demo>
+- **Min version**: 0.19.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zallery'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/gamingrobot/zallery.git themes/zallery`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zallery/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/gamingrobot/zallery"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zallery"
+  js = "const b=document.getElementById('info-zallery').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zallery"
+  js = "const b=document.getElementById('install-zallery').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "DogFood"
 name = "DogFood"
-desc = "<picture><source srcset='./screenshots/light-DogFood.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-DogFood.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-DogFood.png' alt='Screenshot of the DogFood theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/DogFood' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/CSUwangj/DogFood' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood</code></details></menu>"
-tags = []
-links = []
+desc = "A blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
+
+### Info
+- **Author**: [CSUwangj](https://CSUwangj.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/CSUwangj/DogFood>
+- **Min version**: 0.4.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/DogFood/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/CSUwangj/DogFood"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-DogFood"
+  js = "const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-DogFood"
+  js = "const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "devnzt"
 name = "devnzt"
-desc = "<picture><source srcset='./screenshots/light-devnzt.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-devnzt.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-devnzt.png' alt='Screenshot of the devnzt theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/devnzt' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://github.com/devendrn/devnzt' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://github.com/devendrn/devnzt.git themes/devnzt</code></details></menu>"
-tags = []
-links = []
+desc = "A simple zola theme for personal use."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-devnzt'></summary>
+
+### Info
+- **Author**: [devendrn](https://devendrn.github.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/devendrn/devnzt/>
+- **Min version**: 0.18.0
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
+
+### Installation instructions
+`git submodule add https://github.com/devendrn/devnzt.git themes/devnzt`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/devnzt/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/devendrn/devnzt"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-devnzt"
+  js = "const b=document.getElementById('info-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-devnzt"
+  js = "const b=document.getElementById('install-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "fl1tzi-com-theme"
 name = "fl1tzi-com-theme"
-desc = "<picture><source srcset='./screenshots/light-fl1tzi-com-theme.png' media='(prefers-color-scheme: light)'/><source srcset='./screenshots/dark-fl1tzi-com-theme.png' media='(prefers-color-scheme: dark)'/><img src='./screenshots/light-fl1tzi-com-theme.png' alt='Screenshot of the fl1tzi-com-theme theme'/></picture><menu class='mt-1'><a href='https://salif.github.io/zola-themes-collection/demo/fl1tzi-com-theme' rel='noopener' target='_blank' class='underline'>Live Demo</a>&nbsp;&nbsp;<a href='https://codeberg.org/Fl1tzi/fl1tzi-com-theme' rel='noopener' target='_blank' class='underline'>Repository</a>&nbsp;&nbsp;<details style='display: inline-block;'><summary class='select-none cursor-pointer underline' style='text-underline-offset: 2px; list-style-type: none;'>Install</summary><code>git submodule add https://codeberg.org/Fl1tzi/fl1tzi-com-theme.git themes/fl1tzi-com-theme</code></details></menu>"
-tags = []
-links = []
+desc = "My personal theme open to the public to use"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-fl1tzi-com-theme'></summary>
+
+### Info
+- **Author**: [Fl1tzi](https://www.fl1tzi.com/)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/fl1tzi/fl1tzi-com-theme>
+- **Off. Live Demo**: <https://www.fl1tzi.com/>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-fl1tzi-com-theme'></summary>
+
+### Installation instructions
+`git submodule add https://codeberg.org/Fl1tzi/fl1tzi-com-theme.git themes/fl1tzi-com-theme`
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/fl1tzi-com-theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/Fl1tzi/fl1tzi-com-theme"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-fl1tzi-com-theme"
+  js = "const b=document.getElementById('info-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-fl1tzi-com-theme"
+  js = "const b=document.getElementById('install-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
