@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% block main %}
+
+{% for asset in page.assets %}
+{% if asset is ending_with("data.toml") %}
+{% set_global data = load_data(path=asset, format="toml") %}
+{% endif %}
+{% endfor %}
+
+<h1 class="mb-16">{{ page.title }}</h1>
+{% for project in data.project %}
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ project.name }}</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-{{ project.theme }}.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-{{ project.theme }}.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-{{ project.theme }}.png' alt='Screenshot of the {{ project.name }} theme'/>
+    </picture>
+    <p>{{ project.desc }}</p>
+  </div>
+  {{ project.details | markdown(inline=true) | safe }}
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      {% for tag in project.tags %}
+      <span>#{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      {% for link in project.links %}
+      <a
+        class="underline"
+        {%- if link.js %}
+        onclick="{{ link.js | safe }}"
+        href="{{ link.url | escape_xml | safe }}"
+        {%- else %}
+        href="{{ link.url | replace(from=`$BASE_URL`, to=config.base_url) | escape_xml | safe }}"
+        rel="noopener"
+        target="_blank"
+        {%- endif %}
+        >{{ link.name }}</a
+      >
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock main %}
