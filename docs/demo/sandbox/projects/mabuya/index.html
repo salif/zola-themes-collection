@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" itemprop="about" content="This repository is used to test new web elements. It is an amalgamation of code snippets, all weaved together by Zola.">
+  <title>Zola Sandbox</title>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/sandbox/main.css">
+</head>
+
+<body>
+  <aside id="sidebar-left" class="box sidebar sidebar-left">
+    <a class="site-title-link" href="https://salif.github.io/zola-themes-collection/demo/sandbox/">
+      <h1 class="site-title">Zola Sandbox</h1>
+    </a>
+    <nav>
+  <ul class="sidebar-nav">
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/about/" aria-label="About">About</a>
+    </li>
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/posts/" aria-label="Posts">Posts</a>
+    </li>
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/projects/" aria-label="Projects">Projects</a>
+    </li>
+    
+  </ul>
+
+  
+</nav>
+  </aside>
+
+  <main class="box">
+    
+
+    
+    <section class="breadcrumb-container">
+  <a class="breadcrumb-path" href="./">Home</a>
+  
+  
+  
+  
+  
+  <span class="breadcrumb-separator"> / </span>
+  
+  <a class="breadcrumb-path" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;sandbox&#x2F;projects&#x2F;">Projects</a>
+  
+  <span class="breadcrumb-separator"> / </span>
+  <a class="breadcrumb-path active" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;sandbox&#x2F;projects&#x2F;mabuya&#x2F;">Mabuya</a>
+</section>
+    <h2 class="page-title">Mabuya</h2>
+    
+
+    
+<article class="page">
+  <p>Mabuya is a minimal Zola theme focused on helping you build an elegant, fast, lightweight, and SEO-ready blog.</p>
+<p>While searching for themes, I came across <a href="https://github.com/aaranxu/tale-zola">Zola Tale</a>. Sadly, the project's last update was almost 2 years ago on Dec 4, 2021. I forked the project to add my own touches to it.</p>
+<p><a href="https://semanticdata.github.io/mabuya/">Demo</a> | <a href="https://github.com/semanticdata/mabuya">Source</a></p>
+<h2 id="where-the-name-comes-from">Where The Name Comes From</h2>
+<p>The name Mabuya comes from the <a href="https://en.wikipedia.org/wiki/Mabuya_hispaniolae?useskin=vector">Mabuya hispaniolae</a>, a possibly extinct[^1] species of skink endemic to the Dominican Republic, my home country.</p>
+<h2 id="features-and-improvements-over-original">Features and Improvements over Original</h2>
+<p>While working on the theme, I have added new functionality and many quality of life improvements. Here's a short non-inclusive list:</p>
+<ul>
+<li>Fully refactored stylesheets.</li>
+<li>Added Dark theme and color scheme toggle.</li>
+<li>Added new footer navigation.</li>
+<li>Created a custom GitHub Action that is faster than any other in GitHub.</li>
+<li>Refined page transitions from desktop to mobile and viceversa.</li>
+<li>Centralized custom variables. Made it easier to make color changes to the site.</li>
+<li>Addressed PR <a href="https://github.com/aaranxu/tale-zola/pull/7">#7</a>.</li>
+<li>Addressed (temporarily) Issue <a href="https://github.com/aaranxu/tale-zola/issues/1">#1</a>.</li>
+<li>Addressed Issue <a href="https://github.com/aaranxu/tale-zola/issues/4">#4</a>.</li>
+<li>Optimized for speed and Accesibility.</li>
+<li>And many other small improvements.</li>
+</ul>
+<h2 id="screenshots">Screenshots</h2>
+<p><img src="https://raw.githubusercontent.com/semanticdata/mabuya/main/screenshot.png" alt="website screenshot" /></p>
+
+</article>
+
+  </main>
+
+  
+  <aside id="sidebar-right" class="box sidebar sidebar-right">
+    <h2>Mabuya</h2>
+    <p>Mabuya—a minimal Zola theme focused on helping you build an elegant, fast, lightweight, and SEO-ready blog.</p>
+
+    
+    
+<details open>
+  <summary>
+    Table of Contents
+  </summary>
+  <ul class="table-of-content">
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/projects/mabuya/#where-the-name-comes-from">Where The Name Comes From</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/projects/mabuya/#features-and-improvements-over-original">Features and Improvements over Original</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/projects/mabuya/#screenshots">Screenshots</a>
+      
+    </li>
+    
+  </ul>
+</details>
+
+<script>
+  function toggleDetailsBasedOnWidth() {
+    const details = document.querySelectorAll('details');
+    if (window.innerWidth < 1000) {
+      details.forEach(detail => {
+        detail.removeAttribute('open');  // Close details when width is less than 1000px
+      });
+    } else {
+      details.forEach(detail => {
+        detail.setAttribute('open', 'open');  // Open details when width is greater than 1000px
+      });
+    }
+  }
+
+  // Trigger the function when the window is resized
+  window.addEventListener('resize', toggleDetailsBasedOnWidth);
+
+  // Trigger the function on initial page load
+  document.addEventListener('DOMContentLoaded', toggleDetailsBasedOnWidth);
+</script>
+
+    
+  </aside>
+  
+
+  <footer class="box">
+    <p>
+        © 2024 Miguel Pimentel. Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a> and
+        <a href="https://github.com/miguelpimentel/zola-sandbox" target="_blank">Sandbox</a>.
+    </p>
+</footer>
+
+  <button id="goToTopBtn" onclick="goToTop()" title="Go to top">↑</button>
+
+<script>
+    // Show the button when the user scrolls down 20px from the top
+    window.onscroll = function () {
+        var goToTopBtn = document.getElementById("goToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            goToTopBtn.style.display = "block";
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    };
+
+    // Scroll smoothly to the top when the button is clicked
+    function goToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+
+</html>

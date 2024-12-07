@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/olivine//manifest.json">
+    <meta name="theme-color" content="#786"/>
+    <title>Olivine &middot; Graph</title>
+    <meta name="description" content="Graph"/>
+    <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
+    <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
+  var olivine = {
+    base_url: "https://salif.github.io/zola-themes-collection/demo/olivine",
+  };
+</script>
+
+
+    <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape@3/dist/cytoscape.min.js"></script>
+
+  </head>
+
+  <body class="leftbar">
+    <script>
+      setSidebar();
+    </script>
+
+    <header>
+      <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
+<div dir="rtl" id="olivine-breadcrumb">
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine-internal-graph/">Graph</a>
+</div>
+<div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
+<div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
+
+      </div>
+    </header>
+
+    <div class="sidebar" id="leftbar">
+      <div class="sidebar-content"><ul class="hidden" id="olivine-directory">
+  <li><a href=".."><span class="olivine-icon"><i class="fa-solid fa-turn-up"></i></span> ..</a></li>
+</ul>
+<hr noshade style="width:100%;">
+<ul>
+  <li><a id="olivine-today"><span class="olivine-icon"><i class="fa-regular fa-calendar-check"></i></span> Today</a></li>
+  <li><a id="olivine-yesterday"><span class="olivine-icon"><i class="fa-regular fa-calendar-minus"></i></span> Yesterday</a></li>
+  <li><a id="olivine-calendar"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
+  <script>setJournal();</script>
+</ul>
+
+
+<ul>
+  <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine//olivine-internal-graph/"><span class="olivine-icon"><i class="fa-solid fa-diagram-project"></i></span> Graph view</a></li>
+</ul>
+
+<ul><li><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/"><span class="olivine-icon"><i class="fa-solid fa-tags"></i></span>Tags</a></li></ul>
+
+      </div>
+    </div>
+
+    <div class="sidebar" id="rightbar">
+      <div class="sidebar-content">
+
+
+
+      </div>
+    </div>
+
+    <div id="main-area">
+      <main>
+<h1>Graph view</h1>
+<div id="olivine-graph" style="width:100%; height:30em; display:block; border: 1px solid var(--body-text);">
+</div>
+<script>
+let cy_elements = [
+{ data: { id: '/tags/adic-spaces/', type: 'tag', name: '#adic-spaces' } },
+{ data: { source: '/math/olivine/', target: '/tags/adic-spaces/' } },
+{ data: { id: '/tags/olivine/', type: 'tag', name: '#olivine' } },
+{ data: { source: '/math/olivine/', target: '/tags/olivine/' } },
+{ data: { source: '/docs/01-intro/', target: '/tags/olivine/' } },
+{ data: { source: '/journal/2023-08-03/', target: '/tags/olivine/' } },
+{ data: { id: '/', type: 'section', name: 'Olivine' } },
+{ data: { id: '/olivine-internal-sitemap/', type: 'page', name: 'Sitemap' } },
+{ data: { source: '/olivine-internal-sitemap/', target: '/' } },
+{ data: { id: '/olivine-internal-graph/', type: 'page', name: 'Graph' } },
+{ data: { source: '/olivine-internal-graph/', target: '/' } },
+{ data: { id: '/math/', type: 'section', name: 'Mathematics' } },
+{ data: { id: '/math/olivine/', type: 'page', name: 'The olivine spectrum' } },
+{ data: { source: '/math/olivine/', target: '/math/' } },
+{ data: { source: '/math/', target: '/' } },
+{ data: { id: '/docs/', type: 'section', name: 'Documentation' } },
+{ data: { source: 'docs/02-styles-demo/', target: '/docs/' } },
+{ data: { id: '/docs/01-intro/', type: 'page', name: 'Getting started' } },
+{ data: { source: '/docs/01-intro/', target: '/docs/' } },
+{ data: { id: '/docs/02-styles-demo/', type: 'page', name: 'Styles demo' } },
+{ data: { source: '/docs/02-styles-demo/', target: '/docs/' } },
+{ data: { source: 'docs/02-styles-demo/', target: '/docs/02-styles-demo/' } },
+{ data: { id: '/docs/03-configuration/', type: 'page', name: 'Configuration' } },
+{ data: { source: '/docs/03-configuration/', target: '/docs/' } },
+{ data: { source: '/docs/', target: '/' } },
+{ data: { id: '/journal/', type: 'section', name: 'Journal' } },
+{ data: { id: '/journal/2023-08-03/', type: 'page', name: '2023-08-03' } },
+{ data: { source: '/journal/2023-08-03/', target: '/journal/' } },
+{ data: { source: '/journal/', target: '/' } },
+];
+
+// Clean up data
+function bad_id(id) {
+  return id.startsWith("/olivine-internal");
+}
+cy_elements = cy_elements.filter(item => {
+  if (item.data.id === undefined) {
+    return (item.data.source !== item.data.target) && !bad_id(item.data.source)
+      && !bad_id(item.data.target);
+  } else {
+    return !bad_id(item.data.id);
+  }
+});
+
+const cy = cytoscape({
+  container: document.getElementById('olivine-graph'),
+  elements: cy_elements,
+  layout: {
+    name: 'cose',
+  },
+  style: [{
+    selector: "node",
+    style: {
+      label: "data(name)",
+      width: 7,
+      height: 7,
+      "text-valign": "bottom",
+      "text-halign": "center",
+      "color": "#777",
+      "background-color": "#7a4",
+      "opacity": 0.4,
+      "font-size": 7,
+      "min-zoomed-font-size": 7,
+    }}, {
+    selector: "edge",
+    style: {
+      "width": 1,
+      "curve-style": "straight",
+      "color": "#777",
+      "opacity": 0.4,
+    }},
+  ],
+  autoungrabify: true,
+  autounselectify: true,
+});
+
+cy.on('mouseover touchstart', 'node', function(evt){
+  var node = evt.target;
+  node.style('opacity', 1);
+  for (adj of node.neighborhood())
+    adj.style('opacity', 0.7);
+});
+
+cy.on('mouseout touchend', 'node', function(evt){
+  var node = evt.target;
+  node.style('opacity', 0.4);
+  for (adj of node.neighborhood())
+    adj.style('opacity', 0.4);
+});
+
+cy.on('tap', 'node', function(evt){
+  var node = evt.target;
+  window.location.href = olivine.base_url + node.id();
+});
+</script>
+
+      </main>
+    </div>
+  </body>
+</html>

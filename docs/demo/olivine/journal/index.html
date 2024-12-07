@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/olivine//manifest.json">
+    <meta name="theme-color" content="#786"/>
+    <title>Olivine &middot; Journal</title>
+    <meta name="description" content="Journal"/>
+    <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
+
+    <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript>
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
+
+<script>
+  var olivine = {
+    base_url: "https://salif.github.io/zola-themes-collection/demo/olivine",
+  };
+</script>
+
+
+    <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+
+<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+
+
+  </head>
+
+  <body class="leftbar">
+    <script>
+      setSidebar();
+    </script>
+
+    <header>
+      <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
+<div dir="rtl" id="olivine-breadcrumb">
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/journal/">Journal</a>
+</div>
+<div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
+<div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
+
+      </div>
+    </header>
+
+    <div class="sidebar" id="leftbar">
+      <div class="sidebar-content"><ul class="hidden" id="olivine-directory">
+  <li><a href=".."><span class="olivine-icon"><i class="fa-solid fa-turn-up"></i></span> ..</a></li>
+  <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine/journal/2023-08-03/"><span class="olivine-icon"><i class="fa-regular fa-file-lines"></i></span> 2023-08-03</a></li>
+</ul>
+<hr noshade style="width:100%;">
+<ul>
+  <li><a id="olivine-today"><span class="olivine-icon"><i class="fa-regular fa-calendar-check"></i></span> Today</a></li>
+  <li><a id="olivine-yesterday"><span class="olivine-icon"><i class="fa-regular fa-calendar-minus"></i></span> Yesterday</a></li>
+  <li><a id="olivine-calendar"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
+  <script>setJournal();</script>
+</ul>
+
+
+<ul>
+  <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine//olivine-internal-graph/"><span class="olivine-icon"><i class="fa-solid fa-diagram-project"></i></span> Graph view</a></li>
+</ul>
+
+<ul><li><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/"><span class="olivine-icon"><i class="fa-solid fa-tags"></i></span>Tags</a></li></ul>
+
+      </div>
+    </div>
+
+    <div class="sidebar" id="rightbar">
+      <div class="sidebar-content">
+
+
+
+      </div>
+    </div>
+
+    <div id="main-area">
+      <main>
+<h1>Journal</h1>
+
+<div id="calendar"></div>
+<style>
+:root {
+  --date-bg: color-mix(in srgb,var(--link),var(--body-bg) 80%);
+  --date-bg-hover: color-mix(in srgb,var(--link),var(--body-bg) 50%);
+}
+table.month td.day .day-content:hover {
+  background: transparent;
+  cursor: pointer;
+}
+</style>
+<script>
+var journalEntries = [
+  
+  "2023-08-03",
+  ];
+dataSource = journalEntries.map((d) => {
+  const date = new Date(parseInt(d.slice(0,4)), parseInt(d.slice(5,7))-1, parseInt(d.slice(8,10)));
+  return { color: 'var(--date-bg)', startDate: date, endDate: date };
+});
+var calendar = new Calendar('#calendar', {
+  dataSource, 
+  style: 'background',
+  mouseOnDay: function(e) {
+    if (e.events.length > 0)
+      e.element.style.backgroundColor = 'var(--date-bg-hover)';
+  },
+  mouseOutDay: function(e) {
+    if (e.events.length > 0)
+      e.element.style.backgroundColor = 'var(--date-bg)';
+  },
+  clickDay: function(e) {
+    if (e.events.length > 0) {
+      console.log(e.date);
+      console.log(e.date.getFullYear());
+      window.location.href = olivine.base_url + '/journal/' +
+        e.date.getFullYear().toString() + '-' +
+        (e.date.getMonth()+1).toString().padStart(2,'0') + '-' +
+        e.date.getDate().toString().padStart(2,'0') + '/';
+    }
+  }
+});
+</script>
+
+
+
+
+      </main>
+    </div>
+  </body>
+</html>

@@ -522,461 +522,861 @@
 
   <main class="container mx-auto p-4 pt-28 flex-grow">
     
-  <div class="prose mx-auto">
-    <h1 class="text-3xl font-bold mt-4 mb-2">Publications</h1>
-    
+<div class="prose mx-auto">
+  <h1 class="text-3xl font-bold mt-4 mb-2">Publications</h1>
+  
+</div>
+
+ 
+<div class="max-w-2xl mx-auto mt-4 mb-2">
+  <div class="flex pb-8 space-x-4">
+    <div class="relative flex-auto w-64">
+      <div
+        id="selectCategories"
+        class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer"
+        onclick="toggleDropdownSelectCategories()"
+      >
+        <div id="selectedCategories" class="flex flex-wrap gap-2 text-gray-500">
+          Select categories
+        </div>
+        <svg
+          id="arrowIconSelectCategories"
+          class="w-5 h-5 transform"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </div>
+
+      <ul
+        id="dropdownSelectCategories"
+        class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden"
+      >
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="book"
+            value="book"
+            class="mr-2"
+            onclick="updateSelectedItems('book')"
+          />
+          <label for="book" class="cursor-pointer w-full">book</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="classified"
+            value="classified"
+            class="mr-2"
+            onclick="updateSelectedItems('classified')"
+          />
+          <label for="classified" class="cursor-pointer w-full">classified</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="conference"
+            value="conference"
+            class="mr-2"
+            onclick="updateSelectedItems('conference')"
+          />
+          <label for="conference" class="cursor-pointer w-full">conference</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="deep-learning"
+            value="deep-learning"
+            class="mr-2"
+            onclick="updateSelectedItems('deep-learning')"
+          />
+          <label for="deep-learning" class="cursor-pointer w-full">deep-learning</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="economics"
+            value="economics"
+            class="mr-2"
+            onclick="updateSelectedItems('economics')"
+          />
+          <label for="economics" class="cursor-pointer w-full">economics</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="foundation-eyes-only"
+            value="foundation-eyes-only"
+            class="mr-2"
+            onclick="updateSelectedItems('foundation-eyes-only')"
+          />
+          <label for="foundation-eyes-only" class="cursor-pointer w-full">foundation-eyes-only</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="hardware"
+            value="hardware"
+            class="mr-2"
+            onclick="updateSelectedItems('hardware')"
+          />
+          <label for="hardware" class="cursor-pointer w-full">hardware</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="imperial-approved"
+            value="imperial-approved"
+            class="mr-2"
+            onclick="updateSelectedItems('imperial-approved')"
+          />
+          <label for="imperial-approved" class="cursor-pointer w-full">imperial-approved</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="journal"
+            value="journal"
+            class="mr-2"
+            onclick="updateSelectedItems('journal')"
+          />
+          <label for="journal" class="cursor-pointer w-full">journal</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="preprint"
+            value="preprint"
+            class="mr-2"
+            onclick="updateSelectedItems('preprint')"
+          />
+          <label for="preprint" class="cursor-pointer w-full">preprint</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="proceedings"
+            value="proceedings"
+            class="mr-2"
+            onclick="updateSelectedItems('proceedings')"
+          />
+          <label for="proceedings" class="cursor-pointer w-full">proceedings</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="psychohistory"
+            value="psychohistory"
+            class="mr-2"
+            onclick="updateSelectedItems('psychohistory')"
+          />
+          <label for="psychohistory" class="cursor-pointer w-full">psychohistory</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="public-knowledge"
+            value="public-knowledge"
+            class="mr-2"
+            onclick="updateSelectedItems('public-knowledge')"
+          />
+          <label for="public-knowledge" class="cursor-pointer w-full">public-knowledge</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="quantum-computing"
+            value="quantum-computing"
+            class="mr-2"
+            onclick="updateSelectedItems('quantum-computing')"
+          />
+          <label for="quantum-computing" class="cursor-pointer w-full">quantum-computing</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="redacted"
+            value="redacted"
+            class="mr-2"
+            onclick="updateSelectedItems('redacted')"
+          />
+          <label for="redacted" class="cursor-pointer w-full">redacted</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="report"
+            value="report"
+            class="mr-2"
+            onclick="updateSelectedItems('report')"
+          />
+          <label for="report" class="cursor-pointer w-full">report</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="robotics"
+            value="robotics"
+            class="mr-2"
+            onclick="updateSelectedItems('robotics')"
+          />
+          <label for="robotics" class="cursor-pointer w-full">robotics</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="second-foundation"
+            value="second-foundation"
+            class="mr-2"
+            onclick="updateSelectedItems('second-foundation')"
+          />
+          <label for="second-foundation" class="cursor-pointer w-full">second-foundation</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="space-tech"
+            value="space-tech"
+            class="mr-2"
+            onclick="updateSelectedItems('space-tech')"
+          />
+          <label for="space-tech" class="cursor-pointer w-full">space-tech</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="thesis"
+            value="thesis"
+            class="mr-2"
+            onclick="updateSelectedItems('thesis')"
+          />
+          <label for="thesis" class="cursor-pointer w-full">thesis</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="top-secret"
+            value="top-secret"
+            class="mr-2"
+            onclick="updateSelectedItems('top-secret')"
+          />
+          <label for="top-secret" class="cursor-pointer w-full">top-secret</label>
+        </li>
+        
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="checkbox"
+            id="vault-tech"
+            value="vault-tech"
+            class="mr-2"
+            onclick="updateSelectedItems('vault-tech')"
+          />
+          <label for="vault-tech" class="cursor-pointer w-full">vault-tech</label>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="relative flex-auto w-30">
+      <div
+        id="selectOrder"
+        class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer"
+        onclick="toggleDropdownSelectOrder()"
+      >
+        <div id="selectedOrder" class="flex flex-wrap gap-2 text-gray-500">
+          Order by:
+          Year
+        </div>
+        <svg
+          id="arrowIconSelectOrder"
+          class="w-5 h-5 transform"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </div>
+
+      <ul
+        id="dropdownSelectOrder"
+        class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden"
+      >
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="button"
+            id="Year"
+            class="hidden"
+            class="mr-2"
+            onclick="orderItems('Year')"
+          />
+          <label
+            for="Year"
+            class="cursor-pointer w-full"
+            >Year</label
+          >
+        </li>
+        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
+          <input
+            type="button"
+            id="Title"
+            class="hidden"
+            onclick="orderItems('Title')"
+          />
+          <label
+            for="Title"
+            class="cursor-pointer w-full"
+            >Title</label
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 
-  
-  
-    <div class="max-w-2xl mx-auto mt-4 mb-2">
+  <div id="bib" class="grid gap-8"></div>
+</div>
 
-      <div class="relative pb-8">
-        <div id="selectBox" class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer" onclick="toggleDropdown()">
-          <div id="selectedItems" class="flex flex-wrap gap-2 text-gray-500">
-            Select categories
-          </div>
-          <svg id="arrowIcon" class="w-5 h-5 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-          </svg>
-        </div>
-
-        <!-- Dropdown List -->
-        <ul id="dropdown" class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden">
-          
-            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-              <input type="checkbox" id="Journal" value="Journal" class="mr-2" onclick="updateSelectedItems('Journal')" />
-              <label for="Journal" class="cursor-pointer w-full">Journal</label>
-            </li>
-          
-            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-              <input type="checkbox" id="Computer Vision" value="Computer Vision" class="mr-2" onclick="updateSelectedItems('Computer Vision')" />
-              <label for="Computer Vision" class="cursor-pointer w-full">Computer Vision</label>
-            </li>
-          
-            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-              <input type="checkbox" id="Natural Language Processing" value="Natural Language Processing" class="mr-2" onclick="updateSelectedItems('Natural Language Processing')" />
-              <label for="Natural Language Processing" class="cursor-pointer w-full">Natural Language Processing</label>
-            </li>
-          
-            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-              <input type="checkbox" id="Robotics" value="Robotics" class="mr-2" onclick="updateSelectedItems('Robotics')" />
-              <label for="Robotics" class="cursor-pointer w-full">Robotics</label>
-            </li>
-          
-            <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-              <input type="checkbox" id="Artificial Intelligence" value="Artificial Intelligence" class="mr-2" onclick="updateSelectedItems('Artificial Intelligence')" />
-              <label for="Artificial Intelligence" class="cursor-pointer w-full">Artificial Intelligence</label>
-            </li>
-          
-        </ul>
-      </div>
-
-      <div id="bib" class="grid gap-8">
-        <!-- Keep the commented code until we have a stable version!! -->
-        <!-- 
-          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">A Novel Approach to Deep Learning for Computer Vision</h3>
-              <br />
-              <div>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Computer Vision</span>
-                
-              </div>
-              <br />
-              <p>Argyre, Vasiliki and Katsuragi, Kaida</p>
-              <p class="text-gray-600 italic">Journal of Computer Vision</p>
-              <p class="text-gray-600">Publication year: 2024</p>
-              <br />
-              <div class="flex justify-end space-x-4">
-                <button onclick="toggleModal(true, `@article{argyre2024anovel,
-doi = {00.0000&#x2F;000-0-000-00000-0_00},
-booktitle = {Journal of Computer Vision},
-author = {Argyre, Vasiliki and Katsuragi, Kaida},
-year = {2024},
-title = {A Novel Approach to Deep Learning for Computer Vision}
-}`)" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                  </svg>
-                </button>
-                
-                  <a href="#" download class="inline-flex items-center">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>                
-                  </a>
-                
-                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>                            
-                </a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">Efficient Algorithms for Natural Language Processing</h3>
-              <br />
-              <div>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Natural Language Processing</span>
-                
-              </div>
-              <br />
-              <p>Corvin, Vasiliki and Namarie, Lirien</p>
-              <p class="text-gray-600 italic">Journal of Natural Language Processing</p>
-              <p class="text-gray-600">Publication year: 2023</p>
-              <br />
-              <div class="flex justify-end space-x-4">
-                <button onclick="toggleModal(true, `@article{corvin2023efficient,
-doi = {00.0000&#x2F;000-0-000-00000-0_00},
-booktitle = {Journal of Natural Language Processing},
-author = {Corvin, Vasiliki and Namarie, Lirien},
-year = {2023},
-title = {Efficient Algorithms for Natural Language Processing}
-}`)" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                  </svg>
-                </button>
-                
-                  <a href="#" download class="inline-flex items-center">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                    </svg>                
-                  </a>
-                
-                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>                            
-                </a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">A Survey of Robotics and Artificial Intelligence</h3>
-              <br />
-              <div>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Robotics</span>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Artificial Intelligence</span>
-                
-              </div>
-              <br />
-              <p>Argyre, Vasiliki and Katsuragi, Kaida</p>
-              <p class="text-gray-600 italic">Journal of Robotics and Artificial Intelligence</p>
-              <p class="text-gray-600">Publication year: 2022</p>
-              <br />
-              <div class="flex justify-end space-x-4">
-                <button onclick="toggleModal(true, `@article{argyre2022asurvey,
-doi = {00.0000&#x2F;000-0-000-00000-0_00},
-booktitle = {Journal of Robotics and Artificial Intelligence},
-author = {Argyre, Vasiliki and Katsuragi, Kaida},
-year = {2022},
-title = {A Survey of Robotics and Artificial Intelligence}
-}`)" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                  </svg>
-                </button>
-                
-                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>                            
-                </a>
-              </div>
-            </div>
-          </div>
-        
-          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold">Adaptive Learning in Autonomous Robotics: A Comprehensive Review</h3>
-              <br />
-              <div>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Journal</span>
-                
-                  <span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">Robotics</span>
-                
-              </div>
-              <br />
-              <p>Vonn, E. and Smith, J</p>
-              <p class="text-gray-600 italic">Journal of Robotics Research</p>
-              <p class="text-gray-600">Publication year: 2021</p>
-              <br />
-              <div class="flex justify-end space-x-4">
-                <button onclick="toggleModal(true, `@article{vonn2020adaptive,
-doi = {00.0000&#x2F;000-0-000-00000-0_00},
-booktitle = {Journal of Robotics Research},
-author = {Vonn, E. and Smith, J},
-year = {2021},
-title = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}
-}`)" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                  </svg>
-                </button>
-                
-                <a href="https://doi.org/00.0000&#x2F;000-0-000-00000-0_00" target="_blank" class="inline-flex items-center">
-                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>                            
-                </a>
-              </div>
-            </div>
-          </div>
-         -->
-
-      </div>
+<!-- Modal -->
+<div
+  id="modal"
+  onclick="toggleModal(false)"
+  class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden"
+>
+  <div onclick="event.stopPropagation()" class="bg-white rounded-lg shadow-lg p-4">
+    <div class="flex justify-between items-center space-x-4">
+      <h3 id="modal-title" class="text-lg font-semibold text-gray-900">BibTex</h3>
+      <button class="text-gray-500 hover:text-gray-900" onclick="toggleModal(false)">
+        <svg
+          class="w-5 h-5"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
     </div>
-
-    <!-- Modal -->
-    <div id="modal" onclick="toggleModal(false)" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
-      <div onclick="event.stopPropagation()" class="bg-white rounded-lg shadow-lg p-4">
-        <div class="flex justify-between items-center space-x-4">
-          <h3 id="modal-title" class="text-lg font-semibold text-gray-900">BibTex</h3>
-          <button class="text-gray-500 hover:text-gray-900" onclick="toggleModal(false)">
-            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>          
-          </button>
-        </div>
-        <hr />
-        <div class="mt-4 text-gray-700">
-          <pre><code id="modal-code"></code></pre>
-        </div>
-      </div>
+    <hr />
+    <div class="mt-4 text-gray-700">
+      <pre><code id="modal-code"></code></pre>
     </div>
-  
+  </div>
+</div>
 
 
-  <script>
-    function toggleModal(show, code) {
-      const modal = document.getElementById("modal")
-      const modalCode = document.getElementById("modal-code")
-      if (code) {
-        modalCode.textContent = code
+<script>
+      function toggleModal(show, code) {
+        const modal = document.getElementById("modal")
+        const modalCode = document.getElementById("modal-code")
+        if (code) {
+          modalCode.textContent = code
+        }
+        modal.classList.toggle("hidden", !show)
       }
-      modal.classList.toggle("hidden", !show)
-    }
 
-    const backgroundColors = [
-      "rgb(248 250 252)", "rgb(249 250 251)", "rgb(250 250 250)", "rgb(250 250 250)", "rgb(250 250 249)", "rgb(254 242 242)",
-      "rgb(255 247 237)", "rgb(255 251 235)", "rgb(254 252 232)", "rgb(247 254 231)", "rgb(240 253 244)", "rgb(236 253 245)",
-      "rgb(240 253 250)", "rgb(236 254 255)", "rgb(240 249 255)", "rgb(239 246 255)", "rgb(238 242 255)", "rgb(245 243 255)", 
-      "rgb(250 245 255)", "rgb(253 244 255)", "rgb(253 242 248)", "rgb(255 241 242)"
-    ]
+      const backgroundColors = [
+        "#e6194B", "#3cb44b", "#ffe119", "#4363d8", "#f58231", "#911eb4",
+        "#42d4f4", "#f032e6", "#bfef45", "#fabed4", "#469990", "#dcbeff",
+        "#9A6324", "#fffac8", "#800000", "#aaffc3", "#808000", "#ffd8b1",
+        "#000075", "#a9a9a9", "#ffffff", "#000000"
+      ]
 
-    const textColors = [
-      "rgb(71 85 105)", "rgb(75 85 99)", "rgb(82 82 91)", "rgb(82 82 82)", "rgb(87 83 78)", "rgb(220 38 38)",
-      "rgb(234 88 12)", "rgb(217 119 6)", "rgb(202 138 4)", "rgb(101 163 13)", "rgb(22 163 74)", "rgb(5 150 105)",
-      "rgb(13 148 136)", "rgb(8 145 178)", "rgb(2 132 199)", "rgb(37 99 235)", "rgb(79 70 229)", "rgb(124 58 237)", 
-      "rgb(147 51 234)", "rgb(192 38 211)", "rgb(219 39 119)", "rgb(225 29 72)"
-    ]
+      const textColors = [
+        "#ffffff", "#ffffff", "#000000", "#ffffff", "#ffffff", "#ffffff",
+        "#000000", "#ffffff", "#000000", "#000000", "#ffffff", "#000000",
+        "#ffffff", "#000000", "#ffffff", "#000000", "#ffffff", "#000000",
+        "#ffffff", "#ffffff", "#000000", "#ffffff"
+      ]
 
-    let categoryToColor = {}
-    
-      categoryToColor["Journal"] = {
-        backgroundColor: backgroundColors.pop(),
-        textColor: textColors.pop(),
-      }
-    
-      categoryToColor["Computer Vision"] = {
-        backgroundColor: backgroundColors.pop(),
-        textColor: textColors.pop(),
-      }
-    
-      categoryToColor["Natural Language Processing"] = {
-        backgroundColor: backgroundColors.pop(),
-        textColor: textColors.pop(),
-      }
-    
-      categoryToColor["Robotics"] = {
-        backgroundColor: backgroundColors.pop(),
-        textColor: textColors.pop(),
-      }
-    
-      categoryToColor["Artificial Intelligence"] = {
-        backgroundColor: backgroundColors.pop(),
-        textColor: textColors.pop(),
-      }
-    
-
-    function setCategoryColor(category) {
-      const parentDiv = document.getElementById('bib')
-      const spans = parentDiv.querySelectorAll('span')
-      spans.forEach((span, index) => {
-        span.style.backgroundColor = categoryToColor[span.innerText].backgroundColor
-        span.style.color = categoryToColor[span.innerText].textColor
+      let categoryToColor = {}
+      let colorIndex = 0
+      const categoriesArray = JSON.parse('["book","classified","conference","deep-learning","economics","foundation-eyes-only","hardware","imperial-approved","journal","preprint","proceedings","psychohistory","public-knowledge","quantum-computing","redacted","report","robotics","second-foundation","space-tech","thesis","top-secret","vault-tech"]')
+      categoriesArray.forEach(item => {
+        categoryToColor[item] = {
+          backgroundColor: backgroundColors[colorIndex],
+          textColor: textColors[colorIndex],
+        }
+        colorIndex += 1
+        if (colorIndex >= categoriesArray.length) {
+          colorIndex = 0
+        }
       })
-    }
 
-    const dropdown = document.getElementById("dropdown")
-    const selectBox = document.getElementById("selectBox")
-    const selectedItems = document.getElementById("selectedItems")
-    const arrowIcon = document.getElementById("arrowIcon")
+      function setCategoryColor(category) {
+        const parentDiv = document.getElementById('bib')
+        const spans = parentDiv.querySelectorAll('span')
+        spans.forEach(span => {
+          span.style.backgroundColor = categoryToColor[span.innerText].backgroundColor
+          span.style.color = categoryToColor[span.innerText].textColor
+          // Add cursor pointer and click handler to category spans
+          span.style.cursor = 'pointer'
+          span.onclick = () => updateSelectedItems(span.innerText)
+        })
+      }
 
-    const selectedValues = []
+      const dropdownSelectCategories = document.getElementById("dropdownSelectCategories")
+      const selectCategories = document.getElementById("selectCategories")
+      const selectedCategories = document.getElementById("selectedCategories")
+      const arrowIconSelectCategories = document.getElementById("arrowIconSelectCategories")
 
-    if (selectedValues.length === 0) {
-      const checkboxes = document.querySelectorAll('#dropdown input[type="checkbox"]')
+      const dropdownSelectOrder = document.getElementById("dropdownSelectOrder")
+      const selectOrder = document.getElementById("selectOrder")
+      const selectedOrder = document.getElementById("selectedOrder")
+      const arrowIconSelectOrder = document.getElementById("arrowIconSelectOrder")
+
+      const selectedValues = []
+      let orderBy = "Year"
+
+      // Reset checkboxes
+      const checkboxes = document.querySelectorAll('#dropdownSelectCategories input[type="checkbox"]')
       checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
+        checkbox.checked = false
       })
-    }
 
-    function toggleDropdown() {
-      dropdown.classList.toggle("hidden")
-      arrowIcon.classList.toggle("rotate-180")
-    }
-
-    function updateSelectedItems(value) {
-      const index = selectedValues.indexOf(value)
-
-      if (index === -1) {
-        selectedValues.push(value)
-      } else {
-        selectedValues.splice(index, 1)
+      function toggleDropdownSelectCategories() {
+        dropdownSelectCategories.classList.toggle("hidden")
+        arrowIconSelectCategories.classList.toggle("rotate-180")
       }
 
-      renderSelectedItems()
-      filterBibs()
-    }
+      function toggleDropdownSelectOrder() {
+        dropdownSelectOrder.classList.toggle("hidden")
+        arrowIconSelectOrder.classList.toggle("rotate-180")
+      }
 
-    function renderSelectedItems() {
+      function updateSelectedItems(value) {
+        const index = selectedValues.indexOf(value)
+        const checkbox = document.querySelector(`input[value="${value}"]`)
+
+        if (index === -1) {
+          selectedValues.push(value)
+          if (checkbox) checkbox.checked = true
+        } else {
+          selectedValues.splice(index, 1)
+          if (checkbox) checkbox.checked = false
+        }
+
+        renderSelectedItems()
+        filterBibs()
+      }
+
+      function orderItems(value) {
+        selectedOrder.innerText = `Order by: ${value}`
+        orderBy = value
+        filterBibs()
+      }
+
+      function renderSelectedItems() {
+        if (selectedValues.length === 0) {
+          selectedCategories.innerHTML = "Select categories"
+          selectedCategories.classList.add("text-gray-500")
+        } else {
+          selectedCategories.innerHTML = selectedValues
+            .map(value => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium" style="background-color: ${categoryToColor[value].backgroundColor}; color: ${categoryToColor[value].textColor};">${value}</span>`)
+            .join(" ")
+          selectedCategories.classList.remove("text-gray-500")
+        }
+      }
+
+      function filterBibs() {
+    const filteredBibsContainer = document.getElementById("bib")
+
+    const filteredBibs = []
+    let bibJSON = {}
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Computational Approaches to Psychohistorical Predictions Using Deep Learning",
+        year: 2024,
+        author: "Hari Seldon, Dors Venabili",
+        cite: "Trantorian Journal of Predictive Analytics, 2024.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/seldon2024psychohistory.pdf",
+        
+        category: ["journal", "psychohistory", "top-secret"],
+        bibtex: `@article{seldon2024psychohistory,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {Trantorian Journal of Predictive Analytics, 2024.},
+author = {Hari Seldon, Dors Venabili},
+year = {2024},
+title = {Computational Approaches to Psychohistorical Predictions Using Deep Learning}
+}`
+      }
+
       if (selectedValues.length === 0) {
-        selectedItems.innerHTML = "Select categories"
-        selectedItems.classList.add("text-gray-500")
+        filteredBibs.push(bibJSON)
       } else {
-        selectedItems.innerHTML = selectedValues
-          .map(value => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium" style="background-color: ${categoryToColor[value].backgroundColor}; color: ${categoryToColor[value].textColor};">${value}</span>`)
-          .join(" ")
-        selectedItems.classList.remove("text-gray-500")
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
       }
-    }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Quantum Computing Applications in Mental Shield Generation",
+        year: 2023,
+        author: "Bayta Palver, Arkady Darell",
+        cite: " In Proceedings of the Galactic Conference on Quantum Computing, 2023.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/palver2023quantum.pdf",
+        
+        category: ["conference", "quantum-computing", "second-foundation"],
+        bibtex: `@inproceedings{palver2023quantum,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In  In Proceedings of the Galactic Conference on Quantum Computing, 2023.},
+author = {Bayta Palver, Arkady Darell},
+year = {2023},
+title = {Quantum Computing Applications in Mental Shield Generation}
+}`
+      }
 
-    function filterBibs() {
-      const filteredBibsContainer = document.getElementById("bib");
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "The Three Laws of Social Robotics: A Comprehensive Guide",
+        year: 2023,
+        author: "Eto Demerzel, Kelden Amadiro",
+        cite: "Aurora Scientific Press, Trantor Prime, 2023.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/demerzel2023robotics.pdf",
+        
+        category: ["book", "robotics", "imperial-approved"],
+        bibtex: `@book{demerzel2023robotics,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In Aurora Scientific Press, Trantor Prime, 2023.},
+author = {Eto Demerzel, Kelden Amadiro},
+year = {2023},
+title = {The Three Laws of Social Robotics: A Comprehensive Guide}
+}`
+      }
 
-      const filteredBibs = []
-      let bibJSON = {}
-      
-        bibJSON = JSON.parse('{"title":"A Novel Approach to Deep Learning for Computer Vision","year":2024,"author":"Argyre, Vasiliki and Katsuragi, Kaida","cite":"Journal of Computer Vision","doi":"00.0000/000-0-000-00000-0_00","downloadUrl":"#","category":["Journal","Computer Vision"],"bibtex":"@article{argyre2024anovel,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Computer Vision},\nauthor = {Argyre, Vasiliki and Katsuragi, Kaida},\nyear = {2024},\ntitle = {A Novel Approach to Deep Learning for Computer Vision}\n}"}'.replace(/\n/g, "\\n"))
-        if (selectedValues.length === 0) {
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
           filteredBibs.push(bibJSON)
-        } else {
-          if (
-            selectedValues.some(val => {
-              
-                if ("Journal" == val) {
-                  return true
-                }
-              
-                if ("Computer Vision" == val) {
-                  return true
-                }
-              
-              return false
-            })
-          )
-          {
-            filteredBibs.push(bibJSON)
-          }
         }
-      
-        bibJSON = JSON.parse('{"title":"Efficient Algorithms for Natural Language Processing","year":2023,"author":"Corvin, Vasiliki and Namarie, Lirien","cite":"Journal of Natural Language Processing","doi":"00.0000/000-0-000-00000-0_00","downloadUrl":"#","category":["Journal","Natural Language Processing"],"bibtex":"@article{corvin2023efficient,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Natural Language Processing},\nauthor = {Corvin, Vasiliki and Namarie, Lirien},\nyear = {2023},\ntitle = {Efficient Algorithms for Natural Language Processing}\n}"}'.replace(/\n/g, "\\n"))
-        if (selectedValues.length === 0) {
-          filteredBibs.push(bibJSON)
-        } else {
-          if (
-            selectedValues.some(val => {
-              
-                if ("Journal" == val) {
-                  return true
-                }
-              
-                if ("Natural Language Processing" == val) {
-                  return true
-                }
-              
-              return false
-            })
-          )
-          {
-            filteredBibs.push(bibJSON)
-          }
-        }
-      
-        bibJSON = JSON.parse('{"title":"A Survey of Robotics and Artificial Intelligence","year":2022,"author":"Argyre, Vasiliki and Katsuragi, Kaida","cite":"Journal of Robotics and Artificial Intelligence","doi":"00.0000/000-0-000-00000-0_00","category":["Journal","Robotics","Artificial Intelligence"],"bibtex":"@article{argyre2022asurvey,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Robotics and Artificial Intelligence},\nauthor = {Argyre, Vasiliki and Katsuragi, Kaida},\nyear = {2022},\ntitle = {A Survey of Robotics and Artificial Intelligence}\n}"}'.replace(/\n/g, "\\n"))
-        if (selectedValues.length === 0) {
-          filteredBibs.push(bibJSON)
-        } else {
-          if (
-            selectedValues.some(val => {
-              
-                if ("Journal" == val) {
-                  return true
-                }
-              
-                if ("Robotics" == val) {
-                  return true
-                }
-              
-                if ("Artificial Intelligence" == val) {
-                  return true
-                }
-              
-              return false
-            })
-          )
-          {
-            filteredBibs.push(bibJSON)
-          }
-        }
-      
-        bibJSON = JSON.parse('{"title":"Adaptive Learning in Autonomous Robotics: A Comprehensive Review","year":2021,"author":"Vonn, E. and Smith, J","cite":"Journal of Robotics Research","doi":"00.0000/000-0-000-00000-0_00","category":["Journal","Robotics"],"bibtex":"@article{vonn2020adaptive,\ndoi = {00.0000/000-0-000-00000-0_00},\nbooktitle = {Journal of Robotics Research},\nauthor = {Vonn, E. and Smith, J},\nyear = {2021},\ntitle = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}\n}"}'.replace(/\n/g, "\\n"))
-        if (selectedValues.length === 0) {
-          filteredBibs.push(bibJSON)
-        } else {
-          if (
-            selectedValues.some(val => {
-              
-                if ("Journal" == val) {
-                  return true
-                }
-              
-                if ("Robotics" == val) {
-                  return true
-                }
-              
-              return false
-            })
-          )
-          {
-            filteredBibs.push(bibJSON)
-          }
-        }
-      
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Optimization of Hyperspace Jump Calculations Using Neural Networks",
+        year: 2024,
+        author: "Gaal Dornick, Linge Randa",
+        cite: "Technical Report FIT-TR-2024-42, Foundation Institute of Technology, 2024.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/dornick2024hyperspace.pdf",
+        
+        category: ["report", "deep-learning", "classified"],
+        bibtex: `@techreport{dornick2024hyperspace,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In Technical Report FIT-TR-2024-42, Foundation Institute of Technology, 2024.},
+author = {Gaal Dornick, Linge Randa},
+year = {2024},
+title = {Optimization of Hyperspace Jump Calculations Using Neural Networks}
+}`
+      }
 
-      // Render filtered bibs
-      if (filteredBibs.length) {
-        filteredBibsContainer.innerHTML = filteredBibs
-          .map(bib => `
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Advanced Algorithms for Detection of Mentalic Abilities",
+        year: 2023,
+        author: "Harla Branno",
+        cite: "PhD thesis, Second Foundation University, Star's End, 2023.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/branno2023mentalics.pdf",
+        
+        category: ["thesis", "second-foundation", "redacted"],
+        bibtex: `@phdthesis{branno2023mentalics,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In PhD thesis, Second Foundation University, Star's End, 2023.},
+author = {Harla Branno},
+year = {2023},
+title = {Advanced Algorithms for Detection of Mentalic Abilities}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Gravitational Algorithms for Automated Spacecraft Navigation",
+        year: 2024,
+        author: "Golan Trevize, Janov Pelorat",
+        cite: "Handbook of Galactic Navigation, 7, Terminus Publishing House.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/trevize2024navigation.pdf",
+        
+        category: ["book", "space-tech", "imperial-approved"],
+        bibtex: `@inbook{trevize2024navigation,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In Handbook of Galactic Navigation, 7, Terminus Publishing House.},
+author = {Golan Trevize, Janov Pelorat},
+year = {2024},
+title = {Gravitational Algorithms for Automated Spacecraft Navigation}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Economic Prediction Models for Interstellar Trade Routes",
+        year: 2023,
+        author: "Hober Mallow, Salvor Munn",
+        cite: "Foundation Economic Reports, 2023.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/mallow2023trade.pdf",
+        
+        category: ["preprint", "economics", "foundation-eyes-only"],
+        bibtex: `@misc{mallow2023trade,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In Foundation Economic Reports, 2023.},
+author = {Hober Mallow, Salvor Munn},
+year = {2023},
+title = {Economic Prediction Models for Interstellar Trade Routes}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Holographic Data Storage: Beyond Traditional Computing",
+        year: 2024,
+        author: "Preem Chen, Bel Riose",
+        cite: "In Advances in Imperial Computing Systems, editors, Liono Divart, Mian Kodell, . Imperial Science Academy, 2024.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/chen2024holographic.pdf",
+        
+        category: ["book", "hardware", "classified"],
+        bibtex: `@incollection{chen2024holographic,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In In Advances in Imperial Computing Systems, editors, Liono Divart, Mian Kodell, . Imperial Science Academy, 2024.},
+author = {Preem Chen, Bel Riose},
+year = {2024},
+title = {Holographic Data Storage: Beyond Traditional Computing}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "Proceedings of the First Galactic Conference on Artificial Intelligence and Psychohistory",
+        year: 2023,
+        author: "Linn Compor, Elvett Darell",
+        cite: "Volume 42 of Foundation Science Series, 2023. Terminus Academic Press.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/compor2023ai.pdf",
+        
+        category: ["proceedings", "deep-learning", "public-knowledge"],
+        bibtex: `@proceedings{compor2023ai,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In Volume 42 of Foundation Science Series, 2023. Terminus Academic Press.},
+author = {Linn Compor, Elvett Darell},
+year = {2023},
+title = {Proceedings of the First Galactic Conference on Artificial Intelligence and Psychohistory}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+      // Create the bibJSON object directly without parsing
+      bibJSON = {
+        title: "On the Theoretical Foundations of Vault Computing",
+        year: 2024,
+        author: "Sunmaster Mycogen, Dors Grey",
+        cite: "2024.",
+        doi: "https://doi.org/00.0000/000-0-000-00000-0_00",
+        
+        downloadUrl: "files/mycogen2024vault.pdf",
+        
+        category: ["preprint", "vault-tech", "top-secret"],
+        bibtex: `@unpublished{mycogen2024vault,
+doi = {https://doi.org/00.0000/000-0-000-00000-0_00},
+booktitle = {In 2024.},
+author = {Sunmaster Mycogen, Dors Grey},
+year = {2024},
+title = {On the Theoretical Foundations of Vault Computing}
+}`
+      }
+
+      if (selectedValues.length === 0) {
+        filteredBibs.push(bibJSON)
+      } else {
+        if (selectedValues.some(val => bibJSON.category.includes(val))) {
+          filteredBibs.push(bibJSON)
+        }
+      }
+    
+
+    
+    const membersMap = JSON.parse('{"seldon":["Seldon, Hari","Hari Seldon"],"venabili":["Venabili, Dors","Dors Venabili"],"palver":["Palver, Bayta","Bayta Palver"],"demerzel":["Demerzel, Eto","Eto Demerzel"],"branno":["Branno, Harla","Harla Branno"]}')
+    const collator = new Intl.Collator("en", { sensitivity: "base" })
+
+    // Rest of your rendering code remains the same
+    if (filteredBibs.length) {
+      filteredBibsContainer.innerHTML = filteredBibs
+        .sort((a, b) => {
+          if (orderBy === "Year") return b.year - a.year
+          if (orderBy === "Title") return collator.compare(a.title, b.title)
+        })
+        .map(bib => {
+          Object.entries(membersMap).forEach(([username, names]) => {
+            names.forEach(name => {
+              if (bib.author.includes(name)) {
+                
+                
+                  if ("nanzen" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;nanzen&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("argyre" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;argyre&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("katsuragi" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;katsuragi&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("erso" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;erso&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("oconnor" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;oconnor&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("blackwood" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;blackwood&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("vex" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;vex&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("vashin" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;vashin&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("namarie" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;namarie&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("jensen" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;jensen&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("vonn" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;vonn&#x2F;">${name}</a>`)
+                  }
+                
+                  if ("corvin" === username) {
+                    bib.author = bib.author.replace(name, `<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;researchlab&#x2F;en&#x2F;members&#x2F;corvin&#x2F;">${name}</a>`)
+                  }
+                
+              }
+            })
+          })
+
+          return `
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
               <div class="p-4">
                 <h3 class="text-xl font-semibold">${bib.title}</h3>
@@ -985,7 +1385,7 @@ title = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}
                 ${bib.category.map(category => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">${category}</span>`).join(" ")}
                 </div>
                 <br />
-                <p>${bib.author}</p>
+                <p class="prose">${bib.author}</p>
                 <p class="text-gray-600 italic">${bib.cite} (${bib.year})</p>
                 <div class="flex justify-end space-x-4">
                   <button onclick="toggleModal(true, ${"`"+bib.bibtex+"`"})" class="inline-flex items-center">
@@ -997,36 +1397,40 @@ title = {Adaptive Learning in Autonomous Robotics: A Comprehensive Review}
                     <a href="${bib.downloadUrl}" download class="inline-flex items-center">
                       <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                      </svg>                
+                      </svg>
                     </a>
-                  ` : ''} 
+                  ` : ''}
                   <a href="https://doi.org/${bib.doi}" target="_blank" class="inline-flex items-center">
                     <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>                            
+                    </svg>
                   </a>
                 </div>
               </div>
             </div>
-          `)
-          .join("")
-        setCategoryColor()
-      }
+          `
+        })
+        .join("")
+      setCategoryColor()
     }
+  }
+      filterBibs()
 
-    filterBibs()
-    
-    document.addEventListener("click", (event) => {
-      if (selectBox) {
-        if (!selectBox.contains(event.target) && !dropdown.contains(event.target)) {
-          dropdown.classList.add("hidden")
-          arrowIcon.classList.remove("rotate-180")
+      document.addEventListener("click", (event) => {
+        if (selectCategories) {
+          if (!selectCategories.contains(event.target) && !dropdownSelectCategories.contains(event.target)) {
+            dropdownSelectCategories.classList.add("hidden")
+            arrowIconSelectCategories.classList.remove("rotate-180")
+          }
         }
-      }
-    })
-  </script>
-
-    
+        if (selectOrder) {
+          if (!selectOrder.contains(event.target) && !dropdownSelectOrder.contains(event.target)) {
+            dropdownSelectOrder.classList.add("hidden")
+            arrowIconSelectOrder.classList.remove("rotate-180")
+          }
+        }
+      })
+</script>
 
   </main>
   <button id="scrollUpBtn" class="hidden fixed bottom-32 right-5 p-3 rounded-full shadow-lg transition duration-300" style="background-color: #666; color: #ffffff;">

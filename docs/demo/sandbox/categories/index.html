@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" itemprop="about" content="This repository is used to test new web elements. It is an amalgamation of code snippets, all weaved together by Zola.">
+  <title>Zola Sandbox</title>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/sandbox/main.css">
+</head>
+
+<body>
+  <aside id="sidebar-left" class="box sidebar sidebar-left">
+    <a class="site-title-link" href="https://salif.github.io/zola-themes-collection/demo/sandbox/">
+      <h1 class="site-title">Zola Sandbox</h1>
+    </a>
+    <nav>
+  <ul class="sidebar-nav">
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/about/" aria-label="About">About</a>
+    </li>
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/posts/" aria-label="Posts">Posts</a>
+    </li>
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/sandbox/projects/" aria-label="Projects">Projects</a>
+    </li>
+    
+  </ul>
+
+  
+</nav>
+  </aside>
+
+  <main class="box">
+    
+
+    
+
+    
+<h1>Categories</h1>
+
+<ul class="base-list">
+  
+  <li>
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;sandbox&#x2F;categories&#x2F;placeholder&#x2F;">Placeholder</a> (3)
+  </li>
+  
+</ul>
+
+  </main>
+
+  
+
+  <footer class="box">
+    <p>
+        © 2024 Miguel Pimentel. Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a> and
+        <a href="https://github.com/miguelpimentel/zola-sandbox" target="_blank">Sandbox</a>.
+    </p>
+</footer>
+
+  <button id="goToTopBtn" onclick="goToTop()" title="Go to top">↑</button>
+
+<script>
+    // Show the button when the user scrolls down 20px from the top
+    window.onscroll = function () {
+        var goToTopBtn = document.getElementById("goToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            goToTopBtn.style.display = "block";
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    };
+
+    // Scroll smoothly to the top when the button is clicked
+    function goToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+</body>
+
+</html>

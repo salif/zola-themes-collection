@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- FAVICON -->
+  
+  
+  
+  
+  
+  
+
+  <link href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="stylesheet" type="text/css" href="/syntax-light.css" media="(prefers-color-scheme: light)" />
+
+  <title>Projekt-Portfolio</title>
+</head>
+
+<body class="dark:bg-gray-700 flex flex-col h-screen justify-between">
+  <!---------------------------------------------------------->
+  <!------------------------- NAVBAR ------------------------->
+  <!---------------------------------------------------------->
+  <nav id="navbar" class="bg-gray-200 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button id="toggle-mobile-menu" type="button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+              Heroicon name: outline/menu
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+              Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center">
+          <div class="flex-shrink-0 flex items-center ml-2">
+            <a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio//de" class="text-xl text-gray-800 dark:text-white">Project Portfolio</a>
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="nav-links flex space-x-4">
+              
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/"
+    
+    class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    
+    >Home</a>
+
+              
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/projects"
+    
+    class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    
+    >Projekte</a>
+
+              
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/skills"
+    
+    class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" 
+    
+    >Qualifikationen</a>
+
+
+              
+            </div>
+          </div>
+
+          
+
+          
+
+          
+           <!-- Language change button -->
+          <div class="flex p-2 ml-4 relative">
+            
+            
+              
+                
+              
+              
+              
+            
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;project-portfolio&#x2F;&#x2F;&#x2F;skills&#x2F;cost-optimization&#x2F;"
+              class="bg-gray-200 text-gray-800 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white p-1 rounded-full">
+              🇩🇪
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------- Mobile menu ----------------------------->
+    <div id="mobile-menu" class="sm:hidden fixed z-10 overflow-hidden">
+      <div
+        class="nav-links flex flex-col space-y-4 items-center w-screen bg-gray-200 dark:bg-gray-800 transition-all ease-out duration-500 h-0">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/"
+    
+    class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    
+    >Home</a>
+
+        
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/projects"
+    
+    class="text-gray-800 dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    
+    >Projekte</a>
+
+        
+ 
+<a href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/skills"
+    
+    class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" 
+    
+    >Qualifikationen</a>
+
+
+        
+      </div>
+    </div>
+  </nav>
+  <!----------------------------------------------------------->
+  <!------------------------- CONTENT ------------------------->
+  <!----------------------------------------------------------->
+  <main class="max-w-7xl mx-auto text-black dark:text-gray-200 w-full mb-auto">
+    
+<div class="flex items-center flex-col mt-10 px-4">
+  <h1 class="text-2xl text-bold mb-6">
+    Cost Optimization Projects
+  </h1>
+  <div class="flex flex-col gap-y-6 w-full sm:w-2/3">
+    
+    
+    
+
+    
+      
+<div
+    class="border border-2 border-gray-200 dark:border-black rounded-xl p-5 shadow-2xl transform transition duration-500 hover:scale-105 bg-gray-200 dark:bg-gray-800">
+    <div class="flex flex-col justify-center">
+        <h2 class="text-2xl text-bold pt-0"><a href='https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;project-portfolio&#x2F;de&#x2F;profitable-project&#x2F;'>Profitables Projekt</a></h2>
+
+        <!-- Project type and date -->
+        
+        <div class="flex space-x-3 text-gray-900 dark:text-gray-400">
+            <span class="mr-4">
+                
+                <span>
+                    
+                    <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center"
+                        href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/projects/consumer/">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        <span class="pl-1">Consumer</span>
+                    </a>
+                    
+                </span>
+                
+            </span>
+            <span class="flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                <span class="ml-1"><time datetime="2022-05-31">2021 - 2022</time></span>
+            </span>
+        </div>
+        
+
+        <span>
+            
+            <img class="h-auto w-48 rounded-lg lg:float-right lg:ml-4 my-1"
+                src="https://salif.github.io/zola-themes-collection/demo/project-portfolio/images/fire.jpg" />
+            
+            <p class="text-bold mt-2">Hier ist eine kurze Beschreibung des Projekts.</p>
+
+            <!-- Read more link -->
+            <div class="flex items-center w-1/3 mb-2">
+                <a class="flex" href='https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;project-portfolio&#x2F;de&#x2F;profitable-project&#x2F;'>
+                    Weiterlesen
+                    <svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Skills & Technologies Section -->
+            
+            <h2>Qualifikationen &amp; Technologien</h2>
+            
+<div class="flex sm:flex-row flex-col flex-wrap sm:gap-x-7">
+    
+    <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center"
+        href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/skills/efficient-technology/">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+            </path>
+        </svg>
+        <span class="pl-1">Efficient Technology</span>
+    </a>
+    
+    <a class="text-gray-900 dark:text-gray-400 flex py-1 items-center"
+        href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/de/skills/cost-optimization/">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z">
+            </path>
+        </svg>
+        <span class="pl-1">Cost Optimization</span>
+    </a>
+    
+</div>
+
+            
+
+        </span>
+    </div>
+</div>
+
+    
+  </div>
+</div>
+
+  </main>
+
+  <!----------------------------------------------------------->
+  <!------------------------- PAGINATION ---------------------->
+  <!------------------------- ---------------------------------->
+  
+
+
+
+  <!---------------------------------------------------------->
+  <!------------------------- FOOTER ------------------------->
+  <!---------------------------------------------------------->
+  <footer class="max-w-7xl mx-auto relative pt-1 px-2 border-b-2 border-gray-300 dark:border-gray-200 w-full">
+    <div class="mt-16 border-t-2 border-gray-300 flex flex-col items-center">
+      <div class="sm:w-2/3 text-center">
+        <p class="text-sm text-black dark:text-white font-bold py-6">
+          
+          © 2024 <a href="https://github.com/awinterstein/zola-theme-project-portfolio/">Project Portfolio</a> theme made with <a
+            href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> for <a href="https://www.getzola.org/"
+            target="_blank">Zola</a>
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!------------------------- SCRIPTS ------------------------->
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/project-portfolio/js/main.js"></script>
+  
+  
+  
+</body>
+
+</html>
