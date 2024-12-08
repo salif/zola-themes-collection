@@ -577,6 +577,57 @@ theme = "mo8it"
   js = "const b=document.getElementById('info-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "sigmund"
+name = "sigmund"
+desc = "Personal theme for my Zola blog."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sigmund'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/salif/zola-sigmund.git themes/sigmund
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/salif/zola-sigmund.git themes/sigmund
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "sigmund"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sigmund'></summary>
+
+### Info
+- **Author**: [videah](https://github.com/videah)
+- **License**: MIT
+- **Homepage**: <https://github.com/videah/sigmund>
+- **Min version**: 0.16.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/sigmund/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/zola-sigmund"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-sigmund"
+  js = "const b=document.getElementById('install-sigmund').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-sigmund"
+  js = "const b=document.getElementById('info-sigmund').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "apollo"
 name = "apollo"
 desc = "Modern and minimalistic blog theme"
