@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="my">
 <head>
+<base href="https://salif.github.io/zola-themes-collection/demo/zluinav/my"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
@@ -12,6 +13,12 @@
 <a href="#mainc" class="skip-link">အဓိကအကြောင်းအရာသို့ ကျော်သွားပါ။</a>
 <a href="#navigation" class="skip-link">လမ်းညွှန်မှုသို့ ကျော်သွားပါ။</a>
 <a href="#zlfooter" class="skip-link">အောက်ခြေမှတ်စုသို့ ကျော်သွားပါ။</a>
+<div class="search-container">
+<input id="search" type="search" placeholder="🔎 Search the site">
+<div class="search-results">
+<div class="search-results__items"></div>
+</div>
+</div>
 <nav id="navigation" role="navigation" aria-label="ပင်မမီနူး">
 <h2>ပင်မမီနူး</h2>
 <ul style="list-style-type:none;">
@@ -45,5 +52,7 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
 </body>
 </html>

@@ -10,12 +10,16 @@ rm := "rm"
 git := "git"
 zola := "zola"
 browser := "brave"
+NOM := justfile_directory() / "node_modules"
 
 _:
 	command {{ just }} --list --unsorted
 
-[private, script('./node_modules/.bin/zx')]
+[private]
+[script('./node_modules/.bin/zx')]
 themes-js cmd *args:
+	/*
+	#!/usr/bin/env node */
 	$.verbose = true
 	const allThemes = await glob("themes/*", { onlyDirectories: true })
 	const basePath = process.cwd()
@@ -63,7 +67,7 @@ themes-js cmd *args:
 		}
 		await remPublic()
 		const demoBaseURL = new URL(themeName + "/", baseURL).href
-		await $`{{ zola }} build -u ${demoBaseURL} -o ZTC_PUBLIC`
+		await $`{{ zola }} ${['build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']}`
 	}
 	async function installDemo(themePath, themeName, demoPath) {
 		if (await fs.pathExists(demoPath)) {
@@ -91,6 +95,8 @@ build-demo path base_url=demo_base_url: (themes-js "build-demo" "['"+path+"','"+
 
 [group('build'), script('./node_modules/.bin/zx')]
 remove-demo-all:
+	/*
+	#!/usr/bin/env node */
 	const demos = await glob("static/demo/*", { onlyDirectories: true })
 	for (const demo of demos) {
 		fs.remove(demo)
@@ -105,21 +111,21 @@ screenshot-all mode="dark" url=local_base_url:
 screenshot name mode="dark" url=local_base_url:
 	{{ browser }} --headless --disable-gpu --screenshot="static/screenshots/temp.png" \
 		--window-size=1400,936 --hide-scrollbars "{{ url }}{{ name }}"
-	magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.png"
+	magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.webp"
 	{{ rm }} -f static/screenshots/temp.png
-	mat2 --inplace "static/screenshots/{{ mode }}-{{ name }}.png"
 
-[group('screenshot')]
-[script('./node_modules/.bin/zx')]
+[group('screenshot'), script('./node_modules/.bin/zx')]
 screenshots-missing:
+	/*
+	#!/usr/bin/env node */
 	const demos = await glob("static/demo/*", { onlyDirectories: true })
 	const output = []
 	for (const demo of demos) {
 		const themeName = path.basename(demo)
-		if (!(await fs.pathExists(path.join("static", "screenshots", `light-${themeName}.png`)))) {
+		if (!(await fs.pathExists(path.join("static", "screenshots", `light-${themeName}.webp`)))) {
 			output.push(`  light for ${themeName}`)
 		}
-		if (!(await fs.pathExists(path.join("static", "screenshots", `dark-${themeName}.png`)))) {
+		if (!(await fs.pathExists(path.join("static", "screenshots", `dark-${themeName}.webp`)))) {
 			output.push(`  dark for ${themeName}`)
 		}
 	}
@@ -133,9 +139,10 @@ local-test-all:
 	command {{ just }} build-demo-all '{{ local_base_url }}' update-data '{{ local_base_url }}'
 	command {{ zola }} serve --open
 
-[group('build')]
+[group('build'), script('node')]
 update-data url=demo_base_url:
-	#!/usr/bin/env node
+	/*
+	#!/usr/bin/env node */
 	"use strict";
 	const fs = require('fs');
 	const path = require('path');
@@ -276,6 +283,8 @@ submodule-update-all:
 
 [group('push'), script('./node_modules/.bin/zx')]
 fix-docs-dir:
+	/*
+	#!/usr/bin/env node */
 	const demos = await glob("docs/demo/*", { onlyDirectories: true })
 	for (const demo of demos) {
 		const robotsTxtPath = path.join(demo, "robots.txt")
