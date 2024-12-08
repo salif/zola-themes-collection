@@ -23,6 +23,13 @@ Have a `theme.toml` file. Have a `comfig.toml` file or `themes/theme-name/config
 - [magic-box](https://github.com/dulvui/magic-box)
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil)
 - [cela](https://github.com/edwardzcn-decade/cela)
+- [bluetheme](https://github.com/bluerobotics/bluetheme)
+- [arsmateria](https://github.com/mboleary/arsmateria-zola-theme)
+- [Anatole](https://github.com/longfangsong/anatole-zola)
+- [Parchment](https://github.com/jsonfry/parchment)
+- [Hermit](https://github.com/VersBinarii/hermit_zola)
+- [HayFlow](https://github.com/aaw3/hayflow)
+- [bd](https://github.com/flabbergastedbd/bd)
 
 Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 
@@ -34,3 +41,11 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 - [blow](https://github.com/tchartron/blow)
 - [feather](https://github.com/piedoom/feather)
 - [slightknack](https://github.com/slightknack/slightknack.dev)
+- [norwind](https://github.com/nobodygx/norwind)
+- [nomad](https://github.com/nomad-dev-writer/zola-nomad-theme)
+- [cosmic__cube](https://github.com/ccarral/cosmic__cube)
+
+#### No license
+
+- [Attention](https://github.com/tongyul/attention-theme-zola)
+- [bare-room](https://github.com/ghrrlp/bare-room.git)

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/icon.png">
+    <script src="https://salif.github.io/zola-themes-collection/demo/book-shelf/random.js"></script>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/book-shelf/main.css">
+    <title>
+        书箱
+    </title>
+    <style>
+        #random {
+            color: #ff5857!important;
+        }
+        #renew {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(202, 15, 15, 0.548);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 2rem;
+            right: 10vw;
+            border-radius: 0.5rem;
+
+            img {
+                width: 25px;
+                height: auto;
+            }
+        }
+        #loading {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            opacity: 0.8;
+            width: 5rem;
+            height: auto;
+            animation: rotate 2s linear infinite;
+        }
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+   
+    <main>
+        
+<div id="side-bar">
+    <img src="/logo.png" alt="" id="logo">
+    <a id="index" href="/">主页</a>
+    <a id="random" href="/random">随机</a>
+    <a id="search" href="/search">搜索</a>
+    <a href="" onclick="alert('个人站点，不对外开放，请尽快关闭本页面')">关于</a>
+</div>
+
+        <div id="list">
+        </div>
+        <div id="renew" onclick="get_data()">
+            <img src="/renew.png" alt="">
+        </div>
+    </main>
+</body>
+
+</html>

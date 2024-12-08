@@ -1,0 +1,492 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Configuration </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Configuration </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>The default configuration is sufficient to get Zola running locally but not more than that.
+It follows the philosophy of paying for only what you need, almost everything is turned off by default.</p>
+<p>To change the configuration, edit the <code>config.toml</code> file.
+If you are not familiar with TOML, have a look at <a href="https://github.com/toml-lang/toml">the TOML spec</a>.</p>
+<p>⚠️ If you add keys to your <code>config.toml</code>, you must pay attention to which TOML section it belongs to.</p>
+<p>Here are the current <code>config.toml</code> sections:</p>
+<ol>
+<li>main (unnamed)</li>
+<li>link_checker</li>
+<li>slugify</li>
+<li>search</li>
+<li>translations</li>
+<li>extra</li>
+</ol>
+<p><strong>Only the <code>base_url</code> variable is mandatory</strong>. Everything else is optional. All configuration variables
+used by Zola as well as their default values are listed below:</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#a7adba;"># The base URL of the site; the only required configuration variable.
+</span><span style="color:#bf616a;">base_url </span><span>= &quot;</span><span style="color:#a3be8c;">mywebsite.com</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The site title and description; used in feeds by default.
+</span><span style="color:#bf616a;">title </span><span>= &quot;&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The default language; used in feeds.
+</span><span style="color:#bf616a;">default_language </span><span>= &quot;</span><span style="color:#a3be8c;">en</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The site theme to use.
+</span><span style="color:#bf616a;">theme </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, a feed is automatically generated.
+</span><span style="color:#bf616a;">generate_feed </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># The filename to use for the feed. Used as the template filename, too.
+</span><span style="color:#a7adba;"># Defaults to &quot;atom.xml&quot;, which has a built-in template that renders an Atom 1.0 feed.
+</span><span style="color:#a7adba;"># There is also a built-in template &quot;rss.xml&quot; that renders an RSS 2.0 feed.
+</span><span style="color:#a7adba;"># feed_filename = &quot;atom.xml&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The number of articles to include in the feed. All items are included if
+</span><span style="color:#a7adba;"># this limit is not set (the default).
+</span><span style="color:#a7adba;"># feed_limit = 20
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, files in the `static` directory are hard-linked. Useful for large
+</span><span style="color:#a7adba;"># static files. Note that for this to work, both `static` and the
+</span><span style="color:#a7adba;"># output directory need to be on the same filesystem. Note that the theme&#39;s `static`
+</span><span style="color:#a7adba;"># files are always copied, regardless of this setting.
+</span><span style="color:#a7adba;"># hard_link_static = false
+</span><span>
+</span><span style="color:#a7adba;"># The taxonomies to be rendered for the site and their configuration.
+</span><span style="color:#a7adba;"># Example:
+</span><span style="color:#a7adba;">#     taxonomies = [
+</span><span style="color:#a7adba;">#       {name = &quot;tags&quot;, feed = true}, # each tag will have its own feed
+</span><span style="color:#a7adba;">#       {name = &quot;tags&quot;, lang = &quot;fr&quot;}, # you can have taxonomies with the same name in multiple languages
+</span><span style="color:#a7adba;">#       {name = &quot;categories&quot;, paginate_by = 5},  # 5 items per page for a term
+</span><span style="color:#a7adba;">#       {name = &quot;authors&quot;}, # Basic definition: no feed or pagination
+</span><span style="color:#a7adba;">#     ]
+</span><span style="color:#a7adba;">#
+</span><span style="color:#bf616a;">taxonomies </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># The additional languages for the site.
+</span><span style="color:#a7adba;"># Example:
+</span><span style="color:#a7adba;">#     languages = [
+</span><span style="color:#a7adba;">#       {code = &quot;fr&quot;, feed = true}, # there will be a feed for French content
+</span><span style="color:#a7adba;">#       {code = &quot;fr&quot;, search = true}, # there will be a Search Index for French content
+</span><span style="color:#a7adba;">#       {code = &quot;it&quot;}, # there won&#39;t be a feed for Italian content
+</span><span style="color:#a7adba;">#     ]
+</span><span style="color:#a7adba;">#
+</span><span style="color:#bf616a;">languages </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, the Sass files in the `sass` directory in the site root are compiled.
+</span><span style="color:#a7adba;"># Sass files in theme directories are always compiled.
+</span><span style="color:#bf616a;">compile_sass </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, the generated HTML files are minified.
+</span><span style="color:#bf616a;">minify_html </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># A list of glob patterns specifying asset files to ignore when the content
+</span><span style="color:#a7adba;"># directory is processed. Defaults to none, which means that all asset files are
+</span><span style="color:#a7adba;"># copied over to the `public` directory.
+</span><span style="color:#a7adba;"># Example:
+</span><span style="color:#a7adba;">#     ignored_content = [&quot;*.{graphml,xlsx}&quot;, &quot;temp.*&quot;]
+</span><span style="color:#bf616a;">ignored_content </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># A list of directories used to search for additional `.sublime-syntax` files.
+</span><span style="color:#bf616a;">extra_syntaxes </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># You can override the default output directory `public` by setting an another value.
+</span><span style="color:#a7adba;"># output_dir = &quot;docs&quot;
+</span><span>
+</span><span style="color:#a7adba;"># Configuration of the Markdown rendering
+</span><span>[markdown]
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, all code blocks are highlighted.
+</span><span style="color:#bf616a;">highlight_code </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># The theme to use for code highlighting.
+</span><span style="color:#a7adba;"># See below for list of allowed values.
+</span><span style="color:#bf616a;">highlight_theme </span><span>= &quot;</span><span style="color:#a3be8c;">base16-ocean-dark</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, emoji aliases translated to their corresponding
+</span><span style="color:#a7adba;"># Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: =&gt; 😄)
+</span><span style="color:#bf616a;">render_emoji </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Whether external links are to be opened in a new tab
+</span><span style="color:#a7adba;"># If this is true, a `rel=&quot;noopener&quot;` will always automatically be added for security reasons
+</span><span style="color:#bf616a;">external_links_target_blank </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Whether to set rel=&quot;nofollow&quot; for all external links
+</span><span style="color:#bf616a;">external_links_no_follow </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Whether to set rel=&quot;noreferrer&quot; for all external links
+</span><span style="color:#bf616a;">external_links_no_referrer </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+</span><span style="color:#a7adba;"># For example, `...` into `…`, `&quot;quote&quot;` into `“curly”` etc
+</span><span style="color:#bf616a;">smart_punctuation </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Configuration of the link checker.
+</span><span>[link_checker]
+</span><span style="color:#a7adba;"># Skip link checking for external URLs that start with these prefixes
+</span><span style="color:#bf616a;">skip_prefixes </span><span>= [
+</span><span>    &quot;</span><span style="color:#a3be8c;">http://[2001:db8::]/</span><span>&quot;,
+</span><span>]
+</span><span>
+</span><span style="color:#a7adba;"># Skip anchor checking for external URLs that start with these prefixes
+</span><span style="color:#bf616a;">skip_anchor_prefixes </span><span>= [
+</span><span>    &quot;</span><span style="color:#a3be8c;">https://caniuse.com/</span><span>&quot;,
+</span><span>]
+</span><span>
+</span><span style="color:#a7adba;"># Various slugification strategies, see below for details
+</span><span style="color:#a7adba;"># Defaults to everything being a slug
+</span><span>[slugify]
+</span><span style="color:#bf616a;">paths </span><span>= &quot;</span><span style="color:#a3be8c;">on</span><span>&quot;
+</span><span style="color:#bf616a;">taxonomies </span><span>= &quot;</span><span style="color:#a3be8c;">on</span><span>&quot;
+</span><span style="color:#bf616a;">anchors </span><span>= &quot;</span><span style="color:#a3be8c;">on</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, a search index is built from the pages and section
+</span><span style="color:#a7adba;"># content for `default_language`.
+</span><span style="color:#bf616a;">build_search_index </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span>[search]
+</span><span style="color:#a7adba;"># Whether to include the title of the page/section in the index
+</span><span style="color:#bf616a;">include_title </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#a7adba;"># Whether to include the description of the page/section in the index
+</span><span style="color:#bf616a;">include_description </span><span>= </span><span style="color:#d08770;">false
+</span><span style="color:#a7adba;"># Whether to include the rendered content of the page/section in the index
+</span><span style="color:#bf616a;">include_content </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#a7adba;"># At which character to truncate the content to. Useful if you have a lot of pages and the index would
+</span><span style="color:#a7adba;"># become too big to load on the site. Defaults to not being set.
+</span><span style="color:#a7adba;"># truncate_content_length = 100
+</span><span>
+</span><span style="color:#a7adba;"># Optional translation object. Keys should be language codes.
+</span><span style="color:#a7adba;"># Optional translation object. The key if present should be a language code.
+</span><span style="color:#a7adba;"># Example:
+</span><span style="color:#a7adba;">#     default_language = &quot;fr&quot;
+</span><span style="color:#a7adba;">#
+</span><span style="color:#a7adba;">#     [translations]
+</span><span style="color:#a7adba;">#     [translations.fr]
+</span><span style="color:#a7adba;">#     title = &quot;Un titre&quot;
+</span><span style="color:#a7adba;">#
+</span><span style="color:#a7adba;">#     [translations.en]
+</span><span style="color:#a7adba;">#     title = &quot;A title&quot;
+</span><span style="color:#a7adba;">#
+</span><span>[translations]
+</span><span>
+</span><span style="color:#a7adba;"># You can put any kind of data here. The data
+</span><span style="color:#a7adba;"># will be accessible in all templates
+</span><span style="color:#a7adba;"># Example:
+</span><span style="color:#a7adba;">#     [extra]
+</span><span style="color:#a7adba;">#     author = &quot;Famous author&quot;
+</span><span style="color:#a7adba;">#
+</span><span style="color:#a7adba;"># author value will be available using {{ config.extra.author }} in templates
+</span><span style="color:#a7adba;">#
+</span><span>[extra]
+</span></code></pre>
+<h2 id="syntax-highlighting">Syntax highlighting</h2>
+<p>Zola currently has the following highlight themes available:</p>
+<ul>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/1337">1337</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Agola%20Dark">agola-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Ascetic%20White">ascetic-white</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Axar">axar</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-dark</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-light</a></li>
+<li><a href="https://github.com/dempfi/ayu">ayu-mirage</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Base16%20Ocean%20Dark">base16-ocean-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Base16%20Ocean%20Light">base16-ocean-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/BBEdit">bbedit</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Boron">boron</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Charcoal">charcoal</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Cheerfully%20Light">cheerfully-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Classic%20Modified">classic-modified</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Demain">demain</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Dimmed%20Fluid">dimmed-fluid</a></li>
+<li><a href="https://draculatheme.com/">dracula</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Gray%20Matter%20Dark">gray-matter-dark</a></li>
+<li><a href="https://github.com/morhetz/gruvbox">gruvbox-dark</a></li>
+<li><a href="https://github.com/morhetz/gruvbox">gruvbox-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/IDLE">idle</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Inspiredgithub">inspired-github</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/IR_White">ir-white</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Kronuz">kronuz</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Material%20Dark">material-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Material%20Light">material-light</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai">monokai</a></li>
+<li><a href="https://github.com/crabique/Nord-plist/tree/0d655b23d6b300e691676d9b90a68d92b267f7ec">nord</a></li>
+<li><a href="https://github.com/GalAster/vscode-theme-nyx">nyx-bold</a></li>
+<li><a href="https://github.com/andresmichel/one-dark-theme">one-dark</a></li>
+<li><a href="https://github.com/sonph/onehalf">OneHalf</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(dark)">solarized-dark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Solarized%20(light)">solarized-light</a></li>
+<li><a href="https://github.com/idleberg/Subway.tmTheme">subway-madrid</a></li>
+<li><a href="https://github.com/idleberg/Subway.tmTheme">subway-moscow</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Tomorrow">Tomorrow</a></li>
+<li><a href="https://github.com/erremauro/TwoDark">TwoDark</a></li>
+<li><a href="https://tmtheme-editor.herokuapp.com/#!/editor/theme/Visual%20Studio%20Dark">visual-studio-dark</a></li>
+<li><a href="https://github.com/colinta/zenburn">zenburn</a></li>
+</ul>
+<p>Zola uses the Sublime Text themes, making it very easy to add more.
+If you want a theme not listed above, please open an issue or a pull request on the <a href="https://github.com/getzola/zola">Zola repo</a>.</p>
+<h2 id="slugification-strategies">Slugification strategies</h2>
+<p>By default, Zola will turn every path, taxonomies and anchors to a slug, an ASCII representation with no special characters.
+You can however change that strategy for each kind of item, if you want UTF-8 characters in your URLs for example. There are 3 strategies:</p>
+<ul>
+<li><code>on</code>: the default one, everything is turned into a slug</li>
+<li><code>safe</code>: characters that cannot exist in files on Windows (<code>&lt;&gt;:"/\|?*</code>) or Unix (<code>/</code>) are removed, everything else stays</li>
+<li><code>off</code>: nothing is changed, your site might not build on some OS and/or break various URL parsers</li>
+</ul>
+<p>Since there are no filename issues with anchors, the <code>safe</code> and <code>off</code> strategies are identical in their case: the only change
+is space being replaced by <code>_</code> since a space is not valid in an anchor.</p>
+<p>Note that if you are using a strategy other than the default, you will have to manually escape whitespace and Markdown
+tokens to be able to link to your pages. For example an internal link to a file named <code>some space.md</code> will need to be
+written like <code>some%20space.md</code> in your Markdown files.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Installation </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#macos">macOS</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#arch-linux">Arch Linux</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#fedora">Fedora</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#void-linux">Void Linux</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#freebsd">FreeBSD</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#openbsd">OpenBSD</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#snapcraft">Snapcraft</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#windows">Windows</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/#from-source">From source</a>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Installation </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola provides pre-built binaries for MacOS, Linux and Windows on the
+<a href="https://github.com/getzola/zola/releases">GitHub release page</a>.</p>
+<h3 id="macos">macOS</h3>
+<p>Zola is available on <a href="https://brew.sh">Brew</a>:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> brew install zola
+</span></code></pre>
+<h3 id="arch-linux">Arch Linux</h3>
+<p>Zola is available in the official Arch Linux repositories.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> pacman</span><span style="color:#bf616a;"> -S</span><span> zola
+</span></code></pre>
+<h3 id="fedora">Fedora</h3>
+<p>Zola has been available in the official repositories since Fedora 29.</p>
+<pre data-lang="sh" style="background-color:#eff1f5;color:#4f5b66;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> sudo dnf install zola
+</span></code></pre>
+<h3 id="void-linux">Void Linux</h3>
+<p>Zola is available in the official Void Linux repositories.</p>
+<pre data-lang="sh" style="background-color:#eff1f5;color:#4f5b66;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> sudo xbps-install zola
+</span></code></pre>
+<h3 id="freebsd">FreeBSD</h3>
+<p>Zola is available in the official package repository.</p>
+<pre data-lang="sh" style="background-color:#eff1f5;color:#4f5b66;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> pkg install zola
+</span></code></pre>
+<h3 id="openbsd">OpenBSD</h3>
+<p>Zola is available in the official package repository.</p>
+<pre data-lang="sh" style="background-color:#eff1f5;color:#4f5b66;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">$</span><span> doas pkg_add zola
+</span></code></pre>
+<h3 id="snapcraft">Snapcraft</h3>
+<p>Zola is available on snapcraft:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> snap install</span><span style="color:#bf616a;"> --edge</span><span> zola
+</span></code></pre>
+<h2 id="windows">Windows</h2>
+<p>Zola is available on <a href="http://scoop.sh">Scoop</a>:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> scoop install zola
+</span></code></pre>
+<p>and <a href="https://chocolatey.org/">Chocolatey</a>:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> choco install zola
+</span></code></pre>
+<p>Zola does not work in PowerShell ISE.</p>
+<h2 id="from-source">From source</h2>
+<p>To build Zola from source, you will need to have Git, <a href="https://www.rust-lang.org/">Rust (at least 1.43) and Cargo</a>
+installed. You will also need to meet additional dependencies to compile <a href="https://github.com/sass/libsass">libsass</a>:</p>
+<ul>
+<li>OSX, Linux and other Unix-like operating systems: <code>make</code> (<code>gmake</code> on BSDs), <code>g++</code>, <code>libssl-dev</code>
+<ul>
+<li>NixOS: Create a <code>shell.nix</code> file in the root of the cloned project with the following contents:</li>
+</ul>
+<pre data-lang="nix" style="background-color:#eff1f5;color:#4f5b66;" class="language-nix "><code class="language-nix" data-lang="nix"><span> </span><span style="color:#b48ead;">with </span><span style="color:#96b5b4;">import </span><span style="color:#a3be8c;">&lt;nixpkgs&gt; </span><span>{};
+</span><span>
+</span><span> </span><span style="color:#bf616a;">pkgs</span><span>.</span><span style="color:#bf616a;">mkShell </span><span>{
+</span><span>   </span><span style="color:#d08770;">buildInputs </span><span>= [
+</span><span>     </span><span style="color:#bf616a;">libsass
+</span><span>     </span><span style="color:#bf616a;">openssl
+</span><span>     </span><span style="color:#bf616a;">pkgconfig
+</span><span>  ];
+</span><span> }
+</span></code></pre>
+<ul>
+<li>Then, invoke <code>nix-shell</code>. This opens a shell with the above dependencies. Then, run <code>cargo build --release</code> to build the project.</li>
+</ul>
+</li>
+<li>Windows (a bit trickier): updated <code>MSVC</code> and overall updated VS installation</li>
+</ul>
+<p>From a terminal, you can now run the following command:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> cargo build</span><span style="color:#bf616a;"> --release
+</span></code></pre>
+<p>The binary will be available in the <code>target/release</code> directory. You can move it in your <code>$PATH</code> to have the
+<code>zola</code> command available globally or in a directory if you want for example to have the binary in the
+same repository as the site.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

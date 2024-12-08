@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Netlify </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Netlify </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Netlify provides best practices like SSL, CDN distribution, caching and continuous deployment
+with no effort. This site is hosted by Netlify and automatically deployed on commits.</p>
+<p>If you don't have an account with Netlify, you can <a href="https://app.netlify.com">sign up</a> for one.</p>
+<h2 id="automatic-deploys">Automatic deploys</h2>
+<p>Once you are in the admin interface, you can add a site from a Git provider (GitHub, GitLab or Bitbucket). At the end
+of this process, you can select the deploy settings for the project:</p>
+<ul>
+<li>build command: <code>zola build</code> (replace the version number in the variable by the version you want to use)</li>
+<li>publish directory: the path to where the <code>public</code> directory is</li>
+<li>image selection: <code>Ubuntu Xenial 16.04 (default)</code></li>
+<li>Environment variables: <code>ZOLA_VERSION</code> with for example <code>0.8.0</code> as value</li>
+</ul>
+<p>With this setup, your site should be automatically deployed on every commit on master.  For <code>ZOLA_VERSION</code>, you may
+use any of the tagged <code>release</code> versions in the GitHub repository. Netlify will automatically fetch the tagged version
+and use it to build your site.</p>
+<p>However, if you want to use everything that Netlify gives you, you should also publish temporary sites for pull requests.</p>
+<p>This is done by adding the following <code>netlify.toml</code> file in your repository and removing the build command/publish
+directory in the admin interface.</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[build]
+</span><span style="color:#a7adba;"># This assumes that the Zola site is in a docs folder. If it isn&#39;t, you don&#39;t need
+</span><span style="color:#a7adba;"># to have a `base` variable but you do need the `publish` and `command` variables.
+</span><span style="color:#bf616a;">base    </span><span>= &quot;</span><span style="color:#a3be8c;">docs</span><span>&quot;
+</span><span style="color:#bf616a;">publish </span><span>= &quot;</span><span style="color:#a3be8c;">docs/public</span><span>&quot;
+</span><span style="color:#bf616a;">command </span><span>= &quot;</span><span style="color:#a3be8c;">zola build</span><span>&quot;
+</span><span>
+</span><span>[build.environment]
+</span><span style="color:#a7adba;"># Set the version name that you want to use and Netlify will automatically use it.
+</span><span style="color:#bf616a;">ZOLA_VERSION </span><span>= &quot;</span><span style="color:#a3be8c;">0.9.0</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The magic for deploying previews of branches.
+</span><span style="color:#a7adba;"># We need to override the base url with whatever url Netlify assigns to our
+</span><span style="color:#a7adba;"># preview site.  We do this using the Netlify environment variable
+</span><span style="color:#a7adba;"># `$DEPLOY_PRIME_URL`.
+</span><span>
+</span><span>[context.deploy-preview]
+</span><span style="color:#bf616a;">command </span><span>= &quot;</span><span style="color:#a3be8c;">zola build --base-url $DEPLOY_PRIME_URL</span><span>&quot;
+</span></code></pre>
+<h2 id="manual-deploys">Manual deploys</h2>
+<p>If you would prefer to use a version of Zola that isn't a tagged release (for example, after having built Zola from
+source and made modifications), then you will need to manually deploy your <code>public</code> folder to Netlify.  You can do
+this through Netlify's web GUI or via the command line.</p>
+<p>For a command-line manual deploy, follow these steps:</p>
+<ol>
+<li>Generate a <code>Personal Access Token</code> from the settings section of your Netlify account (<em>not</em> an OAuth Application).</li>
+<li>Build your site with <code>zola build</code>.</li>
+<li>Create a zip folder containing the <code>public</code> directory.</li>
+<li>Run the <code>curl</code> command below, filling in your values for PERSONAL_ACCESS_TOKEN_FROM_STEP_1, FILE_NAME.zip
+and SITE_NAME.</li>
+<li>(Optional) delete the zip folder.</li>
+</ol>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">curl -H </span><span>&quot;</span><span style="color:#a3be8c;">Content-Type: application/zip</span><span>&quot; \
+</span><span style="color:#bf616a;">     -H </span><span>&quot;</span><span style="color:#a3be8c;">Authorization: Bearer PERSONAL_ACCESS_TOKEN_FROM_STEP_1</span><span>&quot; \
+</span><span style="color:#bf616a;">     --data-binary </span><span>&quot;</span><span style="color:#a3be8c;">@FILE_NAME.zip</span><span>&quot; \
+</span><span>     https://api.netlify.com/api/v1/sites/SITE_NAME.netlify.com/deploys
+</span></code></pre>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

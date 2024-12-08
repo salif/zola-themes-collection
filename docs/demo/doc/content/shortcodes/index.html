@@ -1,0 +1,390 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Shortcodes </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/#writing-a-shortcode">Writing a shortcode</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/#using-shortcodes">Using shortcodes</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/#shortcodes-without-body">Shortcodes without body</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/#shortcodes-with-body">Shortcodes with body</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/#invocation-count">Invocation Count</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Shortcodes </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola borrows the concept of <a href="https://codex.wordpress.org/Shortcode_API">shortcodes</a> from WordPress.
+In our case, a shortcode corresponds to a template defined in the <code>templates/shortcodes</code> directory or
+a built-in one that can be used in a Markdown file. If you want to use something similar to shortcodes in your templates,
+try <a href="https://tera.netlify.com/docs#macros">Tera macros</a>.</p>
+<p>Broadly speaking, Zola's shortcodes cover two distinct use cases:</p>
+<ul>
+<li>Inject more complex HTML: Markdown is good for writing, but it isn't great when you need add inline HTML or styling.</li>
+<li>Ease repetitive data based tasks: when you have <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#load-data">external data</a> that you
+want to display in your page's body.</li>
+</ul>
+<p>The latter may also be solved by writing HTML, however Zola allows the use of Markdown based shortcodes which end in <code>.md</code>
+rather than <code>.html</code>. This may be particularly useful if you want to include headings generated by the shortcode in the
+<a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">table of contents</a>.</p>
+<h2 id="writing-a-shortcode">Writing a shortcode&nbsp;<a class="anchor" href="#writing-a-shortcode">&#xE732;</a></h2>
+<p>Let's write a shortcode to embed YouTube videos as an example.
+In a file called <code>youtube.html</code> in the <code>templates/shortcodes</code> directory, paste the
+following:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>&lt;div {% </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">class </span><span>%}class=&quot;{{</span><span style="color:#bf616a;">class</span><span>}}&quot;{% </span><span style="color:#b48ead;">endif </span><span>%}&gt;
+</span><span>    &lt;iframe
+</span><span>        src=&quot;https://www.youtube.com/embed/{{</span><span style="color:#bf616a;">id</span><span>}}{% </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">autoplay </span><span>%}?autoplay=1{% </span><span style="color:#b48ead;">endif </span><span>%}&quot;
+</span><span>        webkitallowfullscreen
+</span><span>        mozallowfullscreen
+</span><span>        allowfullscreen&gt;
+</span><span>    &lt;/iframe&gt;
+</span><span>&lt;/div&gt;
+</span></code></pre>
+<p>This template is very straightforward: an iframe pointing to the YouTube embed URL wrapped in a <code>&lt;div&gt;</code>.
+In terms of input, this shortcode expects at least one variable: <code>id</code>. Because the other variables
+are in an <code>if</code> statement, they are optional.</p>
+<p>That's it. Zola will now recognise this template as a shortcode named <code>youtube</code> (the filename minus the <code>.html</code> extension).</p>
+<p>The Markdown renderer will wrap an inline HTML node such as <code>&lt;a&gt;</code> or <code>&lt;span&gt;</code> into a paragraph.
+If you want to disable this behaviour, wrap your shortcode in a <code>&lt;div&gt;</code>.</p>
+<p>A Markdown based shortcode in turn will be treated as if what it returned was part of the page's body. If we create
+<code>books.md</code> in <code>templates/shortcodes</code> for example:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">data </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">path</span><span>=</span><span style="color:#bf616a;">path</span><span>) -%}
+</span><span>{% </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">book </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">data</span><span>.</span><span style="color:#bf616a;">books </span><span>%}
+</span><span>### {{ </span><span style="color:#bf616a;">book</span><span>.</span><span style="color:#bf616a;">title </span><span>}}
+</span><span>
+</span><span>{{ </span><span style="color:#bf616a;">book</span><span>.</span><span style="color:#bf616a;">description </span><span>| </span><span style="color:#bf616a;">safe </span><span>}}
+</span><span>{% </span><span style="color:#b48ead;">endfor </span><span>%}
+</span></code></pre>
+<p>This will create a shortcode <code>books</code> with the argument <code>path</code> pointing to a <code>.toml</code> file where it loads lists of books with
+titles and descriptions. They will flow with the rest of the document in which <code>books</code> is called.</p>
+<p>Shortcodes are rendered before the page's Markdown is parsed so they don't have access to the page's table of contents.
+Because of that, you also cannot use the <code>get_page</code>/<code>get_section</code>/<code>get_taxonomy</code> global functions. It might work while
+running <code>zola serve</code> because it has been loaded but it will fail during <code>zola build</code>.</p>
+<h2 id="using-shortcodes">Using shortcodes&nbsp;<a class="anchor" href="#using-shortcodes">&#xE732;</a></h2>
+<p>There are two kinds of shortcodes:</p>
+<ul>
+<li>ones that do not take a body, such as the YouTube example above</li>
+<li>ones that do, such as one that styles a quote</li>
+</ul>
+<p>In both cases, the arguments must be named and they will all be passed to the template.</p>
+<p>Lastly, a shortcode name (and thus the corresponding <code>.html</code> file) as well as the argument names
+can only contain numbers, letters and underscores, or in Regex terms <code>[0-9A-Za-z_]</code>.
+Although theoretically an argument name could be a number, it will not be possible to use such an argument in the template.</p>
+<p>Argument values can be of one of five types:</p>
+<ul>
+<li>string: surrounded by double quotes, single quotes or backticks</li>
+<li>bool: <code>true</code> or <code>false</code></li>
+<li>float: a number with a decimal point (e.g., 1.2)</li>
+<li>integer: a whole number or its negative counterpart (e.g., 3)</li>
+<li>array: an array of any kind of value, except arrays</li>
+</ul>
+<p>Malformed values will be silently ignored.</p>
+<p>Both types of shortcode will also get either a <code>page</code> or <code>section</code> variable depending on where they were used
+and a <code>config</code> variable. These values will overwrite any arguments passed to a shortcode so these variable names
+should not be used as argument names in shortcodes.</p>
+<h3 id="shortcodes-without-body">Shortcodes without body&nbsp;<a class="anchor" href="#shortcodes-without-body">&#xE732;</a></h3>
+<p>Simply call the shortcode as if it was a Tera function in a variable block. All the examples below are valid
+calls of the YouTube shortcode.</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>Here is a YouTube video:
+</span><span>
+</span><span>{{ youtube(id=&quot;dQw4w9WgXcQ&quot;) }}
+</span><span>
+</span><span>{{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true) }}
+</span><span>
+</span><span>An inline {{ youtube(id=&quot;dQw4w9WgXcQ&quot;, autoplay=true, class=&quot;youtube&quot;) }} shortcode
+</span></code></pre>
+<p>Note that if you want to have some content that looks like a shortcode but not have Zola try to render it,
+you will need to escape it by using <code>{{/*</code> and <code>*/}}</code> instead of <code>{{</code> and <code>}}</code>.</p>
+<h3 id="shortcodes-with-body">Shortcodes with body&nbsp;<a class="anchor" href="#shortcodes-with-body">&#xE732;</a></h3>
+<p>Let's imagine that we have the following shortcode <code>quote.html</code> template:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>&lt;blockquote&gt;
+</span><span>    {{ </span><span style="color:#bf616a;">body </span><span>}} &lt;br&gt;
+</span><span>    -- {{ </span><span style="color:#bf616a;">author</span><span>}}
+</span><span>&lt;/blockquote&gt;
+</span></code></pre>
+<p>We could use it in our Markdown file like so:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>As someone said:
+</span><span>
+</span><span>{% quote(author=&quot;Vincent&quot;) %}
+</span><span>A quote
+</span><span>{% end %}
+</span></code></pre>
+<p>The body of the shortcode will be automatically passed down to the rendering context as the <code>body</code> variable and needs
+to be on a new line.</p>
+<p>If you want to have some content that looks like a shortcode but not have Zola try to render it,
+you will need to escape it by using <code>{%/*</code> and <code>*/%}</code> instead of <code>{%</code> and <code>%}</code>. You won't need to escape
+anything else until the closing tag.</p>
+<h3 id="invocation-count">Invocation Count&nbsp;<a class="anchor" href="#invocation-count">&#xE732;</a></h3>
+<p>Every shortcode context is passed in a variable named <code>nth</code> that tracks how many times a particular shortcode has
+been invoked in a Markdown file. Given a shortcode <code>true_statement.html</code> template:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>&lt;p id=&quot;number{{ </span><span style="color:#bf616a;">nth </span><span>}}&quot;&gt;{{ </span><span style="color:#bf616a;">value </span><span>}} is equal to {{ </span><span style="color:#bf616a;">nth </span><span>}}.&lt;/p&gt;
+</span></code></pre>
+<p>It could be used in our Markdown as follows:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>{{ true_statement(value=1) }}
+</span><span>{{ true_statement(value=2) }}
+</span></code></pre>
+<p>This is useful when implementing custom markup for features such as sidenotes or end notes.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

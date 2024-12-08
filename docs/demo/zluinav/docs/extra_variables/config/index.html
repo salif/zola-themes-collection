@@ -82,6 +82,9 @@
 <li>
 <p><code>id</code>(string) optional: the translation ID. If this is not provided, the name will be used instead.</p>
 </li>
+<li>
+<p><code>attributes</code>(object) optional: custom attributes. These are also call tables.</p>
+</li>
 </ul>
 <p>If you set the nav as empty or do not set at all, the navigation menu will be disabled, as well as skip to navigation link.</p>
 <p>Example navigation:</p>
@@ -89,7 +92,7 @@
   {name = &quot;Home&quot;, url = &quot;&#x2F;&quot;},
   {name = &quot;Blog&quot;, url = &quot;&#x2F;blog&#x2F;&quot;},
   # Translated page
-  {name = &quot;Multilingual&quot;, url = &quot;&#x2F;.l.&#x2F;multilingual&#x2F;&quot;}
+  {name = &quot;Multilingual&quot;, url = &quot;&#x2F;.l.&#x2F;multilingual&#x2F;&quot;},
 ]
 </code></pre>
 <p>You can also use another style, like this, which is the same as the demo configuration:</p>
@@ -106,6 +109,9 @@
   name = &quot;Blog&quot;
   url = &quot;&#x2F;.l.&#x2F;blog&quot;
   id = &quot;nav3&quot;
+  # Lets add class attribute to blog
+  [extra.nav.attributes]
+    class = &quot;blog&quot;
 </code></pre>
 </div>
 </main>

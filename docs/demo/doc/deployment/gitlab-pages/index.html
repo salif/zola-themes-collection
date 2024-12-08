@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | GitLab Pages </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> GitLab Pages </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>We are going to use the GitLab CI runner to automatically publish the site (this CI runner is already included in your repository if you use GitLab.com).</p>
+<h2 id="repository-setup">Repository setup</h2>
+<p>Your repository needs to be set up to be a user or group website. This means the name of the repository has to be in the correct format.</p>
+<p>For example, assuming that the username is <code>john</code>, you have to create a project called <code>john.gitlab.io</code>. Your project URL will be <code>https://gitlab.com/john/john.gitlab.io</code>. Once you enable GitLab Pages for your project, your website will be published under <code>https://john.gitlab.io</code>.</p>
+<p>Under your group <code>websites</code>, you created a project called <code>websites.gitlab.io</code>. Your project’s URL will be <code>https://gitlab.com/websites/websites.gitlab.io</code>. Once you enable GitLab Pages for your project, your website will be published under <code>https://websites.gitlab.io</code>.</p>
+<p>This guide assumes that your Zola project is located in the root of your repository.</p>
+<h2 id="ensuring-that-the-ci-runner-can-access-your-theme">Ensuring that the CI runner can access your theme</h2>
+<p>Depending on how you added your theme, your repository may not contain it. The best way to ensure that the theme will
+be added is to use submodules. When doing this, ensure that you are using the <code>https</code> version of the URL.</p>
+<pre data-lang="shell" style="background-color:#eff1f5;color:#4f5b66;" class="language-shell "><code class="language-shell" data-lang="shell"><span>$ git submodule add {THEME_URL} themes/{THEME_NAME}
+</span></code></pre>
+<p>For example, this could look like:</p>
+<pre data-lang="shell" style="background-color:#eff1f5;color:#4f5b66;" class="language-shell "><code class="language-shell" data-lang="shell"><span>$ git submodule add https://github.com/getzola/hyde.git themes/hyde
+</span></code></pre>
+<h2 id="setting-up-the-gitlab-ci-cd-runner">Setting up the GitLab CI/CD Runner</h2>
+<p>The second step is to tell the GitLab continuous integration runner how to create the GitLab page.</p>
+<p>To do this, create a file called <code>.gitlab-ci.yml</code> in the root directory of your repository.</p>
+<pre data-lang="yaml" style="background-color:#eff1f5;color:#4f5b66;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">alpine:latest
+</span><span style="color:#bf616a;">variables</span><span>:
+</span><span>  </span><span style="color:#a7adba;"># This variable will ensure that the CI runner pulls in your theme from the submodule
+</span><span>  </span><span style="color:#bf616a;">GIT_SUBMODULE_STRATEGY</span><span>: </span><span style="color:#a3be8c;">recursive  
+</span><span>  </span><span style="color:#a7adba;"># Specify the zola version you want to use here
+</span><span>  </span><span style="color:#bf616a;">ZOLA_VERSION</span><span>: &quot;</span><span style="color:#a3be8c;">v0.12.0</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">pages</span><span>:
+</span><span>  </span><span style="color:#bf616a;">script</span><span>:
+</span><span>    </span><span style="color:#a7adba;"># Install the zola package from the alpine community repositories
+</span><span>    - </span><span style="color:#a3be8c;">apk add --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ zola
+</span><span>    </span><span style="color:#a7adba;"># Execute zola build
+</span><span>    - </span><span style="color:#a3be8c;">zola build
+</span><span>    
+</span><span>  </span><span style="color:#bf616a;">artifacts</span><span>:
+</span><span>    </span><span style="color:#bf616a;">paths</span><span>:
+</span><span>      </span><span style="color:#a7adba;"># Path of our artifacts
+</span><span>      - </span><span style="color:#a3be8c;">public
+</span><span>      
+</span><span>  </span><span style="color:#a7adba;"># This config will only publish changes that are pushed on the master branch
+</span><span>  </span><span style="color:#bf616a;">only</span><span>: 
+</span><span>    - </span><span style="color:#a3be8c;">master
+</span></code></pre>
+<p>Push this new file and ... Tada! You're done! If you navigate to <code>settings &gt; pages</code>, you should be able to see
+something like this:</p>
+<blockquote>
+<p>Congratulations! Your pages are served under:<br />
+https://john.gitlab.io</p>
+</blockquote>
+<p>More information on the process to host on GitLab pages and additional information like using a custom domain is documented
+<a href="https://about.gitlab.com/2016/04/07/gitlab-pages-setup/">in this GitLab blog post</a>.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

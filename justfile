@@ -206,7 +206,7 @@ update-data url=demo_base_url:
 		themeInfo.description = onlyIf(themeToml.description, "",  themeToml.description);
 		themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags;
 		themeInfo.license = themeToml.license;
-		themeInfo.homepage = onlyIf(themeToml.homepage, themeToml.repo, themeToml.homepage);
+		themeInfo.homepage = onlyIf(themeToml.homepage, themeInfo.repo, themeToml.homepage);
 		themeInfo.demo = themeToml.demo;
 		themeInfo.minVersion = themeToml.min_version;
 		themeInfo.authorName = themeToml.author?.name;
@@ -218,7 +218,23 @@ update-data url=demo_base_url:
 	</details>`;
 		const newJS = (name) => "const b=document.getElementById('" + name + "').parentElement;" +
 				"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
-		const themeDetails = newDetails("info", `
+		const themeDetails = newDetails("install", `
+	### Installation
+	0. Create a new Zola site: \`zola init\` and initialize a Git repository: \`git init\`
+	1. Download the theme
+	  - Option A. Add the theme as a git submodule:
+	\`\`\`sh
+	git submodule add ${themeInfo.clone} themes/${themeName}
+	\`\`\`
+	  - Option B. Clone the theme into your themes directory:
+	\`\`\`sh
+	git clone ${themeInfo.clone} themes/${themeName}
+	\`\`\`
+	2. Set theme in your \`config.toml\`
+	\`\`\`toml
+	theme = "${themeName}"
+	\`\`\`
+	`) + newDetails("info", `
 	### Info` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
 	- **Author**: ${themeInfo.authorName}`), `
 	- **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
@@ -226,10 +242,7 @@ update-data url=demo_base_url:
 	- **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
 	- **Off. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
 	- **Min version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
-	- **Original**: <${themeInfo.originalRepo}>
-	`)) + newDetails("install", `
-	### Installation instructions
-	\`git submodule add ${themeInfo.clone} themes/${themeName}\``);
+	- **Original**: <${themeInfo.originalRepo}>`));
 		return {
 			theme: themeName,
 			name: themeInfo.name,
@@ -239,8 +252,8 @@ update-data url=demo_base_url:
 			links: [
 				{ name: "Live Demo", url: new URL(themeName + "/", baseURL).href },
 				{ name: "Repository", url: themeInfo.repo },
-				{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },
 				{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName) },
+				{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },
 			],
 		};
 	}

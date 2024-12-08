@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Sections and Pages </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Sections and Pages </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Templates for pages and sections are very similar.</p>
+<h2 id="page-variables">Page variables</h2>
+<p>Zola will try to load the <code>templates/page.html</code> template, the <code>page.html</code> template of the theme if one is used
+or render the built-in template (a blank page).</p>
+<p>Whichever template you decide to render, you will get a <code>page</code> variable in your template
+with the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The HTML output of the Markdown content
+</span><span>content: </span><span style="color:#d08770;">String</span><span>;
+</span><span>title: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">description</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">date</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#a7adba;">// `updated` will be the same as `date` if `date` is specified but `updated` is not in front-matter
+</span><span style="color:#bf616a;">updated</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">slug</span><span>: </span><span style="color:#d08770;">String</span><span>;
+</span><span>path: </span><span style="color:#d08770;">String</span><span>;
+</span><span>draft: </span><span style="color:#bf616a;">Bool</span><span>;
+</span><span style="color:#a7adba;">// the path, split on &#39;/&#39;
+</span><span>components: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span>permalink: </span><span style="color:#d08770;">String</span><span>;
+</span><span>summary: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">taxonomies</span><span>: </span><span style="color:#bf616a;">HashMap</span><span>&lt;</span><span style="color:#d08770;">String</span><span>, </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;&gt;;
+</span><span>extra: </span><span style="color:#bf616a;">HashMap</span><span>&lt;</span><span style="color:#d08770;">String</span><span>, </span><span style="color:#bf616a;">Any</span><span>&gt;;
+</span><span>toc: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">Header</span><span>&gt;,
+</span><span style="color:#a7adba;">// Naive word count, will not work for languages without whitespace
+</span><span>word_count: </span><span style="color:#d08770;">Number</span><span>;
+</span><span style="color:#a7adba;">// Based on https://help.medium.com/hc/en-us/articles/214991667-Read-time
+</span><span>reading_time: </span><span style="color:#d08770;">Number</span><span>;
+</span><span style="color:#a7adba;">// `earlier` and `later` are only populated if the section variable `sort_by` is set to `date`
+</span><span style="color:#a7adba;">// and only set when rendering the page itself
+</span><span>earlier: </span><span style="color:#bf616a;">Page</span><span>?;
+</span><span style="color:#bf616a;">later</span><span>: </span><span style="color:#bf616a;">Page</span><span>?;
+</span><span style="color:#a7adba;">// `heavier` and `lighter` are only populated if the section variable `sort_by` is set to `weight`
+</span><span style="color:#a7adba;">// and only set when rendering the page itself
+</span><span style="color:#bf616a;">heavier</span><span>: </span><span style="color:#bf616a;">Page</span><span>?;
+</span><span style="color:#bf616a;">lighter</span><span>: </span><span style="color:#bf616a;">Page</span><span>?;
+</span><span style="color:#a7adba;">// Year/month/day is only set if the page has a date and month/day are 1-indexed
+</span><span style="color:#bf616a;">year</span><span>: </span><span style="color:#d08770;">Number</span><span>?;
+</span><span style="color:#bf616a;">month</span><span>: </span><span style="color:#d08770;">Number</span><span>?;
+</span><span style="color:#bf616a;">day</span><span>: </span><span style="color:#d08770;">Number</span><span>?;
+</span><span style="color:#a7adba;">// Paths of colocated assets, relative to the content directory
+</span><span style="color:#bf616a;">assets</span><span>: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span style="color:#a7adba;">// The relative paths of the parent sections until the index one, for use with the `get_section` Tera function
+</span><span style="color:#a7adba;">// The first item is the index section and the last one is the parent section
+</span><span style="color:#a7adba;">// This is filled after rendering a page content so it will be empty in shortcodes
+</span><span>ancestors: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span style="color:#a7adba;">// The relative path from the `content` directory to the markdown file
+</span><span>relative_path: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The language for the page if there is one. Default to the config `default_language`
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// Information about all the available languages for that content
+</span><span>translations: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">TranslatedContent</span><span>&gt;;
+</span></code></pre>
+<h2 id="section-variables">Section variables</h2>
+<p>By default, Zola will try to load <code>templates/index.html</code> for <code>content/_index.md</code>
+and <code>templates/section.html</code> for other <code>_index.md</code> files. If there isn't
+one, it will render the built-in template (a blank page).</p>
+<p>Whichever template you decide to render, you will get a <code>section</code> variable in your template
+with the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The HTML output of the Markdown content
+</span><span>content: </span><span style="color:#d08770;">String</span><span>;
+</span><span>title: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">description</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">path</span><span>: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// the path, split on &#39;/&#39;
+</span><span>components: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span>permalink: </span><span style="color:#d08770;">String</span><span>;
+</span><span>extra: </span><span style="color:#bf616a;">HashMap</span><span>&lt;</span><span style="color:#d08770;">String</span><span>, </span><span style="color:#bf616a;">Any</span><span>&gt;;
+</span><span style="color:#a7adba;">// Pages directly in this section. By default, the pages are not sorted. Please set the &quot;sorted_by&quot;
+</span><span style="color:#a7adba;">// variable in the _index.md file of the corresponding section to &quot;date&quot; or &quot;weight&quot; for sorting by
+</span><span style="color:#a7adba;">// date and weight, respectively.
+</span><span>pages: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">Page</span><span>&gt;;
+</span><span style="color:#a7adba;">// Direct subsections to this section, sorted by subsections weight
+</span><span style="color:#a7adba;">// This only contains the path to use in the `get_section` Tera function to get
+</span><span style="color:#a7adba;">// the actual section object if you need it
+</span><span>subsections: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span>toc: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">Header</span><span>&gt;,
+</span><span style="color:#a7adba;">// Unicode word count
+</span><span>word_count: </span><span style="color:#d08770;">Number</span><span>;
+</span><span style="color:#a7adba;">// Based on https://help.medium.com/hc/en-us/articles/214991667-Read-time
+</span><span>reading_time: </span><span style="color:#d08770;">Number</span><span>;
+</span><span style="color:#a7adba;">// Paths of colocated assets, relative to the content directory
+</span><span>assets: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span style="color:#a7adba;">// The relative paths of the parent sections until the index one, for use with the `get_section` Tera function
+</span><span style="color:#a7adba;">// The first item is the index section and the last one is the parent section
+</span><span style="color:#a7adba;">// This is filled after rendering a page content so it will be empty in shortcodes
+</span><span>ancestors: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#d08770;">String</span><span>&gt;;
+</span><span style="color:#a7adba;">// The relative path from the `content` directory to the markdown file
+</span><span>relative_path: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The language for the section if there is one. Default to the config `default_language`
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// Information about all the available languages for that content
+</span><span>translations: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">TranslatedContent</span><span>&gt;;
+</span></code></pre>
+<h2 id="table-of-contents">Table of contents</h2>
+<p>Both page and section templates have a <code>toc</code> variable that corresponds to an array of <code>Header</code>.
+A <code>Header</code> has the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The hX level
+</span><span>level: </span><span style="color:#d08770;">1 </span><span>| </span><span style="color:#d08770;">2 </span><span>| </span><span style="color:#d08770;">3 </span><span>| </span><span style="color:#d08770;">4 </span><span>| </span><span style="color:#d08770;">5 </span><span>| </span><span style="color:#d08770;">6</span><span>;
+</span><span style="color:#a7adba;">// The generated slug id
+</span><span>id: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The text of the header
+</span><span>title: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// A link pointing directly to the header, using the inserted anchor
+</span><span>permalink: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// All lower level headers below this header
+</span><span>children: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">Header</span><span>&gt;;
+</span></code></pre>
+<h2 id="translated-content">Translated content</h2>
+<p>Both pages and sections have a <code>translations</code> field that corresponds to an array of <code>TranslatedContent</code>. If your
+site is not using multiple languages, this will always be an empty array.
+<code>TranslatedContent</code> has the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The language code for that content, empty if it is the default language
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#a7adba;">// The title of that content if there is one
+</span><span style="color:#bf616a;">title</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#a7adba;">// A permalink to that content
+</span><span style="color:#bf616a;">permalink</span><span>: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The path to the markdown file; useful for retrieving the full page through
+</span><span style="color:#a7adba;">// the `get_page` function.
+</span><span>path: </span><span style="color:#d08770;">String</span><span>;
+</span></code></pre>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

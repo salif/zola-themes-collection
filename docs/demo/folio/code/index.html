@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>A post with code</title>
+
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <nav class="title-nav">
+        <div class="trigger">
+          <a class="page-link-title" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;folio&#x2F;/">*folio</a>
+        </div>
+      </nav>
+
+      <nav class="site-nav">
+        <a class="page-link" href="/about">about</a>
+        
+        <a class="page-link" href="/projects">projects</a>
+        
+        <a class="page-link" href="/photography">photography</a>
+        </nav>
+      
+    </div>
+  </header>
+  <div class="page-content">
+    <div class="wrapper">
+      
+<div class="post">
+  <h4 class="post-title">A post with code</h4>
+  <p class="post-meta">
+    <span class="post-date">
+      July 15, 2015
+      </span>
+    <span> — Everett Robinson</span>
+  </p>
+  <br>
+  <div class="post-content">
+    <p>Zola provides built in syntax highlighting. It supports more than 100 languages. This example is in C++. All you have to do is wrap your code with three backticks and the language name:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>	```c++
+</span><span>	int main(int argc, char const *argv[])
+</span><span>	{
+</span><span>		string myString;
+</span><span>
+</span><span>		cout &lt;&lt; &quot;input a string: &quot;;
+</span><span>		getline(cin, myString);
+</span><span>		int length = myString.length();
+</span><span>		
+</span><span>		char charArray = new char * [length];
+</span><span>
+</span><span>		charArray = myString;
+</span><span>		for(int i = 0; i &lt; length; ++i){
+</span><span>			cout &lt;&lt; charArray[i] &lt;&lt; &quot; &quot;;
+</span><span>		}
+</span><span>		
+</span><span>		return 0;
+</span><span>	}
+</span><span>	```
+</span></code></pre>
+<p>You'll get this nicely highlighted code block in return:</p>
+<pre data-lang="c++" style="background-color:#2b303b;color:#c0c5ce;" class="language-c++ "><code class="language-c++" data-lang="c++"><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">main</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">argc</span><span>, </span><span style="color:#b48ead;">char const </span><span>*</span><span style="color:#bf616a;">argv</span><span>[])
+</span><span>{
+</span><span>	string myString;
+</span><span>
+</span><span>	cout &lt;&lt; &quot;</span><span style="color:#a3be8c;">input a string: </span><span>&quot;;
+</span><span>	</span><span style="color:#bf616a;">getline</span><span>(cin, myString);
+</span><span>	</span><span style="color:#b48ead;">int</span><span> length = myString.</span><span style="color:#bf616a;">length</span><span>();
+</span><span>	
+</span><span>	</span><span style="color:#b48ead;">char</span><span> charArray = </span><span style="color:#b48ead;">new char </span><span>* [length];
+</span><span>
+</span><span>	charArray = myString;
+</span><span>	</span><span style="color:#b48ead;">for</span><span>(</span><span style="color:#b48ead;">int</span><span> i = </span><span style="color:#d08770;">0</span><span>; i &lt; length; ++i){
+</span><span>		cout &lt;&lt; charArray[i] &lt;&lt; &quot; &quot;;
+</span><span>	}
+</span><span>	
+</span><span>	</span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span>;
+</span><span>}
+</span></code></pre>
+
+  </div></div>
+
+    </div>
+  </div>
+  <footer class="site-footer">
+
+    <div class="wrapper">
+      <span>© 2024 Everett Robinson. This site was built using <a
+          href="https://www.getzola.org/">Zola</a> and the <a href="https://github.com/evjrob/zola-folio"
+          target="_blank">zola-folio theme</a>.</span>
+      </div>
+
+  </footer>
+</body>
+
+</html>

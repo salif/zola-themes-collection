@@ -17,8 +17,8 @@
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/screenshot.png" />
   <meta property="og:image:alt" content="A screenshot of this website." />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="2720" />
-  <meta property="og:image:height" content="1530" />
+  <meta property="og:image:width" content="1360" />
+  <meta property="og:image:height" content="765" />
 
   <meta name="theme-color" data-light="#f4f4f5" data-dark="#1f2937" content="#f4f4f5" />
 
@@ -115,7 +115,28 @@
     </picture>
     <p>Bear blog theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zola-bearblog</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://alanpearce.eu">Alan Pearce</a></li>
@@ -125,9 +146,6 @@
 <li><strong>Min version</strong>: 0.4.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/janraasch/hugo-bearblog/">https://github.com/janraasch/hugo-bearblog/</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -153,16 +171,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-zola-bearblog"
-        >Info</a
+        onclick="const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-zola-bearblog"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-zola-bearblog"
-        >Install</a
+        onclick="const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-zola-bearblog"
+        >Info</a
       >
       
     </div>
@@ -179,7 +197,28 @@
     </picture>
     <p>tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/welpo/tabi.git themes/tabi
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/welpo/tabi.git themes/tabi
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">tabi</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://osc.garden">Óscar Fernández</a></li>
@@ -188,9 +227,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://welpo.github.io/tabi">https://welpo.github.io/tabi</a></li>
 <li><strong>Min version</strong>: 0.17.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/welpo/tabi.git themes/tabi</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -216,16 +252,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-tabi"
-        >Info</a
+        onclick="const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-tabi"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-tabi"
-        >Install</a
+        onclick="const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-tabi"
+        >Info</a
       >
       
     </div>
@@ -242,7 +278,28 @@
     </picture>
     <p>Modern, pretty, and clean theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/daudix/duckquill.git themes/duckquill
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">duckquill</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://daudix.one">David Lapshin</a></li>
@@ -251,9 +308,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://duckquill.daudix.one">https://duckquill.daudix.one</a></li>
 <li><strong>Min version</strong>: 0.19.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -279,16 +333,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-duckquill"
-        >Info</a
+        onclick="const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-duckquill"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-duckquill"
-        >Install</a
+        onclick="const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-duckquill"
+        >Info</a
       >
       
     </div>
@@ -305,7 +359,28 @@
     </picture>
     <p>A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-linkita'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/salif/linkita.git themes/linkita
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/salif/linkita.git themes/linkita
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">linkita</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-linkita'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://salif.eu">Salif Mehmed</a></li>
@@ -315,9 +390,6 @@
 <li><strong>Min version</strong>: 0.19.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/st1020/kita">https://github.com/st1020/kita</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/salif/linkita.git themes/linkita</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -351,16 +423,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-linkita"
-        >Info</a
+        onclick="const b=document.getElementById('install-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-linkita"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-linkita"
-        >Install</a
+        onclick="const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-linkita"
+        >Info</a
       >
       
     </div>
@@ -377,7 +449,28 @@
     </picture>
     <p>AdiDoks is a Zola theme helping you build modern documentation.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-pulladidoks-theme'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-pulladidoks-theme'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zola-pulladidoks-theme</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-pulladidoks-theme'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/aaranxu">Aaran Xu</a></li>
@@ -387,9 +480,6 @@
 <li><strong>Min version</strong>: 0.15.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/h-enk/doks">https://github.com/h-enk/doks</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-pulladidoks-theme'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -415,16 +505,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-zola-pulladidoks-theme"
-        >Info</a
+        onclick="const b=document.getElementById('install-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-zola-pulladidoks-theme"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-zola-pulladidoks-theme"
-        >Install</a
+        onclick="const b=document.getElementById('info-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-zola-pulladidoks-theme"
+        >Info</a
       >
       
     </div>
@@ -441,7 +531,28 @@
     </picture>
     <p>🦎 A minimal Zola theme for building light and SEO-ready blogs.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/semanticdata/mabuya.git themes/mabuya
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">mabuya</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/semanticdata">Miguel Pimentel</a></li>
@@ -451,9 +562,6 @@
 <li><strong>Min version</strong>: 0.18.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/chesterhow/tale">https://github.com/chesterhow/tale</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -479,16 +587,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-mabuya"
-        >Info</a
+        onclick="const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-mabuya"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-mabuya"
-        >Install</a
+        onclick="const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-mabuya"
+        >Info</a
       >
       
     </div>
@@ -505,7 +613,28 @@
     </picture>
     <p>A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">researchlab</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/plaublin">Pierre Louis Aublin</a></li>
@@ -514,9 +643,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://plaublin.codeberg.page/researchlab/@pages">https://plaublin.codeberg.page/researchlab/@pages</a></li>
 <li><strong>Min version</strong>: 0.19.2</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -542,16 +668,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-researchlab"
-        >Info</a
+        onclick="const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-researchlab"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-researchlab"
-        >Install</a
+        onclick="const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-researchlab"
+        >Info</a
       >
       
     </div>
@@ -568,7 +694,28 @@
     </picture>
     <p>A multilingual theme designed for accessibility rather than visual.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/harrymkt/zluinav.git themes/zluinav
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zluinav</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://harrymkt.github.io">Harry Min Khant</a></li>
@@ -577,9 +724,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://harrymkt.github.io/zluinav">https://harrymkt.github.io/zluinav</a></li>
 <li><strong>Min version</strong>: 0.19.2</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -613,16 +757,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-zluinav"
-        >Info</a
+        onclick="const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-zluinav"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-zluinav"
-        >Install</a
+        onclick="const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-zluinav"
+        >Info</a
       >
       
     </div>
@@ -639,7 +783,28 @@
     </picture>
     <p>Hacker is a theme for Zola</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hacker'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/en9inerd/zola-hacker.git themes/hacker
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">hacker</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hacker'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/en9inerd">Vladimir Loskutov</a></li>
@@ -649,9 +814,6 @@
 <li><strong>Min version</strong>: 0.19.1</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/pages-themes/hacker">https://github.com/pages-themes/hacker</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -677,16 +839,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-hacker"
-        >Info</a
+        onclick="const b=document.getElementById('install-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-hacker"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-hacker"
-        >Install</a
+        onclick="const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-hacker"
+        >Info</a
       >
       
     </div>
@@ -703,7 +865,28 @@
     </picture>
     <p>Clean and simple personal site&#x2F;blog theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/InputUsername/zola-hook.git themes/hook
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/InputUsername/zola-hook.git themes/hook
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">hook</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://koen.bolhu.is">Koen Bolhuis</a></li>
@@ -712,9 +895,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://inputusername.github.io/zola-hook/">https://inputusername.github.io/zola-hook/</a></li>
 <li><strong>Min version</strong>: 0.15.2</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/InputUsername/zola-hook.git themes/hook</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -740,16 +920,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-hook"
-        >Info</a
+        onclick="const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-hook"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-hook"
-        >Install</a
+        onclick="const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-hook"
+        >Info</a
       >
       
     </div>
@@ -766,7 +946,28 @@
     </picture>
     <p>mo8it.com</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mo8it'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/salif/zola-mo8it.git themes/mo8it
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/salif/zola-mo8it.git themes/mo8it
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">mo8it</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mo8it'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://salif.eu">Salif Mehmed</a></li>
@@ -776,9 +977,6 @@
 <li><strong>Min version</strong>: 0.19.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/mo8it/website">https://codeberg.org/mo8it/website</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/salif/zola-mo8it.git themes/mo8it</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -804,16 +1002,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-mo8it"
-        >Info</a
+        onclick="const b=document.getElementById('install-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-mo8it"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-mo8it"
-        >Install</a
+        onclick="const b=document.getElementById('info-mo8it').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-mo8it"
+        >Info</a
       >
       
     </div>
@@ -830,7 +1028,28 @@
     </picture>
     <p>Modern and minimalistic blog theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/not-matthias/apollo.git themes/apollo
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/not-matthias/apollo.git themes/apollo
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">apollo</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/not-matthias">not-matthias</a></li>
@@ -839,9 +1058,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://not-matthias.github.io/apollo">https://not-matthias.github.io/apollo</a></li>
 <li><strong>Min version</strong>: 0.14.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/not-matthias/apollo.git themes/apollo</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -867,16 +1083,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-apollo"
-        >Info</a
+        onclick="const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-apollo"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-apollo"
-        >Install</a
+        onclick="const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-apollo"
+        >Info</a
       >
       
     </div>
@@ -893,7 +1109,28 @@
     </picture>
     <p>A simple, minimal retro theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">terminimal</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/pawroman">Paweł Romanowski</a></li>
@@ -903,9 +1140,6 @@
 <li><strong>Min version</strong>: 0.11.0</li>
 <li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -931,16 +1165,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-terminimal"
-        >Info</a
+        onclick="const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-terminimal"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-terminimal"
-        >Install</a
+        onclick="const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-terminimal"
+        >Info</a
       >
       
     </div>
@@ -957,7 +1191,28 @@
     </picture>
     <p>A minimalist Zola theme that prioritizes clean CSS and avoids heavy JavaScript. Enjoy a seamless user experience with lightning-fast load times. Let your content take center stage in a clutter-free, elegant design that enhances readability. Responsive and efficient, anemone brings focus to your ideas.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anemone'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anemone'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/Speyll/anemone.git themes/anemone
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/Speyll/anemone.git themes/anemone
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">anemone</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anemone'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://speyllsite.pages.dev/">Speyll</a></li>
@@ -966,9 +1221,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://anemone.pages.dev">https://anemone.pages.dev</a></li>
 <li><strong>Min version</strong>: 0.4.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anemone'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/Speyll/anemone.git themes/anemone</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -994,16 +1246,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-anemone"
-        >Info</a
+        onclick="const b=document.getElementById('install-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-anemone"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-anemone"
-        >Install</a
+        onclick="const b=document.getElementById('info-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-anemone"
+        >Info</a
       >
       
     </div>
@@ -1020,7 +1272,28 @@
     </picture>
     <p>A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/jieiku/abridge.git themes/abridge
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/jieiku/abridge.git themes/abridge
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">abridge</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/jieiku/">Jake G (jieiku)</a></li>
@@ -1029,9 +1302,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://abridge.pages.dev/">https://abridge.pages.dev/</a></li>
 <li><strong>Min version</strong>: 0.19.1</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/jieiku/abridge.git themes/abridge</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1057,16 +1327,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-abridge"
-        >Info</a
+        onclick="const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-abridge"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-abridge"
-        >Install</a
+        onclick="const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-abridge"
+        >Info</a
       >
       
     </div>
@@ -1083,7 +1353,28 @@
     </picture>
     <p>Sandbox is a theme for Zola.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/semanticdata/zola-sandbox.git themes/sandbox
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/semanticdata/zola-sandbox.git themes/sandbox
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">sandbox</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://miguelpimentel.do/">Miguel Pimentel</a></li>
@@ -1092,9 +1383,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://zola-sandbox.vercel.app/">https://zola-sandbox.vercel.app/</a></li>
 <li><strong>Min version</strong>: 0.18.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/semanticdata/zola-sandbox.git themes/sandbox</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1120,16 +1408,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-sandbox"
-        >Info</a
+        onclick="const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-sandbox"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-sandbox"
-        >Install</a
+        onclick="const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-sandbox"
+        >Info</a
       >
       
     </div>
@@ -1146,7 +1434,28 @@
     </picture>
     <p>A Zola theme for a personal knowledge base</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/dongryul-kim/olivine.git themes/olivine
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">olivine</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://web.stanford.edu/~dkim04/">Dongryul Kim</a></li>
@@ -1154,9 +1463,6 @@
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/">https://github.com/</a></li>
 <li><strong>Min version</strong>: 0.17.2</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1182,16 +1488,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-olivine"
-        >Info</a
+        onclick="const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-olivine"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-olivine"
-        >Install</a
+        onclick="const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-olivine"
+        >Info</a
       >
       
     </div>
@@ -1208,7 +1514,28 @@
     </picture>
     <p>Theme for a project portfolio (based on Tailwind CSS).</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">project-portfolio</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.winterstein.biz">Adrian Winterstein</a></li>
@@ -1217,9 +1544,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://awinterstein.github.io/zola-theme-project-portfolio-example/">https://awinterstein.github.io/zola-theme-project-portfolio-example/</a></li>
 <li><strong>Min version</strong>: 0.9.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1245,16 +1569,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-project-portfolio"
-        >Info</a
+        onclick="const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-project-portfolio"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-project-portfolio"
-        >Install</a
+        onclick="const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-project-portfolio"
+        >Info</a
       >
       
     </div>
@@ -1271,7 +1595,28 @@
     </picture>
     <p>A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/aterenin/academic-paper.git themes/academic-paper
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">academic-paper</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://avt.im">Alexander Terenin</a></li>
@@ -1280,9 +1625,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://aterenin.github.io/academic-paper">https://aterenin.github.io/academic-paper</a></li>
 <li><strong>Min version</strong>: 0.18.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1308,16 +1650,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-academic-paper"
-        >Info</a
+        onclick="const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-academic-paper"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-academic-paper"
-        >Install</a
+        onclick="const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-academic-paper"
+        >Info</a
       >
       
     </div>
@@ -1334,7 +1676,28 @@
     </picture>
     <p>A Zola theme for a website to list the schedule of your scientific workshop or seminar series</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">academic-workshop</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://avt.im">Alexander Terein</a></li>
@@ -1343,9 +1706,6 @@
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://aterenin.github.io/academic-workshop">https://aterenin.github.io/academic-workshop</a></li>
 <li><strong>Min version</strong>: 0.18.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1371,16 +1731,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-academic-workshop"
-        >Info</a
+        onclick="const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-academic-workshop"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-academic-workshop"
-        >Install</a
+        onclick="const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-academic-workshop"
+        >Info</a
       >
       
     </div>
@@ -1388,27 +1748,46 @@
 </div>
 
 <div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">zallery</h3>
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Kita</h3>
   <div class="not-prose">
     <picture>
-      <source srcset='./screenshots/light-zallery.png' media='(prefers-color-scheme: light)'/>
-      <source srcset='./screenshots/dark-zallery.png' media='(prefers-color-scheme: dark)'/>
-      <img src='./screenshots/light-zallery.png' alt='Screenshot of the zallery theme'/>
+      <source srcset='./screenshots/light-kita.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-kita.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-kita.png' alt='Screenshot of the Kita theme'/>
     </picture>
-    <p>Gallery theme for zola</p>
+    <p>Kita is a clean, elegant and simple blog theme for Zola.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zallery'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/st1020/kita.git themes/kita
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/st1020/kita.git themes/kita
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">kita</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-kita'></summary>
 <h3 id="info">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://creekmore.dev">Morgan Creekmore</a></li>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://st1020.com">st1020</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/gamingrobot/zallery">https://github.com/gamingrobot/zallery</a></li>
-<li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://gamingrobot.github.io/zallery-demo">https://gamingrobot.github.io/zallery-demo</a></li>
-<li><strong>Min version</strong>: 0.19.0</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/st1020/kita">https://github.com/st1020/kita</a></li>
+<li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://st1020.github.io/kita/">https://st1020.github.io/kita/</a></li>
+<li><strong>Min version</strong>: 0.17.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/nanxiaobei/hugo-paper">https://github.com/nanxiaobei/hugo-paper</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zallery'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/gamingrobot/zallery.git themes/zallery</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1418,7 +1797,7 @@
       
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/zallery/"
+        href="https://salif.github.io/zola-themes-collection/demo/kita/"
         rel="noopener"
         target="_blank"
         >Live Demo</a
@@ -1426,7 +1805,7 @@
       
       <a
         class="underline"
-        href="https://github.com/gamingrobot/zallery"
+        href="https://github.com/st1020/kita"
         rel="noopener"
         target="_blank"
         >Repository</a
@@ -1434,16 +1813,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-zallery').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-zallery"
-        >Info</a
+        onclick="const b=document.getElementById('install-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-kita"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-zallery').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-zallery"
-        >Install</a
+        onclick="const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-kita"
+        >Info</a
       >
       
     </div>
@@ -1460,7 +1839,28 @@
     </picture>
     <p>A blog theme</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/CSUwangj/DogFood.git themes/DogFood
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">DogFood</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://CSUwangj.github.io">CSUwangj</a></li>
@@ -1468,9 +1868,6 @@
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/CSUwangj/DogFood">https://github.com/CSUwangj/DogFood</a></li>
 <li><strong>Min version</strong>: 0.4.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1496,16 +1893,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-DogFood"
-        >Info</a
+        onclick="const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-DogFood"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-DogFood"
-        >Install</a
+        onclick="const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-DogFood"
+        >Info</a
       >
       
     </div>
@@ -1522,7 +1919,28 @@
     </picture>
     <p>A simple zola theme for personal use.</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-devnzt'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/devendrn/devnzt.git themes/devnzt
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/devendrn/devnzt.git themes/devnzt
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">devnzt</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-devnzt'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://devendrn.github.io/">devendrn</a></li>
@@ -1530,9 +1948,6 @@
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/devendrn/devnzt/">https://github.com/devendrn/devnzt/</a></li>
 <li><strong>Min version</strong>: 0.18.0</li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://github.com/devendrn/devnzt.git themes/devnzt</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1558,16 +1973,657 @@
       
       <a
         class="underline"
+        onclick="const b=document.getElementById('install-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-devnzt"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
         onclick="const b=document.getElementById('info-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-devnzt"
         >Info</a
       >
       
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">EasyDocs</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-doc.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-doc.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-doc.png' alt='Screenshot of the EasyDocs theme'/>
+    </picture>
+    <p>An easy way to create docs for your project</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-doc'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">doc</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-doc'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://codeandmedia.com">Roman Soldatenkov</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/codeandmedia/zola_easydocs_theme">https://github.com/codeandmedia/zola_easydocs_theme</a></li>
+<li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://easydocs.codeandmedia.com">https://easydocs.codeandmedia.com</a></li>
+<li><strong>Min version</strong>: 0.13.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-devnzt"
+        href="https://salif.github.io/zola-themes-collection/demo/doc/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/ProPixelizer/doc_zola_theme"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-doc"
         >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-doc"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">silk</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-silk.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-silk.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-silk.png' alt='Screenshot of the silk theme'/>
+    </picture>
+    <p>A modern, simple, clean blog theme for Zola.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-silk'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/DenysVuika/zola-silk.git themes/silk
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/DenysVuika/zola-silk.git themes/silk
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">silk</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-silk'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://denys.dev">Denys Vuika</a></li>
+<li><strong>License</strong>: Apache-2.0</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/DenysVuika/zola-silk">https://github.com/DenysVuika/zola-silk</a></li>
+<li><strong>Min version</strong>: 0.19.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/lukehsiao/zola-pickles">https://github.com/lukehsiao/zola-pickles</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/silk/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/DenysVuika/zola-silk"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-silk"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-silk"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">pickles</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-zola-pickles.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-zola-pickles.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-zola-pickles.png' alt='Screenshot of the pickles theme'/>
+    </picture>
+    <p>A modern, simple, clean blog theme for Zola.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-pickles'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/lukehsiao/zola-pickles.git themes/zola-pickles
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/lukehsiao/zola-pickles.git themes/zola-pickles
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zola-pickles</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-pickles'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://luke.hsiao.dev">Luke Hsiao</a></li>
+<li><strong>License</strong>: BlueOak-1.0.0</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/lukehsiao/zola-pickles">https://github.com/lukehsiao/zola-pickles</a></li>
+<li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://zola-pickles.pages.dev/">https://zola-pickles.pages.dev/</a></li>
+<li><strong>Min version</strong>: 0.19.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/mismith0227/hugo_theme_pickles">https://github.com/mismith0227/hugo_theme_pickles</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/zola-pickles/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/lukehsiao/zola-pickles"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-zola-pickles').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-zola-pickles"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-zola-pickles').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-zola-pickles"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Oceanic Zen</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-oceanic-zen.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-oceanic-zen.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-oceanic-zen.png' alt='Screenshot of the Oceanic Zen theme'/>
+    </picture>
+    <p>Minimalistic blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">oceanic-zen</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://barlog.li">Barlog M.</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/barlog-m/oceanic-zen">https://github.com/barlog-m/oceanic-zen</a></li>
+<li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://oceanic-zen.netlify.app">https://oceanic-zen.netlify.app</a></li>
+<li><strong>Min version</strong>: 0.12.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/barlog-m/oceanic-zen"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-oceanic-zen"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-oceanic-zen"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">book-shelf</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-book-shelf.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-book-shelf.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-book-shelf.png' alt='Screenshot of the book-shelf theme'/>
+    </picture>
+    <p></p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-book-shelf'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/anccnuer/book-shelf.git themes/book-shelf
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/anccnuer/book-shelf.git themes/book-shelf
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">book-shelf</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-book-shelf'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>License</strong>: undefined</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/anccnuer/book-shelf">https://github.com/anccnuer/book-shelf</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/book-shelf/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/anccnuer/book-shelf"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-book-shelf').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-book-shelf"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-book-shelf').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-book-shelf"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">zola-aurora</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-zola-aurora.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-zola-aurora.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-zola-aurora.png' alt='Screenshot of the zola-aurora theme'/>
+    </picture>
+    <p>Minimalistic blog theme with no JS</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-aurora'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/vimpostor/zola-aurora.git themes/zola-aurora
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/vimpostor/zola-aurora.git themes/zola-aurora
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">zola-aurora</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-aurora'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/vimpostor/zola-aurora">https://github.com/vimpostor/zola-aurora</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/zola-aurora/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/vimpostor/zola-aurora"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-zola-aurora').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-zola-aurora"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-zola-aurora').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-zola-aurora"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">tolia</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-tolia.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-tolia.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-tolia.png' alt='Screenshot of the tolia theme'/>
+    </picture>
+    <p>A clean and assez Zola theme.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tolia'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/un1970ix/tolia.git themes/tolia
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/un1970ix/tolia.git themes/tolia
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">tolia</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tolia'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/un1970ix/tolia">https://github.com/un1970ix/tolia</a></li>
+<li><strong>Min version</strong>: 0.19.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/tolia/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/un1970ix/tolia"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-tolia').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-tolia"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-tolia').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-tolia"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">zola-folio</h3>
+  <div class="not-prose">
+    <picture>
+      <source srcset='./screenshots/light-folio.png' media='(prefers-color-scheme: light)'/>
+      <source srcset='./screenshots/dark-folio.png' media='(prefers-color-scheme: dark)'/>
+      <img src='./screenshots/light-folio.png' alt='Screenshot of the zola-folio theme'/>
+    </picture>
+    <p>A port of the Jekyll *folio theme to zola</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-folio'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/evjrob/zola-folio.git themes/folio
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/evjrob/zola-folio.git themes/folio
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">folio</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-folio'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="http://everettsprojects.com">Everett Robinson</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/evjrob/zola-folio">https://github.com/evjrob/zola-folio</a></li>
+<li><strong>Min version</strong>: 0.4.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/bogoli/-folio">https://github.com/bogoli/-folio</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/folio/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/evjrob/zola-folio"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-folio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-folio"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-folio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-folio"
+        >Info</a
       >
       
     </div>
@@ -1584,7 +2640,28 @@
     </picture>
     <p>My personal theme open to the public to use</p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-fl1tzi-com-theme'></summary>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-fl1tzi-com-theme'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A. Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/Fl1tzi/fl1tzi-com-theme.git themes/fl1tzi-com-theme
+</span></code></pre>
+<ul>
+<li>Option B. Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/Fl1tzi/fl1tzi-com-theme.git themes/fl1tzi-com-theme
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">fl1tzi-com-theme</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-fl1tzi-com-theme'></summary>
 <h3 id="info">Info</h3>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.fl1tzi.com/">Fl1tzi</a></li>
@@ -1592,9 +2669,6 @@
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/fl1tzi/fl1tzi-com-theme">https://codeberg.org/fl1tzi/fl1tzi-com-theme</a></li>
 <li><strong>Off. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://www.fl1tzi.com/">https://www.fl1tzi.com/</a></li>
 </ul>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-fl1tzi-com-theme'></summary>
-<h3 id="installation-instructions">Installation instructions</h3>
-<p><code>git submodule add https://codeberg.org/Fl1tzi/fl1tzi-com-theme.git themes/fl1tzi-com-theme</code></p>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
@@ -1620,16 +2694,16 @@
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-fl1tzi-com-theme"
-        >Info</a
+        onclick="const b=document.getElementById('install-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-fl1tzi-com-theme"
+        >Install</a
       >
       
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-fl1tzi-com-theme"
-        >Install</a
+        onclick="const b=document.getElementById('info-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-fl1tzi-com-theme"
+        >Info</a
       >
       
     </div>

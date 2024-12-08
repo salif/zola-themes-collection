@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Taxonomies </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Taxonomies </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola will look up the following files in the <code>templates</code> directory:</p>
+<ul>
+<li><code>$TAXONOMY_NAME/single.html</code></li>
+<li><code>$TAXONOMY_NAME/list.html</code></li>
+</ul>
+<p>First, <code>TaxonomyTerm</code> has the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span>name: </span><span style="color:#d08770;">String</span><span>;
+</span><span>slug: </span><span style="color:#d08770;">String</span><span>;
+</span><span>permalink: </span><span style="color:#d08770;">String</span><span>;
+</span><span>pages: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">Page</span><span>&gt;;
+</span></code></pre>
+<p>and <code>TaxonomyConfig</code> has the following fields:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span>name: </span><span style="color:#d08770;">String</span><span>,
+</span><span>paginate_by: </span><span style="color:#d08770;">Number</span><span>?;
+</span><span style="color:#bf616a;">paginate_path</span><span>: </span><span style="color:#d08770;">String</span><span>?;
+</span><span style="color:#bf616a;">feed</span><span>: </span><span style="color:#bf616a;">Bool</span><span>;
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>;
+</span></code></pre>
+<h3 id="taxonomy-list-list-html">Taxonomy list (<code>list.html</code>)</h3>
+<p>This template is never paginated and therefore gets the following variables in all cases.</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The site config
+</span><span>config: </span><span style="color:#bf616a;">Config</span><span>;
+</span><span style="color:#a7adba;">// The data of the taxonomy, from the config
+</span><span>taxonomy: </span><span style="color:#bf616a;">TaxonomyConfig</span><span>;
+</span><span style="color:#a7adba;">// The current full permalink for that page
+</span><span>current_url: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The current path for that page
+</span><span>current_path: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// All terms for that taxonomy
+</span><span>terms: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">TaxonomyTerm</span><span>&gt;;
+</span><span style="color:#a7adba;">// The lang of the current page
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>;
+</span></code></pre>
+<h3 id="single-term-single-html">Single term (<code>single.html</code>)</h3>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#a7adba;">// The site config
+</span><span>config: </span><span style="color:#bf616a;">Config</span><span>;
+</span><span style="color:#a7adba;">// The data of the taxonomy, from the config
+</span><span>taxonomy: </span><span style="color:#bf616a;">TaxonomyConfig</span><span>;
+</span><span style="color:#a7adba;">// The current full permalink for that page
+</span><span>current_url: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The current path for that page
+</span><span>current_path: </span><span style="color:#d08770;">String</span><span>;
+</span><span style="color:#a7adba;">// The current term being rendered
+</span><span>term: </span><span style="color:#bf616a;">TaxonomyTerm</span><span>;
+</span><span style="color:#a7adba;">// The lang of the current page
+</span><span>lang: </span><span style="color:#d08770;">String</span><span>;
+</span></code></pre>
+<p>A paginated taxonomy term will also get a <code>paginator</code> variable; see the
+<a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">pagination page</a> for more details.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

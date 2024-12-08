@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Overview </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#standard-templates">Standard templates</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#built-in-templates">Built-in templates</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#custom-templates">Custom templates</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#built-in-filters">Built-in filters</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#markdown">markdown</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#base64-encode">base64_encode</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#base64-decode">base64_decode</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#built-in-global-functions">Built-in global functions</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-page">get_page</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-section">get_section</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-url">get_url</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-file-hash">get_file_hash</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-image-metadata">get_image_metadata</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-taxonomy-url">get_taxonomy_url</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#get-taxonomy">get_taxonomy</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#load-data">load_data</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#trans">trans</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/#resize-image">resize_image</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Overview </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola uses the <a href="https://tera.netlify.com">Tera</a> template engine, which is very similar
+to Jinja2, Liquid and Twig.</p>
+<p>As this documentation will only talk about how templates work in Zola, please read
+the <a href="https://tera.netlify.com/docs#templates">Tera template documentation</a> if you want
+to learn more about it first.</p>
+<p>All templates live in the <code>templates</code> directory.  If you are not sure what variables are available in a template,
+you can place <code>{{ __tera_context }}</code> in the template to print the whole context.</p>
+<p>A few variables are available on all templates except feeds and the sitemap:</p>
+<ul>
+<li><code>config</code>: the <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">configuration</a> without any modifications</li>
+<li><code>current_path</code>: the path (full URL without <code>base_url</code>) of the current page, always starting with a <code>/</code></li>
+<li><code>current_url</code>: the full URL for the current page</li>
+<li><code>lang</code>: the language for the current page</li>
+</ul>
+<p>Config variables can be accessed like <code>config.variable</code>, in HTML for example with <code>{{ config.base_url }}</code>.
+The 404 template does not get <code>current_path</code> and <code>current_url</code> (this information cannot be determined).</p>
+<h2 id="standard-templates">Standard templates</h2>
+<p>By default, Zola will look for three templates: <code>index.html</code>, which is applied
+to the site homepage; <code>section.html</code>, which is applied to all sections (any HTML
+page generated by creating a directory within your <code>content</code> directory); and
+<code>page.html</code>, which is applied to all pages (any HTML page generated by creating an
+<code>.md</code> file within your <code>content</code> directory).</p>
+<p>The homepage is always a section (regardless of whether it contains other pages).
+Thus, the <code>index.html</code> and <code>section.html</code> templates both have access to the
+section variables.  The <code>page.html</code> template has access to the page variables.
+The page and section variables are described in more detail in the next section.</p>
+<h2 id="built-in-templates">Built-in templates</h2>
+<p>Zola comes with four built-in templates: <code>atom.xml</code> and <code>rss.xml</code> (described in
+<a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>), <code>sitemap.xml</code> (described in <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>),
+and <code>robots.txt</code> (described in <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>).
+Additionally, themes can add their own templates, which will be applied if not
+overridden.  You can override built-in or theme templates by creating a template with
+the same name in the correct path. For example, you can override the Atom template by
+creating a <code>templates/atom.xml</code> file.</p>
+<h2 id="custom-templates">Custom templates</h2>
+<p>In addition to the standard <code>index.html</code>, <code>section.html</code> and <code>page.html</code> templates,
+you may also create custom templates by creating an <code>.html</code> file in the <code>templates</code>
+directory.  These custom templates will not be used by default.  Instead, a custom template will <em>only</em> be used if you apply it by setting the <code>template</code> front-matter variable to the path for that template (or if you <code>include</code> it in another template that is applied).  For example, if you created a custom template for your site's About page called <code>about.html</code>, you could apply it to your <code>about.md</code> page by including the following front matter in your <code>about.md</code> page:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>+++
+</span><span>title = &quot;About Us&quot;
+</span><span>template = &quot;about.html&quot;
+</span><span>+++
+</span></code></pre>
+<p>Custom templates are not required to live at the root of your <code>templates</code> directory.
+For example, <code>product_pages/with_pictures.html</code> is a valid template.</p>
+<h2 id="built-in-filters">Built-in filters</h2>
+<p>Zola adds a few filters in addition to <a href="https://tera.netlify.com/docs/#filters">those</a> already present
+in Tera.</p>
+<h3 id="markdown">markdown</h3>
+<p>Converts the given variable to HTML using Markdown. This doesn't apply any of the
+features that Zola adds to Markdown; for example, internal links and shortcodes won't work.</p>
+<p>By default, the filter will wrap all text in a paragraph. To disable this behaviour, you can
+pass <code>true</code> to the inline argument:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{{ </span><span style="color:#bf616a;">some_text </span><span>| </span><span style="color:#bf616a;">markdown</span><span>(</span><span style="color:#bf616a;">inline</span><span>=</span><span style="color:#d08770;">true</span><span>) }}
+</span></code></pre>
+<p>You do not need to use this filter with <code>page.content</code> or <code>section.content</code>, the content is already rendered.</p>
+<h3 id="base64-encode">base64_encode</h3>
+<p>Encode the variable to base64.</p>
+<h3 id="base64-decode">base64_decode</h3>
+<p>Decode the variable from base64.</p>
+<h2 id="built-in-global-functions">Built-in global functions</h2>
+<p>Zola adds a few global functions to <a href="https://tera.netlify.com/docs#built-in-functions">those in Tera</a>
+to make it easier to develop complex sites.</p>
+<h3 id="get-page"><code>get_page</code></h3>
+<p>Takes a path to an <code>.md</code> file and returns the associated page.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">page </span><span>= </span><span style="color:#bf616a;">get_page</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">blog/page2.md</span><span>&quot;) %}
+</span></code></pre>
+<h3 id="get-section"><code>get_section</code></h3>
+<p>Takes a path to an <code>_index.md</code> file and returns the associated section.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">section </span><span>= </span><span style="color:#bf616a;">get_section</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">blog/_index.md</span><span>&quot;) %}
+</span></code></pre>
+<p>If you only need the metadata of the section, you can pass <code>metadata_only=true</code> to the function:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">section </span><span>= </span><span style="color:#bf616a;">get_section</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">blog/_index.md</span><span>&quot;, </span><span style="color:#bf616a;">metadata_only</span><span>=</span><span style="color:#d08770;">true</span><span>) %}
+</span></code></pre>
+<h3 id="get-url"><code>get_url</code></h3>
+<p>Gets the permalink for the given path.
+If the path starts with <code>@/</code>, it will be treated as an internal
+link like the ones used in Markdown, starting from the root <code>content</code> directory.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">url </span><span>= </span><span style="color:#bf616a;">get_url</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">@/blog/_index.md</span><span>&quot;) %}
+</span></code></pre>
+<p>It accepts an optional parameter <code>lang</code> in order to compute a <em>language-aware URL</em> in multilingual websites. Assuming <code>config.base_url</code> is <code>"http://example.com"</code>, the following snippet will:</p>
+<ul>
+<li>return <code>"http://example.com/blog/"</code> if <code>config.default_language</code> is <code>"en"</code></li>
+<li>return <code>"http://example.com/en/blog/"</code> if <code>config.default_language</code> is <strong>not</strong> <code>"en"</code> and <code>"en"</code> appears in <code>config.languages</code></li>
+<li>fail otherwise, with the error message <code>"'en' is not an authorized language (check config.languages)."</code></li>
+</ul>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">url </span><span>= </span><span style="color:#bf616a;">get_url</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">@/blog/_index.md</span><span>&quot;, </span><span style="color:#bf616a;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">en</span><span>&quot;) %}
+</span></code></pre>
+<p>This can also be used to get the permalinks for static assets, for example if
+we want to link to the file that is located at <code>static/css/app.css</code>:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{{ </span><span style="color:#bf616a;">get_url</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">css/app.css</span><span>&quot;) }}
+</span></code></pre>
+<p>By default, assets will not have a trailing slash. You can force one by passing <code>trailing_slash=true</code> to the <code>get_url</code> function.
+An example is:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{{ </span><span style="color:#bf616a;">get_url</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">css/app.css</span><span>&quot;, </span><span style="color:#bf616a;">trailing_slash</span><span>=</span><span style="color:#d08770;">true</span><span>) }}
+</span></code></pre>
+<p>In the case of non-internal links, you can also add a cachebust of the format <code>?h=&lt;sha256&gt;</code> at the end of a URL
+by passing <code>cachebust=true</code> to the <code>get_url</code> function.</p>
+<h3 id="get-file-hash"><code>get_file_hash</code></h3>
+<p>Gets the hash digest for a static file. Supported hashes are SHA-256, SHA-384 (default) and SHA-512. Requires <code>path</code>. The <code>sha_type</code> key is optional and must be one of 256, 384 or 512.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{{ </span><span style="color:#bf616a;">get_file_hash</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">js/app.js</span><span>&quot;, </span><span style="color:#bf616a;">sha_type</span><span>=256) }}
+</span></code></pre>
+<p>This can be used to implement subresource integrity. Do note that subresource integrity is typically used when using external scripts, which <code>get_file_hash</code> does not support.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>&lt;script src=&quot;{{ </span><span style="color:#bf616a;">get_url</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">js/app.js</span><span>&quot;) }}&quot;
+</span><span>        integrity=&quot;sha384-{{ </span><span style="color:#bf616a;">get_file_hash</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">js/app.js</span><span>&quot;, </span><span style="color:#bf616a;">sha_type</span><span>=384) }}&quot;&gt;&lt;/script&gt;
+</span></code></pre>
+<p>Whenever hashing files, whether using <code>get_file_hash</code> or <code>get_url(..., cachebust=true)</code>, the file is searched for in three places: <code>static/</code>, <code>content/</code> and the output path (so e.g. compiled SASS can be hashed, too.)</p>
+<h3 id="get-image-metadata"><code>get_image_metadata</code></h3>
+<p>Gets metadata for an image. This supports common formats like JPEG, PNG, as well as SVG.
+Currently, the only supported keys are <code>width</code> and <code>height</code>.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>  {% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">meta </span><span>= </span><span style="color:#bf616a;">get_image_metadata</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">...</span><span>&quot;) %}
+</span><span>  Our image is {{ </span><span style="color:#bf616a;">meta</span><span>.</span><span style="color:#bf616a;">width </span><span>}}x{{ </span><span style="color:#bf616a;">meta</span><span>.</span><span style="color:#bf616a;">height </span><span>}}
+</span></code></pre>
+<h3 id="get-taxonomy-url"><code>get_taxonomy_url</code></h3>
+<p>Gets the permalink for the taxonomy item found.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">url </span><span>= </span><span style="color:#bf616a;">get_taxonomy_url</span><span>(</span><span style="color:#bf616a;">kind</span><span>=&quot;</span><span style="color:#a3be8c;">categories</span><span>&quot;, </span><span style="color:#bf616a;">name</span><span>=</span><span style="color:#bf616a;">page</span><span>.</span><span style="color:#bf616a;">taxonomies</span><span>.</span><span style="color:#bf616a;">category</span><span>, </span><span style="color:#bf616a;">lang</span><span>=</span><span style="color:#bf616a;">page</span><span>.</span><span style="color:#bf616a;">lang</span><span>) %}
+</span></code></pre>
+<p><code>name</code> will almost always come from a variable but in case you want to do it manually,
+the value should be the same as the one in the front matter, not the slugified version.</p>
+<p><code>lang</code> (optional) default to <code>config.default_language</code> in config.toml</p>
+<h3 id="get-taxonomy"><code>get_taxonomy</code></h3>
+<p>Gets the whole taxonomy of a specific kind.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">categories </span><span>= </span><span style="color:#bf616a;">get_taxonomy</span><span>(</span><span style="color:#bf616a;">kind</span><span>=&quot;</span><span style="color:#a3be8c;">categories</span><span>&quot;) %}
+</span></code></pre>
+<p>The type of the output is:</p>
+<pre data-lang="ts" style="background-color:#eff1f5;color:#4f5b66;" class="language-ts "><code class="language-ts" data-lang="ts"><span>kind: </span><span style="color:#bf616a;">TaxonomyConfig</span><span>;
+</span><span>items: </span><span style="color:#d08770;">Array</span><span>&lt;</span><span style="color:#bf616a;">TaxonomyTerm</span><span>&gt;;
+</span></code></pre>
+<p>See the <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies documentation</a> for a full documentation of those types.</p>
+<h3 id="load-data"><code>load_data</code></h3>
+<p>Loads data from a file or URL. Supported file types include <em>toml</em>, <em>json</em>, <em>csv</em> and <em>bibtex</em>.
+Any other file type will be loaded as plain text.</p>
+<p>The <code>path</code> argument specifies the path to the data file relative to your base directory, where your <code>config.toml</code> is.
+As a security precaution, if this file is outside the main site directory, your site will fail to build.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">data </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">content/blog/story/data.toml</span><span>&quot;) %}
+</span></code></pre>
+<p>The optional <code>format</code> argument allows you to specify and override which data type is contained
+within the file specified in the <code>path</code> argument. Valid entries are <code>toml</code>, <code>json</code>, <code>csv</code>, <code>bibtex</code>
+or <code>plain</code>. If the <code>format</code> argument isn't specified, then the path extension is used.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">data </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">content/blog/story/data.txt</span><span>&quot;, </span><span style="color:#bf616a;">format</span><span>=&quot;</span><span style="color:#a3be8c;">json</span><span>&quot;) %}
+</span></code></pre>
+<p>Use the <code>plain</code> format for when your file has a toml/json/csv extension but you want to load it as plain text.</p>
+<p>For <em>toml</em> and <em>json</em>, the data is loaded into a structure matching the original data file;
+however, for <em>csv</em> there is no native notion of such a structure. Instead, the data is separated
+into a data structure containing <em>headers</em> and <em>records</em>. See the example below to see
+how this works.</p>
+<p>In the template:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">data </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">path</span><span>=&quot;</span><span style="color:#a3be8c;">content/blog/story/data.csv</span><span>&quot;) %}
+</span></code></pre>
+<p>In the <em>content/blog/story/data.csv</em> file:</p>
+<pre data-lang="csv" style="background-color:#eff1f5;color:#4f5b66;" class="language-csv "><code class="language-csv" data-lang="csv"><span style="color:#b48ead;">Number</span><span>, </span><span style="color:#b48ead;">Title
+</span><span style="color:#d08770;">1</span><span>,</span><span style="color:#b48ead;">Gutenberg
+</span><span style="color:#d08770;">2</span><span>,</span><span style="color:#b48ead;">Printing
+</span></code></pre>
+<p>The equivalent json value of the parsed data would be stored in the <code>data</code> variable in the
+template:</p>
+<pre data-lang="json" style="background-color:#eff1f5;color:#4f5b66;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    &quot;</span><span style="color:#a3be8c;">headers</span><span>&quot;: [&quot;</span><span style="color:#a3be8c;">Number</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Title</span><span>&quot;],
+</span><span>    &quot;</span><span style="color:#a3be8c;">records</span><span>&quot;: [
+</span><span>        [&quot;</span><span style="color:#a3be8c;">1</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Gutenberg</span><span>&quot;],
+</span><span>        [&quot;</span><span style="color:#a3be8c;">2</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Printing</span><span>&quot;]
+</span><span>    ],
+</span><span>}
+</span></code></pre>
+<p>The <code>bibtex</code> format loads data into a structure matching the format used by the
+<a href="https://crates.io/crates/nom-bibtex">nom-bibtex crate</a>. The following is an example of data
+in bibtex format:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>@preamble{&quot;A bibtex preamble&quot; # &quot; this is.&quot;}
+</span><span>
+</span><span>@Comment{
+</span><span>    Here is a comment.
+</span><span>}
+</span><span>
+</span><span>Another comment!
+</span><span>
+</span><span>@string(name = &quot;Vincent Prouillet&quot;)
+</span><span>@string(github = &quot;https://github.com/getzola/zola&quot;)
+</span><span>
+</span><span>@misc {my_citation_key,
+</span><span>    author= name,
+</span><span>    title = &quot;Zola&quot;,
+</span><span>    note = &quot;github: &quot; # github
+</span><span>}                                                    }
+</span></code></pre>
+<p>The following is the json-equivalent format of the produced bibtex data structure:</p>
+<pre data-lang="json" style="background-color:#eff1f5;color:#4f5b66;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    &quot;</span><span style="color:#a3be8c;">preambles</span><span>&quot;: [&quot;</span><span style="color:#a3be8c;">A bibtex preamble this is.</span><span>&quot;],
+</span><span>    &quot;</span><span style="color:#a3be8c;">comments</span><span>&quot;: [&quot;</span><span style="color:#a3be8c;">Here is a comment.</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Another comment!</span><span>&quot;],
+</span><span>    &quot;</span><span style="color:#a3be8c;">variables</span><span>&quot;: {
+</span><span>        &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">Vincent Prouillet</span><span>&quot;,
+</span><span>        &quot;</span><span style="color:#a3be8c;">github</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">https://github.com/getzola/zola</span><span>&quot;
+</span><span>    },
+</span><span>    &quot;</span><span style="color:#a3be8c;">bibliographies</span><span>&quot;: [
+</span><span>        {
+</span><span>            &quot;</span><span style="color:#a3be8c;">entry_type</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">misc</span><span>&quot;,
+</span><span>            &quot;</span><span style="color:#a3be8c;">citation_key</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">my_citation_key</span><span>&quot;,
+</span><span>            &quot;</span><span style="color:#a3be8c;">tags</span><span>&quot;: {
+</span><span>                &quot;</span><span style="color:#a3be8c;">author</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">Vincent Prouillet</span><span>&quot;,
+</span><span>                &quot;</span><span style="color:#a3be8c;">title</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">Zola</span><span>&quot;,
+</span><span>                &quot;</span><span style="color:#a3be8c;">note</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">github: https://github.com/getzola/zola</span><span>&quot;
+</span><span>            }
+</span><span>        }
+</span><span>    ]
+</span><span>}
+</span></code></pre>
+<p>Finally, the bibtex data can be accessed from the template as follows:</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">tags </span><span>= </span><span style="color:#bf616a;">data</span><span>.</span><span style="color:#bf616a;">bibliographies</span><span>[0].</span><span style="color:#bf616a;">tags </span><span>%}
+</span><span>This was generated using {{ </span><span style="color:#bf616a;">tags</span><span>.</span><span style="color:#bf616a;">title </span><span>}}, authored by {{ </span><span style="color:#bf616a;">tags</span><span>.</span><span style="color:#bf616a;">author </span><span>}}.
+</span></code></pre>
+<h4 id="remote-content">Remote content</h4>
+<p>Instead of using a file, you can load data from a remote URL. This can be done by specifying a <code>url</code> parameter
+to <code>load_data</code> rather than <code>path</code>.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">response </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">url</span><span>=&quot;</span><span style="color:#a3be8c;">https://api.github.com/repos/getzola/zola</span><span>&quot;) %}
+</span><span>{{ </span><span style="color:#bf616a;">response </span><span>}}
+</span></code></pre>
+<p>By default, the response body will be returned with no parsing. This can be changed by using the <code>format</code> argument
+as below.</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{% </span><span style="color:#b48ead;">set </span><span style="color:#bf616a;">response </span><span>= </span><span style="color:#bf616a;">load_data</span><span>(</span><span style="color:#bf616a;">url</span><span>=&quot;</span><span style="color:#a3be8c;">https://api.github.com/repos/getzola/zola</span><span>&quot;, </span><span style="color:#bf616a;">format</span><span>=&quot;</span><span style="color:#a3be8c;">json</span><span>&quot;) %}
+</span><span>{{ </span><span style="color:#bf616a;">response </span><span>}}
+</span></code></pre>
+<h4 id="data-caching">Data caching</h4>
+<p>Data file loading and remote requests are cached in memory during the build, so multiple requests aren't made
+to the same endpoint.
+URLs are cached based on the URL, and data files are cached based on the file modified time.
+The format is also taken into account when caching, so a request will be sent twice if it's loaded with two
+different formats.</p>
+<h3 id="trans"><code>trans</code></h3>
+<p>Gets the translation of the given <code>key</code>, for the <code>default_language</code> or the <code>lang</code>uage given</p>
+<pre data-lang="jinja2" style="background-color:#eff1f5;color:#4f5b66;" class="language-jinja2 "><code class="language-jinja2" data-lang="jinja2"><span>{{ </span><span style="color:#bf616a;">trans</span><span>(</span><span style="color:#bf616a;">key</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;) }}
+</span><span>{{ </span><span style="color:#bf616a;">trans</span><span>(</span><span style="color:#bf616a;">key</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;, </span><span style="color:#bf616a;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">fr</span><span>&quot;) }}
+</span></code></pre>
+<h3 id="resize-image"><code>resize_image</code></h3>
+<p>Resizes an image file.
+Please refer to  Content / Image Processing for complete documentation.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

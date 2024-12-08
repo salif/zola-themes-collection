@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | CLI usage </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/#init">init</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/#build">build</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/#serve">serve</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/#check">check</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/#colored-output">Colored output</a>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            />
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> CLI usage </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola only has 4 commands: <code>init</code>, <code>build</code>, <code>serve</code> and <code>check</code>.</p>
+<p>You can view the help for the whole program by running <code>zola --help</code> and
+that for a specific command by running <code>zola &lt;cmd&gt; --help</code>.</p>
+<h2 id="init">init</h2>
+<p>Creates the directory structure used by Zola at the given directory after asking a few basic configuration questions.
+Any choices made during these prompts can be easily changed by modifying <code>config.toml</code>.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola init my_site
+</span><span style="color:#bf616a;">$</span><span> zola init
+</span></code></pre>
+<p>If the <code>my_site</code> directory already exists, Zola will only populate it if it contains only hidden files (dotfiles are ignored). If no <code>my_site</code> argument is passed, Zola will try to populate the current directory.</p>
+<p>In case you want to attempt to populate a non-empty directory and are brave, you can use <code>zola init --force</code>. Note that this will <em>not</em> overwrite existing folders or files; in those cases you will get a <code>File exists (os error 17)</code> error or similar.</p>
+<p>You can initialize a git repository and a Zola site directly from within a new folder:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> git init
+</span><span style="color:#bf616a;">$</span><span> zola init
+</span></code></pre>
+<h2 id="build">build</h2>
+<p>This will build the whole site in the <code>public</code> directory (if this directory already exists, it is overwritten).</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola build
+</span></code></pre>
+<p>You can override the config <code>base_url</code> by passing a new URL to the <code>base-url</code> flag.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola build</span><span style="color:#bf616a;"> --base-url </span><span>$</span><span style="color:#bf616a;">DEPLOY_URL
+</span></code></pre>
+<p>This is useful for example when you want to deploy previews of a site to a dynamic URL, such as Netlify
+deploy previews.</p>
+<p>You can override the default output directory <code>public</code> by passing another value to the <code>output-dir</code> flag.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola build</span><span style="color:#bf616a;"> --output-dir </span><span>$</span><span style="color:#bf616a;">DOCUMENT_ROOT
+</span></code></pre>
+<p>You can point to a config file other than <code>config.toml</code> like so (note that the position of the <code>config</code> option is important):</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola</span><span style="color:#bf616a;"> --config</span><span> config.staging.toml build
+</span></code></pre>
+<p>You can also process a project from a different directory with the <code>root</code> flag. If building a project 'out-of-tree' with the <code>root</code> flag, you may want to combine it with the <code>output-dir</code> flag. (Note that like <code>config</code>, the position is important):</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola</span><span style="color:#bf616a;"> --root</span><span> /path/to/project build
+</span></code></pre>
+<p>By default, drafts are not loaded. If you wish to include them, pass the <code>--drafts</code> flag.</p>
+<h2 id="serve">serve</h2>
+<p>This will build and serve the site using a local server. You can also specify
+the interface/port combination to use if you want something different than the default (<code>127.0.0.1:1111</code>).</p>
+<p>You can also specify different addresses for the interface and base_url using <code>--interface</code> and <code>-u</code>/<code>--base-url</code>, respectively, if for example you are running Zola in a Docker container.</p>
+<p>Use the <code>--open</code> flag to automatically open the locally hosted instance in your
+web browser.</p>
+<p>In the event you don't want Zola to run a local web server, you can use the <code>--watch-only</code> flag.</p>
+<p>Before starting, Zola will delete the <code>public</code> directory to start from a clean slate.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola serve
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --port</span><span> 2000
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --interface</span><span> 0.0.0.0
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --interface</span><span> 0.0.0.0</span><span style="color:#bf616a;"> --port</span><span> 2000
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --interface</span><span> 0.0.0.0</span><span style="color:#bf616a;"> --base-url</span><span> 127.0.0.1
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --interface</span><span> 0.0.0.0</span><span style="color:#bf616a;"> --port</span><span> 2000</span><span style="color:#bf616a;"> --output-dir</span><span> www/public
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --watch-only
+</span><span style="color:#bf616a;">$</span><span> zola serve</span><span style="color:#bf616a;"> --open
+</span></code></pre>
+<p>The serve command will watch all your content and provide live reload without
+a hard refresh if possible.</p>
+<p>Some changes cannot be handled automatically and thus live reload may not always work. If you
+fail to see your change or get an error, try restarting <code>zola serve</code>.</p>
+<p>You can also point to a config file other than <code>config.toml</code> like so (note that the position of the <code>config</code> option is important):</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola</span><span style="color:#bf616a;"> --config</span><span> config.staging.toml serve
+</span></code></pre>
+<p>By default, drafts are not loaded. If you wish to include them, pass the <code>--drafts</code> flag.</p>
+<h2 id="check">check</h2>
+<p>The check subcommand will try to build all pages just like the build command would, but without writing any of the
+results to disk. Additionally, it will also check all external links in Markdown files by trying to fetch
+them (links in the template files are not checked).</p>
+<p>By default, drafts are not loaded. If you wish to include them, pass the <code>--drafts</code> flag.</p>
+<h2 id="colored-output">Colored output</h2>
+<p>Colored output is used if your terminal supports it.</p>
+<p><em>Note</em>: coloring is automatically disabled when the output is redirected to a pipe or a file (i.e., when the standard output is not a TTY).</p>
+<p>You can disable this behavior by exporting one of the following two environment variables:</p>
+<ul>
+<li><code>NO_COLOR</code> (the value does not matter)</li>
+<li><code>CLICOLOR=0</code></li>
+</ul>
+<p>To force the use of colors, you can set the following environment variable:</p>
+<ul>
+<li><code>CLICOLOR_FORCE=1</code></li>
+</ul>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

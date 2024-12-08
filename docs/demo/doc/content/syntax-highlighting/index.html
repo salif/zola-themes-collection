@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Syntax Highlighting </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Syntax Highlighting </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>Zola comes with built-in syntax highlighting but you first
+need to enable it in the configuration</p>
+<p>Once this is done, Zola will automatically highlight all code blocks
+in your content. A code block in Markdown looks like the following:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>
+</span><span>```</span><span style="color:#d08770;">rust
+</span><span style="color:#b48ead;">let</span><span> highlight = </span><span style="color:#d08770;">true</span><span>;
+</span><span>```
+</span><span>
+</span></code></pre>
+<p>You can replace <code>rust</code> with another language or not put anything to get the text
+interpreted as plain text.</p>
+<p>Here is a full list of supported languages and their short names:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>- ActionScript -&gt; [&quot;as&quot;]
+</span><span>- Advanced CSV -&gt; [&quot;csv&quot;, &quot;tsv&quot;]
+</span><span>- AppleScript -&gt; [&quot;applescript&quot;, &quot;script editor&quot;]
+</span><span>- ASP -&gt; [&quot;asa&quot;]
+</span><span>- Assembly x86 (NASM) -&gt; [&quot;asm&quot;, &quot;inc&quot;, &quot;nasm&quot;]
+</span><span>- AWK -&gt; [&quot;awk&quot;]
+</span><span>- Batch File -&gt; [&quot;bat&quot;, &quot;cmd&quot;]
+</span><span>- BibTeX -&gt; [&quot;bib&quot;]
+</span><span>- Bourne Again Shell (bash) -&gt; [&quot;.bash_aliases&quot;, &quot;.bash_completions&quot;, &quot;.bash_functions&quot;, &quot;.bash_login&quot;, &quot;.bash_logout&quot;, &quot;.bash_profile&quot;, &quot;.bash_variables&quot;, &quot;.bashrc&quot;, &quot;.ebuild&quot;, &quot;.eclass&quot;, &quot;.profile&quot;, &quot;.textmate_init&quot;, &quot;.zlogin&quot;, &quot;.zlogout&quot;, &quot;.zprofile&quot;, &quot;.zshenv&quot;, &quot;.zshrc&quot;, &quot;PKGBUILD&quot;, &quot;ash&quot;, &quot;bash&quot;, &quot;sh&quot;, &quot;zsh&quot;]
+</span><span>- C -&gt; [&quot;c&quot;, &quot;h&quot;]
+</span><span>- C# -&gt; [&quot;cs&quot;, &quot;csx&quot;]
+</span><span>- C++ -&gt; [&quot;C&quot;, &quot;c++&quot;, &quot;cc&quot;, &quot;cp&quot;, &quot;cpp&quot;, &quot;cxx&quot;, &quot;h&quot;, &quot;h++&quot;, &quot;hh&quot;, &quot;hpp&quot;, &quot;hxx&quot;, &quot;inl&quot;, &quot;ipp&quot;]
+</span><span>- ClojureC -&gt; [&quot;boot&quot;, &quot;clj&quot;, &quot;cljc&quot;, &quot;cljs&quot;, &quot;cljx&quot;]
+</span><span>- CMake -&gt; [&quot;CMakeLists.txt&quot;, &quot;cmake&quot;]
+</span><span>- CMake C Header -&gt; [&quot;h.in&quot;]
+</span><span>- CMake C++ Header -&gt; [&quot;h++.in&quot;, &quot;hh.in&quot;, &quot;hpp.in&quot;, &quot;hxx.in&quot;]
+</span><span>- CMakeCache -&gt; [&quot;CMakeCache.txt&quot;]
+</span><span>- Crystal -&gt; [&quot;cr&quot;]
+</span><span>- CSS -&gt; [&quot;css&quot;, &quot;css.erb&quot;, &quot;css.liquid&quot;]
+</span><span>- D -&gt; [&quot;d&quot;, &quot;di&quot;]
+</span><span>- Dart -&gt; [&quot;dart&quot;]
+</span><span>- Diff -&gt; [&quot;diff&quot;, &quot;patch&quot;]
+</span><span>- Dockerfile -&gt; [&quot;Dockerfile&quot;, &quot;dockerfile&quot;]
+</span><span>- EDN -&gt; [&quot;edn&quot;]
+</span><span>- Elixir -&gt; [&quot;ex&quot;, &quot;exs&quot;]
+</span><span>- Elm -&gt; [&quot;elm&quot;]
+</span><span>- Erlang -&gt; [&quot;Emakefile&quot;, &quot;emakefile&quot;, &quot;erl&quot;, &quot;escript&quot;, &quot;hrl&quot;]
+</span><span>- F# -&gt; [&quot;fs&quot;, &quot;fsi&quot;, &quot;fsx&quot;]
+</span><span>- Fortran (Fixed Form) -&gt; [&quot;F&quot;, &quot;F77&quot;, &quot;FOR&quot;, &quot;FPP&quot;, &quot;f&quot;, &quot;f77&quot;, &quot;for&quot;, &quot;fpp&quot;]
+</span><span>- Fortran (Modern) -&gt; [&quot;F03&quot;, &quot;F08&quot;, &quot;F90&quot;, &quot;F95&quot;, &quot;f03&quot;, &quot;f08&quot;, &quot;f90&quot;, &quot;f95&quot;]
+</span><span>- Fortran Namelist -&gt; [&quot;namelist&quot;]
+</span><span>- Friendly Interactive Shell (fish) -&gt; [&quot;fish&quot;]
+</span><span>- GDScript (Godot Engine) -&gt; [&quot;gd&quot;]
+</span><span>- Generic Config -&gt; [&quot;.dircolors&quot;, &quot;.gitattributes&quot;, &quot;.gitignore&quot;, &quot;.gitmodules&quot;, &quot;.inputrc&quot;, &quot;Doxyfile&quot;, &quot;cfg&quot;, &quot;conf&quot;, &quot;config&quot;, &quot;dircolors&quot;, &quot;gitattributes&quot;, &quot;gitignore&quot;, &quot;gitmodules&quot;, &quot;ini&quot;, &quot;inputrc&quot;, &quot;mak&quot;, &quot;mk&quot;, &quot;pro&quot;]
+</span><span>- Git Attributes -&gt; [&quot;.gitattributes&quot;, &quot;attributes&quot;, &quot;gitattributes&quot;]
+</span><span>- Git Commit -&gt; [&quot;COMMIT_EDITMSG&quot;, &quot;MERGE_MSG&quot;, &quot;TAG_EDITMSG&quot;]
+</span><span>- Git Config -&gt; [&quot;.gitconfig&quot;, &quot;.gitmodules&quot;, &quot;gitconfig&quot;]
+</span><span>- Git Ignore -&gt; [&quot;.gitignore&quot;, &quot;exclude&quot;, &quot;gitignore&quot;]
+</span><span>- Git Link -&gt; [&quot;.git&quot;]
+</span><span>- Git Log -&gt; [&quot;gitlog&quot;]
+</span><span>- Git Mailmap -&gt; [&quot;.mailmap&quot;, &quot;mailmap&quot;]
+</span><span>- Git Rebase Todo -&gt; [&quot;git-rebase-todo&quot;]
+</span><span>- GLSL -&gt; [&quot;comp&quot;, &quot;frag&quot;, &quot;fs&quot;, &quot;fsh&quot;, &quot;fshader&quot;, &quot;geom&quot;, &quot;glsl&quot;, &quot;gs&quot;, &quot;gsh&quot;, &quot;gshader&quot;, &quot;tesc&quot;, &quot;tese&quot;, &quot;vert&quot;, &quot;vs&quot;, &quot;vsh&quot;, &quot;vshader&quot;]
+</span><span>- Go -&gt; [&quot;go&quot;]
+</span><span>- GraphQL -&gt; [&quot;gql&quot;, &quot;graphql&quot;, &quot;graphqls&quot;]
+</span><span>- Graphviz (DOT) -&gt; [&quot;DOT&quot;, &quot;dot&quot;, &quot;gv&quot;]
+</span><span>- Groovy -&gt; [&quot;Jenkinsfile&quot;, &quot;gradle&quot;, &quot;groovy&quot;, &quot;gvy&quot;]
+</span><span>- Handlebars -&gt; [&quot;handlebars&quot;, &quot;handlebars.html&quot;, &quot;hbr&quot;, &quot;hbrs&quot;, &quot;hbs&quot;, &quot;hdbs&quot;, &quot;hjs&quot;, &quot;mu&quot;, &quot;mustache&quot;, &quot;rac&quot;, &quot;stache&quot;, &quot;template&quot;, &quot;tmpl&quot;]
+</span><span>- Haskell -&gt; [&quot;hs&quot;]
+</span><span>- HTML -&gt; [&quot;htm&quot;, &quot;html&quot;, &quot;shtml&quot;, &quot;xhtml&quot;]
+</span><span>- HTML (ASP) -&gt; [&quot;asp&quot;]
+</span><span>- HTML (EEx) -&gt; [&quot;html.eex&quot;, &quot;html.leex&quot;]
+</span><span>- HTML (Erlang) -&gt; [&quot;yaws&quot;]
+</span><span>- HTML (Jinja2) -&gt; [&quot;htm.j2&quot;, &quot;html.j2&quot;, &quot;xhtml.j2&quot;, &quot;xml.j2&quot;]
+</span><span>- HTML (Rails) -&gt; [&quot;erb&quot;, &quot;html.erb&quot;, &quot;rails&quot;, &quot;rhtml&quot;]
+</span><span>- HTML (Tcl) -&gt; [&quot;adp&quot;]
+</span><span>- Java -&gt; [&quot;bsh&quot;, &quot;java&quot;]
+</span><span>- Java Properties -&gt; [&quot;properties&quot;]
+</span><span>- Java Server Page (JSP) -&gt; [&quot;jsp&quot;]
+</span><span>- JavaScript -&gt; [&quot;htc&quot;, &quot;js&quot;]
+</span><span>- JavaScript (Rails) -&gt; [&quot;js.erb&quot;]
+</span><span>- Jinja2 -&gt; [&quot;j2&quot;, &quot;jinja&quot;, &quot;jinja2&quot;]
+</span><span>- JSON -&gt; [&quot;Pipfile.lock&quot;, &quot;ipynb&quot;, &quot;json&quot;, &quot;sublime-build&quot;, &quot;sublime-color-scheme&quot;, &quot;sublime-commands&quot;, &quot;sublime-completions&quot;, &quot;sublime-keymap&quot;, &quot;sublime-macro&quot;, &quot;sublime-menu&quot;, &quot;sublime-mousemap&quot;, &quot;sublime-project&quot;, &quot;sublime-settings&quot;, &quot;sublime-theme&quot;]
+</span><span>- Julia -&gt; [&quot;jl&quot;]
+</span><span>- Kotlin -&gt; [&quot;kt&quot;, &quot;kts&quot;]
+</span><span>- LaTeX -&gt; [&quot;ltx&quot;, &quot;tex&quot;]
+</span><span>- Less -&gt; [&quot;css.less&quot;, &quot;less&quot;]
+</span><span>- Linker Script -&gt; [&quot;ld&quot;]
+</span><span>- Lisp -&gt; [&quot;cl&quot;, &quot;clisp&quot;, &quot;el&quot;, &quot;fasl&quot;, &quot;l&quot;, &quot;lisp&quot;, &quot;lsp&quot;, &quot;mud&quot;, &quot;scm&quot;, &quot;ss&quot;]
+</span><span>- Literate Haskell -&gt; [&quot;lhs&quot;]
+</span><span>- lrc -&gt; [&quot;lrc&quot;, &quot;lyric&quot;]
+</span><span>- Lua -&gt; [&quot;lua&quot;]
+</span><span>- Makefile -&gt; [&quot;GNUmakefile&quot;, &quot;Makefile&quot;, &quot;Makefile.am&quot;, &quot;Makefile.in&quot;, &quot;OCamlMakefile&quot;, &quot;mak&quot;, &quot;make&quot;, &quot;makefile&quot;, &quot;makefile.am&quot;, &quot;makefile.in&quot;, &quot;mk&quot;]
+</span><span>- Markdown -&gt; [&quot;markdn&quot;, &quot;markdown&quot;, &quot;md&quot;, &quot;mdown&quot;]
+</span><span>- MATLAB -&gt; [&quot;matlab&quot;]
+</span><span>- MiniZinc (MZN) -&gt; [&quot;dzn&quot;, &quot;mzn&quot;]
+</span><span>- NAnt Build File -&gt; [&quot;build&quot;]
+</span><span>- Nim -&gt; [&quot;nim&quot;, &quot;nims&quot;]
+</span><span>- Nix -&gt; [&quot;nix&quot;]
+</span><span>- Objective-C -&gt; [&quot;h&quot;, &quot;m&quot;]
+</span><span>- Objective-C++ -&gt; [&quot;M&quot;, &quot;h&quot;, &quot;mm&quot;]
+</span><span>- OCaml -&gt; [&quot;ml&quot;, &quot;mli&quot;]
+</span><span>- OCamllex -&gt; [&quot;mll&quot;]
+</span><span>- OCamlyacc -&gt; [&quot;mly&quot;]
+</span><span>- Pascal -&gt; [&quot;dpr&quot;, &quot;p&quot;, &quot;pas&quot;]
+</span><span>- Perl -&gt; [&quot;pc&quot;, &quot;pl&quot;, &quot;pm&quot;, &quot;pmc&quot;, &quot;pod&quot;, &quot;t&quot;]
+</span><span>- PHP -&gt; [&quot;php&quot;, &quot;php3&quot;, &quot;php4&quot;, &quot;php5&quot;, &quot;php7&quot;, &quot;phps&quot;, &quot;phpt&quot;, &quot;phtml&quot;]
+</span><span>- Plain Text -&gt; [&quot;txt&quot;]
+</span><span>- PowerShell -&gt; [&quot;ps1&quot;, &quot;psd1&quot;, &quot;psm1&quot;]
+</span><span>- PureScript -&gt; [&quot;purs&quot;]
+</span><span>- Python -&gt; [&quot;SConscript&quot;, &quot;SConstruct&quot;, &quot;Sconstruct&quot;, &quot;Snakefile&quot;, &quot;bazel&quot;, &quot;bzl&quot;, &quot;cpy&quot;, &quot;gyp&quot;, &quot;gypi&quot;, &quot;pxd&quot;, &quot;pxd.in&quot;, &quot;pxi&quot;, &quot;pxi.in&quot;, &quot;py&quot;, &quot;py3&quot;, &quot;pyi&quot;, &quot;pyw&quot;, &quot;pyx&quot;, &quot;pyx.in&quot;, &quot;rpy&quot;, &quot;sconstruct&quot;, &quot;vpy&quot;, &quot;wscript&quot;]
+</span><span>- R -&gt; [&quot;R&quot;, &quot;Rprofile&quot;, &quot;r&quot;]
+</span><span>- Racket -&gt; [&quot;rkt&quot;]
+</span><span>- Rd (R Documentation) -&gt; [&quot;rd&quot;]
+</span><span>- Reason -&gt; [&quot;re&quot;, &quot;rei&quot;]
+</span><span>- Regular Expression -&gt; [&quot;re&quot;]
+</span><span>- Regular Expressions (Elixir) -&gt; [&quot;ex.re&quot;]
+</span><span>- reStructuredText -&gt; [&quot;rest&quot;, &quot;rst&quot;]
+</span><span>- Ruby -&gt; [&quot;Appfile&quot;, &quot;Appraisals&quot;, &quot;Berksfile&quot;, &quot;Brewfile&quot;, &quot;Cheffile&quot;, &quot;Deliverfile&quot;, &quot;Fastfile&quot;, &quot;Gemfile&quot;, &quot;Guardfile&quot;, &quot;Podfile&quot;, &quot;Rakefile&quot;, &quot;Rantfile&quot;, &quot;Scanfile&quot;, &quot;Snapfile&quot;, &quot;Thorfile&quot;, &quot;Vagrantfile&quot;, &quot;capfile&quot;, &quot;cgi&quot;, &quot;config.ru&quot;, &quot;fcgi&quot;, &quot;gemspec&quot;, &quot;irbrc&quot;, &quot;jbuilder&quot;, &quot;podspec&quot;, &quot;prawn&quot;, &quot;rabl&quot;, &quot;rake&quot;, &quot;rb&quot;, &quot;rbx&quot;, &quot;rjs&quot;, &quot;ruby.rail&quot;, &quot;simplecov&quot;, &quot;thor&quot;]
+</span><span>- Ruby Haml -&gt; [&quot;haml&quot;, &quot;sass&quot;]
+</span><span>- Ruby on Rails -&gt; [&quot;builder&quot;, &quot;rxml&quot;]
+</span><span>- Rust -&gt; [&quot;rs&quot;]
+</span><span>- Sass -&gt; [&quot;sass&quot;]
+</span><span>- Scala -&gt; [&quot;sbt&quot;, &quot;sc&quot;, &quot;scala&quot;]
+</span><span>- SCSS -&gt; [&quot;scss&quot;]
+</span><span>- SQL -&gt; [&quot;ddl&quot;, &quot;dml&quot;, &quot;sql&quot;]
+</span><span>- SQL (Rails) -&gt; [&quot;erbsql&quot;, &quot;sql.erb&quot;]
+</span><span>- srt -&gt; [&quot;srt&quot;, &quot;subrip&quot;]
+</span><span>- Stylus -&gt; [&quot;styl&quot;, &quot;stylus&quot;]
+</span><span>- SWI-Prolog -&gt; [&quot;pro&quot;]
+</span><span>- Swift -&gt; [&quot;swift&quot;]
+</span><span>- Tcl -&gt; [&quot;tcl&quot;]
+</span><span>- TeX -&gt; [&quot;cls&quot;, &quot;sty&quot;]
+</span><span>- Textile -&gt; [&quot;textile&quot;]
+</span><span>- TOML -&gt; [&quot;Cargo.lock&quot;, &quot;Gopkg.lock&quot;, &quot;Pipfile&quot;, &quot;tml&quot;, &quot;toml&quot;]
+</span><span>- TypeScript -&gt; [&quot;ts&quot;]
+</span><span>- TypeScriptReact -&gt; [&quot;tsx&quot;]
+</span><span>- VimL -&gt; [&quot;vim&quot;]
+</span><span>- XML -&gt; [&quot;dtml&quot;, &quot;opml&quot;, &quot;rng&quot;, &quot;rss&quot;, &quot;svg&quot;, &quot;tld&quot;, &quot;xml&quot;, &quot;xsd&quot;, &quot;xslt&quot;]
+</span><span>- YAML -&gt; [&quot;sublime-syntax&quot;, &quot;yaml&quot;, &quot;yml&quot;]
+</span></code></pre>
+<p>Note: due to some issues with the JavaScript syntax, the TypeScript syntax will be used instead.
+If</p>
+<p>If you want to highlight a language not on this list, please open an issue or a pull request on the <a href="https://github.com/getzola/zola">Zola repo</a>.
+Alternatively, the <code>extra_syntaxes</code> configuration option can be used to add additional syntax files.</p>
+<p>If your site source is laid out as follows:</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>.
+</span><span>├── config.toml
+</span><span>├── content/
+</span><span>│   └── ...
+</span><span>├── static/
+</span><span>│   └── ...
+</span><span>├── syntaxes/
+</span><span>│   ├── Sublime-Language1/
+</span><span>│   │   └── lang1.sublime-syntax
+</span><span>│   └── lang2.sublime-syntax
+</span><span>└── templates/
+</span><span>    └── ...
+</span></code></pre>
+<p>you would set your <code>extra_syntaxes</code> to <code>["syntaxes", "syntaxes/Sublime-Language1"]</code> to load <code>lang1.sublime-syntax</code> and <code>lang2.sublime-syntax</code>.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>

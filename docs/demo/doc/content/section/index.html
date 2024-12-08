@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/doc/main.css">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Section </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    <nav>
+            <div class="title-box">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">
+                            <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo" class="header-img"/>
+                        </a>
+                    <h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;doc&#x2F;">Docs</a></h1>
+            </div>
+
+
+            <div id="nav-release-links">
+                <div class="growable"></div>
+                <div id="nav-link-widget">
+                    <a href="https://discord.gg/Xdjp8Qs43Y"><img class="link-icon" src="https://salif.github.io/zola-themes-collection/demo/doc/discord.png" alt="discord"/></a>
+                </div>
+            </div>
+
+            <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
+            <div id="trees">
+                
+                        <input class="tree-toggle" type="checkbox" id="getting-started"
+                            />
+                        <label class="tree-toggle-label"
+                            for="getting-started">Getting Started</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="content"
+                            checked/>
+                        <label class="tree-toggle-label"
+                            for="content">Content</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/">Overview</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/">Section</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#drafting">Drafting</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#front-matter">Front matter</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#pagination">Pagination</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#sorting">Sorting</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#sorting-pages">Sorting pages</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/#date">date</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/#weight">weight</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/section/#reversed-sorting">Reversed sorting</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/doc/content/section/#sorting-subsections">Sorting subsections</a>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="templates"
+                            />
+                        <label class="tree-toggle-label"
+                            for="templates">Templates</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="themes"
+                            />
+                        <label class="tree-toggle-label"
+                            for="themes">Themes</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                
+                        <input class="tree-toggle" type="checkbox" id="deployment"
+                            />
+                        <label class="tree-toggle-label"
+                            for="deployment">Deployment</label>
+                    
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/doc/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+        <div id="article-title-bar">
+            <h1 class="page-title"> Section </h1>
+        </div>
+        
+        <div id="search-pane">
+            <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        </div>
+        <div id="article-content">
+            
+        <p>A section is created whenever a directory (or subdirectory) in the <code>content</code> section contains an
+<code>_index.md</code> file.  If a directory does not contain an <code>_index.md</code> file, no section will be
+created, but Markdown files within that directory will still create pages (known as orphan pages).</p>
+<p>The index page (i.e., the page displayed when a user browses to your <code>base_url</code>) is a section,
+which is created whether or not you add an <code>_index.md</code> file at the root of your <code>content</code> directory.
+If you do not create an <code>_index.md</code> file in your content directory, this main content section will
+not have any content or metadata.  If you would like to add content or metadata, you can add an
+<code>_index.md</code> file at the root of the <code>content</code> directory and edit it just as you would edit any other
+<code>_index.md</code> file; your <code>index.html</code> template will then have access to that content and metadata.</p>
+<p>Any non-Markdown file in a section directory is added to the <code>assets</code> collection of the section, as explained in the
+<a href="https://salif.github.io/zola-themes-collection/demo/doc/content/overview/#asset-colocation">content overview</a>. These files are then available in the
+Markdown file using relative links.</p>
+<h2 id="drafting">Drafting&nbsp;<a class="anchor" href="#drafting">&#xE732;</a></h2>
+<p>Just like pages sections can be drafted by setting the <code>draft</code> option in the front matter. By default this is not done. When a section is drafted it's descendants like pages, subsections and assets will not be processed unless the <code>--drafts</code> flag is passed. Note that even pages that don't have a <code>draft</code> status will not be processed if one of their parent sections is drafted.</p>
+<h2 id="front-matter">Front matter&nbsp;<a class="anchor" href="#front-matter">&#xE732;</a></h2>
+<p>The <code>_index.md</code> file within a directory defines the content and metadata for that section.  To set
+the metadata, add front matter to the file.</p>
+<p>The TOML front matter is a set of metadata embedded in a file at the beginning of the file enclosed by triple pluses (<code>+++</code>).</p>
+<p>After the closing <code>+++</code>, you can add content, which will be parsed as Markdown and made available
+to your templates through the <code>section.content</code> variable.</p>
+<p>Although none of the front matter variables are mandatory, the opening and closing <code>+++</code> are required.</p>
+<p>Note that even though the use of TOML is encouraged, YAML front matter is also supported to ease porting
+legacy content. In this case the embedded metadata must be enclosed by triple minuses (<code>---</code>).</p>
+<p>Here is an example <code>_index.md</code> with all the available variables. The values provided below are the
+default values.</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">title </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#bf616a;">description </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># A draft section is only loaded if the `--drafts` flag is passed to `zola build`, `zola serve` or `zola check`.
+</span><span style="color:#bf616a;">draft </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Used to sort pages by &quot;date&quot;, &quot;weight&quot; or &quot;none&quot;. See below for more information.
+</span><span style="color:#bf616a;">sort_by </span><span>= &quot;</span><span style="color:#a3be8c;">none</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># Used by the parent section to order its subsections.
+</span><span style="color:#a7adba;"># Lower values have higher priority.
+</span><span style="color:#bf616a;">weight </span><span>= </span><span style="color:#d08770;">0
+</span><span>
+</span><span style="color:#a7adba;"># Template to use to render this section page.
+</span><span style="color:#bf616a;">template </span><span>= &quot;</span><span style="color:#a3be8c;">section.html</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The given template is applied to ALL pages below the section, recursively.
+</span><span style="color:#a7adba;"># If you have several nested sections, each with a page_template set, the page
+</span><span style="color:#a7adba;"># will always use the closest to itself.
+</span><span style="color:#a7adba;"># However, a page&#39;s own `template` variable will always have priority.
+</span><span style="color:#a7adba;"># Not set by default.
+</span><span style="color:#bf616a;">page_template </span><span>=
+</span><span>
+</span><span style="color:#a7adba;"># This sets the number of pages to be displayed per paginated page.
+</span><span style="color:#a7adba;"># No pagination will happen if this isn&#39;t set or if the value is 0.
+</span><span style="color:#bf616a;">paginate_by </span><span>= </span><span style="color:#d08770;">0
+</span><span>
+</span><span style="color:#a7adba;"># If set, this will be the path used by the paginated page. The page number will be appended after this path.
+</span><span style="color:#a7adba;"># The default is page/1.
+</span><span style="color:#bf616a;">paginate_path </span><span>= &quot;</span><span style="color:#a3be8c;">page</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># This determines whether to insert a link for each header like the ones you can see on this site if you hover over
+</span><span style="color:#a7adba;"># a header.
+</span><span style="color:#a7adba;"># The default template can be overridden by creating an `anchor-link.html` file in the `templates` directory.
+</span><span style="color:#a7adba;"># This value can be &quot;left&quot;, &quot;right&quot; or &quot;none&quot;.
+</span><span style="color:#bf616a;">insert_anchor_links </span><span>= &quot;</span><span style="color:#a3be8c;">none</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># If set to &quot;true&quot;, the section pages will be in the search index. This is only used if
+</span><span style="color:#a7adba;"># `build_search_index` is set to &quot;true&quot; in the Zola configuration file.
+</span><span style="color:#bf616a;">in_search_index </span><span>= </span><span style="color:#d08770;">true
+</span><span>
+</span><span style="color:#a7adba;"># If set to &quot;true&quot;, the section homepage is rendered.
+</span><span style="color:#a7adba;"># Useful when the section is used to organize pages (not used directly).
+</span><span style="color:#bf616a;">render </span><span>= </span><span style="color:#d08770;">true
+</span><span>
+</span><span style="color:#a7adba;"># This determines whether to redirect when a user lands on the section. Defaults to not being set.
+</span><span style="color:#a7adba;"># Useful for the same reason as `render` but when you don&#39;t want a 404 when
+</span><span style="color:#a7adba;"># landing on the root section page.
+</span><span style="color:#a7adba;"># Example: redirect_to = &quot;documentation/content/overview&quot;
+</span><span style="color:#bf616a;">redirect_to </span><span>= 
+</span><span>
+</span><span style="color:#a7adba;"># If set to &quot;true&quot;, the section will pass its pages on to the parent section. Defaults to `false`.
+</span><span style="color:#a7adba;"># Useful when the section shouldn&#39;t split up the parent section, like
+</span><span style="color:#a7adba;"># sections for each year under a posts section.
+</span><span style="color:#bf616a;">transparent </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Use aliases if you are moving content but want to redirect previous URLs to the
+</span><span style="color:#a7adba;"># current one. This takes an array of paths, not URLs.
+</span><span style="color:#bf616a;">aliases </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># If set to &quot;true&quot;, a feed file will be generated for this section at the
+</span><span style="color:#a7adba;"># section&#39;s root path. This is independent of the site-wide variable of the same
+</span><span style="color:#a7adba;"># name. The section feed will only include posts from that respective feed, and
+</span><span style="color:#a7adba;"># not from any other sections, including sub-sections under that section.
+</span><span style="color:#bf616a;">generate_feed </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># Your own data.
+</span><span>[extra]
+</span></code></pre>
+<p>Keep in mind that any configuration options apply only to the direct pages, not to the subsections' pages.</p>
+<h2 id="pagination">Pagination&nbsp;<a class="anchor" href="#pagination">&#xE732;</a></h2>
+<p>To enable pagination for a section's pages, set <code>paginate_by</code> to a positive number. See
+<a href="https://salif.github.io/zola-themes-collection/demo/doc/templates/pagination/">pagination template documentation</a> for more information
+on what variables are available in the template.</p>
+<p>You can also change the pagination path (the word displayed while paginated in the URL, like <code>page/1</code>)
+by setting the <code>paginate_path</code> variable, which defaults to <code>page</code>.</p>
+<h2 id="sorting">Sorting&nbsp;<a class="anchor" href="#sorting">&#xE732;</a></h2>
+<p>It is very common for Zola templates to iterate over pages or sections
+to display all pages/sections in a given directory.  Consider a very simple
+example: a <code>blog</code> directory with three files: <code>blog/Post_1.md</code>,
+<code>blog/Post_2.md</code> and <code>blog/Post_3.md</code>.  To iterate over these posts and
+create a list of links to the posts, a simple template might look like this:</p>
+<pre data-lang="j2" style="background-color:#eff1f5;color:#4f5b66;" class="language-j2 "><code class="language-j2" data-lang="j2"><span>{% </span><span style="color:#b48ead;">for </span><span style="color:#bf616a;">post </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">section</span><span>.</span><span style="color:#bf616a;">pages </span><span>%}
+</span><span>  &lt;h1&gt;&lt;a href=&quot;{{ </span><span style="color:#bf616a;">post</span><span>.</span><span style="color:#bf616a;">permalink </span><span>}}&quot;&gt;{{ </span><span style="color:#bf616a;">post</span><span>.</span><span style="color:#bf616a;">title </span><span>}}&lt;/a&gt;&lt;/h1&gt;
+</span><span>{% </span><span style="color:#b48ead;">endfor </span><span>%}
+</span></code></pre>
+<p>This would iterate over the posts in the order specified
+by the <code>sort_by</code> variable set in the <code>_index.md</code> page for the corresponding
+section.  The <code>sort_by</code> variable can be given one of three values: <code>date</code>,
+<code>weight</code> or <code>none</code>.  If <code>sort_by</code> is not set, the pages will be
+sorted in the <code>none</code> order, which is not intended for sorted content.</p>
+<p>Any page that is missing the data it needs to be sorted will be ignored and
+won't be rendered. For example, if a page is missing the date variable and its
+section sets <code>sort_by = "date"</code>, then that page will be ignored.
+The terminal will warn you if this occurs.</p>
+<p>If several pages have the same date/weight/order, their permalink will be used
+to break the tie based on alphabetical order.</p>
+<h2 id="sorting-pages">Sorting pages&nbsp;<a class="anchor" href="#sorting-pages">&#xE732;</a></h2>
+<p>The <code>sort_by</code> front-matter variable can have the following values:</p>
+<h3 id="date"><code>date</code>&nbsp;<a class="anchor" href="#date">&#xE732;</a></h3>
+<p>This will sort all pages by their <code>date</code> field, from the most recent (at the
+top of the list) to the oldest (at the bottom of the list).  Each page will
+get <code>page.earlier</code> and <code>page.later</code> variables that contain the pages with
+earlier and later dates, respectively.</p>
+<h3 id="weight"><code>weight</code>&nbsp;<a class="anchor" href="#weight">&#xE732;</a></h3>
+<p>This will be sort all pages by their <code>weight</code> field, from lightest weight
+(at the top of the list) to heaviest (at the bottom of the list).  Each
+page gets <code>page.lighter</code> and <code>page.heavier</code> variables that contain the
+pages with lighter and heavier weights, respectively.</p>
+<h3 id="reversed-sorting">Reversed sorting&nbsp;<a class="anchor" href="#reversed-sorting">&#xE732;</a></h3>
+<p>When iterating through pages, you may wish to use the Tera <code>reverse</code> filter,
+which reverses the order of the pages.  For example, after using the <code>reverse</code> filter,
+pages sorted by weight will be sorted from lightest (at the top) to heaviest
+(at the bottom); pages sorted by date will be sorted from oldest (at the top)
+to newest (at the bottom).</p>
+<p><code>reverse</code> has no effect on <code>page.later</code>/<code>page.earlier</code> or <code>page.heavier</code>/<code>page.lighter</code>.</p>
+<p>If the section is paginated the <code>paginate_reversed=true</code> in the front matter of the relevant section should be set instead of using the filter.</p>
+<h2 id="sorting-subsections">Sorting subsections&nbsp;<a class="anchor" href="#sorting-subsections">&#xE732;</a></h2>
+<p>Sorting sections is a bit less flexible: sections can only be sorted by <code>weight</code>,
+and do not have variables that point to the heavier/lighter sections.</p>
+<p>By default, the lightest (lowest <code>weight</code>) subsections will be at
+the top of the list and the heaviest (highest <code>weight</code>) will be at the bottom;
+the <code>reverse</code> filter reverses this order.</p>
+<p><strong>Note</strong>: Unlike pages, permalinks will <strong>not</strong> be used to break ties between
+equally weighted sections. Thus, if the <code>weight</code> variable for your section is not set (or if it
+is set in a way that produces ties), then your sections will be sorted in
+<strong>random</strong> order. Moreover, that order is determined at build time and will
+change with each site rebuild.  Thus, if there is any chance that you will
+iterate over your sections, you should always assign them a weight.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/search_index.en.js" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/doc/js.js" defer></script>
+
+</body>
+</html>
