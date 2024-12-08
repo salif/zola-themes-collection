@@ -13,9 +13,12 @@
   <h3 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ project.name }}</h3>
   <div class="not-prose">
     <picture>
-      <source srcset='./screenshots/light-{{ project.theme }}.png' media='(prefers-color-scheme: light)'/>
-      <source srcset='./screenshots/dark-{{ project.theme }}.png' media='(prefers-color-scheme: dark)'/>
-      <img src='./screenshots/light-{{ project.theme }}.png' alt='Screenshot of the {{ project.name }} theme'/>
+      <source srcset="./screenshots/light-{{ project.theme }}.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="/screenshots/dark-{{ project.theme }}.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-{{ project.theme }}.webp" type="image/webp"
+        alt="Screenshot of the {{ project.name }} theme" width="1360" height="765" />
     </picture>
     <p>{{ project.desc }}</p>
   </div>
