@@ -10,90 +10,28 @@ rm := "rm"
 git := "git"
 zola := "zola"
 browser := "brave"
-NOM := justfile_directory() / "node_modules"
+node_modules := justfile_directory() / "node_modules"
+export PATH := "./node_modules/.bin:" + env_var('PATH')
 
 _:
 	command {{ just }} --list --unsorted
 
-[private]
-[script('./node_modules/.bin/zx')]
-themes-js cmd *args:
-	/*
-	#!/usr/bin/env node */
-	$.verbose = true
-	const allThemes = await glob("themes/*", { onlyDirectories: true })
-	const basePath = process.cwd()
-	const cmd = "{{ cmd }}"
-	const args = {{ args }};
-	const localBaseURL = "{{ local_base_url }}"
-	switch (cmd) {
-		case "build-check-all":
-			await buildThemes(allThemes, false, localBaseURL)
-			break
-		case "build-demo-all":
-			await buildThemes(allThemes, true, args[0])
-			break
-		case "build-check":
-			await buildThemes([args[0]], false, localBaseURL)
-			break
-		case "build-demo":
-			await buildThemes([args[0]], true, args[1])
-			break
-		default:
-			console.error(`Unknown cmd: ${cmd}`)
-			break
-	}
-	async function buildThemes(themes, doInstall, baseURL) {
-		for (const theme of themes) {
-			const themePath = path.join(basePath, theme)
-			const themeName = path.basename(themePath)
-			await cd(themePath)
-			await buildTheme(themeName, baseURL)
-			if (doInstall) await installDemo(themePath, themeName,
-				path.join(basePath, "static", "demo", themeName))
-			await remPublic()
-		}
-	}
-	async function buildTheme(themeName, baseURL) {
-		if (!(await fs.pathExists("theme.toml"))) {
-			console.warn("Warning: theme.toml not found!")
-		}
-		if (await fs.pathExists("themes")) {
-			console.warn("Warning: themes found!")
-		}
-		if (!(await fs.pathExists("config.toml"))) {
-			console.error("Error: config.toml not found!")
-			return
-		}
-		await remPublic()
-		const demoBaseURL = new URL(themeName + "/", baseURL).href
-		await $`{{ zola }} ${['build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']}`
-	}
-	async function installDemo(themePath, themeName, demoPath) {
-		if (await fs.pathExists(demoPath)) {
-			await fs.remove(demoPath)
-		}
-		await fs.rename(path.join(themePath, "ZTC_PUBLIC"), demoPath)
-	}
-	async function remPublic() {
-		if (await fs.pathExists("ZTC_PUBLIC")) {
-			await fs.remove("ZTC_PUBLIC")
-		}
-	}
+[group('build')]
+build-check-all: (themes-js "build-check-all")
 
 [group('build')]
-build-check-all: (themes-js "build-check-all" "[]")
+build-check path: (themes-js "build-check" "'"+path+"'")
 
 [group('build')]
-build-check path: (themes-js "build-check" "['"+path+"']")
+build-demo-all base_url=demo_base_url: (themes-js "build-demo-all" "'"+base_url+"'")
 
 [group('build')]
-build-demo-all base_url=demo_base_url: (themes-js "build-demo-all" "['"+base_url+"']")
+build-demo path base_url=demo_base_url: (themes-js "build-demo" "'"+path+"','"+base_url+"'")
 
 [group('build')]
-build-demo path base_url=demo_base_url: (themes-js "build-demo" "['"+path+"','"+base_url+"']")
+update-data url=demo_base_url: (themes-js "update-data" "'"+url+"'")
 
-[group('build'), script('./node_modules/.bin/zx')]
+[group('build'), script('zx')]
 remove-demo-all:
 	/*
 	#!/usr/bin/env node */
@@ -114,7 +52,7 @@ screenshot name mode="dark" url=local_base_url:
 	magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.webp"
 	{{ rm }} -f static/screenshots/temp.png
 
-[group('screenshot'), script('./node_modules/.bin/zx')]
+[group('screenshot'), script('zx')]
 screenshots-missing:
 	/*
 	#!/usr/bin/env node */
@@ -139,31 +77,130 @@ local-test-all:
 	command {{ just }} build-demo-all '{{ local_base_url }}' update-data '{{ local_base_url }}'
 	command {{ zola }} serve --open
 
-[group('build'), script('node')]
-update-data url=demo_base_url:
+[group('help')]
+submodule-remove path:
+	test -d '{{ path }}'
+	command {{ git }} submodule deinit -f '{{ path }}'
+	command {{ rm }} -rf '.git/modules/{{ path }}'
+	command {{ git }} rm -f '{{ path }}'
+
+[group('help')]
+submodule-add url name: && (build-check "themes/"+name)
+	! test -d 'themes/{{ name }}'
+	command {{ git }} submodule add -- '{{ url }}' 'themes/{{ name }}'
+
+[group('help')]
+submodule-update-all:
+	command {{ git }} submodule update --remote --merge
+
+[group('push'), script('zx')]
+fix-docs-dir:
 	/*
 	#!/usr/bin/env node */
-	"use strict";
-	const fs = require('fs');
-	const path = require('path');
-	const TOML = require(process.cwd() + '/node_modules/@iarna/toml');
-	const baseURL = "{{ url }}";
-	const sep = new Map([
-		["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
-		]);
-	function main() {
-		const gitmodulesContent = fs.readFileSync('.gitmodules', 'utf8');
-		const parsed = parseGitmodules(gitmodulesContent);
-		const data = [];
-		for (const theme of Object.values(parsed)) {
-			const themeInfo = readThemeInfo(theme);
-			if (null != themeInfo) data.push(themeInfo);
-			else console.error(theme);
-		}
-		fs.writeFileSync('content/home/data.toml', TOML.stringify({ project: data }));
+	const demos = await glob("docs/demo/*", { onlyDirectories: true })
+	for (const demo of demos) {
+		const robotsTxtPath = path.join(demo, "robots.txt")
+		if (await fs.pathExists(robotsTxtPath))
+			fs.remove(robotsTxtPath)
 	}
-	main();
-	function parseGitmodules(content) {
+	const gitignorePath = path.join("docs", "screenshots", ".gitignore")
+	if (await fs.pathExists(gitignorePath))
+		await fs.remove(gitignorePath)
+
+[group('push'), confirm]
+gh-pages:
+	command {{ git }} diff --cached --quiet
+	command {{ git }} switch gh-pages
+	command {{ git }} merge main -X theirs --no-ff --no-commit
+	command {{ just }} remove-demo-all build-demo-all '{{ demo_base_url }}' \
+		screenshots-missing update-data '{{ demo_base_url }}'
+	command {{ rm }} -rf docs
+	command {{ zola }} build -o docs
+	command {{ just }} fix-docs-dir
+	command {{ git }} add docs
+	command {{ git }} merge --continue
+	command {{ git }} push
+	command {{ git }} switch -
+
+[private, script('zx')]
+themes-js cmd args='':
+	/*
+	#!/usr/bin/env node */
+	"use strict"
+	$.verbose = true
+	process.env.CLICOLOR_FORCE='1'
+	const basePath = process.cwd()
+	const cmd = "{{ cmd }}"
+	const args = [{{ args }}]
+	const localBaseURL = "{{ local_base_url }}"
+	const sepThemes = new Map([
+		["linkita", "https://codeberg.org/salif/linkita.git"],
+		["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
+		])
+	const errors = []
+	switch (cmd) {
+		case "build-check-all":
+			await buildThemes(await listThemes(), false, localBaseURL)
+			break
+		case "build-demo-all":
+			await buildThemes(await listThemes(), true, args[0])
+			break
+		case "build-check":
+			await buildThemes([{ path: args[0] }], false, localBaseURL)
+			break
+		case "build-demo":
+			await buildThemes([{ path: args[0] }], true, args[1])
+			break
+		case "update-data":
+			await updateData(args[0], await listThemes())
+			break
+		case "list-themes":
+			(await listThemes()).forEach(theme=>{console.log(theme.path)})
+			break
+		default:
+			console.error(`Unknown cmd: ${cmd}`)
+			break
+	}
+	async function buildThemes(themes, doInstall, baseURL) {
+		for (const theme of themes) {
+			const themePath = path.join(basePath, theme.path)
+			const themeName = path.basename(themePath)
+			await cd(themePath)
+			await buildTheme(themeName, baseURL)
+			if (doInstall) await installDemo(themePath, themeName,
+				path.join(basePath, "static", "demo", themeName))
+			await remPublic()
+		}
+		if (errors.length > 0) errors.forEach(err=>{console.error(err)})
+	}
+	async function buildTheme(themeName, baseURL) {
+		if (!(await fs.pathExists("theme.toml")) && !(await fs.pathExists(path.join("themes", themeName, "theme.toml")))) {
+			errors.push(`Warning: theme.toml not found! themes/${themeName}`)
+		}
+		if ((await fs.pathExists("theme.toml")) && (await fs.pathExists("themes"))) {
+			errors.push(`Warning: themes dir found! themes/${themeName}`)
+		}
+		if (!(await fs.pathExists("config.toml"))) {
+			errors.push(`Error: config.toml not found! themes/${themeName}`)
+			return
+		}
+		await remPublic()
+		const demoBaseURL = new URL(themeName + "/", baseURL).href
+		await $`{{ zola }} ${['build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']}`
+	}
+	async function installDemo(themePath, themeName, demoPath) {
+		if (await fs.pathExists(demoPath)) {
+			await fs.remove(demoPath)
+		}
+		await fs.rename(path.join(themePath, "ZTC_PUBLIC"), demoPath)
+	}
+	async function remPublic() {
+		if (await fs.pathExists("ZTC_PUBLIC")) {
+			await fs.remove("ZTC_PUBLIC")
+		}
+	}
+	async function listThemes() {
+		const content = await fs.readFile('.gitmodules', 'utf8');
 		const lines = content.split('\n');
 		const result = {};
 		let currentSubmodule = null;
@@ -179,19 +216,30 @@ update-data url=demo_base_url:
 				result[currentSubmodule][key] = value;
 			}
 		});
-		return result;
-	};
+		if (result["themes/linkita-theme"]) delete result["themes/linkita-theme"]
+		return Object.values(result).filter(r=>r.path.startsWith("themes/"));
+	}
+	function updateData(baseURL, themes) {
+		const TOML = require('{{ node_modules / "@iarna" / "toml" }}');
+		const data = [];
+		for (const theme of themes) {
+			const themeInfo = readThemeInfo(theme, baseURL, TOML);
+			if (null != themeInfo) data.push(themeInfo);
+			else console.error(theme);
+		}
+		fs.writeFileSync('content/home/data.toml', TOML.stringify({ project: data }));
+	}
 	function onlyIf(v, ifFalse, ifTrue) {
 		if (undefined == v || v.length == 0) return ifFalse;
 		else return ifTrue;
 	}
-	function readThemeInfo(theme) {
+	function readThemeInfo(theme, baseURL, TOML) {
 		if (!theme.path.startsWith("themes/")) return;
 		const themeName = theme.path.substring(7);
 		let themeTomlPath = path.join(theme.path, "theme.toml");
 		const themeInfo = {};
-		if (sep.has(themeName)) {
-			themeInfo.clone = sep.get(themeName);
+		if (sepThemes.has(themeName)) {
+			themeInfo.clone = sepThemes.get(themeName);
 			themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
 		} else {
 			themeInfo.clone = theme.url;
@@ -201,13 +249,7 @@ update-data url=demo_base_url:
 			themeInfo.clone;
 		let themeToml = {};
 		if (fs.existsSync(themeTomlPath)) {
-			try {
-				themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
-			} catch (err) {
-				console.error(err);
-			}
-		} else {
-			console.warn(themeTomlPath);
+			themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
 		}
 		themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name);
 		themeInfo.description = onlyIf(themeToml.description, "",  themeToml.description);
@@ -264,48 +306,3 @@ update-data url=demo_base_url:
 			],
 		};
 	}
-
-[group('help')]
-submodule-remove path:
-	test -d '{{ path }}'
-	command {{ git }} submodule deinit -f '{{ path }}'
-	command {{ rm }} -rf '.git/modules/{{ path }}'
-	command {{ git }} rm -f '{{ path }}'
-
-[group('help')]
-submodule-add url name: && (build-check "themes/"+name)
-	! test -d 'themes/{{ name }}'
-	command {{ git }} submodule add -- '{{ url }}' 'themes/{{ name }}'
-
-[group('help')]
-submodule-update-all:
-	command {{ git }} submodule update --remote --merge
-
-[group('push'), script('./node_modules/.bin/zx')]
-fix-docs-dir:
-	/*
-	#!/usr/bin/env node */
-	const demos = await glob("docs/demo/*", { onlyDirectories: true })
-	for (const demo of demos) {
-		const robotsTxtPath = path.join(demo, "robots.txt")
-		if (await fs.pathExists(robotsTxtPath))
-			fs.remove(robotsTxtPath)
-	}
-	const gitignorePath = path.join("docs", "screenshots", ".gitignore")
-	if (await fs.pathExists(gitignorePath))
-		await fs.remove(gitignorePath)
-
-[group('push'), confirm]
-gh-pages:
-	command {{ git }} diff --cached --quiet
-	command {{ git }} switch gh-pages
-	command {{ git }} merge main -X theirs --no-ff --no-commit
-	command {{ just }} build-demo-all '{{ demo_base_url }}' \
-		screenshots-missing update-data '{{ demo_base_url }}'
-	command {{ rm }} -rf docs
-	command {{ zola }} build -o docs
-	command {{ just }} fix-docs-dir
-	command {{ git }} add docs
-	command {{ git }} merge --continue
-	command {{ git }} push
-	command {{ git }} switch -

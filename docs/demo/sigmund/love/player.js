@@ -140,7 +140,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 var s = document.createElement("script");
 s.type = "text/javascript";
-s.src = "/love/"+ver+"/love.js";
+s.src = "./love/"+ver+"/love.js";
 s.async = true;
 s.onload = consentDialog;
 document.body.appendChild(s);

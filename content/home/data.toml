@@ -159,7 +159,7 @@ theme = "duckquill"
 theme = "linkita"
 name = "Linkita"
 desc = "A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly."
-tags = [ "Blog", "SEO-friendly", "Multilingual", "Responsive" ]
+tags = [ "Blog", "Multilingual", "Responsive", "SEO", "Search" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
 
@@ -262,59 +262,6 @@ theme = "zola-pulladidoks-theme"
   js = "const b=document.getElementById('info-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "mabuya"
-name = "Mabuya"
-desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/semanticdata/mabuya.git themes/mabuya
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "mabuya"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
-
-### Info
-- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
-- **License**: MIT
-- **Homepage**: <https://github.com/semanticdata/mabuya>
-- **Off. Live Demo**: <https://mabuya.vercel.app/>
-- **Min version**: 0.18.0
-- **Original**: <https://github.com/chesterhow/tale>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/mabuya/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/semanticdata/mabuya"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-mabuya"
-  js = "const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-mabuya"
-  js = "const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "researchlab"
 name = "researchlab"
 desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
@@ -367,56 +314,317 @@ theme = "researchlab"
   js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "zluinav"
-name = "UI Navigation"
-desc = "A multilingual theme designed for accessibility rather than visual."
-tags = [ "blind", "multilingual", "accessible", "responsive" ]
+theme = "olivine"
+name = "Olivine"
+desc = "A Zola theme for a personal knowledge base"
+tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
 
 ### Installation
 0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
 1. Download the theme
   - Option A. Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
+git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
   - Option B. Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/harrymkt/zluinav.git themes/zluinav
+git clone https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "zluinav"
+theme = "olivine"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
 
 ### Info
-- **Author**: [Harry Min Khant](https://harrymkt.github.io)
+- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
 - **License**: MIT
-- **Homepage**: <https://github.com/harrymkt/zluinav>
-- **Off. Live Demo**: <https://harrymkt.github.io/zluinav>
-- **Min version**: 0.19.2
+- **Homepage**: <https://github.com/>
+- **Min version**: 0.17.2
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
+  url = "https://salif.github.io/zola-themes-collection/demo/olivine/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/harrymkt/zluinav"
+  url = "https://github.com/dongryul-kim/olivine"
 
   [[project.links]]
   name = "Install"
-  url = "#install-zluinav"
-  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-olivine"
+  js = "const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-zluinav"
-  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-olivine"
+  js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "project-portfolio"
+name = "Project Portfolio"
+desc = "Theme for a project portfolio (based on Tailwind CSS)."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "project-portfolio"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+
+### Info
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
+- **Off. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
+- **Min version**: 0.9.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/awinterstein/zola-theme-project-portfolio"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-project-portfolio"
+  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-project-portfolio"
+  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "academic-paper"
+name = "Academic Paper"
+desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "academic-paper"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
+
+### Info
+- **Author**: [Alexander Terenin](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-paper>
+- **Off. Live Demo**: <https://aterenin.github.io/academic-paper>
+- **Min version**: 0.18.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-paper"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-paper"
+  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-paper"
+  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "academic-workshop"
+name = "Academic Workshop"
+desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "academic-workshop"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
+
+### Info
+- **Author**: [Alexander Terein](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-workshop>
+- **Off. Live Demo**: <https://aterenin.github.io/academic-workshop>
+- **Min version**: 0.18.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-workshop"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-workshop"
+  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-workshop"
+  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "kita"
+name = "Kita"
+desc = "Kita is a clean, elegant and simple blog theme for Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/st1020/kita.git themes/kita
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/st1020/kita.git themes/kita
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "kita"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-kita'></summary>
+
+### Info
+- **Author**: [st1020](https://st1020.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/st1020/kita>
+- **Off. Live Demo**: <https://st1020.github.io/kita/>
+- **Min version**: 0.17.0
+- **Original**: <https://github.com/nanxiaobei/hugo-paper>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/kita/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/st1020/kita"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-kita"
+  js = "const b=document.getElementById('install-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-kita"
+  js = "const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "mabuya"
+name = "Mabuya"
+desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/semanticdata/mabuya.git themes/mabuya
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "mabuya"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
+
+### Info
+- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/mabuya>
+- **Off. Live Demo**: <https://mabuya.vercel.app/>
+- **Min version**: 0.18.0
+- **Original**: <https://github.com/chesterhow/tale>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/mabuya/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/semanticdata/mabuya"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-mabuya"
+  js = "const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-mabuya"
+  js = "const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "hacker"
@@ -785,58 +993,6 @@ theme = "anemone"
   js = "const b=document.getElementById('info-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "abridge"
-name = "abridge"
-desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/jieiku/abridge.git themes/abridge
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/jieiku/abridge.git themes/abridge
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "abridge"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
-
-### Info
-- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
-- **License**: MIT
-- **Homepage**: <https://github.com/jieiku/abridge>
-- **Off. Live Demo**: <https://abridge.pages.dev/>
-- **Min version**: 0.19.1
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/jieiku/abridge"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-abridge"
-  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-abridge"
-  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "sandbox"
 name = "Sandbox"
 desc = "Sandbox is a theme for Zola."
@@ -889,264 +1045,108 @@ theme = "sandbox"
   js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "olivine"
-name = "Olivine"
-desc = "A Zola theme for a personal knowledge base"
-tags = [ ]
+theme = "zluinav"
+name = "UI Navigation"
+desc = "A multilingual theme designed for accessibility rather than visual."
+tags = [ "blind", "multilingual", "accessible", "responsive" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
 
 ### Installation
 0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
 1. Download the theme
   - Option A. Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
+git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
 ```
   - Option B. Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/dongryul-kim/olivine.git themes/olivine
+git clone https://github.com/harrymkt/zluinav.git themes/zluinav
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "olivine"
+theme = "zluinav"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
 
 ### Info
-- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
+- **Author**: [Harry Min Khant](https://harrymkt.github.io)
 - **License**: MIT
-- **Homepage**: <https://github.com/>
-- **Min version**: 0.17.2
+- **Homepage**: <https://github.com/harrymkt/zluinav>
+- **Off. Live Demo**: <https://harrymkt.github.io/zluinav>
+- **Min version**: 0.19.2
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/olivine/"
+  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/dongryul-kim/olivine"
+  url = "https://github.com/harrymkt/zluinav"
 
   [[project.links]]
   name = "Install"
-  url = "#install-olivine"
-  js = "const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-zluinav"
+  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-olivine"
-  js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-zluinav"
+  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "project-portfolio"
-name = "Project Portfolio"
-desc = "Theme for a project portfolio (based on Tailwind CSS)."
+theme = "abridge"
+name = "abridge"
+desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
 
 ### Installation
 0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
 1. Download the theme
   - Option A. Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+git submodule add https://github.com/jieiku/abridge.git themes/abridge
 ```
   - Option B. Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+git clone https://github.com/jieiku/abridge.git themes/abridge
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "project-portfolio"
+theme = "abridge"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
 
 ### Info
-- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
 - **License**: MIT
-- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
-- **Off. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
-- **Min version**: 0.9.0
+- **Homepage**: <https://github.com/jieiku/abridge>
+- **Off. Live Demo**: <https://abridge.pages.dev/>
+- **Min version**: 0.19.1
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/awinterstein/zola-theme-project-portfolio"
+  url = "https://github.com/jieiku/abridge"
 
   [[project.links]]
   name = "Install"
-  url = "#install-project-portfolio"
-  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-abridge"
+  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-project-portfolio"
-  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "academic-paper"
-name = "Academic Paper"
-desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "academic-paper"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
-
-### Info
-- **Author**: [Alexander Terenin](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-paper>
-- **Off. Live Demo**: <https://aterenin.github.io/academic-paper>
-- **Min version**: 0.18.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-paper"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-academic-paper"
-  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-academic-paper"
-  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "academic-workshop"
-name = "Academic Workshop"
-desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "academic-workshop"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
-
-### Info
-- **Author**: [Alexander Terein](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-workshop>
-- **Off. Live Demo**: <https://aterenin.github.io/academic-workshop>
-- **Min version**: 0.18.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-workshop"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-academic-workshop"
-  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-academic-workshop"
-  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "kita"
-name = "Kita"
-desc = "Kita is a clean, elegant and simple blog theme for Zola."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/st1020/kita.git themes/kita
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/st1020/kita.git themes/kita
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "kita"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-kita'></summary>
-
-### Info
-- **Author**: [st1020](https://st1020.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/st1020/kita>
-- **Off. Live Demo**: <https://st1020.github.io/kita/>
-- **Min version**: 0.17.0
-- **Original**: <https://github.com/nanxiaobei/hugo-paper>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/kita/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/st1020/kita"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-kita"
-  js = "const b=document.getElementById('install-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-kita"
-  js = "const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-abridge"
+  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "DogFood"

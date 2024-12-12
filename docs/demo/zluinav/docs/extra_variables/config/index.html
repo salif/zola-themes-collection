@@ -11,7 +11,6 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
-<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
 <div class="search-container">
 <input id="search" type="search" placeholder="🔎 Search the site">
@@ -23,6 +22,7 @@
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
+
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
@@ -69,9 +69,10 @@
 <p>The path where language TOML files are stored, default is "langs".</p>
 <h2 id="title_sep">title_sep</h2>
 <p>Title separator, default is " – ".</p>
-<h2 id="nav">nav</h2>
-<p>A list of inline tables for navigation.</p>
-<p>Each navigation item has the following properties:</p>
+<h2 id="menus">menus</h2>
+<p>A list of menus that can be shown with the menu macro.</p>
+<p>Menus are defined like, <code>extra.menus.main</code>, etc. Just the main is the custom name for your menu, such as footer, header, navigation. Usually, <code>main</code> is the name that uses by default in the site's main navigation.</p>
+<p>Each menu item has the following properties:</p>
 <ul>
 <li>
 <p><code>name</code>(string) required: the name to display.</p>
@@ -93,9 +94,9 @@
 <p><code>attributes</code>(object) optional: custom attributes. These are also call tables.</p>
 </li>
 </ul>
-<p>If you set the nav as empty or do not set at all, the navigation menu will be disabled, as well as skip to navigation link.</p>
 <p>Example navigation:</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">nav = [
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[extra.menus]
+main = [
   {name = &quot;Home&quot;, url = &quot;&#x2F;&quot;},
   {name = &quot;Blog&quot;, url = &quot;&#x2F;blog&#x2F;&quot;},
   # Translated page
@@ -103,21 +104,21 @@
 ]
 </code></pre>
 <p>You can also use another style, like this, which is the same as the demo configuration:</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[[extra.nav]]
+<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[[extra.menus.main]]
   name = &quot;Home&quot;
   url = &quot;&#x2F;.l.&#x2F;&quot;
   key = &quot;h&quot;
   id = &quot;nav1&quot;
-[[extra.nav]]
+[[extra.menus.main]]
   name = &quot;Documentation&quot;
   url = &quot;&#x2F;.l.&#x2F;docs&quot;
   id = &quot;nav2&quot;
-[[extra.nav]]
+[[extra.menus.main]]
   name = &quot;Blog&quot;
   url = &quot;&#x2F;.l.&#x2F;blog&quot;
   id = &quot;nav3&quot;
   # Lets add class attribute to blog
-  [extra.nav.attributes]
+  [extra.menus.main.attributes]
     class = &quot;blog&quot;
 </code></pre>
 </div>
