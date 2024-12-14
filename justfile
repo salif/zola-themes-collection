@@ -72,6 +72,33 @@ screenshots-missing:
 		console.error(output.join("\n"))
 	}
 
+[group('screenshot'), script('zx'), private]
+screenshots-to-remove:
+	/*
+	#!/usr/bin/env node */
+	const screenshots = await glob("static/screenshots/*")
+	const output = []
+	for (const screenshotPath of screenshots) {
+		const screenshot = path.basename(screenshotPath)
+		if (screenshot.startsWith("light-") && screenshot.endsWith(".webp")) {
+			const demo = screenshot.substring(6, screenshot.length-5)
+			if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
+				output.push(screenshot)
+			}
+		} else if (screenshot.startsWith("dark-") && screenshot.endsWith(".webp")) {
+			const demo = screenshot.substring(5, screenshot.length-5)
+			if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
+				output.push(screenshot)
+			}
+		} else {
+			output.push(screenshot)
+		}
+	}
+	if (output.length > 0) {
+		console.error("screenshots to remove:")
+		console.error(output.join("\n"))
+	}
+
 [private]
 local-test-all:
 	command {{ just }} build-demo-all '{{ local_base_url }}' update-data '{{ local_base_url }}'
