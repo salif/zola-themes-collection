@@ -135,6 +135,7 @@ themes-js cmd args='':
 	const localBaseURL = "{{ local_base_url }}"
 	const sepThemes = new Map([
 		["linkita", "https://codeberg.org/salif/linkita.git"],
+		["tabi", "https://github.com/welpo/tabi.git"],
 		["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
 		])
 	const errors = []
