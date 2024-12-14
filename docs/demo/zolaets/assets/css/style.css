@@ -1,0 +1,153 @@
+:root {
+    --color-text: #555;
+    --color-titles: #3c445f;
+    --color-background: #fff;
+    --color-border: #ccc;
+    --color-link-hover: #c9f1fe;
+    --font-serif: "Palatino Linotype", Palatino, Baskerville, "Baskerville Old Face", sans-serif;
+    --font-sans: "Arial", "Helvetica", sans-serif;
+    --font-monospace: "Courier New", "Courier", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("/assets/img/background.jpg");
+    background-size: cover;
+	background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+}
+
+body {
+    width: min(100% - 2rem, 70ch);
+    margin: 3rem auto;
+    background-color: var(--color-background);
+    outline-color: var(--color-border);
+    outline-style: ridge;
+    outline-width: 4px;
+    outline-offset: 0;
+    color: var(--color-text);
+}
+
+#topheader {
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    padding: 0 1rem;
+    background-color: var(--color-titles);
+    border-style: ridge;
+    border-width: 0 0 4px 0;
+    border-color: var(--color-border);
+}
+
+#topnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+#topnav > a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+}
+
+#topnav > a:hover {
+    text-decoration: underline;
+}
+
+#logo {
+    position: relative;
+    top: -10px;
+    image-rendering: pixelated;
+}
+
+main {
+    padding: 1rem 3rem;
+    line-height: 1.5;
+}
+
+footer {
+    border-top: ridge 4px var(--color-border);
+    margin: 1rem 3rem;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+main a:hover {
+    background-color: var(--color-link-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-titles);
+}
+
+pre {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+code {
+    font-family: var(--font-monospace);
+}
+
+#posts {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#back-to-top {
+    max-width: fit-content;
+    margin: 1rem auto;
+}
+
+main hr {
+    margin: 0.5rem;
+    border-style: outset;
+    border-width: 2px;
+    border-color: var(--color-border);
+}
+
+main figure {
+    width: 66%;
+    margin: 1rem auto;
+}
+
+main figure img {
+    width: 100%;
+}
+
+main figure figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.youtube, .spotify {
+    display: block;
+    width: 66%;
+    aspect-ratio: 16/9;
+    margin: 1rem auto;
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 1rem 1rem;
+    }
+}

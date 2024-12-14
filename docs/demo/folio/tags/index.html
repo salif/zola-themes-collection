@@ -22,11 +22,11 @@
       </nav>
 
       <nav class="site-nav">
-        <a class="page-link" href="/about">about</a>
+        <a class="page-link" href="/pages/about">about</a>
         
-        <a class="page-link" href="/projects">projects</a>
+        <a class="page-link" href="/pages/projects">projects</a>
         
-        <a class="page-link" href="/photography">photography</a>
+        <a class="page-link" href="/pages/photography">photography</a>
         </nav>
       
     </div>
@@ -40,6 +40,10 @@
         <ul class="post-tags">
             
                 <li><a href="https://salif.github.io/zola-themes-collection/demo/folio/tags/photography/">photography (1)</a></li>
+            
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/folio/tags/pagination/">pagination (4)</a></li>
+            
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/folio/tags/math/">math (1)</a></li>
             
                 <li><a href="https://salif.github.io/zola-themes-collection/demo/folio/tags/markdown/">markdown (1)</a></li>
             
@@ -63,6 +67,27 @@
       </div>
 
   </footer>
+  <!-- optional scripts -->
+  
+  
+  <!-- MathJax script for rendering LaTeX math equations -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js" async></script>
+  
+  
 </body>
 
 </html>

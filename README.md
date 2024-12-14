@@ -25,11 +25,13 @@ Have a `theme.toml` file. Have a `comfig.toml` file or `themes/theme-name/config
 - [cela](https://github.com/edwardzcn-decade/cela)
 - [bluetheme](https://github.com/bluerobotics/bluetheme)
 - [arsmateria](https://github.com/mboleary/arsmateria-zola-theme)
-- [Anatole](https://github.com/longfangsong/anatole-zola)
-- [Parchment](https://github.com/jsonfry/parchment)
-- [Hermit](https://github.com/VersBinarii/hermit_zola)
-- [HayFlow](https://github.com/aaw3/hayflow)
+- [anatole](https://github.com/longfangsong/anatole-zola)
+- [parchment](https://github.com/jsonfry/parchment)
+- [hermit_zola](https://github.com/VersBinarii/hermit_zola)
+- [hayflow](https://github.com/aaw3/hayflow)
 - [bd](https://github.com/flabbergastedbd/bd)
+- [stardust](https://github.com/UWCS/stardust-theme)
+- [zola-metro](https://github.com/RedstoneParadox/zola-metro)
 
 Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 
@@ -47,5 +49,6 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 
 #### No license
 
-- [Attention](https://github.com/tongyul/attention-theme-zola)
-- [bare-room](https://github.com/ghrrlp/bare-room.git)
+- [attention](https://github.com/tongyul/attention-theme-zola)
+- [bare-room](https://github.com/ghrrlp/bare-room)
+- [zola-es-theme](https://github.com/scouten/zola-es-theme)

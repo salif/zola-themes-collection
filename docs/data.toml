@@ -52,58 +52,6 @@ theme = "zola-bearblog"
   js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "tabi"
-name = "tabi"
-desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/welpo/tabi.git themes/tabi
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/welpo/tabi.git themes/tabi
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "tabi"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
-
-### Info
-- **Author**: [Óscar Fernández](https://osc.garden)
-- **License**: MIT
-- **Homepage**: <https://github.com/welpo/tabi>
-- **Off. Live Demo**: <https://welpo.github.io/tabi>
-- **Min version**: 0.17.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/tabi/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/welpo/tabi"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-tabi"
-  js = "const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-tabi"
-  js = "const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "duckquill"
 name = "Duckquill"
 desc = "Modern, pretty, and clean theme"
@@ -154,6 +102,58 @@ theme = "duckquill"
   name = "Info"
   url = "#info-duckquill"
   js = "const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "tabi"
+name = "tabi"
+desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/welpo/tabi.git themes/tabi
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/welpo/tabi.git themes/tabi
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "tabi"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
+
+### Info
+- **Author**: [Óscar Fernández](https://osc.garden)
+- **License**: MIT
+- **Homepage**: <https://github.com/welpo/tabi>
+- **Off. Live Demo**: <https://welpo.github.io/tabi>
+- **Min version**: 0.17.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/tabi/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/welpo/tabi"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-tabi"
+  js = "const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-tabi"
+  js = "const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "linkita"
@@ -1043,6 +1043,59 @@ theme = "sandbox"
   name = "Info"
   url = "#info-sandbox"
   js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "zolaets"
+name = "Zolaets"
+desc = "Zonelets style recreation in Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zolaets'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/ZinRicky/zolaets.git themes/zolaets
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/ZinRicky/zolaets.git themes/zolaets
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "zolaets"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zolaets'></summary>
+
+### Info
+- **Author**: [~zinricky](https://tilde.team/~zinricky/)
+- **License**: MIT
+- **Homepage**: <https://github.com/ZinRicky/zolaets>
+- **Off. Live Demo**: <https://zolaets.neocities.org/>
+- **Min version**: 0.19.1
+- **Original**: <https://zonelets.itch.io/zonelets>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zolaets/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/ZinRicky/zolaets"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zolaets"
+  js = "const b=document.getElementById('install-zolaets').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zolaets"
+  js = "const b=document.getElementById('info-zolaets').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "zluinav"

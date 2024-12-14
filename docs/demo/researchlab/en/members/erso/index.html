@@ -227,7 +227,7 @@
 						
 							
 								<div class="-mx-3">
-									<button type="button" id="about-research-laboratory-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+									<button type="button" id="about-research-laboratory-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-expanded="false">
 										About Us
 										<svg id="about-research-laboratory-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
 											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -251,7 +251,7 @@
 						
 							
 								<div class="-mx-3">
-									<button type="button" id="activities-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+									<button type="button" id="activities-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-expanded="false">
 										Activities
 										<svg id="activities-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
 											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -273,7 +273,7 @@
 						
 							
 								<div class="-mx-3">
-									<button type="button" id="career-internship-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-controls="disclosure-1" aria-expanded="false">
+									<button type="button" id="career-internship-btn-mobile" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold" style="color: #ffffff;" aria-expanded="false">
 										Career &#x2F; Internship
 										<svg id="career-internship-icon-mobile" class="h-5 w-5 flex-none transform" viewBox="0 0 20 20" fill="#ffffff" aria-hidden="true" data-slot="icon">
 											<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -522,6 +522,7 @@
 
   <main class="container mx-auto p-4 pt-28 flex-grow">
     
+<div id="member-container">
   <article class="prose mx-auto">
     
       <h1 class="text-3xl font-bold mt-4 mb-2">Lyra Erso</h1>
@@ -532,6 +533,15 @@
     
     
   </article>
+</div>
+
+<script>
+  const bibContainer = document.getElementById("bib-container")
+  const memberContainer = document.getElementById("member-container")
+  if (bibContainer) {
+    memberContainer.appendChild(bibContainer)
+  }
+</script>
 
   </main>
   <button id="scrollUpBtn" class="hidden fixed bottom-32 right-5 p-3 rounded-full shadow-lg transition duration-300" style="background-color: #666; color: #ffffff;">

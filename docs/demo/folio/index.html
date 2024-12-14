@@ -22,11 +22,11 @@
       </nav>
 
       <nav class="site-nav">
-        <a class="page-link" href="/about">about</a>
+        <a class="page-link" href="/pages/about">about</a>
         
-        <a class="page-link" href="/projects">projects</a>
+        <a class="page-link" href="/pages/projects">projects</a>
         
-        <a class="page-link" href="/photography">photography</a>
+        <a class="page-link" href="/pages/photography">photography</a>
         </nav>
       
     </div>
@@ -43,12 +43,33 @@
   <hr>
   <br />
 </div>
-<div class="posts"><ul class="post-list">
+<div class="posts">
+  
+  
+      
+      
+  
+  <ul class="post-list">
+    <li class="post on-list">
+      <h4 class="post-title"><a href="https://salif.github.io/zola-themes-collection/demo/folio/math/">A post with math</a></h4>
+      <p class="post-meta">
+        <span class="post-date">
+          July 16, 2024
+          </span>
+        <span> — Everett Robinson</span>
+      </p>
+      <div class="post-content">
+        an example of a blog post with some math
+      </div>
+      <br>
+      <hr>
+    </li>
+    
     <li class="post on-list">
       <h4 class="post-title"><a href="https://salif.github.io/zola-themes-collection/demo/folio/code/">A post with code</a></h4>
       <p class="post-meta">
         <span class="post-date">
-          July 15, 2015
+          July 15, 2024
           </span>
         <span> — Everett Robinson</span>
       </p>
@@ -63,7 +84,7 @@
       <h4 class="post-title"><a href="https://salif.github.io/zola-themes-collection/demo/folio/images/">A post with images</a></h4>
       <p class="post-meta">
         <span class="post-date">
-          May 15, 2015
+          May 15, 2024
           </span>
         <span> — Everett Robinson</span>
       </p>
@@ -73,22 +94,13 @@
       <br>
       <hr>
     </li>
-    
-    <li class="post on-list">
-      <h4 class="post-title"><a href="https://salif.github.io/zola-themes-collection/demo/folio/formatting-and-links/">A post with formatting and links</a></h4>
-      <p class="post-meta">
-        <span class="post-date">
-          March 15, 2015
-          </span>
-        <span> — Everett Robinson</span>
-      </p>
-      <div class="post-content">
-        march & april, looking forward to summer
-      </div>
-      <br>
-      <hr>
-    </li>
     </ul>
+  <footer class="page-footer">
+      <nav>
+          <!--Hidden Previous-Button-->
+          <a class="next" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;folio&#x2F;page&#x2F;2&#x2F;">Next →</a>
+      </nav>
+  </footer>
 </div>
 
     </div>
@@ -102,6 +114,27 @@
       </div>
 
   </footer>
+  <!-- optional scripts -->
+  
+  
+  <!-- MathJax script for rendering LaTeX math equations -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ["$", "$"],
+          ["\\(", "\\)"],
+        ],
+        displayMath: [
+          ["$$", "$$"],
+          ["\\[", "\\]"],
+        ],
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js" async></script>
+  
+  
 </body>
 
 </html>
