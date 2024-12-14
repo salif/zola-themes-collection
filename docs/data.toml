@@ -209,59 +209,6 @@ theme = "linkita"
   js = "const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "zola-pulladidoks-theme"
-name = "adidoks"
-desc = "AdiDoks is a Zola theme helping you build modern documentation."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-pulladidoks-theme'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/ShawnPConroy/zola-pulladidoks-theme.git themes/zola-pulladidoks-theme
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "zola-pulladidoks-theme"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-pulladidoks-theme'></summary>
-
-### Info
-- **Author**: [Aaran Xu](https://github.com/aaranxu)
-- **License**: MIT
-- **Homepage**: <https://github.com/aaranxu/adidoks>
-- **Off. Live Demo**: <https://adidoks.netlify.app/>
-- **Min version**: 0.15.0
-- **Original**: <https://github.com/h-enk/doks>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-pulladidoks-theme/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/ShawnPConroy/zola-pulladidoks-theme"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zola-pulladidoks-theme"
-  js = "const b=document.getElementById('install-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zola-pulladidoks-theme"
-  js = "const b=document.getElementById('info-zola-pulladidoks-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "researchlab"
 name = "researchlab"
 desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
