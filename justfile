@@ -118,7 +118,8 @@ submodule-add url name: && (build-check "themes/"+name)
 
 [group('help')]
 submodule-update-all:
-	command {{ git }} submodule update --remote --merge
+	command {{ git }} submodule update --init --remote
+	# command {{ git }} submodule foreach --recursive {{ git }} submodule update --init
 
 [group('push'), script('zx')]
 fix-docs-dir:

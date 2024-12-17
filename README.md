@@ -46,6 +46,7 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 - [norwind](https://github.com/nobodygx/norwind)
 - [nomad](https://github.com/nomad-dev-writer/zola-nomad-theme)
 - [cosmic__cube](https://github.com/ccarral/cosmic__cube)
+- [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang)
 
 #### No license
 

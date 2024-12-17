@@ -835,6 +835,58 @@ theme = "apollo"
   js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "oceanic-zen"
+name = "Oceanic Zen"
+desc = "Minimalistic blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "oceanic-zen"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
+
+### Info
+- **Author**: [Barlog M.](https://barlog.li)
+- **License**: MIT
+- **Homepage**: <https://github.com/barlog-m/oceanic-zen>
+- **Off. Live Demo**: <https://oceanic-zen.netlify.app>
+- **Min version**: 0.12.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/barlog-m/oceanic-zen"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-oceanic-zen"
+  js = "const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-oceanic-zen"
+  js = "const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "terminimal"
 name = "terminimal"
 desc = "A simple, minimal retro theme"
@@ -940,6 +992,110 @@ theme = "anemone"
   js = "const b=document.getElementById('info-anemone').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "abridge"
+name = "abridge"
+desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jieiku/abridge.git themes/abridge
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jieiku/abridge.git themes/abridge
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "abridge"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
+
+### Info
+- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jieiku/abridge>
+- **Off. Live Demo**: <https://abridge.pages.dev/>
+- **Min version**: 0.19.1
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jieiku/abridge"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-abridge"
+  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-abridge"
+  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "zluinav"
+name = "UI Navigation"
+desc = "A multilingual theme designed for accessibility rather than visual."
+tags = [ "blind", "multilingual", "accessible", "responsive" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/harrymkt/zluinav.git themes/zluinav
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "zluinav"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
+
+### Info
+- **Author**: [Harry Min Khant](https://harrymkt.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/harrymkt/zluinav>
+- **Off. Live Demo**: <https://harrymkt.github.io/zluinav>
+- **Min version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/harrymkt/zluinav"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zluinav"
+  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zluinav"
+  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "sandbox"
 name = "Sandbox"
 desc = "Sandbox is a theme for Zola."
@@ -1043,110 +1199,6 @@ theme = "zolaets"
   name = "Info"
   url = "#info-zolaets"
   js = "const b=document.getElementById('info-zolaets').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "zluinav"
-name = "UI Navigation"
-desc = "A multilingual theme designed for accessibility rather than visual."
-tags = [ "blind", "multilingual", "accessible", "responsive" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/harrymkt/zluinav.git themes/zluinav
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "zluinav"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
-
-### Info
-- **Author**: [Harry Min Khant](https://harrymkt.github.io)
-- **License**: MIT
-- **Homepage**: <https://github.com/harrymkt/zluinav>
-- **Off. Live Demo**: <https://harrymkt.github.io/zluinav>
-- **Min version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/harrymkt/zluinav"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zluinav"
-  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zluinav"
-  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "abridge"
-name = "abridge"
-desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/jieiku/abridge.git themes/abridge
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/jieiku/abridge.git themes/abridge
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "abridge"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
-
-### Info
-- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
-- **License**: MIT
-- **Homepage**: <https://github.com/jieiku/abridge>
-- **Off. Live Demo**: <https://abridge.pages.dev/>
-- **Min version**: 0.19.1
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/jieiku/abridge"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-abridge"
-  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-abridge"
-  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "DogFood"
@@ -1406,58 +1458,6 @@ theme = "zola-pickles"
   name = "Info"
   url = "#info-zola-pickles"
   js = "const b=document.getElementById('info-zola-pickles').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "oceanic-zen"
-name = "Oceanic Zen"
-desc = "Minimalistic blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "oceanic-zen"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
-
-### Info
-- **Author**: [Barlog M.](https://barlog.li)
-- **License**: MIT
-- **Homepage**: <https://github.com/barlog-m/oceanic-zen>
-- **Off. Live Demo**: <https://oceanic-zen.netlify.app>
-- **Min version**: 0.12.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/barlog-m/oceanic-zen"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-oceanic-zen"
-  js = "const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-oceanic-zen"
-  js = "const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "book-shelf"
