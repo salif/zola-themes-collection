@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">အဓိကအကြောင်းအရာသို့ ကျော်သွားပါ။</a>
+<a href="#navigation" class="skip-link">လမ်းညွှန်မှုသို့ ကျော်သွားပါ။</a>
 <a href="#zlfooter" class="skip-link">အောက်ခြေမှတ်စုသို့ ကျော်သွားပါ။</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 <nav id="navigation" role="navigation" aria-label="ပင်မမီနူး">
 <h2>ပင်မမီနူး</h2>
 <ul style="list-style-type:none;">
@@ -27,7 +25,7 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/my/blog">ဘလော့</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
 <h1>test3</h1>
 <p>စာရေးသူ: Harry Min Khant</p>
@@ -50,7 +48,10 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

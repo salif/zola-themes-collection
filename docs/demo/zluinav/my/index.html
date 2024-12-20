@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">အဓိကအကြောင်းအရာသို့ ကျော်သွားပါ။</a>
+<a href="#navigation" class="skip-link">လမ်းညွှန်မှုသို့ ကျော်သွားပါ။</a>
 <a href="#zlfooter" class="skip-link">အောက်ခြေမှတ်စုသို့ ကျော်သွားပါ။</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 <nav id="navigation" role="navigation" aria-label="ပင်မမီနူး">
 <h2>ပင်မမီနူး</h2>
 <ul style="list-style-type:none;">
@@ -27,9 +25,9 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/my/blog">ဘလော့</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="UI_လမ်းညွှန်">UI လမ်းညွှန်</h1>
+<h1 id="ui-lm-nnyvhn">UI လမ်းညွှန်</h1>
 <p>UI Navigation (သို့) zluinav ဟုခေါ်သော Zola theme သည် ပုံသဏ္ဍာန်များနှင့် မက်ခရိုများကို အသုံးပြု၍ တတ်နိုင်သမျှ လွယ်ကူအောင် ပြုလုပ်ထားခြင်းထက် အလွယ်တကူ ဖန်တီးထားသည့် Zola အပြင်အဆင်တစ်ခုဖြစ်သည်။ ကျွန်ုပ်သည် မျက်မမြင် developer တစ်ဦးဖြစ်သောကြောင့် အမြင်အာရုံချို့တဲ့သောအသုံးပြုသူများသည် ၎င်းတို့ကိုအသုံးပြုနိုင်စေရန် တတ်နိုင်သမျှ သုံးစွဲနိုင်မှုဖြင့် ဖွံ့ဖြိုးတိုးတက်စေလိုပါသည်။</p>
 <p>Zola သည် ၎င်း၏ templateing engine အဖြစ် tera ဖြင့် မောင်းနှင်သည့် Rust ဖြင့် ရေးသားထားသော မြန်ဆန်သော site generator တစ်ခုဖြစ်ပြီး အားကောင်းသည့် အပြင်အဆင် ဖန်တီးမှုအင်္ဂါရပ်ပါရှိသည်။</p>
 </div>
@@ -40,7 +38,10 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,78 @@
+/* Format tables */
+table {
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  td,
+  th {
+    border: 1px solid var(--off-fg);
+    text-align: start;
+    padding: 0.5rem;
+  }
+  
+  th {
+    background-color: var(--inner-bg);
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--inner-bg);
+  }
+  
+  table caption {
+    text-align: left;
+    font-weight: bold;
+    margin: 0 0 .4rem 1rem;
+  }
+
+body > footer {
+    color: var(--muted);
+    font-size: .875;
+  }
+
+  .footnote-definition p {
+    display: inline;
+    margin: .625rem 0 0 .625rem;
+}
+  
+
+  /* chromium scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    overflow: visible;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--logo);
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--muted);
+  }
+  
+  /* firefox scrollbars */
+  * {
+    scrollbar-color: var(--logo) var(--muted);
+    scrollbar-width: thin;
+    scrollbar-height: thin;
+  }
+
+  .icons {
+    width: 1.3rem;
+    height: 1.3rem;
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--text);
+    fill: var(--text);
+    background-color: transparent;
+    cursor: pointer;
+}
+  
+
+
+  

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<base href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/theme.js"></script>
+<title>Frontmadder Variables – Documentation – UI Navigation</title>
+</head>
+<body>
+<a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
+<a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#zlfooter" class="skip-link">Skip to footer</a>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+
+<nav id="navigation" role="navigation" aria-label="Main menu">
+<h2>Main menu</h2>
+<ul style="list-style-type:none;">
+
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+</ul>
+</nav>
+
+<nav roll="navigation" aria-label=Documentation>
+<h2>Documentation</h2>
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/writing/">Writing</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/blocks/">Blocks</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/templates/">Templates</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/documentation/">Documentation Site</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/">Search</a></li>
+</ul>
+<h3>Extra Variables</h3>
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/">Config Variables</a></li>
+<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/frontmadder/">Frontmadder Variables</a></li>
+</ul>
+<h3>Macros</h3>
+<p>This is a list of available macros that are located in templates/mcs directory.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/post/">Post</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/translator/">Translator</a></li>
+</ul>
+<h3>Shortcodes</h3>
+<p>This is a list of available shortcodes that are located in shortcodes directory that can be used in your markdown files to obtain information.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/audio/">Audio</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/details/">Details</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/geturl/">Geturl</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
+</ul>
+</nav>
+<main data-pagefind-body>
+<div id="mainc">
+<h1 id="extra-frontmadder-variables">Extra Frontmadder Variables</h1>
+<p>These variables must be set under <code>extra</code> object of the page. Use heading level 2, and if it contains no spaces, then it means they are variables. Otherwise, they are texts splitted.</p>
+<h2 id="featured-image-display">Featured Image Display</h2>
+<p>You can display an image as the post's logo. These variables are available for the pages using <code>blogpage</code> template.</p>
+<ul>
+<li><code>img</code>(string) optional: the image / image URL. Note that to display an image, this variable must be set. other image variables are optional.</li>
+<li><code>alt</code>(string) optional: the alt text of the featured image. Requires the <code>img</code> variable to be set.</li>
+</ul>
+<h2 id="search">search</h2>
+<p>bool: Toggles search indexing for this page. Available for pagefind format. Defaults to what it is set in the <code>searching</code> object of the config.</p>
+</div>
+</main>
+<div id="zlfooter">
+<footer>
+<p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>
+</footer>
+</div>
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
+</body>
+</html>

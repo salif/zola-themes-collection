@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
@@ -27,9 +25,9 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="UI_Navigation">UI Navigation</h1>
+<h1 id="ui-navigation">UI Navigation</h1>
 <p>UI Navigation, or known as zluinav, is a Zola theme designed for accessibility rather than visual and made as easy as possible using templates and macros. Since I am a blind developer, I'd like to develop with accessibility as possible so visually impaired users can use them.</p>
 <p>Zola is a fast site generator written in Rust powered by tera as its templating engine and contained a powerful theme creation feature.</p>
 <p>All possible code formats and shortcodes are provided as an example in English at <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/example/" title="Example code formats and shortcodes in English!">Example page</a></p>
@@ -41,7 +39,10 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

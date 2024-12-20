@@ -6,18 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/theme.js"></script>
-<title>Post Page Variables – Documentation – UI Navigation</title>
+<title>Search – Documentation – UI Navigation</title>
 </head>
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
@@ -36,11 +34,12 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/blocks/">Blocks</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/templates/">Templates</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/documentation/">Documentation Site</a></li>
+<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/">Search</a></li>
 </ul>
 <h3>Extra Variables</h3>
 <ul style="list-style-type:none;">
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/config/">Config Variables</a></li>
-<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/post/">Post Page Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/">Config Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/frontmadder/">Frontmadder Variables</a></li>
 </ul>
 <h3>Macros</h3>
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
@@ -61,17 +60,34 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="Extra_Post_Page_Variables">Extra Post Page Variables</h1>
-<p>These variables must be set under <code>extra</code> object of the post page, another word, pages using blogpage.html template.</p>
-<h2 id="Featured_Image_Display">Featured Image Display</h2>
-<p>You can display an image as the post's logo.</p>
+<h1 id="search">Search</h1>
+<p>Zluinav has search built-in. This is a quick overview on how to create your search.</p>
+<h2 id="configuration">Configuration</h2>
+<p>See <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/#searching">search configuration</a></p>
+<h2 id="sformats">Search Formats</h2>
+<p>You have a variety of formats to choose for your search.</p>
+<h3 id="main">main</h3>
+<p>This format uses the default searching method configured in search according to Zola's documentation. <code>search.js</code> in the static folder provides for <code>elasticlunr</code>.</p>
+<h3 id="pagefind">pagefind</h3>
+<p>This is the default used in Zluinav's demo and is a third party searching tool, and thus it cannot be used in <code>zola serve</code>. Instead, this is best if you run this tool after the build. In short, this tool runs over your HTML files to generate the search, and it only takes up a few seconds.</p>
+<details>
+<summary>Setup Pagefind</summary>
+<h4 id="setup-pagefind">Setup Pagefind</h4>
+<p>Do the following to get up and run Pagefind. We'll asume you have Python installed:</p>
+<ol>
+<li>Install Pagefind extended version. You can do this by this command up to the root of this repository. <code>pip install -r requirements.txt</code></li>
+<li>Set the search format in the <code>searching</code> object.</li>
+<li>Build the site. <code>zola build</code></li>
+<li>Generate the search index. Make sure to replace outputdir with the directory where your built files live. <code>python -m pagefind --site outputdir</code></li>
+</ol>
 <ul>
-<li><code>img</code>(string) optional: the image / image URL. Note that to display an image, this variable must be set. other image variables are optional.</li>
-<li><code>alt</code>(string) optional: the alt text of the featured image. Requires the <code>img</code> variable to be set.</li>
+<li>Make sure to add <code>html</code> tag with the <code>lang</code> attribute set if you are building multilingual search.</li>
+<li>If you want to define where to start searching from, add <code>data-pagefind</code> to a tag like div.</li>
 </ul>
-</div>
+<p>That's it!</p>
+</details></div>
 </main>
 <div id="zlfooter">
 <footer>
@@ -79,7 +95,10 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

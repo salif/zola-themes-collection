@@ -144,11 +144,12 @@ function initSearch() {
 	var currentTerm = "";
 	var index;
 	const base_url = document.querySelector("base").href;
-	const language = "en";
-	const resource_path = `/search_index.${language}.json`;
+	const lang = document.querySelector("html").lang;
+	const language = (lang ? lang : "en");
+	const resource_path = new URL(`search_index.${language}.json`, base_url).href;
 	var initIndex = async function () {
 		if (index === undefined) {
-			index = fetch(`${base_url}${resource_path}`)
+			index = fetch(`${resource_path}`)
 				.then(
 					async function(response) {
 						return await elasticlunr.Index.load(await response.json());

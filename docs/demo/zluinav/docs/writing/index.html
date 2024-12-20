@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
@@ -36,11 +34,12 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/blocks/">Blocks</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/templates/">Templates</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/documentation/">Documentation Site</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/">Search</a></li>
 </ul>
 <h3>Extra Variables</h3>
 <ul style="list-style-type:none;">
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/config/">Config Variables</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/post/">Post Page Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/">Config Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/frontmadder/">Frontmadder Variables</a></li>
 </ul>
 <h3>Macros</h3>
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
@@ -61,9 +60,9 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="Writing">Writing</h1>
+<h1 id="writing">Writing</h1>
 <p>In page content, you can add variables that will be replaced with the value when the site builds.
 Variables are defined by <code>%variable_name%</code>. For example, <code>This page is named %title% and was published on %date%, and was last updated on %updated%.</code></p>
 <p>You can render the variable name itself by prefixing with <code>/</code>. For example, <code>%/title%</code> will be rendered as <code>%title%</code> without replacing its value.</p>
@@ -85,7 +84,10 @@ Variables are defined by <code>%variable_name%</code>. For example, <code>This p
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

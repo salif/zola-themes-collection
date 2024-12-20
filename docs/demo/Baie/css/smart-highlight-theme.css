@@ -1,0 +1,180 @@
+:root {
+    --main: light-dark(#4f5b66, #c0c5ce);
+    --code-background: light-dark(#eff1f5, #2b303b);
+
+    --subtle: light-dark(#a7adba, #65737e);
+    --grey: light-dark(#565656, #565656);
+
+    --off-main: light-dark(#343d46, #eff1f5);
+    --off-back: light-dark(#dfe1e8, #4f5b66);
+
+    --inv-main: light-dark(#c0c5ce, #4f5b66);
+
+    --pink: light-dark(#f92672, #f92672);
+    --mauve: light-dark(#b48ead, #b48ead);
+    --red: light-dark(#bf616a, #bf616a);
+    --blue: light-dark(#8fa1b3, #8fa1b3);
+    --teal: light-dark(#96b5b4, #96b5b4);
+    --lime: light-dark(#a6e22e, #a6e22e);
+    --green: light-dark(#a3be8c, #a3be8c);
+    --brown: light-dark(#ab7967, #ab7967);
+    --purple: light-dark(#967efb, #967efb);
+    
+    --orange: light-dark(#d08770, #ebcb8b);
+}
+
+
+
+
+.z-code {
+    color: var(--main);
+    background-color: var(--code-background);
+}
+.z-variable.z-parameter.z-function {
+    color: var(--main);
+}
+.z-comment, .z-punctuation.z-definition.z-comment {
+    color: var(--subtle);
+}
+.z-punctuation.z-definition.z-string, .z-punctuation.z-definition.z-variable, .z-punctuation.z-definition.z-string, .z-punctuation.z-definition.z-parameters, .z-punctuation.z-definition.z-string, .z-punctuation.z-definition.z-array {
+    color: var(--main);
+}
+.z-none {
+    color: var(--main);
+}
+.z-keyword.z-operator {
+    color: var(--main);
+}
+.z-keyword {
+    color: var(--mauve);
+}
+.z-variable {
+    color: var(--red);
+}
+.z-entity.z-name.z-function, .z-meta.z-require, .z-support.z-function.z-any-method {
+    color: var(--blue);
+}
+.z-support.z-class, .z-entity.z-name.z-class, .z-entity.z-name.z-type.z-class {
+    color: var(--orange);
+}
+.z-meta.z-class {
+    color: var(--off-main);
+}
+.z-keyword.z-other.z-special-method {
+    color: var(--blue);
+}
+.z-storage {
+    color: var(--mauve);
+}
+.z-support.z-function {
+    color: var(--teal);
+}
+.z-string, .z-constant.z-other.z-symbol, .z-entity.z-other.z-inherited-class {
+    color: var(--green);
+}
+.z-constant.z-numeric {
+    color: var(--orange);
+}
+.z-none {
+    color: var(--orange);
+}
+.z-none {
+    color: var(--orange);
+}
+.z-constant {
+    color: var(--orange);
+}
+.z-entity.z-name.z-tag {
+    color: var(--red);
+}
+.z-entity.z-other.z-attribute-name {
+    color: var(--orange);
+}
+.z-entity.z-other.z-attribute-name.z-id, .z-punctuation.z-definition.z-entity {
+    color: var(--blue);
+}
+.z-meta.z-selector {
+    color: var(--mauve);
+}
+.z-none {
+    color: var(--orange);
+}
+.z-markup.z-heading .z-punctuation.z-definition.z-heading, .z-entity.z-name.z-section {
+    color: var(--blue);
+}
+.z-keyword.z-other.z-unit {
+    color: var(--orange);
+}
+.z-markup.z-bold, .z-punctuation.z-definition.z-bold {
+    color: var(--orange);
+    font-weight: bold;
+}
+.z-markup.z-italic, .z-punctuation.z-definition.z-italic {
+    color: var(--mauve);
+    font-style: italic;
+}
+.z-markup.z-raw.z-inline {
+    color: var(--green);
+}
+.z-string.z-other.z-link {
+    color: var(--red);
+}
+.z-meta.z-link {
+    color: var(--orange);
+}
+.z-markup.z-list {
+    color: var(--red);
+}
+.z-markup.z-quote {
+    color: var(--orange);
+}
+.z-meta.z-separator {
+    color: var(--main);
+    background-color: var(--off-back);
+}
+.z-markup.z-inserted, .z-markup.z-inserted.z-git_gutter {
+    color: var(--green);
+}
+.z-markup.z-deleted, .z-markup.z-deleted.z-git_gutter {
+    color: var(--red);
+}
+.z-markup.z-changed, .z-markup.z-changed.z-git_gutter {
+    color: var(--mauve);
+}
+.z-markup.z-ignored, .z-markup.z-ignored.z-git_gutter {
+    color: var(--inv-main);
+}
+.z-markup.z-untracked, .z-markup.z-untracked.z-git_gutter {
+    color: var(--inv-main);
+}
+.z-constant.z-other.z-color {
+    color: var(--teal);
+}
+.z-string.z-regexp {
+    color: var(--teal);
+}
+.z-constant.z-character.z-escape {
+    color: var(--teal);
+}
+.z-punctuation.z-section.z-embedded, .z-variable.z-interpolation {
+    color: var(--brown);
+}
+.z-invalid.z-illegal {
+    color: var(--code-background);
+    background-color: var(--red);
+}
+.z-markup.z-deleted.z-git_gutter {
+    color: var(--pink);
+}
+.z-markup.z-inserted.z-git_gutter {
+    color: var(--lime);
+}
+.z-markup.z-changed.z-git_gutter {
+    color: var(--purple);
+}
+.z-markup.z-ignored.z-git_gutter {
+    color: var(--grey);
+}
+.z-markup.z-untracked.z-git_gutter {
+    color: var(--grey);
+}

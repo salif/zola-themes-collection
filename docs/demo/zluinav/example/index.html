@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
@@ -27,10 +25,10 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="Examples">Examples</h1>
-<h2 id="Audio_shortcode">Audio shortcode</h2>
+<h1 id="examples">Examples</h1>
+<h2 id="audio-shortcode">Audio shortcode</h2>
 <p><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/audio/">Documentation</a>.
 <div>
 <audio controls="controls">
@@ -40,28 +38,28 @@
 </audio>
 </div></p>
 <p>Enjoy the audio shortcode!</p>
-<h2 id="Tab">Tab</h2>
+<h2 id="tab">Tab</h2>
 <p><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Documentation</a>.</p>
 <p>Installation:
 <div role="tab" class="tab" data-tab-id="1" aria-selected="false" onclick="switch_tab('1')">Windows</div>
 <div role="tab" class="tab" data-tab-id="2" aria-selected="false" onclick="switch_tab('2')">Android</div>
 <div role="tab" class="tab" data-tab-id="3" aria-selected="false" onclick="switch_tab('3')">Web Browser</div></p>
 <div class="tab-content" id="tab-content-1" style="display: none;">
-<h3 id="Windows">Windows</h3>
+<h3 id="windows">Windows</h3>
 <ul>
 <li>Click on the EXE file.</li>
 <li>follow the prompts</li>
 </ul>
 </div><script>switch_tab("1");</script>
 <div class="tab-content" id="tab-content-2" style="display: none;">
-<h3 id="Android">Android</h3>
+<h3 id="android">Android</h3>
 <ul>
 <li>Click on APK file.</li>
 <li>Click install button.</li>
 </ul>
 </div>
 <div class="tab-content" id="tab-content-3" style="display: none;">
-<h3 id="Web">Web</h3>
+<h3 id="web">Web</h3>
 <ul>
 <li>Open the website.</li>
 <li>Use it.</li>
@@ -74,7 +72,10 @@
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>

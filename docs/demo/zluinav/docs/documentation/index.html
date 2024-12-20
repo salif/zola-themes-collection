@@ -11,13 +11,11 @@
 <body>
 <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
 <a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
 <a href="#zlfooter" class="skip-link">Skip to footer</a>
-<div class="search-container">
-<input id="search" type="search" placeholder="🔎 Search the site">
-<div class="search-results">
-<div class="search-results__items"></div>
-</div>
-</div>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
 
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
@@ -36,11 +34,12 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/blocks/">Blocks</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/templates/">Templates</a></li>
 <li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/documentation/">Documentation Site</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/">Search</a></li>
 </ul>
 <h3>Extra Variables</h3>
 <ul style="list-style-type:none;">
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/config/">Config Variables</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra_variables/post/">Post Page Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/">Config Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/frontmadder/">Frontmadder Variables</a></li>
 </ul>
 <h3>Macros</h3>
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
@@ -61,12 +60,12 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main>
+<main data-pagefind-body>
 <div id="mainc">
-<h1 id="Documentation_Site">Documentation Site</h1>
+<h1 id="documentation-site">Documentation Site</h1>
 <p>Zluinav supports built-in documentation template that allows you to create list base documentation pages. Each section, starting at content/, you can create a subsection documentation. You can also look the docs folder of this theme.</p>
 <p><strong>Note</strong>: documentations can be sorted by the method you like. Even multiple sort methods can be used in multiple subsections. Zluinav documentation uses weight and title sort styles. Please note that when using weight, you also need to set for subsections.</p>
-<h2 id="Setup">Setup</h2>
+<h2 id="setup">Setup</h2>
 <p>First, create first documentation section in content folder, and add _index.md to it containing the following frontmadder. For this documentation, we will create docs folder.</p>
 <pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">+++
 title = &quot;Your Documentation Main Section&#x27;s Title&quot;
@@ -84,7 +83,7 @@ weight = 1
 +++
 Hello!
 </code></pre>
-<h2 id="Sections">Sections</h2>
+<h2 id="sections">Sections</h2>
 <p>You can also have subsections inside the main one. However, you cannot have more than 1 sections inside a subsection. For example, you can't have docs/a/b, but you can have docs/a, and docs/b, etc.</p>
 <p>Lets create a subfolder name test inside the main documentation section (docs) in this case.</p>
 <p>In the test folder, we will add _index.md with the following content.</p>
@@ -108,7 +107,7 @@ weight = 1
 I am a test section, so you know displaying in first.
 </code></pre>
 <p>You may then create pages in the test section usually as pages in the main documentation section.</p>
-<h2 id="Variables">Variables</h2>
+<h2 id="variables">Variables</h2>
 <p>The following variables may be required to set in the main documentation section if the section isn't named <code>docs</code>. All below variables are set in extra object of the main documentation section.</p>
 <ul>
 <li><code>section_path</code>: the path to the main documentation section. Default: "docs/_index.md"</li>
@@ -121,7 +120,10 @@ I am a test section, so you know displaying in first.
 </footer>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/search.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
 </body>
 </html>
