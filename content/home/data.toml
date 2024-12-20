@@ -1709,3 +1709,104 @@ theme = "fl1tzi-com-theme"
   name = "Info"
   url = "#info-fl1tzi-com-theme"
   js = "const b=document.getElementById('info-fl1tzi-com-theme').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "Baie"
+name = "Baie"
+desc = "A grounded theme for Zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-Baie'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/Wtoll/Baie.git themes/Baie
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/Wtoll/Baie.git themes/Baie
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "Baie"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-Baie'></summary>
+
+### Info
+- **Author**: [Will Toll](https://wtoll.com/)
+- **License**: MIT
+- **Homepage**: <https://github.com/Wtoll/Baie>
+- **Off. Live Demo**: <https://wtoll.github.io/baie>
+- **Min version**: 0.4.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/Baie/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/Wtoll/Baie"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-Baie"
+  js = "const b=document.getElementById('install-Baie').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-Baie"
+  js = "const b=document.getElementById('info-Baie').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "zizotto"
+name = "zizotto"
+desc = ""
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zizotto'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/xihn/zizotto.git themes/zizotto
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/xihn/zizotto.git themes/zizotto
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "zizotto"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zizotto'></summary>
+
+### Info
+- **License**: undefined
+- **Homepage**: <https://github.com/xihn/zizotto>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zizotto/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/xihn/zizotto"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zizotto"
+  js = "const b=document.getElementById('install-zizotto').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zizotto"
+  js = "const b=document.getElementById('info-zizotto').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
