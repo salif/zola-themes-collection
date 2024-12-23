@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<base href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<baseurl href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
@@ -20,10 +20,7 @@
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
-
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
 
@@ -45,8 +42,9 @@
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
 
 <ul style="list-style-type:none;">
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/menu/">Menu</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/post/">Post</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/translator/">Translator</a></li>
 </ul>
@@ -60,24 +58,23 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main data-pagefind-body>
-<div id="mainc">
-<h1 id="search">Search</h1>
+<main id="mainc" data-pagefind-body>
+<h1 id="search"><a class="zola-anchor" href="#search">Search</a></h1>
 <p>Zluinav has search built-in. This is a quick overview on how to create your search.</p>
-<h2 id="configuration">Configuration</h2>
+<h2 id="configuration"><a class="zola-anchor" href="#configuration">Configuration</a></h2>
 <p>See <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/#searching">search configuration</a></p>
-<h2 id="sformats">Search Formats</h2>
+<h2 id="sformats"><a class="zola-anchor" href="#sformats">Search Formats</a></h2>
 <p>You have a variety of formats to choose for your search.</p>
-<h3 id="main">main</h3>
-<p>This format uses the default searching method configured in search according to Zola's documentation. <code>search.js</code> in the static folder provides for <code>elasticlunr</code>.</p>
-<h3 id="pagefind">pagefind</h3>
+<h3 id="main"><a class="zola-anchor" href="#main">main</a></h3>
+<p>This format uses the default searching method configured in search according to Zola's documentation. <code>search.js</code> in the static folder provides for <code>elasticlunr</code>. The only disadvantage of this search format is that custom languages cannot be used to index.</p>
+<h3 id="pagefind"><a class="zola-anchor" href="#pagefind">pagefind</a></h3>
 <p>This is the default used in Zluinav's demo and is a third party searching tool, and thus it cannot be used in <code>zola serve</code>. Instead, this is best if you run this tool after the build. In short, this tool runs over your HTML files to generate the search, and it only takes up a few seconds.</p>
 <details>
 <summary>Setup Pagefind</summary>
-<h4 id="setup-pagefind">Setup Pagefind</h4>
+<h4 id="setup-pagefind"><a class="zola-anchor" href="#setup-pagefind">Setup Pagefind</a></h4>
 <p>Do the following to get up and run Pagefind. We'll asume you have Python installed:</p>
 <ol>
-<li>Install Pagefind extended version. You can do this by this command up to the root of this repository. <code>pip install -r requirements.txt</code></li>
+<li>Install Pagefind extended version. You can do this by this command. <code>pip install -r pagefind[extended]</code></li>
 <li>Set the search format in the <code>searching</code> object.</li>
 <li>Build the site. <code>zola build</code></li>
 <li>Generate the search index. Make sure to replace outputdir with the directory where your built files live. <code>python -m pagefind --site outputdir</code></li>
@@ -87,8 +84,7 @@
 <li>If you want to define where to start searching from, add <code>data-pagefind</code> to a tag like div.</li>
 </ul>
 <p>That's it!</p>
-</details></div>
-</main>
+</details></main>
 <div id="zlfooter">
 <footer>
 <p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>

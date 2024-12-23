@@ -14,16 +14,6 @@
 	padding: 0.5rem;
 }
 
-#color-picker-container:hover {
-	transform: none;
-}
-
-#color-picker-container label {
-	margin-inline-end: 0.25rem;
-	color: var(--fg-muted-4);
-	font-weight: bold;
-}
-
 :root[dir*="rtl"] #color-picker-container {
 	transform: translateX(calc(100% - 1rem));
 }
@@ -32,9 +22,22 @@
 	transform: none;
 }
 
+#color-picker-container:hover {
+	transform: none;
+}
+
+#color-picker-container > small {
+	display: block;
+	margin-block-end: 0.5rem;
+	font-weight: bold;
+}
+
+#color-picker-container label {
+	margin-inline-end: 0.25rem;
+	color: var(--fg-muted-5);
+}
+
 #color-picker-light,
-#color-picker-dark,
-#contrast-color-light,
-#contrast-color-dark {
+#color-picker-dark {
 	margin-inline-end: 0.25rem;
 }

@@ -146,27 +146,20 @@ submodule-add url name: && (build-check "themes/"+name)
 [group('help')]
 submodule-update-all:
 	command {{ git }} submodule update --init --remote
-	# command {{ git }} submodule foreach --recursive {{ git }} submodule update --init
+	command {{ git }} submodule foreach --recursive {{ git }} submodule update --init
 
 [group('push')]
 fix-docs-dir:
 	#!/usr/bin/env node
 	"use strict"
-	const fs = require("fs")
-	const path = require("path")
-	const demosPath = path.resolve("docs", "demo")
-	const demos = fs.readdirSync(demosPath, { withFileTypes: true }).filter(
-		e => e.isDirectory()).map(e => path.join(demosPath, e.name))
-	let robotsTxtFiles = 0
-	for (const demo of demos) {
-		const robotsTxtPath = path.join(demo, "robots.txt")
-		if (fs.existsSync(robotsTxtPath)) {
-			fs.rmSync(robotsTxtPath)
-			robotsTxtFiles += 1
-		}
+	const zx = require("zx")
+	const fs = zx.fs, path = zx.path
+	const filesToDelete = zx.globby.globbySync(["docs/demo/**/*.mp4", "docs/demo/*/robots.txt"])
+	for (const fileToDelete of filesToDelete) {
+		fs.rm(fileToDelete)
 	}
-	console.log(`Deleted ${robotsTxtFiles} robots.txt files`)
-	const gitignorePath = path.join("docs", "screenshots", ".gitignore")
+	console.log(`Deleted ${filesToDelete.length} files`)
+	const gitignorePath = path.resolve("docs", "screenshots", ".gitignore")
 	if (fs.existsSync(gitignorePath)) fs.rmSync(gitignorePath)
 	else console.log("Screenshots .gitignore not deleted")
 

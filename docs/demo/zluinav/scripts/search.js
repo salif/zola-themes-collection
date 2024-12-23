@@ -143,7 +143,7 @@ function initSearch() {
 	};
 	var currentTerm = "";
 	var index;
-	const base_url = document.querySelector("base").href;
+	const base_url = document.querySelector("baseurl").href;
 	const lang = document.querySelector("html").lang;
 	const language = (lang ? lang : "en");
 	const resource_path = new URL(`search_index.${language}.json`, base_url).href;

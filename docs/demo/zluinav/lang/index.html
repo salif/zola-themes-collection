@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<base href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<baseurl href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
@@ -19,39 +19,21 @@
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
-
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
-<main data-pagefind-body>
-<div id="mainc">
+<main id="mainc" data-pagefind-body>
 <h1>Select Your Language</h1>
-<form onsubmit="goToLanguage(); return false;">
-<label for="language">Choose a language</label>
-<select id="language" name="language">
-<option value="">--Select--</option>
-<option value="https://salif.github.io/zola-themes-collection/demo/zluinav">English</option>
-<option value="https://salif.github.io/zola-themes-collection/demo/zluinav/my">Burmese</option>
-</select>
-<br><br>
-<input type="submit" value="Change">
-</form></div>
-</main>
+<nav aria-label="Language Selector">
+<ul style="list-style-type: none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav">English</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/my">Burmese</a></li>
+</ul>
+</nav></main>
 <div id="zlfooter">
-
 <footer>
 <p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>
 </footer>
-<script>
-function goToLanguage() {
-	var selectedLanguage = document.getElementById("language").value;
-	if (selectedLanguage) {
-		window.location.href = selectedLanguage;
-	}
-}
-</script>
 </div>
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
 <script>

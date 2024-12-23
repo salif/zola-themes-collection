@@ -1509,6 +1509,58 @@ theme = "book-shelf"
   js = "const b=document.getElementById('info-book-shelf').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A. Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/micahkepe/radion.git themes/radion
+```
+  - Option B. Clone the theme into your themes directory:
+```sh
+git clone https://github.com/micahkepe/radion.git themes/radion
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "radion"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
+
+### Info
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Off. Live Demo**: <https://micahkepe.com/radion/>
+- **Min version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/micahkepe/radion"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-radion"
+  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-radion"
+  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "zola-aurora"
 name = "zola-aurora"
 desc = "Minimalistic blog theme with no JS"
@@ -1556,56 +1608,6 @@ theme = "zola-aurora"
   name = "Info"
   url = "#info-zola-aurora"
   js = "const b=document.getElementById('info-zola-aurora').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "tolia"
-name = "tolia"
-desc = "A clean and assez Zola theme."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tolia'></summary>
-
-### Installation
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A. Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/un1970ix/tolia.git themes/tolia
-```
-  - Option B. Clone the theme into your themes directory:
-```sh
-git clone https://github.com/un1970ix/tolia.git themes/tolia
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "tolia"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tolia'></summary>
-
-### Info
-- **License**: MIT
-- **Homepage**: <https://github.com/un1970ix/tolia>
-- **Min version**: 0.19.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/tolia/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/un1970ix/tolia"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-tolia"
-  js = "const b=document.getElementById('install-tolia').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-tolia"
-  js = "const b=document.getElementById('info-tolia').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "folio"

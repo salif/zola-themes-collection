@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<baseurl href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/theme.js"></script>
+<title>Menu – Documentation – UI Navigation</title>
+</head>
+<body>
+<a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
+<a href="#mainc" class="skip-link">Skip to main content</a>
+<a href="#navigation" class="skip-link">Skip to navigation</a>
+<a href="#zlfooter" class="skip-link">Skip to footer</a>
+<link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+
+<nav id="navigation" role="navigation" aria-label="Main menu">
+<h2>Main menu</h2>
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+</ul>
+</nav>
+
+<nav roll="navigation" aria-label=Documentation>
+<h2>Documentation</h2>
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/writing/">Writing</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/blocks/">Blocks</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/templates/">Templates</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/documentation/">Documentation Site</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/">Search</a></li>
+</ul>
+<h3>Extra Variables</h3>
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/">Config Variables</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/frontmadder/">Frontmadder Variables</a></li>
+</ul>
+<h3>Macros</h3>
+<p>This is a list of available macros that are located in templates/mcs directory.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/menu/">Menu</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/post/">Post</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/translator/">Translator</a></li>
+</ul>
+<h3>Shortcodes</h3>
+<p>This is a list of available shortcodes that are located in shortcodes directory that can be used in your markdown files to obtain information.</p>
+
+<ul style="list-style-type:none;">
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/audio/">Audio</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/details/">Details</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/geturl/">Geturl</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
+</ul>
+</nav>
+<main id="mainc" data-pagefind-body>
+<h1 id="menu-html"><a class="zola-anchor" href="#menu-html">menu.html</a></h1>
+<p>This macro defines functions for menu.</p>
+<p>Imported as <code>menu</code>.</p>
+<h2 id="show"><a class="zola-anchor" href="#show">show</a></h2>
+<p>Shows a given menu configured in config file.</p>
+<ul>
+<li><code>menuid</code>(string) required: The menu ID.</li>
+<li><code>tr</code>(object) optional: Translation object.</li>
+<li><code>ctx</code>(object) optional: Current context (<code>ctx</code>) variable from within the template.</li>
+</ul>
+</main>
+<div id="zlfooter">
+<footer>
+<p>Powered by <a href="https://github.com/harrymkt/zluinav">UI Navigation</a> theme, created by <a href="https://harrymkt.github.io">Harry Min Khant</a>.</p>
+</footer>
+</div>
+<script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+  new PagefindUI({ element: "#search", showSubResults: true });
+});
+</script>
+</body>
+</html>

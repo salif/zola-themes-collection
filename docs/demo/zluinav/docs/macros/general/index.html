@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<base href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<baseurl href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
@@ -20,10 +20,7 @@
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
-
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
 
@@ -45,8 +42,9 @@
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
 
 <ul style="list-style-type:none;">
-<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">Content</a></li>
+<li><a aria-current="page"href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/menu/">Menu</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/post/">Post</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/translator/">Translator</a></li>
 </ul>
@@ -60,16 +58,16 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main data-pagefind-body>
-<div id="mainc">
-<h1 id="general-html">general.html</h1>
+<main id="mainc" data-pagefind-body>
+<h1 id="general-html"><a class="zola-anchor" href="#general-html">general.html</a></h1>
 <p>General macros added in general namespace</p>
-<h2 id="title-titles">title(titles)</h2>
+<h2 id="title-titles"><a class="zola-anchor" href="#title-titles">title(titles)</a></h2>
 <p>Returns the titles, separated by the value set in <code>config.extra.title_sep</code>, with the site title appended after it.</p>
 <ul>
 <li><code>titles</code>(array) required: array of titles.</li>
+<li><code>sep</code>(string) optional: The title's separator. Defaults to what it is set in <code>title_sep</code> site extra. Passing this string empty will set back to default.</li>
+<li><code>overwrite</code>(bool) optional: <code>false</code> if the site title should be appended after the titles, or <code>true</code> otherwise. Defaults to <code>false</code>.</li>
 </ul>
-</div>
 </main>
 <div id="zlfooter">
 <footer>

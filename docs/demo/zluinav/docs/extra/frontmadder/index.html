@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<base href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
+<baseurl href="https://salif.github.io/zola-themes-collection/demo/zluinav"/>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/css/theme.css">
@@ -20,10 +20,7 @@
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
 <ul style="list-style-type:none;">
-
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li>
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav" accesskey="h">Home</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs">Documentation</a></li><li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/blog">Blog</a></li>
 </ul>
 </nav>
 
@@ -45,8 +42,9 @@
 <p>This is a list of available macros that are located in templates/mcs directory.</p>
 
 <ul style="list-style-type:none;">
-<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">Content</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/general/">General Macro</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/menu/">Menu</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/post/">Post</a></li>
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/translator/">Translator</a></li>
 </ul>
@@ -60,19 +58,17 @@
 <li><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/shortcodes/tab/">Tab Shortcode</a></li>
 </ul>
 </nav>
-<main data-pagefind-body>
-<div id="mainc">
-<h1 id="extra-frontmadder-variables">Extra Frontmadder Variables</h1>
+<main id="mainc" data-pagefind-body>
+<h1 id="extra-frontmadder-variables"><a class="zola-anchor" href="#extra-frontmadder-variables">Extra Frontmadder Variables</a></h1>
 <p>These variables must be set under <code>extra</code> object of the page. Use heading level 2, and if it contains no spaces, then it means they are variables. Otherwise, they are texts splitted.</p>
-<h2 id="featured-image-display">Featured Image Display</h2>
+<h2 id="featured-image-display"><a class="zola-anchor" href="#featured-image-display">Featured Image Display</a></h2>
 <p>You can display an image as the post's logo. These variables are available for the pages using <code>blogpage</code> template.</p>
 <ul>
 <li><code>img</code>(string) optional: the image / image URL. Note that to display an image, this variable must be set. other image variables are optional.</li>
 <li><code>alt</code>(string) optional: the alt text of the featured image. Requires the <code>img</code> variable to be set.</li>
 </ul>
-<h2 id="search">search</h2>
+<h2 id="search"><a class="zola-anchor" href="#search">search</a></h2>
 <p>bool: Toggles search indexing for this page. Available for pagefind format. Defaults to what it is set in the <code>searching</code> object of the config.</p>
-</div>
 </main>
 <div id="zlfooter">
 <footer>
