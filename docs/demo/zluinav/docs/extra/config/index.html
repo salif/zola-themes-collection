@@ -9,13 +9,13 @@
 <title>Config Variables – Documentation – UI Navigation</title>
 </head>
 <body>
-<a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a>
-<a href="#mainc" class="skip-link">Skip to main content</a>
-<a href="#navigation" class="skip-link">Skip to navigation</a>
-<a href="#zlfooter" class="skip-link">Skip to footer</a>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/zluinav/lang">Change language</a></p>
+<p><a href="#mainc" class="skip-link">Skip to main content</a></p>
+<p><a href="#navigation" class="skip-link">Skip to navigation</a></p>
+<p><a href="#zlfooter" class="skip-link">Skip to footer</a></p>
 <link href="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.css" rel="stylesheet">
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
+<div id="sitesearch"></div>
 
 <nav id="navigation" role="navigation" aria-label="Main menu">
 <h2>Main menu</h2>
@@ -108,9 +108,10 @@
   [extra.menus.main.attributes]
     class = &quot;blog&quot;
 </code></pre>
-<h2 id="searching"><a class="zola-anchor" href="#searching">searching</a></h2>
+<h2 id="search"><a class="zola-anchor" href="#search">search</a></h2>
 <ul>
 <li><code>enable</code>(bool): Toggles search. Defaults to <code>true</code></li>
+<li><code>default_enable</code>(bool): Default search status. This is useful to turn this off and manually turn on in the frontmadder of the pages you want. Defaults to <code>true</code></li>
 <li><code>format</code>(string): One of the <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/search/#sformats">search formats</a>. Defaults to <code>pagefind</code></li>
 </ul>
 </main>
@@ -122,7 +123,7 @@
 <script src="https://salif.github.io/zola-themes-collection/demo/zluinav/scripts/copy.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', (event) => {
-  new PagefindUI({ element: "#search", showSubResults: true });
+  new PagefindUI({ element: "#sitesearch", showSubResults: true });
 });
 </script>
 </body>

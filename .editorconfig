@@ -1,0 +1,19 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+
+[*.{js,json}]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
+
+[justfile]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true

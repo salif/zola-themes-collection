@@ -13,7 +13,6 @@ Have a `theme.toml` file. Have a `comfig.toml` file or `themes/theme-name/config
 - [DeepThought](https://github.com/RatanShreshtha/DeepThought)
 - [zola-inky](https://github.com/jimmyff/zola-inky)
 - [halve-z](https://github.com/charlesrocket/halve-z)
-- [radion](https://github.com/micahkepe/radion)
 - [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche)
 - [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog)
 - [ennui](https://codeberg.org/leana8959/ennui)
