@@ -65,8 +65,8 @@
 <p>See <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/extra/config/#search">search configuration</a></p>
 <h2 id="sformats"><a class="zola-anchor" href="#sformats">Search Formats</a></h2>
 <p>You have a variety of formats to choose for your search.</p>
-<h3 id="main"><a class="zola-anchor" href="#main">main</a></h3>
-<p>This format uses the default searching method configured in search according to Zola's documentation. <code>search.js</code> in the static folder provides for <code>elasticlunr</code>. The only disadvantage of this search format is that custom languages cannot be used to index.</p>
+<h3 id="lunr"><a class="zola-anchor" href="#lunr">lunr</a></h3>
+<p>This format uses the lunr searching method. Note that this must be configured in search according to Zola's documentation. <code>search.js</code> in the static folder provides for <code>elasticlunr</code>. The only disadvantage of this search format is that custom languages cannot be used to index.</p>
 <h3 id="pagefind"><a class="zola-anchor" href="#pagefind">pagefind</a></h3>
 <p>This is the default used in Zluinav's demo and is a third party searching tool, and thus it cannot be used in <code>zola serve</code>. Instead, this is best if you run this tool after the build. In short, this tool runs over your HTML files to generate the search, and it only takes up a few seconds.</p>
 <details>
@@ -75,7 +75,7 @@
 <p>Do the following to get up and run Pagefind. We'll asume you have Python installed:</p>
 <ol>
 <li>Install Pagefind extended version. You can do this by this command. <code>pip install -r pagefind[extended]</code></li>
-<li>Set the search format in the <code>searching</code> object.</li>
+<li>Set the search format in the <code>search</code> object.</li>
 <li>Build the site. <code>zola build</code></li>
 <li>Generate the search index. Make sure to replace outputdir with the directory where your built files live. <code>python -m pagefind --site outputdir</code></li>
 </ol>
