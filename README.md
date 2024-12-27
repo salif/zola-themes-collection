@@ -47,6 +47,12 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 - [cosmic__cube](https://github.com/ccarral/cosmic__cube)
 - [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang)
 - [Homepage-Creators](https://github.com/iWangJiaxiang/Homepage-Creators)
+- [anemone](https://github.com/Speyll/anemone)
+- [book-shelf](https://github.com/anccnuer/book-shelf)
+- [zola-aurora](https://github.com/vimpostor/zola-aurora)
+- [zola-folio](https://github.com/evjrob/zola-folio)
+- [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme)
+- [zizotto](https://github.com/xihn/zizotto)
 
 #### No license
 
