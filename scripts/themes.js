@@ -137,11 +137,11 @@ ${content}
 ### Installation
 0. Create a new Zola site: \`zola init\` and initialize a Git repository: \`git init\`
 1. Download the theme
-  - Option A. Add the theme as a git submodule:
+  - Option A: Add the theme as a git submodule:
 \`\`\`sh
 git submodule add ${themeInfo.clone} themes/${themeName}
 \`\`\`
-  - Option B. Clone the theme into your themes directory:
+  - Option B: Clone the theme into your themes directory:
 \`\`\`sh
 git clone ${themeInfo.clone} themes/${themeName}
 \`\`\`
@@ -155,7 +155,7 @@ theme = "${themeName}"
 - **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
 - **License**: ${themeInfo.license}
 - **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
-- **Off. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
+- **Offic. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
 - **Min version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
 - **Original**: <${themeInfo.originalRepo}>`));
 	return {

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Rust vs Julia in scientific computing</title>
+
+        <meta name="description"
+              content="Does Julia solve the two-language problem and when should you use Rust instead?">
+
+        <link rel="icon"
+              type="image/x-icon"
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/images/logo.svg?v=1735302140">
+
+        <link href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/main.css?v=1735302140"
+              rel="stylesheet">
+
+        <link rel="alternate"
+              type="application/atom+xml"
+              title="Blog | mo8it.com"
+              href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/atom.xml">
+
+        <meta property="og:title" content="Rust vs Julia in scientific computing">
+        <meta property="og:description" content="Does Julia solve the two-language problem and when should you use Rust instead?">
+        <meta property="og:image"
+              content="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/images/logo.svg?v=1735302140">
+        <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/">
+    </head>
+
+    <body class="flex flex-col p-3 mx-auto min-h-screen text-lg text-gray-100 break-words bg-gray-900 lg:px-5 2xl:container">
+        <header class="flex gap-x-6 items-center py-2 px-2.5 mb-1 bg-gray-800 rounded-full">
+            <a class="transition duration-500 hover:scale-110"
+               href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod"
+               aria-hidden="true">
+                <img class="m-0 w-12 h-12 rounded-full"
+                     src="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/images/logo.svg"
+                     alt="">
+            </a>
+
+            <nav class="flex gap-x-5 items-center font-bold">
+                
+                    <a class="p-1 no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/">Home</a>
+                
+                    <a class="p-1 no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog">Blog</a>
+                
+                    <a class="p-1 no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/tags">Tags</a>
+                
+            </nav>
+        </header>
+
+        <main class="leading-relaxed">
+            
+    <article>
+        <div class="mb-3">
+            <h1>Rust vs Julia in scientific computing</h1>
+
+            
+    <div class="mt-2 mb-4 text-sm leading-normal text-gray-300">
+        <time datetime="2023-07-14">2023-07-14</time><time datetime="2024-10-30">, updated: 2024-10-30</time><p class="my-0">
+            Tags:
+            <a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/tags/rust">#rust</a><span class="pr-1.5">,</span><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/tags/julia">#julia</a></p>
+
+        <p class="my-0">Reading time: ~27min</p>
+
+        <hr class="my-2.5">
+    </div>
+
+        </div>
+
+        <p>Although the scientific domain often requires the highest performance out of programming languages, people in this domain have often preferred less efficient dynamic languages like Python for flexibility and ease of use.
+At some point, a project grows out of that efficiency compromise and the software has to be rewritten in a statically-typed language like C/C++.
+This means that people in the scientific domain had to switch between two languages and often rewrite the logic that they already encoded in the first one.
+This is a problem which is referred to as the <em>two-language problem</em>.
+As an attempt to solve this problem, Julia was developed as a dynamic language that feels like Python but has performance comparable to C/C++.</p>
+<p>Rust is a statically-typed language that indirectly addresses the problem by improving the experience with statically typed languages instead of accelerating the runtime of dynamic ones.
+Its strong type system and friendly compiler empower developers to write reliable and efficient software without the memory safety problems known from C/C++.</p>
+<p>After using and even teaching both languages, I will compare them and discuss whether Julia solves the two-language problem and when you should use Rust instead.</p>
+<span id="continue-reading"></span><div class="rounded-xl bg-sky-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Note</p>
+        <p>This blog post is the base for my talk at <a href="https://scientificcomputing.rs">Scientific Computing in Rust 2023</a>.</p>
+<p>If you prefer watching a short video as a trailer, you can watch the <a href="https://youtu.be/0JkbNFpXlXc">the recorded talk</a>.
+But the blog post has many more details and aspects that can't fit into 7 minutes.</p>
+
+    </div>
+</div>
+<div class="rounded-xl bg-yellow-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">⚠️ Warning ⚠️</p>
+        <p>I have to warn you, I am in love with Rust!</p>
+<p>Therefore, this post is biased towards Rust.
+But I actually use Julia regularly and I even spread it at my university by teaching a vacation course about it.
+I just think that the promises of Julia can be misleading and there are use cases where you should use Rust instead.
+Continue reading to find out why.</p>
+
+    </div>
+</div>
+<p>The code examples were tested with Rust 1.71.0 and Julia 1.9.2.</p>
+
+    <p class="p-1 my-4 text-base rounded sm:hidden bg-yellow-200/20">Landscape mode recommended on mobile devices</p>
+
+    
+        <div class="px-4 pt-3 pb-0.5 mt-3 mb-1 bg-gray-800 rounded">
+            <p class="text-2xl font-bold">Contents</p>
+
+            <nav>
+                <ul class="ml-0 list-none">
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#fearless-concurrency">Fearless concurrency*</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#project-scalability">Project scalability</a>
+                                    <ul class="my-0 ml-5 list-none">
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#static-analysis">Static analysis</a></li>
+                                            
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#error-handling">Error handling</a></li>
+                                            
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#interfaces">Interfaces</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#performance">Performance</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#language-server">Language server</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#documentation">Documentation</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#where-julia-shines">Where Julia shines</a>
+                                    <ul class="my-0 ml-5 list-none">
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#interactivity">Interactivity</a></li>
+                                            
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#scientific-ecosystem">Scientific ecosystem</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#which-language-to-use">Which language to use?</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#my-personal-conclusion">My personal conclusion</a></li>
+                        
+                    
+                        
+                            <li><a href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#appendix">Appendix</a>
+                                    <ul class="my-0 ml-5 list-none">
+                                        
+                                            
+                                                <li><a class="text-base" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/rust-vs-julia/#jet-jl">JET.jl</a></li>
+                                            
+                                        
+                                    </ul>
+                                </li>
+                        
+                    
+                </ul>
+            </nav>
+        </div>
+    
+
+<h2 id="fearless-concurrency"><a class="text-white no-underline transition-none hover:underline"
+   href="#fearless-concurrency">Fearless concurrency*</a></h2>
+<p>Multithreading, as one form of concurrency, is required to speed up programs after hitting the performance limit of sequential code.
+Julia recognizes the importance of multithreading and makes utilizing it very easy.
+In fact, multithreading in Julia is a matter of adding the <code>@threads</code> macro in front of a <code>for</code> loop to split it into multiple threads and utilize the full capabilities of multi-core processors.
+But although Julia makes multithreading easier, it doesn't make it any safer!</p>
+<p>Let's take a look at the following known example of incrementing a counter by multiple threads:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">unsafe_count</span><span>()
+</span><span>    counter </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0
+</span><span>
+</span><span>    Threads.@threads </span><span style="color:#ffa759;">for</span><span> _ </span><span style="color:#ffa759;">in </span><span style="color:#ffcc66;">1</span><span style="color:#f29e74;">:</span><span style="color:#ffcc66;">10_000
+</span><span>        counter </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1
+</span><span>    </span><span style="color:#ffa759;">end
+</span><span>
+</span><span>    counter
+</span><span style="color:#ffa759;">end
+</span></code></pre>
+<p>If you are not familiar with multithreading, you would expect that the result should be <code>10_000</code>.
+But if you run it multiple times, you will get an output similar to the following:</p>
+<pre style="background-color:#212733;color:#ccc9c2;"><code><span>8609
+</span><span>8491
+</span><span>9191
+</span><span>…
+</span></code></pre>
+<p>The output is random because of <strong>data races</strong>.</p>
+<div class="rounded-xl bg-violet-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Definition</p>
+        <p>A simplified definition of a data race is the situation when one thread modifies the value of a variable while another thread is trying to read its value or also modify it.
+Data races are known to lead to arbitrary incorrect results that are very hard to discover and debug, not only in Julia but also in languages like Python and C/C++.</p>
+
+    </div>
+</div>
+<p>The data race in the example happens because a thread reads the current value of <code>counter</code>, adds <code>1</code> to it and stores the addition result in the same variable.
+If two threads read the variable at the same time and then add <code>1</code>, the addition result would be the same and they will both store that result which means that we loose one addition.</p>
+<p>The following demonstrates the scenario <em>without</em> a data race:</p>
+<pre style="background-color:#212733;color:#ccc9c2;"><code><span>counter | thread 1  | thread 2
+</span><span>3       | read 3    |
+</span><span>3       | 3 + 1 = 4 |
+</span><span>4       | write 4   |
+</span><span>4       |           | read 4
+</span><span>4       |           | 4 + 1 = 5
+</span><span>5       |           | write 5
+</span></code></pre>
+<p>In the case of a data race, an addition is lost:</p>
+<pre style="background-color:#212733;color:#ccc9c2;"><code><span>counter | thread 1  | thread 2
+</span><span>3       | read 3    |
+</span><span>3       |           | read 3
+</span><span>3       | 3 + 1 = 4 | 3 + 1 = 4
+</span><span>4       | write 4   |
+</span><span>4       |           | write 4
+</span></code></pre>
+<p>Let's translate the Julia code into Rust:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">use </span><span>rayon</span><span style="color:#f29e74;">::</span><span>prelude</span><span style="color:#f29e74;">::*</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">let mut</span><span> counter </span><span style="color:#f29e74;">= </span><span style="color:#ffcc66;">0</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#f29e74;">..</span><span style="color:#ffcc66;">10_000</span><span>)</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">into_par_iter</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">for_each</span><span>(|_| {
+</span><span>    counter </span><span style="color:#f29e74;">+= </span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">;
+</span><span>})</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
+<p>We use the <a href="https://docs.rs/rayon">Rayon</a> library which offers easy multithreading using <a href="https://doc.rust-lang.org/stable/std/iter/index.html#iterator">iterators</a>.</p>
+<p>Fortunately, the Rust code above doesn't compile! ❌</p>
+<p>In Rust, either you have only one mutable reference and no immutable ones <strong>or</strong> (XOR) you have any number of immutable references but no mutable ones.</p>
+<p>For a data race to happen, you need to have more than one mutable reference.
+For example, in the Julia code above, every thread has its own mutable reference to the <code>counter</code> variable!
+It is <a href="https://dl.acm.org/doi/10.1145/3158154">proven</a> that Rust's type system and <em>borrow checker</em> make data races <strong>impossible</strong>!</p>
+<div class="rounded-xl bg-sky-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Note</p>
+        <p>*: With Rust, you <em>almost</em> have fearless concurrency.
+Data races are impossible, but you still have to fear <a href="https://en.wikipedia.org/wiki/Deadlock">deadlocks</a>!</p>
+<p>This blog post is about <em>safe</em> Rust, which means Rust without using <a href="https://doc.rust-lang.org/book/ch19-01-unsafe-rust.html"><code>unsafe</code></a>.</p>
+
+    </div>
+</div>
+<p>To make the Rust version compile, we need to either use a <a href="https://doc.rust-lang.org/stable/std/sync/struct.Mutex.html">mutex</a> or an <a href="https://doc.rust-lang.org/stable/std/sync/atomic/index.html">atomic</a>.
+Atomics guarantee on the hardware level that their supported operations are done atomically, which means in one step!
+Since atomics have better performance than a mutex, we will use <code>AtomicU64</code> (unsigned integer with 64 bits):</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">let</span><span> counter </span><span style="color:#f29e74;">= </span><span>AtomicU64</span><span style="color:#f29e74;">::</span><span>new(</span><span style="color:#ffcc66;">0</span><span>)</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>(</span><span style="color:#ffcc66;">0</span><span style="color:#f29e74;">..</span><span style="color:#ffcc66;">10_000</span><span>)</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">into_par_iter</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">for_each</span><span>(|_| {
+</span><span>    counter</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">fetch_add</span><span>(</span><span style="color:#ffcc66;">1</span><span style="color:#ccc9c2cc;">, </span><span>Ordering</span><span style="color:#f29e74;">::</span><span>Relaxed)</span><span style="color:#ccc9c2cc;">;
+</span><span>})</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
+<p>Note that <code>counter</code> isn't mutable anymore!
+There is no more <code>mut</code> after <code>let</code>.
+Since operations on atomic types guarantee to not introduce data races, they take an immutable reference <code>&amp;self</code> instead of a mutable one <code>&amp;mut self</code>.
+This allows us to use them on multiple threads (because it is allowed to have multiple immutable references).</p>
+<p>Of course, the atomic Rust version above returns <code>10_000</code> 🎉</p>
+<p>If it compiles, it is data race free 😃</p>
+<div class="rounded-xl bg-sky-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Note</p>
+        <p>Discussing <code>Ordering::Relaxed</code> would go beyond the scope of this blog post.
+You can read more about atomic memory orderings <a href="https://doc.rust-lang.org/stable/std/sync/atomic/enum.Ordering.html">in the documentation</a>.</p>
+
+    </div>
+</div>
+<p>The correct Julia version looks very similar to the Rust version:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">safe_count</span><span>()
+</span><span>    counter </span><span style="color:#f29e74;">=</span><span> Threads.Atomic{UInt</span><span style="color:#ffcc66;">64</span><span>}(</span><span style="color:#ffcc66;">0</span><span>)
+</span><span>
+</span><span>    Threads.@threads </span><span style="color:#ffa759;">for</span><span> _ </span><span style="color:#ffa759;">in </span><span style="color:#ffcc66;">1</span><span style="color:#f29e74;">:</span><span style="color:#ffcc66;">10_000
+</span><span>        Threads.atomic_add</span><span style="color:#f29e74;">!</span><span>(counter, UInt</span><span style="color:#ffcc66;">64</span><span>(</span><span style="color:#ffcc66;">1</span><span>))
+</span><span>    </span><span style="color:#ffa759;">end
+</span><span>
+</span><span>    counter[]
+</span><span style="color:#ffa759;">end
+</span></code></pre>
+<p>This means that Julia does have atomics too.
+But it is not able to detect a possible data race to recommend using them or at least just warn us.</p>
+<p>Julia's <a href="https://docs.julialang.org/en/v1/manual/multi-threading">multithreading documentation</a> states: "You are entirely responsible for ensuring that your program is data-race free […]"</p>
+<p>Moore's law is almost dead, at least for single core performance.
+Therefore, we need a language that makes concurrency not only easy but also <strong>correct</strong>.</p>
+<h2 id="project-scalability"><a class="text-white no-underline transition-none hover:underline"
+   href="#project-scalability">Project scalability</a></h2>
+<p>How hard is it to maintain, extend and reason about the correctness of Julia code while a project grows?</p>
+<h3 id="static-analysis"><a class="text-white no-underline transition-none hover:underline"
+   href="#static-analysis">Static analysis</a></h3>
+<p>Highly optimized Julia code can get close to the performance of Rust because of Julia's just-in-time (JIT) compilation.</p>
+<p>But producing optimized machine code isn't the only purpose of compilers.
+Julia misses a very important advantage of a statically typed language compiler: Static analysis!</p>
+<p>Take a look at the following example in Julia:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>v </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]
+</span><span>
+</span><span>println(</span><span style="color:#bae67e;">&quot;OK&quot;</span><span>)
+</span><span>
+</span><span>println(v.pop())
+</span><span>
+</span><span>println(</span><span style="color:#bae67e;">&quot;No problem!&quot;</span><span>)
+</span></code></pre>
+<p>Did you find any problem?
+Well, Julia doesn't see a problem in it until it reaches the problematic line!</p>
+<p>If you run the code above, you will see <code>OK</code> printed out before you get an error because we used Rust's syntax for <code>pop</code>.
+We should have used <code>pop!(v)</code> in Julia.</p>
+<p>You might think that this is fine, a simple test run will find this bug.</p>
+<p>But what if the buggy code is behind some condition that is dependent on the program input or which is just random like in a Monte Carlo simulation?
+Here is a demonstration:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>v </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]
+</span><span>
+</span><span>println(</span><span style="color:#bae67e;">&quot;OK&quot;</span><span>)
+</span><span>
+</span><span style="color:#ffa759;">if</span><span> rand(Bool)
+</span><span>    println(v.pop())
+</span><span style="color:#ffa759;">end
+</span><span>
+</span><span>println(</span><span style="color:#bae67e;">&quot;No problem!&quot;</span><span>)
+</span></code></pre>
+<p>If you run this Julia code, you should have about 50% chance of just passing by the buggy block and printing out <strong><code>No problem!</code></strong>.</p>
+<p>Well, this <strong>is</strong> a problem, a <strong>big</strong> one!
+Such a type bug can be prevented by a simple type system with static analysis.</p>
+<p>Why am I talking about static analysis under the topic of scalability?</p>
+<p>Let's say we are writing some molecular dynamics simulation.
+Take a look at the following example:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>particles </span><span style="color:#f29e74;">= </span><span>[[</span><span style="color:#ffcc66;">1.0</span><span>, </span><span style="color:#ffcc66;">2.0</span><span>], [</span><span style="color:#ffcc66;">2.0</span><span>, </span><span style="color:#ffcc66;">3.0</span><span>], [</span><span style="color:#ffcc66;">42.0</span><span>, </span><span style="color:#ffcc66;">35.9</span><span>]]
+</span><span>
+</span><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles
+</span><span>    distance_to_origin </span><span style="color:#f29e74;">=</span><span> sqrt(particle[</span><span style="color:#ffcc66;">1</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">+</span><span> particle[</span><span style="color:#ffcc66;">2</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2</span><span>)
+</span><span>    println(</span><span style="color:#bae67e;">&quot;Particle&#39;s distance to origin: </span><span style="color:#f29e74;">$</span><span>distance_to_origin</span><span style="color:#bae67e;">&quot;</span><span>)
+</span><span style="color:#ffa759;">end
+</span><span>
+</span><span>center_of_mass </span><span style="color:#f29e74;">=</span><span> sum(particle </span><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles) </span><span style="color:#f29e74;">/</span><span> length(particles)
+</span><span>println(</span><span style="color:#bae67e;">&quot;Center of mass: </span><span style="color:#f29e74;">$</span><span>center_of_mass</span><span style="color:#bae67e;">&quot;</span><span>)
+</span></code></pre>
+<p>We create some particles by storing their positions in a vector.
+As two placeholders for some computations, we calculate their distance to the origin and their center of mass (assuming that they all have mass <code>1</code>).</p>
+<p>Let's say that, later on, we want to take the charge of particles into account for a better accuracy of our simulation.
+Therefore, we create a struct called <code>Particle</code> storing the position and charge:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span style="color:#ffa759;">struct </span><span style="color:#73d0ff;">Particle
+</span><span>    position</span><span style="color:#f29e74;">::</span><span>Vector{Float</span><span style="color:#ffcc66;">64</span><span>}
+</span><span>    charge</span><span style="color:#f29e74;">::</span><span>Float</span><span style="color:#ffcc66;">64
+</span><span style="color:#ffa759;">end
+</span><span>
+</span><span>particles </span><span style="color:#f29e74;">= </span><span>[Particle([</span><span style="color:#ffcc66;">1.0</span><span>, </span><span style="color:#ffcc66;">2.0</span><span>], </span><span style="color:#ffcc66;">1.0</span><span>), Particle([</span><span style="color:#ffcc66;">2.0</span><span>, </span><span style="color:#ffcc66;">3.0</span><span>], </span><span style="color:#f29e74;">-</span><span style="color:#ffcc66;">1.0</span><span>), Particle([</span><span style="color:#ffcc66;">42.0</span><span>, </span><span style="color:#ffcc66;">35.9</span><span>], </span><span style="color:#ffcc66;">0.0</span><span>)]
+</span><span>
+</span><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles
+</span><span>    distance_to_origin </span><span style="color:#f29e74;">=</span><span> sqrt(particle[</span><span style="color:#ffcc66;">1</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">+</span><span> particle[</span><span style="color:#ffcc66;">2</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2</span><span>)
+</span><span>    println(</span><span style="color:#bae67e;">&quot;Particle&#39;s distance to origin: </span><span style="color:#f29e74;">$</span><span>distance_to_origin</span><span style="color:#bae67e;">&quot;</span><span>)
+</span><span style="color:#ffa759;">end
+</span><span>
+</span><span>center_of_mass </span><span style="color:#f29e74;">=</span><span> sum(particle </span><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles) </span><span style="color:#f29e74;">/</span><span> length(particles)
+</span><span>println(</span><span style="color:#bae67e;">&quot;Center of mass: </span><span style="color:#f29e74;">$</span><span>center_of_mass</span><span style="color:#bae67e;">&quot;</span><span>)
+</span></code></pre>
+<p>We changed the content of the <code>particles</code> vector from positions to instances of <code>Particle</code>.</p>
+<p>We don't use the introduced charge yet.
+We just want to check that we didn't break anything.</p>
+<p>We run our code and get an error because we are now trying to index into the <code>Particle</code> struct instead of a position vector while calculating the distance to the origin.</p>
+<p>No problem, you might think.
+We just forgot to adjust that line.
+We can just fix it and run the code again!</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles
+</span><span>    distance_to_origin </span><span style="color:#f29e74;">=</span><span> sqrt(particle.position[</span><span style="color:#ffcc66;">1</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">+</span><span> particle.position[</span><span style="color:#ffcc66;">2</span><span>]</span><span style="color:#f29e74;">^</span><span style="color:#ffcc66;">2</span><span>)
+</span><span>    println(</span><span style="color:#bae67e;">&quot;Particle&#39;s distance to origin: </span><span style="color:#f29e74;">$</span><span>distance_to_origin</span><span style="color:#bae67e;">&quot;</span><span>)
+</span><span style="color:#ffa759;">end
+</span></code></pre>
+<p>Are we done now?
+If we run it, we get another error.
+We missed one more line where the center of mass is calculated!</p>
+<p>We can fix it easily like the following:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>center_of_mass </span><span style="color:#f29e74;">=</span><span> sum(particle.position </span><span style="color:#ffa759;">for</span><span> particle </span><span style="color:#ffa759;">in</span><span> particles) </span><span style="color:#f29e74;">/</span><span> length(particles)
+</span><span>println(</span><span style="color:#bae67e;">&quot;Center of mass: </span><span style="color:#f29e74;">$</span><span>center_of_mass</span><span style="color:#bae67e;">&quot;</span><span>)
+</span></code></pre>
+<p>But how long will you stay in the cycle of fixing your code and rerunning it to see if changes work as intended?
+Will you be sure that you didn't miss any problematic line after finally running your code without errors the first time?</p>
+<p>Such changes that affect a relatively big part of a codebase are called <a href="https://en.wikipedia.org/wiki/Code_refactoring">refactorings</a>.</p>
+<p>Refactoring in Rust is a <em>smooth compiler driven process</em>.
+The compiler will throw an error for everything that you didn't adjust yet.
+You just work through the list of compiler errors.
+After solving that puzzle, your program compiles and you can be pretty confident that you haven't forgotten anything.</p>
+<p>No errors at runtime!</p>
+<p>Of course, you need tests to check that you don't have logical bugs.
+But with Rust, you can focus on your program's logic and the compiler will guarantee that everything else is correct.</p>
+<p>One could build a linter for Julia, just like the many linters for Python.
+Tools like linters for dynamically typed languages won't reach the power and correctness of a static analysis built on a well typed language.
+It will just be like putting more cement on a fragile base just to make it a bit safer.</p>
+<h3 id="error-handling"><a class="text-white no-underline transition-none hover:underline"
+   href="#error-handling">Error handling</a></h3>
+<p>In the last section, we discussed systematic bugs that can be detected by a static analysis.</p>
+<p>What about errors that can't be directly detected at compile time?</p>
+<p>Julia offers <a href="https://docs.julialang.org/en/v1/manual/control-flow/#Exception-Handling">exceptions</a> for dealing with such cases.
+How about Rust?</p>
+<h4 id="option-to-be-or-not-to-be-that-is-the-question"><a class="text-white no-underline transition-none hover:underline"
+   href="#option-to-be-or-not-to-be-that-is-the-question">Option: To be or not to be, that is the question</a></h4>
+<p>What happens when you run the following code in Julia?</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>v </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]
+</span><span>pop</span><span style="color:#f29e74;">!</span><span>(v) </span><span style="color:#f29e74;">*</span><span> pop</span><span style="color:#f29e74;">!</span><span>(v)
+</span></code></pre>
+<p>Well, there is only one value, therefore the second <code>pop!</code> will fail.
+But how?</p>
+<p>It will fail with an error at runtime 💥</p>
+<p>Can Rust prevent that?
+Let's take a look at the signature of <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#method.pop"><code>pop</code></a> for <code>Vec&lt;T&gt;</code> in Rust (<code>Vec</code> is a vector, <code>T</code> is a generic):</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#f28779;">pop</span><span>(</span><span style="color:#f29e74;">&amp;</span><span style="color:#ffa759;">mut </span><span style="font-style:italic;color:#5ccfe6;">self</span><span>) </span><span style="color:#ccc9c2cc;">-&gt; </span><span style="font-style:italic;color:#5ccfe6;">Option</span><span>&lt;T&gt;
+</span></code></pre>
+<p>It takes a mutable reference of the vector holding values of type <code>T</code> and returns an <code>Option&lt;T&gt;</code>.</p>
+<p><code>Option</code> is just an <em>enum</em>, a very simple but powerful one!</p>
+<p>The definition of <code>Option</code> in the standard library is the following:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">enum </span><span style="color:#73d0ff;">Option</span><span>&lt;T&gt; {
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">None</span><span style="color:#ccc9c2cc;">,
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">Some</span><span>(T)
+</span><span>}
+</span></code></pre>
+<p>This means that an <code>Option&lt;T&gt;</code> can either be <code>None</code> or <code>Some</code> with <em>some</em> value of type <code>T</code>.</p>
+<p>Let's see how the above Julia code would look like in Rust:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">let mut</span><span> v </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">vec!</span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>() </span><span style="color:#f29e74;">*</span><span> v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>()
+</span></code></pre>
+<p>If you try to compile it, you will get a (normally colored) lovely error message like the following (Rust has the best error messages 😍):</p>
+<pre style="background-color:#212733;color:#ccc9c2;"><code><span>error[E0369]: cannot multiply `Option&lt;{float}&gt;` by `Option&lt;{float}&gt;`
+</span><span>  --&gt; src/lib.rs:18:13
+</span><span>   |
+</span><span>18 |     v.pop() * v.pop()
+</span><span>   |     ------- ^ ------- Option&lt;{float}&gt;
+</span><span>   |     |
+</span><span>   |     Option&lt;{float}&gt;
+</span></code></pre>
+<p>The easiest way to handle an <code>Option</code> is to <code>unwrap</code> it:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">let mut</span><span> v </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">vec!</span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">unwrap</span><span>() </span><span style="color:#f29e74;">*</span><span> v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">unwrap</span><span>()
+</span></code></pre>
+<p>The behavior of unwrapping a <code>None</code> is just that of Julia: It will <em>panic</em> at runtime.</p>
+<p>You might think that we at least made a possible panic explicit, right?</p>
+<p>But you shouldn't use <code>unwrap</code> in production code.
+In Rust, you should do proper <em>pattern matching</em>:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">let mut</span><span> v </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">vec!</span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">let</span><span> v1 </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">match</span><span> v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">Some</span><span>(value) </span><span style="color:#f29e74;">=&gt;</span><span> value</span><span style="color:#ccc9c2cc;">,
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">None </span><span style="color:#f29e74;">=&gt; </span><span style="color:#ffcc66;">1.0</span><span style="color:#ccc9c2cc;">,
+</span><span>}</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">let</span><span> v2 </span><span style="color:#f29e74;">= </span><span style="color:#ffa759;">match</span><span> v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>() {
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">Some</span><span>(value) </span><span style="color:#f29e74;">=&gt;</span><span> value</span><span style="color:#ccc9c2cc;">,
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">None </span><span style="color:#f29e74;">=&gt; </span><span style="color:#ffcc66;">1.0</span><span style="color:#ccc9c2cc;">,
+</span><span>}</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>v1 </span><span style="color:#f29e74;">*</span><span> v2
+</span></code></pre>
+<p>We use pattern matching to handle the <code>Option</code>.
+In case the <code>Option</code> is <code>None</code>, we use <code>1</code> as the neutral element of multiplication.</p>
+<p>You might think that this is a lot of boilerplate code!
+You are right!
+But it was only a demonstration of pattern matching to understand how handling an <code>Option</code> works.</p>
+<p>The code above can be reduced to the following:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">let mut</span><span> v </span><span style="color:#f29e74;">= </span><span style="color:#f28779;">vec!</span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span>v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">unwrap_or</span><span>(</span><span style="color:#ffcc66;">1.0</span><span>) </span><span style="color:#f29e74;">*</span><span> v</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">pop</span><span>()</span><span style="color:#f29e74;">.</span><span style="color:#f28779;">unwrap_or</span><span>(</span><span style="color:#ffcc66;">1.0</span><span>)
+</span></code></pre>
+<p>The implementation of <code>unwrap_or</code> for <code>Option</code> looks like the following:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">fn </span><span style="color:#ffd580;">unwrap_or</span><span>(</span><span style="color:#ffcc66;">self</span><span>, </span><span style="color:#ffcc66;">default</span><span style="color:#ccc9c2cc;">:</span><span> T) </span><span style="color:#ccc9c2cc;">-&gt;</span><span> T {
+</span><span>    </span><span style="color:#ffa759;">match </span><span style="font-style:italic;color:#5ccfe6;">self </span><span>{
+</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">Some</span><span>(x) </span><span style="color:#f29e74;">=&gt;</span><span> x</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">None </span><span style="color:#f29e74;">=&gt;</span><span> default</span><span style="color:#ccc9c2cc;">,
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>It is just what we have done in the long version, but <code>unwrap_or</code> is a convenient method.</p>
+<p>You might think that the result <code>1</code> is not what you would expect if the vector is empty.
+You can handle it differently.
+But, you see, you are just thinking about how to correctly handle cases where something doesn't work as expected!
+My mission is accomplished 😉</p>
+<h4 id="failure-is-not-an-option-it-s-a-result"><a class="text-white no-underline transition-none hover:underline"
+   href="#failure-is-not-an-option-it-s-a-result">Failure is not an Option, it's a Result!</a></h4>
+<p>Let's say that you want to write the results of a long simulation in Julia:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>open(</span><span style="color:#bae67e;">&quot;results/energies.csv&quot;</span><span>, </span><span style="color:#bae67e;">&quot;w&quot;</span><span>) </span><span style="color:#ffa759;">do</span><span> file
+</span><span>    </span><span style="font-style:italic;color:#5c6773;"># …
+</span><span style="color:#ffa759;">end
+</span></code></pre>
+<p>What happens if Julia fails to open the file, for example because the directory <code>results/</code> doesn't exist?</p>
+<p>You probably guessed it: Runtime error 💥</p>
+<p>Which would mean that you loose your results and have to rerun the simulation again after fixing the cause of the error.</p>
+<p>You could wrap the code above in a <code>try/catch</code> statement and maybe dump the results into <code>/tmp</code> instead and tell the user about it.</p>
+<p>But first of all, Julia doesn't force you to handle exceptions.
+The language itself doesn't even tell you about possible exceptions, you have to read the documentation of every function you use to find out if it could throw an exception.
+What if a possible exception isn't documented?
+What if a later package version introduces a new exception?
+To be really safe, you could wrap everything in a <code>try/catch</code> statement.</p>
+<p>Is there something better than exceptions?
+Let's see the Rust version of the code above:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">use </span><span>std</span><span style="color:#f29e74;">::</span><span>fs</span><span style="color:#f29e74;">::</span><span>OpenOptions</span><span style="color:#ccc9c2cc;">;
+</span><span>
+</span><span style="color:#ffa759;">match </span><span>OpenOptions</span><span style="color:#f29e74;">::</span><span>new()
+</span><span>    </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">create</span><span>(</span><span style="color:#ffcc66;">true</span><span>)
+</span><span>    </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">write</span><span>(</span><span style="color:#ffcc66;">true</span><span>)
+</span><span>    </span><span style="color:#f29e74;">.</span><span style="color:#f28779;">open</span><span>(</span><span style="color:#bae67e;">&quot;results/energies.csv&quot;</span><span>) {
+</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">Ok</span><span>(</span><span style="color:#ffa759;">mut</span><span> file) </span><span style="color:#f29e74;">=&gt; </span><span>{
+</span><span>            </span><span style="font-style:italic;color:#5c6773;">// Ready to write
+</span><span>        }
+</span><span>        </span><span style="font-style:italic;color:#5ccfe6;">Err</span><span>(error) </span><span style="color:#f29e74;">=&gt; </span><span>{
+</span><span>            </span><span style="font-style:italic;color:#5c6773;">// Handle the error
+</span><span>        }
+</span><span>    }</span><span style="color:#ccc9c2cc;">;
+</span></code></pre>
+<p><code>open</code> returns a <code>Result</code>.
+A <code>Result&lt;T, E&gt;</code> (with the generics <code>T</code> and <code>E</code>) is the second important enum in Rust:</p>
+<pre data-lang="rust" style="background-color:#212733;color:#ccc9c2;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#ffa759;">enum </span><span style="color:#73d0ff;">Result</span><span>&lt;T, E&gt; {
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">Ok</span><span>(T)</span><span style="color:#ccc9c2cc;">,
+</span><span>    </span><span style="font-style:italic;color:#5ccfe6;">Err</span><span>(E)
+</span><span>}
+</span></code></pre>
+<p><code>open</code> forces you to handle a possible IO error just like <code>pop</code> forces you to handle the <code>None</code> case.</p>
+<p>With exceptions, you expect some value from a function and might be surprised with an exception.
+But with <code>Result</code> and <code>Option</code>, the type of the function's signature will tell you if an error could occur.
+No surprises!</p>
+<p>Rust will not let you miss a case.
+It will not let you crash your program by mistake.</p>
+<p>You can use <code>unwrap</code> on <code>Result</code> too, but then it is not a crash by mistake.
+You <em>decided</em> that you would rather want to crash.</p>
+<p>Again, how many times do you rerun your Julia code until no error appears?
+How does the time needed for this cycle scale with the complexity of the project?</p>
+<p>How confident are you about your Julia code to not crash on some point although it ran fine when you tested it with some example input?</p>
+<p>Rust can give you the confidence that your code is correct ✔️</p>
+<h3 id="interfaces"><a class="text-white no-underline transition-none hover:underline"
+   href="#interfaces">Interfaces</a></h3>
+<p>Julia is very flexible with its <a href="https://en.wikipedia.org/wiki/Multiple_dispatch">multiple dispatch</a> and <a href="https://docs.julialang.org/en/v1/manual/types">type hierarchy</a>.
+But let's suppose that a library introduces an abstract type that you can implement concrete types for.</p>
+<p>If a function takes that abstract type as an argument, what methods does that function expect from my concrete type to have implemented?</p>
+<p>Since Julia doesn't have interfaces yet, you have three options to find out the required methods:</p>
+<ul>
+<li>Use your concrete type as the abstract type, run your code repeatedly while fixing one "unimplemented" error after the other and hope that you covered all cases at the end…</li>
+<li>Hope for documentation like <a href="https://docs.julialang.org/en/v1/manual/interfaces">this from the standard library</a>.</li>
+<li>Recursively read the source code and try to find out what methods are used inside the function.</li>
+</ul>
+<p>To be fair, interfaces are <a href="https://github.com/JuliaLang/julia/issues/6975">planned for the "potential" version 2.0 of Julia</a>.
+But the fact that this wasn't a priority for 1.0 strengthens my opinion that Julia is mainly designed for interactive use cases, not for large projects.</p>
+<div class="rounded-xl bg-sky-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Note</p>
+        <p>Although there is a the <a href="https://github.com/JuliaLang/julia/milestone/23">"potential" 2.0 milestone</a> for Julia on Github, Julia <a href="https://discourse.julialang.org/t/the-future-of-julia-1-6-1-7-rc1-1-8-1-9-1-10-and-2-0-and-lts/68143/4">doesn't plan a 2.0 release anytime soon</a>.</p>
+<p>Still, I didn't find a statement that indicates that a 2.0 release will <em>not</em> happen.
+I am not sure how Julia's ecosystem will survive a transition to <code>2.0</code>, independent of when this happens.</p>
+<p>Remember the transition from Python <code>2</code> to <code>3</code>!</p>
+<p>Rust will not have a version <code>2.0</code>!
+It has <a href="https://doc.rust-lang.org/edition-guide/editions/index.html">editions</a> that preserve backwards compatibility.</p>
+
+    </div>
+</div>
+<p>On the other hand, Rust's <a href="https://doc.rust-lang.org/book/ch10-02-traits.html">traits</a> show you all required and optional methods.</p>
+<p>The <code>Iterator</code> trait for example has <a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#required-methods">one required method</a> which is <code>next</code>.
+If you implement it, you get all other methods for free!
+If you want to, you can implement optional methods like <a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.size_hint"><code>size_hint</code></a> which is useful for avoiding allocations while collecting an iterator.</p>
+<p>There is no trying out, no searching for hidden documentation that might not even exist, no reading of source code.
+Rust will make sure <em>at compile time</em> that you implemented all required methods.</p>
+<h2 id="performance"><a class="text-white no-underline transition-none hover:underline"
+   href="#performance">Performance</a></h2>
+<p>As mentioned above, highly optimized Julia code can get close to the performance of Rust.
+But it will often not reach the performance of Rust because it is very likely to trigger the garbage collector, something that Rust does not have.</p>
+<p>But which language makes it easier to write the most efficient code?</p>
+<p>Julia has what I call <strong>performance footguns</strong>.</p>
+<div class="rounded-xl bg-violet-400/20">
+    <div class="px-2 pt-2 pb-1 my-3 text-white">
+        <p class="font-bold">Definition</p>
+        <p>Footgun: A feature that acts against one's own interest in an unexpected, destructive way.</p>
+
+    </div>
+</div>
+<p>For example, if you initialize an empty vector like <code>v = []</code>, you already degraded the performance of your code to one similar to Python's (without <code>numpy</code>) because your vector has the type <code>Any</code>.
+It can store any value!
+Therefore, Julia can't optimize this vector anymore.
+You either have to initialize the empty vector with a <em>concrete</em> type like <code>v = Float64[]</code> or you have to initialize it with at least one value like <code>v = [1.0]</code>.</p>
+<p>Julia doesn't even warn you about such performance killers!
+Have fun profiling, using the macro <a href="https://docs.julialang.org/en/v1/manual/performance-tips/#man-code-warntype"><code>@code_warntype</code></a> while interactively calling a function, etc.</p>
+<p>If you want to write highly optimized code in Julia, you have to follow all its <a href="https://docs.julialang.org/en/v1/manual/performance-tips">official performance tips</a>.
+You will not even get a warning if you miss some and degrade to almost the performance of plain Python (without libraries like <code>numpy</code>).</p>
+<p>If performance is not only "nice to have" for you, you should better use Rust!</p>
+<h2 id="language-server"><a class="text-white no-underline transition-none hover:underline"
+   href="#language-server">Language server</a></h2>
+<p>Even if you are like me and use an editor instead of an IDE, you should at least use a language server.</p>
+<p>Unfortunately, Julia's language server lacks a lot of features.
+<a href="https://rust-analyzer.github.io">Rust-Analyzer</a> offers many more features that make you much more productive.
+Just go through the <a href="https://rust-analyzer.github.io/manual.html#features">list of features</a> and watch the GIFs.
+It is just amazing!</p>
+<p>One example is "hovering over a variable" to see its type.</p>
+<p>In Julia, "hovering" shows you the variable's declaration 😐️</p>
+<p>In Rust on the other hand, "hovering" shows you the type of the variable (see <a href="https://rust-analyzer.github.io/manual.html#hover">the GIF</a>).
+Seeing the type of a variable helps you with understanding what this variable actually is and how you could use it 🧐</p>
+<p>In Julia, you either have to read the source code that returns that variable and try to derive its type or you have to run your program while printing <code>typeof</code> 🫤</p>
+<p>Maybe you can't remember the name of a specific method.
+You could browse the documentation, but often it is much faster and easier to just type the variable name with a dot at the end (<code>particles.</code> for example) and then press tab.
+Any further typing works as a fuzzy search!
+Then you pick the method and enter the parameters while the signature is shown.</p>
+<p>The language server in Julia can show you the signature, but often it is the wrong signature because of dynamic dispatch.</p>
+<p>I don't even want to start talking about auto-completion and code actions in Rust.
+Just try it out yourself!</p>
+<p>Many of the problems are related to the dynamic typing of Julia which is supposed to be "easier" than static typing.
+But with the assistance of Rust-Analyzer, I can flow between types and and be much more productive in the long term 💡</p>
+<h2 id="documentation"><a class="text-white no-underline transition-none hover:underline"
+   href="#documentation">Documentation</a></h2>
+<p>Take a look at Julia's official <a href="https://docs.julialang.org/en/v1/base/arrays">API documentation</a> of arrays and their <a href="https://docs.julialang.org/en/v1/manual/arrays">manual</a>.</p>
+<p>Julia has sections in the sidebar which is nice.
+But that is pretty much it for the navigation 😐️</p>
+<p>You can at least change the theme in the settings!</p>
+<p>You can also search, but the search is relatively slow and there are no filtering options.</p>
+<p>No wonder why some programmers are hyped about ChatGPT.
+Maybe because not only writing, but also reading documentation is often a pain?</p>
+<p>Now compare it with the <a href="https://doc.rust-lang.org/stable/std/vec/struct.Vec.html">documentation of <code>Vec</code> in Rust</a>.</p>
+<p><strong>rustdoc</strong> is an underrated piece of documentation perfection!</p>
+<p>You can see all methods, implemented traits and even module navigation in the sidebar.</p>
+<p>The search bar gives you the hint to press <code>S</code> to search and <code>?</code> for more options.
+Yes, it has keyboard shortcuts 🤩</p>
+<p>If you hover over a code example, a button on the upper right is shown to run it on <a href="https://play.rust-lang.org">Rust Playground</a> which allows quick experimentation.</p>
+<p>Code examples are automatically tested before publishing.
+There are no examples that are not in sync after an API change!</p>
+<p>You can search, filter results, search for function parameters or return types, etc.</p>
+<p>The documentation of all libraries is automatically published on <a href="https://docs.rs">docs.rs</a>.
+You can just live there the whole day.
+Just learn to navigate in rustdoc and you won't need an AI to gather snippets from here and there 😉</p>
+<p>Did I mention that you can have offline documentation if the libraries used in your project are already downloaded?
+Just run the command <code>cargo doc --open</code>.
+Very useful in a train for example 🚄</p>
+<p>Oh, wait, I didn't mention the official <a href="https://doc.rust-lang.org/stable/book"><strong>Rust book</strong></a> yet?
+It is very well written and available online for free!
+If you want to learn Rust, just start with THE book 😍</p>
+<h2 id="where-julia-shines"><a class="text-white no-underline transition-none hover:underline"
+   href="#where-julia-shines">Where Julia shines</a></h2>
+<p>OK, enough bashing against Julia.
+Let's see where Julia actually shines.</p>
+<h3 id="interactivity"><a class="text-white no-underline transition-none hover:underline"
+   href="#interactivity">Interactivity</a></h3>
+<p>The second selling point of Julia on its <a href="https://julialang.org">website</a> after performance is:</p>
+<p>"Julia is dynamically typed, feels like a scripting language, and has good support for <strong>interactive</strong> use […]"</p>
+<p>This is the power of Julia!</p>
+<p>Although Rust has REPLs like <a href="https://github.com/evcxr/evcxr/blob/main/evcxr_repl">evcxr</a> and <a href="https://github.com/sigmaSd/IRust">IRust</a> for interactive usage, it doesn't get close to the experience of Julia's REPL because Rust is statically typed.</p>
+<p>The Julia REPL is just fascinating!
+It is the best REPL I have used so far.
+It is much better than Python's REPLs although Python is also dynamically typed!</p>
+<p>You can even plot in Julia's REPL using <a href="https://github.com/JuliaPlots/UnicodePlots.jl"><code>UnicodePlots.jl</code></a> 📈</p>
+<p>I often launch it to do some quick calculations or generate some plot.</p>
+<p>What about Rust in notebooks?
+There is a Jupyter kernel for Rust, but the experience isn't comparable to Julia.
+It is not what Rust is designed for.</p>
+<p>On the other hand, Julia is perfect for Jupyter notebooks.
+You want to do data analysis, make plots and present your results?
+Julia in a Jupyter notebook is what you are looking for.</p>
+<p>You might ask, why not just use Python for notebooks?</p>
+<p>"Julia vs Python" is another topic, but I will mention some points.
+Julia offers much better performance than Python, makes dealing with Arrays (vectors, matrices, tensors) much easier and has an ecosystem centered around scientific computing with many unique packages (more about this later).</p>
+<p>Plus, Julia is mostly written in Julia!
+This makes reading and contributing code much easier.
+In Python, almost every package with good performance is written in C.
+Have fun reading that C code!</p>
+<p><a href="https://plutojl.org">Pluto notebooks</a> take Julia's interactivity to the next level.
+If you update one cell, every other dependent cell is also updated automatically!
+Without Julia's performance, this wouldn't be a pleasant experience.</p>
+<p>If you are teaching scientific programming, check out Pluto notebooks.
+I find them better than Pluto notebooks for teaching.</p>
+<p>In general, if you are teaching programming in a scientific context, I recommend starting with Julia!
+It is easier to learn and work with for most beginner's scientific use cases.</p>
+<p>Maybe offer a course for teaching Rust for students in the scientific domain that want to write large projects like long running simulations.
+But Rust shouldn't be the first language to teach.</p>
+<p>A lot of scientific computing is about linear algebra, data analysis and plotting.
+I think that Julia with its interactivity and performance is perfect for that.</p>
+<p>You don't want to wait for Rust to recompile just to see how one changed attribute in your plot is applied, you want instant updates!</p>
+<p>Although <a href="https://www.pola.rs">Polars</a> with its dataframes offers better performance than <code>DataFrames.jl</code> (see Polars benchmarks),
+I tried it and you really don't want to wait for Rust to recompile to see how your dataframe changes after changing one line.
+Just use Julia with <a href="https://timholy.github.io/Revise.jl">Revise</a> for that case!</p>
+<h3 id="scientific-ecosystem"><a class="text-white no-underline transition-none hover:underline"
+   href="#scientific-ecosystem">Scientific ecosystem</a></h3>
+<p>Julia has a huge ecosystem with many scientific packages.</p>
+<p>You get multi-dimensional arrays out of the box and <a href="https://docs.julialang.org/en/v1/stdlib/LinearAlgebra"><code>LinearAlgebra.jl</code></a> is preinstalled!</p>
+<p>Plotting in Julia is very mature and innovative with <a href="https://docs.juliaplots.org"><code>Plots.jl</code></a> and <a href="https://docs.makie.org">Makie</a>.
+Makie itself is a whole visualization ecosystem with hardware acceleration.
+Just visit <a href="https://makie.org">its website</a> for a showcase.</p>
+<p>Rust has <a href="https://github.com/plotters-rs/plotters">Plotters</a> which I really appreciate, but it has a long way to go and needs to receive more love!
+Currently, it requires a lot of boilerplate code with many manual adjustments.
+Julia does currently offer a <strong>much better</strong> experience for plotting.</p>
+<p>Julia also has awesome packages for solving differential equations, numerical integration and even newly symbolic calculation.
+Even dealing with <a href="https://github.com/PainterQubits/Unitful.jl">units</a> and <a href="https://github.com/JuliaPhysics/Measurements.jl">measurement errors</a> is a dream in Julia!</p>
+<p>On the other side, the scientific ecosystem in Rust is still rather thin.
+It is growing and the new conference <a href="https://scientificcomputing.rs">Scientific Computing in Rust</a> shows how people are passionately expanding it.
+Of course, if a functionality you are looking for is still missing, you can contribute to the ecosystem by creating a library or extending an existing one.
+But this isn't always an option.</p>
+<p>At the end, it is a <a href="https://en.wikipedia.org/wiki/Chicken_or_the_egg">chicken-and-egg</a> problem.
+If people don't use a language in a specific domain because its ecosystem is not that mature in comparison to another language, then that ecosystem won't get mature at all.</p>
+<p>If you are using Julia, chances are that you used Python before.
+Remember that Julia's ecosystem wasn't (and still isn't) as mature as Python's ecosystem.
+But people jumped in and Julia experienced a rapid growth in its ecosystem.
+Rust is catching up!</p>
+<h2 id="which-language-to-use"><a class="text-white no-underline transition-none hover:underline"
+   href="#which-language-to-use">Which language to use?</a></h2>
+<p>For scientific computing, I would recommend using <strong>Rust</strong> for projects that …</p>
+<ul>
+<li>require non-trivial concurrency</li>
+<li>require the <em>maximum</em> performance</li>
+<li>are going to be bigger than one script or notebook</li>
+<li>are going to run for a long time and have to be reliable</li>
+<li>can't afford Julia's latency (aka. time to first plot)</li>
+<li>will run on a cluster</li>
+</ul>
+<p><strong>Julia</strong> is a better fit for projects that …</p>
+<ul>
+<li>require interactivity</li>
+<li>teach students scientific computing</li>
+<li>are time limited to about one week (a student's submission for example)</li>
+<li>use plotting</li>
+<li>require functionality from existing Julia packages and porting these to Rust isn't an option for you</li>
+</ul>
+<h2 id="my-personal-conclusion"><a class="text-white no-underline transition-none hover:underline"
+   href="#my-personal-conclusion">My personal conclusion</a></h2>
+<p>To get back to the initial question: Does Julia solve the two-language problem?</p>
+<p>For me, the answer is: <strong>No</strong></p>
+<p>Although Julia has a just-in-time compiler that can make it very efficient, it misses the advantages of compilers of statically typed languages.</p>
+<p>The Rust compiler is a major help for writing correct code, doing refactorings and scaling a project.
+Compared to C/C++, it eliminates even more classes of bugs at compile time.
+The most important ones for scientific computing are data races, memory bugs and uncaught exceptions.</p>
+<p>Even if you only care about performance, for the <em>maximum</em> performance without Julia's <em>performance footguns</em>, use Rust instead!</p>
+<p>Personally, I currently use Julia for quickly testing some numerical ideas in the REPL, for some weekly university submissions and for plotting.
+For everything else, I use Rust.
+For some projects, I even use both by exporting the results of my Rust program and visualizing them with Julia.
+It is even possible to call Rust from Julia and the other way around.</p>
+<p>For some projects, I even use both!
+I export the results of my Rust program and visualize them with Julia 😃</p>
+<p>Is the two-language problem really a problem for developers?</p>
+<p>I don't think so.
+Statically and dynamically typed languages have their own strengths and use cases, especially for scientific computing.</p>
+<p>I am very happy about having Julia replacing Python in scientific computing and Rust replacing C/C++ (not only in scientific computing 😉).
+It is a needed evolution of programming languages.</p>
+<p>It is not a war.
+The two languages should coexist.
+And I will continue pushing both of them 🥰</p>
+<hr />
+<h2 id="appendix"><a class="text-white no-underline transition-none hover:underline"
+   href="#appendix">Appendix</a></h2>
+<h3 id="jet-jl"><a class="text-white no-underline transition-none hover:underline"
+   href="#jet-jl">JET.jl</a></h3>
+<p>After releasing the blog post, some people pointed out that I could have used <a href="https://github.com/aviatesk/JET.jl"><code>JET.jl</code></a> which can detect the errors in my examples using a static analysis.</p>
+<p>I know about JET and I think that it is an improvement.
+But it will only detect <strong>some</strong> errors.</p>
+<p>Julia's second selling point on its <a href="https://julialang.org">website</a> is that it is dynamically typed which is good for interactivity and flexibility.
+But a dynamically typed language can't be fully analyzed with a static analysis tool.</p>
+<p>Let's take a look at the following example:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span style="color:#ffa759;">function </span><span style="color:#ffd580;">test</span><span>()
+</span><span>    v</span><span style="color:#ffcc66;">1 </span><span style="color:#f29e74;">= </span><span>[] </span><span style="font-style:italic;color:#5c6773;"># Vector{Any}
+</span><span>    v</span><span style="color:#ffcc66;">2 </span><span style="color:#f29e74;">= </span><span>[</span><span style="color:#ffcc66;">1.0</span><span>]
+</span><span>    push</span><span style="color:#f29e74;">!</span><span>(v</span><span style="color:#ffcc66;">1</span><span>, v</span><span style="color:#ffcc66;">2</span><span>) </span><span style="font-style:italic;color:#5c6773;"># v1 is still Vector{Any}
+</span><span>
+</span><span>    last </span><span style="color:#f29e74;">=</span><span> pop</span><span style="color:#f29e74;">!</span><span>(v</span><span style="color:#ffcc66;">1</span><span>) </span><span style="font-style:italic;color:#5c6773;"># Any
+</span><span>    println(</span><span style="color:#bae67e;">&quot;OK&quot;</span><span>) </span><span style="font-style:italic;color:#5c6773;"># OK
+</span><span>    println(last.pop()) </span><span style="font-style:italic;color:#5c6773;"># Runtime error 💥
+</span><span>    println(</span><span style="color:#bae67e;">&quot;No problem!&quot;</span><span>) </span><span style="font-style:italic;color:#5c6773;"># Not reachable
+</span><span>
+</span><span>    </span><span style="color:#ffcc66;">nothing
+</span><span style="color:#ffa759;">end
+</span></code></pre>
+<p>As the comments show, the empty vector <code>v1</code> has the type <code>Vector{Any}</code> which is not only a <strong>performance footgun</strong> as mentioned in the post, but also a <strong>static analysis killer</strong>.</p>
+<p><code>last</code> has the type <code>Any</code> because it was popped from <code>Vector{Any}</code>.
+We can see in this trivial example that <code>last</code> should be <code>v2</code> which is a vector of floats.
+But this knowledge can't be derived by Julia.</p>
+<p><code>last</code> being <code>Any</code> means that Julia and therefore JET can't know if it supports <code>.pop()</code>.
+This will only be determined at runtime which will lead to a runtime error 💥</p>
+<p>Let's test the analysis of JET on our function <code>test</code>:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>julia</span><span style="color:#f29e74;">&gt; </span><span>@report_call test()
+</span><span>No errors detected
+</span></code></pre>
+<p><em>No errors detected</em> doesn't means that <em>no errors exist</em> as you can see when we run the function:</p>
+<pre data-lang="julia" style="background-color:#212733;color:#ccc9c2;" class="language-julia "><code class="language-julia" data-lang="julia"><span>julia</span><span style="color:#f29e74;">&gt;</span><span> test()
+</span><span>OK
+</span><span>ERROR</span><span style="color:#f29e74;">:</span><span> type Array has no field pop
+</span><span>Stacktrace</span><span style="color:#f29e74;">:
+</span><span>    …
+</span></code></pre>
+<p>A language that offers the <a href="https://en.wikipedia.org/wiki/Top_type"><code>TOP</code></a> type (which is <code>Any</code> in Julia) can't have a full static analysis like Rust as a language with a strict type system.</p>
+<p>Even JET is transparent about this in its <a href="https://github.com/aviatesk/JET.jl#detect-type-instability-with-report_opt">README</a>:</p>
+<p>"Note that, because JET relies on Julia's type inference, if a chain of inference is broken due to dynamic dispatch, then all downstream function calls will be unknown to the compiler, and so JET cannot analyze them."</p>
+<hr />
+<h4 id="credits"><a class="text-white no-underline transition-none hover:underline"
+   href="#credits">Credits</a></h4>
+<p>I want to thank the members of my lovely local Rust group for their support, feedback and corrections; especially <a href="https://www.researchgate.net/profile/Michael-Distler">Dr. Michael Distler</a>.</p>
+<p>There has been a <a href="https://discourse.julialang.org/t/blog-post-rust-vs-julia-in-scientific-computing/101711">long discussion</a> about this blog post on the Julia forum.
+Some corrections have been made during that discussion.
+Thanks to the Julia community ❤️</p>
+
+    </article>
+
+    
+        <nav class="flex flex-col gap-y-3 mt-8">
+            
+    
+    <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/teaching-rust/">Next post: Teaching Rust in 5 days<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">Can you learn Rust in 5 days? And how was my experience teaching Rust at my university?</span></a>
+
+
+            
+    
+    <a class="py-1.5 px-3 my-2 no-underline bg-gray-800 rounded-xl transition duration-500 hover:scale-[1.02]"
+       href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/blog/sqlx-integration-in-axum/">Previous post: SQLx integration in Axum<hr class="mt-1 mb-3 rounded-none border-gray-600"><span class="text-white">How to integrate SQLx in an Axum backend to interact with a database</span></a>
+
+
+        </nav>
+    
+
+    <section class="mt-8 text-base text-center">
+        <p>
+            You can suggest improvements on the <a href="https://codeberg.org/mo8it/website/src/branch/main/content/blog">website's repository</a>
+        </p>
+        <p>
+            Content license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>
+        </p>
+    </section>
+
+        </main>
+
+        <footer class="pt-2 pb-3 mt-auto">
+            <img class="m-0 mx-auto w-20 h-20"
+                 src="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/images/happy_ferris.svg"
+                 alt="">
+
+            <nav class="flex flex-col gap-y-3 justify-around py-3 text-center bg-gray-800 rounded sm:flex-row sm:rounded-full">
+                
+                    <a class="text-sm no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/contact">Contact</a>
+                
+                    <a class="text-sm no-underline" href="https://codeberg.org/salif/mo8it-mod">Source Code</a>
+                
+                    <a class="text-sm no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/legal-notice">Legal Notice</a>
+                
+                    <a class="text-sm no-underline" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/privacy-policy">Privacy Policy</a>
+                
+            </nav>
+        </footer>
+
+        
+            <script type="module" src="https://oxitraffic.mo8it.com/count.js"></script>
+        
+    </body>
+</html>

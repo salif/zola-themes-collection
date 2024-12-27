@@ -72,6 +72,13 @@ remove-demo-all:
     }
 
 [group('screenshot')]
+screenshot-all-dark url=local_base_url: (screenshot-all "dark" url)
+
+[group('screenshot')]
+screenshot-all-light url=local_base_url: (screenshot-all "light" url)
+
+[group('screenshot')]
+[private]
 screenshot-all mode="dark" url=local_base_url:
     find static/demo -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | xargs -I {} \
         {{ just }} screenshot '{}' '{{ mode }}' '{{ url }}'
