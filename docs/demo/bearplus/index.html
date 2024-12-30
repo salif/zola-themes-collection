@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;&#x2F;" />
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.55em' font-size='180' fill='gray'>●</text></svg>"><title>Zola Bear+ Theme</title>
+  <meta name="title" content="Zola Bear+ Theme">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  
+
+  <link id="syntax-theme-stylesheet" rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-light.css" />
+  <link rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/style.css" />
+
+  <script>
+    /* Dark mode toggle */
+
+    function setTheme(theme) {
+      document.documentElement.classList.toggle("dark-theme", theme === "dark");
+      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-" + theme + ".css";
+      localStorage.setItem("theme", theme);
+    }
+
+    let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(theme);
+
+    
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle").addEventListener("click", function (event) {
+          event.preventDefault();
+          theme = theme === "dark" ? "light" : "dark";
+          setTheme(theme);
+        });
+      });
+    
+  </script>
+
+  <script>
+    /* Add footnote backlinks (code from https://github.com/getzola/zola/issues/1070#issuecomment-1166637092) */
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const references = document.getElementsByClassName('footnote-reference')
+      // For each footnote reference, set an id so we can refer to it from the definition.
+      // If the definition had an id of 'some_id', then the reference has id `some_id_ref`.
+      for (const reference of references) {
+        const link = reference.firstChild
+        const id = link.getAttribute('href').slice(1) // skip the '#'
+        link.setAttribute('id', `${id}_ref`)
+      }
+
+      const footnotes = document.getElementsByClassName('footnote-definition')
+      // For each footnote-definition, add an anchor element with an href to its corresponding reference.
+      // The text used for the added anchor is 'Leftwards Arrow with Hook' (U+21A9).
+      for (const footnote of footnotes) {
+        const id = footnote.getAttribute('id')
+        const backReference = document.createElement('a')
+        backReference.setAttribute('href', `#${id}_ref`)
+        backReference.textContent = '↩'
+        const ps = footnote.children
+        ps[ps.length - 1].appendChild(backReference)
+      }
+    });
+  </script>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false }
+          ]
+        });
+      });
+    </script>
+  
+</head>
+<body>
+  <header>
+  <div class="title-bar">
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;" class="title">
+      <h2>Zola Bear+ Theme</h2>
+    </a>
+    
+      <button id="theme-toggle">●</button>
+    
+  </div>
+
+  <nav>
+  <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/blog/">Blog</a>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;salcc&#x2F;zola-bearplus"><i class="fa-brands fa-github" title="GitHub"></i></a></nav>
+
+
+  <br>
+</header>
+
+  <main>
+    <p>Minimalistic yet a bit featureful theme for the <a href="https://www.getzola.org/">Zola</a> static site generator.</p>
+
+  </main>
+<footer>
+</footer></body>
+</html>

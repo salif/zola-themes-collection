@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;&#x2F;blog&#x2F;markdown-syntax&#x2F;" />
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.55em' font-size='180' fill='gray'>●</text></svg>"><title>Markdown Syntax Guide | Zola Bear+ Theme</title>
+  <meta name="title" content="Markdown Syntax Guide">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  
+
+  <link id="syntax-theme-stylesheet" rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-light.css" />
+  <link rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/style.css" />
+
+  <script>
+    /* Dark mode toggle */
+
+    function setTheme(theme) {
+      document.documentElement.classList.toggle("dark-theme", theme === "dark");
+      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-" + theme + ".css";
+      localStorage.setItem("theme", theme);
+    }
+
+    let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(theme);
+
+    
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle").addEventListener("click", function (event) {
+          event.preventDefault();
+          theme = theme === "dark" ? "light" : "dark";
+          setTheme(theme);
+        });
+      });
+    
+  </script>
+
+  <script>
+    /* Add footnote backlinks (code from https://github.com/getzola/zola/issues/1070#issuecomment-1166637092) */
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const references = document.getElementsByClassName('footnote-reference')
+      // For each footnote reference, set an id so we can refer to it from the definition.
+      // If the definition had an id of 'some_id', then the reference has id `some_id_ref`.
+      for (const reference of references) {
+        const link = reference.firstChild
+        const id = link.getAttribute('href').slice(1) // skip the '#'
+        link.setAttribute('id', `${id}_ref`)
+      }
+
+      const footnotes = document.getElementsByClassName('footnote-definition')
+      // For each footnote-definition, add an anchor element with an href to its corresponding reference.
+      // The text used for the added anchor is 'Leftwards Arrow with Hook' (U+21A9).
+      for (const footnote of footnotes) {
+        const id = footnote.getAttribute('id')
+        const backReference = document.createElement('a')
+        backReference.setAttribute('href', `#${id}_ref`)
+        backReference.textContent = '↩'
+        const ps = footnote.children
+        ps[ps.length - 1].appendChild(backReference)
+      }
+    });
+  </script>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false }
+          ]
+        });
+      });
+    </script>
+  
+</head>
+<body>
+  <header>
+  <div class="title-bar">
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;" class="title">
+      <h2>Zola Bear+ Theme</h2>
+    </a>
+    
+      <button id="theme-toggle">●</button>
+    
+  </div>
+
+  <nav>
+  <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/blog/">Blog</a>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;salcc&#x2F;zola-bearplus"><i class="fa-brands fa-github" title="GitHub"></i></a></nav>
+
+
+  <br>
+</header>
+
+    <h1>Markdown Syntax Guide</h1>
+      <p>
+        <i>
+          <time datetime='2021-04-20T00:00:00+00:00' pubdate>20 April, 2021</time>
+        </i>
+      </p>
+  <main>
+    <article>
+      <p>This article offers a sample of basic Markdown syntax that can be used in Zola content files,
+also it shows whether basic HTML elements are decorated with CSS in a Zola theme.</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section
+headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="paragraph">Paragraph</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum,
+voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma
+dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as
+cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin
+porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur?
+Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit
+ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda
+veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore
+eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata
+tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne
+sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source,
+optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element,
+and optionally with in-line changes such as annotations and abbreviations.</p>
+<h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
+<blockquote>
+<p>All men by nature desire to know.<br>
+― <cite>Aristotle<sup class="footnote-reference"><a href="#1">1</a></sup></cite></p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren't part of the core Markdown spec, but Zola supports them
+out-of-the-box.</p>
+<table><thead><tr><th>Name</th><th>Age</th></tr></thead><tbody>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Alice</td><td>23</td></tr>
+</tbody></table>
+<h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
+<table><thead><tr><th>Italics</th><th>Bold</th><th>Code</th></tr></thead><tbody>
+<tr><td><em>italics</em></td><td><strong>bold</strong></td><td><code>code</code></td></tr>
+</tbody></table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h4 id="code-block-with-backticks">Code block with backticks</h4>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic">&lt;!doctype html&gt;
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">lang</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>en<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">meta</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">charset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>utf-8<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Example HTML5 Document<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Test<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<h4 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h4>
+<pre class="z-code"><code><span class="z-text z-plain">&lt;!doctype html&gt;
+</span><span class="z-text z-plain">&lt;html lang=&quot;en&quot;&gt;
+</span><span class="z-text z-plain">&lt;head&gt;
+</span><span class="z-text z-plain">  &lt;meta charset=&quot;utf-8&quot;&gt;
+</span><span class="z-text z-plain">  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+</span><span class="z-text z-plain">&lt;/head&gt;
+</span><span class="z-text z-plain">&lt;body&gt;
+</span><span class="z-text z-plain">  &lt;p&gt;Test&lt;/p&gt;
+</span><span class="z-text z-plain">&lt;/body&gt;
+</span><span class="z-text z-plain">&lt;/html&gt;
+</span></code></pre>
+<h2 id="list-types">List Types</h2>
+<h4 id="ordered-list">Ordered List</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h4 id="unordered-list">Unordered List</h4>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h4 id="nested-list">Nested list</h4>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h2 id="math-formulas">Math Formulas</h2>
+<h4 id="inline-math">Inline Math</h4>
+<p>The Pythagorean theorem is $a^2 + b^2 = c^2$.</p>
+<h4 id="display-math">Display Math</h4>
+<p>$$
+\begin{aligned}
+\sin\alpha &amp;= \frac{a}{c} \\
+\sin\beta  &amp;= \frac{b}{c} \\
+c   &amp;= b\sin\beta+a\sin\alpha=\frac{b^{2}}{c}+\frac{a^{2}}{c} \\
+c^2  &amp;= a^2 + b^2
+\end{aligned}
+$$</p>
+<h2 id="other-elements-abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the
+session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and
+other small creatures.<sup class="footnote-reference"><a href="#2">2</a></sup></p>
+<hr />
+<!-- Note: There must be a blank line between every two lines of the footnote difinition.  -->
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Aristotle. "Metaphysics". Translated by W. D. Ross. The Internet Classics Archive, 350 B.C.E. <a href="https://classics.mit.edu/Aristotle/metaphysics.html">https://classics.mit.edu/Aristotle/metaphysics.html</a>. Accessed 12 August 2023.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>The Editors of Encyclopaedia Britannica. "salamander". Encyclopedia Britannica, 23 Jun. 2023, <a href="https://www.britannica.com/animal/salamander">https://www.britannica.com/animal/salamander</a>. Accessed 12 August 2023.</p>
+</div>
+
+    </article>
+  </main>
+  <p>
+        Tags:
+          <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/tags/markdown/">#markdown</a>
+          <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/tags/syntax/">#syntax</a>
+  </p>
+<footer>
+</footer></body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="not-ready overflow-y-scroll lg:text-base" lang="en">
   
-<head prefix="og: https://ogp.me/ns#">
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -13,7 +13,7 @@
   <meta property="og:description" content="A curated directory of themes for the Zola static site generator." />
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/screenshot.png" />
   <meta property="og:image:alt" content="A screenshot of this website." />
   <meta property="og:image:type" content="image/png" />
@@ -1120,6 +1120,91 @@
         class="underline"
         onclick="const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-hacker"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear+</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-bearplus.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-bearplus.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-bearplus.webp" type="image/webp"
+        alt="Screenshot of the Bear+ theme" width="1360" height="765" />
+    </picture>
+    <p>Minimalistic yet a bit featureful theme for the Zola static site generator.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
+<h3 id="installation">Installation</h3>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/salcc/zola-bearplus.git themes/bearplus
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/salcc/zola-bearplus.git themes/bearplus
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">bearplus</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
+<h3 id="info">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://mar%C3%A7al.cc">Marçal Comajoan Cara</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://theme.mar%C3%A7al.cc">https://theme.marçal.cc</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://theme.mar%C3%A7al.cc">https://theme.marçal.cc</a></li>
+<li><strong>Min version</strong>: 0.17.2</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/bearplus/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/salcc/zola-bearplus"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-bearplus"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-bearplus"
         >Info</a
       >
       

@@ -627,6 +627,59 @@ theme = "hacker"
   js = "const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "bearplus"
+name = "Bear+"
+desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
+
+### Installation
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/salcc/zola-bearplus.git themes/bearplus
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/salcc/zola-bearplus.git themes/bearplus
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "bearplus"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
+
+### Info
+- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
+- **License**: MIT
+- **Homepage**: <https://theme.marçal.cc>
+- **Offic. Live Demo**: <https://theme.marçal.cc>
+- **Min version**: 0.17.2
+- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/bearplus/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/salcc/zola-bearplus"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-bearplus"
+  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-bearplus"
+  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "hook"
 name = "Hook"
 desc = "Clean and simple personal site/blog theme"

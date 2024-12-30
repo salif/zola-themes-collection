@@ -5,8 +5,41 @@
     <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/apollo/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/apollo/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-07-09T00:00:00+00:00</updated>
+    <updated>2024-12-26T00:00:00+00:00</updated>
     <id>https://salif.github.io/zola-themes-collection/demo/apollo/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Mermaid Example</title>
+        <published>2024-12-26T00:00:00+00:00</published>
+        <updated>2024-12-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/apollo/posts/mermaid/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/apollo/posts/mermaid/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/apollo/posts/mermaid/">&lt;p&gt;This Theme supports &lt;a href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;&quot;&gt;mermaid&lt;&#x2F;a&gt; markdown diagram rendering.&lt;&#x2F;p&gt;
+&lt;p&gt;To use mermaid diagrams in your posts, see the example in the raw markdown code.
+https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;not-matthias&#x2F;apollo&#x2F;refs&#x2F;heads&#x2F;main&#x2F;content&#x2F;posts&#x2F;mermaid.md&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rendered-example&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#rendered-example&quot; aria-label=&quot;Anchor link for: rendered-example&quot;&gt;Rendered Example&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;
+  graph LR
+    A[Start] --&gt; B[Initialize]
+    B --&gt; C[Processing]
+    C --&gt; D[Complete]
+    D --&gt; E[Success]
+    
+    style A fill:#f9f,stroke:#333
+    style E fill:#9f9,stroke:#333
+&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Configuring Apollo</title>
         <published>2024-07-09T00:00:00+00:00</published>
@@ -44,6 +77,14 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;3 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;logo&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#logo&quot; aria-label=&quot;Anchor link for: logo&quot;&gt;Logo&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Defines the site logo image file.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Type: String&lt;&#x2F;li&gt;
+&lt;li&gt;Usage:&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;logo &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;site_logo.svg&amp;quot;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;

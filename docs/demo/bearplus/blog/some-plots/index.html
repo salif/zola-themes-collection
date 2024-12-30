@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;&#x2F;blog&#x2F;some-plots&#x2F;" />
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.55em' font-size='180' fill='gray'>●</text></svg>"><title>Some Plots | Zola Bear+ Theme</title>
+  <meta name="title" content="Some Plots">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  
+
+  <link id="syntax-theme-stylesheet" rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-light.css" />
+  <link rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/style.css" />
+
+  <script>
+    /* Dark mode toggle */
+
+    function setTheme(theme) {
+      document.documentElement.classList.toggle("dark-theme", theme === "dark");
+      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-" + theme + ".css";
+      localStorage.setItem("theme", theme);
+    }
+
+    let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    setTheme(theme);
+
+    
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle").addEventListener("click", function (event) {
+          event.preventDefault();
+          theme = theme === "dark" ? "light" : "dark";
+          setTheme(theme);
+        });
+      });
+    
+  </script>
+
+  <script>
+    /* Add footnote backlinks (code from https://github.com/getzola/zola/issues/1070#issuecomment-1166637092) */
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const references = document.getElementsByClassName('footnote-reference')
+      // For each footnote reference, set an id so we can refer to it from the definition.
+      // If the definition had an id of 'some_id', then the reference has id `some_id_ref`.
+      for (const reference of references) {
+        const link = reference.firstChild
+        const id = link.getAttribute('href').slice(1) // skip the '#'
+        link.setAttribute('id', `${id}_ref`)
+      }
+
+      const footnotes = document.getElementsByClassName('footnote-definition')
+      // For each footnote-definition, add an anchor element with an href to its corresponding reference.
+      // The text used for the added anchor is 'Leftwards Arrow with Hook' (U+21A9).
+      for (const footnote of footnotes) {
+        const id = footnote.getAttribute('id')
+        const backReference = document.createElement('a')
+        backReference.setAttribute('href', `#${id}_ref`)
+        backReference.textContent = '↩'
+        const ps = footnote.children
+        ps[ps.length - 1].appendChild(backReference)
+      }
+    });
+  </script>
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false }
+          ]
+        });
+      });
+    </script>
+  
+</head>
+<body>
+  <header>
+  <div class="title-bar">
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;" class="title">
+      <h2>Zola Bear+ Theme</h2>
+    </a>
+    
+      <button id="theme-toggle">●</button>
+    
+  </div>
+
+  <nav>
+  <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/blog/">Blog</a>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;salcc&#x2F;zola-bearplus"><i class="fa-brands fa-github" title="GitHub"></i></a></nav>
+
+
+  <br>
+</header>
+
+    <h1>Some Plots</h1>
+      <p>
+        <i>
+          <time datetime='2023-08-15T00:00:00+00:00' pubdate>15 August, 2023</time>
+        </i>
+      </p>
+  <main>
+    <article>
+      <p>The theme also has support for charts created with <a href="https://echarts.apache.org/">Apache ECharts</a>.</p>
+<p>For example, here's the <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">Anscombe's quartet</a>:</p>
+
+
+<div id="anscombes_quartet.js" style="width: 100%; height: 500px;"></div>
+<script type="text/javascript">
+  (function() {
+    window.echartsLoader = window.echartsLoader || {
+      loadPromise: null
+    };
+
+    function loadEchartsLibraries() {
+      if (echartsLoader.loadPromise) {
+        return echartsLoader.loadPromise;
+      }
+
+      function loadScript(url) {
+        return new Promise((resolve, reject) => {
+          if (document.querySelector(`script[src="${url}"]`)) {
+            resolve();
+            return;
+          }
+          const script = document.createElement('script');
+          script.defer = true;
+          script.src = url;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+
+      // Load echarts first, then echarts-gl
+      echartsLoader.loadPromise = loadScript('https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js')
+        .then(() => loadScript('https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js'));
+
+      return echartsLoader.loadPromise;
+    }
+
+    async function initChart() {
+      try {
+        await loadEchartsLibraries();
+        const chart = echarts.init(document.getElementById('anscombes_quartet.js'));
+        const dataAll = [
+  [
+    [10.0, 8.04],
+    [8.0, 6.95],
+    [13.0, 7.58],
+    [9.0, 8.81],
+    [11.0, 8.33],
+    [14.0, 9.96],
+    [6.0, 7.24],
+    [4.0, 4.26],
+    [12.0, 10.84],
+    [7.0, 4.82],
+    [5.0, 5.68]
+  ],
+  [
+    [10.0, 9.14],
+    [8.0, 8.14],
+    [13.0, 8.74],
+    [9.0, 8.77],
+    [11.0, 9.26],
+    [14.0, 8.1],
+    [6.0, 6.13],
+    [4.0, 3.1],
+    [12.0, 9.13],
+    [7.0, 7.26],
+    [5.0, 4.74]
+  ],
+  [
+    [10.0, 7.46],
+    [8.0, 6.77],
+    [13.0, 12.74],
+    [9.0, 7.11],
+    [11.0, 7.81],
+    [14.0, 8.84],
+    [6.0, 6.08],
+    [4.0, 5.39],
+    [12.0, 8.15],
+    [7.0, 6.42],
+    [5.0, 5.73]
+  ],
+  [
+    [8.0, 6.58],
+    [8.0, 5.76],
+    [8.0, 7.71],
+    [8.0, 8.84],
+    [8.0, 8.47],
+    [8.0, 7.04],
+    [8.0, 5.25],
+    [19.0, 12.5],
+    [8.0, 5.56],
+    [8.0, 7.91],
+    [8.0, 6.89]
+  ]
+];
+const markLineOpt = {
+  animation: false,
+  label: {
+    formatter: 'y = 0.5x + 3',
+    align: 'right'
+  },
+  lineStyle: {
+    type: 'solid'
+  },
+  tooltip: {
+    formatter: 'y = 0.5x + 3'
+  },
+  data: [
+    [
+      {
+        coord: [0, 3],
+        symbol: 'none'
+      },
+      {
+        coord: [20, 13],
+        symbol: 'none'
+      }
+    ]
+  ]
+};
+option = {
+  title: {
+    text: "Anscombe's quartet",
+    left: 'center',
+    top: 0
+  },
+  grid: [
+    { left: '7%', top: '7%', width: '38%', height: '38%' },
+    { right: '7%', top: '7%', width: '38%', height: '38%' },
+    { left: '7%', bottom: '7%', width: '38%', height: '38%' },
+    { right: '7%', bottom: '7%', width: '38%', height: '38%' }
+  ],
+  tooltip: {
+    formatter: 'Group {a}: ({c})'
+  },
+  xAxis: [
+    { gridIndex: 0, min: 0, max: 20 },
+    { gridIndex: 1, min: 0, max: 20 },
+    { gridIndex: 2, min: 0, max: 20 },
+    { gridIndex: 3, min: 0, max: 20 }
+  ],
+  yAxis: [
+    { gridIndex: 0, min: 0, max: 15 },
+    { gridIndex: 1, min: 0, max: 15 },
+    { gridIndex: 2, min: 0, max: 15 },
+    { gridIndex: 3, min: 0, max: 15 }
+  ],
+  series: [
+    {
+      name: 'I',
+      type: 'scatter',
+      xAxisIndex: 0,
+      yAxisIndex: 0,
+      data: dataAll[0],
+      markLine: markLineOpt
+    },
+    {
+      name: 'II',
+      type: 'scatter',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: dataAll[1],
+      markLine: markLineOpt
+    },
+    {
+      name: 'III',
+      type: 'scatter',
+      xAxisIndex: 2,
+      yAxisIndex: 2,
+      data: dataAll[2],
+      markLine: markLineOpt
+    },
+    {
+      name: 'IV',
+      type: 'scatter',
+      xAxisIndex: 3,
+      yAxisIndex: 3,
+      data: dataAll[3],
+      markLine: markLineOpt
+    }
+  ]
+};
+        chart.setOption(option);
+        window.addEventListener('resize', () => chart.resize());
+      } catch (error) {
+        console.error('Failed to initialize chart:', error);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initChart);
+    } else {
+      initChart();
+    }
+  })();
+</script>
+<p>And here's a plot of the <a href="https://en.wikipedia.org/wiki/Klein_bottle">Klein bottle immersed in three-dimensional space</a>:</p>
+
+
+<div id="klein_bottle.js" style="width: 100%; height: 500px;"></div>
+<script type="text/javascript">
+  (function() {
+    window.echartsLoader = window.echartsLoader || {
+      loadPromise: null
+    };
+
+    function loadEchartsLibraries() {
+      if (echartsLoader.loadPromise) {
+        return echartsLoader.loadPromise;
+      }
+
+      function loadScript(url) {
+        return new Promise((resolve, reject) => {
+          if (document.querySelector(`script[src="${url}"]`)) {
+            resolve();
+            return;
+          }
+          const script = document.createElement('script');
+          script.defer = true;
+          script.src = url;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+      }
+
+      // Load echarts first, then echarts-gl
+      echartsLoader.loadPromise = loadScript('https://cdn.jsdelivr.net/npm/echarts@latest/dist/echarts.min.js')
+        .then(() => loadScript('https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js'));
+
+      return echartsLoader.loadPromise;
+    }
+
+    async function initChart() {
+      try {
+        await loadEchartsLibraries();
+        const chart = echarts.init(document.getElementById('klein_bottle.js'));
+        var option = {
+  tooltip: {},
+  visualMap: {
+    show: false,
+    dimension: 2,
+    min: -1,
+    max: 1,
+    inRange: {
+      color: [
+        '#313695',
+        '#4575b4',
+        '#74add1',
+        '#abd9e9',
+        '#e0f3f8',
+        '#ffffbf',
+        '#fee090',
+        '#fdae61',
+        '#f46d43',
+        '#d73027',
+        '#a50026'
+      ]
+    }
+  },
+  xAxis3D: {
+    min: -2.5,
+    max: 2.5
+  },
+  yAxis3D: {
+    min: -0.5,
+    max: 4.5
+  },
+  zAxis3D: {
+    min: -1.5,
+    max: 1.5
+  },
+  grid3D: {
+  },
+  series: [
+    {
+      type: 'surface',
+      parametric: true,
+      shading: 'color',
+      itemStyle: {
+        opacity: 0.6
+      },
+      parametricEquation: {
+        u: {
+          min: -0.1,
+          max: Math.PI
+        },
+        v: {
+          min: -0.1,
+          max: 2 * Math.PI
+        },
+        x: function(u, v) {
+          return - 2 / 15 * Math.cos(u) * (3 * Math.cos(v) - 30 * Math.sin(u) + 90 * Math.pow(Math.cos(u), 4) * Math.sin(u) - 60 * Math.pow(Math.cos(u), 6) * Math.sin(u) + 5 * Math.cos(u) * Math.cos(v) * Math.sin(u));
+        },
+        y: function(u, v) {
+          return - 1 / 15 * Math.sin(u) * (3 * Math.cos(v) - 3 * Math.pow(Math.cos(u), 2) * Math.cos(v) - 48 * Math.pow(Math.cos(u), 4) * Math.cos(v) + 48 * Math.pow(Math.cos(u), 6) * Math.cos(v) - 60 * Math.sin(u) + 5 * Math.cos(u) * Math.cos(v) * Math.sin(u) - 5 * Math.pow(Math.cos(u), 3) * Math.cos(v) * Math.sin(u) - 80 * Math.pow(Math.cos(u), 5) * Math.cos(v) * Math.sin(u) + 80 * Math.pow(Math.cos(u), 7) * Math.cos(v) * Math.sin(u));
+        },
+        z: function(u, v) {
+          return 2 / 15 * (3 + 5 * Math.cos(u) * Math.sin(u)) * Math.sin(v);
+        }
+      }
+    }
+  ]
+};
+        chart.setOption(option);
+        window.addEventListener('resize', () => chart.resize());
+      } catch (error) {
+        console.error('Failed to initialize chart:', error);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initChart);
+    } else {
+      initChart();
+    }
+  })();
+</script>
+<p>You can see the source code to generate these plots in the <a href="https://github.com/salcc/zola-bearplus/tree/main/content/blog/some-plots"><code>content/blog/some-plots</code></a> directory of the theme's repository.</p>
+
+    </article>
+  </main>
+  <p>
+        Tags:
+          <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/tags/syntax/">#syntax</a>
+  </p>
+<footer>
+</footer></body>
+</html>
