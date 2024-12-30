@@ -36,7 +36,6 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 
 #### No support for subdir base url
 
-- [bearplus](https://github.com/salcc/zola-bearplus)
 - [zolarwind](https://github.com/thomasweitzel/zolarwind)
 - [serene](https://github.com/isunjn/serene)
 - [blow](https://github.com/tchartron/blow)
