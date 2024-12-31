@@ -140,7 +140,7 @@ local-test-all: (build-demo-all local_base_url) (update-data local_base_url)
     zola serve --open
 
 [group('help')]
-submodule-remove path:
+submodule-remove path: && screenshots-to-fix
     test -d '{{ path }}'
     git submodule deinit -f '{{ path }}'
     rm -rf '.git/modules/{{ path }}'
@@ -155,6 +155,7 @@ submodule-add url name: && (build-check "themes/" + name)
 submodule-update-all:
     git submodule update --init --remote
     git submodule foreach --recursive git submodule update --init
+    git submodule summary
 
 [group('push')]
 fix-docs-dir:
