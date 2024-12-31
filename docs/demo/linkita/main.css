@@ -1374,6 +1374,10 @@ sup a {
   height: 100%;
 }
 
+.min-h-8 {
+  min-height: 2rem;
+}
+
 .min-h-\[3\.25rem\] {
   min-height: 3.25rem;
 }
@@ -1772,11 +1776,6 @@ sup a {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 .duration-100 {
   transition-duration: 100ms;
 }
@@ -2020,7 +2019,7 @@ article {
 }
 
 @media (min-width: 768px) {
-  .md\:min-h-\[18rem\] {
+  .md\:min-h-72 {
     min-height: 18rem;
   }
 
@@ -2038,16 +2037,16 @@ article {
     margin-left: 1.5rem;
   }
 
+  .lg\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:h-\[4rem\] {
-    height: 4rem;
   }
 
   .lg\:w-auto {
