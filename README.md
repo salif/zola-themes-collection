@@ -31,6 +31,8 @@ Have a `theme.toml` file. Have a `comfig.toml` file or `themes/theme-name/config
 - [bd](https://github.com/flabbergastedbd/bd)
 - [stardust](https://github.com/UWCS/stardust-theme)
 - [zola-metro](https://github.com/RedstoneParadox/zola-metro)
+- [sigmund](https://github.com/videah/sigmund)
+- [zola-pickles](https://github.com/lukehsiao/zola-pickles)
 
 Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 
@@ -52,6 +54,7 @@ Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
 - [zola-folio](https://github.com/evjrob/zola-folio)
 - [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme)
 - [zizotto](https://github.com/xihn/zizotto)
+- [Baie](https://github.com/Wtoll/Baie)
 
 #### No license
 

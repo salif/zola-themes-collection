@@ -4,7 +4,7 @@ import TOML from "@iarna/toml"
 $.verbose = true
 process.env.CLICOLOR_FORCE = '1'
 
-const sepThemes = new Map([
+const demoRepoThemes = new Map([
 	["linkita", "https://codeberg.org/salif/linkita.git"],
 	["tabi", "https://github.com/welpo/tabi.git"],
 	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
@@ -104,8 +104,8 @@ function readThemeInfo(theme, baseURL, TOML) {
 	const themeName = theme.path.substring(7);
 	let themeTomlPath = path.join(theme.path, "theme.toml");
 	const themeInfo = {};
-	if (sepThemes.has(themeName)) {
-		themeInfo.clone = sepThemes.get(themeName);
+	if (demoRepoThemes.has(themeName)) {
+		themeInfo.clone = demoRepoThemes.get(themeName);
 		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
 	} else {
 		themeInfo.clone = theme.url;

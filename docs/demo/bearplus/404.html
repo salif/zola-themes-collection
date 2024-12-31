@@ -26,7 +26,7 @@
 
     function setTheme(theme) {
       document.documentElement.classList.toggle("dark-theme", theme === "dark");
-      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-" + theme + ".css";
+      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;".replace(/&#x2F;/g, '/') + "/syntax-theme-" + theme + ".css";
       localStorage.setItem("theme", theme);
     }
 
