@@ -134,7 +134,7 @@ ${content}
 	const newJS = (name) => "const b=document.getElementById('" + name + "').parentElement;" +
 		"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
 	const themeDetails = newDetails("install", `
-### Installation
+### Installation{#h-install-${themeName}}
 0. Create a new Zola site: \`zola init\` and initialize a Git repository: \`git init\`
 1. Download the theme
   - Option A: Add the theme as a git submodule:
@@ -150,7 +150,7 @@ git clone ${themeInfo.clone} themes/${themeName}
 theme = "${themeName}"
 \`\`\`
 `) + newDetails("info", `
-### Info` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
+### Info{#h-info-${themeName}}` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
 - **Author**: ${themeInfo.authorName}`), `
 - **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
 - **License**: ${themeInfo.license}
