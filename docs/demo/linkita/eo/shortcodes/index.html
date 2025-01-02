@@ -69,8 +69,9 @@
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
-        <a class="text-2xl font-semibold" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/" accesskey="!">Linkita</a>
-        <button type="button" aria-label="Toggle dark/light mode" accesskey="$"
+        <a title="Iri al ĉefpaĝo" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/" class="text-2xl font-semibold">Linkita</a>
+        <button type="button" title="Ŝanĝi kolorskemon" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
           class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
           style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
@@ -82,7 +83,7 @@
             xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
             stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
         ></button>
-        <button type="button" aria-label="Open page translation" accesskey=";"
+        <button type="button" title="Iri al paĝa traduko" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
           style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
             viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' \
@@ -92,7 +93,7 @@
         <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
       </div>
       
-      <div aria-label="Menu" role="button" accesskey="+" tabindex="0"
+      <div title="Menuo" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
         onclick="window.linkita.toggleHeaderMenu();"
         onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
@@ -560,7 +561,7 @@ sequenceDiagram
   </main>
   <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2024">2024</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
