@@ -9,6 +9,8 @@ const demoRepoThemes = new Map([
 	["tabi", "https://github.com/welpo/tabi.git"],
 	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
 ])
+
+const versionWarn = "Does not work with the latest version of Zola"
 const errors = []
 
 export function buildCheckAll(baseURL, commands) {

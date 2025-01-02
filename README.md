@@ -4,60 +4,67 @@
 
 ## Theme requirements
 
-Have a `theme.toml` file. Have a `comfig.toml` file or `themes/theme-name/config.toml`. No commited `public` directory.
+- Have a `config.toml` file. Can be on a separate repository.
+- Have a `theme.toml` file or `themes/theme-name/theme.toml` file.
+- Building is successful using the latest Zola version (0.19.2).
 
-### Non-eligible themes
+## Non-eligible themes
 
-#### Build failed
+### Build failed
 
-- [DeepThought](https://github.com/RatanShreshtha/DeepThought)
-- [zola-inky](https://github.com/jimmyff/zola-inky)
-- [halve-z](https://github.com/charlesrocket/halve-z)
-- [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche)
-- [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog)
-- [ennui](https://codeberg.org/leana8959/ennui)
-- [re137](https://github.com/tinikov/re137)
-- [butler](https://github.com/shalzz/butler)
-- [polymathic](https://github.com/anvlkv/polymathic)
-- [magic-box](https://github.com/dulvui/magic-box)
-- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil)
-- [cela](https://github.com/edwardzcn-decade/cela)
-- [bluetheme](https://github.com/bluerobotics/bluetheme)
-- [arsmateria](https://github.com/mboleary/arsmateria-zola-theme)
-- [anatole](https://github.com/longfangsong/anatole-zola)
-- [parchment](https://github.com/jsonfry/parchment)
-- [hermit_zola](https://github.com/VersBinarii/hermit_zola)
-- [hayflow](https://github.com/aaw3/hayflow)
-- [bd](https://github.com/flabbergastedbd/bd)
-- [stardust](https://github.com/UWCS/stardust-theme)
-- [zola-metro](https://github.com/RedstoneParadox/zola-metro)
-- [sigmund](https://github.com/videah/sigmund)
-- [zola-pickles](https://github.com/lukehsiao/zola-pickles)
+- [DeepThought](https://github.com/RatanShreshtha/DeepThought): 153 commits
+- [zola-inky](https://github.com/jimmyff/zola-inky): 30 commits
+- [halve-z](https://github.com/charlesrocket/halve-z): 509 commits
+- [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits
+- [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits
+- [ennui](https://codeberg.org/leana8959/ennui): 36 commits
+- [re137](https://github.com/tinikov/re137): 11 commits
+- [butler](https://github.com/shalzz/butler): 105 commits
+- [polymathic](https://github.com/anvlkv/polymathic): 95 commits
+- [magic-box](https://github.com/dulvui/magic-box): 187 commits
+- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 293 commits
+- [cela](https://github.com/edwardzcn-decade/cela): 3 commits
+- [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
+- [arsmateria](https://github.com/mboleary/arsmateria-zola-theme): 19 commits
+- [anatole](https://github.com/longfangsong/anatole-zola): 49 commits
+- [parchment](https://github.com/jsonfry/parchment): 5 commits
+- [hermit_zola](https://github.com/VersBinarii/hermit_zola): 61 commits
+- [hayflow](https://github.com/aaw3/hayflow): 19 commits
+- [bd](https://github.com/flabbergastedbd/bd): 20 commits
+- [stardust](https://github.com/UWCS/stardust-theme): 256 commits
+- [zola-metro](https://github.com/RedstoneParadox/zola-metro): 18 commits
+- [sigmund](https://github.com/videah/sigmund): 36 commits
+- [zola-pickles](https://github.com/lukehsiao/zola-pickles): 92 commits
+- [archie-zola](https://github.com/XXXMrG/archie-zola): 59 commits
+- [archie-zola-modified](https://codeberg.org/akselmo/archie-zola-modified): 62 commits
+- [snow-kitty](https://codeberg.org/SnowCode/snow-kitty): 94 commits
+- [zola-rahix](https://github.com/Rahix/blog-theme): 88 commits
+- [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits
 
-Build may fail if the theme uses `load_data` from `public` or `.git/HEAD`.
+In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
-#### No support for subdir base url
+### Broken links if base url contains a subpath
 
-- [zolarwind](https://github.com/thomasweitzel/zolarwind)
-- [serene](https://github.com/isunjn/serene)
-- [blow](https://github.com/tchartron/blow)
-- [feather](https://github.com/piedoom/feather)
-- [slightknack](https://github.com/slightknack/slightknack.dev)
-- [norwind](https://github.com/nobodygx/norwind)
-- [nomad](https://github.com/nomad-dev-writer/zola-nomad-theme)
-- [cosmic__cube](https://github.com/ccarral/cosmic__cube)
-- [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang)
-- [Homepage-Creators](https://github.com/iWangJiaxiang/Homepage-Creators)
-- [anemone](https://github.com/Speyll/anemone)
-- [book-shelf](https://github.com/anccnuer/book-shelf)
-- [zola-aurora](https://github.com/vimpostor/zola-aurora)
-- [zola-folio](https://github.com/evjrob/zola-folio)
-- [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme)
-- [zizotto](https://github.com/xihn/zizotto)
-- [Baie](https://github.com/Wtoll/Baie)
+- [zolarwind](https://github.com/thomasweitzel/zolarwind): 76 commits
+- [serene](https://github.com/isunjn/serene): 324 commits
+- [blow](https://github.com/tchartron/blow): 472 commits
+- [feather](https://github.com/piedoom/feather): 81 commits
+- [slightknack](https://github.com/slightknack/slightknack.dev): 230 commits
+- [norwind](https://github.com/nobodygx/norwind): 12 commits
+- [nomad](https://github.com/nomad-dev-writer/zola-nomad-theme): 26 commits
+- [cosmic__cube](https://github.com/ccarral/cosmic__cube): 56 commits
+- [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang): 35 commits
+- [Homepage-Creators](https://github.com/iWangJiaxiang/Homepage-Creators): 6 commits
+- [anemone](https://github.com/Speyll/anemone): 62 commits
+- [book-shelf](https://github.com/anccnuer/book-shelf): 5 commits
+- [zola-aurora](https://github.com/vimpostor/zola-aurora): 86 commits
+- [zola-folio](https://github.com/evjrob/zola-folio): 50 commits
+- [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme): 13 commits
+- [zizotto](https://github.com/xihn/zizotto): 12 commits
+- [Baie](https://github.com/Wtoll/Baie): 7 commits
 
-#### No license
+### No license that allows me to host a live demo
 
-- [attention](https://github.com/tongyul/attention-theme-zola)
-- [bare-room](https://github.com/ghrrlp/bare-room)
-- [zola-es-theme](https://github.com/scouten/zola-es-theme)
+- [attention](https://github.com/tongyul/attention-theme-zola): 19 commits
+- [bare-room](https://github.com/ghrrlp/bare-room): 2 commits
+- [zola-es-theme](https://github.com/scouten/zola-es-theme): 252 commits
