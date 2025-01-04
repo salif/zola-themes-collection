@@ -25,21 +25,22 @@
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 293 commits
 - [cela](https://github.com/edwardzcn-decade/cela): 3 commits
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
-- [arsmateria](https://github.com/mboleary/arsmateria-zola-theme): 19 commits
-- [anatole](https://github.com/longfangsong/anatole-zola): 49 commits
+- [anatole-zola](https://github.com/longfangsong/anatole-zola): 49 commits
 - [parchment](https://github.com/jsonfry/parchment): 5 commits
 - [hermit_zola](https://github.com/VersBinarii/hermit_zola): 61 commits
 - [hayflow](https://github.com/aaw3/hayflow): 19 commits
 - [bd](https://github.com/flabbergastedbd/bd): 20 commits
-- [stardust](https://github.com/UWCS/stardust-theme): 256 commits
+- [stardust-theme](https://github.com/UWCS/stardust-theme): 256 commits
 - [zola-metro](https://github.com/RedstoneParadox/zola-metro): 18 commits
 - [sigmund](https://github.com/videah/sigmund): 36 commits
 - [zola-pickles](https://github.com/lukehsiao/zola-pickles): 92 commits
 - [archie-zola](https://github.com/XXXMrG/archie-zola): 59 commits
 - [archie-zola-modified](https://codeberg.org/akselmo/archie-zola-modified): 62 commits
+- [arsmateria-zola-theme](https://github.com/mboleary/arsmateria-zola-theme): 19 commits
 - [snow-kitty](https://codeberg.org/SnowCode/snow-kitty): 94 commits
 - [zola-rahix](https://github.com/Rahix/blog-theme): 88 commits
 - [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits
+- [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -51,7 +52,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [feather](https://github.com/piedoom/feather): 81 commits
 - [slightknack](https://github.com/slightknack/slightknack.dev): 230 commits
 - [norwind](https://github.com/nobodygx/norwind): 12 commits
-- [nomad](https://github.com/nomad-dev-writer/zola-nomad-theme): 26 commits
+- [zola-nomad-theme](https://github.com/nomad-dev-writer/zola-nomad-theme): 26 commits
 - [cosmic__cube](https://github.com/ccarral/cosmic__cube): 56 commits
 - [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang): 35 commits
 - [Homepage-Creators](https://github.com/iWangJiaxiang/Homepage-Creators): 6 commits

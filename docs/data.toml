@@ -521,6 +521,59 @@ theme = "kita"
   js = "const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "papermod"
+name = "PaperMod"
+desc = "A fast, clean, responsive theme ported to Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod'></summary>
+
+### Installation{#h-install-papermod}
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/cydave/zola-theme-papermod.git themes/papermod
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/cydave/zola-theme-papermod.git themes/papermod
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "papermod"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod'></summary>
+
+### Info{#h-info-papermod}
+- **Author**: [cydave](https://github.com/cydave)
+- **License**: MIT
+- **Homepage**: <https://github.com/cydave/zola-theme-papermod>
+- **Offic. Live Demo**: <https://cydave.github.io/zola-theme-papermod/>
+- **Min version**: 0.4.0
+- **Original**: <https://github.com/adityatelange/hugo-PaperMod>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/papermod/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/cydave/zola-theme-papermod"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-papermod"
+  js = "const b=document.getElementById('install-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-papermod"
+  js = "const b=document.getElementById('info-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "mabuya"
 name = "Mabuya"
 desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
@@ -1098,6 +1151,58 @@ theme = "sandbox"
   js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+
+### Installation{#h-install-radion}
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/micahkepe/radion.git themes/radion
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/micahkepe/radion.git themes/radion
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "radion"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
+
+### Info{#h-info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Offic. Live Demo**: <https://micahkepe.com/radion/>
+- **Min version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/micahkepe/radion"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-radion"
+  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-radion"
+  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "DogFood"
 name = "DogFood"
 desc = "A blog theme"
@@ -1302,55 +1407,3 @@ theme = "silk"
   name = "Info"
   url = "#info-silk"
   js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "radion"
-name = "radion"
-desc = "A sleek, modern blog theme."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
-
-### Installation{#h-install-radion}
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/micahkepe/radion.git themes/radion
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/micahkepe/radion.git themes/radion
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "radion"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-
-### Info{#h-info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Offic. Live Demo**: <https://micahkepe.com/radion/>
-- **Min version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/micahkepe/radion"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-radion"
-  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-radion"
-  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
