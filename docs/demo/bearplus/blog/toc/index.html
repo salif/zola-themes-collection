@@ -2,39 +2,33 @@
 <html lang="en">
 <head>
   
-    <link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;&#x2F;blog&#x2F;toc&#x2F;" />
+    <link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;&#x2F;blog&#x2F;toc&#x2F;">
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <link href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20100%20100'%3E%3Ctext%20y%3D'.55em'%20font-size%3D'180'%20fill%3D'gray'%3E%E2%97%8F%3C%2Ftext%3E%3C%2Fsvg%3E" rel="shortcut icon"><title>A Really Long Post with a Table of Contents | Zola Bear+ Theme</title>
-  <meta name="title" content="A Really Long Post with a Table of Contents">
-  <meta name="referrer" content="no-referrer-when-downgrade">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-  
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/fontawesome.min.css">
-  
-
-  <link id="syntax-theme-stylesheet" rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/syntax-theme-light.css" />
-  <link rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/style.css" />
 
   <script>
-    /* Dark mode toggle */
-
     function setTheme(theme) {
       document.documentElement.classList.toggle("dark-theme", theme === "dark");
-      document.getElementById("syntax-theme-stylesheet").href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;".replace(/&#x2F;/g, '/') + "/syntax-theme-" + theme + ".css";
+      let syntaxThemeStylesheetLink = document.getElementById("syntax-theme-stylesheet");
+      if (!syntaxThemeStylesheetLink) {
+        syntaxThemeStylesheetLink = document.createElement("link");
+        syntaxThemeStylesheetLink.id = "syntax-theme-stylesheet";
+        syntaxThemeStylesheetLink.rel = "stylesheet";
+        syntaxThemeStylesheetLink.type = "text/css";
+        document.head.appendChild(syntaxThemeStylesheetLink);
+      }
+      syntaxThemeStylesheetLink.href = "https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;".replace(/&#x2F;/g, '/') + "/syntax-theme-" + theme + ".css";
       localStorage.setItem("theme", theme);
     }
 
     let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     setTheme(theme);
+  </script>
 
+  <link rel="stylesheet" type="text/css" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;/style.css">
+
+  <script>
     
       document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("theme-toggle").addEventListener("click", function (event) {
@@ -45,6 +39,26 @@
       });
     
   </script>
+
+  
+    <link href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20100%20100'%3E%3Ctext%20y%3D'.55em'%20font-size%3D'180'%20fill%3D'gray'%3E%E2%97%8F%3C%2Ftext%3E%3C%2Fsvg%3E" rel="shortcut icon"><title>
+  
+  A Really Long Post with a Table of Contents | Blog | Zola Bear+ Theme
+</title>
+  <meta name="title" content="A Really Long Post with a Table of Contents">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/solid.min.css" integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    media="print" onload="this.media='all'">
+  
 
   <script>
     /* Add footnote backlinks (code from https://github.com/getzola/zola/issues/1070#issuecomment-1166637092) */
@@ -74,10 +88,11 @@
   </script>
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    media="print" onload="this.media='all'">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" integrity="sha512-LQNxIMR5rXv7o+b1l8+N1EZMfhG7iFZ9HhnbJkTp4zjNr5Wvst75AqUeFDxeRUa7l5vEDyUiAip//r+EFLLCyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" integrity="sha512-cQxSkTM4RvFAjdBeBDkrllhYfERwZWjM/oijKfPsmhR0JI2U3fXSlbUaJp5SlgBh/FzYmMyWudRTXLnNj3MbEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         renderMathInElement(document.body, {
@@ -95,9 +110,9 @@
 <body>
   <header>
   <div class="title-bar">
-    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;" class="title">
-      <h2>Zola Bear+ Theme</h2>
-    </a>
+    <h2>
+      <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;bearplus&#x2F;" class="title">Zola Bear+ Theme</a>
+    </h2>
     
       <button id="theme-toggle">●</button>
     
@@ -112,13 +127,19 @@
   <br>
 </header>
 
-    <h1>A Really Long Post with a Table of Contents</h1>
-      <p>
-        <i>
-          <time datetime='2023-09-06T00:00:00+00:00' pubdate>06 September, 2023</time>
-        </i>
-      </p>
+  
   <main>
+      <h3>
+        <a class="title" href="&#x2F;blog&#x2F;">Blog</a>
+      </h3>
+      <h1>
+        <a class="title" href="#">A Really Long Post with a Table of Contents</a>
+      </h1>
+        <p>
+          <i>
+            <time datetime='2023-09-06T00:00:00+00:00'>06 September 2023</time>
+          </i>
+        </p>
     <article>
       <p>The text below is a fragment of <em>De finibus bonorum et malorum</em> by Cicero,
 the inspirational text for <a href="https://en.wikipedia.org/wiki/Lorem_ipsum"><em>Lorem ipsum</em></a>.
@@ -157,7 +178,7 @@ The section titles are included to demonstrate the table of contents feature.</p
       
     </ul>
   </details>
-<h2 id="first-section">First Section</h2>
+<h2 id="first-section"><a class="zola-anchor" href="#first-section" aria-label="Anchor link for: first-section">First Section</a></h2>
 <p>Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina
 philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus,
 fore ut hic noster labor in varias reprehensiones incurreret. Nam
@@ -169,7 +190,7 @@ Latinas, qui se dicant in Graecis legendis operam malle consumere.
 Postremo aliquos futuros suspicor, qui me ad alias litteras vocent,
 genus hoc scribendi, etsi sit elegans, personae tamen et dignitatis esse
 negent.</p>
-<h3 id="a-subsection">A subsection</h3>
+<h3 id="a-subsection"><a class="zola-anchor" href="#a-subsection" aria-label="Anchor link for: a-subsection">A subsection</a></h3>
 <p>Contra quos omnis dicendum breviter existimo. Quamquam philosophiae
 quidem vituperatoribus satis responsum est eo libro, quo a nobis
 philosophia defensa et collaudata est, cum esset accusata et vituperata
@@ -292,7 +313,7 @@ Accurate autem quondam a L. Torquato, homine omni doctrina erudito,
 defensa est Epicuri sententia de voluptate, a meque ei responsum, cum C.
 Triarius, in primis gravis et doctus adolescens, ei disputationi
 interesset.</p>
-<h3 id="another-subsection">Another subsection</h3>
+<h3 id="another-subsection"><a class="zola-anchor" href="#another-subsection" aria-label="Anchor link for: another-subsection">Another subsection</a></h3>
 <p>Nam cum ad me in Cumanum salutandi causa uterque venisset, pauca primo
 inter nos de litteris, quarum summum erat in utroque studium, deinde
 Torquatus: Quoniam nacti te, inquit, sumus aliquando otiosum, certe
@@ -304,7 +325,7 @@ vivendum. Sed existimo te, sicut nostrum Triarium, minus ab eo
 delectari, quod ista Platonis, Aristoteli, Theophrasti orationis
 ornamenta neglexerit. Nam illud quidem adduci vix possum, ut ea, quae
 senserit ille, tibi non vera videantur.</p>
-<h4 id="this-subsubsection-should-not-be-shown-in-the-table-of-contents">This subsubsection should not be shown in the table of contents</h4>
+<h4 id="this-subsubsection-should-not-be-shown-in-the-table-of-contents"><a class="zola-anchor" href="#this-subsubsection-should-not-be-shown-in-the-table-of-contents" aria-label="Anchor link for: this-subsubsection-should-not-be-shown-in-the-table-of-contents">This subsubsection should not be shown in the table of contents</a></h4>
 <p>Vide, quantum, inquam, fallare, Torquate. Oratio me istius philosophi
 non offendit; nam et complectitur verbis, quod vult, et dicit plane,
 quod intellegam; et tamen ego a philosopho, si afferat eloquentiam, non
@@ -904,7 +925,7 @@ putant usque ad senectutem esse discenda.</p>
 <p>Quae cum dixisset, Explicavi, inquit, sententiam meam, et eo quidem
 consilio, tuum iudicium ut cognoscerem, quoniam mihi ea facultas, ut id
 meo arbitratu facerem, ante hoc tempus numquam est data.</p>
-<h2 id="second-section">Second Section</h2>
+<h2 id="second-section"><a class="zola-anchor" href="#second-section" aria-label="Anchor link for: second-section">Second Section</a></h2>
 <p>Hic cum uterque me intueretur seseque ad audiendum significarent
 paratos, Primum, inquam, deprecor, ne me tamquam philosophum putetis
 scholam vobis aliquam explicaturum, quod ne in ipsis quidem philosophis
@@ -2170,7 +2191,7 @@ enim ista lenius, hic Stoicorum more nos vexat. Tum Triarius: Posthac
 quidem, inquit, audacius. Nam haec ipsa mihi erunt in promptu, quae modo
 audivi, nec ante aggrediar, quam te ab istis, quos dicis, instructum
 videro. Quae cum essent dicta, finem fecimus et ambulandi et disputandi.</p>
-<h2 id="final-thoughts">Final Thoughts</h2>
+<h2 id="final-thoughts"><a class="zola-anchor" href="#final-thoughts" aria-label="Anchor link for: final-thoughts">Final Thoughts</a></h2>
 <p>Voluptatem quidem, Brute, si ipsa pro se loquatur nec tam pertinaces
 habeat patronos, concessuram arbitror convictam superiore libro
 dignitati. Etenim sit inpudens, si virtuti diutius repugnet, aut si
@@ -2180,11 +2201,11 @@ illam quidem dimittamus et suis se finibus tenere iubeamus, ne
 blanditiis eius inlecebrisque impediatur disputandi severitas.</p>
 
     </article>
+    <p>
+          Tags:
+            <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/tags/syntax/">#syntax</a>
+    </p>
   </main>
-  <p>
-        Tags:
-          <a href="https://salif.github.io/zola-themes-collection/demo/bearplus/tags/syntax/">#syntax</a>
-  </p>
 <footer>
 </footer></body>
 </html>

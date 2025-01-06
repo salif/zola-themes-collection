@@ -23,7 +23,6 @@
 - [polymathic](https://github.com/anvlkv/polymathic): 95 commits
 - [magic-box](https://github.com/dulvui/magic-box): 187 commits
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 293 commits
-- [cela](https://github.com/edwardzcn-decade/cela): 3 commits
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
 - [anatole-zola](https://github.com/longfangsong/anatole-zola): 49 commits
 - [parchment](https://github.com/jsonfry/parchment): 5 commits
@@ -63,6 +62,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme): 13 commits
 - [zizotto](https://github.com/xihn/zizotto): 12 commits
 - [Baie](https://github.com/Wtoll/Baie): 7 commits
+- [zola-theme](https://github.com/rutrum/zola-theme): 16 commits
 
 ### No license that allows me to host a live demo
 

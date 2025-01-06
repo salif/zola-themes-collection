@@ -2,7 +2,6 @@
 <html class="not-ready overflow-y-scroll lg:text-base" lang="bg">
 
 <head prefix="og: https://ogp.me/ns#">
-  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,18 +20,20 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/tags/css/atom.xml" title="css | Етикети | Atom" />
 
-  
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-
   <!-- CSS & JS -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3c45371e4a605501c79b" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
-      --bg: #f4f4f5; --bg-dark: #18181b;
-      --header: #e4e4e7; --header-dark: #27272a;
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
     }
-    :root {color-scheme: light;}
-    :root.dark {color-scheme: dark;}
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
@@ -43,9 +44,9 @@
   
 </head>
 
-<body class="text-black duration-200 ease-out dark:text-white">
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   
-<header class="header fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">

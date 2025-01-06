@@ -2,7 +2,6 @@
 <html class="not-ready overflow-y-scroll lg:text-base" lang="en">
 
 <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
-  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -15,6 +14,7 @@
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/en/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/" />
   <meta property="og:type" content="profile" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/" hreflang="ar" />
   <meta property="og:locale:alternate" content="bg_BG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/" hreflang="bg" />
   <meta property="og:locale" content="en_US" />
@@ -31,18 +31,20 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/atom.xml" title="Linkita | Atom" />
 
-  
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-
   <!-- CSS & JS -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3c45371e4a605501c79b" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
-      --bg: #f4f4f5; --bg-dark: #18181b;
-      --header: #e4e4e7; --header-dark: #27272a;
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
     }
-    :root {color-scheme: light;}
-    :root.dark {color-scheme: dark;}
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }
   </style>
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/github.svg?h=3bf8cceead820aec50d4" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/codeberg.svg" />
@@ -58,9 +60,9 @@
   
 </head>
 
-<body class="text-black duration-200 ease-out dark:text-white">
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   
-<header class="header fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">

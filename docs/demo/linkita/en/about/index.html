@@ -2,7 +2,6 @@
 <html class="not-ready overflow-y-scroll lg:text-base" lang="en">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
-  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -15,6 +14,7 @@
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/" />
   <meta property="og:type" content="article" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/about/" hreflang="ar" />
   <meta property="og:locale:alternate" content="bg_BG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/about/" hreflang="bg" />
   <meta property="og:locale" content="en_US" />
@@ -31,18 +31,20 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/atom.xml" title="Linkita | Atom" />
 
-  
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-
   <!-- CSS & JS -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3c45371e4a605501c79b" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
-      --bg: #f4f4f5; --bg-dark: #18181b;
-      --header: #e4e4e7; --header-dark: #27272a;
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
     }
-    :root {color-scheme: light;}
-    :root.dark {color-scheme: dark;}
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
@@ -54,9 +56,9 @@
   
 </head>
 
-<body class="text-black duration-200 ease-out dark:text-white">
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   
-<header class="header fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -149,9 +151,11 @@
 <p>A clean and elegant blog theme for <a href="https://www.getzola.org/">Zola</a>. Linkita is based on <a href="https://github.com/st1020/kita">Kita</a> and <a href="https://github.com/nanxiaobei/hugo-paper">Hugo-Paper</a> and is multilingual and SEO friendly.</p>
 <ul>
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
-<li>Live preview in <a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>. See <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
-<li>Screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a>, <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
 <li>For discussion, join the <a href="https://matrix.to/#/#linkita:mozilla.org">Matrix chat room</a>.</li>
+<li>Screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a>, <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
+<li>See <a href="#sites-using-linkita">sites using Linkita</a> and <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
+<li>Live preview in <a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>.</li>
+<li>Incomplete live preview in <a href="https://salif.github.io/linkita/glb/">Globasa</a>, <a href="https://salif.github.io/linkita/ar/">Arabic</a>.</li>
 </ul>
 <h2 id="features">Features</h2>
 <h3 id="kita-features">Kita features</h3>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html class="not-ready overflow-y-scroll lg:text-base" lang="ar">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola" />
+  <title>دليل تنسيق ماركداون | لينكيتا</title>
+  <meta property="og:site_name" content="لينكيتا" />
+  <meta property="og:title" content="دليل تنسيق ماركداون" />
+  <meta name="description" content="نموذج مقال يعرض تنسيق ماركداون الأساسي وتنسيق عناصر HTML." />
+  <meta property="og:description" content="نموذج مقال يعرض تنسيق ماركداون الأساسي وتنسيق عناصر HTML." />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-01-05T00:00:00+00:00" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/kita/" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/" />
+  <meta property="article:tag" content="markdown" />
+  <meta property="article:tag" content="css" />
+  <meta property="article:tag" content="html" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" hreflang="ar" />
+  <meta property="og:locale:alternate" content="bg_BG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/markdown-syntax/" hreflang="bg" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/markdown-syntax/" hreflang="en" />
+  <meta property="og:locale:alternate" content="eo" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/" hreflang="eo" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png" />
+  <meta property="og:image:alt" content="شعار ماركداون" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="800" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <!-- CSS & JS -->
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
+    }
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }
+  </style>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
+
+  <!-- Head inject -->
+  
+</head>
+
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
+  
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8">
+        <a title="Go to home page" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/" class="text-2xl font-semibold">لينكيتا</a>
+        <button type="button" title="Switch color scheme" accesskey="$"
+          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
+          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
+            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
+            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
+            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
+            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
+            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
+            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
+            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+        ></button>
+        <button type="button" title="Go to page translation" accesskey=";"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
+          style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
+            viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' \
+            class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
+            d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
+        ></button>
+        <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
+      </div>
+      
+      <div title="Menu" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+      
+    </div>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/projects/">مشاريعي</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/archive/">أرشيف</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/">العلامات</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/about/">ْعَنِّي</a>
+        </li>
+      </menu>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+  <!-- Body Start inject -->
+  
+  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
+    max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">دليل تنسيق ماركداون</h1>
+    <div class="text-sm antialiased opacity-80"><time
+    datetime="2022-10-20T00:00:00+00:00">2022-10-20</time> &lpar;<time
+    datetime="2025-01-05T00:00:00+00:00">2025-01-05</time>&rpar;<span class="mx-1">&middot;</span><time
+    datetime="PT0H3M0S">3 min</time><span class="mx-1">&middot;</span><span>Kita</span><span class="mx-1">&middot;</span><span>Salif</span>
+</div>
+
+  </header>
+
+  
+  <figure class="mb-12 mt-0">
+    <img
+      class="h-auto w-full rounded-lg"
+      src="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png"
+      alt="شعار ماركداون" />
+  </figure>
+  
+
+  <!-- TOC -->
+  
+<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
+      <span class="cursor-pointer">Table of Contents</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#l-nwyn">العناوين</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#h1">H1</a>
+          <ul>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#h2">H2</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#lfqr">الفقرة</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#lqtbst">الاقتباسات</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#lrwbt">الروابط</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#lswr">الصور</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#ljdwl">الجداول</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#ktl-lt-lymt-lbrmjy">كتل التعليمات البرمجية</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#nw-lqwy-m">أنواع القوائم</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/#nsr-khr-abbr-sub-sup-kbd-mark">عناصر أخرى — abbr، sub، sup، kbd، mark</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+
+
+  <!-- Content -->
+  <section><p>تقدم هذه المقالة عينة من تنسيق ماركداون الأساسي الذي يمكن استخدامه في ملفات محتوى Zola، كما توضح ما إذا كانت عناصر HTML الأساسية مزينة بـ CSS في سمة لينكيتا.</p>
+<span id="continue-reading"></span><h2 id="l-nwyn">العناوين</h2>
+<p>تمثل عناصر HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code>  التالية ستة مستويات من عناوين الأقسام. <code>&lt;h1&gt;</code> هو أعلى مستوى للقسم بينما <code>&lt;h6&gt;</code> هو الأدنى.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="lfqr">الفقرة</h2>
+<p>Xerum، quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum، voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur، offic to cor sequas etum rerum idem sintibus eiur؟ Quianimin porecus evelectur، cum que nis nust voloribus ratem aut omnimi، sitatur؟ Quiatem. Nam، omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus، sin conecerem erum fuga. Ri oditatquam، ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost، temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur؟ Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum، core et que aut hariosam ex eat.</p>
+<h2 id="lqtbst">الاقتباسات</h2>
+<p>يمثل عنصر الاقتباس المحتوى المقتبس من مصدر آخر، مع اقتباس اختياري يجب أن يكون داخل عنصر <code>footer</code> أو <code>cite</code>، واختياريًا مع تغييرات مضمنة مثل التعليقات التوضيحية والاختصارات.</p>
+<h4 id="qtbs-bdwn-snd">اقتباس بدون إسناد</h4>
+<blockquote>
+<p>Tiam، ad mint andaepu dandae nostion secatur sequo quae.
+<strong>ملاحظة</strong> أنه يمكنك استخدام <em>تنسيق ماركداون</em> داخل اقتباس.</p>
+</blockquote>
+<h4 id="qtbs-m-snd">اقتباس مع إسناد</h4>
+<blockquote>
+<p>لا تتواصل من خلال مشاركة الذاكرة، شارك الذاكرة من خلال التواصل. <br>
+— <cite>روب بايك<sup class="footnote-reference"><a href="#1">1</a></sup></cite></p>
+</blockquote>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>الاقتباس أعلاه مقتطف من <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">حديث</a> روب بايك خلال Gopherfest، 18 نوفمبر 2015.</p>
+</div>
+<h2 id="lrwbt">الروابط</h2>
+<p>لإنشاء رابط، قم بإحاطة نص الرابط بين قوسين ثم اتبعه مباشرةً بعنوان URL بين قوسين.</p>
+<p><a href="https://github.com">GitHub</a></p>
+<p>لتحويل عنوان URL أو عنوان بريد إلكتروني بسرعة إلى رابط، قم بإحاطته بين أقواس زاوية.</p>
+<p><a href="https://github.com">https://github.com</a></p>
+<h2 id="lswr">الصور</h2>
+<p><img src="../../images/markdown-syntax.png" alt="دليل ماركداون" /></p>
+<h2 id="ljdwl">الجداول</h2>
+<p>الجداول ليست جزءًا من مواصفات ماركداون الأساسية، لكن Zola تدعمها.</p>
+<table><thead><tr><th>الاسم</th><th>العمر</th></tr></thead><tbody>
+<tr><td>بوب</td><td>27</td></tr>
+<tr><td>أليس</td><td>23</td></tr>
+</tbody></table>
+<h4 id="mrkdwn-lmdmn-dkhl-ljdwl">ماركداون المضمنة داخل الجداول</h4>
+<table><thead><tr><th>مائل</th><th>عريض</th><th>كود</th></tr></thead><tbody>
+<tr><td><em>مائل</em></td><td><strong>عريض</strong></td><td><code>code</code></td></tr>
+</tbody></table>
+<h2 id="ktl-lt-lymt-lbrmjy">كتل التعليمات البرمجية</h2>
+<h4 id="ktl-lt-lymt-lbrmjy-m-backticks">كتلة التعليمات البرمجية مع backticks</h4>
+<pre data-lang="html" style="background-color:#272822;color:#f8f8f2;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
+</span><span>&lt;</span><span style="color:#f92672;">html </span><span style="color:#a6e22e;">lang</span><span>=</span><span style="color:#e6db74;">&quot;en&quot;</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#f92672;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#f92672;">meta </span><span style="color:#a6e22e;">charset</span><span>=</span><span style="color:#e6db74;">&quot;utf-8&quot; </span><span>/&gt;
+</span><span>    &lt;</span><span style="color:#f92672;">title</span><span>&gt;Example HTML5 Document&lt;/</span><span style="color:#f92672;">title</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#f92672;">head</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#f92672;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#f92672;">p</span><span>&gt;Test&lt;/</span><span style="color:#f92672;">p</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#f92672;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#f92672;">html</span><span>&gt;
+</span></code></pre>
+<h4 id="ktl-lt-lymt-lbrmjy-bmsf-bdy-rb-msft">كتلة التعليمات البرمجية بمسافة بادئة أربعة مسافات</h4>
+<pre style="background-color:#272822;color:#f8f8f2;"><code><span>&lt;!doctype html&gt;
+</span><span>&lt;html lang=&quot;en&quot;&gt;
+</span><span>&lt;head&gt;
+</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
+</span><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+</span><span>&lt;/head&gt;
+</span><span>&lt;body&gt;
+</span><span>  &lt;p&gt;Test&lt;/p&gt;
+</span><span>&lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<h2 id="nw-lqwy-m">أنواع القوائم</h2>
+<h4 id="qy-m-mrtb">قائمة مرتبة</h4>
+<ol>
+<li>العنصر الأول</li>
+<li>العنصر الثاني</li>
+<li>العنصر الثالث</li>
+</ol>
+<h4 id="qy-m-gyr-mrtb">قائمة غير مرتبة</h4>
+<ul>
+<li>عنصر القائمة</li>
+<li>عنصر آخر</li>
+<li>وعنصر آخر</li>
+</ul>
+<h4 id="qy-m-mtdkhl">قائمة متداخلة</h4>
+<ul>
+<li>فاكهة
+<ul>
+<li>تفاح</li>
+<li>برتقال</li>
+<li>موز</li>
+</ul>
+</li>
+<li>ألبان
+<ul>
+<li>حليب</li>
+<li>جبن</li>
+</ul>
+</li>
+</ul>
+<h2 id="nsr-khr-abbr-sub-sup-kbd-mark">عناصر أخرى — abbr، sub، sup، kbd، mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> هو تنسيق صورة نقطية.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>اضغط على <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> لإنهاء الجلسة.</p>
+<p>معظم <mark>السلمندرات</mark> ليلية، وتصطاد الحشرات والديدان والمخلوقات الصغيرة الأخرى.</p>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">Authors</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/kita/">Kita</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/">Salif</a>
+    
+  </div>
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">Tags</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/markdown/">markdown</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/css/">css</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/html/">html</a>
+    
+  </div>
+  
+</footer>
+
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  <a
+    class="block-hover-mask flex min-w-[50%] grow items-center rounded-l-md p-6 pr-3 font-semibold no-underline"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/math-typesetting/" accesskey=","
+    ><span class="mr-1.5">&#8249;</span><span>تنضيد المعادلات الرياضية</span></a>
+  
+  
+</nav>
+
+
+  <!-- Comment -->
+  
+  <!-- Page End inject -->
+  
+</article>
+
+  </main>
+  <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      Powered by <a
+      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+  
+  <!-- GoatCounter -->
+  <script>window.linkita.initGoatCounterAnalytics("//gc.zgo.at/count.js",
+    "https://sgi.goatcounter.com/count");</script>
+  <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/ar/markdown-syntax/" alt=""></noscript>
+
+  <!-- Body End inject -->
+  
+</body>
+
+</html>

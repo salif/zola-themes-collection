@@ -59,6 +59,9 @@ update-data url=demo_base_url:
     updateData("{{ url }}");
 
 [group('build')]
+update-data-local: && (update-data local_base_url)
+
+[group('build')]
 remove-demo-all:
     #!/usr/bin/env node
     "use strict"
@@ -136,7 +139,7 @@ screenshots-to-fix:
     }
 
 [group('build')]
-local-test-all: (build-demo-all local_base_url) (update-data local_base_url)
+local-test-all: (build-demo-all local_base_url) update-data-local
     zola serve --open
 
 [group('help')]

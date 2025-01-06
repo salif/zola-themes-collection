@@ -2,7 +2,6 @@
 <html class="not-ready overflow-y-scroll lg:text-base" lang="en">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
-  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,18 +20,20 @@
   <meta property="og:image:width" content="1360" />
   <meta property="og:image:height" content="765" />
 
-  
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-
   <!-- CSS & JS -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=3c45371e4a605501c79b" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
-      --bg: #f6f8fa; --bg-dark: #1d212c;
-      --header: #f6f8fa; --header-dark: #1d212c;
+      --bg: #f6f8fa;
+      --header: #f6f8fa;
+      color-scheme: light;
     }
-    :root {color-scheme: light;}
-    :root.dark {color-scheme: dark;}
+    :root.dark {
+      --bg: #1d212c;
+      --header: #1d212c;
+      color-scheme: dark;
+    }
   </style>
   <script src="https://salif.github.io/zola-themes-collection/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
 
@@ -40,9 +41,9 @@
   
 </head>
 
-<body class="text-black duration-200 ease-out dark:text-white">
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   
-<header class="header fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -114,6 +115,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
 <h3 id="h-install-zola-bearblog">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -199,6 +202,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
 <h3 id="h-install-duckquill">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -283,6 +288,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
 <h3 id="h-install-tabi">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -367,6 +374,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
 <h3 id="h-install-linkita">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -462,6 +471,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
 <h3 id="h-install-researchlab">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -546,6 +557,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
 <h3 id="h-install-olivine">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -629,6 +642,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
 <h3 id="h-install-project-portfolio">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -713,6 +728,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
 <h3 id="h-install-academic-paper">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -797,6 +814,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
 <h3 id="h-install-academic-workshop">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -881,6 +900,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
 <h3 id="h-install-kita">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -966,6 +987,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod'></summary>
 <h3 id="h-install-papermod">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1051,6 +1074,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
 <h3 id="h-install-mabuya">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1136,6 +1161,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
 <h3 id="h-install-hacker">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1221,6 +1248,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
 <h3 id="h-install-bearplus">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1306,6 +1335,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
 <h3 id="h-install-hook">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1390,6 +1421,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it-mod'></summary>
 <h3 id="h-install-mo8it-mod">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1479,6 +1512,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
 <h3 id="h-install-apollo">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1563,6 +1598,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
 <h3 id="h-install-oceanic-zen">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1647,6 +1684,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
 <h3 id="h-install-terminimal">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1732,6 +1771,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
 <h3 id="h-install-abridge">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1816,6 +1857,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
 <h3 id="h-install-zluinav">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1908,6 +1951,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
 <h3 id="h-install-sandbox">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -1992,6 +2037,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
 <h3 id="h-install-radion">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -2076,6 +2123,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
 <h3 id="h-install-DogFood">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -2159,6 +2208,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
 <h3 id="h-install-devnzt">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -2242,6 +2293,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-doc'></summary>
 <h3 id="h-install-doc">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -2326,6 +2379,8 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-silk'></summary>
 <h3 id="h-install-silk">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
 <li>Download the theme</li>
@@ -2388,6 +2443,89 @@
         class="underline"
         onclick="const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-silk"
+        >Info</a
+      >
+      
+    </div>
+  </div>
+</div>
+
+<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">cela</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-cela.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-cela.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-cela.webp"
+        alt="Screenshot of the cela theme" width="1360" height="765" />
+    </picture>
+    <p></p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cela'></summary>
+<h3 id="h-install-cela">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/edwardzcn-decade/cela.git themes/cela
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/edwardzcn-decade/cela.git themes/cela
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">cela</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cela'></summary>
+<h3 id="h-info-cela">Info</h3>
+<ul>
+<li><strong>License</strong>: undefined</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/edwardzcn-decade/cela">https://github.com/edwardzcn-decade/cela</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/cela/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      
+      <a
+        class="underline"
+        href="https://github.com/edwardzcn-decade/cela"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-cela"
+        >Install</a
+      >
+      
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-cela"
         >Info</a
       >
       
