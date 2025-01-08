@@ -607,6 +607,59 @@ theme = "papermod"
   js = "const b=document.getElementById('info-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "cela"
+name = "cela"
+desc = "A modern, clean Zola theme for personal blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cela'></summary>
+
+### Installation{#h-install-cela}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/edwardzcn-decade/cela.git themes/cela
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/edwardzcn-decade/cela.git themes/cela
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "cela"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cela'></summary>
+
+### Info{#h-info-cela}
+- **License**: MIT
+- **Homepage**: <https://github.com/edwardzcn-decade/cela>
+- **Min version**: 0.19.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/cela/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/edwardzcn-decade/cela"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-cela"
+  js = "const b=document.getElementById('install-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-cela"
+  js = "const b=document.getElementById('info-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "mabuya"
 name = "Mabuya"
 desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
@@ -661,6 +714,61 @@ theme = "mabuya"
   name = "Info"
   url = "#info-mabuya"
   js = "const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "abridge"
+name = "abridge"
+desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
+
+### Installation{#h-install-abridge}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jieiku/abridge.git themes/abridge
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jieiku/abridge.git themes/abridge
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "abridge"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
+
+### Info{#h-info-abridge}
+- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jieiku/abridge>
+- **Offic. Live Demo**: <https://abridge.pages.dev/>
+- **Min version**: 0.19.1
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jieiku/abridge"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-abridge"
+  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-abridge"
+  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "hacker"
@@ -1052,61 +1160,6 @@ theme = "terminimal"
   js = "const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "abridge"
-name = "abridge"
-desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
-
-### Installation{#h-install-abridge}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/jieiku/abridge.git themes/abridge
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/jieiku/abridge.git themes/abridge
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "abridge"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
-
-### Info{#h-info-abridge}
-- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
-- **License**: MIT
-- **Homepage**: <https://github.com/jieiku/abridge>
-- **Offic. Live Demo**: <https://abridge.pages.dev/>
-- **Min version**: 0.19.1
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/jieiku/abridge"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-abridge"
-  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-abridge"
-  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "zluinav"
 name = "UI Navigation"
 desc = "A multilingual theme designed for accessibility rather than visual."
@@ -1488,55 +1541,3 @@ theme = "silk"
   name = "Info"
   url = "#info-silk"
   js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "cela"
-name = "cela"
-desc = ""
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cela'></summary>
-
-### Installation{#h-install-cela}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/edwardzcn-decade/cela.git themes/cela
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/edwardzcn-decade/cela.git themes/cela
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "cela"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cela'></summary>
-
-### Info{#h-info-cela}
-- **License**: undefined
-- **Homepage**: <https://github.com/edwardzcn-decade/cela>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/cela/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/edwardzcn-decade/cela"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-cela"
-  js = "const b=document.getElementById('install-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-cela"
-  js = "const b=document.getElementById('info-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
