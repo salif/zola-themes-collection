@@ -57,6 +57,25 @@ https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;not-matthias&#x2F;apollo&#x2F;r
         <id>https://salif.github.io/zola-themes-collection/demo/apollo/posts/configuration/</id>
         
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/apollo/posts/configuration/">&lt;h1 id=&quot;site-configuration&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#site-configuration&quot; aria-label=&quot;Anchor link for: site-configuration&quot;&gt;Site Configuration&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;search-build-search-index&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#search-build-search-index&quot; aria-label=&quot;Anchor link for: search-build-search-index&quot;&gt;Search (&lt;code&gt;build_search_index&lt;&#x2F;code&gt;)&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Enables or disables the search functionality for your blog.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Type: Boolean&lt;&#x2F;li&gt;
+&lt;li&gt;Default: false&lt;&#x2F;li&gt;
+&lt;li&gt;Usage: &lt;code&gt;build_search_index = false&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;When enabled, a search index will be generated for your blog, allowing visitors to search for specific content.
+Additionally, a search button will be displayed in the navigation bar.&lt;&#x2F;p&gt;
+&lt;p&gt;Configure the search like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;build_search_index &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;include_title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;include_description &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;include_path &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;include_content &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;index_format &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;elasticlunr_json&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;theme-mode-theme&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#theme-mode-theme&quot; aria-label=&quot;Anchor link for: theme-mode-theme&quot;&gt;Theme Mode (&lt;code&gt;theme&lt;&#x2F;code&gt;)&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Sets the color theme for your blog.&lt;&#x2F;p&gt;
 &lt;ul&gt;
@@ -108,6 +127,7 @@ https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;not-matthias&#x2F;apollo&#x2F;r
 &lt;li&gt;Usage: &lt;code&gt;toc = true&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;When enabled, a table of contents will be generated for posts, making it easier for readers to navigate through longer articles.&lt;&#x2F;p&gt;
+&lt;p&gt;Note: This feature adds additional JavaScript to your site.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;cdn-usage-use-cdn&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#cdn-usage-use-cdn&quot; aria-label=&quot;Anchor link for: cdn-usage-use-cdn&quot;&gt;CDN Usage (&lt;code&gt;use_cdn&lt;&#x2F;code&gt;)&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Determines whether to use a Content Delivery Network (CDN) for assets.&lt;&#x2F;p&gt;
 &lt;ul&gt;

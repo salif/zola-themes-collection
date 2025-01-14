@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="256" height="256"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="1" y="1"
+    width="62" height="62"
+    rx="8" ry="8"
+    fill="#FEFEFE"
+    stroke="none"
+  />
+  <g
+    stroke="#020202"
+    stroke-width="5"
+    stroke-linecap="square"
+    fill="none">
+    <!-- 左竖线 (C的竖线) -->
+    <line x1="8" y1="8"   x2="8"  y2="56" />
+    <!-- 底横线 (C的底部) -->
+    <line x1="8"  y1="56" x2="56" y2="56" />
+    <!-- 顶横线分成两段，留下中间缺口 -->
+    <!-- 左侧顶横线 -->
+    <line x1="8"  y1="8"  x2="28" y2="8"  />
+    <!-- 右侧顶横线 -->
+    <line x1="36" y1="8"  x2="56" y2="8"  />
+    <!-- 右竖线（E的右侧，翻转时还在右侧） -->
+    <line x1="56" y1="8"  x2="56" y2="56" />
+    <!-- 中部横线，只在右半部分 (翻转E的中间一横) -->
+    <line x1="36" y1="32" x2="56" y2="32" />
+  </g>
+</svg>
