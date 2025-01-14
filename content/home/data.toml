@@ -1163,7 +1163,16 @@ theme = "terminimal"
 theme = "zluinav"
 name = "UI Navigation"
 desc = "A multilingual theme designed for accessibility rather than visual."
-tags = [ "blind", "multilingual", "accessible", "responsive" ]
+tags = [
+  "blind",
+  "multilingual",
+  "accessible",
+  "responsive",
+  "search",
+  "documentation",
+  "blog",
+  "SEO"
+]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
 
@@ -1541,3 +1550,58 @@ theme = "silk"
   name = "Info"
   url = "#info-silk"
   js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "cablab"
+name = "cablab-theme"
+desc = "An academic lab theme for zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cablab'></summary>
+
+### Installation{#h-install-cablab}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/cablab/cablab-theme.git themes/cablab
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/cablab/cablab-theme.git themes/cablab
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "cablab"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cablab'></summary>
+
+### Info{#h-info-cablab}
+- **Author**: Chase Alan Brown
+- **License**: MIT
+- **Homepage**: <https://git.cablab.cx/cablab-theme>
+- **Offic. Live Demo**: <https://cablab.codeberg.io/cablab-theme>
+- **Min version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/cablab/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/cablab/cablab-theme"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-cablab"
+  js = "const b=document.getElementById('install-cablab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-cablab"
+  js = "const b=document.getElementById('info-cablab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
