@@ -110,7 +110,7 @@
 &lt;p&gt;Never heard of shortcodes? See &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;To use Mermaid in your page, you have to set &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; in the frontmatter of page.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Your page title&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;[extra]
@@ -118,7 +118,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then you can use the &lt;code&gt;mermaid()&lt;&#x2F;code&gt; shortcodes like:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;graph TD;
 &lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
@@ -129,7 +129,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will be rendered as:&lt;&#x2F;p&gt;
-&lt;pre class=&quot;mermaid bg-inherit&quot;&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   graph TD;
 A--&amp;gt;B;
 A--&amp;gt;C;
@@ -138,9 +138,9 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;In addition, you can use code block inside &lt;code&gt;mermaid()&lt;&#x2F;code&gt; shortcodes and the code block will be ignored.&lt;&#x2F;p&gt;
 &lt;p&gt;The code block prevents formatter from breaking mermaid&#x27;s formatting.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid
 &lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
@@ -152,12 +152,12 @@ C--&amp;gt;D;
 &lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
 &lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
 &lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span&gt;```
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will be rendered as:&lt;&#x2F;p&gt;
-&lt;pre class=&quot;mermaid bg-inherit&quot;&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   
 sequenceDiagram
     participant Alice
@@ -175,8 +175,8 @@ sequenceDiagram
 &lt;h2 id=&quot;admonition&quot;&gt;Admonition&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;admonition()&lt;&#x2F;code&gt; shortcode displays a banner to help you put notice in your page.&lt;&#x2F;p&gt;
 &lt;p&gt;You can use the &lt;code&gt;admonition()&lt;&#x2F;code&gt; shortcode like:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;The `tip` admonition.
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;The &lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c792ea;&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt; admonition.
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The admonition shortcode has 12 different types:&lt;&#x2F;p&gt;
@@ -399,7 +399,7 @@ sequenceDiagram
 &lt;h2 id=&quot;gallery&quot;&gt;Gallery&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;gallery()&lt;&#x2F;code&gt; shortcode is very simple html-only clickable picture gallery that displays all images from the page assets.&lt;&#x2F;p&gt;
 &lt;p&gt;It&#x27;s from &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
 

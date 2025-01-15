@@ -32,7 +32,6 @@
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/atom.xml" title="Linkita | Atom" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <!-- CSS & JS -->
   <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
@@ -44,13 +43,13 @@
       --bg: #18181b;
       --header: #27272a;
       color-scheme: dark;
-    }
+    }/**/
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.js?h=5f00f4ff235614dcd1f4"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.js?h=ef0b7f00b9cb8ab1248e"></script>
 
   <!-- Head inject -->
   
@@ -83,7 +82,9 @@
             fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-search\' \
             ><circle cx=\'11\' cy=\'11\' r=\'8\'></circle><line x1=\'21\' y1=\'21\' x2=\'16.65\' y2=\'16.65\'></line></svg>');"
         ></button>
-        <script>window.linkita.initSearchButton(["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"]);</script>
+        <script>window.linkita.initSearchButton({
+          scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"]
+        });</script>
         <button type="button" title="Go to page translation" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
           style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
@@ -91,7 +92,7 @@
             class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
             d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
         ></button>
-        <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
       
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -189,133 +190,133 @@
 <ol>
 <li>Add this theme as a submodule.</li>
 </ol>
-<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span>git submodule add https://codeberg.org/salif/linkita.git themes/linkita
+<pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">git submodule add https://codeberg.org/salif/linkita.git themes/linkita
 </span></code></pre>
 <p>Alternatively, clone the repository: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code>.</p>
 <ol start="2">
 <li>Set <code>linkita</code> as your theme in your <code>config.toml</code> file.</li>
 </ol>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#f92672;">theme </span><span>= </span><span style="color:#e6db74;">&quot;linkita&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">linkita</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h2 id="managing-versions">Managing versions</h2>
 <p>To update the theme, run:</p>
-<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span>git submodule update</span><span style="font-style:italic;color:#fd971f;"> --remote</span><span> themes/linkita
+<pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">git submodule update</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">remote</span><span style="color:#82aaff;"> themes/linkita
 </span></code></pre>
 <p>Optionally, switch from the <code>linkita</code> branch to the latest stable version:</p>
-<pre data-lang="sh" style="background-color:#272822;color:#f8f8f2;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#66d9ef;">cd</span><span> themes/linkita
-</span><span>git checkout $(git describe</span><span style="font-style:italic;color:#fd971f;"> --tags </span><span>$(git rev-list</span><span style="font-style:italic;color:#fd971f;"> --tags --max-count</span><span style="color:#f92672;">=</span><span>1))
+<pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">cd themes/linkita
+</span><span style="color:#82aaff;">git checkout </span><span style="color:#89ddff;">$(</span><span style="color:#82aaff;">git describe</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">tags </span><span style="color:#89ddff;">$(</span><span style="color:#82aaff;">git rev-list</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">tags</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">max-count</span><span style="color:#89ddff;">=</span><span style="color:#82aaff;">1</span><span style="color:#89ddff;">))
 </span></code></pre>
 <p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a> for all versions after the one you are using; there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
 <p>All options for the frontmatter and for the <code>config.toml</code> file are optional.
 Set the ones you need.</p>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">title </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#f92672;">description </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># date = 
-</span><span style="color:#75715e;"># updated = 
-</span><span>[taxonomies]
-</span><span style="color:#f92672;">categories </span><span>= []
-</span><span style="color:#f92672;">tags </span><span>= []
-</span><span style="color:#f92672;">authors </span><span>= []
-</span><span>[extra]
-</span><span style="color:#75715e;"># comment = true
-</span><span style="color:#75715e;"># math = true
-</span><span style="color:#75715e;"># mermaid = true
-</span><span style="color:#75715e;"># page_info = []
-</span><span>[extra.cover]
-</span><span style="color:#75715e;"># image = &quot;&quot;
-</span><span style="color:#75715e;"># alt = &quot;&quot;
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># date = 
+</span><span style="font-style:italic;color:#4a4a4a;"># updated = 
+</span><span style="color:#89ddff;">[taxonomies]
+</span><span style="color:#f07178;">categories </span><span style="color:#89ddff;">= []
+</span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= []
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= []
+</span><span style="color:#89ddff;">[extra]
+</span><span style="font-style:italic;color:#4a4a4a;"># comment = true
+</span><span style="font-style:italic;color:#4a4a4a;"># math = true
+</span><span style="font-style:italic;color:#4a4a4a;"># mermaid = true
+</span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
+</span><span style="color:#89ddff;">[extra.cover]
+</span><span style="font-style:italic;color:#4a4a4a;"># image = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># alt = &quot;&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="yaml-frontmatter">YAML frontmatter</h3>
-<pre data-lang="yaml" style="background-color:#272822;color:#f8f8f2;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>---
-</span><span style="color:#f92672;">title</span><span>: </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#f92672;">description</span><span>: </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#f92672;">date</span><span>: 
-</span><span style="color:#75715e;"># updated: 
-</span><span style="color:#f92672;">taxonomies</span><span>:
-</span><span>  </span><span style="color:#f92672;">categories</span><span>:
-</span><span>  </span><span style="color:#f92672;">tags</span><span>:
-</span><span>  </span><span style="color:#f92672;">authors</span><span>:
-</span><span style="color:#f92672;">extra</span><span>:
-</span><span>  </span><span style="color:#f92672;">comment</span><span>: </span><span style="color:#ae81ff;">false
-</span><span>  </span><span style="color:#f92672;">math</span><span>: </span><span style="color:#ae81ff;">false
-</span><span>  </span><span style="color:#f92672;">mermaid</span><span>: </span><span style="color:#ae81ff;">false
-</span><span>  </span><span style="color:#f92672;">cover</span><span>:
-</span><span>    </span><span style="color:#f92672;">image</span><span>: </span><span style="color:#e6db74;">&quot;&quot;
-</span><span>    </span><span style="color:#f92672;">alt</span><span>: </span><span style="color:#e6db74;">&quot;&quot;
+<pre data-lang="yaml" style="background-color:#212121;color:#eeffff;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>---
+</span><span style="color:#f07178;">title</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span style="color:#f07178;">description</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span style="color:#f07178;">date</span><span style="color:#89ddff;">: 
+</span><span style="font-style:italic;color:#4a4a4a;"># updated: 
+</span><span style="color:#f07178;">taxonomies</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">categories</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">tags</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">authors</span><span style="color:#89ddff;">:
+</span><span style="color:#f07178;">extra</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">comment</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">math</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">mermaid</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">cover</span><span style="color:#89ddff;">:
+</span><span>    </span><span style="color:#f07178;">image</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span>---
 </span></code></pre>
 <h3 id="open-graph-frontmatter-options">Open Graph frontmatter options</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.open_graph]
-</span><span style="color:#75715e;"># MIME type of the cover image. e.g. `image/jpeg`, `image/gif`, `image/png`.
-</span><span style="color:#75715e;">#  (type: string; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f92672;">cover_type </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Width of the cover image in pixels.
-</span><span style="color:#75715e;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f92672;">cover_width </span><span>=
-</span><span style="color:#75715e;"># Height of the cover image in pixels.
-</span><span style="color:#75715e;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f92672;">cover_height </span><span>=
-</span><span style="color:#75715e;"># When the article is out of date after. e.g. `2024-02-29`.
-</span><span style="color:#75715e;">#  (type: datetime; no default value;)
-</span><span style="color:#f92672;">expiration_time </span><span>=
-</span><span style="color:#75715e;"># Describes the tier status for an article. e.g. `free`, `locked`, or `metered`.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">content_tier </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Defines the location to target for the article. e.g. `[&quot;county:COUNTY&quot;]` or `[&quot;city:CITY,COUNTY&quot;]`.
-</span><span style="color:#75715e;">#  (type: array of strings; no default value;)
-</span><span style="color:#f92672;">locations </span><span>= []
-</span><span style="color:#75715e;"># A high-level section name. e.g. `Technology`.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">section </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Indicates whether the article is an opinion piece or not. e.g. `true` or `false`.
-</span><span style="color:#75715e;">#  (type: boolean; no default value;)
-</span><span style="color:#f92672;">opinion </span><span>=
-</span><span style="color:#75715e;"># The URL for the audio.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">audio </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># MIME type of the audio. e.g. `audio/vnd.facebook.bridge`, `audio/mpeg`.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">audio_type </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># The URL for the video.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">video </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># MIME type of the video. e.g. `application/x-shockwave-flash`, `video/mp4`.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">video_type </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Width of the video in pixels.
-</span><span style="color:#75715e;">#  (type: number; no default value;)
-</span><span style="color:#f92672;">video_width </span><span>=
-</span><span style="color:#75715e;"># Height of the video in pixels.
-</span><span style="color:#75715e;">#  (type: number; no default value;)
-</span><span style="color:#f92672;">video_height </span><span>=
-</span><span style="color:#75715e;"># Set only if different from canonical page URL.
-</span><span style="color:#75715e;">#  (type: string; default value: current_url;)
-</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.open_graph]
+</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the cover image. e.g. `image/jpeg`, `image/gif`, `image/png`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: uses `get_image_metadata()`;)
+</span><span style="color:#f07178;">cover_type </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
+</span><span style="color:#f07178;">cover_width </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Height of the cover image in pixels.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
+</span><span style="color:#f07178;">cover_height </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: datetime; no default value;)
+</span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Describes the tier status for an article. e.g. `free`, `locked`, or `metered`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">content_tier </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Defines the location to target for the article. e.g. `[&quot;county:COUNTY&quot;]` or `[&quot;city:CITY,COUNTY&quot;]`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; no default value;)
+</span><span style="color:#f07178;">locations </span><span style="color:#89ddff;">= []
+</span><span style="font-style:italic;color:#4a4a4a;"># A high-level section name. e.g. `Technology`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Indicates whether the article is an opinion piece or not. e.g. `true` or `false`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: boolean; no default value;)
+</span><span style="color:#f07178;">opinion </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the audio.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">audio </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the audio. e.g. `audio/vnd.facebook.bridge`, `audio/mpeg`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">audio_type </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the video.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">video </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the video. e.g. `application/x-shockwave-flash`, `video/mp4`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">video_type </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Width of the video in pixels.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; no default value;)
+</span><span style="color:#f07178;">video_width </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Height of the video in pixels.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; no default value;)
+</span><span style="color:#f07178;">video_height </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from canonical page URL.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: current_url;)
+</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
 <h3 id="sitemap-frontmatter-options">Sitemap frontmatter options</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.sitemap]
-</span><span style="color:#75715e;"># Set only if different from `page.updated`.
-</span><span style="color:#75715e;">#  (type: string; default value: page.updated;)
-</span><span style="color:#f92672;">updated </span><span>=
-</span><span style="color:#75715e;"># Valid values are `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">changefreq </span><span>=
-</span><span style="color:#75715e;"># Valid values range from 0.0 to 1.0. The default priority of a page is 0.5.
-</span><span style="color:#75715e;">#  (type: string; no default value;)
-</span><span style="color:#f92672;">priority </span><span>=
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.sitemap]
+</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: page.updated;)
+</span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Valid values are `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">changefreq </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># Valid values range from 0.0 to 1.0. The default priority of a page is 0.5.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="color:#f07178;">priority </span><span style="color:#89ddff;">=
 </span></code></pre>
 <h3 id="home-page-profile">Home page profile</h3>
 <p>Create <code>content/_index.md</code> file in your blog and set <code>extra.profile</code> to your username:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">sort_by </span><span>= </span><span style="color:#e6db74;">&quot;date&quot;
-</span><span style="color:#f92672;">paginate_by </span><span>= </span><span style="color:#ae81ff;">5
-</span><span>[extra]
-</span><span style="color:#f92672;">profile </span><span>= </span><span style="color:#e6db74;">&quot;your_username&quot;
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">sort_by </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">date</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
+</span><span style="color:#89ddff;">[extra]
+</span><span style="color:#f07178;">profile </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <p>Do it for each language in your blog.
 For French, the file name is <code>content/_index.fr.md</code>.</p>
@@ -327,52 +328,52 @@ See <a href="#profiles">Profiles</a>.</p>
 <h4 id="option-1-using-page-authors">Option 1: Using <code>page.authors</code></h4>
 <p>You don't need to set <code>page.authors</code> in the frontmatter if you are the only author.</p>
 <p>Otherwise, set <code>page.authors</code>:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">authors </span><span>= [</span><span style="color:#e6db74;">&quot;author_username&quot;</span><span>, </span><span style="color:#e6db74;">&quot;author2_username&quot;</span><span>]
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;, &quot;</span><span style="color:#c3e88d;">author2_username</span><span style="color:#89ddff;">&quot;]
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h4 id="option-2-using-taxonomies">Option 2: Using Taxonomies</h4>
 <p>If you choose this option you should set taxonomies in each post.</p>
 <p>Examples:</p>
 <p><strong>If the blog is your personal blog</strong>:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span>[taxonomies]
-</span><span style="color:#f92672;">authors </span><span>= [</span><span style="color:#e6db74;">&quot;your_username&quot;</span><span>]
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#89ddff;">[taxonomies]
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;]
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <p><strong>If the blog has a team of multiple authors</strong>:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span>[taxonomies]
-</span><span style="color:#f92672;">authors </span><span>= [</span><span style="color:#e6db74;">&quot;author_username&quot;</span><span>]
-</span><span style="color:#75715e;"># or:
-</span><span style="color:#75715e;"># authors = [&quot;author_username&quot;, &quot;author2_username&quot;]
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#89ddff;">[taxonomies]
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;]
+</span><span style="font-style:italic;color:#4a4a4a;"># or:
+</span><span style="font-style:italic;color:#4a4a4a;"># authors = [&quot;author_username&quot;, &quot;author2_username&quot;]
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="non-post-pages">Non-post pages</h3>
 <p>Create <code>content/pages/_index.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">render </span><span>= </span><span style="color:#ae81ff;">false
-</span><span style="color:#f92672;">page_template </span><span>= </span><span style="color:#e6db74;">&quot;pages.html&quot;
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">render </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span style="color:#f07178;">page_template </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">pages.html</span><span style="color:#89ddff;">&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h4 id="archive-page">Archive page</h4>
 <p>Create <code>content/pages/archive.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">title </span><span>= </span><span style="color:#e6db74;">&quot;Archive&quot;
-</span><span style="color:#75715e;"># description = &quot;&quot;
-</span><span style="color:#75715e;"># path = &quot;archive&quot;
-</span><span style="color:#f92672;">template </span><span>= </span><span style="color:#e6db74;">&quot;archive.html&quot;
-</span><span>[extra]
-</span><span style="color:#f92672;">section </span><span>= </span><span style="color:#e6db74;">&quot;_index.md&quot;
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;archive&quot;
+</span><span style="color:#f07178;">template </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">archive.html</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#89ddff;">[extra]
+</span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">_index.md</span><span style="color:#89ddff;">&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h4 id="about-you-page">About you page</h4>
 <p>Create <code>content/pages/about.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
-</span><span style="color:#f92672;">title </span><span>= </span><span style="color:#e6db74;">&quot;About me&quot;
-</span><span style="color:#75715e;"># description = &quot;&quot;
-</span><span style="color:#75715e;"># path = &quot;about&quot;
-</span><span style="background-color:#f92672;color:#f8f8f0;">+++</span><span>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About me</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;about&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="inject-support">Inject support</h3>
 <p>You can easily use inject to add new features to your side without modifying the theme itself.</p>
@@ -393,260 +394,260 @@ See <a href="#profiles">Profiles</a>.</p>
 <h2 id="configuring">Configuring</h2>
 <p>Copy and paste the examples into your <code>config.toml</code> file
 and comment out the options you don't use instead of setting empty values.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># The default language. (type: string;)
-</span><span style="color:#f92672;">default_language </span><span>= </span><span style="color:#e6db74;">&quot;en&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
+</span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># The default author for pages. See `extra.profiles`. (type: string;)
-</span><span style="color:#f92672;">author </span><span>= </span><span style="color:#e6db74;">&quot;your_username&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages. See `extra.profiles`. (type: string;)
+</span><span style="color:#f07178;">author </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># The site title. (type: string;)
-</span><span style="color:#f92672;">title </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The site title. (type: string;)
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># The site description. (type: string;)
-</span><span style="color:#f92672;">description </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The site description. (type: string;)
+</span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Automatically generate a feed. (type: boolean;)
-</span><span style="color:#f92672;">generate_feeds </span><span>= </span><span style="color:#ae81ff;">true
+</span><span style="font-style:italic;color:#4a4a4a;"># Automatically generate a feed. (type: boolean;)
+</span><span style="color:#f07178;">generate_feeds </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span>
-</span><span style="color:#75715e;"># The filenames to use for the feeds. (type: array of strings;)
-</span><span style="color:#f92672;">feed_filenames </span><span>= [</span><span style="color:#e6db74;">&quot;atom.xml&quot;</span><span>] </span><span style="color:#75715e;"># or [&quot;rss.xml&quot;]
+</span><span style="font-style:italic;color:#4a4a4a;"># The filenames to use for the feeds. (type: array of strings;)
+</span><span style="color:#f07178;">feed_filenames </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">atom.xml</span><span style="color:#89ddff;">&quot;] </span><span style="font-style:italic;color:#4a4a4a;"># or [&quot;rss.xml&quot;]
 </span><span>
-</span><span style="color:#75715e;"># Build a search index from the pages and section content
-</span><span style="color:#75715e;">#  for `default_language`. (type: boolean;)
-</span><span style="color:#f92672;">build_search_index </span><span>= </span><span style="color:#ae81ff;">true
+</span><span style="font-style:italic;color:#4a4a4a;"># Build a search index from the pages and section content
+</span><span style="font-style:italic;color:#4a4a4a;">#  for `default_language`. (type: boolean;)
+</span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span></code></pre>
 <p>Taxonomies with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[taxonomies]]
-</span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;categories&quot;
-</span><span style="color:#f92672;">feed </span><span>= </span><span style="color:#ae81ff;">true
-</span><span style="color:#f92672;">paginate_by </span><span>= </span><span style="color:#ae81ff;">5
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[[taxonomies]]
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">categories</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span><span>
-</span><span>[[taxonomies]]
-</span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;tags&quot;
-</span><span style="color:#f92672;">feed </span><span>= </span><span style="color:#ae81ff;">true
-</span><span style="color:#f92672;">paginate_by </span><span>= </span><span style="color:#ae81ff;">5
+</span><span style="color:#89ddff;">[[taxonomies]]
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">tags</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span><span>
-</span><span>[[taxonomies]]
-</span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;authors&quot;
-</span><span style="color:#f92672;">feed </span><span>= </span><span style="color:#ae81ff;">true
-</span><span style="color:#f92672;">paginate_by </span><span>= </span><span style="color:#ae81ff;">5
+</span><span style="color:#89ddff;">[[taxonomies]]
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">authors</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span></code></pre>
 <p>Add more languages ​​by replacing <code>fr</code> from the example with the language code.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[languages.fr]
-</span><span style="color:#f92672;">title </span><span>= </span><span style="color:#e6db74;">&quot;Site title in French&quot;
-</span><span style="color:#f92672;">description </span><span>= </span><span style="color:#e6db74;">&quot;Site description in French&quot;
-</span><span style="color:#f92672;">generate_feeds </span><span>= </span><span style="color:#ae81ff;">true
-</span><span style="color:#f92672;">feed_filenames </span><span>= [</span><span style="color:#e6db74;">&quot;atom.xml&quot;</span><span>] </span><span style="color:#75715e;"># or [&quot;rss.xml&quot;]
-</span><span style="color:#f92672;">build_search_index </span><span>= </span><span style="color:#ae81ff;">true
-</span><span style="color:#f92672;">taxonomies </span><span>= [
-</span><span>    { </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;authors&quot;</span><span>, </span><span style="color:#f92672;">feed </span><span>= </span><span style="color:#ae81ff;">true</span><span>, </span><span style="color:#f92672;">paginate_by </span><span>= </span><span style="color:#ae81ff;">5 </span><span>}
-</span><span>]
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[languages.fr]
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site title in French</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site description in French</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">generate_feeds </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#f07178;">feed_filenames </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">atom.xml</span><span style="color:#89ddff;">&quot;] </span><span style="font-style:italic;color:#4a4a4a;"># or [&quot;rss.xml&quot;]
+</span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#f07178;">taxonomies </span><span style="color:#89ddff;">= [
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">authors</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true</span><span style="color:#89ddff;">, </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5 </span><span style="color:#89ddff;">}
+</span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="general-config">General config</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra]
-</span><span style="color:#75715e;"># Enable KaTeX math formula support globally.
-</span><span style="color:#75715e;"># (type: boolean; default value: `false`;)
-</span><span style="color:#f92672;">math </span><span>= </span><span style="color:#ae81ff;">false
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra]
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable KaTeX math formula support globally.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">math </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="color:#75715e;"># Enable Mermaid support globally.
-</span><span style="color:#75715e;"># (type: boolean; default value: `false`;)
-</span><span style="color:#f92672;">mermaid </span><span>= </span><span style="color:#ae81ff;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable Mermaid support globally.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">mermaid </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="color:#75715e;"># Enable comments globally.
-</span><span style="color:#75715e;"># (type: boolean; default value: `false`;)
-</span><span style="color:#f92672;">comment </span><span>= </span><span style="color:#ae81ff;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable comments globally.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">comment </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="color:#75715e;"># Title separator.
-</span><span style="color:#75715e;"># (type: string; default value: ` | `;)
-</span><span style="color:#f92672;">title_separator </span><span>= </span><span style="color:#e6db74;">&quot; | &quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Title separator.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: ` | `;)
+</span><span style="color:#f07178;">title_separator </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;"> | </span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># The top menu. See `extra.menus`.
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">header_menu_name </span><span>= </span><span style="color:#e6db74;">&quot;menu_name&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The top menu. See `extra.menus`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">header_menu_name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">menu_name</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: boolean; default value: false;)
-</span><span style="color:#75715e;"># disable_default_favicon = true
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="font-style:italic;color:#4a4a4a;"># disable_default_favicon = true
 </span><span>
-</span><span style="color:#75715e;"># (type: boolean; default value: false;)
-</span><span style="color:#75715e;"># disable_javascript = true
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="font-style:italic;color:#4a4a4a;"># disable_javascript = true
 </span><span>
-</span><span style="color:#75715e;"># You can reorder the strings, remove them, or replace them.
-</span><span style="color:#75715e;">#  For example, you can replace `site_title` with `home_button`.
-</span><span style="color:#75715e;">#  (type: array of strings; default value: `[&quot;site_title&quot;, &quot;theme_button&quot;, &quot;search_button&quot;, &quot;translations_button&quot;]`;)
-</span><span style="color:#75715e;"># header_buttons = []
+</span><span style="font-style:italic;color:#4a4a4a;"># You can reorder the strings, remove them, or replace them.
+</span><span style="font-style:italic;color:#4a4a4a;">#  For example, you can replace `site_title` with `home_button`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; default value: `[&quot;site_title&quot;, &quot;theme_button&quot;, &quot;search_button&quot;, &quot;translations_button&quot;]`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># header_buttons = []
 </span><span>
-</span><span style="color:#75715e;"># Valid values:
-</span><span style="color:#75715e;">#  `date`, `date_on_page`, `date_on_paginator`,
-</span><span style="color:#75715e;">#  `date_updated, `date_updated_on_page, `date_updated_on_paginator`,
-</span><span style="color:#75715e;">#  `reading_time, `reading_time_on_page, `reading_time_on_paginator`,
-</span><span style="color:#75715e;">#  `word_count`, `word_count_on_page`, `word_count_on_paginator`,
-</span><span style="color:#75715e;">#  `authors`, `authors_on_page`, `authors_on_paginator`,
-</span><span style="color:#75715e;">#  `tags`, `tags_on_page`, `tags_on_paginator`.
-</span><span style="color:#75715e;">#  (type: array of strings; default value: `[&quot;date&quot;, &quot;date_updated_on_page&quot;, &quot;reading_time&quot;, &quot;authors&quot;]`;)
-</span><span style="color:#75715e;"># page_info = []
+</span><span style="font-style:italic;color:#4a4a4a;"># Valid values:
+</span><span style="font-style:italic;color:#4a4a4a;">#  `date`, `date_on_page`, `date_on_paginator`,
+</span><span style="font-style:italic;color:#4a4a4a;">#  `date_updated, `date_updated_on_page, `date_updated_on_paginator`,
+</span><span style="font-style:italic;color:#4a4a4a;">#  `reading_time, `reading_time_on_page, `reading_time_on_paginator`,
+</span><span style="font-style:italic;color:#4a4a4a;">#  `word_count`, `word_count_on_page`, `word_count_on_paginator`,
+</span><span style="font-style:italic;color:#4a4a4a;">#  `authors`, `authors_on_page`, `authors_on_paginator`,
+</span><span style="font-style:italic;color:#4a4a4a;">#  `tags`, `tags_on_page`, `tags_on_paginator`.
+</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; default value: `[&quot;date&quot;, &quot;date_updated_on_page&quot;, &quot;reading_time&quot;, &quot;authors&quot;]`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
 </span></code></pre>
 <h3 id="style-config">Style config</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.style]
-</span><span style="color:#75715e;"># The custom background color. (type: string;)
-</span><span style="color:#f92672;">bg_color </span><span>= </span><span style="color:#e6db74;">&quot;#f4f4f5&quot;
-</span><span style="color:#75715e;"># The custom background color in dark mode. (type: string;)
-</span><span style="color:#f92672;">bg_dark_color </span><span>= </span><span style="color:#e6db74;">&quot;#18181b&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.style]
+</span><span style="font-style:italic;color:#4a4a4a;"># The custom background color. (type: string;)
+</span><span style="color:#f07178;">bg_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#f4f4f5</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The custom background color in dark mode. (type: string;)
+</span><span style="color:#f07178;">bg_dark_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#18181b</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># Enable header blur. (type: boolean;)
-</span><span style="color:#f92672;">header_blur </span><span>= </span><span style="color:#ae81ff;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable header blur. (type: boolean;)
+</span><span style="color:#f07178;">header_blur </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="color:#75715e;"># The custom header color, only available
-</span><span style="color:#75715e;">#  when `header_blur` is false. (type: string;)
-</span><span style="color:#f92672;">header_color </span><span>= </span><span style="color:#e6db74;">&quot;#e4e4e7&quot;
-</span><span style="color:#75715e;"># The custom header color in dark mode, only available
-</span><span style="color:#75715e;">#  when `header_blur` is false. (type: string;)
-</span><span style="color:#f92672;">header_dark_color </span><span>= </span><span style="color:#e6db74;">&quot;#27272a&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The custom header color, only available
+</span><span style="font-style:italic;color:#4a4a4a;">#  when `header_blur` is false. (type: string;)
+</span><span style="color:#f07178;">header_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#e4e4e7</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># The custom header color in dark mode, only available
+</span><span style="font-style:italic;color:#4a4a4a;">#  when `header_blur` is false. (type: string;)
+</span><span style="color:#f07178;">header_dark_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#27272a</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h3 id="menus">Menus</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.menus]
-</span><span style="color:#f92672;">menu_name </span><span>= [
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/pages/archive/&quot;</span><span>, </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;Archive&quot;</span><span>},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/categories&quot;</span><span>, </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;Categories&quot;</span><span>},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/tags/&quot;</span><span>, </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;Tags&quot;</span><span>},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/pages/about/&quot;</span><span>, </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;About&quot;</span><span>},
-</span><span>]
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.menus]
+</span><span style="color:#f07178;">menu_name </span><span style="color:#89ddff;">= [
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot;},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot;},
+</span><span style="color:#89ddff;">]
 </span><span>
-</span><span style="color:#75715e;"># Example multilingual menu.
-</span><span style="color:#f92672;">multilingual_menu_name </span><span>= [
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/pages/about/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;About&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;About in French&quot;</span><span>}},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/pages/projects/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;Projects&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;Projects in French&quot;</span><span>}},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/pages/archive/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;Archive&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;Archive in French&quot;</span><span>}},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/categories/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;Categories&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;Categories in French&quot;</span><span>}},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/tags/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;Tags&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;Tags in French&quot;</span><span>}},
-</span><span>  {</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/authors/&quot;</span><span>, </span><span style="color:#f92672;">names </span><span>= {</span><span style="color:#f92672;">en </span><span>= </span><span style="color:#e6db74;">&quot;Authors&quot;</span><span>, </span><span style="color:#f92672;">fr </span><span>= </span><span style="color:#e6db74;">&quot;Authors in French&quot;</span><span>}},
-</span><span>]
+</span><span style="font-style:italic;color:#4a4a4a;"># Example multilingual menu.
+</span><span style="color:#f07178;">multilingual_menu_name </span><span style="color:#89ddff;">= [
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About in French</span><span style="color:#89ddff;">&quot;}},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/projects/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects in French</span><span style="color:#89ddff;">&quot;}},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive in French</span><span style="color:#89ddff;">&quot;}},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories in French</span><span style="color:#89ddff;">&quot;}},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags in French</span><span style="color:#89ddff;">&quot;}},
+</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/authors/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors in French</span><span style="color:#89ddff;">&quot;}},
+</span><span style="color:#89ddff;">]
 </span></code></pre>
 <p>To use a menu, set <code>extra.header_menu_name</code>.</p>
 <p><code>$BASE_URL</code> in <code>url</code> will be automatically replaced with the language specific base url.
 You can use <code>names_i18n</code> instead of <code>names</code>, see the <code>static/i18n.json</code> file,
 set <code>names_i18n</code> to a <code>common_</code> key.</p>
 <h3 id="profiles">Profiles</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># Replace `your_username` with your username.
-</span><span>[extra.profiles.your_username]
-</span><span style="color:#75715e;"># The URL of avatar.
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">avatar_url </span><span>= </span><span style="color:#e6db74;">&quot;icons/github.svg&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+</span><span style="color:#89ddff;">[extra.profiles.your_username]
+</span><span style="font-style:italic;color:#4a4a4a;"># The URL of avatar.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">avatar_url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">icons/github.svg</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># A description of what is in the avatar.
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">avatar_alt </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the avatar.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">avatar_alt </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Invert avatar color in dark mode.
-</span><span style="color:#75715e;"># (type: boolean; default value: `false`;)
-</span><span style="color:#f92672;">avatar_invert </span><span>= </span><span style="color:#ae81ff;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Invert avatar color in dark mode.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">avatar_invert </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="color:#75715e;"># Profile name for all languages.
-</span><span style="color:#75715e;"># (type: string; default value: the username;)
-</span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile name for all languages.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: the username;)
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Profile bio for all languages.
-</span><span style="color:#75715e;"># (type: string; supports markdown; no default value;)
-</span><span style="color:#f92672;">bio </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile bio for all languages.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; supports markdown; no default value;)
+</span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Profile email.
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#75715e;"># email = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile email.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># email = &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Profile website.
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#75715e;"># url = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile website.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># url = &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Social icons.
-</span><span style="color:#75715e;"># The `name` should be the file name of `static/icons/*.svg` or the icon name of https://simpleicons.org/
-</span><span style="color:#75715e;"># The `url` supports `$BASE_URL`.
-</span><span style="color:#75715e;"># (type: array of tables; no default value;)
-</span><span style="color:#f92672;">social </span><span>= [
-</span><span>    { </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;github&quot;</span><span>, </span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;https://github.com/username&quot; </span><span>},
-</span><span>    { </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;bluesky&quot;</span><span>, </span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;https://bsky.app/profile/username&quot; </span><span>},
-</span><span>    { </span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;rss&quot;</span><span>, </span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;$BASE_URL/atom.xml&quot; </span><span>},
-</span><span>]
+</span><span style="font-style:italic;color:#4a4a4a;"># Social icons.
+</span><span style="font-style:italic;color:#4a4a4a;"># The `name` should be the file name of `static/icons/*.svg` or the icon name of https://simpleicons.org/
+</span><span style="font-style:italic;color:#4a4a4a;"># The `url` supports `$BASE_URL`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of tables; no default value;)
+</span><span style="color:#f07178;">social </span><span style="color:#89ddff;">= [
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">github</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://github.com/username</span><span style="color:#89ddff;">&quot; },
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">bluesky</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://bsky.app/profile/username</span><span style="color:#89ddff;">&quot; },
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">rss</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/atom.xml</span><span style="color:#89ddff;">&quot; },
+</span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="profile-translations">Profile translations</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># For French. Replace `your_username` with your username.
-</span><span>[extra.profiles.your_username.languages.fr]
-</span><span style="color:#75715e;"># Profile name.
-</span><span style="color:#75715e;"># (type: string; default value: extra.profiles.your_username.url;)
-</span><span style="color:#f92672;">name </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
+</span><span style="color:#89ddff;">[extra.profiles.your_username.languages.fr]
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile name.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.url;)
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Profile bio.
-</span><span style="color:#75715e;"># (type: string; supports markdown; default value: extra.profiles.your_username.bio;)
-</span><span style="color:#f92672;">bio </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile bio.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; supports markdown; default value: extra.profiles.your_username.bio;)
+</span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># Profile website.
-</span><span style="color:#75715e;"># (type: string; default value: extra.profiles.your_username.url;)
-</span><span style="color:#f92672;">url </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile website.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.url;)
+</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="color:#75715e;"># A description of what is in the avatar.
-</span><span style="color:#75715e;"># (type: string; default avatar: extra.profiles.your_username.avatar_alt;)
-</span><span style="color:#f92672;">avatar_alt </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the avatar.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default avatar: extra.profiles.your_username.avatar_alt;)
+</span><span style="color:#f07178;">avatar_alt </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
 <h3 id="open-graph-for-profiles">Open Graph for profiles</h3>
 <p>See <a href="https://ogp.me/">the Open Graph protocol</a>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># Replace `your_username` with your username.
-</span><span>[extra.profiles.your_username.open_graph]
-</span><span style="color:#75715e;"># The URL of social image. (type: string; no default value;)
-</span><span style="color:#f92672;">image </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># A description of what is in the social image. (type: string; default value: &quot;&quot;;)
-</span><span style="color:#f92672;">image_alt </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Your first name. (type: string; no default value;)
-</span><span style="color:#f92672;">first_name </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Your last name. (type: string; no default value;)
-</span><span style="color:#f92672;">last_name </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># Your username. (type: string; no default value;)
-</span><span style="color:#f92672;">username </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">gender </span><span>= </span><span style="color:#e6db74;">&quot;&quot; </span><span style="color:#75715e;"># &quot;female&quot; or &quot;male&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+</span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph]
+</span><span style="font-style:italic;color:#4a4a4a;"># The URL of social image. (type: string; no default value;)
+</span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the social image. (type: string; default value: &quot;&quot;;)
+</span><span style="color:#f07178;">image_alt </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Your first name. (type: string; no default value;)
+</span><span style="color:#f07178;">first_name </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Your last name. (type: string; no default value;)
+</span><span style="color:#f07178;">last_name </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Your username. (type: string; no default value;)
+</span><span style="color:#f07178;">username </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">gender </span><span style="color:#89ddff;">= &quot;&quot; </span><span style="font-style:italic;color:#4a4a4a;"># &quot;female&quot; or &quot;male&quot;
 </span><span>
-</span><span style="color:#75715e;"># Set if you have a Fediverse account. (type: table; no default value;)
-</span><span style="color:#75715e;">#  handle - Your Fediverse handle. (type: string; no default value;)
-</span><span style="color:#75715e;">#  domain - Your Fediverse instance. (type: string; no default value;)
-</span><span style="color:#75715e;">#  url - Your Fediverse account URL. (type: string; optional;)
-</span><span style="color:#75715e;"># Example for @user@mastodon.social:
-</span><span style="color:#75715e;"># fediverse_creator = { handle = &quot;user&quot;, domain = &quot;mastodon.social&quot; }
+</span><span style="font-style:italic;color:#4a4a4a;"># Set if you have a Fediverse account. (type: table; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;">#  handle - Your Fediverse handle. (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;">#  domain - Your Fediverse instance. (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;">#  url - Your Fediverse account URL. (type: string; optional;)
+</span><span style="font-style:italic;color:#4a4a4a;"># Example for @user@mastodon.social:
+</span><span style="font-style:italic;color:#4a4a4a;"># fediverse_creator = { handle = &quot;user&quot;, domain = &quot;mastodon.social&quot; }
 </span></code></pre>
 <p><code>fb_app_id</code> and <code>fb_admins</code> are only allowed in the default author's profile.
 In addition, <code>image</code> and <code>image_alt</code> of the profile will be used as a
 fallback open graph image for all pages.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># Replace `your_username` with your username.
-</span><span>[extra.profiles.your_username.open_graph]
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">fb_app_id </span><span>= </span><span style="color:#e6db74;">&quot;Your fb app ID&quot;
-</span><span style="color:#75715e;"># (type: array of strings; no default value;)
-</span><span style="color:#f92672;">fb_admins </span><span>= [</span><span style="color:#e6db74;">&quot;YOUR_USER_ID&quot;</span><span>]
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+</span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">fb_app_id </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Your fb app ID</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; no default value;)
+</span><span style="color:#f07178;">fb_admins </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">YOUR_USER_ID</span><span style="color:#89ddff;">&quot;]
 </span></code></pre>
 <h4 id="open-graph-translations">Open Graph translations</h4>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># For French. Replace `your_username` with your username.
-</span><span>[extra.profiles.your_username.open_graph.languages.fr]
-</span><span style="color:#75715e;"># A description of what is in the social image.
-</span><span style="color:#75715e;"># (type: string; default value: extra.profiles.your_username.open_graph.image_alt;)
-</span><span style="color:#f92672;">image_alt </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
+</span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph.languages.fr]
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the social image.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.open_graph.image_alt;)
+</span><span style="color:#f07178;">image_alt </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
 <h3 id="the-page-footer">The page footer</h3>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.footer]
-</span><span style="color:#75715e;"># Replace with the correct year.
-</span><span style="color:#75715e;"># (type: number; default value: current year;)
-</span><span style="color:#f92672;">since </span><span>= </span><span style="color:#ae81ff;">2025
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.footer]
+</span><span style="font-style:italic;color:#4a4a4a;"># Replace with the correct year.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: current year;)
+</span><span style="color:#f07178;">since </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">2025
 </span><span>
-</span><span style="color:#75715e;"># Replace with the url of the license you want.
-</span><span style="color:#75715e;"># (type: string; no default value; supports `$BASE_URL`;)
-</span><span style="color:#f92672;">license_url </span><span>= </span><span style="color:#e6db74;">&quot;https://creativecommons.org/licenses/by-sa/4.0/deed&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Replace with the url of the license you want.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value; supports `$BASE_URL`;)
+</span><span style="color:#f07178;">license_url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://creativecommons.org/licenses/by-sa/4.0/deed</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># Replace `Your Name` with your name and `CC BY-SA 4.0` with the name of the license you want
-</span><span style="color:#f92672;">copyright </span><span>= </span><span style="color:#e6db74;">&quot;&amp;copy; $YEAR Your Name &amp;vert; [CC BY-SA 4.0]($LICENSE_URL)&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Replace `Your Name` with your name and `CC BY-SA 4.0` with the name of the license you want
+</span><span style="color:#f07178;">copyright </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">&amp;copy; $YEAR Your Name &amp;vert; [CC BY-SA 4.0]($LICENSE_URL)</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; no default value; supports `$BASE_URL`;)
-</span><span style="color:#75715e;"># privacy_policy_url = &quot;$BASE_URL/privacy-policy/&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value; supports `$BASE_URL`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># privacy_policy_url = &quot;$BASE_URL/privacy-policy/&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; no default value; supports `$BASE_URL`;)
-</span><span style="color:#75715e;"># terms_of_service_url = &quot;$BASE_URL/terms-of-service/&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value; supports `$BASE_URL`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># terms_of_service_url = &quot;$BASE_URL/terms-of-service/&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; no default value; supports `$BASE_URL`;)
-</span><span style="color:#75715e;"># search_page_url = &quot;$BASE_URL/search/&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value; supports `$BASE_URL`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># search_page_url = &quot;$BASE_URL/search/&quot;
 </span></code></pre>
 <p>Currently <code>privacy_policy_url</code>, <code>terms_of_service_url</code>, and <code>search_page_url</code> are not shown.</p>
 <p>Option <code>copyright</code> supports Markdown and:</p>
@@ -657,55 +658,55 @@ fallback open graph image for all pages.</p>
 </ul>
 <h3 id="language-specific-options">Language specific options</h3>
 <p>For date format, see <a href="https://docs.rs/chrono/0.4/chrono/format/strftime/index.html">chrono docs</a>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># For English
-</span><span>[extra.languages.en]
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">locale </span><span>= </span><span style="color:#e6db74;">&quot;en_US&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For English
+</span><span style="color:#89ddff;">[extra.languages.en]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">locale </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en_US</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; default value: `%F`;)
-</span><span style="color:#f92672;">date_format </span><span>= </span><span style="color:#e6db74;">&quot;%x&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `%F`;)
+</span><span style="color:#f07178;">date_format </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">%x</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; default value: `%m-%d`;)
-</span><span style="color:#f92672;">date_format_archive </span><span>= </span><span style="color:#e6db74;">&quot;%m-%d&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `%m-%d`;)
+</span><span style="color:#f07178;">date_format_archive </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">%m-%d</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: string; default value: extra.header_menu_name;)
-</span><span style="color:#75715e;"># header_menu_name = &quot;menu_name&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.header_menu_name;)
+</span><span style="font-style:italic;color:#4a4a4a;"># header_menu_name = &quot;menu_name&quot;
 </span><span>
-</span><span style="color:#75715e;"># (type: array of strings; default value: extra.header_buttons;)
-</span><span style="color:#75715e;"># header_buttons = []
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: extra.header_buttons;)
+</span><span style="font-style:italic;color:#4a4a4a;"># header_buttons = []
 </span><span>
-</span><span style="color:#75715e;"># IETF tag for artificial languages. (type: string; no default value;)
-</span><span style="color:#75715e;"># art_x_lang = &quot;art-x-code&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># IETF tag for artificial languages. (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># art_x_lang = &quot;art-x-code&quot;
 </span><span>
-</span><span style="color:#75715e;"># Taxonomy/term pages do not have a description by default.
-</span><span style="color:#75715e;"># Optionally you can set a generic description. `$NAME` will be automatically replaced.
-</span><span style="color:#75715e;"># taxonomy_list_description = &quot;A map of all $NAME on this site. Start exploring!&quot;
-</span><span style="color:#75715e;"># taxonomy_single_description = &quot;Browse articles related to $NAME. Start exploring!&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Taxonomy/term pages do not have a description by default.
+</span><span style="font-style:italic;color:#4a4a4a;"># Optionally you can set a generic description. `$NAME` will be automatically replaced.
+</span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_list_description = &quot;A map of all $NAME on this site. Start exploring!&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_single_description = &quot;Browse articles related to $NAME. Start exploring!&quot;
 </span></code></pre>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#75715e;"># For French
-</span><span>[extra.languages.fr]
-</span><span style="color:#f92672;">locale </span><span>= </span><span style="color:#e6db74;">&quot;fr_FR&quot;
-</span><span style="color:#f92672;">date_format </span><span>= </span><span style="color:#e6db74;">&quot;%x&quot;
-</span><span style="color:#f92672;">date_format_archive </span><span>= </span><span style="color:#e6db74;">&quot;%m-%d&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French
+</span><span style="color:#89ddff;">[extra.languages.fr]
+</span><span style="color:#f07178;">locale </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">fr_FR</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">date_format </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">%x</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">date_format_archive </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">%m-%d</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h3 id="web-analytics">Web analytics</h3>
 <h4 id="goatcounter">GoatCounter</h4>
 <p>Set only if you use <a href="https://www.goatcounter.com/">GoatCounter</a>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.goatcounter]
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">endpoint </span><span>= </span><span style="color:#e6db74;">&quot;https://MYCODE.goatcounter.com/count&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">src </span><span>= </span><span style="color:#e6db74;">&quot;//gc.zgo.at/count.js&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#75715e;"># noscript_prefix = &quot;&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.goatcounter]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">endpoint </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://MYCODE.goatcounter.com/count</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">src </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">//gc.zgo.at/count.js</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># noscript_prefix = &quot;&quot;
 </span></code></pre>
 <p>To enable <a href="https://www.goatcounter.com/help/pixel">pixel</a>, set <code>noscript_prefix</code> to an empty string.
 If your <code>base_url</code> includes a subpath, set <code>noscript_prefix</code> to the subpath without a trailing slash.</p>
 <h4 id="vercel-analytics">Vercel Analytics</h4>
 <p>Set only if you use <a href="https://vercel.com/docs/analytics">Vercel Web Analytics</a>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.vercel_analytics]
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">src </span><span>= </span><span style="color:#e6db74;">&quot;/_vercel/insights/script.js&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.vercel_analytics]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">src </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">/_vercel/insights/script.js</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h4 id="prevent-tracking-own-pageviews">Prevent tracking own pageviews</h4>
 <p>Open a page of your site, adding <code>#disable-analytics</code> to the page address.
@@ -714,31 +715,31 @@ For example, open <a href="http://127.0.0.1:1111/#disable-analytics">http://127.
 <h3 id="comments">Comments</h3>
 <p>See <a href="https://giscus.app/">giscus.app</a>.
 Only available when <code>extra.comment</code> in the frontmatter or <code>extra.comment</code> in the config is set to <code>true</code>.</p>
-<pre data-lang="toml" style="background-color:#272822;color:#f8f8f2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[extra.giscus]
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">repo </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">repo_id </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">category </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># (type: string; no default value;)
-</span><span style="color:#f92672;">category_id </span><span>= </span><span style="color:#e6db74;">&quot;&quot;
-</span><span style="color:#75715e;"># (type: string; default value: `pathname`)
-</span><span style="color:#f92672;">mapping </span><span>= </span><span style="color:#e6db74;">&quot;pathname&quot;
-</span><span style="color:#75715e;"># (type: number; default value: `1`)
-</span><span style="color:#f92672;">strict </span><span>= </span><span style="color:#ae81ff;">1
-</span><span style="color:#75715e;"># (type: number; default value: `0`)
-</span><span style="color:#f92672;">reactions_enabled </span><span>= </span><span style="color:#ae81ff;">0
-</span><span style="color:#75715e;"># (type: number; default value: `0`)
-</span><span style="color:#f92672;">emit_metadata </span><span>= </span><span style="color:#ae81ff;">0
-</span><span style="color:#75715e;"># (type: string; default value: `top`)
-</span><span style="color:#f92672;">input_position </span><span>= </span><span style="color:#e6db74;">&quot;top&quot;
-</span><span style="color:#75715e;"># (type: string; default value: `light`)
-</span><span style="color:#f92672;">theme </span><span>= </span><span style="color:#e6db74;">&quot;light&quot;
-</span><span style="color:#75715e;"># (type: string; default value: `en`)
-</span><span style="color:#f92672;">lang </span><span>= </span><span style="color:#e6db74;">&quot;en&quot;
-</span><span style="color:#75715e;"># (type: string; default value: `lazy`)
-</span><span style="color:#f92672;">loading </span><span>= </span><span style="color:#e6db74;">&quot;lazy&quot;
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.giscus]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">repo </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">repo_id </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">category </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
+</span><span style="color:#f07178;">category_id </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `pathname`)
+</span><span style="color:#f07178;">mapping </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">pathname</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `1`)
+</span><span style="color:#f07178;">strict </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">1
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`)
+</span><span style="color:#f07178;">reactions_enabled </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">0
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`)
+</span><span style="color:#f07178;">emit_metadata </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">0
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `top`)
+</span><span style="color:#f07178;">input_position </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">top</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `light`)
+</span><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">light</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `en`)
+</span><span style="color:#f07178;">lang </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `lazy`)
+</span><span style="color:#f07178;">loading </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">lazy</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h2 id="license">License</h2>
 <p>See the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a> file.</p>
@@ -773,8 +774,10 @@ Open bug reports and feature requests on <a href="https://codeberg.org/salif/lin
 
   
   <!-- GoatCounter -->
-  <script>window.linkita.initGoatCounterAnalytics("//gc.zgo.at/count.js",
-    "https://sgi.goatcounter.com/count");</script>
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/en/about/" alt=""></noscript>
 
   <!-- Body End inject -->

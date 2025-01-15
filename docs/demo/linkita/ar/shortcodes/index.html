@@ -36,7 +36,6 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <!-- CSS & JS -->
   <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
@@ -48,12 +47,12 @@
       --bg: #18181b;
       --header: #27272a;
       color-scheme: dark;
-    }
+    }/**/
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
 
   <!-- Head inject -->
   
@@ -86,7 +85,7 @@
             class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
             d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
         ></button>
-        <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
       
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -178,7 +177,7 @@
 <p>لم تسمع عن الاختصارات من قبل؟ راجع <a href="https://www.getzola.org/documentation/content/shortcodes/">توثيق Zola</a> لمزيد من المعلومات.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>لاستخدام Mermaid في صفحتك، يجب عليك ضبط <code>extra.mermaid = true</code> في مقدمة الصفحة.</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
 </span><span>title = &quot;عنوان صفحتك&quot;
 </span><span>
 </span><span>[extra]
@@ -186,7 +185,7 @@
 </span><span>+++
 </span></code></pre>
 <p>ثم يمكنك استخدام اختصار <code>mermaid()</code> مثل:</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
 </span><span>graph TD;
 </span><span>A--&gt;B;
@@ -197,7 +196,7 @@
 </span><span>{% end %}
 </span></code></pre>
 <p>سيتم عرض هذا على النحو التالي:</p>
-<pre class="mermaid bg-inherit">
+<pre class="mermaid bg-inherit" translate="no">
   graph TD;
 A--&gt;B;
 A--&gt;C;
@@ -206,9 +205,9 @@ C--&gt;D;
 </pre>
 <p>بالإضافة إلى ذلك، يمكنك استخدام كتلة التعليمات البرمجية داخل اختصار <code>mermaid()</code> وسيتم تجاهل كتلة التعليمات البرمجية.</p>
 <p>تمنع كتلة التعليمات البرمجية المنسق من كسر تنسيق Mermaid.</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
-</span><span>```</span><span style="color:#ae81ff;">mermaid
+</span><span style="color:#4a4a4a;">```</span><span>mermaid
 </span><span>sequenceDiagram
 </span><span>    participant Alice
 </span><span>    participant Bob
@@ -220,12 +219,12 @@ C--&gt;D;
 </span><span>    John--&gt;&gt;Alice: Great!
 </span><span>    John-&gt;&gt;Bob: How about you?
 </span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
+</span><span style="color:#4a4a4a;">```
 </span><span>
 </span><span>{% end %}
 </span></code></pre>
 <p>سيتم عرض هذا على النحو التالي:</p>
-<pre class="mermaid bg-inherit">
+<pre class="mermaid bg-inherit" translate="no">
   
 sequenceDiagram
     participant Alice
@@ -243,8 +242,8 @@ sequenceDiagram
 <h2 id="ltnbyht">التنبيهات</h2>
 <p>يعرض اختصار <code>admonition()</code> لافتة لمساعدتك في وضع ملاحظة في صفحتك.</p>
 <p>يمكنك استخدام اختصار <code>admonition()</code> مثل:</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;نصيحة&quot;) %}
-</span><span>تنبيه `tip`.
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;نصيحة&quot;) %}
+</span><span>تنبيه </span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">tip</span><span style="color:#4a4a4a;">`</span><span>.
 </span><span>{% end %}
 </span></code></pre>
 <p>يحتوي اختصار التنبيه على 12 نوعًا مختلفًا:</p>
@@ -467,7 +466,7 @@ sequenceDiagram
 <h2 id="m-rd-lswr">معرض الصور</h2>
 <p>اختصار <code>gallery()</code> هو معرض صور بسيط قابل للنقر يعتمد على HTML فقط ويعرض جميع الصور من أصول الصفحة.</p>
 <p>إنه من <a href="https://www.getzola.org/documentation/content/image-processing/">توثيق Zola</a></p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
 <div class="not-prose flex flex-wrap gap-2">
 
@@ -606,8 +605,10 @@ sequenceDiagram
 </script>
 
   <!-- GoatCounter -->
-  <script>window.linkita.initGoatCounterAnalytics("//gc.zgo.at/count.js",
-    "https://sgi.goatcounter.com/count");</script>
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/ar/shortcodes/" alt=""></noscript>
 
   <!-- Body End inject -->

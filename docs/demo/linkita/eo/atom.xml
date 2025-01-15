@@ -67,7 +67,7 @@
 &lt;p&gt;Ĉu vi neniam aŭdis pri mallongigoj? Vidu la &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;dokumentaron de Zola&lt;&#x2F;a&gt; por pli da informoj.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;Por uzi Mermaid en via paĝo, vi devas agordi &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; en la antaŭaĵo (frontmatter) de la paĝo.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;La titolo de via paĝo&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;[extra]
@@ -75,7 +75,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Tiam vi povas uzi la mallongigon &lt;code&gt;mermaid()&lt;&#x2F;code&gt; jene:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;graph TD;
 &lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
@@ -86,7 +86,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Ĉi tio estos montrata tiel:&lt;&#x2F;p&gt;
-&lt;pre class=&quot;mermaid bg-inherit&quot;&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   graph TD;
 A--&amp;gt;B;
 A--&amp;gt;C;
@@ -95,9 +95,9 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;Krome, vi povas uzi kodblokon ene de la mallongigo &lt;code&gt;mermaid()&lt;&#x2F;code&gt; kaj la kodbloko estos ignorata.&lt;&#x2F;p&gt;
 &lt;p&gt;La kodbloko malhelpas ke la formatilo rompu la formatadon de Mermaid.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ae81ff;&quot;&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid
 &lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
@@ -109,12 +109,12 @@ C--&amp;gt;D;
 &lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
 &lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
 &lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span&gt;```
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Ĉi tio estos montrata tiel:&lt;&#x2F;p&gt;
-&lt;pre class=&quot;mermaid bg-inherit&quot;&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   
 sequenceDiagram
     participant Alice
@@ -132,8 +132,8 @@ sequenceDiagram
 &lt;h2 id=&quot;admono&quot;&gt;Admono&lt;&#x2F;h2&gt;
 &lt;p&gt;La mallongigo &lt;code&gt;admonition()&lt;&#x2F;code&gt; montras rubandon por helpi vin meti atentigon en vian paĝon.&lt;&#x2F;p&gt;
 &lt;p&gt;Vi povas uzi la mallongigon &lt;code&gt;admonition()&lt;&#x2F;code&gt; jene:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;konsileto&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;La admono `konsileto`.
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;konsileto&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;La admono &lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c792ea;&quot;&gt;konsileto&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt;.
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;La mallongigo &lt;code&gt;admonition&lt;&#x2F;code&gt; havas 12 diversajn tipojn:&lt;&#x2F;p&gt;
@@ -356,7 +356,7 @@ sequenceDiagram
 &lt;h2 id=&quot;galerio&quot;&gt;Galerio&lt;&#x2F;h2&gt;
 &lt;p&gt;La mallongigo &lt;code&gt;gallery()&lt;&#x2F;code&gt; estas tre simpla nur-HTML-a klakebla bildgalerio, kiu montras ĉiujn bildojn el la paĝaj aktivaĵoj (assets).&lt;&#x2F;p&gt;
 &lt;p&gt;Ĝi estas el la &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;dokumentaro de Zola&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#272822;color:#f8f8f2;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
 

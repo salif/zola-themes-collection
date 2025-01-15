@@ -29,7 +29,6 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <!-- CSS & JS -->
   <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
@@ -41,12 +40,12 @@
       --bg: #18181b;
       --header: #27272a;
       color-scheme: dark;
-    }
+    }/**/
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
 
   <!-- Head inject -->
   
@@ -79,7 +78,7 @@
             class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
             d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
         ></button>
-        <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
       
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -383,8 +382,10 @@
 
   
   <!-- GoatCounter -->
-  <script>window.linkita.initGoatCounterAnalytics("//gc.zgo.at/count.js",
-    "https://sgi.goatcounter.com/count");</script>
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/uwu/projects/" alt=""></noscript>
 
   <!-- Body End inject -->

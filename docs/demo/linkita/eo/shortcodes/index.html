@@ -37,7 +37,6 @@
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/atom.xml" title="Linkita | Atom" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <!-- CSS & JS -->
   <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
   <style>
     :root {
@@ -49,12 +48,12 @@
       --bg: #18181b;
       --header: #27272a;
       color-scheme: dark;
-    }
+    }/**/
   </style>
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=0c9fc67b8af857bd6bd1"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
 
   <!-- Head inject -->
   
@@ -87,7 +86,7 @@
             class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
             d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
         ></button>
-        <script>window.linkita.initTranslationsButton(document.querySelector(".btn-translations"));</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
       
       <div title="Menuo" role="button" accesskey="+" tabindex="0"
@@ -179,7 +178,7 @@
 <p>Ĉu vi neniam aŭdis pri mallongigoj? Vidu la <a href="https://www.getzola.org/documentation/content/shortcodes/">dokumentaron de Zola</a> por pli da informoj.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>Por uzi Mermaid en via paĝo, vi devas agordi <code>extra.mermaid = true</code> en la antaŭaĵo (frontmatter) de la paĝo.</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
 </span><span>title = &quot;La titolo de via paĝo&quot;
 </span><span>
 </span><span>[extra]
@@ -187,7 +186,7 @@
 </span><span>+++
 </span></code></pre>
 <p>Tiam vi povas uzi la mallongigon <code>mermaid()</code> jene:</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
 </span><span>graph TD;
 </span><span>A--&gt;B;
@@ -198,7 +197,7 @@
 </span><span>{% end %}
 </span></code></pre>
 <p>Ĉi tio estos montrata tiel:</p>
-<pre class="mermaid bg-inherit">
+<pre class="mermaid bg-inherit" translate="no">
   graph TD;
 A--&gt;B;
 A--&gt;C;
@@ -207,9 +206,9 @@ C--&gt;D;
 </pre>
 <p>Krome, vi povas uzi kodblokon ene de la mallongigo <code>mermaid()</code> kaj la kodbloko estos ignorata.</p>
 <p>La kodbloko malhelpas ke la formatilo rompu la formatadon de Mermaid.</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
-</span><span>```</span><span style="color:#ae81ff;">mermaid
+</span><span style="color:#4a4a4a;">```</span><span>mermaid
 </span><span>sequenceDiagram
 </span><span>    participant Alice
 </span><span>    participant Bob
@@ -221,12 +220,12 @@ C--&gt;D;
 </span><span>    John--&gt;&gt;Alice: Great!
 </span><span>    John-&gt;&gt;Bob: How about you?
 </span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
+</span><span style="color:#4a4a4a;">```
 </span><span>
 </span><span>{% end %}
 </span></code></pre>
 <p>Ĉi tio estos montrata tiel:</p>
-<pre class="mermaid bg-inherit">
+<pre class="mermaid bg-inherit" translate="no">
   
 sequenceDiagram
     participant Alice
@@ -244,8 +243,8 @@ sequenceDiagram
 <h2 id="admono">Admono</h2>
 <p>La mallongigo <code>admonition()</code> montras rubandon por helpi vin meti atentigon en vian paĝon.</p>
 <p>Vi povas uzi la mallongigon <code>admonition()</code> jene:</p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;konsileto&quot;) %}
-</span><span>La admono `konsileto`.
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;konsileto&quot;) %}
+</span><span>La admono </span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">konsileto</span><span style="color:#4a4a4a;">`</span><span>.
 </span><span>{% end %}
 </span></code></pre>
 <p>La mallongigo <code>admonition</code> havas 12 diversajn tipojn:</p>
@@ -468,7 +467,7 @@ sequenceDiagram
 <h2 id="galerio">Galerio</h2>
 <p>La mallongigo <code>gallery()</code> estas tre simpla nur-HTML-a klakebla bildgalerio, kiu montras ĉiujn bildojn el la paĝaj aktivaĵoj (assets).</p>
 <p>Ĝi estas el la <a href="https://www.getzola.org/documentation/content/image-processing/">dokumentaro de Zola</a></p>
-<pre data-lang="markdown" style="background-color:#272822;color:#f8f8f2;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
 <div class="not-prose flex flex-wrap gap-2">
 
@@ -607,8 +606,10 @@ sequenceDiagram
 </script>
 
   <!-- GoatCounter -->
-  <script>window.linkita.initGoatCounterAnalytics("//gc.zgo.at/count.js",
-    "https://sgi.goatcounter.com/count");</script>
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/eo/shortcodes/" alt=""></noscript>
 
   <!-- Body End inject -->
