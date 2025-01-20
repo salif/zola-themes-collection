@@ -25,14 +25,14 @@
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/uwu/about/" hreflang="art-x-uwu" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/screenshot.png" />
   <meta property="og:image:alt" content="A screenshot of this website." />
-  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1360" />
   <meta property="og:image:height" content="765" />
+  <meta property="og:image:type" content="image/png" />
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/atom.xml" title="Linkita | Atom" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=b48e5741e5e72a258b85" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=1168eedbd4a25f40781b" />
   <style>
     :root {
       --bg: #f4f4f5;
@@ -144,7 +144,7 @@
 
 <article>
   <header class="mb-16">
-    <h1 class="!my-0 pb-2.5">Linkita</h1>
+    <h1 class="!my-0">Linkita</h1>
   </header>
 
   <section>
@@ -153,10 +153,11 @@
 <ul>
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>For discussion, join the <a href="https://matrix.to/#/#linkita:mozilla.org">Matrix chat room</a>.</li>
+<li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
 <li>Screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a>, <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
 <li>See <a href="#sites-using-linkita">sites using Linkita</a> and <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
 <li>Live preview in <a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>.</li>
-<li>Incomplete live preview in <a href="https://salif.github.io/linkita/glb/">Globasa</a>, <a href="https://salif.github.io/linkita/ar/">Arabic</a>.</li>
+<li>Incomplete live preview in <a href="https://salif.github.io/linkita/ar/">Arabic</a>, <a href="https://salif.github.io/linkita/glb/">Globasa</a>.</li>
 </ul>
 <h2 id="features">Features</h2>
 <h3 id="kita-features">Kita features</h3>
@@ -208,7 +209,7 @@
 </span></code></pre>
 <p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a> for all versions after the one you are using; there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
-<p>All options for the frontmatter and for the <code>config.toml</code> file are optional.
+<p>All variables for the frontmatter and for the <code>config.toml</code> file are optional.
 Set the ones you need.</p>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -249,11 +250,8 @@ Set the ones you need.</p>
 </span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span>---
 </span></code></pre>
-<h3 id="open-graph-frontmatter-options">Open Graph frontmatter options</h3>
+<h3 id="open-graph-frontmatter-variables">Open Graph frontmatter variables</h3>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.open_graph]
-</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the cover image. e.g. `image/jpeg`, `image/gif`, `image/png`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">cover_type </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
 </span><span style="color:#f07178;">cover_width </span><span style="color:#89ddff;">=
@@ -297,7 +295,7 @@ Set the ones you need.</p>
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: current_url;)
 </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
-<h3 id="sitemap-frontmatter-options">Sitemap frontmatter options</h3>
+<h3 id="sitemap-frontmatter-variables">Sitemap frontmatter variables</h3>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.sitemap]
 </span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: page.updated;)
@@ -321,34 +319,9 @@ Set the ones you need.</p>
 <p>Do it for each language in your blog.
 For French, the file name is <code>content/_index.fr.md</code>.</p>
 <h3 id="profiles-for-authors">Profiles for authors</h3>
-<p>Add <code>extra.profiles.author_username</code> table in your <code>config.toml</code> file for each author.
+<p>Add <code>extra.profiles.author_username</code> table in your <code>config.toml</code> file for each author in your blog.
 Replace <code>author_username</code> with author's username.
 See <a href="#profiles">Profiles</a>.</p>
-<h3 id="authors">Authors</h3>
-<h4 id="option-1-using-page-authors">Option 1: Using <code>page.authors</code></h4>
-<p>You don't need to set <code>page.authors</code> in the frontmatter if you are the only author.</p>
-<p>Otherwise, set <code>page.authors</code>:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;, &quot;</span><span style="color:#c3e88d;">author2_username</span><span style="color:#89ddff;">&quot;]
-</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span></code></pre>
-<h4 id="option-2-using-taxonomies">Option 2: Using Taxonomies</h4>
-<p>If you choose this option you should set taxonomies in each post.</p>
-<p>Examples:</p>
-<p><strong>If the blog is your personal blog</strong>:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span><span style="color:#89ddff;">[taxonomies]
-</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;]
-</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span></code></pre>
-<p><strong>If the blog has a team of multiple authors</strong>:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span><span style="color:#89ddff;">[taxonomies]
-</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;]
-</span><span style="font-style:italic;color:#4a4a4a;"># or:
-</span><span style="font-style:italic;color:#4a4a4a;"># authors = [&quot;author_username&quot;, &quot;author2_username&quot;]
-</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span></code></pre>
 <h3 id="non-post-pages">Non-post pages</h3>
 <p>Create <code>content/pages/_index.md</code> file in your blog:</p>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -375,6 +348,22 @@ See <a href="#profiles">Profiles</a>.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;about&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
+<h3 id="page-authors">Page authors</h3>
+<h4 id="option-1-using-page-authors">Option 1: Using <code>page.authors</code></h4>
+<p>You don't need to set <code>page.authors</code> in the frontmatter if you are the only author of the post.</p>
+<p>Otherwise, set <code>page.authors</code>:</p>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;]
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span></code></pre>
+<h4 id="option-2-using-taxonomies">Option 2: Using Taxonomies</h4>
+<p>Useful if the blog has a team of several authors.
+If you choose this option you should set taxonomies in each page.</p>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#89ddff;">[taxonomies]
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;, &quot;</span><span style="color:#c3e88d;">author2_username</span><span style="color:#89ddff;">&quot;]
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span></code></pre>
 <h3 id="inject-support">Inject support</h3>
 <p>You can easily use inject to add new features to your side without modifying the theme itself.</p>
 <p>To use inject, you need to add some HTML files to the <code>templates/injects</code> directory.</p>
@@ -389,11 +378,10 @@ See <a href="#profiles">Profiles</a>.</p>
 <tr><td>Go to next page</td><td><kbd>Alt</kbd>+<kbd>.</kbd></td></tr>
 <tr><td>Table of contents</td><td><kbd>Alt</kbd>+<kbd>=</kbd></td></tr>
 <tr><td>Skip to footer</td><td><kbd>Alt</kbd>+<kbd>_</kbd></td></tr>
-<tr><td>Skip to main</td><td><kbd>Alt</kbd>+<kbd>-</kbd></td></tr>
 </tbody></table>
 <h2 id="configuring">Configuring</h2>
 <p>Copy and paste the examples into your <code>config.toml</code> file
-and comment out the options you don't use instead of setting empty values.</p>
+and comment out the variables you don't use instead of setting empty values.</p>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
@@ -744,8 +732,7 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 <h2 id="license">License</h2>
 <p>See the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a> file.</p>
 <h2 id="contributing">Contributing</h2>
-<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.
-Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</p>
+<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.</p>
 <h2 id="sites-using-linkita">Sites using Linkita</h2>
 <ul>
 <li><a href="https://salif.github.io/zola-themes-collection/">Zola Themes Collection</a></li>
