@@ -995,6 +995,61 @@ theme = "apollo"
   js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "ski"
+name = "ski"
+desc = "A minimalist Zola theme inspired by Swiss design principles."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
+
+### Installation{#h-install-ski}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/un1970ix/ski.git themes/ski
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/un1970ix/ski.git themes/ski
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "ski"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
+
+### Info{#h-info-ski}
+- **Author**: [Bedir Ekim](https://un1970ix.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/un1970ix/ski>
+- **Offic. Live Demo**: <https://ski.un1970ix.com>
+- **Min version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/ski/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/un1970ix/ski"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-ski"
+  js = "const b=document.getElementById('install-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-ski"
+  js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "radion"
 name = "radion"
 desc = "A sleek, modern blog theme."
@@ -1605,58 +1660,3 @@ theme = "cablab"
   name = "Info"
   url = "#info-cablab"
   js = "const b=document.getElementById('info-cablab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "ski"
-name = "ski"
-desc = "A minimalist Zola theme inspired by Swiss design principles."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
-
-### Installation{#h-install-ski}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/un1970ix/ski.git themes/ski
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/un1970ix/ski.git themes/ski
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "ski"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
-
-### Info{#h-info-ski}
-- **Author**: [Bedir Ekim](https://un1970ix.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/un1970ix/ski>
-- **Offic. Live Demo**: <https://ski.un1970ix.com>
-- **Min version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/ski/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/un1970ix/ski"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-ski"
-  js = "const b=document.getElementById('install-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-ski"
-  js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
