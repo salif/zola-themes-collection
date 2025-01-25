@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/" />
   <meta property="og:type" content="article" />
+  <meta property="og:locale:alternate" content="ar_EG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/about/" hreflang="ar" />
   <meta property="og:locale:alternate" content="bg_BG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/about/" hreflang="bg" />
@@ -22,7 +23,11 @@
   <meta property="og:locale:alternate" content="eo" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/about/" hreflang="eo" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/glb/about/" hreflang="art-x-globasa" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/about/" hreflang="tr" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/uwu/about/" hreflang="art-x-uwu" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/about/" hreflang="zh" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/screenshot.png" />
   <meta property="og:image:alt" content="A screenshot of this website." />
   <meta property="og:image:width" content="1360" />
@@ -154,10 +159,13 @@
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>For discussion, join the <a href="https://matrix.to/#/#linkita:mozilla.org">Matrix chat room</a>.</li>
 <li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
-<li>Screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a>, <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
-<li>See <a href="#sites-using-linkita">sites using Linkita</a> and <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
-<li>Live preview in <a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>.</li>
-<li>Incomplete live preview in <a href="https://salif.github.io/linkita/ar/">Arabic</a>, <a href="https://salif.github.io/linkita/glb/">Globasa</a>.</li>
+<li>See <a href="https://codeberg.org/salif/linkita-demo">demo source code</a> and screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a> and <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
+<li>Live preview in:
+<ul>
+<li><a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>.</li>
+<li><a href="https://salif.github.io/linkita/zh/">Chinese</a>, <a href="https://salif.github.io/linkita/ar/">Arabic</a>, <a href="https://salif.github.io/linkita/tr/">Turkish</a>, <a href="https://salif.github.io/linkita/glb/">Globasa</a>.</li>
+</ul>
+</li>
 </ul>
 <h2 id="features">Features</h2>
 <h3 id="kita-features">Kita features</h3>
@@ -207,9 +215,10 @@
 <pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">cd themes/linkita
 </span><span style="color:#82aaff;">git checkout </span><span style="color:#89ddff;">$(</span><span style="color:#82aaff;">git describe</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">tags </span><span style="color:#89ddff;">$(</span><span style="color:#82aaff;">git rev-list</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">tags</span><span style="color:#89ddff;"> --</span><span style="color:#f78c6c;">max-count</span><span style="color:#89ddff;">=</span><span style="color:#82aaff;">1</span><span style="color:#89ddff;">))
 </span></code></pre>
-<p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a> for all versions after the one you are using; there may be breaking changes that require manual involvement.</p>
+<p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a>
+for all versions after the one you are using; there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
-<p>All variables for the frontmatter and for the <code>config.toml</code> file are optional.
+<p>All variables are optional.
 Set the ones you need.</p>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -381,7 +390,8 @@ If you choose this option you should set taxonomies in each page.</p>
 </tbody></table>
 <h2 id="configuring">Configuring</h2>
 <p>Copy and paste the examples into your <code>config.toml</code> file
-and comment out the variables you don't use instead of setting empty values.</p>
+and comment out the variables you don't use instead of setting empty values.
+All variables are optional.</p>
 <pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
@@ -454,10 +464,10 @@ and comment out the variables you don't use instead of setting empty values.</p>
 </span><span style="color:#f07178;">header_menu_name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">menu_name</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
-</span><span style="font-style:italic;color:#4a4a4a;"># disable_default_favicon = true
+</span><span style="color:#f07178;">disable_default_favicon </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
-</span><span style="font-style:italic;color:#4a4a4a;"># disable_javascript = true
+</span><span style="color:#f07178;">disable_javascript </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># You can reorder the strings, remove them, or replace them.
 </span><span style="font-style:italic;color:#4a4a4a;">#  For example, you can replace `site_title` with `home_button`.
@@ -529,11 +539,11 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">avatar_invert </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Profile name for all languages.
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile name.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: the username;)
 </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Profile bio for all languages.
+</span><span style="font-style:italic;color:#4a4a4a;"># Profile bio.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; supports markdown; no default value;)
 </span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
@@ -735,10 +745,10 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 <p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.</p>
 <h2 id="sites-using-linkita">Sites using Linkita</h2>
 <ul>
-<li><a href="https://salif.github.io/zola-themes-collection/">Zola Themes Collection</a></li>
-<li><a href="https://salif.eu">salif.eu</a>: Personal website</li>
+<li><a href="https://github.com/salif/zola-themes-collection">Zola Themes Collection</a></li>
+<li><a href="https://github.com/salif/personal-web-page">salif.eu</a>: Personal website</li>
 </ul>
-<p>If you use Linkita, feel free to create a pull request to add your site to this list.</p>
+<p>If your blog uses Linkita and is open source, feel free to create a pull request to add it to this list.</p>
 
 </section>
 </article>

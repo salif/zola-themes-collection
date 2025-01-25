@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="not-ready overflow-y-scroll lg:text-base" lang="zh">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola" />
+  <title>Markdown 语法指南 | 林基塔</title>
+  <meta property="og:site_name" content="林基塔" />
+  <meta property="og:title" content="Markdown 语法指南" />
+  <meta name="description" content="示例文章，展示了 HTML 元素的基本 Markdown 语法和格式。" />
+  <meta property="og:description" content="示例文章，展示了 HTML 元素的基本 Markdown 语法和格式。" />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-01-23T00:00:00+00:00" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/kita/" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/salif/" />
+  <meta property="article:tag" content="markdown" />
+  <meta property="article:tag" content="css" />
+  <meta property="article:tag" content="html" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" hreflang="ar" />
+  <meta property="og:locale:alternate" content="bg_BG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/markdown-syntax/" hreflang="bg" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/markdown-syntax/" hreflang="en" />
+  <meta property="og:locale:alternate" content="eo" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/" hreflang="eo" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/markdown-syntax/" hreflang="tr" />
+  <meta property="og:locale" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" hreflang="zh" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png" />
+  <meta property="og:image:alt" content="Markdown 标志" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:image:type" content="image/png" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+  <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/atom.xml" title="林基塔 | Atom" />
+
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=1168eedbd4a25f40781b" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
+    }
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }/**/
+  </style>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
+
+  <!-- Head inject -->
+  
+</head>
+
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
+  
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8">
+        <a title="转到主页" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/" class="text-2xl font-semibold">林基塔</a>
+        <button type="button" title="切换颜色方案" accesskey="$"
+          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
+          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
+            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
+            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
+            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
+            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
+            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
+            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
+            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+        ></button>
+        <button type="button" title="Go to page translation" accesskey=";"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
+          style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
+            viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' \
+            class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
+            d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
+        ></button>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
+      </div>
+      
+      <div title="导航" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+      
+    </div>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/projects/">项目</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/archive/">归档</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/">标签</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/about/">关于</a>
+        </li>
+      </menu>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+  <!-- Body Start inject -->
+  
+  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
+    max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Markdown 语法指南</h1>
+    <div class="text-sm antialiased opacity-80"><time
+    datetime="2022-10-20T00:00:00+00:00">2022年10月20日</time> &lpar;<time
+    datetime="2025-01-23T00:00:00+00:00">2025年01月23日</time>&rpar;<span class="mx-1">&middot;</span><time
+    datetime="PT0H4M0S">4 分钟</time><span class="mx-1">&middot;</span><span>Kita</span><span class="mx-1">&middot;</span><span>萨利夫</span>
+</div>
+
+  </header>
+
+  
+  <figure class="mb-12 mt-0">
+    <img
+      class="h-auto w-full rounded-lg"
+      src="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png"
+      alt="Markdown 标志"
+      width="1600"
+      height="800"
+    />
+  </figure>
+  
+
+  <!-- TOC -->
+  
+<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
+      <span class="cursor-pointer">目录</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#biao-ti">标题</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#h1">H1</a>
+          <ul>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#h2">H2</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#duan-luo">段落</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#yin-yong-kuai">引用块</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#lian-jie">链接</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#tu-pian">图片</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#biao-ge">表格</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#dai-ma-kuai">代码块</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#lie-biao-lei-xing">列表类型</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#qi-ta-yuan-su-abbr-sub-sup-kbd-mark">其他元素 — abbr, sub, sup, kbd, mark</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+
+
+  <!-- Content -->
+  <section><p>本文提供了一个基本的 Markdown 语法示例，这些语法可以在 Zola 内容文件中使用。同时，本文也展示了基本的 HTML 元素在 林基塔 主题中是否会使用 CSS 进行装饰。</p>
+<span id="continue-reading"></span><h2 id="biao-ti">标题</h2>
+<p>以下 HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> 元素代表了六个级别的章节标题。<code>&lt;h1&gt;</code> 是最高的章节级别，而 <code>&lt;h6&gt;</code> 是最低的级别。</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="duan-luo">段落</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="yin-yong-kuai">引用块</h2>
+<p>引用块元素表示从另一个来源引用的内容，可以选择包含引文，引文必须位于 <code>footer</code> 或 <code>cite</code> 元素内，并且可以选择包含内联更改，例如注释和缩写。</p>
+<h4 id="mei-you-shu-ming-de-yin-yong-kuai">没有署名的引用块</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>注意</strong> 你可以在引用块中使用 <em>Markdown 语法</em>。</p>
+</blockquote>
+<h4 id="dai-you-shu-ming-de-yin-yong-kuai">带有署名的引用块</h4>
+<blockquote>
+<p>不要通过共享内存来沟通，通过沟通来共享内存。<br>
+— <cite>Rob Pike<sup class="footnote-reference"><a href="#1">1</a></sup></cite></p>
+</blockquote>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>上述引言摘自 Rob Pike 在 2015 年 11 月 18 日 Gopherfest 大会上的 <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">演讲</a>。</p>
+</div>
+<h2 id="lian-jie">链接</h2>
+<p>要创建链接，请将链接文本放在方括号中，然后在紧随其后用圆括号括起 URL。</p>
+<p><a href="https://github.com">GitHub</a></p>
+<p>要快速将 URL 或电子邮件地址转换为链接，请将其括在尖括号中。</p>
+<p><a href="https://github.com">https://github.com</a></p>
+<h2 id="tu-pian">图片</h2>
+<p><img src="../../images/markdown-syntax.png" alt="Markdown 指南" /></p>
+<h2 id="biao-ge">表格</h2>
+<p>表格不是核心 Markdown 规范的一部分，但 Zola 开箱即用地支持它们。</p>
+<table><thead><tr><th>名称</th><th>年龄</th></tr></thead><tbody>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Alice</td><td>23</td></tr>
+</tbody></table>
+<h4 id="biao-ge-nei-de-nei-lian-markdown">表格内的内联 Markdown</h4>
+<table><thead><tr><th>斜体</th><th>粗体</th><th>代码</th></tr></thead><tbody>
+<tr><td><em>斜体</em></td><td><strong>粗体</strong></td><td><code>代码</code></td></tr>
+</tbody></table>
+<h2 id="dai-ma-kuai">代码块</h2>
+<h4 id="shi-yong-fan-yin-hao-de-dai-ma-kuai">使用反引号的代码块</h4>
+<pre data-lang="html" style="background-color:#212121;color:#eeffff;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
+</span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">html </span><span style="font-style:italic;color:#ffcb6b;">lang</span><span style="color:#89ddff;">=&quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;&gt;
+</span><span>  </span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">head</span><span style="color:#89ddff;">&gt;
+</span><span>    </span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">meta </span><span style="font-style:italic;color:#ffcb6b;">charset</span><span style="color:#89ddff;">=&quot;</span><span style="color:#c3e88d;">utf-8</span><span style="color:#89ddff;">&quot; /&gt;
+</span><span>    </span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">title</span><span style="color:#89ddff;">&gt;</span><span>Example HTML5 Document</span><span style="color:#89ddff;">&lt;/</span><span style="color:#f07178;">title</span><span style="color:#89ddff;">&gt;
+</span><span>  </span><span style="color:#89ddff;">&lt;/</span><span style="color:#f07178;">head</span><span style="color:#89ddff;">&gt;
+</span><span>  </span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">body</span><span style="color:#89ddff;">&gt;
+</span><span>    </span><span style="color:#89ddff;">&lt;</span><span style="color:#f07178;">p</span><span style="color:#89ddff;">&gt;</span><span>Test</span><span style="color:#89ddff;">&lt;/</span><span style="color:#f07178;">p</span><span style="color:#89ddff;">&gt;
+</span><span>  </span><span style="color:#89ddff;">&lt;/</span><span style="color:#f07178;">body</span><span style="color:#89ddff;">&gt;
+</span><span style="color:#89ddff;">&lt;/</span><span style="color:#f07178;">html</span><span style="color:#89ddff;">&gt;
+</span></code></pre>
+<h4 id="shi-yong-si-ge-kong-ge-suo-jin-de-dai-ma-kuai">使用四个空格缩进的代码块</h4>
+<pre style="background-color:#212121;color:#eeffff;"><code><span>&lt;!doctype html&gt;
+</span><span>&lt;html lang=&quot;en&quot;&gt;
+</span><span>&lt;head&gt;
+</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
+</span><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+</span><span>&lt;/head&gt;
+</span><span>&lt;body&gt;
+</span><span>  &lt;p&gt;Test&lt;/p&gt;
+</span><span>&lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<h2 id="lie-biao-lei-xing">列表类型</h2>
+<h4 id="you-xu-lie-biao">有序列表</h4>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h4 id="wu-xu-lie-biao">无序列表</h4>
+<ul>
+<li>列表项</li>
+<li>另一项</li>
+<li>还有一项</li>
+</ul>
+<h4 id="qian-tao-lie-biao">嵌套列表</h4>
+<ul>
+<li>水果
+<ul>
+<li>苹果</li>
+<li>橙子</li>
+<li>香蕉</li>
+</ul>
+</li>
+<li>奶制品
+<ul>
+<li>牛奶</li>
+<li>奶酪</li>
+</ul>
+</li>
+</ul>
+<h2 id="qi-ta-yuan-su-abbr-sub-sup-kbd-mark">其他元素 — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="图形交换格式">GIF</abbr> 是一种位图图像格式。</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>按下 <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> 以结束会话。</p>
+<p>大多数 <mark>蝾螈</mark> 是夜行动物，捕食昆虫、蠕虫和其他小型生物。</p>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">作者</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/kita/">Kita</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/salif/">萨利夫</a>
+    
+  </div>
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">标签</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/markdown/">markdown</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/css/">css</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/html/">html</a>
+    
+  </div>
+  
+</footer>
+
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  <a
+    class="block-hover-mask flex min-w-[50%] grow items-center rounded-l-md p-6 pr-3 font-semibold no-underline"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/math-typesetting/" accesskey=","
+    ><span class="mr-1.5">&#8249;</span><span>数学排版</span></a>
+  
+  
+</nav>
+
+
+  <!-- Comment -->
+  
+  <!-- Page End inject -->
+  
+</article>
+
+  </main>
+  <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      网站基于 <a
+      class="link" href="https://www.getzola.org/" target="_blank">佐拉</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; 林基塔</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+  
+  <!-- GoatCounter -->
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
+  <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/zh/markdown-syntax/" alt=""></noscript>
+
+  <!-- Body End inject -->
+  
+</body>
+
+</html>

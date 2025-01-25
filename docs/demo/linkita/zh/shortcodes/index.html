@@ -1,0 +1,624 @@
+<!doctype html>
+<html class="not-ready overflow-y-scroll lg:text-base" lang="zh">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola" />
+  <title>简码 | 林基塔</title>
+  <meta property="og:site_name" content="林基塔" />
+  <meta property="og:title" content="简码" />
+  <meta name="description" content="林基塔主题的简码。" />
+  <meta property="og:description" content="林基塔主题的简码。" />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/" />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-01-23T00:00:00+00:00" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/kita/" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/salif/" />
+  <meta property="article:tag" content="markdown" />
+  <meta property="article:tag" content="css" />
+  <meta property="article:tag" content="html" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/shortcodes/" hreflang="ar" />
+  <meta property="og:locale:alternate" content="bg_BG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/shortcodes/" hreflang="bg" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/shortcodes/" hreflang="en" />
+  <meta property="og:locale:alternate" content="eo" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/shortcodes/" hreflang="eo" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/shortcodes/" hreflang="tr" />
+  <meta property="og:locale" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/" hreflang="zh" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/screenshot.png" />
+  <meta property="og:image:alt" content="该网站的截图。" />
+  <meta property="og:image:width" content="1360" />
+  <meta property="og:image:height" content="765" />
+  <meta property="og:image:type" content="image/png" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+  <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/atom.xml" title="林基塔 | Atom" />
+
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=1168eedbd4a25f40781b" />
+  <style>
+    :root {
+      --bg: #f4f4f5;
+      --header: #e4e4e7;
+      color-scheme: light;
+    }
+    :root.dark {
+      --bg: #18181b;
+      --header: #27272a;
+      color-scheme: dark;
+    }/**/
+  </style>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
+
+  <!-- Head inject -->
+  
+</head>
+
+<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
+  
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8">
+        <a title="转到主页" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/" class="text-2xl font-semibold">林基塔</a>
+        <button type="button" title="切换颜色方案" accesskey="$"
+          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
+          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
+            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
+            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
+            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
+            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
+            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
+            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
+            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+        ></button>
+        <button type="button" title="Go to page translation" accesskey=";"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
+          style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
+            viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' \
+            class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
+            d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
+        ></button>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
+      </div>
+      
+      <div title="导航" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+      
+    </div>
+    
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/projects/">项目</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/archive/">归档</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/">标签</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/about/">关于</a>
+        </li>
+      </menu>
+      <!-- Header Nav inject -->
+      
+    </nav>
+    
+  </div>
+</header>
+
+  <!-- Body Start inject -->
+  
+  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
+    max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
+<article>
+  <!-- Page Start inject -->
+  
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">简码</h1>
+    <div class="text-sm antialiased opacity-80"><time
+    datetime="2022-10-20T00:00:00+00:00">2022年10月20日</time> &lpar;<time
+    datetime="2025-01-23T00:00:00+00:00">2025年01月23日</time>&rpar;<span class="mx-1">&middot;</span><time
+    datetime="PT0H3M0S">3 分钟</time><span class="mx-1">&middot;</span><span>Kita</span><span class="mx-1">&middot;</span><span>萨利夫</span>
+</div>
+
+  </header>
+
+  
+
+  <!-- TOC -->
+  
+<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
+      <span class="cursor-pointer">目录</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/#mermaid-header">Mermaid</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/#ti-shi-kuang">提示框</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/#hua-lang">画廊</a>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+
+
+  <!-- Content -->
+  <section><p>林基塔主题提供了多种简码。</p>
+<p>没听说过简码？请参阅 <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola 文档</a> 获取更多信息。</p>
+<h2 id="mermaid-header">Mermaid</h2>
+<p>要在页面中使用 Mermaid，您需要在页面的 frontmatter 中设置 <code>extra.mermaid = true</code>。</p>
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;您的页面标题&quot;
+</span><span>
+</span><span>[extra]
+</span><span>mermaid = true
+</span><span>+++
+</span></code></pre>
+<p>然后您可以使用 <code>mermaid()</code> 简码，例如：</p>
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+</span><span>
+</span><span>graph TD;
+</span><span>A--&gt;B;
+</span><span>A--&gt;C;
+</span><span>B--&gt;D;
+</span><span>C--&gt;D;
+</span><span>
+</span><span>{% end %}
+</span></code></pre>
+<p>这将被渲染为：</p>
+<pre class="mermaid bg-inherit" translate="no">
+  graph TD;
+A--&gt;B;
+A--&gt;C;
+B--&gt;D;
+C--&gt;D;
+</pre>
+<p>此外，您可以在 <code>mermaid()</code> 简码内使用代码块，代码块将被忽略。</p>
+<p>代码块可以防止格式化程序破坏 mermaid 的格式。</p>
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+</span><span>
+</span><span style="color:#4a4a4a;">```</span><span>mermaid
+</span><span>sequenceDiagram
+</span><span>    participant Alice
+</span><span>    participant Bob
+</span><span>    Alice-&gt;&gt;John: Hello John, how are you?
+</span><span>    loop Healthcheck
+</span><span>        John-&gt;&gt;John: Fight against hypochondria
+</span><span>    end
+</span><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+</span><span>    John--&gt;&gt;Alice: Great!
+</span><span>    John-&gt;&gt;Bob: How about you?
+</span><span>    Bob--&gt;&gt;John: Jolly good!
+</span><span style="color:#4a4a4a;">```
+</span><span>
+</span><span>{% end %}
+</span></code></pre>
+<p>这将被渲染为：</p>
+<pre class="mermaid bg-inherit" translate="no">
+  
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br&#x2F;&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+
+</pre>
+<h2 id="ti-shi-kuang">提示框</h2>
+<p><code>admonition()</code> 简码显示一个横幅，帮助您在页面中放置提示。</p>
+<p>您可以像这样使用 <code>admonition()</code> 简码：</p>
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;tip&quot;) %}
+</span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">tip</span><span style="color:#4a4a4a;">`</span><span> 提示框。
+</span><span>{% end %}
+</span></code></pre>
+<p>提示框简码有 12 种不同的类型：</p>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(68, 138, 255, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/note.svg)"
+    >
+      note
+    </div>
+    <span><strong>note</strong></span>
+  </div>
+  <div class="pl-4"><p><code>note</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 176, 255, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/abstract.svg)"
+    >
+      abstract
+    </div>
+    <span><strong>abstract</strong></span>
+  </div>
+  <div class="pl-4"><p><code>abstract</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(83, 211, 230, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/info.svg)"
+    >
+      info
+    </div>
+    <span><strong>info</strong></span>
+  </div>
+  <div class="pl-4"><p><code>info</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 191, 165, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/tip.svg)"
+    >
+      tip
+    </div>
+    <span><strong>tip</strong></span>
+  </div>
+  <div class="pl-4"><p><code>tip</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 200, 83, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/success.svg)"
+    >
+      success
+    </div>
+    <span><strong>success</strong></span>
+  </div>
+  <div class="pl-4"><p><code>success</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(100, 221, 23, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/question.svg)"
+    >
+      question
+    </div>
+    <span><strong>question</strong></span>
+  </div>
+  <div class="pl-4"><p><code>question</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(255, 145, 0, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/warning.svg)"
+    >
+      warning
+    </div>
+    <span><strong>warning</strong></span>
+  </div>
+  <div class="pl-4"><p><code>warning</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(255, 82, 82, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/failure.svg)"
+    >
+      failure
+    </div>
+    <span><strong>failure</strong></span>
+  </div>
+  <div class="pl-4"><p><code>failure</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(0, 176, 255, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/abstract.svg)"
+    >
+      abstract
+    </div>
+    <span><strong>danger</strong></span>
+  </div>
+  <div class="pl-4"><p><code>danger</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(255, 23, 68, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/bug.svg)"
+    >
+      bug
+    </div>
+    <span><strong>bug</strong></span>
+  </div>
+  <div class="pl-4"><p><code>bug</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(101, 31, 255, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/example.svg)"
+    >
+      example
+    </div>
+    <span><strong>example</strong></span>
+  </div>
+  <div class="pl-4"><p><code>example</code> 提示框。</p>
+</div>
+</div>
+
+
+<div
+  class="my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]"
+  style="--admonition-bg: rgba(159, 159, 159, 0.1);"
+>
+  <div class="flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1">
+    <div
+      class="mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert"
+      style="--url: url(./icons/quote.svg)"
+    >
+      quote
+    </div>
+    <span><strong>quote</strong></span>
+  </div>
+  <div class="pl-4"><p><code>quote</code> 提示框。</p>
+</div>
+</div>
+<h2 id="hua-lang">画廊</h2>
+<p><code>gallery()</code> 简码是一个非常简单的纯 HTML 可点击图片画廊，用于显示页面资源中的所有图像。</p>
+<p>它来自 <a href="https://www.getzola.org/documentation/content/image-processing/">Zola 文档</a></p>
+<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+</span></code></pre>
+<div class="not-prose flex flex-wrap gap-2">
+
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/01-zola.png" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/01-zola.7c3a26eed1c7ab5f.png" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/02-zola-manet.png" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/02-zola-manet.e4241a911597aca7.png" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/03-zola-cezanne.png" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/03-zola-cezanne.6a107e2be8013406.png" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/04-gutenberg.jpg" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/04-gutenberg.faa753e9bf9c7908.jpg" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/05-example.jpg" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/05-example.ae15f30d897ab593.jpg" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/06-example.jpg" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/06-example.c154d01e3ae79960.jpg" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/07-example.jpg" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/07-example.0bae5e2aea7a32b4.jpg" alt="画廊的演示图片" />
+  </a>
+  <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/08-example.jpg" target="_blank">
+    <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/08-example.5c0108fc0d117d1c.jpg" alt="画廊的演示图片" />
+  </a>
+</div>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+  
+<footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">作者</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/kita/">Kita</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/authors/salif/">萨利夫</a>
+    
+  </div>
+  
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">标签</span>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/markdown/">markdown</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/css/">css</a>
+    
+    <a
+      class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/tags/html/">html</a>
+    
+  </div>
+  
+</footer>
+
+
+  <!-- Post Nav -->
+  
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  
+  
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/math-typesetting/" accesskey="."
+    ><span>数学排版</span><span class="ml-1.5">&#8250;</span></a>
+  
+</nav>
+
+
+  <!-- Comment -->
+  
+  <!-- Page End inject -->
+  
+</article>
+
+  </main>
+  <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      网站基于 <a
+      class="link" href="https://www.getzola.org/" target="_blank">佐拉</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; 林基塔</a>
+  </div>
+  <!-- Footer inject -->
+  
+</footer>
+
+  
+  <!-- Mermaid -->
+    <script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+  function initMermaid(isDark) {
+    mermaid.initialize({
+      theme: isDark ? "dark" : "default",
+      themeVariables: {
+        darkMode: isDark
+      },
+      startOnLoad: false,
+    });
+    mermaid.run();
+  };
+
+  // Add data-mermaid-code attribute on all mermaid block.
+  document.querySelectorAll(".mermaid").forEach((element) => {
+    element.setAttribute("data-mermaid-code", element.innerHTML);
+  });
+
+  initMermaid(document.documentElement.classList.contains("dark"));
+
+  // Re-render mermaid when theme changed.
+  document.body.addEventListener("set-theme", (e) => {
+    document.querySelectorAll(".mermaid").forEach((element) => {
+      const mermaidCode = element.getAttribute("data-mermaid-code");
+      if (mermaidCode != null) {
+        element.removeAttribute("data-processed");
+        element.innerHTML = mermaidCode;
+      }
+    });
+    initMermaid(e.detail === "dark");
+  });
+</script>
+
+  <!-- GoatCounter -->
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "//gc.zgo.at/count.js",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
+  <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/zh/shortcodes/" alt=""></noscript>
+
+  <!-- Body End inject -->
+  
+</body>
+
+</html>

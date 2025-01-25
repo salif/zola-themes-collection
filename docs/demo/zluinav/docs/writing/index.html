@@ -72,15 +72,16 @@
 Variables are defined by <code>%variable_name%</code>. For example, <code>This page is named %title% and was published on %date%, and was last updated on %updated%.</code></p>
 <p>You can render the variable name itself by prefixing with <code>/</code>. For example, <code>%/title%</code> will be rendered as <code>%title%</code> without replacing its value.</p>
 <p>Variable rendering is done by <a href="https://salif.github.io/zola-themes-collection/demo/zluinav/docs/macros/content/">content macro</a>.</p>
-<p>Here is a list of supported variables:</p>
-<ul>
-<li><code>title</code>: title of the page.</li>
-<li><code>description</code>: description, if available.</li>
-<li><code>link</code>: the permalink to the page.</li>
-<li><code>date</code>: the published date of the page, if available.</li>
-<li><code>updated</code>: the updated date of the page, if available.</li>
-</ul>
 <p>Returned variable will be empty if the variable is not defined or failed to retrieve, so make sure you know it is defined!</p>
+<h2 id="supported-variables"><a class="zola-anchor" href="#supported-variables">Supported variables</a></h2>
+<ul>
+<li><code>title</code>: Title of the page.</li>
+<li><code>description</code>: Description, if available.</li>
+<li><code>link</code>: The permalink to the page.</li>
+<li><code>date</code>: The published date of the page, if available.</li>
+<li><code>updated</code>: The updated date of the page, if available.</li>
+<li><code>linktitle</code>: The friendly title of the page. Falls back to title if not set.</li>
+</ul>
 </main>
 <div id="zlfooter">
 <footer>

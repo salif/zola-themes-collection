@@ -72,8 +72,11 @@
 <ul>
 <li><code>summary</code>(string) required: The summary of the detail.</li>
 <li><code>open</code>(bool) optional: Should details tag be expanded by default?</li>
+<li><code>name</code>(string) optional: The name, useful to prevent multiple details from being opened at the same time.</li>
+<li><code>class</code>(string) optional: The class attribute.</li>
+<li><code>title</code>(string) optional: The title attribute.</li>
 </ul>
-<p>Example:</p>
+<h2 id="example"><a class="zola-anchor" href="#example">Example</a></h2>
 <pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{% details(summary=&quot;Test me&quot;) %}
 # Test
 - item1
@@ -87,6 +90,37 @@
 <ul>
 <li>item1</li>
 <li>item2</li>
+</ul>
+</details>
+<h2 id="name-attribute-example"><a class="zola-anchor" href="#name-attribute-example">Name attribute example</a></h2>
+<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{% details(name=&quot;tm&quot;, summary=&quot;Test me&quot;) %}
+# Test
+- item1
+- item2
+{% end %}
+{% details(name=&quot;tm&quot;, summary=&quot;Test me2&quot;) %}
+# Test2
+- item1
+- item2
+- item3
+{% end %}
+</code></pre>
+<p>Output:</p>
+<details name="tm">
+<summary>Test me</summary>
+<h1 id="test-1"><a class="zola-anchor" href="#test-1">Test</a></h1>
+<ul>
+<li>item1</li>
+<li>item2</li>
+</ul>
+</details>
+<details name="tm">
+<summary>Test me2</summary>
+<h1 id="test2"><a class="zola-anchor" href="#test2">Test2</a></h1>
+<ul>
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
 </ul>
 </details></main>
 <div id="zlfooter">

@@ -21,6 +21,7 @@
   <meta property="article:tag" content="markdown" />
   <meta property="article:tag" content="css" />
   <meta property="article:tag" content="html" />
+  <meta property="og:locale" content="ar_EG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" hreflang="ar" />
   <meta property="og:locale:alternate" content="bg_BG" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/markdown-syntax/" hreflang="bg" />
@@ -28,12 +29,17 @@
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/markdown-syntax/" hreflang="en" />
   <meta property="og:locale:alternate" content="eo" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/" hreflang="eo" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/markdown-syntax/" hreflang="tr" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" hreflang="zh" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png" />
   <meta property="og:image:alt" content="شعار ماركداون" />
   <meta property="og:image:width" content="1600" />
   <meta property="og:image:height" content="800" />
   <meta property="og:image:type" content="image/png" />
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+  <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/atom.xml" title="لينكيتا | Atom" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=1168eedbd4a25f40781b" />
@@ -64,9 +70,9 @@
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
-        <a title="Go to home page" accesskey="!"
+        <a title="الذهاب إلى الصفحة الرئيسية" accesskey="!"
           href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/" class="text-2xl font-semibold">لينكيتا</a>
-        <button type="button" title="Switch color scheme" accesskey="$"
+        <button type="button" title="تبديل مخطط الألوان" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
           class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
           style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
@@ -88,7 +94,7 @@
         <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
       
-      <div title="Menu" role="button" accesskey="+" tabindex="0"
+      <div title="الخيارات" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
         onclick="window.linkita.toggleHeaderMenu();"
         onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
@@ -102,22 +108,22 @@
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/projects/">مشاريعي</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/projects/">مشاريع</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/archive/">أرشيف</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/archive/">الارشيفات</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/">العلامات</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/tags/">وسوم</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/about/">ْعَنِّي</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/about/">عن</a>
         </li>
       </menu>
       <!-- Header Nav inject -->
@@ -138,9 +144,9 @@
   <header class="mb-16">
     <h1 class="!my-0 pb-2.5">دليل تنسيق ماركداون</h1>
     <div class="text-sm antialiased opacity-80"><time
-    datetime="2022-10-20T00:00:00+00:00">2022-10-20</time> &lpar;<time
-    datetime="2025-01-05T00:00:00+00:00">2025-01-05</time>&rpar;<span class="mx-1">&middot;</span><time
-    datetime="PT0H3M0S">3 min</time><span class="mx-1">&middot;</span><span>Kita</span><span class="mx-1">&middot;</span><span>Salif</span>
+    datetime="2022-10-20T00:00:00+00:00">20 أكت, 2022</time> &lpar;<time
+    datetime="2025-01-05T00:00:00+00:00">05 ينا, 2025</time>&rpar;<span class="mx-1">&middot;</span><time
+    datetime="PT0H3M0S">3 دقائق</time><span class="mx-1">&middot;</span><span>Kita</span><span class="mx-1">&middot;</span><span>ساليف</span>
 </div>
 
   </header>
@@ -162,7 +168,7 @@
 <div class="block-bg mb-12 rounded-lg p-2 text-lg">
   <details>
     <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
-      <span class="cursor-pointer">Table of Contents</span>
+      <span class="cursor-pointer">فهرس المحتوى</span>
     </summary>
     <div class="px-2">
       <ul>
@@ -320,7 +326,7 @@
 <footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
   
   <div class="mb-2 flex flex-wrap">
-    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">Authors</span>
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">الكتّاب</span>
     
     <a
       class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
@@ -328,12 +334,12 @@
     
     <a
       class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
-      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/">Salif</a>
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/">ساليف</a>
     
   </div>
   
   <div class="mb-2 flex flex-wrap">
-    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">Tags</span>
+    <span class="block-bg mb-1.5 mr-1.5 rounded-lg px-5 py-1.5">وسوم</span>
     
     <a
       class="block-bg block-hover mb-1.5 mr-1.5 rounded-lg px-5 py-1.5 no-underline"
@@ -378,10 +384,10 @@
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
-      Powered by <a
-      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+      مُشَغل بواسطة <a
+      class="link" href="https://www.getzola.org/" target="_blank">زولا</a>
     </span>
-    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; لينكيتا</a>
   </div>
   <!-- Footer inject -->
   
