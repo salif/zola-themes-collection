@@ -40,6 +40,7 @@
 - [zola-rahix](https://github.com/Rahix/blog-theme): 88 commits
 - [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits
 - [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits
+- [citrus](https://github.com/tatumroaquin/citrus): 66 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

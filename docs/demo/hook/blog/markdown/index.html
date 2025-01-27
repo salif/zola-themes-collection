@@ -6,7 +6,7 @@
     <meta name="description" content="This page demonstrates how Markdown looks in the Hook theme for Zola">
     <title>Hook | Markdown example</title>
     
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/hook/style.css?h=ba4e332b4e56aa7e4f4a">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/hook/style.css?h=307bea4050388d9e24f6">
     
     
     
@@ -56,14 +56,14 @@
     <div class="space"></div>
     <p>This post is a markdown example.</p>
 <p>Here is <a href="http://example.com">a link</a>.</p>
-<p>Some <em>italic text</em> and <strong>bold text</strong> and <del>strikethrough text</del> and <code>inline code</code>. <sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>Some <em>italic text</em> and <strong>bold text</strong> and <del>strikethrough text</del> and <code>inline code</code>. <sup class="footnote-reference" id="fr-1-1"><a href="#fn-1">[1]</a></sup></p>
 <pre data-lang="rust" style="background-color:#31333d;color:#ffffffc4;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#707180;">// Here is a code block
 </span><span>
 </span><span style="color:#a3cbe3;">fn </span><span style="color:#a2ba43;">main</span><span>() {
 </span><span>    println!(</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span>Hello world!</span><span style="font-weight:bold;color:#dbbb3d;">&quot;</span><span>);
 </span><span>}
 </span></code></pre>
-<p>Unordered list: <sup class="footnote-reference"><a href="#2">2</a></sup></p>
+<p>Unordered list: <sup class="footnote-reference" id="fr-2-1"><a href="#fn-2">[2]</a></sup></p>
 <ul>
 <li>An unordered,</li>
 <li>bulleted list</li>
@@ -92,13 +92,15 @@
 <tr><td>Let me add</td><td>another row so</td><td>it's easier to see.</td></tr>
 </tbody></table>
 <div class="doublespace"></div>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<hr><ol class="footnotes-list">
+<li id="fn-1">
 <p>A footnote. Footnotes can be used for things that could have explanation or extra context, but
-for which the explanation is not relevant or otherwise desirable to have inline.</p>
-</div>
-<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
-<p>Another footnote.</p>
-</div>
+for which the explanation is not relevant or otherwise desirable to have inline. <a href="#fr-1-1">↩</a></p>
+</li>
+<li id="fn-2">
+<p>Another footnote. <a href="#fr-2-1">↩</a></p>
+</li>
+</ol>
 
 </main>
 
