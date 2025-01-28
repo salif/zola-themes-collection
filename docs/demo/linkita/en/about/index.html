@@ -37,7 +37,7 @@
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/en/atom.xml" title="Linkita | Atom" />
 
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=1168eedbd4a25f40781b" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=6307f37f300cb97b2b5a" />
   <style>
     :root {
       --bg: #f4f4f5;
@@ -53,8 +53,8 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.js?h=7cba93307b53d1fe2c28"></script>
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.js?h=ef0b7f00b9cb8ab1248e"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=2cfe69bc508021cbd3c5"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.min.js?h=698547b4b081d012c661"></script>
 
   <!-- Head inject -->
   
@@ -234,7 +234,6 @@ Set the ones you need.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># comment = true
 </span><span style="font-style:italic;color:#4a4a4a;"># math = true
 </span><span style="font-style:italic;color:#4a4a4a;"># mermaid = true
-</span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
 </span><span style="color:#89ddff;">[extra.cover]
 </span><span style="font-style:italic;color:#4a4a4a;"># image = &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># alt = &quot;&quot;
@@ -259,14 +258,19 @@ Set the ones you need.</p>
 </span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span>---
 </span></code></pre>
-<h3 id="open-graph-frontmatter-variables">Open Graph frontmatter variables</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.open_graph]
+<h3 id="extra-frontmatter-variables">Extra frontmatter variables</h3>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra]
+</span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
+</span><span style="color:#89ddff;">[extra.cover]
 </span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">cover_width </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># width =
 </span><span style="font-style:italic;color:#4a4a4a;"># Height of the cover image in pixels.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">cover_height </span><span style="color:#89ddff;">=
+</span><span style="font-style:italic;color:#4a4a4a;"># height =
+</span></code></pre>
+<h3 id="open-graph-frontmatter-variables">Open Graph frontmatter variables</h3>
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.open_graph]
 </span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: datetime; no default value;)
 </span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
@@ -468,6 +472,9 @@ All variables are optional.</p>
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
 </span><span style="color:#f07178;">disable_javascript </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="color:#f07178;">use_cdn </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># You can reorder the strings, remove them, or replace them.
 </span><span style="font-style:italic;color:#4a4a4a;">#  For example, you can replace `site_title` with `home_button`.
@@ -694,8 +701,6 @@ fallback open graph image for all pages.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">endpoint </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://MYCODE.goatcounter.com/count</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">src </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">//gc.zgo.at/count.js</span><span style="color:#89ddff;">&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;"># noscript_prefix = &quot;&quot;
 </span></code></pre>
 <p>To enable <a href="https://www.goatcounter.com/help/pixel">pixel</a>, set <code>noscript_prefix</code> to an empty string.
@@ -751,6 +756,9 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 <p>If your blog uses Linkita and is open source, feel free to create a pull request to add it to this list.</p>
 
 </section>
+  <!-- Post Nav -->
+  
+
 </article>
 
   </main>
@@ -772,7 +780,7 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
   
   <!-- GoatCounter -->
   <script>window.linkita.initGoatCounterAnalytics({
-    src: "//gc.zgo.at/count.js",
+    src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=1a7235ddf71175cb7d2a",
     endpoint: "https://sgi.goatcounter.com/count"
   });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/en/about/" alt=""></noscript>
