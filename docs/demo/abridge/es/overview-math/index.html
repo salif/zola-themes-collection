@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="https://salif.github.io/zola-themes-collection/demo/abridge/js/theme.min.js" integrity="sha384-pb++s6uBRKaQv+iAXpgA/H3IlpLZdO14tTwuCI7uXmz4aaZdByoCcM+6BhynMq/1"></script>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/abridge.css?h=d6d42eaae519f2454d3a" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="base" content="https://salif.github.io/zola-themes-collection/demo/abridge/" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/abridge/manifest.min.json" />
+  <link rel="mask-icon" href="https://salif.github.io/zola-themes-collection/demo/abridge/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="icon" type="image/svg+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://salif.github.io/zola-themes-collection/demo/abridge/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-16x16.png" />
+  <link rel="preload" as="style" class="preStyle" href="https://salif.github.io/zola-themes-collection/demo/abridge/katex.min.css" integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs" />
+  <link rel="alternate" type="application/atom+xml" title="Abridge Atom Feed" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Notación matemática | Abridge</title>
+  <meta name="author" content="Jake G" />
+  <meta name="copyright" content="Abridge" />
+  <meta name="description" content="Artículo de ejemplo que muestra la visualización de notaciones matemáticas, posible gracias a la biblioteca KaTeX." />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/" />
+  <meta name="keywords" content="Math, Matematics, Notation, KaTeX, Mathematical Notation, Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta name="google-site-verification" content="Your Google Site verification code." />
+  <meta name="msvalidate.01" content="Your Bing Site verification code." />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/" />
+  <meta name="twitter:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/" />
+  <meta property="og:description" content="Artículo de ejemplo que muestra la visualización de notaciones matemáticas, posible gracias a la biblioteca KaTeX." />
+  <meta name="twitter:description" content="Artículo de ejemplo que muestra la visualización de notaciones matemáticas, posible gracias a la biblioteca KaTeX." />
+  <meta property="og:title" content="Notación matemática | Abridge" />
+  <meta name="twitter:title" content="Notación matemática | Abridge" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:site_name" content="Abridge" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="2022-01-01" />
+  <meta name="twitter:site" content="@your-user-name" />
+  <meta name="twitter:creator" content="@your-user-name" />
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/abridge.min.js?h=e0f9a881a665c86cce9c" integrity="sha384-QF67y7RnPkuDrJNQqn3/7nYxqxWkW/qHI7zN0WTES1aXbf+TotoByRBb835fUE6U"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.stemmer.support.min.js" integrity="sha384-f0MKdC/9ZSGTpDiuWusC0SbLXNCBp6NgzDZpjR/4UdHXAQBqvTEKyinnsa1wQ7oA"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.es.min.js" integrity="sha384-13X5VesLVgdM43kFd8gfrw5Jp3OnK7RJNwZl+n1MMtQychTYcXNHLxxDAfVJOSfE"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/katexbundle.min.js?h=56b2761149aaa1d81994" integrity="sha384-UR0Li9YQWtf8BWhMEkmcKrcYY/Km3tAPQ8+768VhubM14b1z/WljMs8woKF34r2E"></script>
+  <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><big><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/" title="Abridge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f90" viewBox="0 0 96 96" width="28" height="28"><path stroke-width="14" d="M14 99 46 7h4l32 92"/><path stroke-width="9" d="M-3 82c43-26 59-26 102 0"/><path stroke-linecap="round" stroke-width="1.5" d="M94 72v7m-5-9.8v7m-5-9.8v7.1M79 64v7M63 57.7v7m-5-8.2v7m-5-7.8v7m-5-7.2v7m-5-6.7v7m-5-6.3v7m-5-5.8v7M17 64v7m-5-4.6v7m-5-4.2v7M2 72v7"/></svg>bridge</a></big></div>
+      <div>
+
+        <div>
+          <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/archive/"> Publicaciones </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/"> Etiquetas </a></li>
+            <li><div class="dropdown"><i class="svgs world" type="reset"></i>
+                <div class="dropdown-content">
+                <span>Español</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Français</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-math/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-math/">English</a></div>
+            </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
+        </div>
+
+        <div>
+          <div>
+            <form autocomplete=off class="js" name="goSearch" id="searchbox">
+              <div class="searchd">
+                <input id="searchinput" type="text" placeholder="Buscar" title="Search" />
+                <button type="submit" title="Search" class="svgs svgm search"></button>
+              </div>
+              <div class="results"><div id="suggestions"></div></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a></h1>
+
+      <span class="s95"> Jake G <span class="rpad"></span> mayo 05, 2021 <span class="rpad"></span>Actualizado: enero 01, 2022 <span class="rpad"></span> #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/shortcodes/">Shortcodes</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/mathematics/">Mathematics</a> </span>
+
+    
+        <div class="block">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features (Series)</a><br>
+            <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br> 
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+      </div>
+    </div>
+
+
+<p>Puede utilizar <a rel="noopener" target="_blank" href="https://katex.org">KaTeX</a> para representar notaciones matemáticas.</p>
+<p>Puede activar el soporte $\KaTeX$ globalmente, por sección o por página.</p>
+<span id="continue-reading"></span><h2 id="habilitar-globalmente">Habilitar globalmente</h2>
+<p>Para habilitar el soporte $\KaTeX$ globalmente, añada <code>math = true</code> bajo <code>[extra]</code> del <code>config.toml</code>
+en la raíz de su sitio. También puede añadir <code>math_auto_render = true</code>
+y cada sección y página de su sitio cargará la <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">extensión</a> KaTeX <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">autorender</a>.</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">extra</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">math</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">math_auto_render</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">false</span>
+</span></code></pre>
+<h2 id="base-por-seccion">Base por sección</h2>
+<p>Para habilitar el soporte $\KaTeX$ en una sección en particular, añada <code>math = true</code> bajo <code>[extra]</code> en el <code>[SECTION_NAME]/_index.md</code>.
+Ahora el shortcode katex será renderizado, también puede añadir <code>math_auto_render = true</code>
+y la sección de su sitio cargará la <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">extensión</a> KaTeX <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">autorender</a>.</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-invalid z-illegal z-toml">+++</span>
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">extra</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">math</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-invalid z-illegal z-toml">+++</span>
+</span></code></pre>
+<h2 id="por-pagina">Por página</h2>
+<p>Para habilitar el soporte $\KaTeX$ en una página en particular, añada <code>math = true</code> bajo <code>[extra]</code> en el frontmatter
+de la página. Ahora el shortcode katex será renderizado, también puede añadir <code>math_auto_render = true</code>
+y la página de su sitio cargará la <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">extensión</a> KaTeX <a rel="noopener" target="_blank" href="https://katex.org/docs/autorender.html">autorender</a>.</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-invalid z-illegal z-toml">+++</span>
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">extra</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">math</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">math_auto_render</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-invalid z-illegal z-toml">+++</span>
+</span></code></pre>
+<p>Es una buena práctica habilitar el soporte $\KaTeX$ por página, ya que esto sólo cargará los archivos requeridos en esa página en particular, sin afectar la velocidad de carga de otras páginas. Si su sitio no es muy matemático, por favor NO habilite esta característica globalmente o por sección.</p>
+<h2 id="uso">Uso</h2>
+<p>Envuelva cualquier sintaxis $\KaTeX$ <a rel="noopener" target="_blank" href="https://katex.org/docs/supported.html">válida</a> con <code>$...$</code> para Matemáticas en línea y <code>$$...$$</code> para Matemáticas en bloque.</p>
+<h3 id="matematicas-en-linea">Matemáticas en línea</h3>
+<p>Esta es la ecuación más bonita que he visto nunca:</p>
+<h3 id="uso-1">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-keyword z-operator z-arithmetic z-rust">%</span> <span class="z-support z-function z-rust">katex</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>block<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-constant z-language z-rust">false</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-arithmetic z-rust">%</span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span> e<span class="z-keyword z-operator z-bitwise z-rust">^</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>i\pi</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span><span class="z-keyword z-operator z-arithmetic z-rust">+</span><span class="z-constant z-numeric z-integer z-decimal z-rust">1</span><span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-constant z-numeric z-integer z-decimal z-rust">0</span> <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-keyword z-operator z-arithmetic z-rust">%</span> end <span class="z-keyword z-operator z-arithmetic z-rust">%</span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-script z-begin z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-script z-html">script</span></span><span class="z-meta z-tag z-script z-begin z-html"> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"><span class="z-punctuation z-separator z-key-value z-html">=</span></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>math/tex<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>e^{i\pi}+1=0<span class="z-meta z-tag z-script z-end z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-script z-html">script</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">
+</span></code></pre>
+<script type="math/tex">e^{i\pi}+1=0</script>
+<h3 id="matematicas-en-bloque">Matemáticas en bloque</h3>
+<p>Un poco de Matemáticas en modo visualización es suficiente:</p>
+<h3 id="uso-2">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-keyword z-operator z-arithmetic z-rust">%</span> <span class="z-support z-function z-rust">katex</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>block<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-constant z-language z-rust">true</span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> <span class="z-keyword z-operator z-arithmetic z-rust">%</span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span> \int_0<span class="z-keyword z-operator z-bitwise z-rust">^</span><span class="z-constant z-numeric z-integer z-decimal z-rust">1</span> x<span class="z-keyword z-operator z-bitwise z-rust">^</span><span class="z-constant z-numeric z-integer z-decimal z-rust">2</span> dx <span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-keyword z-operator z-arithmetic z-rust">%</span> end <span class="z-keyword z-operator z-arithmetic z-rust">%</span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-1">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-script z-begin z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-script z-html">script</span></span><span class="z-meta z-tag z-script z-begin z-html"> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"><span class="z-punctuation z-separator z-key-value z-html">=</span></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"></span></span><span class="z-meta z-tag z-script z-begin z-html"><span class="z-meta z-attribute-with-value z-html"><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>math/tex;mode=display<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>\int_0^1 x^2 dx<span class="z-meta z-tag z-script z-end z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-script z-html">script</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">
+</span></code></pre>
+<script type="math/tex;mode=display">\int_0^1 x^2 dx</script>
+<h3 id="auto-render-inline">Auto Render Inline</h3>
+<pre data-lang="tex" class="language-tex z-code"><code class="language-tex" data-lang="tex"><span class="z-text z-tex z-latex"><span class="z-meta z-environment z-math z-inline z-dollar z-latex"><span class="z-string z-other z-math z-latex"><span class="z-punctuation z-definition z-string z-begin z-latex">$</span></span> <span class="z-variable z-other z-math z-tex">e</span><span class="z-keyword z-operator z-math z-tex">^</span><span class="z-meta z-group z-brace z-latex"><span class="z-punctuation z-definition z-group z-brace z-begin z-latex">{</span><span class="z-variable z-other z-math z-tex">i</span><span class="z-keyword z-other z-greek z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>pi</span><span class="z-punctuation z-definition z-group z-brace z-end z-latex">}</span></span><span class="z-keyword z-operator z-math z-tex">+</span><span class="z-constant z-numeric z-math z-tex">1</span><span class="z-keyword z-operator z-math z-tex">=</span><span class="z-constant z-numeric z-math z-tex">0</span> <span class="z-string z-other z-math z-latex"><span class="z-punctuation z-definition z-string z-end z-latex">$</span></span></span>
+</span></code></pre>
+<p>$ e^{i\pi}+1=0 $</p>
+<h3 id="auto-render-bloque">Auto Render Bloque</h3>
+<pre data-lang="tex" class="language-tex z-code"><code class="language-tex" data-lang="tex"><span class="z-text z-tex z-latex"><span class="z-meta z-environment z-math z-block z-dollar z-latex"><span class="z-string z-other z-math z-latex"><span class="z-punctuation z-definition z-string z-begin z-latex">$$</span></span>
+</span></span><span class="z-text z-tex z-latex"><span class="z-meta z-environment z-math z-block z-dollar z-latex"><span class="z-variable z-other z-math z-tex">f</span><span class="z-constant z-character z-parenthesis z-tex">(</span><span class="z-variable z-other z-math z-tex">x</span><span class="z-constant z-character z-parenthesis z-tex">)</span> <span class="z-keyword z-operator z-math z-tex">=</span> <span class="z-support z-function z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>int</span><span class="z-keyword z-operator z-math z-tex">_</span><span class="z-meta z-group z-brace z-latex"><span class="z-punctuation z-definition z-group z-brace z-begin z-latex">{</span><span class="z-keyword z-operator z-math z-tex">-</span><span class="z-support z-function z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>infty</span><span class="z-punctuation z-definition z-group z-brace z-end z-latex">}</span></span><span class="z-keyword z-operator z-math z-tex">^</span><span class="z-support z-function z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>infty</span><span class="z-support z-function z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>hat</span> <span class="z-variable z-other z-math z-tex">f</span><span class="z-constant z-character z-parenthesis z-tex">(</span><span class="z-keyword z-other z-greek z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>xi</span><span class="z-constant z-character z-parenthesis z-tex">)</span><span class="z-constant z-character z-escape z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>,</span><span class="z-variable z-other z-math z-tex">e</span><span class="z-keyword z-operator z-math z-tex">^</span><span class="z-meta z-group z-brace z-latex"><span class="z-punctuation z-definition z-group z-brace z-begin z-latex">{</span><span class="z-constant z-numeric z-math z-tex">2</span> <span class="z-keyword z-other z-greek z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>pi</span> <span class="z-variable z-other z-math z-tex">i</span> <span class="z-keyword z-other z-greek z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>xi</span> <span class="z-variable z-other z-math z-tex">x</span><span class="z-punctuation z-definition z-group z-brace z-end z-latex">}</span></span><span class="z-constant z-character z-escape z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>,</span><span class="z-variable z-other z-math z-tex">d</span><span class="z-keyword z-other z-greek z-math z-tex"><span class="z-punctuation z-definition z-backslash z-tex">\</span>xi</span>
+</span></span><span class="z-text z-tex z-latex"><span class="z-meta z-environment z-math z-block z-dollar z-latex"><span class="z-string z-other z-math z-latex"><span class="z-punctuation z-definition z-string z-end z-latex">$$</span></span></span>
+</span></code></pre>
+<p>$$
+f(x) = \int_{-\infty}^\infty\hat f(\xi),e^{2 \pi i \xi x},d\xi
+$$</p>
+
+      <nav>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">&#8249; Incrustar Streamable</a>
+        </div>
+        <div>
+        </div>
+      </nav>
+    </article>
+
+    <div class="sblock">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Series</a><br>
+
+          
+          
+      <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+    
+
+          
+
+          
+
+          
+
+          
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+          
+            <details>
+              <summary>Más...</summary>
+            </details>
+            <div class="hidden_li">
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            </div>
+        
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+
+        
+      </div>
+      <div class="blockdiv sticky">
+        <a class="b s150" href="#">Índice</a>
+        <div>
+          <a href="#habilitar-globalmente">Habilitar globalmente</a>
+        </div>
+        <div>
+          <a href="#base-por-seccion">Base por sección</a>
+        </div>
+        <div>
+          <a href="#por-pagina">Por página</a>
+        </div>
+        <div>
+          <a href="#uso">Uso</a>
+        </div>
+        <div class="hpad">
+          <a href="#matematicas-en-linea"><small>- Matemáticas en línea</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-1"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida"><small>- Salida</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#matematicas-en-bloque"><small>- Matemáticas en bloque</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-2"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-1"><small>- Salida</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#auto-render-inline"><small>- Auto Render Inline</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#auto-render-bloque"><small>- Auto Render Bloque</small></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="c">
+      <nav class="tpad"><div><a type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" target="_blank" title="Abridge Atom Feed"><i type="Button" class="svg rss" title="Abridge Atom Feed"></i></a><a class="js m-protected" href="#bmFtZUBleGFtcGxlLmNvbQ==" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a><a href="https://mastodon.example.com/@username" target="_blank" title="Mastodon" rel="me"><i type="Button" class="svg mastodon" title="Mastodon"></i></a><a href="https://matrix.example.com/" target="_blank" title="Element"><i type="Button" class="svg element" title="Element"></i></a><a href="https://github.com/your-user-name/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a><a href="https://www.instagram.com/your-user-name/" target="_blank" title="Instagram"><i type="Button" class="svg instagram" title="Instagram"></i></a><a href="https://www.youtube.com/channel&#x2F;your-channel-id" target="_blank" title="YouTube"><i type="Button" class="svg youtube" title="YouTube"></i></a><a href="https://www.twitch.tv/your-user-name/" target="_blank" title="Twitch"><i type="Button" class="svg twitch" title="Twitch"></i></a><a href="https://www.ko-fi.com/your-user-name/" target="_blank" title="Support me on Ko-fi"><i type="Button" class="svg kofi" title="Support me on Ko-fi"></i></a></div></nav>
+      <nav class="vpad">
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/about/"> Sobre mí </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/contact/"> Contacto </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/privacy/"> Privacidad </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/sitemap.xml" target="_blank"> Mapa del sitio </a>
+      </nav>
+      <p class="s80"> &copy; <span id="year">2025</span> Abridge</p>
+      <p class="s80">Impulsado por <a href="https://www.getzola.org/" target="_blank">Zola</a> y <a href="https://github.com/jieiku/abridge/" target="_blank">Abridge</a></p>
+    </div>
+  </footer>
+</body>
+</html>

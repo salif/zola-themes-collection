@@ -42,6 +42,7 @@
 - [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits
 - [citrus](https://github.com/tatumroaquin/citrus): 66 commits
 - [datum](https://github.com/davidmreed/datum): 16 commits
+- [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

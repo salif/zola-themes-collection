@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="https://salif.github.io/zola-themes-collection/demo/abridge/js/theme.min.js" integrity="sha384-pb++s6uBRKaQv+iAXpgA/H3IlpLZdO14tTwuCI7uXmz4aaZdByoCcM+6BhynMq/1"></script>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/abridge.css?h=d6d42eaae519f2454d3a" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="base" content="https://salif.github.io/zola-themes-collection/demo/abridge/" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/abridge/manifest.min.json" />
+  <link rel="mask-icon" href="https://salif.github.io/zola-themes-collection/demo/abridge/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="icon" type="image/svg+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://salif.github.io/zola-themes-collection/demo/abridge/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-16x16.png" />
+  <link rel="alternate" type="application/atom+xml" title="Abridge Atom Feed" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Markdown y estilo | Abridge</title>
+  <meta name="author" content="Jake G" />
+  <meta name="copyright" content="Abridge" />
+  <meta name="description" content="Artículo de ejemplo que muestra la sintaxis básica de Markdown y el formato de los elementos HTML." />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/" />
+  <meta name="keywords" content="Markdown, Style, Syntax, Syntax Highlighting, Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta name="google-site-verification" content="Your Google Site verification code." />
+  <meta name="msvalidate.01" content="Your Bing Site verification code." />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/" />
+  <meta name="twitter:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/" />
+  <meta property="og:description" content="Artículo de ejemplo que muestra la sintaxis básica de Markdown y el formato de los elementos HTML." />
+  <meta name="twitter:description" content="Artículo de ejemplo que muestra la sintaxis básica de Markdown y el formato de los elementos HTML." />
+  <meta property="og:title" content="Markdown y estilo | Abridge" />
+  <meta name="twitter:title" content="Markdown y estilo | Abridge" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:site_name" content="Abridge" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="2022-05-15" />
+  <meta name="twitter:site" content="@your-user-name" />
+  <meta name="twitter:creator" content="@your-user-name" />
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/abridge.min.js?h=e0f9a881a665c86cce9c" integrity="sha384-QF67y7RnPkuDrJNQqn3/7nYxqxWkW/qHI7zN0WTES1aXbf+TotoByRBb835fUE6U"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.stemmer.support.min.js" integrity="sha384-f0MKdC/9ZSGTpDiuWusC0SbLXNCBp6NgzDZpjR/4UdHXAQBqvTEKyinnsa1wQ7oA"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.es.min.js" integrity="sha384-13X5VesLVgdM43kFd8gfrw5Jp3OnK7RJNwZl+n1MMtQychTYcXNHLxxDAfVJOSfE"></script>
+  <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><big><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/" title="Abridge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f90" viewBox="0 0 96 96" width="28" height="28"><path stroke-width="14" d="M14 99 46 7h4l32 92"/><path stroke-width="9" d="M-3 82c43-26 59-26 102 0"/><path stroke-linecap="round" stroke-width="1.5" d="M94 72v7m-5-9.8v7m-5-9.8v7.1M79 64v7M63 57.7v7m-5-8.2v7m-5-7.8v7m-5-7.2v7m-5-6.7v7m-5-6.3v7m-5-5.8v7M17 64v7m-5-4.6v7m-5-4.2v7M2 72v7"/></svg>bridge</a></big></div>
+      <div>
+
+        <div>
+          <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/archive/"> Publicaciones </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/"> Etiquetas </a></li>
+            <li><div class="dropdown"><i class="svgs world" type="reset"></i>
+                <div class="dropdown-content">
+                <span>Español</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-markdown-and-style/">English</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-markdown-and-style/">Français</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-markdown-and-style/">Português</a></div>
+            </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
+        </div>
+
+        <div>
+          <div>
+            <form autocomplete=off class="js" name="goSearch" id="searchbox">
+              <div class="searchd">
+                <input id="searchinput" type="text" placeholder="Buscar" title="Search" />
+                <button type="submit" title="Search" class="svgs svgm search"></button>
+              </div>
+              <div class="results"><div id="suggestions"></div></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a></h1>
+
+      <span class="s95"> Jake G <span class="rpad"></span> mayo 15, 2022 <span class="rpad"></span> #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/markdown/">Markdown</a> </span>
+
+    
+        <div class="block">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features (Series)</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+            <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br> 
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+      </div>
+    </div>
+
+
+<p>Este artículo ofrece una muestra de la sintaxis básica de Markdown que puede utilizarse en los archivos de contenido de Zola, también muestra si los elementos HTML básicos se decoran con CSS en un tema de Zola.</p>
+<span id="continue-reading"></span><h1 id="encabezados">Encabezados</h1>
+<p>Los siguientes elementos HTML <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> representan seis niveles de encabezados de sección. <code>&lt;h1&gt;</code> es el nivel de sección más alto, mientras que <code>&lt;h6&gt;</code> es el más bajo.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h1 id="parrafo">Párrafo</h1>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>¿Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h1 id="blockquotes">Blockquotes</h1>
+<p>El elemento blockquote representa contenido citado de otra fuente, opcionalmente con una cita que debe estar dentro de un elemento <code>footer</code> o <code>cite</code>, y opcionalmente con cambios en línea como anotaciones y abreviaturas.</p>
+<h2 id="blockquote-sin-atribucion">Blockquote sin atribución</h2>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Tenga en cuenta</strong> que puede utilizar <em>la sintaxis Markdown</em> dentro de un blockquote.</p>
+</blockquote>
+<h2 id="blockquote-atribucion">Blockquote atribución</h2>
+<blockquote>
+<p>No comuniques compartiendo memoria, comparte memoria comunicando.<br>
+— <cite>Rob Pike[^1]</cite></p>
+</blockquote>
+<blockquote>
+<p>Todos los hombres desean saber por naturaleza.<br>
+― <cite>Aristotle[^2]</cite></p>
+</blockquote>
+<blockquote>
+<p>El poder surge como respuesta a una necesidad, no a un deseo.<br>
+— <em>Goku</em></p>
+</blockquote>
+<blockquote>
+<p>Adapta lo que es útil, rechaza lo que es inútil y añade lo que es específicamente tuyo.<br>
+— <em>Bruce Lee</em></p>
+</blockquote>
+<h1 id="tablas">Tablas</h1>
+<p>Las tablas no forman parte de las especificaciones básicas de Markdown, pero Zola las soporta desde el principio.</p>
+<table><thead><tr><th>Nombre</th><th>Edad</th></tr></thead><tbody>
+<tr><td>Alice</td><td>23</td></tr>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Cody</td><td>33</td></tr>
+<tr><td>John</td><td>59</td></tr>
+<tr><td>Kerry</td><td>23</td></tr>
+</tbody></table>
+<h2 id="tabla-inline-markdown">Tabla Inline Markdown</h2>
+<table><thead><tr><th>Cursiva</th><th>Negrita</th><th>Código</th><th>Tachado</th></tr></thead><tbody>
+<tr><td><em>cursiva</em></td><td><strong>negrita</strong></td><td><code>code</code></td><td><del>tachado</del></td></tr>
+</tbody></table>
+<h2 id="tabla-grande-dentro-de-una-figura">Tabla grande dentro de una figura</h2>
+<p>Rodee las tablas muy grandes con <code>&lt;figure&gt;&lt;/figure&gt;</code> para que puedan desplazarse horizontalmente.</p>
+<figure>
+<table><thead><tr><th><strong>Fabricante</strong></th><th>Volkswagen</th><th>Toyota</th><th>Ford</th><th>Honda</th><th>Chevrolet</th><th>BMW</th><th>Hyundai</th><th>Audi</th><th>Nissan</th><th>Kia</th><th>Mercedes</th><th>Tesla</th><th>Mitsubishi</th><th>Suzuki</th><th>Volvo</th><th>Subaru</th><th>Mazda</th><th>Jaguar</th><th>Buick</th><th>Lexus</th><th>GMC</th><th>Porsche</th><th>Cadillac</th></tr></thead><tbody>
+<tr><td><strong>Ingresos $B</strong></td><td>$254</td><td>$249</td><td>$127</td><td>$124</td><td>$123</td><td>$113</td><td>$88</td><td>$83</td><td>$74</td><td>$61</td><td>$55</td><td>$54</td><td>$38</td><td>$31</td><td>$30</td><td>$28</td><td>$27</td><td>$22</td><td>$21</td><td>$19</td><td>$17</td><td>$16</td><td>$12</td></tr>
+</tbody></table>
+</figure>
+<p><em>valores de ingresos encontrados en el motor de búsqueda y no verificados, sólo para fines de demostración de la tabla de desplazamiento de figuras.</em></p>
+<h1 id="texto-plegable">Texto plegable</h1>
+<details>
+    <summary>Title 1</summary>
+    <p>IT'S A SECRET TO EVERYBODY.</p>
+</details>
+<details>
+    <summary>Title 2</summary>
+    <p>Stay awhile, and listen!</p>
+</details>
+<h1 id="bloques-de-codigo">Bloques de código</h1>
+<p>Bloques de código.. ❤️ con resaltado automático de sintaxis ✨‍</p>
+<p>Consulte las opciones en <a rel="noopener" target="_blank" href="https://www.getzola.org/documentation/content/syntax-highlighting/">la documentación</a>.</p>
+<h2 id="bloque-de-codigo-con-backticks">Bloque de código con backticks</h2>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic">&lt;!doctype html&gt;
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">lang</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>es<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">meta</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">charset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>utf-8<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Ejemplo de documento HTML5<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Prueba<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<h2 id="numeros-de-linea-destacados">Números de línea, destacados</h2>
+<pre data-linenos data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><table><tbody><tr><td>1</td><td><span class="z-text z-html z-basic">&lt;!doctype html&gt;
+</span></td></tr><tr><td>2</td><td><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">lang</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>es<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></td></tr><tr><td>3</td><td><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></td></tr><tr><td>4</td><td><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">meta</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">charset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>utf-8<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></td></tr><tr><td><mark>5</mark></td><td><mark><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Ejemplo de documento HTML5<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">title</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></mark></td></tr><tr><td>6</td><td><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">head</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></td></tr><tr><td><mark>7</mark></td><td><mark><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></mark></td></tr><tr><td><mark>8</mark></td><td><mark><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Prueba<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></mark></td></tr><tr><td><mark>9</mark></td><td><mark><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">body</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></mark></td></tr><tr><td>10</td><td><span class="z-text z-html z-basic"><span class="z-meta z-tag z-structure z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-structure z-any z-html">html</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></td></tr></tbody></table></code></pre>
+<h2 id="bloque-de-codigo-en-linea">Bloque de código en línea</h2>
+<p>Si queremos, también podemos <code>specify inline code</code> que es útil para <code>the small stuff</code>.</p>
+<h1 id="tipos-de-lista">Tipos de lista</h1>
+<h2 id="lista-ordenada">Lista ordenada</h2>
+<ol>
+<li>Primer elemento</li>
+<li>Segundo elemento</li>
+<li>Tercer elemento</li>
+</ol>
+<h2 id="lista-desordenada">Lista desordenada</h2>
+<ul>
+<li>Elemento de lista</li>
+<li>Otro elemento</li>
+<li>Y otro elemento</li>
+</ul>
+<h2 id="lista-anidada">Lista anidada</h2>
+<ul>
+<li>Fruta
+<ul>
+<li>Manzana</li>
+<li>Naranja</li>
+<li>Plátano</li>
+</ul>
+</li>
+<li>Lácteos
+<ul>
+<li>Leche</li>
+<li>Queso</li>
+</ul>
+</li>
+</ul>
+<h1 id="otros-elementos-abbr-sub-sup-kbd-mark-link">Otros elementos - abbr, sub, sup, kbd, mark, link</h1>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> es un formato de imagen de mapa de bits.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Pulse <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Supr</kbd></kbd> para finalizar la sesión.</p>
+<p>La mayoría de las <mark>salamandras</mark> son nocturnas y cazan insectos, gusanos y otras criaturas pequeñas.</p>
+<hr />
+<!-- Note: There must be a blank line between every two lines of the footnote definition.  -->
+<p>[^1]: La cita anterior es un extracto de la <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=PAAkCSZUG1c">charla</a> de Rob Pike durante el Gopherfest, el 18 de noviembre de 2015.</p>
+<p>[^2]: La cita es la primera frase de la <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Metaphysics_(Aristotle)">Metafísica</a> de Aristóteles.</p>
+<h2 id="navegadores">Navegadores</h2>
+<p>Menú principal del sitio se crea mediante la anidación de la nav bajo una etiqueta de encabezado. Consulte la parte superior de este sitio para ver un ejemplo. La navegación es adaptativa, reduzca el ancho de la página para verla en acción.</p>
+<h2 id="formularios">Formularios</h2>
+<form name="contact" method="POST" >
+    <p><label for="name">Name</label>
+        <input type="text" placeholder="Name" id="name" required data-validation-required-message="Please enter your name." />
+    </p>
+    <p><label for="email">Email Address</label>
+        <input type="email" placeholder="name@example.com" id="email" required data-validation-required-message="Please enter your email address." />
+    </p>
+    <p><label for="message">Message</label>
+        <textarea rows="5" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+    </p>
+    <div id="success"></div>
+    <p><button type="submit" id="sendMessageButton">Send</button></p>
+    <br>
+    <!-- Select -->
+    <label for="fruit">Fruit</label>
+    <select id="fruit" required>
+        <option value="" selected>Select a fruit…</option>
+        <option>Banana</option>
+        <option>Watermelon</option>
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Mango</option>
+    </select>
+    <!-- Radios -->
+    <fieldset>
+        <legend>Size</legend>
+        <label for="small">
+        <input type="radio" id="small" name="size" value="small" checked>
+        Small
+        </label>
+        <label for="medium">
+        <input type="radio" id="medium" name="size" value="medium">
+        Medium
+        </label>
+        <label for="large">
+        <input type="radio" id="large" name="size" value="large">
+        Large
+        </label>
+        <label for="extralarge">
+        <input type="radio" id="extralarge" name="size" value="extralarge" disabled>
+        Extra Large
+        </label>
+    </fieldset>
+    <!-- Checkboxes -->
+    <fieldset>
+        <label for="terms">
+        <input type="checkbox" id="terms" name="terms">
+        I agree to the Terms and Conditions
+        </label>
+        <label for="terms_sharing">
+        <input type="checkbox" id="terms_sharing" name="terms_sharing" disabled checked>
+        I agree to share my information with partners
+        </label>
+    </fieldset>
+    <!-- Switches -->
+    <fieldset>
+        <label for="switch">
+        <input type="checkbox" id="switch" name="switch" role="switch">
+        Publish on my profile
+        </label>
+        <label for="switch_disabled">
+        <input type="checkbox" id="switch_disabled" name="switch_disabled" disabled checked>
+        Publish on my profile my accomplishments
+        </label>
+    </fieldset>
+    <br>
+    <!-- Search -->
+    <p><input type="search" id="search" name="search" placeholder="Search" title="Search"></p>
+    <!-- File browser -->
+    <label for="file">File browser
+    <input type="file" id="file" name="file">
+    </label>
+    <!-- Range slider -->
+    <label for="range">Range slider
+    <input type="range" min="0" max="100" value="50" id="range" name="range">
+    </label>
+    <!-- Date -->
+    <label for="date">Date
+    <input type="date" id="date" name="date">
+    </label>
+    <!-- Time -->
+    <label for="time">Time
+    <input type="time" id="time" name="time">
+    </label>
+    <!-- Color -->
+    <label for="color">Color
+    <input type="color" id="color" name="color" value="#0eaaaa">
+    </label>
+</form>
+
+      <nav>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">&#8249; Tema Code Blocks</a>
+        </div>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/"> Códigos cortos de imagen &#8250;</a>
+        </div>
+      </nav>
+    </article>
+
+    <div class="sblock">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Series</a><br>
+
+          
+          
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+
+          
+            <details>
+              <summary>Más...</summary>
+            </details>
+            <div class="hidden_li">
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+            </div>
+
+          
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+
+          
+            
+      <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+    
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+          
+        
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+
+        
+      </div>
+      <div class="blockdiv sticky">
+        <a class="b s150" href="#">Índice</a>
+        <div>
+          <a href="#encabezados">Encabezados</a>
+        </div>
+        <div>
+          <a href="#h1">H1</a>
+        </div>
+        <div class="hpad">
+          <a href="#h2"><small>- H2</small></a>
+        </div>
+        <div>
+          <a href="#parrafo">Párrafo</a>
+        </div>
+        <div>
+          <a href="#blockquotes">Blockquotes</a>
+        </div>
+        <div class="hpad">
+          <a href="#blockquote-sin-atribucion"><small>- Blockquote sin atribución</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#blockquote-atribucion"><small>- Blockquote atribución</small></a>
+        </div>
+        <div>
+          <a href="#tablas">Tablas</a>
+        </div>
+        <div class="hpad">
+          <a href="#tabla-inline-markdown"><small>- Tabla Inline Markdown</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#tabla-grande-dentro-de-una-figura"><small>- Tabla grande dentro de una figura</small></a>
+        </div>
+        <div>
+          <a href="#texto-plegable">Texto plegable</a>
+        </div>
+        <div>
+          <a href="#bloques-de-codigo">Bloques de código</a>
+        </div>
+        <div class="hpad">
+          <a href="#bloque-de-codigo-con-backticks"><small>- Bloque de código con backticks</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#numeros-de-linea-destacados"><small>- Números de línea, destacados</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#bloque-de-codigo-en-linea"><small>- Bloque de código en línea</small></a>
+        </div>
+        <div>
+          <a href="#tipos-de-lista">Tipos de lista</a>
+        </div>
+        <div class="hpad">
+          <a href="#lista-ordenada"><small>- Lista ordenada</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#lista-desordenada"><small>- Lista desordenada</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#lista-anidada"><small>- Lista anidada</small></a>
+        </div>
+        <div>
+          <a href="#otros-elementos-abbr-sub-sup-kbd-mark-link">Otros elementos - abbr, sub, sup, kbd, mark, link</a>
+        </div>
+        <div class="hpad">
+          <a href="#navegadores"><small>- Navegadores</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#formularios"><small>- Formularios</small></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="c">
+      <nav class="tpad"><div><a type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" target="_blank" title="Abridge Atom Feed"><i type="Button" class="svg rss" title="Abridge Atom Feed"></i></a><a class="js m-protected" href="#bmFtZUBleGFtcGxlLmNvbQ==" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a><a href="https://mastodon.example.com/@username" target="_blank" title="Mastodon" rel="me"><i type="Button" class="svg mastodon" title="Mastodon"></i></a><a href="https://matrix.example.com/" target="_blank" title="Element"><i type="Button" class="svg element" title="Element"></i></a><a href="https://github.com/your-user-name/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a><a href="https://www.instagram.com/your-user-name/" target="_blank" title="Instagram"><i type="Button" class="svg instagram" title="Instagram"></i></a><a href="https://www.youtube.com/channel&#x2F;your-channel-id" target="_blank" title="YouTube"><i type="Button" class="svg youtube" title="YouTube"></i></a><a href="https://www.twitch.tv/your-user-name/" target="_blank" title="Twitch"><i type="Button" class="svg twitch" title="Twitch"></i></a><a href="https://www.ko-fi.com/your-user-name/" target="_blank" title="Support me on Ko-fi"><i type="Button" class="svg kofi" title="Support me on Ko-fi"></i></a></div></nav>
+      <nav class="vpad">
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/about/"> Sobre mí </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/contact/"> Contacto </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/privacy/"> Privacidad </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/sitemap.xml" target="_blank"> Mapa del sitio </a>
+      </nav>
+      <p class="s80"> &copy; <span id="year">2025</span> Abridge</p>
+      <p class="s80">Impulsado por <a href="https://www.getzola.org/" target="_blank">Zola</a> y <a href="https://github.com/jieiku/abridge/" target="_blank">Abridge</a></p>
+    </div>
+  </footer><span class="topout">
+<span class="topleft"> </span><a href="#" class="top" title="Back to Top"><i class="svgs svgh angu"></i></a>
+</span>
+</body>
+</html>

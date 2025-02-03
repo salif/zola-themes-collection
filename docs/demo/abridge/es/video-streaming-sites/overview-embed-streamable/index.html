@@ -62,7 +62,7 @@
           <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/archive/"> Publicaciones </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/"> Etiquetas </a></li>
             <li><div class="dropdown"><i class="svgs world" type="reset"></i>
                 <div class="dropdown-content">
-                <span>Español</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/video-streaming-sites/overview-embed-streamable/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Français</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/video-streaming-sites/overview-embed-streamable/">English</a></div>
+                <span>Español</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/video-streaming-sites/overview-embed-streamable/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/video-streaming-sites/overview-embed-streamable/">English</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Français</a></div>
             </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
         </div>
 
@@ -91,8 +91,17 @@
         <div class="block">
       <div class="blockdiv">
         <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features (Series)</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
             <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br> 
           
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
       </div>
     </div>
 
@@ -103,9 +112,9 @@
 <pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">streamable</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>id<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>92ok4<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
 </span></code></pre>
 <ul>
-<li><code>id</code>: el id del vídeo (obligatorio)</li>
-<li><code>class</code>: una clase para añadir al &lt;div&gt; que rodea al iframe (opcional)</li>
-<li><code>title</code>: establecer el título alt para el iframe (opcional, por defecto "Streamable")</li>
+<li><code>id</code> - el id del vídeo (obligatorio)</li>
+<li><code>class</code> - una clase para añadir al &lt;div&gt; que rodea al iframe (opcional)</li>
+<li><code>title</code> - establecer el título alt para el iframe (opcional, por defecto "Streamable")</li>
 </ul>
 <h3 id="salida">Salida</h3>
 <pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">div</span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">yv</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
@@ -117,14 +126,54 @@
     <iframe src="https://www.streamable.com/e/92ok4" title="Streamable" class="yvi" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
+      <nav>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">&#8249; Incrustar Vimeo</a>
+        </div>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/"> Notación matemática &#8250;</a>
+        </div>
+      </nav>
     </article>
 
     <div class="sblock">
       <div class="blockdiv">
         <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Series</a><br>
+
+          
+          
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+
+          
+
+          
+
+          
+
+          
             
       <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
     
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+          
+            <details>
+              <summary>Más...</summary>
+            </details>
+            <div class="hidden_li">
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            </div>
+        
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+
+        
       </div>
       <div class="blockdiv sticky">
         <a class="b s150" href="#">Índice</a>

@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script src="https://salif.github.io/zola-themes-collection/demo/abridge/js/theme.min.js" integrity="sha384-pb++s6uBRKaQv+iAXpgA/H3IlpLZdO14tTwuCI7uXmz4aaZdByoCcM+6BhynMq/1"></script>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/abridge.css?h=d6d42eaae519f2454d3a" />
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="base" content="https://salif.github.io/zola-themes-collection/demo/abridge/" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#333333" />
+  <meta name="msapplication-TileColor" content="#333333" />
+  <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/abridge/manifest.min.json" />
+  <link rel="mask-icon" href="https://salif.github.io/zola-themes-collection/demo/abridge/safari-pinned-tab.svg" color="#ff9900" />
+  <link rel="icon" type="image/svg+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://salif.github.io/zola-themes-collection/demo/abridge/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/abridge/favicon-16x16.png" />
+  <link rel="alternate" type="application/atom+xml" title="Abridge Atom Feed" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <title>Contenido enriquecido | Abridge</title>
+  <meta name="author" content="Jake G" />
+  <meta name="copyright" content="Abridge" />
+  <meta name="description" content="Una breve descripción de Shortcodes personalizados para Zola que implementan elementos html modernos: video, imagen, gif, audio." />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/" />
+  <meta name="keywords" content="Images, Videos, Audio, Gif, Rich Content, Shortcodes, Abridge, Abridge.css, Zola, Theme, Zola Theme, getzola, Semantic Html, Fast, lightweight" />
+  <meta name="google-site-verification" content="Your Google Site verification code." />
+  <meta name="msvalidate.01" content="Your Bing Site verification code." />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/" />
+  <meta name="twitter:url" content="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/" />
+  <meta property="og:description" content="Una breve descripción de Shortcodes personalizados para Zola que implementan elementos html modernos: video, imagen, gif, audio." />
+  <meta name="twitter:description" content="Una breve descripción de Shortcodes personalizados para Zola que implementan elementos html modernos: video, imagen, gif, audio." />
+  <meta property="og:title" content="Contenido enriquecido | Abridge" />
+  <meta name="twitter:title" content="Contenido enriquecido | Abridge" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/abridge/banner.png" />
+  <meta property="og:site_name" content="Abridge" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:updated_time" content="2021-05-15" />
+  <meta name="twitter:site" content="@your-user-name" />
+  <meta name="twitter:creator" content="@your-user-name" />
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/abridge.min.js?h=e0f9a881a665c86cce9c" integrity="sha384-QF67y7RnPkuDrJNQqn3/7nYxqxWkW/qHI7zN0WTES1aXbf+TotoByRBb835fUE6U"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.stemmer.support.min.js" integrity="sha384-f0MKdC/9ZSGTpDiuWusC0SbLXNCBp6NgzDZpjR/4UdHXAQBqvTEKyinnsa1wQ7oA"></script>
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/lunr.es.min.js" integrity="sha384-13X5VesLVgdM43kFd8gfrw5Jp3OnK7RJNwZl+n1MMtQychTYcXNHLxxDAfVJOSfE"></script>
+  <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/nojs.css" /></noscript>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><big><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/" title="Abridge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f90" viewBox="0 0 96 96" width="28" height="28"><path stroke-width="14" d="M14 99 46 7h4l32 92"/><path stroke-width="9" d="M-3 82c43-26 59-26 102 0"/><path stroke-linecap="round" stroke-width="1.5" d="M94 72v7m-5-9.8v7m-5-9.8v7.1M79 64v7M63 57.7v7m-5-8.2v7m-5-7.8v7m-5-7.2v7m-5-6.7v7m-5-6.3v7m-5-5.8v7M17 64v7m-5-4.6v7m-5-4.2v7M2 72v7"/></svg>bridge</a></big></div>
+      <div>
+
+        <div>
+          <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/archive/"> Publicaciones </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/"> Etiquetas </a></li>
+            <li><div class="dropdown"><i class="svgs world" type="reset"></i>
+                <div class="dropdown-content">
+                <span>Español</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-rich-content/">English</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-rich-content/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Français</a></div>
+            </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
+        </div>
+
+        <div>
+          <div>
+            <form autocomplete=off class="js" name="goSearch" id="searchbox">
+              <div class="searchd">
+                <input id="searchinput" type="text" placeholder="Buscar" title="Search" />
+                <button type="submit" title="Search" class="svgs svgm search"></button>
+              </div>
+              <div class="results"><div id="suggestions"></div></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h1><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a></h1>
+
+      <span class="s95"> Jake G <span class="rpad"></span> mayo 15, 2021 <span class="rpad"></span> #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/video/">Video</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/audio/">Audio</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/images/">Images</a>  #<a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/shortcodes/">Shortcodes</a> </span>
+
+    
+        <div class="block">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Features (Series)</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+            <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br> 
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+      </div>
+    </div>
+
+
+<p>Se incluyen varios shortcodes personalizados para aumentar CommonMark. <code>video</code> los shortcodes <code>image</code>, <code>gif</code> y <code>audio</code> se crearon para ayudarle a aprovechar los elementos HTML modernos en sus escritos.</p>
+<span id="continue-reading"></span><h2 id="video">Vídeo</h2>
+<ul>
+<li><code>sources</code> es una matriz de rutas de archivos de vídeo. (obligatorio)</li>
+<li><code>class</code> establece una clase para el vídeo.</li>
+<li><code>caption</code> establece el texto del pie de foto debajo del vídeo.</li>
+<li><code>w</code> define la anchura del vídeo.</li>
+<li><code>h</code> define la altura del vídeo.</li>
+<li><code>autoplay</code> si está activado, el vídeo se reproduce automáticamente al cargarse.</li>
+<li><code>loop</code> si está activado, reproduce el vídeo en bucle.</li>
+<li><code>muted</code> cuando está activado, silencia el audio inicialmente.</li>
+<li><code>playsinline</code> si está configurado, reproduce el vídeo incrustado en lugar de a pantalla completa en navegadores móviles.</li>
+</ul>
+<p><em>Las fuentes pueden ser la misma ruta, la ruta relativa o la ruta raíz, como el <a rel="noopener" target="_blank" href="https://abridge.pages.dev/overview-images/#img-shortcode">shortcode img</a></em></p>
+<p><strong>Clases opcionales:</strong></p>
+<ul>
+<li><code>ci</code> se puede utilizar para centrar la imagen.</li>
+<li><code>fr</code> se puede utilizar para flotar la imagen a la derecha.</li>
+<li><code>fl</code> se puede utilizar para flotar la imagen a la izquierda.</li>
+<li><code>b1</code> se puede utilizar para añadir un borde de 1px.</li>
+</ul>
+<h3 id="uso">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">video</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">controls</span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  Your browser doesn&#39;t support the video tag and/or the video formats in use here – sorry!
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<video controls>
+  <source src="over9000_av1.mp4" type="video/mp4" />
+  <source src="over9000_vp9.webm" type="video/webm" />
+  Your browser doesn't support the video tag and/or the video formats in use here – sorry!
+</video><h3 id="uso-1">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">video</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span> muted<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>true<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span> class<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>ci b1<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span> caption<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>¡Son más de 9000!<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-1">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">fi</span> <span class="z-meta z-class-name z-html">ci</span> <span class="z-meta z-class-name z-html">b1</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">controls</span> </span><span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">ci</span> <span class="z-meta z-class-name z-html">b1</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">muted</span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  Your browser doesn&#39;t support the video tag and/or the video formats in use here – sorry!
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">figcaption</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>¡Son más de 9000!<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">figcaption</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<figure class="fi ci b1"><video controls class="ci b1" muted>
+  <source src="over9000_av1.mp4" type="video/mp4" />
+  <source src="over9000_vp9.webm" type="video/webm" />
+  Your browser doesn't support the video tag and/or the video formats in use here – sorry!
+</video><figcaption>It&#x27;s Over 9000!!</figcaption></figure><h2 id="imagen">Imagen</h2>
+<p>El shortcode <code>image</code> devuelve una etiqueta <code>&lt;picture&gt;</code> con múltiples fuentes.</p>
+<p>Cada cadena en la matriz <code>sources</code> debe ser una ruta a un archivo de imagen de un tipo diferente (<code>avif</code>, <code>webp</code>, <code>png</code>, <code>jpg</code>, etc).
+La última imagen en la matriz <code>sources</code> se utiliza para crear una etiqueta <code>&lt;img&gt;</code> para que el navegador recurra a ella si los otros formatos aún no son compatibles.</p>
+<ul>
+<li><code>sources</code> es una matriz de rutas de archivos de imagen. (obligatorio)</li>
+<li><code>class</code> establece una clase para la imagen.</li>
+<li><code>caption</code> establece el texto del pie de foto debajo de la imagen.</li>
+<li><code>w</code> establece el ancho de la imagen.</li>
+<li><code>h</code> establece la altura de la imagen.</li>
+</ul>
+<p><em>Las fuentes pueden ser la misma ruta, la ruta relativa o la ruta raíz, como el <a rel="noopener" target="_blank" href="https://abridge.pages.dev/overview-images/#img-shortcode">shortcode img</a></em></p>
+<p><strong>Clases opcionales:</strong></p>
+<ul>
+<li><code>ci</code> se puede utilizar para centrar la imagen.</li>
+<li><code>fr</code> se puede utilizar para flotar la imagen a la derecha.</li>
+<li><code>fl</code> se puede utilizar para flotar la imagen a la izquierda.</li>
+<li><code>b1</code> se puede utilizar para añadir un borde de 1px.</li>
+</ul>
+<h3 id="uso-2">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">image</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000-960.avif<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000-640.avif<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000-400.avif<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000-640.webp<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span> w<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-constant z-numeric z-integer z-decimal z-rust">640</span> h<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-constant z-numeric z-integer z-decimal z-rust">480</span> alt<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>¡ES MÁS DE 9000!<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-2">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">picture</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">srcset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000-960.avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>image/avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">srcset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000-640.avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>image/avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">srcset</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000-400.avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>image/avif<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">img</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000-640.webp<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">alt</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>¡ES MÁS DE 9000!<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">width</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>640<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">height</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>480<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">loading</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>lazy<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">picture</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<picture>
+  <source srcset="over9000-960.avif" type="image/avif" />
+  <source srcset="over9000-640.avif" type="image/avif" />
+  <source srcset="over9000-400.avif" type="image/avif" />
+  <img src="over9000-640.webp" alt="ITS OVER 9000!" width="640" height="480" loading="lazy" />
+</picture><h2 id="gif">GIF</h2>
+<p>El shortcode <code>gif</code> es exactamente igual que el <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/#video">shortcode video</a>.
+La única diferencia es que automáticamente tiene las propiedades adicionales: <code>autoplay</code>, <code>loop</code>, <code>muted</code>, <code>playsinline</code>.</p>
+<p>El uso de la etiqueta <code>&lt;video&gt;</code> en lugar de gifs permite reducir el tamaño de los archivos,
+lo cual es especialmente importante en regiones donde Internet es más lento o
+menos fiable.</p>
+<h3 id="utilizacion">Utilización</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">gif</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-3">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">controls</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">autoplay</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">loop</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">muted</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">playsinline</span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_av1.mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/mp4<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000_vp9.webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>video/webm<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  Your browser doesn&#39;t support the video tag and/or the video formats in use here – sorry!
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">video</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<video controls autoplay loop muted playsinline>
+  <source src="over9000_av1.mp4" type="video/mp4" />
+  <source src="over9000_vp9.webm" type="video/webm" />
+  Your browser doesn't support the video tag and/or the video formats in use here – sorry!
+</video><h2 id="audio">Audio</h2>
+<p>El shortcode <code>audio</code> toma una matriz <code>sources</code> de cadenas y devuelve una etiqueta
+<code>&lt;audio&gt;</code>. Cada cadena de la matriz <code>sources</code> debe ser una ruta a un archivo de audio
+de un tipo diferente (<code>ogg</code>, <code>mp3</code>, <code>flac</code>, <code>wav</code>, etc).
+El navegador reproducirá el primer tipo que admita, por lo que colocarlos en orden de menor a mayor tamaño utilizará el menor ancho de banda si ese es su objetivo.</p>
+<ul>
+<li><code>sources</code> es un array de rutas de archivos. (obligatorio)</li>
+<li><code>class</code> establece una clase para el audio.</li>
+<li><code>caption</code> establece el texto del título debajo del audio.</li>
+<li><code>autoplay</code> cuando se establece, reproduce automáticamente el audio al cargar.</li>
+<li><code>loop</code> cuando se establece, reproduce el audio en bucle.</li>
+<li><code>muted</code> cuando se establece, establece el audio silenciado inicialmente.</li>
+</ul>
+<p><em>Las fuentes pueden ser la misma ruta, la ruta relativa o la ruta raíz, como el <a rel="noopener" target="_blank" href="https://abridge.pages.dev/overview-images/#img-shortcode">shortcode img</a></em></p>
+<p><strong>Clases opcionales:</strong></p>
+<ul>
+<li><code>ci</code> se puede utilizar para centrar la imagen.</li>
+<li><code>fr</code> se puede utilizar para flotar la imagen a la derecha.</li>
+<li><code>fl</code> se puede utilizar para flotar la imagen a la izquierda.</li>
+<li><code>b1</code> se puede utilizar para añadir un borde de 1px.</li>
+</ul>
+<h3 id="uso-3">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">audio</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.ogg<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.mp3<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.flac<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.wav<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-4">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">audio</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">controls</span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.ogg<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/ogg<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.mp3<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/mp3<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.flac<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/flac<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.wav<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/wav<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  Your browser doesn&#39;t support the audio tag and/or the audio formats in use here – sorry!
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">audio</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<audio controls>
+  <source src="over9000.ogg" type="audio/ogg" />
+  <source src="over9000.mp3" type="audio/mp3" />
+  Your browser doesn't support the audio tag and/or the audio formats in use here – sorry!
+</audio><h3 id="uso-4">Uso</h3>
+<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">audio</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>sources<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">[</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.ogg<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.mp3<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.flac<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-separator z-rust">,</span> <span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>over9000.wav<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span><span class="z-punctuation z-section z-group z-end z-rust">]</span></span> class<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>ci b1<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span> caption<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>¡Son más de 9000!!<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
+</span></code></pre>
+<h3 id="salida-5">Salida</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">fi</span> <span class="z-meta z-class-name z-html">ci</span> <span class="z-meta z-class-name z-html">b1</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">audio</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">controls</span> </span><span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">ci</span> <span class="z-meta z-class-name z-html">b1</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.ogg<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/ogg<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.mp3<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/mp3<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.flac<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/flac<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">source</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>over9000.wav<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">type</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>audio/wav<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-punctuation z-definition z-tag z-end z-html">/&gt;</span></span>
+</span><span class="z-text z-html z-basic">  Your browser doesn&#39;t support the audio tag and/or the audio formats in use here – sorry!
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">audio</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">figcaption</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>¡Son más de 9000!<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">figcaption</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<figure class="fi ci b1"><audio controls class="ci b1">
+  <source src="over9000.ogg" type="audio/ogg" />
+  <source src="over9000.mp3" type="audio/mp3" />
+  Your browser doesn't support the audio tag and/or the audio formats in use here – sorry!
+</audio><figcaption>It&#x27;s Over 9000!!</figcaption></figure>
+      <nav>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">&#8249; Códigos cortos de imagen</a>
+        </div>
+        <div>
+          <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/"> Código corto Showdata &#8250;</a>
+        </div>
+      </nav>
+    </article>
+
+    <div class="sblock">
+      <div class="blockdiv">
+        <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/tags/features/">Series</a><br>
+
+          
+          
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-math/">Notación matemática</a><br>
+
+          
+            <details>
+              <summary>Más...</summary>
+            </details>
+            <div class="hidden_li">
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-streamable/">Incrustar Streamable</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-vimeo/">Incrustar Vimeo</a><br>
+            </div>
+
+          
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/video-streaming-sites/overview-embed-youtube/">Incrustar Youtube</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-showdata/">Código corto Showdata</a><br>
+
+          
+            
+      <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-rich-content/">Contenido enriquecido</a><br>
+    
+
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-images/">Códigos cortos de imagen</a><br>
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Markdown y estilo</a><br>
+          
+            <details>
+              <summary>Más...</summary>
+            </details>
+            <div class="hidden_li">
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-code-blocks/">Tema Code Blocks</a><br>
+            </div>
+        
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Abridge Tema Zola</a><br>
+
+        
+      </div>
+      <div class="blockdiv sticky">
+        <a class="b s150" href="#">Índice</a>
+        <div>
+          <a href="#video">Vídeo</a>
+        </div>
+        <div class="hpad">
+          <a href="#uso"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida"><small>- Salida</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-1"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-1"><small>- Salida</small></a>
+        </div>
+        <div>
+          <a href="#imagen">Imagen</a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-2"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-2"><small>- Salida</small></a>
+        </div>
+        <div>
+          <a href="#gif">GIF</a>
+        </div>
+        <div class="hpad">
+          <a href="#utilizacion"><small>- Utilización</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-3"><small>- Salida</small></a>
+        </div>
+        <div>
+          <a href="#audio">Audio</a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-3"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-4"><small>- Salida</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#uso-4"><small>- Uso</small></a>
+        </div>
+        <div class="hpad">
+          <a href="#salida-5"><small>- Salida</small></a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="c">
+      <nav class="tpad"><div><a type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/atom.xml" target="_blank" title="Abridge Atom Feed"><i type="Button" class="svg rss" title="Abridge Atom Feed"></i></a><a class="js m-protected" href="#bmFtZUBleGFtcGxlLmNvbQ==" target="_blank" title="Mail"><i type="Button" class="svg mail" title="Mail"></i></a><a href="https://mastodon.example.com/@username" target="_blank" title="Mastodon" rel="me"><i type="Button" class="svg mastodon" title="Mastodon"></i></a><a href="https://matrix.example.com/" target="_blank" title="Element"><i type="Button" class="svg element" title="Element"></i></a><a href="https://github.com/your-user-name/" target="_blank" title="Github"><i type="Button" class="svg github" title="Github"></i></a><a href="https://www.instagram.com/your-user-name/" target="_blank" title="Instagram"><i type="Button" class="svg instagram" title="Instagram"></i></a><a href="https://www.youtube.com/channel&#x2F;your-channel-id" target="_blank" title="YouTube"><i type="Button" class="svg youtube" title="YouTube"></i></a><a href="https://www.twitch.tv/your-user-name/" target="_blank" title="Twitch"><i type="Button" class="svg twitch" title="Twitch"></i></a><a href="https://www.ko-fi.com/your-user-name/" target="_blank" title="Support me on Ko-fi"><i type="Button" class="svg kofi" title="Support me on Ko-fi"></i></a></div></nav>
+      <nav class="vpad">
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/about/"> Sobre mí </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/contact/"> Contacto </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/es/privacy/"> Privacidad </a>
+        <a class="rpad s90" href="https://salif.github.io/zola-themes-collection/demo/abridge/sitemap.xml" target="_blank"> Mapa del sitio </a>
+      </nav>
+      <p class="s80"> &copy; <span id="year">2025</span> Abridge</p>
+      <p class="s80">Impulsado por <a href="https://www.getzola.org/" target="_blank">Zola</a> y <a href="https://github.com/jieiku/abridge/" target="_blank">Abridge</a></p>
+    </div>
+  </footer><span class="topout">
+<span class="topleft"> </span><a href="#" class="top" title="Back to Top"><i class="svgs svgh angu"></i></a>
+</span>
+</body>
+</html>

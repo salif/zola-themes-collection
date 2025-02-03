@@ -62,7 +62,7 @@
           <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/archive/"> Articles </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/tags/"> Mots-clés </a></li>
             <li><div class="dropdown"><i class="svgs world" type="reset"></i>
                 <div class="dropdown-content">
-                <span>Français</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Español</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-markdown-and-style/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-markdown-and-style/">English</a></div>
+                <span>Français</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-markdown-and-style/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-markdown-and-style/">Español</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-markdown-and-style/">English</a></div>
             </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
         </div>
 
@@ -91,12 +91,12 @@
         <div class="block">
       <div class="blockdiv">
         <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/tags/features/">Features (Series)</a><br>
-            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Streamable intégrées</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-vimeo/">Vimeo intégrées</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-youtube/">Youtube intégrées</a><br>
-            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Contenu riche</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Un contenu riche</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-images/">Codes courts d&#x27;image</a><br>
             <a class="scur" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-markdown-and-style/">Markdown et Style</a><br> 
           
@@ -108,8 +108,7 @@
 
 <p>Cet article propose un exemple de syntaxe Markdown de base pouvant être utilisée dans les fichiers de contenu Zola. Il indique également si les éléments HTML de base sont décorés avec CSS dans un thème Zola.</p>
 <span id="continue-reading"></span><h1 id="rubriques">Rubriques</h1>
-<p>Les éléments HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> suivants représentent six niveaux d'en-têtes de section.
-<code>&lt;h1&gt;</code> est le niveau de section le plus élevé alors qu'il <code>&lt;h6&gt;</code> est le plus bas.</p>
+<p>Les éléments HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> suivants représentent six niveaux d'en-têtes de section. <code>&lt;h1&gt;</code> est le niveau de section le plus élevé alors qu'il <code>&lt;h6&gt;</code> est le plus bas.</p>
 <h1 id="h1">H1</h1>
 <h2 id="h2">H2</h2>
 <h3 id="h3">H3</h3>
@@ -145,14 +144,13 @@
 </blockquote>
 <h1 id="les-tables">Les Tables</h1>
 <p>Les tables ne font pas partie de la spécification principale de Markdown, mais Zola les prend en charge prêtes à l'emploi.</p>
-<pre class="z-code"><code><span class="z-text z-plain">Nom | Âge
-</span></code></pre>
-<p>--------|------
-Alice | 23
-Bob | 27
-Cody | 33
-John | 59
-Kerry | 23</p>
+<table><thead><tr><th>Nom</th><th>Âge</th></tr></thead><tbody>
+<tr><td>Alice</td><td>23</td></tr>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Cody</td><td>33</td></tr>
+<tr><td>John</td><td>59</td></tr>
+<tr><td>Kerry</td><td>23</td></tr>
+</tbody></table>
 <h2 id="tableau-avec-markdown-en-ligne">Tableau avec Markdown en ligne</h2>
 <table><thead><tr><th>Italique</th><th>Gras</th><th>Code</th><th>Barré</th></tr></thead><tbody>
 <tr><td><em>italique</em></td><td><strong>gras</strong></td><td><code>code</code></td><td><del>barré</del></td></tr>
@@ -164,7 +162,7 @@ Kerry | 23</p>
 <tr><td><strong>Revenu $B</strong></td><td>$254</td><td>$249</td><td>$127</td><td>$124</td><td>$123</td><td>$113</td><td>$88</td><td>$83</td><td>$74</td><td>$61</td><td>$55</td><td>$54</td><td>$38</td><td>$31</td><td>$30</td><td>$28</td><td>$27</td><td>$22</td><td>$21</td><td>$19</td><td>$17</td><td>$16</td><td>$12</td></tr>
 </tbody></table>
 </figure>
-*valeurs de revenus trouvées sur le moteur de recherche et non vérifiées, uniquement à des fins de démonstration du tableau de défilement des figures.*
+<p><em>valeurs de revenus trouvées sur le moteur de recherche et non vérifiées, uniquement à des fins de démonstration du tableau de défilement des figures.</em></p>
 <h1 id="texte-pliable">Texte pliable</h1>
 <details>
     <summary>Titre 1</summary>
@@ -334,8 +332,7 @@ Kerry | 23</p>
 </form>
 <hr><ol class="footnotes-list">
 <li id="fn-1">
-<p>La citation ci-dessus est extraite du <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=PAAkCSZUG1c">discours</a>
-de Rob Pike lors du Gopherfest, le 18 novembre 2015. <a href="#fr-1-1">↩</a></p>
+<p>La citation ci-dessus est extraite du <a rel="noopener" target="_blank" href="https://www.youtube.com/watch?v=PAAkCSZUG1c">discours</a> de Rob Pike lors du Gopherfest, le 18 novembre 2015. <a href="#fr-1-1">↩</a></p>
 </li>
 <li id="fn-2">
 <p>La citation est la première phrase de <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Metaphysics_(Aristotle)">la Métaphysique</a> d'Aristotle. <a href="#fr-2-1">↩</a></p>
@@ -358,23 +355,23 @@ de Rob Pike lors du Gopherfest, le 18 novembre 2015. <a href="#fr-1-1">↩</a></
 
           
           
-      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
 
           
             <details>
               <summary>Plus...</summary>
             </details>
             <div class="hidden_li">
-                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Streamable intégrées</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-vimeo/">Vimeo intégrées</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-youtube/">Youtube intégrées</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
             </div>
 
           
 
           
-            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Contenu riche</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Un contenu riche</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-images/">Codes courts d&#x27;image</a><br>
 
           

@@ -62,7 +62,7 @@
           <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/archive/"> Articles </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/tags/"> Mots-clés </a></li>
             <li><div class="dropdown"><i class="svgs world" type="reset"></i>
                 <div class="dropdown-content">
-                <span>Français</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-abridge/">English</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-abridge/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Español</a></div>
+                <span>Français</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge/pt/overview-abridge/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/overview-abridge/">English</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge/es/overview-abridge/">Español</a></div>
             </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
         </div>
 
@@ -91,12 +91,12 @@
         <div class="block">
       <div class="blockdiv">
         <a class="b s150" href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/tags/features/">Features (Series)</a><br>
-            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Streamable intégrées</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-vimeo/">Vimeo intégrées</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-youtube/">Youtube intégrées</a><br>
-            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Contenu riche</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
+            <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Un contenu riche</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-images/">Codes courts d&#x27;image</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-markdown-and-style/">Markdown et Style</a><br>
             <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-code-blocks/">Blocs de code et thème</a><br>
@@ -234,7 +234,7 @@
 <p>Si vous avez configuré abridge pour utiliser le mode switcher au lieu de auto/dark/light, alors votre site aura un bouton qui permettra au visiteur de basculer le thème.</p>
 <p>Si votre visiteur utilise noscript ou un autre module complémentaire de navigateur bloquant le javascript, il sera bloqué avec le thème par défaut configuré pour le mode de commutation.</p>
 <p>Pour ajuster ce mode, vous devez définir les deux valeurs de configuration suivantes dans <code>abridge.scss</code> <strong>ET</strong> <code>config.toml</code> :</p>
-<pre data-lang="scss" class="language-scss z-code"><code class="language-scss" data-lang="scss"><span class="z-source z-scss"><span class="z-variable z-declaration z-sass"><span class="z-punctuation z-definition z-variable z-sass">$</span>switcherDefault</span> <span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> <span class="z-string z-quoted z-double z-css"><span class="z-punctuation z-definition z-string z-begin z-css">&quot;</span>dark<span class="z-punctuation z-definition z-string z-end z-css">&quot;</span></span><span class="z-punctuation z-separator z-css">,</span><span class="z-comment z-line z-double-slash z-sass"><span class="z-punctuation z-definition z-comment z-css">//</span> mode de commutation nojs par défaut : dark, light (assurez-vous de définir également js_switcher_default dans config.toml)
+<pre data-lang="scss" class="language-scss z-code"><code class="language-scss" data-lang="scss"><span class="z-source z-scss"><span class="z-variable z-declaration z-sass"><span class="z-punctuation z-definition z-variable z-sass">$</span>switcherDefault</span><span class="z-punctuation z-separator z-key-value z-css">:</span><span class="z-meta z-property-value z-css"> <span class="z-string z-quoted z-double z-css"><span class="z-punctuation z-definition z-string z-begin z-css">&quot;</span>dark<span class="z-punctuation z-definition z-string z-end z-css">&quot;</span></span><span class="z-punctuation z-separator z-css">,</span><span class="z-comment z-line z-double-slash z-sass"><span class="z-punctuation z-definition z-comment z-css">//</span> mode de commutation nojs par défaut : dark, light (assurez-vous de définir également js_switcher_default dans config.toml)
 </span></span></span></code></pre>
 <pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">js_switcher_default</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>dark<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-comment z-line z-number-sign z-toml"><span class="z-punctuation z-definition z-comment z-toml">#</span> mode de commutation nojs par défaut : sombre, clair (assurez-vous de définir également $switcherDefault dans abridge.scss)</span>
 </span></code></pre>
@@ -269,16 +269,7 @@ Si un lien doit avoir une barre oblique à la fin de l'url, mettre <code>slash =
 <p>Vous pouvez également définir une image spécifique à la page pour les résultats de recherche en utilisant page.extra.thumbnail. Les cartes Facebook, Twitter et OpenGraph sont prises en charge (image et description automatiques pour les liens affichés). OpenGraph recommande une taille de 1200 x 630 (1,9:1). Twitter recommande 2:1 pour les grandes images et 1:1 pour les petites. Si vous ne définissez pas de vignette spécifique à une page, la bannière définie dans config.toml sera utilisée à la place.</p>
 <p>Référez-vous à <a rel="noopener" target="_blank" href="https://raw.githubusercontent.com/Jieiku/abridge/master/content/overview-images/index.md">overview-images</a> pour un exemple :</p>
 <pre data-lang="md" class="language-md z-code"><code class="language-md" data-lang="md"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">title = &quot;Raccourcis d&#39;images&quot;
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">description = &quot;Les images peuvent être incorporées directement en utilisant le markdown <span class="z-markup z-raw z-inline z-markdown"><span class="z-punctuation z-definition z-raw z-begin z-markdown">`</span> ![Ferris](ferris.svg)<span class="z-punctuation z-definition z-raw z-end z-markdown">`</span></span>, mais l&#39;utilisation d&#39;un shortcode permet d&#39;éviter le CLS en définissant explicitement la largeur et la hauteur.&quot;
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">date = 2021-05-19
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">draft = false
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">[taxonomies]
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">tags = [&quot;Fonctionnalités&quot;, &quot;Shortcodes&quot;, &quot;Images&quot;]
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">[extra]
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">toc = true
-</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">keywords = &quot;Image, Markdown, Shortcodes, Swap&quot;
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">thumbnail = &quot;ferris-gesture.png&quot;
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
 </span></span></code></pre>
@@ -416,18 +407,18 @@ Si un lien doit avoir une barre oblique à la fin de l'url, mettre <code>slash =
 
           
           
-      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
+      <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
 
           
             <details>
               <summary>Plus...</summary>
             </details>
             <div class="hidden_li">
-                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-math/">Notation mathématiques</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-streamable/">Streamable intégrées</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-vimeo/">Vimeo intégrées</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/video-streaming-sites/overview-embed-youtube/">Youtube intégrées</a><br>
-                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Contenu riche</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-showdata/">Code court Showdata</a><br>
+                <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-rich-content/">Un contenu riche</a><br>
                 <a href="https://salif.github.io/zola-themes-collection/demo/abridge/fr/overview-images/">Codes courts d&#x27;image</a><br>
             </div>
 
