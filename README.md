@@ -4,7 +4,7 @@
 
 ## Theme requirements
 
-- Have a `config.toml` file. Can be on a separate repository.
+- Have a `config.toml` or `config.example.toml` file. Can be on a separate repository.
 - Have a `theme.toml` file or `themes/theme-name/theme.toml` file.
 - Building is successful using the latest Zola version (0.19.2).
 
@@ -14,7 +14,7 @@
 
 - [DeepThought](https://github.com/RatanShreshtha/DeepThought): 153 commits
 - [zola-inky](https://github.com/jimmyff/zola-inky): 30 commits
-- [halve-z](https://github.com/charlesrocket/halve-z): 509 commits
+- [halve-z](https://github.com/charlesrocket/halve-z): 540 commits
 - [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits
 - [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits
 - [ennui](https://codeberg.org/leana8959/ennui): 36 commits
@@ -40,9 +40,10 @@
 - [zola-rahix](https://github.com/Rahix/blog-theme): 88 commits
 - [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits
 - [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits
-- [citrus](https://github.com/tatumroaquin/citrus): 66 commits
+- [citrus](https://github.com/tatumroaquin/citrus): 80 commits
 - [datum](https://github.com/davidmreed/datum): 16 commits
 - [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
+- [eips-theme](https://github.com/eips-wg/theme.git): 475 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
