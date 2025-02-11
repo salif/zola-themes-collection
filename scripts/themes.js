@@ -49,13 +49,20 @@ async function buildTheme(themeName, baseURL, commands) {
 	if ((await fs.pathExists("theme.toml")) && (await fs.pathExists("themes"))) {
 		errors.push(`Warning: themes dir found! themes/${themeName}`)
 	}
-	if (!(await fs.pathExists("config.toml"))) {
+
+	let configFile
+	if (await fs.pathExists("config.toml")) {
+		configFile = "config.toml"
+	} else if (await fs.pathExists("config.example.toml")) {
+		configFile = "config.example.toml"
+	} else {
 		errors.push(`Error: config.toml not found! themes/${themeName}`)
 		return
 	}
 	await remPublic()
 	const demoBaseURL = new URL(themeName + "/", baseURL).href
-	await $`${commands.zola} ${['build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']}`
+	let buildArgs = ['--config', configFile, 'build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']
+	await $`${commands.zola} ${buildArgs}`
 }
 async function installDemo(themePath, themeName, demoPath) {
 	if (await fs.pathExists(demoPath)) {

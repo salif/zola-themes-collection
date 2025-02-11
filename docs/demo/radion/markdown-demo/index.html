@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    <!-- Enable responsiveness on mobile devices-->
+    <!-- Enable responsiveness on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
      
@@ -24,12 +24,19 @@
       title="RSS"
       href="https://salif.github.io/zola-themes-collection/demo/radion/atom.xml"
     />
-     
+    
+
+    <!-- Load Styles -->
     <link
       rel="stylesheet"
       href="https://salif.github.io/zola-themes-collection/demo/radion/site.css"
     />
-      
+
+    <!-- Pass Theme Preference as Data Attribute -->
+    <script>
+      document.documentElement.dataset.theme =
+        "toggle";
+    </script>
   </head>
 
   <body class="hack dark main container">
@@ -49,24 +56,24 @@
             class=""
             href="https://salif.github.io/zola-themes-collection/demo/radion//"
           >
-            <span itemprop="name">Home</span></a
-          >
+            <span itemprop="name">Home</span>
+          </a>
           
           <a
             itemprop="url"
             class=""
             href="https://salif.github.io/zola-themes-collection/demo/radion//categories"
           >
-            <span itemprop="name">Categories</span></a
-          >
+            <span itemprop="name">Categories</span>
+          </a>
           
           <a
             itemprop="url"
             class=""
             href="https://salif.github.io/zola-themes-collection/demo/radion//tags"
           >
-            <span itemprop="name">Tags</span></a
-          >
+            <span itemprop="name">Tags</span>
+          </a>
           
         </div>
       </nav>
@@ -90,11 +97,7 @@
           <div class="search-results__items"></div>
         </div>
          
-        <a
-          id="dark-mode-toggle"
-          onclick="toggleTheme(); event.preventDefault();"
-          href="#"
-        >
+        <a id="dark-mode-toggle" href="#">
           <img
             src="https://salif.github.io/zola-themes-collection/demo/radion/icons/sun.svg"
             id="sun-icon"
@@ -135,15 +138,6 @@
         </a>
         
       </div>
-
-      
-      <!-- Set the correct theme in the script -->
-      <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/toggle-theme.js"></script>
-      
-      <script>
-        setTheme(getSavedTheme());
-      </script>
-      
     </header>
      
     
@@ -353,21 +347,11 @@ wrapping the text in square brackets and the URL in parentheses.</p>
     <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/toggle-theme.js"></script>
      
 <!-- MathJax script for rendering LaTeX math equations -->
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [
-        ["$", "$"],
-        ["\\(", "\\)"],
-      ],
-      displayMath: [
-        ["$$", "$$"],
-        ["\\[", "\\]"],
-      ],
-    },
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<script src="https://salif.github.io/zola-themes-collection/demo/radion/js/mathjax-config.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async
+></script>
 
  
 <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/radion/elasticlunr.min.js"></script>
