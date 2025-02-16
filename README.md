@@ -6,7 +6,7 @@
 
 - Have a `config.toml` or `config.example.toml` file. Can be on a separate repository.
 - Have a `theme.toml` file or `themes/theme-name/theme.toml` file.
-- Building is successful using the latest Zola version (0.19.2).
+- Building is successful using the latest Zola version (0.20.0).
 
 ## Non-eligible themes
 

@@ -204,7 +204,7 @@
 <ol start="2">
 <li>Set <code>linkita</code> as your theme in your <code>config.toml</code> file.</li>
 </ol>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">linkita</span><span style="color:#89ddff;">&quot;
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">linkita</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h2 id="managing-versions">Managing versions</h2>
 <p>To update the theme, run:</p>
@@ -220,7 +220,7 @@ for all versions after the one you are using; there may be breaking changes that
 <p>All variables are optional.
 Set the ones you need.</p>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># date = 
@@ -239,7 +239,7 @@ Set the ones you need.</p>
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="yaml-frontmatter">YAML frontmatter</h3>
-<pre data-lang="yaml" style="background-color:#212121;color:#eeffff;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>---
+<pre data-lang="yaml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-yaml "><code class="language-yaml" data-lang="yaml" data-name="frontmatter"><span>---
 </span><span style="color:#f07178;">title</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span style="color:#f07178;">description</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span style="color:#f07178;">date</span><span style="color:#89ddff;">: 
@@ -258,7 +258,7 @@ Set the ones you need.</p>
 </span><span>---
 </span></code></pre>
 <h3 id="extra-frontmatter-variables">Extra frontmatter variables</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra]
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra]
 </span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
 </span><span style="color:#89ddff;">[extra.cover]
 </span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
@@ -269,7 +269,7 @@ Set the ones you need.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># height =
 </span></code></pre>
 <h3 id="open-graph-frontmatter-variables">Open Graph frontmatter variables</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.open_graph]
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.open_graph]
 </span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: datetime; no default value;)
 </span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
@@ -308,7 +308,7 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
 <h3 id="sitemap-frontmatter-variables">Sitemap frontmatter variables</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.sitemap]
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.sitemap]
 </span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
 </span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: page.updated;)
 </span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">=
@@ -321,7 +321,7 @@ Set the ones you need.</p>
 </span></code></pre>
 <h3 id="home-page-profile">Home page profile</h3>
 <p>Create <code>content/_index.md</code> file in your blog and set <code>extra.profile</code> to your username:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="content/_index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/_index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">sort_by </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">date</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span><span style="color:#89ddff;">[extra]
@@ -336,14 +336,14 @@ Replace <code>author_username</code> with author's username.
 See <a href="#profiles">Profiles</a>.</p>
 <h3 id="non-post-pages">Non-post pages</h3>
 <p>Create <code>content/pages/_index.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="content/pages/_index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/_index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">render </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span style="color:#f07178;">page_template </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">pages.html</span><span style="color:#89ddff;">&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h4 id="archive-page">Archive page</h4>
 <p>Create <code>content/pages/archive.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="content/pages/archive.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/archive.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;archive&quot;
@@ -354,7 +354,7 @@ See <a href="#profiles">Profiles</a>.</p>
 </span></code></pre>
 <h4 id="about-you-page">About you page</h4>
 <p>Create <code>content/pages/about.md</code> file in your blog:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="content/pages/about.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/about.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About me</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;about&quot;
@@ -364,14 +364,14 @@ See <a href="#profiles">Profiles</a>.</p>
 <h4 id="option-1-using-page-authors">Option 1: Using <code>page.authors</code></h4>
 <p>You don't need to set <code>page.authors</code> in the frontmatter if you are the only author of the post.</p>
 <p>Otherwise, set <code>page.authors</code>:</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;]
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h4 id="option-2-using-taxonomies">Option 2: Using Taxonomies</h4>
 <p>Useful if the blog has a team of several authors.
 If you choose this option you should set taxonomies in each page.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#89ddff;">[taxonomies]
 </span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;, &quot;</span><span style="color:#c3e88d;">author2_username</span><span style="color:#89ddff;">&quot;]
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -395,7 +395,7 @@ If you choose this option you should set taxonomies in each page.</p>
 <p>Copy and paste the examples into your <code>config.toml</code> file
 and comment out the variables you don't use instead of setting empty values.
 All variables are optional.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages. See `extra.profiles`. (type: string;)
@@ -418,7 +418,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span></code></pre>
 <p>Taxonomies with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[[taxonomies]]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[[taxonomies]]
 </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">categories</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
@@ -434,7 +434,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span></code></pre>
 <p>Add more languages ​​by replacing <code>fr</code> from the example with the language code.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[languages.fr]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[languages.fr]
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site title in French</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site description in French</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">generate_feeds </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
@@ -445,7 +445,7 @@ All variables are optional.</p>
 </span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="general-config">General config</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra]
 </span><span style="font-style:italic;color:#4a4a4a;"># Enable KaTeX math formula support globally.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">math </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
@@ -491,7 +491,7 @@ All variables are optional.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
 </span></code></pre>
 <h3 id="style-config">Style config</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.style]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.style]
 </span><span style="font-style:italic;color:#4a4a4a;"># The custom background color. (type: string;)
 </span><span style="color:#f07178;">bg_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#f4f4f5</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># The custom background color in dark mode. (type: string;)
@@ -508,7 +508,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">header_dark_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#27272a</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h3 id="menus">Menus</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.menus]
+<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.menus]</span><span style="background-color:#ff5370;color:#ffffff;"> ,name=config.toml</span><span>
 </span><span style="color:#f07178;">menu_name </span><span style="color:#89ddff;">= [
 </span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;},
 </span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;},
@@ -531,7 +531,7 @@ All variables are optional.</p>
 You can use <code>names_i18n</code> instead of <code>names</code>, see the <code>static/i18n.json</code> file,
 set <code>names_i18n</code> to a <code>common_</code> key.</p>
 <h3 id="profiles">Profiles</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username]
 </span><span style="font-style:italic;color:#4a4a4a;"># The URL of avatar.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
@@ -572,7 +572,7 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="profile-translations">Profile translations</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username.languages.fr]
 </span><span style="font-style:italic;color:#4a4a4a;"># Profile name.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.url;)
@@ -592,7 +592,7 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span></code></pre>
 <h3 id="open-graph-for-profiles">Open Graph for profiles</h3>
 <p>See <a href="https://ogp.me/">the Open Graph protocol</a>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph]
 </span><span style="font-style:italic;color:#4a4a4a;"># The URL of social image. (type: string; no default value;)
 </span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
@@ -617,7 +617,7 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 <p><code>fb_app_id</code> and <code>fb_admins</code> are only allowed in the default author's profile.
 In addition, <code>image</code> and <code>image_alt</code> of the profile will be used as a
 fallback open graph image for all pages.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">fb_app_id </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Your fb app ID</span><span style="color:#89ddff;">&quot;
@@ -625,14 +625,14 @@ fallback open graph image for all pages.</p>
 </span><span style="color:#f07178;">fb_admins </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">YOUR_USER_ID</span><span style="color:#89ddff;">&quot;]
 </span></code></pre>
 <h4 id="open-graph-translations">Open Graph translations</h4>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username.open_graph.languages.fr]
 </span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the social image.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.open_graph.image_alt;)
 </span><span style="color:#f07178;">image_alt </span><span style="color:#89ddff;">= &quot;&quot;
 </span></code></pre>
 <h3 id="the-page-footer">The page footer</h3>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.footer]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.footer]
 </span><span style="font-style:italic;color:#4a4a4a;"># Replace with the correct year.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: current year;)
 </span><span style="color:#f07178;">since </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">2025
@@ -662,7 +662,7 @@ fallback open graph image for all pages.</p>
 </ul>
 <h3 id="language-specific-options">Language specific options</h3>
 <p>For date format, see <a href="https://docs.rs/chrono/0.4/chrono/format/strftime/index.html">chrono docs</a>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For English
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For English
 </span><span style="color:#89ddff;">[extra.languages.en]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">locale </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en_US</span><span style="color:#89ddff;">&quot;
@@ -687,7 +687,7 @@ fallback open graph image for all pages.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_list_description = &quot;A map of all $NAME on this site. Start exploring!&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_single_description = &quot;Browse articles related to $NAME. Start exploring!&quot;
 </span></code></pre>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="font-style:italic;color:#4a4a4a;"># For French
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French
 </span><span style="color:#89ddff;">[extra.languages.fr]
 </span><span style="color:#f07178;">locale </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">fr_FR</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">date_format </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">%x</span><span style="color:#89ddff;">&quot;
@@ -696,7 +696,7 @@ fallback open graph image for all pages.</p>
 <h3 id="web-analytics">Web analytics</h3>
 <h4 id="goatcounter">GoatCounter</h4>
 <p>Set only if you use <a href="https://www.goatcounter.com/">GoatCounter</a>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.goatcounter]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.goatcounter]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">endpoint </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://MYCODE.goatcounter.com/count</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
@@ -706,7 +706,7 @@ fallback open graph image for all pages.</p>
 If your <code>base_url</code> includes a subpath, set <code>noscript_prefix</code> to the subpath without a trailing slash.</p>
 <h4 id="vercel-analytics">Vercel Analytics</h4>
 <p>Set only if you use <a href="https://vercel.com/docs/analytics">Vercel Web Analytics</a>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.vercel_analytics]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.vercel_analytics]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">src </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">/_vercel/insights/script.js</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
@@ -717,7 +717,7 @@ For example, open <a href="http://127.0.0.1:1111/#disable-analytics">http://127.
 <h3 id="comments">Comments</h3>
 <p>See <a href="https://giscus.app/">giscus.app</a>.
 Only available when <code>extra.comment</code> in the frontmatter or <code>extra.comment</code> in the config is set to <code>true</code>.</p>
-<pre data-lang="toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#89ddff;">[extra.giscus]
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.giscus]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">repo </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
