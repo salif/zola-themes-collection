@@ -168,7 +168,7 @@ theme = "${themeName}"
 - **License**: ${themeInfo.license}
 - **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
 - **Offic. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
-- **Min version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
+- **Min Zola version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
 - **Original**: <${themeInfo.originalRepo}>`));
 	return {
 		theme: themeName,
