@@ -70,6 +70,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [Baie](https://github.com/Wtoll/Baie): 7 commits
 - [zola-theme](https://github.com/rutrum/zola-theme): 16 commits
 - [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
+- [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
 
 ### No license that allows me to host a live demo
 
