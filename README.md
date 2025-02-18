@@ -44,6 +44,8 @@
 - [datum](https://github.com/davidmreed/datum): 16 commits
 - [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
 - [eips-theme](https://github.com/eips-wg/theme.git): 475 commits
+- [kireizola](https://codeberg.org/pitbuster/kireizola): 39 commits
+- [navhive](https://github.com/idevsig/navhive): 5 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -67,6 +69,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zizotto](https://github.com/xihn/zizotto): 12 commits
 - [Baie](https://github.com/Wtoll/Baie): 7 commits
 - [zola-theme](https://github.com/rutrum/zola-theme): 16 commits
+- [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
 
 ### No license that allows me to host a live demo
 

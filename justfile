@@ -151,6 +151,8 @@ submodule-remove path: && screenshots-to-fix
 
 [group('help')]
 submodule-add url name: && (build-check "themes/" + name)
+    @if ! [[ "{{ name }}" =~ ^[A-Za-z0-9._-]+$ ]]; then \
+        printf "Name not allowed!\n"; exit 1; fi;
     ! test -d 'themes/{{ name }}'
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
 

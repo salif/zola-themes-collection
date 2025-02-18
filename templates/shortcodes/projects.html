@@ -1,17 +1,20 @@
-{% extends "index.html" %}
-{% block main %}
-
-{% for asset in page.assets %}
-{% if asset is ending_with("data.toml") %}
-{% set_global data = load_data(path=asset, format="toml") %}
-{% endif %}
-{% endfor %}
+{%- if url is defined %}
+  {%- set projects = load_data(url=url, format=format) %}
+{%- else %}
+  {%- set projects = load_data(path=page.colocated_path~path, format=format, required=false) %}
+  {%- if projects is not object %}
+    {%- set projects = load_data(path=data, format=format, required=true) %}
+  {% endif %}
+{%- endif %}
 {%- set base_url_lang = get_url(path="", lang=lang) %}
 
-<h1 class="mb-16">{{ page.title }}</h1>
-{% for project in data.project %}
-<div class="block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ project.name }}</h2>
+{%- for project in projects.project %}
+  {%- set name = project.languages[lang].name | default(value=project.name) %}
+  {%- set desc = project.languages[lang].desc | default(value=project.desc) %}
+  {%- set tags = project.languages[lang].tags | default(value=project.tags) %}
+  {%- set links = project.links %}
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ name }}</h2>
   <div class="not-prose">
     <picture>
       <source srcset="./screenshots/light-{{ project.theme }}.webp" type="image/webp"
@@ -19,19 +22,19 @@
       <source srcset="./screenshots/dark-{{ project.theme }}.webp" type="image/webp"
         media="(prefers-color-scheme: dark)" width="1360" height="765" />
       <img src="./screenshots/light-{{ project.theme }}.webp"
-        alt="Screenshot of the {{ project.name }} theme" width="1360" height="765" />
+        alt="Screenshot of the {{ name }} theme" width="1360" height="765" />
     </picture>
-    <p>{{ project.desc }}</p>
+    <p>{{ desc }}</p>
   </div>
   {{ project.details | markdown(inline=true) | safe }}
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      {% for tag in project.tags %}
+      {%- for tag in tags %}
       <span>#{{ tag }}</span>
-      {% endfor %}
+      {%- endfor %}
     </div>
     <div class="flex flex-wrap gap-x-2">
-      {% for link in project.links %}
+      {%- for link in links %}
       <a
         class="underline"
         {%- if link.js %}
@@ -44,9 +47,8 @@
         {%- endif %}
         >{{ link.name }}</a
       >
-      {% endfor %}
+      {%- endfor %}
     </div>
   </div>
 </div>
-{% endfor %}
-{% endblock main %}
+{%- endfor %}
