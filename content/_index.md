@@ -1,4 +1,4 @@
-+++
-render = false
-page_template = "pages.html"
-+++
+---
+render: false
+page_template: "pages.html"
+---
