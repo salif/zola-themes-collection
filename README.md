@@ -22,7 +22,7 @@
 - [butler](https://github.com/shalzz/butler): 105 commits
 - [polymathic](https://github.com/anvlkv/polymathic): 95 commits
 - [magic-box](https://github.com/dulvui/magic-box): 187 commits
-- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 293 commits
+- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
 - [anatole-zola](https://github.com/longfangsong/anatole-zola): 49 commits
 - [parchment](https://github.com/jsonfry/parchment): 5 commits
@@ -46,6 +46,8 @@
 - [eips-theme](https://github.com/eips-wg/theme.git): 475 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 39 commits
 - [navhive](https://github.com/idevsig/navhive): 5 commits
+- [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
+- [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -71,6 +73,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-theme](https://github.com/rutrum/zola-theme): 16 commits
 - [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
 - [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
+- [zola-scribble](https://github.com/jzbor/zola-scribble): 24 commits
 
 ### No license that allows me to host a live demo
 
