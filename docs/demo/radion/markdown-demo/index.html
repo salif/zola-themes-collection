@@ -7,9 +7,14 @@
     <!-- Enable responsiveness on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-     
+    
     <meta name="description" content="A elegant light and dark theme for Zola" />
-     
+    <meta property="og:description" content="A elegant light and dark theme for Zola" />
+    <meta property="twitter:description" content="A elegant light and dark theme for Zola" />
+    
+
+    <!-- Title -->
+      
 
     <title>
     
@@ -17,6 +22,63 @@
     
 </title>
 
+    <!-- Additional Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;markdown-demo&#x2F;"
+    />
+    <meta
+      property="og:type"
+      content="article"
+    />
+    <meta property="og:title" content="Markdown Formatting Test" />
+    <meta
+      property="og:image"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/web-app-manifest-512x512.png"
+    />
+
+    <!-- Additional Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;markdown-demo&#x2F;"
+    />
+    <meta name="twitter:title" content="Markdown Formatting Test" />
+    <meta
+      name="twitter:image"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/web-app-manifest-512x512.png"
+    />
+
+    <!-- Favicons -->
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Markdown Formatting Test" />
+    <link
+      rel="manifest"
+      href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/site.webmanifest"
+    />
+    
+
+    <!-- RSS Feed -->
     
     <link
       rel="alternate"
@@ -217,6 +279,11 @@ headings, lists, and more.</p>
                             </li>
                         
                             <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/radion/markdown-demo/#footnotes">Footnotes</a>
+                                
+                            </li>
+                        
+                            <li>
                                 <a href="https://salif.github.io/zola-themes-collection/demo/radion/markdown-demo/#lists">Lists</a>
                                 
                                     <ul>
@@ -290,6 +357,14 @@ to create a nested structure. For example, this is a second level blockquote.</p
 <tr><td>Row 2</td><td>Row 2</td><td>Row 2</td></tr>
 <tr><td>Row 3</td><td>Row 3</td><td>Row 3</td></tr>
 </tbody></table>
+<p>with alignment:</p>
+<table><thead><tr><th style="text-align: left">Left-Aligned</th><th style="text-align: center">Centered</th><th style="text-align: right">Right-Algned</th></tr></thead><tbody>
+<tr><td style="text-align: left">foo</td><td style="text-align: center">fibonacci</td><td style="text-align: right">some more stuff</td></tr>
+<tr><td style="text-align: left">bar</td><td style="text-align: center">42</td><td style="text-align: right">(idk what else)</td></tr>
+</tbody></table>
+<h2 id="footnotes">Footnotes</h2>
+<p>Footnote example<sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>Some other footnote that is inline<sup class="footnote-reference"><a href="#2">2</a></sup>. As you can see, it just blends right in!</p>
 <h2 id="lists">Lists</h2>
 <h3 id="unordered-list">Unordered List</h3>
 <ul>
@@ -299,7 +374,12 @@ to create a nested structure. For example, this is a second level blockquote.</p
 </ul>
 <h3 id="ordered-list">Ordered List</h3>
 <ol>
-<li>Item 1</li>
+<li>Item 1
+<ol>
+<li>Indented item</li>
+<li>Yet another indented item</li>
+</ol>
+</li>
 <li>Item 2</li>
 <li>Item 3</li>
 </ol>
@@ -315,11 +395,44 @@ snippets within a paragraph.</p>
 <h2 id="links">Links</h2>
 <p>This is an <a href="https://example.com">example link</a>. You can add links to text by
 wrapping the text in square brackets and the URL in parentheses.</p>
+<hr />
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Some footnote</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>https://en.wikipedia.org/wiki/Isometric_projection</p>
+</div>
 
 
 
         
     </div>
+
+    <!-- Comment section -->
+    
+      
+        
+          <script
+  src="https://giscus.app/client.js"
+  data-repo="micahkepe&#x2F;radion"
+  data-repo-id="R_kgDONK7lCQ"
+  data-category="General"
+  data-category-id="DIC_kwDONK7lCc4CnfXf"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+
+        
+      
+    
 
 
     

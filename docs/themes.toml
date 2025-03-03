@@ -331,116 +331,6 @@ theme = "project-portfolio"
   js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "academic-paper"
-name = "Academic Paper"
-desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
-
-### Installation{#h-install-academic-paper}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "academic-paper"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
-
-### Info{#h-info-academic-paper}
-- **Author**: [Alexander Terenin](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-paper>
-- **Offic. Live Demo**: <https://aterenin.github.io/academic-paper>
-- **Min Zola version**: 0.18.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-paper"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-academic-paper"
-  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-academic-paper"
-  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "academic-workshop"
-name = "Academic Workshop"
-desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
-
-### Installation{#h-install-academic-workshop}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "academic-workshop"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
-
-### Info{#h-info-academic-workshop}
-- **Author**: [Alexander Terein](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-workshop>
-- **Offic. Live Demo**: <https://aterenin.github.io/academic-workshop>
-- **Min Zola version**: 0.18.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-workshop"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-academic-workshop"
-  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-academic-workshop"
-  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "kita"
 name = "Kita"
 desc = "Kita is a clean, elegant and simple blog theme for Zola."
@@ -473,7 +363,7 @@ theme = "kita"
 - **Author**: [st1020](https://st1020.com)
 - **License**: MIT
 - **Homepage**: <https://github.com/st1020/kita>
-- **Offic. Live Demo**: <https://st1020.github.io/kita/>
+- **Offic. Live Demo**: <https://kita-zola.pages.dev>
 - **Min Zola version**: 0.17.0
 - **Original**: <https://github.com/nanxiaobei/hugo-paper>
 </details>"""
@@ -715,6 +605,61 @@ theme = "abridge"
   name = "Info"
   url = "#info-abridge"
   js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ "SEO", "search", "accessible" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+
+### Installation{#h-install-radion}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/micahkepe/radion.git themes/radion
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/micahkepe/radion.git themes/radion
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "radion"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
+
+### Info{#h-info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Offic. Live Demo**: <https://micahkepe.com/radion/>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/micahkepe/radion"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-radion"
+  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-radion"
+  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "hacker"
@@ -995,6 +940,116 @@ theme = "apollo"
   js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "academic-paper"
+name = "Academic Paper"
+desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
+
+### Installation{#h-install-academic-paper}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "academic-paper"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
+
+### Info{#h-info-academic-paper}
+- **Author**: [Alexander Terenin](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-paper>
+- **Offic. Live Demo**: <https://aterenin.github.io/academic-paper>
+- **Min Zola version**: 0.18.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-paper"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-paper"
+  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-paper"
+  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "academic-workshop"
+name = "Academic Workshop"
+desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
+
+### Installation{#h-install-academic-workshop}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "academic-workshop"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
+
+### Info{#h-info-academic-workshop}
+- **Author**: [Alexander Terein](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-workshop>
+- **Offic. Live Demo**: <https://aterenin.github.io/academic-workshop>
+- **Min Zola version**: 0.18.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-workshop"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-academic-workshop"
+  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-academic-workshop"
+  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "ski"
 name = "ski"
 desc = "A minimalist Zola theme inspired by Swiss design principles."
@@ -1048,61 +1103,6 @@ theme = "ski"
   name = "Info"
   url = "#info-ski"
   js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "radion"
-name = "radion"
-desc = "A sleek, modern blog theme."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
-
-### Installation{#h-install-radion}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/micahkepe/radion.git themes/radion
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/micahkepe/radion.git themes/radion
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "radion"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-
-### Info{#h-info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Offic. Live Demo**: <https://micahkepe.com/radion/>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/micahkepe/radion"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-radion"
-  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-radion"
-  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "devnzt"
