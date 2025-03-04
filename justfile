@@ -173,9 +173,6 @@ fix-docs-dir:
         fs.rm(fileToDelete)
     }
     console.log(`Deleted ${filesToDelete.length} files`)
-    const gitignorePath = path.resolve("docs", "screenshots", ".gitignore")
-    if (fs.existsSync(gitignorePath)) fs.rmSync(gitignorePath)
-    else console.log("Screenshots .gitignore not deleted")
 
 [confirm]
 [group('push')]

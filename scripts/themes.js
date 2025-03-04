@@ -7,7 +7,8 @@ process.env.CLICOLOR_FORCE = '1'
 const demoRepoThemes = new Map([
 	["linkita", "https://codeberg.org/salif/linkita.git"],
 	["tabi", "https://github.com/welpo/tabi.git"],
-	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"]
+	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"],
+	["daisy", "https://github.com/awinterstein/zola-theme-daisy.git"],
 ])
 
 const versionWarn = "Does not work with the latest version of Zola"
