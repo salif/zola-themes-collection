@@ -499,6 +499,88 @@ They should work for most themes in this collection.</p>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">radion</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-radion.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-radion.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-radion.webp"
+        alt="Screenshot of the radion theme" width="1360" height="765" />
+    </picture>
+    <p>A sleek, modern blog theme.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+<h3 id="h-install-radion">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/micahkepe/radion.git themes/radion
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/micahkepe/radion.git themes/radion
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">radion</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
+<h3 id="h-info-radion">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com">Micah Kepe</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/micahkepe/radion">https://github.com/micahkepe/radion</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com/radion/">https://micahkepe.com/radion/</a></li>
+<li><strong>Min Zola version</strong>: 0.19.2</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#SEO</span>
+      <span>#search</span>
+      <span>#accessible</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/radion/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/micahkepe/radion"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-radion"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-radion"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Project Portfolio</h2>
   <div class="not-prose">
     <picture>
@@ -974,88 +1056,6 @@ They should work for most themes in this collection.</p>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">radion</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-radion.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-radion.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-radion.webp"
-        alt="Screenshot of the radion theme" width="1360" height="765" />
-    </picture>
-    <p>A sleek, modern blog theme.</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
-<h3 id="h-install-radion">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/micahkepe/radion.git themes/radion
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/micahkepe/radion.git themes/radion
-</span></code></pre>
-<ol start="2">
-<li>Set theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">radion</span><span>&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-<h3 id="h-info-radion">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com">Micah Kepe</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/micahkepe/radion">https://github.com/micahkepe/radion</a></li>
-<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com/radion/">https://micahkepe.com/radion/</a></li>
-<li><strong>Min Zola version</strong>: 0.19.2</li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#SEO</span>
-      <span>#search</span>
-      <span>#accessible</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/radion/"
-        rel="noopener"
-        target="_blank"
-        >Live Demo</a
-      >
-      <a
-        class="underline"
-        href="https://github.com/micahkepe/radion"
-        rel="noopener"
-        target="_blank"
-        >Repository</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-radion"
-        >Install</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-radion"
-        >Info</a
-      >
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">zola-hacker</h2>
   <div class="not-prose">
     <picture>
@@ -1295,6 +1295,85 @@ They should work for most themes in this collection.</p>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">apollo</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-apollo.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-apollo.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-apollo.webp"
+        alt="Screenshot of the apollo theme" width="1360" height="765" />
+    </picture>
+    <p>Modern and minimalistic blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+<h3 id="h-install-apollo">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/not-matthias/apollo.git themes/apollo
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/not-matthias/apollo.git themes/apollo
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">apollo</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
+<h3 id="h-info-apollo">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/not-matthias">not-matthias</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/not-matthias/apollo">https://github.com/not-matthias/apollo</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://not-matthias.github.io/apollo">https://not-matthias.github.io/apollo</a></li>
+<li><strong>Min Zola version</strong>: 0.14.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/apollo/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/not-matthias/apollo"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-apollo"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-apollo"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">mo8it-mod</h2>
   <div class="not-prose">
     <picture>
@@ -1371,85 +1450,6 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-mo8it-mod"
-        >Info</a
-      >
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">apollo</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-apollo.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-apollo.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-apollo.webp"
-        alt="Screenshot of the apollo theme" width="1360" height="765" />
-    </picture>
-    <p>Modern and minimalistic blog theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
-<h3 id="h-install-apollo">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/not-matthias/apollo.git themes/apollo
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/not-matthias/apollo.git themes/apollo
-</span></code></pre>
-<ol start="2">
-<li>Set theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">apollo</span><span>&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
-<h3 id="h-info-apollo">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/not-matthias">not-matthias</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/not-matthias/apollo">https://github.com/not-matthias/apollo</a></li>
-<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://not-matthias.github.io/apollo">https://not-matthias.github.io/apollo</a></li>
-<li><strong>Min Zola version</strong>: 0.14.0</li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/apollo/"
-        rel="noopener"
-        target="_blank"
-        >Live Demo</a
-      >
-      <a
-        class="underline"
-        href="https://github.com/not-matthias/apollo"
-        rel="noopener"
-        target="_blank"
-        >Repository</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-apollo"
-        >Install</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-apollo"
         >Info</a
       >
     </div>
@@ -2017,6 +2017,86 @@ They should work for most themes in this collection.</p>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">anatole-zola</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-anatole-zola.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-anatole-zola.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-anatole-zola.webp"
+        alt="Screenshot of the anatole-zola theme" width="1360" height="765" />
+    </picture>
+    <p>A port of farbox-theme-Anatole for zola</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anatole-zola'></summary>
+<h3 id="h-install-anatole-zola">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">anatole-zola</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anatole-zola'></summary>
+<h3 id="h-info-anatole-zola">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/longfangsong">longfangsong</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/longfangsong/anatole-zola">https://github.com/longfangsong/anatole-zola</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://longfangsong.github.io">https://longfangsong.github.io</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/hi-caicai/farbox-theme-Anatole">https://github.com/hi-caicai/farbox-theme-Anatole</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/anatole-zola/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/longfangsong/anatole-zola"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-anatole-zola"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-anatole-zola"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">silk</h2>
   <div class="not-prose">
     <picture>
@@ -2404,6 +2484,85 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-doc"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Daisy</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-daisy.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-daisy.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-daisy.webp"
+        alt="Screenshot of the Daisy theme" width="1360" height="765" />
+    </picture>
+    <p>Theme for a project portfolio (based on Tailwind CSS).</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
+<h3 id="h-install-daisy">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">daisy</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
+<h3 id="h-info-daisy">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.winterstein.biz">Adrian Winterstein</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/awinterstein/zola-theme-daisy">https://github.com/awinterstein/zola-theme-daisy</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://zola-daisy.netlify.app">https://zola-daisy.netlify.app</a></li>
+<li><strong>Min Zola version</strong>: 0.9.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/daisy/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/awinterstein/zola-theme-daisy"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-daisy"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-daisy"
         >Info</a
       >
     </div>

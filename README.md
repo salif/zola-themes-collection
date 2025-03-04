@@ -48,6 +48,7 @@
 - [navhive](https://github.com/idevsig/navhive): 5 commits
 - [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
+- [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

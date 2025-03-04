@@ -276,6 +276,61 @@ theme = "researchlab"
   js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ "SEO", "search", "accessible" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+
+### Installation{#h-install-radion}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/micahkepe/radion.git themes/radion
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/micahkepe/radion.git themes/radion
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "radion"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
+
+### Info{#h-info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Offic. Live Demo**: <https://micahkepe.com/radion/>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/micahkepe/radion"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-radion"
+  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-radion"
+  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "project-portfolio"
 name = "Project Portfolio"
 desc = "Theme for a project portfolio (based on Tailwind CSS)."
@@ -607,61 +662,6 @@ theme = "abridge"
   js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "radion"
-name = "radion"
-desc = "A sleek, modern blog theme."
-tags = [ "SEO", "search", "accessible" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
-
-### Installation{#h-install-radion}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/micahkepe/radion.git themes/radion
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/micahkepe/radion.git themes/radion
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "radion"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-
-### Info{#h-info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Offic. Live Demo**: <https://micahkepe.com/radion/>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/micahkepe/radion"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-radion"
-  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-radion"
-  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "hacker"
 name = "zola-hacker"
 desc = "Hacker is a theme for Zola"
@@ -829,6 +829,61 @@ theme = "hook"
   js = "const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "apollo"
+name = "apollo"
+desc = "Modern and minimalistic blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+
+### Installation{#h-install-apollo}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/not-matthias/apollo.git themes/apollo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/not-matthias/apollo.git themes/apollo
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "apollo"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
+
+### Info{#h-info-apollo}
+- **Author**: [not-matthias](https://github.com/not-matthias)
+- **License**: MIT
+- **Homepage**: <https://github.com/not-matthias/apollo>
+- **Offic. Live Demo**: <https://not-matthias.github.io/apollo>
+- **Min Zola version**: 0.14.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/not-matthias/apollo"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-apollo"
+  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-apollo"
+  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "mo8it-mod"
 name = "mo8it-mod"
 desc = "mo8it-mod is a Zola theme based on the templates on mo8it.com"
@@ -883,61 +938,6 @@ theme = "mo8it-mod"
   name = "Info"
   url = "#info-mo8it-mod"
   js = "const b=document.getElementById('info-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "apollo"
-name = "apollo"
-desc = "Modern and minimalistic blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
-
-### Installation{#h-install-apollo}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/not-matthias/apollo.git themes/apollo
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/not-matthias/apollo.git themes/apollo
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "apollo"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
-
-### Info{#h-info-apollo}
-- **Author**: [not-matthias](https://github.com/not-matthias)
-- **License**: MIT
-- **Homepage**: <https://github.com/not-matthias/apollo>
-- **Offic. Live Demo**: <https://not-matthias.github.io/apollo>
-- **Min Zola version**: 0.14.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/not-matthias/apollo"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-apollo"
-  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-apollo"
-  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "academic-paper"
@@ -1334,6 +1334,62 @@ theme = "sandbox"
   js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "anatole-zola"
+name = "anatole-zola"
+desc = "A port of farbox-theme-Anatole for zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anatole-zola'></summary>
+
+### Installation{#h-install-anatole-zola}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "anatole-zola"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anatole-zola'></summary>
+
+### Info{#h-info-anatole-zola}
+- **Author**: [longfangsong](https://github.com/longfangsong)
+- **License**: MIT
+- **Homepage**: <https://github.com/longfangsong/anatole-zola>
+- **Offic. Live Demo**: <https://longfangsong.github.io>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/hi-caicai/farbox-theme-Anatole>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/anatole-zola/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/longfangsong/anatole-zola"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-anatole-zola"
+  js = "const b=document.getElementById('install-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-anatole-zola"
+  js = "const b=document.getElementById('info-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "silk"
 name = "silk"
 desc = "A modern, simple, clean blog theme for Zola."
@@ -1605,3 +1661,58 @@ theme = "doc"
   name = "Info"
   url = "#info-doc"
   js = "const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "daisy"
+name = "Daisy"
+desc = "Theme for a project portfolio (based on Tailwind CSS)."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
+
+### Installation{#h-install-daisy}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "daisy"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
+
+### Info{#h-info-daisy}
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://github.com/awinterstein/zola-theme-daisy>
+- **Offic. Live Demo**: <https://zola-daisy.netlify.app>
+- **Min Zola version**: 0.9.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/daisy/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/awinterstein/zola-theme-daisy"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-daisy"
+  js = "const b=document.getElementById('install-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-daisy"
+  js = "const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"

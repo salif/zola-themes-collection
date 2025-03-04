@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-theme="winterstein-light">
+
+<head>
+    <title>Daisy Theme</title>
+
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <!-- stylesheets -->
+    <link href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css" rel="stylesheet" integrity="sha384-YWJUvL6HTYZXRVLEQnDvIwg4RmW69yB9rsMDjmGWs/1iptRyMaiR3nly3oF6bYuN">
+
+    
+    <!-- java script for setting theme as saved in local storage (needs to be inline to avoid flicker) -->
+    <script>
+        
+        // select default theme based on preferred color scheme (as set in the browser)
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            default_theme = 'winterstein-dark'
+        } else {
+            default_theme = 'winterstein-light'
+        }
+
+        // try to get theme from local storage and set it (or the default theme) to the HTML element
+        const theme = localStorage.getItem('theme') || default_theme;
+        document.documentElement.setAttribute("data-theme", theme);
+
+        // execute code after the DOM content was loaded
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // select theme at the theme selector (if it is present in the HTML code)
+            var btnEl = document.querySelector("[data-set-theme='" + theme.toString() + "']");
+            if (btnEl) {
+                btnEl.classList.add("btn-active")
+                btnEl.classList.add("btn-primary")
+            }
+        })
+    </script>
+
+    <script>
+        // execute code after the DOM content was loaded
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // unhide elements that only work with java script being enabled (they are marked with 'needs-script')
+            document.querySelectorAll("[needs-script]").forEach(el => {
+                el.classList.remove("hidden")
+            })
+        })
+    </script>
+</head>
+
+<body class="h-screen">
+    <div class="drawer min-h-full">
+        <input id="main-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex min-h-full flex-col"><!-- to expand over the full screen even on short pages -->
+            <header class="navbar sticky top-0 z-50 text-primary-content bg-primary shadow-sm opacity-93">
+                <div class="navbar-start">
+                    <a class="btn btn-ghost hover:bg-primary-content hover:text-primary text-xl" href="/">Daisy Theme</a>
+                </div>
+                <div class="navbar-center hidden lg:visible lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-x-2">
+                        
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    
+<div needs-script class="dropdown dropdown-end hidden">
+    <div title="Theme" tabindex="0" role="button" class="btn btn-ghost rounded-field hover:bg-primary-content hover:text-primary"><svg role="img" aria-label="Themes" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 " viewBox="0 0 16 16">
+    <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a3 3 0 0 1-2.121-.879A3 3 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M15 15v-4H9.258l-4.015 4zM0 .5v12.495zm0 12.495V13z"/>
+</svg>
+</div>
+    <ul data-choose-theme tabindex="0" class="dropdown-content bg-base-200 text-base-content rounded-box z-1 mt-4 w-52 h-120 p-2 shadow-sm overflow-scroll">
+        <li><button class="btn btn-ghost w-full" data-set-theme="winterstein-light">Winterstein Light</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="winterstein-dark">Winterstein Dark</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="light">Light</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dark">Dark</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cupcake">Cupcake</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="bumblebee">Bumblebee</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="emerald">Emerald</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="corporate">Corporate</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="synthwave">Synthwave</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="retro">Retro</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cyberpunk">Cyberpunk</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="valentine">Valentine</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="halloween">Halloween</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="garden">Garden</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="forest">Forest</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="aqua">Aqua</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="lofi">Lofi</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="pastel">Pastel</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="fantasy">Fantasy</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="wireframe">Wireframe</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="black">Black</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="luxury">Luxury</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dracula">Dracula</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cmyk">CMYK</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="autumn">Autumn</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="business">Business</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="acid">Acid</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="lemonade">Lemonade</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="night">Night</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="coffee">Coffee</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="winter">Winter</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dim">Dim</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="nord">Nord</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="sunset">Sunset</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="caramellatte">Caramellatte</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="abyss">Abyss</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="silk">Silk</button></li>
+    </ul>
+</div>
+
+                    
+                </div>
+            </header>
+
+            <main class="flex-1 flex justify-center">
+                <div class="max-w-3xl">
+                    
+<h1>Daisy Theme</h1>
+
+
+                </div>
+            </main>
+
+            <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded pt-4">
+                
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </nav>
+                
+            </footer>
+        </div>
+
+        <div class="drawer-side z-60">
+            <label for="main-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-200 min-h-full w-80 p-4">
+                
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG"></script>
+</body>
