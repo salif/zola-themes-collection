@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  <title>404</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a210;
+    --text-color: #3C4043;
+    --text-pale-color: #a3a5a9;
+    --bg-color: #ffffff;
+    --highlight-mark-color: #5f75b035;
+    --blockquote-color: #8e8d91;
+
+    --callout-note-color: #5871a2;
+    --callout-important-color: #8062b0;
+    --callout-warning-color: #936e51;
+    --callout-alert-color: #bc5252;
+    --callout-question-color: #477389;
+    --callout-tip-color: #3c8460;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #5d77ac;
+    --primary-pale-color: #5d77ac20;
+    --text-color: #9197a5;
+    --text-pale-color: #656a74;
+    --bg-color: #18191b;
+    --highlight-mark-color: #5f75b035;
+    --blockquote-color: #747983;
+
+    --callout-note-color: #5d77ac;
+    --callout-important-color: #8062b0;
+    --callout-warning-color: #936e51;
+    --callout-alert-color: #bc5252;
+    --callout-question-color: #477389;
+    --callout-tip-color: #3c8460;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 56px;
+    --homepage-font-size: 16px;
+    --homepage-line-height: 1.75;
+    --paragraph-font-size: 16px;
+    --paragraph-line-height: 1.75;
+    --aside-font-size: 15px;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-pale-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+</style>
+
+  <link rel="stylesheet" href="/main.css">
+  
+  
+</head>
+
+<body class="not-found">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = '/hl-dark.css';
+    }
+  </script>
+  
+  
+<div class="wrapper">
+  <p class="error">
+    <span>404</span>
+    <span>Not Found</span>
+  </p>
+  <a class="instant" href="/">« back to home »</a>
+</div>
+
+  
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
