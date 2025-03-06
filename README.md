@@ -55,7 +55,6 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 ### Broken links if base url contains a subpath
 
 - [zolarwind](https://github.com/thomasweitzel/zolarwind): 76 commits
-- [serene](https://github.com/isunjn/serene): 324 commits
 - [blow](https://github.com/tchartron/blow): 472 commits
 - [feather](https://github.com/piedoom/feather): 81 commits
 - [slightknack](https://github.com/slightknack/slightknack.dev): 230 commits

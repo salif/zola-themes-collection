@@ -8,6 +8,7 @@ const demoRepoThemes = new Map([
 	["linkita", "https://codeberg.org/salif/linkita.git"],
 	["tabi", "https://github.com/welpo/tabi.git"],
 	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"],
+	["serene", "https://github.com/isunjn/serene.git"],
 	["daisy", "https://github.com/awinterstein/zola-theme-daisy.git"],
 ])
 
