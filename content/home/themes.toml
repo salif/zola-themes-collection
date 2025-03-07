@@ -276,6 +276,61 @@ theme = "researchlab"
   js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "project-portfolio"
+name = "Project Portfolio"
+desc = "Theme for a project portfolio (based on Tailwind CSS)."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+
+### Installation{#h-install-project-portfolio}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "project-portfolio"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+
+### Info{#h-info-project-portfolio}
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
+- **Offic. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
+- **Min Zola version**: 0.9.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/awinterstein/zola-theme-project-portfolio"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-project-portfolio"
+  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-project-portfolio"
+  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "radion"
 name = "radion"
 desc = "A sleek, modern blog theme."
@@ -331,14 +386,14 @@ theme = "radion"
   js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "project-portfolio"
-name = "Project Portfolio"
-desc = "Theme for a project portfolio (based on Tailwind CSS)."
+theme = "bearplus"
+name = "Bear+"
+desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
 
-### Installation{#h-install-project-portfolio}
+### Installation{#h-install-bearplus}
 The following instructions are not official so may be incomplete.
 They should work for most themes in this collection.
 
@@ -346,44 +401,155 @@ They should work for most themes in this collection.
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+git submodule add https://github.com/salcc/zola-bearplus.git themes/bearplus
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
+git clone https://github.com/salcc/zola-bearplus.git themes/bearplus
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "project-portfolio"
+theme = "bearplus"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
 
-### Info{#h-info-project-portfolio}
-- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+### Info{#h-info-bearplus}
+- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
 - **License**: MIT
-- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
-- **Offic. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
-- **Min Zola version**: 0.9.0
+- **Homepage**: <https://theme.marçal.cc>
+- **Offic. Live Demo**: <https://theme.marçal.cc>
+- **Min Zola version**: 0.17.2
+- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+  url = "https://salif.github.io/zola-themes-collection/demo/bearplus/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/awinterstein/zola-theme-project-portfolio"
+  url = "https://github.com/salcc/zola-bearplus"
 
   [[project.links]]
   name = "Install"
-  url = "#install-project-portfolio"
-  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-bearplus"
+  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-project-portfolio"
-  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-bearplus"
+  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "hook"
+name = "Hook"
+desc = "Clean and simple personal site/blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
+
+### Installation{#h-install-hook}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/InputUsername/zola-hook.git themes/hook
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/InputUsername/zola-hook.git themes/hook
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "hook"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
+
+### Info{#h-info-hook}
+- **Author**: [Koen Bolhuis](https://koen.bolhu.is)
+- **License**: MIT
+- **Homepage**: <https://github.com/InputUsername/zola-hook>
+- **Offic. Live Demo**: <https://inputusername.github.io/zola-hook/>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/hook/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/InputUsername/zola-hook"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-hook"
+  js = "const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-hook"
+  js = "const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "apollo"
+name = "apollo"
+desc = "Modern and minimalistic blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+
+### Installation{#h-install-apollo}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/not-matthias/apollo.git themes/apollo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/not-matthias/apollo.git themes/apollo
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "apollo"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
+
+### Info{#h-info-apollo}
+- **Author**: [not-matthias](https://github.com/not-matthias)
+- **License**: MIT
+- **Homepage**: <https://github.com/not-matthias/apollo>
+- **Offic. Live Demo**: <https://not-matthias.github.io/apollo>
+- **Min Zola version**: 0.14.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/not-matthias/apollo"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-apollo"
+  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-apollo"
+  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "kita"
@@ -718,172 +884,6 @@ theme = "hacker"
   js = "const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "bearplus"
-name = "Bear+"
-desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
-
-### Installation{#h-install-bearplus}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/salcc/zola-bearplus.git themes/bearplus
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/salcc/zola-bearplus.git themes/bearplus
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "bearplus"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
-
-### Info{#h-info-bearplus}
-- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
-- **License**: MIT
-- **Homepage**: <https://theme.marçal.cc>
-- **Offic. Live Demo**: <https://theme.marçal.cc>
-- **Min Zola version**: 0.17.2
-- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/bearplus/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/salcc/zola-bearplus"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-bearplus"
-  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-bearplus"
-  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "hook"
-name = "Hook"
-desc = "Clean and simple personal site/blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
-
-### Installation{#h-install-hook}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/InputUsername/zola-hook.git themes/hook
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/InputUsername/zola-hook.git themes/hook
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "hook"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
-
-### Info{#h-info-hook}
-- **Author**: [Koen Bolhuis](https://koen.bolhu.is)
-- **License**: MIT
-- **Homepage**: <https://github.com/InputUsername/zola-hook>
-- **Offic. Live Demo**: <https://inputusername.github.io/zola-hook/>
-- **Min Zola version**: 0.19.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/hook/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/InputUsername/zola-hook"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-hook"
-  js = "const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-hook"
-  js = "const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "apollo"
-name = "apollo"
-desc = "Modern and minimalistic blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
-
-### Installation{#h-install-apollo}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/not-matthias/apollo.git themes/apollo
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/not-matthias/apollo.git themes/apollo
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "apollo"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
-
-### Info{#h-info-apollo}
-- **Author**: [not-matthias](https://github.com/not-matthias)
-- **License**: MIT
-- **Homepage**: <https://github.com/not-matthias/apollo>
-- **Offic. Live Demo**: <https://not-matthias.github.io/apollo>
-- **Min Zola version**: 0.14.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/not-matthias/apollo"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-apollo"
-  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-apollo"
-  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "mo8it-mod"
 name = "mo8it-mod"
 desc = "mo8it-mod is a Zola theme based on the templates on mo8it.com"
@@ -1159,14 +1159,14 @@ theme = "devnzt"
   js = "const b=document.getElementById('info-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "terminimal"
-name = "terminimal"
-desc = "A simple, minimal retro theme"
+theme = "daisy"
+name = "Daisy"
+desc = "Theme for a project portfolio (based on Tailwind CSS)."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
 
-### Installation{#h-install-terminimal}
+### Installation{#h-install-daisy}
 The following instructions are not official so may be incomplete.
 They should work for most themes in this collection.
 
@@ -1174,45 +1174,155 @@ They should work for most themes in this collection.
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+git submodule add https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+git clone https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "terminimal"
+theme = "daisy"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
 
-### Info{#h-info-terminimal}
-- **Author**: [Paweł Romanowski](https://github.com/pawroman)
+### Info{#h-info-daisy}
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
 - **License**: MIT
-- **Homepage**: <https://github.com/pawroman/zola-theme-terminimal>
-- **Offic. Live Demo**: <https://pawroman.github.io/zola-theme-terminimal/>
-- **Min Zola version**: 0.11.0
-- **Original**: <https://github.com/panr/hugo-theme-terminal>
+- **Homepage**: <https://github.com/awinterstein/zola-theme-daisy>
+- **Offic. Live Demo**: <https://zola-daisy.netlify.app>
+- **Min Zola version**: 0.9.0
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/terminimal/"
+  url = "https://salif.github.io/zola-themes-collection/demo/daisy/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/pawroman/zola-theme-terminimal"
+  url = "https://github.com/awinterstein/zola-theme-daisy"
 
   [[project.links]]
   name = "Install"
-  url = "#install-terminimal"
-  js = "const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-daisy"
+  js = "const b=document.getElementById('install-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-terminimal"
-  js = "const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-daisy"
+  js = "const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "zola-minimal"
+name = "Minimal"
+desc = "📚 Minimal is a Zola port of the Jekyll theme with the same name."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-minimal'></summary>
+
+### Installation{#h-install-zola-minimal}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "zola-minimal"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-minimal'></summary>
+
+### Info{#h-info-zola-minimal}
+- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/zola-minimal/>
+- **Offic. Live Demo**: <https://zola-minimal.vercel.app/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/pages-themes/minimal>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zola-minimal/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/semanticdata/zola-minimal"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zola-minimal"
+  js = "const b=document.getElementById('install-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zola-minimal"
+  js = "const b=document.getElementById('info-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "zola-futu"
+name = "futu"
+desc = "Futu Theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-futu'></summary>
+
+### Installation{#h-install-zola-futu}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/inhzus/zola-futu.git themes/zola-futu
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/inhzus/zola-futu.git themes/zola-futu
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "zola-futu"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-futu'></summary>
+
+### Info{#h-info-zola-futu}
+- **Author**: [inhzus](https://inhzus.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/inhzus/zola-futu/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/yuanji-dev/futu>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/zola-futu/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/inhzus/zola-futu"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zola-futu"
+  js = "const b=document.getElementById('install-zola-futu').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zola-futu"
+  js = "const b=document.getElementById('info-zola-futu').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "zluinav"
@@ -1445,6 +1555,62 @@ theme = "silk"
   js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "terminimal"
+name = "terminimal"
+desc = "A simple, minimal retro theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+
+### Installation{#h-install-terminimal}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "terminimal"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
+
+### Info{#h-info-terminimal}
+- **Author**: [Paweł Romanowski](https://github.com/pawroman)
+- **License**: MIT
+- **Homepage**: <https://github.com/pawroman/zola-theme-terminimal>
+- **Offic. Live Demo**: <https://pawroman.github.io/zola-theme-terminimal/>
+- **Min Zola version**: 0.11.0
+- **Original**: <https://github.com/panr/hugo-theme-terminal>
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/terminimal/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/pawroman/zola-theme-terminimal"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-terminimal"
+  js = "const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-terminimal"
+  js = "const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "oceanic-zen"
 name = "Oceanic Zen"
 desc = "Minimalistic blog theme"
@@ -1661,117 +1827,6 @@ theme = "doc"
   name = "Info"
   url = "#info-doc"
   js = "const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "daisy"
-name = "Daisy"
-desc = "Theme for a project portfolio (based on Tailwind CSS)."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
-
-### Installation{#h-install-daisy}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "daisy"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
-
-### Info{#h-info-daisy}
-- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
-- **License**: MIT
-- **Homepage**: <https://github.com/awinterstein/zola-theme-daisy>
-- **Offic. Live Demo**: <https://zola-daisy.netlify.app>
-- **Min Zola version**: 0.9.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/daisy/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/awinterstein/zola-theme-daisy"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-daisy"
-  js = "const b=document.getElementById('install-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-daisy"
-  js = "const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "zola-minimal"
-name = "Minimal"
-desc = "📚 Minimal is a Zola port of the Jekyll theme with the same name."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-minimal'></summary>
-
-### Installation{#h-install-zola-minimal}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "zola-minimal"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-minimal'></summary>
-
-### Info{#h-info-zola-minimal}
-- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
-- **License**: MIT
-- **Homepage**: <https://github.com/semanticdata/zola-minimal/>
-- **Offic. Live Demo**: <https://zola-minimal.vercel.app/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/pages-themes/minimal>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-minimal/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/semanticdata/zola-minimal"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zola-minimal"
-  js = "const b=document.getElementById('install-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zola-minimal"
-  js = "const b=document.getElementById('info-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "serene"
