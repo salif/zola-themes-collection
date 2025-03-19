@@ -1813,7 +1813,7 @@ They should work for most themes in this collection.</p>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.winterstein.biz">Adrian Winterstein</a></li>
 <li><strong>License</strong>: MIT</li>
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/awinterstein/zola-theme-daisy">https://github.com/awinterstein/zola-theme-daisy</a></li>
-<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://zola-daisy.netlify.app">https://zola-daisy.netlify.app</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://zola-daisy.winterstein.biz">https://zola-daisy.winterstein.biz</a></li>
 <li><strong>Min Zola version</strong>: 0.9.0</li>
 </ul>
 </details>
@@ -1845,6 +1845,85 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-daisy"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">book</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-book.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-book.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-book.webp"
+        alt="Screenshot of the book theme" width="1360" height="765" />
+    </picture>
+    <p>A book theme inspired from GitBook&#x2F;mdBook</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-book'></summary>
+<h3 id="h-install-book">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/getzola/book.git themes/book
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/getzola/book.git themes/book
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">book</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-book'></summary>
+<h3 id="h-info-book">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.vincentprouillet.com">Vincent Prouillet</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/getzola/book">https://github.com/getzola/book</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://getzola.github.io/book/">https://getzola.github.io/book/</a></li>
+<li><strong>Min Zola version</strong>: 0.17.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/book/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/getzola/book"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-book').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-book"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-book').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-book"
         >Info</a
       >
     </div>
@@ -2329,6 +2408,86 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-silk"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Seje2</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-Seje2.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-Seje2.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-Seje2.webp"
+        alt="Screenshot of the Seje2 theme" width="1360" height="765" />
+    </picture>
+    <p>A beautiful zola theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-Seje2'></summary>
+<h3 id="h-install-Seje2">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/eatradish/Seje2.git themes/Seje2
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/eatradish/Seje2.git themes/Seje2
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">Seje2</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-Seje2'></summary>
+<h3 id="h-info-Seje2">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://blog.utopiosphere.net">Mag Mell</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/eatradish/Seje2">https://github.com/eatradish/Seje2</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://blog.miraclemilk.me/Seje2">https://blog.miraclemilk.me/Seje2</a></li>
+<li><strong>Min Zola version</strong>: 0.15.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://www.github.com/mdo/hyde">https://www.github.com/mdo/hyde</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/Seje2/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://github.com/eatradish/Seje2"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-Seje2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-Seje2"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-Seje2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-Seje2"
         >Info</a
       >
     </div>

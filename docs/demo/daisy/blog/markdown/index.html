@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en" data-theme="winterstein-light">
+
+<head>
+    <title>Markdown | Daisy Theme</title>
+
+    <!-- meta data -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Overview on the supported markdown, also showing how it is rendered by the theme." />
+
+    <!-- stylesheets, fonts, feeds -->
+    
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-light.css" /> <!--media="(prefers-color-scheme: light)" />-->
+    
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css?wLZiK9" integrity="sha384-wLZiK9d/rvLfi27fkE+07nReVm4nPjuY419UREGHHvbPcIEV+hZapP3iKJWRySNn">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://salif.github.io/zola-themes-collection/demo/daisy//atom.xml">
+
+    <!-- favicon -->
+    <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/daisy//favicon.svg" type="image/svg+xml">
+
+    
+    <!-- java script for setting theme as saved in local storage (needs to be inline to avoid flicker) -->
+    <script>
+        
+        // select default theme based on preferred color scheme (as set in the browser)
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            default_theme = 'winterstein-dark'
+        } else {
+            default_theme = 'winterstein-light'
+        }
+
+        // try to get theme from local storage and set it (or the default theme) to the HTML element
+        const theme = localStorage.getItem('theme') || default_theme;
+        document.documentElement.setAttribute("data-theme", theme);
+
+        // execute code after the DOM content was loaded
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // select theme at the theme selector (if it is present in the HTML code)
+            var btnEl = document.querySelector("[data-set-theme='" + theme.toString() + "']");
+            if (btnEl) {
+                btnEl.classList.add("btn-active")
+                btnEl.classList.add("btn-primary")
+            }
+        })
+    </script>
+
+    <script>
+        // execute code after the DOM content was loaded
+        document.addEventListener("DOMContentLoaded", function (event) {
+            // unhide elements that only work with java script being enabled (they are marked with 'needs-script')
+            document.querySelectorAll("[needs-script]").forEach(el => {
+                el.classList.remove("hidden")
+            })
+        })
+    </script>
+</head>
+
+<body class="h-screen">
+    <div class="@container drawer min-h-full">
+        <input id="main-drawer" type="checkbox" class="drawer-toggle lg:hidden" />
+        <div class="drawer-content flex min-h-full flex-col"><!-- to expand over the full screen even on short pages -->
+            <header class="navbar sticky top-0 z-50 text-primary-content bg-primary shadow-sm opacity-93">
+                <div class="navbar-start">
+                    <label for="main-drawer" aria-label="open sidebar" class="btn btn-square btn-ghost hover:bg-primary-content hover:text-primary lg:hidden">
+                        <svg role="img" aria-label="List" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 h-6 w-6" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+</svg>
+
+                    </label>
+                    <a class="btn btn-ghost hover:bg-primary-content hover:text-primary text-xl" href="/">Daisy Theme</a>
+                </div>
+                <div class="navbar-center hidden lg:visible lg:flex">
+                    <ul class="menu menu-horizontal px-1 gap-x-2">
+                        
+                        
+                        <li><a class="hover:bg-primary-content hover:text-primary no-underline px-3 rounded-md" href="https://salif.github.io/zola-themes-collection/demo/daisy//blog">Posts</a></li>
+                        
+                        <li><a class="hover:bg-primary-content hover:text-primary no-underline px-3 rounded-md" href="https://salif.github.io/zola-themes-collection/demo/daisy//tags">Tags</a></li>
+                        
+                        <li><a class="hover:bg-primary-content hover:text-primary no-underline px-3 rounded-md" href="https://salif.github.io/zola-themes-collection/demo/daisy//movies">Movies</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    
+<div needs-script class="dropdown dropdown-end hidden">
+    <div title="Theme" tabindex="0" role="button" class="btn btn-ghost rounded-field hover:bg-primary-content hover:text-primary"><svg role="img" aria-label="Themes" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 " viewBox="0 0 16 16">
+    <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a3 3 0 0 1-2.121-.879A3 3 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0M15 15v-4H9.258l-4.015 4zM0 .5v12.495zm0 12.495V13z"/>
+</svg>
+</div>
+    <ul data-choose-theme tabindex="0" class="dropdown-content bg-base-200 text-base-content rounded-box z-1 mt-4 w-52 h-120 p-2 shadow-sm overflow-scroll">
+        <li><button class="btn btn-ghost w-full" data-set-theme="winterstein-light">Winterstein Light</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="winterstein-dark">Winterstein Dark</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="light">Light</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dark">Dark</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cupcake">Cupcake</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="bumblebee">Bumblebee</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="emerald">Emerald</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="corporate">Corporate</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="synthwave">Synthwave</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="retro">Retro</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cyberpunk">Cyberpunk</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="valentine">Valentine</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="halloween">Halloween</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="garden">Garden</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="forest">Forest</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="aqua">Aqua</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="lofi">Lofi</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="pastel">Pastel</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="fantasy">Fantasy</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="wireframe">Wireframe</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="black">Black</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="luxury">Luxury</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dracula">Dracula</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="cmyk">CMYK</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="autumn">Autumn</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="business">Business</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="acid">Acid</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="lemonade">Lemonade</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="night">Night</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="coffee">Coffee</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="winter">Winter</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="dim">Dim</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="nord">Nord</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="sunset">Sunset</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="caramellatte">Caramellatte</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="abyss">Abyss</button></li>
+        <li><button class="btn btn-ghost w-full" data-set-theme="silk">Silk</button></li>
+    </ul>
+</div>
+
+                    
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" title="Change Language" role="button" class="btn btn-ghost rounded-field hover:bg-primary-content hover:text-primary"><svg role="img" aria-label="Translate" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 " viewBox="0 0 16 16">
+    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+</svg>
+</div>
+                        <ul tabindex="0" class="dropdown-content bg-base-200 text-base-content rounded-box z-1 mt-4 w-52 p-2 shadow-sm overflow-scroll">
+                            <li><button class="btn btn-active btn-primary w-full">English</button></li>
+                                
+                                    
+                                        
+                                    
+                                
+                                    
+                                
+                                
+                            
+
+                            <li><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;blog&#x2F;markdown&#x2F;" class="btn btn-ghost w-full">Deutsch</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <label tabindex="0" class="input text-base-content">
+                            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                            <input id="search" type="search" class="grow" placeholder="Search" />
+                            <kbd class="kbd kbd-sm max-md:hidden">⌘</kbd>
+                            <kbd class="kbd kbd-sm max-md:hidden">K</kbd>
+                        </label>
+                        <div tabindex="0" class="search-results dropdown-content menu hidden bg-base-200 text-base-content rounded-box z-1 mt-4 p-2 @max-lg:w-sm @lg:w-lg shadow-sm overflow-scroll">
+                            <div class="search-results__items"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </header>
+
+            <main class="flex-1 flex justify-center">
+                <div class="@container flex-col flex-1 shrink max-w-4xl">
+                    
+
+
+<div class="breadcrumbs text-sm">
+    <ul>
+        <li><a href="https://salif.github.io/zola-themes-collection/demo/daisy//">Home</a></li>
+        
+        
+        
+        
+        
+        
+        <li><a class="breadcrumb-path" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;blog&#x2F;">Posts</a></li>
+        
+        <li><a class="breadcrumb-path active" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;blog&#x2F;markdown&#x2F;">Markdown</a></li>
+    </ul>
+</div>
+
+
+<h1>Markdown</h1>
+
+<!-- Metadata (date and authors) -->
+<div class="flex flex-wrap space-x-6 pl-1 mb-2">
+    
+    <span class="flex items-center whitespace-nowrap">
+        <svg role="img" aria-label="Calendar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
+    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+</svg>
+
+        <span class=""><time datetime="2025-03-07"> 7-Mar-2025</time></span>
+    </span>
+    
+
+    
+    <span class="flex items-center whitespace-nowrap">
+        <svg role="img" aria-label="Person" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
+    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+</svg>
+
+        <span>Adrian Winterstein</span>
+    </span>
+    
+</div>
+
+<p>The following is supported to be used in the markdown files of any website using the Daisy theme.</p>
+<h2 id="headings">Headings</h2>
+<p>All six HTML heading types <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> are supported:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-1 z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">#</span> </span><span class="z-markup z-heading z-1 z-markdown"><span class="z-entity z-name z-section z-markdown">H1</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-2 z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">##</span> </span><span class="z-markup z-heading z-2 z-markdown"><span class="z-entity z-name z-section z-markdown">H2</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">###</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">H3</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">####</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">H4</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">#####</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">H5</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">######</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">H6</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span></code></pre>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<br />
+<h2 id="text-formatting">Text Formatting</h2>
+<p>Emphasis can be added to text like this:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">Text can be <span class="z-markup z-bold z-markdown"><span class="z-punctuation z-definition z-bold z-begin z-markdown">**</span>strong<span class="z-punctuation z-definition z-bold z-end z-markdown">**</span></span>, <span class="z-markup z-italic z-markdown"><span class="z-punctuation z-definition z-italic z-begin z-markdown">*</span>italic<span class="z-punctuation z-definition z-italic z-end z-markdown">*</span></span>, <span class="z-markup z-bold z-markdown"><span class="z-punctuation z-definition z-bold z-begin z-markdown">**</span><span class="z-markup z-italic z-markdown"><span class="z-punctuation z-definition z-italic z-begin z-markdown">*</span></span></span><span class="z-markup z-bold z-markdown"><span class="z-markup z-italic z-markdown">strong <span class="z-meta z-other z-valid-ampersand z-markdown">&amp;</span> italic</span><span class="z-markup z-italic z-markdown"><span class="z-punctuation z-definition z-italic z-end z-markdown">*</span></span><span class="z-punctuation z-definition z-bold z-end z-markdown">**</span></span>,
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">u</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>underlined<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">u</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>, <span class="z-markup z-strikethrough z-markdown-gfm"><span class="z-punctuation z-definition z-strikethrough z-begin z-markdown">~</span>striked through<span class="z-punctuation z-definition z-strikethrough z-end z-markdown">~</span></span> or <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">mark</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>highlighted<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">mark</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>.
+</span></span></code></pre>
+<p>Text can be <strong>strong</strong>, <em>italic</em>, <em><strong>strong &amp; italic</strong></em>,
+<u>underlined</u>, <del>striked through</del> or <mark>highlighted</mark>.</p>
+<p>It is also possible to use subscripts and superscripts:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">y = a<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>0<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span> + a<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>1<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>x + a<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>2<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">sub</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>x<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">sup</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>2<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">sup</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></span></code></pre>
+<p>y = a<sub>0</sub> + a<sub>1</sub>x + a<sub>2</sub>x<sup>2</sup></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>Blockquotes without citation can be created like that:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-quote z-markdown"><span class="z-punctuation z-definition z-blockquote z-markdown">&gt;</span> Here is the <span class="z-markup z-bold z-markdown"><span class="z-punctuation z-definition z-bold z-begin z-markdown">**</span>text<span class="z-punctuation z-definition z-bold z-end z-markdown">**</span></span> of the quote. <span class="z-meta z-hard-line-break z-markdown"><span class="z-constant z-character z-escape z-markdown">\</span>
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-quote z-markdown"></span><span class="z-markup z-quote z-markdown"><span class="z-punctuation z-definition z-blockquote z-markdown">&gt;</span> And here is a second line.
+</span></span></span></code></pre>
+<blockquote>
+<p>Here is the <strong>text</strong> of the quote. <br />
+And here is a second line.</p>
+</blockquote>
+<p>And a citation can be added this way:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-quote z-markdown"><span class="z-punctuation z-definition z-blockquote z-markdown">&gt;</span> So long, and thanks for all the fish. <span class="z-meta z-hard-line-break z-markdown"><span class="z-constant z-character z-escape z-markdown">\</span>
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-quote z-markdown"></span><span class="z-markup z-quote z-markdown"><span class="z-punctuation z-definition z-blockquote z-markdown">&gt;</span> ― &lt;cite&gt;Douglas Adams, The Hitchhiker’s Guide to the Galaxy<span class="z-meta z-link z-reference z-footnote z-markdown-extra"><span class="z-punctuation z-definition z-link z-begin z-markdown">[^</span><span class="z-meta z-link z-reference z-literal z-footnote-id z-markdown">1</span><span class="z-punctuation z-definition z-link z-end z-markdown">]</span></span>&lt;/cite&gt;
+</span></span></span></code></pre>
+<p>With the target of the citation to be added where it is supposed to appear (e.g., on the bottom of this example page):</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-link z-reference z-def z-footnote z-markdown-extra"><span class="z-punctuation z-definition z-constant z-begin z-markdown">[</span><span class="z-entity z-name z-reference z-link z-markdown">^1</span><span class="z-punctuation z-definition z-constant z-end z-markdown">]</span><span class="z-punctuation z-separator z-key-value z-markdown">:</span> The message, that was left by the dolphins when they departed earth in the fourth book.
+</span></span></code></pre>
+<blockquote>
+<p>So long, and thanks for all the fish. <br />
+― <cite>Douglas Adams, The Hitchhiker’s Guide to the Galaxy<sup class="footnote-reference"><a href="#1">1</a></sup></cite></p>
+</blockquote>
+<h2 id="lists">Lists</h2>
+<h3 id="ordered-lists">Ordered Lists</h3>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-markup z-list z-numbered z-bullet z-markdown">1<span class="z-punctuation z-definition z-list_item z-markdown">.</span></span><span class="z-markup z-list z-numbered z-markdown"> <span class="z-meta z-paragraph z-list z-markdown">First Item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-numbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-numbered z-bullet z-markdown">2<span class="z-punctuation z-definition z-list_item z-markdown">.</span></span><span class="z-markup z-list z-numbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> Second Item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-numbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-numbered z-bullet z-markdown">3<span class="z-punctuation z-definition z-list_item z-markdown">.</span></span><span class="z-markup z-list z-numbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> Third Item
+</span></span></span></code></pre>
+<ol>
+<li>First Item</li>
+<li>Second Item</li>
+<li>Third Item</li>
+</ol>
+<h3 id="unordered-lists">Unordered Lists</h3>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-markup z-list z-unnumbered z-bullet z-markdown"><span class="z-punctuation z-definition z-list_item z-markdown">*</span></span><span class="z-markup z-list z-unnumbered z-markdown"> <span class="z-meta z-paragraph z-list z-markdown">First unordered item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-unnumbered z-bullet z-markdown"><span class="z-punctuation z-definition z-list_item z-markdown">*</span></span><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> Second unordered item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-unnumbered z-markdown">  </span><span class="z-markup z-list z-unnumbered z-bullet z-markdown"><span class="z-punctuation z-definition z-list_item z-markdown">*</span></span><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> First nested item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-unnumbered z-markdown">  </span><span class="z-markup z-list z-unnumbered z-bullet z-markdown"><span class="z-punctuation z-definition z-list_item z-markdown">*</span></span><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> Second nested item
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"></span></span><span class="z-markup z-list z-unnumbered z-bullet z-markdown"><span class="z-punctuation z-definition z-list_item z-markdown">*</span></span><span class="z-markup z-list z-unnumbered z-markdown"><span class="z-meta z-paragraph z-list z-markdown"> Third unordered item
+</span></span></span></code></pre>
+<ul>
+<li>First unordered item</li>
+<li>Second unordered item
+<ul>
+<li>First nested item</li>
+<li>Second nested item</li>
+</ul>
+</li>
+<li>Third unordered item</li>
+</ul>
+<h2 id="tables">Tables</h2>
+<pre data-lang="markdown<figure>" class="language-markdown<figure> z-code"><code class="language-markdown<figure>" data-lang="markdown<figure>"><span class="z-text z-plain">| First Column    | Second Column    |
+</span><span class="z-text z-plain">| --------------- | ---------------- |
+</span><span class="z-text z-plain">| First Row Left  | First Row Right  |
+</span><span class="z-text z-plain">| Second Row Left | Second Row Right |
+</span><span class="z-text z-plain">| Third Row Left  | Third Row Right  |
+</span><span class="z-text z-plain">| Fourth Row Left | Fourth Row Right |
+</span></code></pre>
+<table><thead><tr><th>First Column</th><th>Second Column</th></tr></thead><tbody>
+<tr><td>First Row Left</td><td>First Row Right</td></tr>
+<tr><td>Second Row Left</td><td>Second Row Right</td></tr>
+<tr><td>Third Row Left</td><td>Third Row Right</td></tr>
+<tr><td>Fourth Row Left</td><td>Fourth Row Right</td></tr>
+</tbody></table>
+<br />
+<p>You can surround large tables with <code>&lt;figure&gt;&lt;/figure&gt;</code> to enable horizontal scrolling:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-meta z-table z-header z-markdown-gfm"><span class="z-punctuation z-separator z-table-cell z-markdown">|</span> First Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Second Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Third Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Fourth Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Fifth Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Sixth Column     <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Seventh Column   <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Eighth Column    <span class="z-punctuation z-separator z-table-cell z-markdown">|</span>
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-meta z-table z-header-separator z-markdown-gfm"><span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">---------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">----------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">---------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">----------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">---------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">----------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">----------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> <span class="z-punctuation z-section z-table-header z-markdown">----------------</span> <span class="z-punctuation z-separator z-table-cell z-markdown">|</span>
+</span><span class="z-meta z-table z-markdown-gfm"></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-meta z-table z-markdown-gfm"><span class="z-punctuation z-separator z-table-cell z-markdown">|</span> First           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Second           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Third           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Fourth           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Fifth           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Sixth            <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Seventh          <span class="z-punctuation z-separator z-table-cell z-markdown">|</span> Eighth           <span class="z-punctuation z-separator z-table-cell z-markdown">|</span>
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-meta z-table z-markdown-gfm"></span></span>
+</span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">figure</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></span></code></pre>
+<figure>
+<table><thead><tr><th>First Column</th><th>Second Column</th><th>Third Column</th><th>Fourth Column</th><th>Fifth Column</th><th>Sixth Column</th><th>Seventh Column</th><th>Eighth Column</th></tr></thead><tbody>
+<tr><td>First</td><td>Second</td><td>Third</td><td>Fourth</td><td>Fifth</td><td>Sixth</td><td>Seventh</td><td>Eighth</td></tr>
+</tbody></table>
+</figure>
+<h2 id="foldable-text">Foldable Text</h2>
+<p>Foldable text is possible with the use of some HTML in the markdown file:</p>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">details</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">    <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">summary</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>The Title<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">summary</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic">    <span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>This is the foldable content.<span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">p</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">details</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<details>
+    <summary>The Title</summary>
+    <p>This is the foldable content.</p>
+</details>
+<h2 id="additional-items">Additional Items</h2>
+<h3 id="abbrevations">Abbrevations</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">abbr</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">title</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>Hypertext Markup Language<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>HTML<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">abbr</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span> tags are used for abbrevations.
+</span></code></pre>
+<p><abbr title="Hypertext Markup Language">HTML</abbr> tags are used for abbrevations.</p>
+<h3 id="keyboard">Keyboard</h3>
+<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Ctrl<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span> + <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Alt<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span> + <span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>Del<span class="z-meta z-tag z-inline z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-inline z-any z-html">kbd</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></code></pre>
+<p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd></p>
+<h3 id="horizontal-line">Horizontal Line</h3>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-meta z-separator z-thematic-break z-markdown"><span class="z-punctuation z-definition z-thematic-break z-markdown">---</span>
+</span></span></span></code></pre>
+<hr />
+<br />
+<p>And at the end of the page, the citation from the blockquote above was added:</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>The message, that was left by the dolphins when they departed earth in the fourth book.</p>
+</div>
+
+
+                </div>
+            </main>
+
+            
+
+            <footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded pt-4">
+                
+                <nav class="grid grid-flow-col gap-4">
+                    
+                    <a class="link link-hover" href="https://salif.github.io/zola-themes-collection/demo/daisy//about">About</a>
+                    
+                    <a class="link link-hover" href="https://salif.github.io/zola-themes-collection/demo/daisy//sitemap.xml">Sitemap</a>
+                    
+                </nav>
+                
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        
+
+
+<a href="https:&#x2F;&#x2F;github.com&#x2F;awinterstein&#x2F;zola-theme-daisy" title="Github" target="_blank"><svg role="img" aria-label="Github" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 mr-2 h-8 w-8" viewBox="0 0 16 16">
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+</svg>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+                        <a href="https://salif.github.io/zola-themes-collection/demo/daisy//atom.xml" title="RSS Feed" target="_blank"><svg role="img" aria-label="Git" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 mr-2 h-8 w-8" viewBox="0 0 16 16">
+    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2m0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2m.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+</svg>
+</a>
+                        
+                    </div>
+                </nav>
+                
+                <aside>
+                    <p>© 2025 <a href="https://www.winterstein.biz">Adrian Winterstein</a> - Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a></p>
+                </aside>
+                
+            </footer>
+        </div>
+
+        <div class="drawer-side z-60">
+            <label for="main-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-200 min-h-full w-80 p-4">
+                
+                
+                <li><a class="link no-underline" href="https://salif.github.io/zola-themes-collection/demo/daisy//blog">Posts</a></li>
+                
+                <li><a class="link no-underline" href="https://salif.github.io/zola-themes-collection/demo/daisy//tags">Tags</a></li>
+                
+                <li><a class="link no-underline" href="https://salif.github.io/zola-themes-collection/demo/daisy//movies">Movies</a></li>
+                
+                
+            </ul>
+        </div>
+
+    </div>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js?gM9XbB" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG" ></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/search.js?f9VC9c" integrity="sha384-f9VC9cWOi7oZUfcv6qrREQQHyq1gZsRq1vqGrbAxTKGR3c4qTRXFEOQudrg+ky0R" lang="en"></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//elasticlunr.min.js?Q8viz7" integrity="sha384-Q8viz7rndi8MSNDtItDgVWNSrCumjepopRMlz2nElkWPRXDQAcfiZGJbrCJVXdtw" ></script>
+
+    
+    
+</body>

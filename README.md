@@ -49,6 +49,7 @@
 - [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
 - [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
+- [Ergo](https://github.com/insipx/Ergo): 115 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -74,6 +75,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
 - [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
 - [zola-scribble](https://github.com/jzbor/zola-scribble): 24 commits
+- [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 4 commits
 
 ### No license that allows me to host a live demo
 

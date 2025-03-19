@@ -10,7 +10,13 @@
     <meta name="description" content="Beispiel- und Demoseite des Daisy-Themas für Zola." />
 
     <!-- stylesheets, fonts, feeds -->
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css?1wioIk" integrity="sha384-1wioIkdjlsSZeyOAXJTTs0kBGyzk5Nr0KA32gVIVK6jWGs7AA4TWKLxtNKhzda6a">
+    
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-light.css" /> <!--media="(prefers-color-scheme: light)" />-->
+    
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css?wLZiK9" integrity="sha384-wLZiK9d/rvLfi27fkE+07nReVm4nPjuY419UREGHHvbPcIEV+hZapP3iKJWRySNn">
+
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://salif.github.io/zola-themes-collection/demo/daisy//de/atom.xml">
 
     <!-- favicon -->
@@ -54,7 +60,7 @@
 </head>
 
 <body class="h-screen">
-    <div class="drawer min-h-full">
+    <div class="@container drawer min-h-full">
         <input id="main-drawer" type="checkbox" class="drawer-toggle lg:hidden" />
         <div class="drawer-content flex min-h-full flex-col"><!-- to expand over the full screen even on short pages -->
             <header class="navbar sticky top-0 z-50 text-primary-content bg-primary shadow-sm opacity-93">
@@ -159,11 +165,11 @@
                                     <path d="m21 21-4.3-4.3"></path>
                                 </g>
                             </svg>
-                            <input id="search" type="search" class="grow" placeholder="Search" />
-                            <kbd class="kbd kbd-sm">⌘</kbd>
-                            <kbd class="kbd kbd-sm">K</kbd>
+                            <input id="search" type="search" class="grow" placeholder="Suchen" />
+                            <kbd class="kbd kbd-sm max-md:hidden">⌘</kbd>
+                            <kbd class="kbd kbd-sm max-md:hidden">K</kbd>
                         </label>
-                        <div tabindex="0" class="search-results dropdown-content menu hidden bg-base-200 text-base-content rounded-box z-1 mt-4 w-120 p-2 shadow-sm overflow-scroll">
+                        <div tabindex="0" class="search-results dropdown-content menu hidden bg-base-200 text-base-content rounded-box z-1 mt-4 p-2 @max-lg:w-sm @lg:w-lg shadow-sm overflow-scroll">
                             <div class="search-results__items"></div>
                         </div>
                     </div>
@@ -172,7 +178,7 @@
             </header>
 
             <main class="flex-1 flex justify-center">
-                <div class="flex-col flex-1 max-w-4xl">
+                <div class="@container flex-col flex-1 shrink max-w-4xl">
                     
 
 <div class="flex flex-col items-center">
@@ -183,61 +189,63 @@
     
     
 
-    <div class="flex flex-wrap gap-4">
-        
-        <div class="card card-border bg-base-200 w-100">
-            <div class="card-body flex-shrink-0">
-                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;poor-things&#x2F;" class="no-underline">
-                    <h2 class="card-title">Poor Things</h2>
-                </a>
-                <!-- Metadata (date and authors) -->
-                <div class="flex flex-wrap space-x-6 pl-1 mb-2">
-                    
-                    <span class="flex items-center whitespace-nowrap">
-                        <svg role="img" aria-label="Calendar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
+    
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+    <div class="card card-border bg-base-200 grow basis-0 max-w-100">
+        <div class="card-body grow">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;poor-things&#x2F;" class="no-underline">
+                <h2 class="card-title">Poor Things</h2>
+            </a>
+            <!-- Metadata (date and authors) -->
+            <div class="flex flex-wrap space-x-6 pl-1 mb-2">
+                
+                <span class="flex items-center whitespace-nowrap">
+                    <svg role="img" aria-label="Calendar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
     <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
 </svg>
 
-                        <span><time datetime="2023-09-01">01. September 2023</time></span>
-                    </span>
-                    
+                    <span><time datetime="2023-09-01">01. September 2023</time></span>
+                </span>
+                
 
-                    
-                </div>
-                <p>Poor Things ist ein britischer Spielfilm von Giorgos Lanthimos aus dem Jahr 2023. Basierend auf dem gleichnamigen Science-Fantasy-Roman von Alasdair Gray.</p>
-                <div class="card-actions justify-end">
-                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;poor-things&#x2F;" class="btn btn-primary">Read</a>
-                </div>
+                
+            </div>
+            <p>Poor Things ist ein britischer Spielfilm von Giorgos Lanthimos aus dem Jahr 2023. Basierend auf dem gleichnamigen Science-Fantasy-Roman von Alasdair Gray.</p>
+            <div class="card-actions justify-end">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;poor-things&#x2F;" class="btn btn-primary">Read</a>
             </div>
         </div>
-        
-        <div class="card card-border bg-base-200 w-100">
-            <div class="card-body flex-shrink-0">
-                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;oppenheimer&#x2F;" class="no-underline">
-                    <h2 class="card-title">Oppenheimer</h2>
-                </a>
-                <!-- Metadata (date and authors) -->
-                <div class="flex flex-wrap space-x-6 pl-1 mb-2">
-                    
-                    <span class="flex items-center whitespace-nowrap">
-                        <svg role="img" aria-label="Calendar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
-    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
-</svg>
-
-                        <span><time datetime="2023-07-11">11. Juli 2023</time></span>
-                    </span>
-                    
-
-                    
-                </div>
-                <p>Oppenheimer ist ein biografischer Historienfilm von Christopher Nolan, der die Lebensgeschichte des „Vaters der Atombombe“, J. Robert Oppenheimer, behandelt.</p>
-                <div class="card-actions justify-end">
-                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;oppenheimer&#x2F;" class="btn btn-primary">Read</a>
-                </div>
-            </div>
-        </div>
-        
     </div>
+    
+    <div class="card card-border bg-base-200 grow basis-0 max-w-100">
+        <div class="card-body grow">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;oppenheimer&#x2F;" class="no-underline">
+                <h2 class="card-title">Oppenheimer</h2>
+            </a>
+            <!-- Metadata (date and authors) -->
+            <div class="flex flex-wrap space-x-6 pl-1 mb-2">
+                
+                <span class="flex items-center whitespace-nowrap">
+                    <svg role="img" aria-label="Calendar" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-4 w-4 mr-2 " viewBox="0 0 16 16">
+    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+</svg>
+
+                    <span><time datetime="2023-07-11">11. Juli 2023</time></span>
+                </span>
+                
+
+                
+            </div>
+            <p>Oppenheimer ist ein biografischer Historienfilm von Christopher Nolan, der die Lebensgeschichte des „Vaters der Atombombe“, J. Robert Oppenheimer, behandelt.</p>
+            <div class="card-actions justify-end">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;daisy&#x2F;de&#x2F;movies&#x2F;oppenheimer&#x2F;" class="btn btn-primary">Read</a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
 </div>
 
 
@@ -305,7 +313,7 @@
                 </nav>
                 
                 <aside>
-                    <p>© 2025 Daisy Theme - Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a></p>
+                    <p>© 2025 <a href="https://www.winterstein.biz">Adrian Winterstein</a> - Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a></p>
                 </aside>
                 
             </footer>
@@ -328,9 +336,22 @@
 
     </div>
 
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js?gM9XbB" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG"></script>
     
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/search.js?LwHuZ7" integrity="sha384-LwHuZ7plyN5JU8IQ7sXn3/c8TOpZ0Uf4fPk/jSuN9oIjABOACSDckPoLDYrxIA/J"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//elasticlunr.min.js?Q8viz7" integrity="sha384-Q8viz7rndi8MSNDtItDgVWNSrCumjepopRMlz2nElkWPRXDQAcfiZGJbrCJVXdtw"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js?gM9XbB" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG" ></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/search.js?f9VC9c" integrity="sha384-f9VC9cWOi7oZUfcv6qrREQQHyq1gZsRq1vqGrbAxTKGR3c4qTRXFEOQudrg+ky0R" lang="de"></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//elasticlunr.min.js?Q8viz7" integrity="sha384-Q8viz7rndi8MSNDtItDgVWNSrCumjepopRMlz2nElkWPRXDQAcfiZGJbrCJVXdtw" ></script>
+
+    
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//lunr.stemmer.support.min.js?A0Vfx&#x2F;" integrity="sha384-A0Vfx/TDhoU6e4n+yHq8obaqc2ibS2c1bTImKO9GWTA1yIuAdL9pj3ozE+/qF/Ty" ></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//lunr.de.min.js?U4g8TM" integrity="sha384-U4g8TMVqkgI9hONJRHvisXolE5ZeCqJFFbiVYQjB1EGllwEwEz3NMkk64SgeX1Br" ></script>
+
+    
     
 </body>

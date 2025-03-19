@@ -10,7 +10,13 @@
     <meta name="description" content="Beispiel- und Demoseite des Daisy-Themas für Zola." />
 
     <!-- stylesheets, fonts, feeds -->
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css?1wioIk" integrity="sha384-1wioIkdjlsSZeyOAXJTTs0kBGyzk5Nr0KA32gVIVK6jWGs7AA4TWKLxtNKhzda6a">
+    
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/daisy/syntax-light.css" /> <!--media="(prefers-color-scheme: light)" />-->
+    
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/daisy//css/main.css?wLZiK9" integrity="sha384-wLZiK9d/rvLfi27fkE+07nReVm4nPjuY419UREGHHvbPcIEV+hZapP3iKJWRySNn">
+
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://salif.github.io/zola-themes-collection/demo/daisy//de/atom.xml">
 
     <!-- favicon -->
@@ -54,7 +60,7 @@
 </head>
 
 <body class="h-screen">
-    <div class="drawer min-h-full">
+    <div class="@container drawer min-h-full">
         <input id="main-drawer" type="checkbox" class="drawer-toggle lg:hidden" />
         <div class="drawer-content flex min-h-full flex-col"><!-- to expand over the full screen even on short pages -->
             <header class="navbar sticky top-0 z-50 text-primary-content bg-primary shadow-sm opacity-93">
@@ -159,11 +165,11 @@
                                     <path d="m21 21-4.3-4.3"></path>
                                 </g>
                             </svg>
-                            <input id="search" type="search" class="grow" placeholder="Search" />
-                            <kbd class="kbd kbd-sm">⌘</kbd>
-                            <kbd class="kbd kbd-sm">K</kbd>
+                            <input id="search" type="search" class="grow" placeholder="Suchen" />
+                            <kbd class="kbd kbd-sm max-md:hidden">⌘</kbd>
+                            <kbd class="kbd kbd-sm max-md:hidden">K</kbd>
                         </label>
-                        <div tabindex="0" class="search-results dropdown-content menu hidden bg-base-200 text-base-content rounded-box z-1 mt-4 w-120 p-2 shadow-sm overflow-scroll">
+                        <div tabindex="0" class="search-results dropdown-content menu hidden bg-base-200 text-base-content rounded-box z-1 mt-4 p-2 @max-lg:w-sm @lg:w-lg shadow-sm overflow-scroll">
                             <div class="search-results__items"></div>
                         </div>
                     </div>
@@ -172,7 +178,7 @@
             </header>
 
             <main class="flex-1 flex justify-center">
-                <div class="flex-col flex-1 max-w-4xl">
+                <div class="@container flex-col flex-1 shrink max-w-4xl">
                     
 <h1 id="daisy-theme">Daisy Theme</h1>
 <p>A beautiful and fast <a href="https://www.getzola.org/">Zola</a> theme build on <a href="https://tailwindcss.com">TailwindCSS</a> and <a href="https://daisyui.com">DaisyUI</a> with 37 different color schemes included. See an example of the <em>autumn</em> colors here:</p>
@@ -199,10 +205,10 @@
 <p>For starting to create a new Zola website using this theme, the easiest approach is to just checkout / fork the <a href="https://github.com/awinterstein/zola-theme-daisy-example">example repository</a> and adapt it to your needs. That repository already contains a minimal structure and configuration for the Zola-based website.</p>
 <h2 id="details-on-using-the-theme">Details on Using the Theme</h2>
 <p>The installation of the theme works the same as for other Zola themes. As it is described in the <a href="https://www.getzola.org/documentation/themes/installing-and-using-themes/">official documentation</a>. Hence, it fist needs to be added as a git submodule:</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">cd</span><span> my-zola-website
-</span><span style="color:#bf616a;">git</span><span> submodule add</span><span style="color:#bf616a;"> -b</span><span> main \
-</span><span>    https://github.com/awinterstein/zola-theme-daisy.git \
-</span><span>    themes/daisy
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-support z-function z-cd z-shell">cd</span></span><span class="z-meta z-function-call z-arguments z-shell"> my-zola-website</span>
+</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> submodule add<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>b</span> main <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">    https://github.com/awinterstein/zola-theme-daisy.git <span class="z-punctuation z-separator z-continuation z-line z-shell">\
+</span></span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-arguments z-shell">    themes/daisy</span>
 </span></code></pre>
 <p>Please make sure to add it at the path <code>themes/daisy</code> in your Zola directory. The translations won't work if added to a different directory.</p>
 
@@ -253,7 +259,7 @@
                 </nav>
                 
                 <aside>
-                    <p>© 2025 Daisy Theme - Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a></p>
+                    <p>© 2025 <a href="https://www.winterstein.biz">Adrian Winterstein</a> - Powered by <a href="https://getzola.org">Zola</a>, <a href="https://tailwindcss.com">TailwindCSS</a> & <a href="https://daisyui.com">DaisyUI</a></p>
                 </aside>
                 
             </footer>
@@ -276,9 +282,22 @@
 
     </div>
 
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js?gM9XbB" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG"></script>
     
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/search.js?LwHuZ7" integrity="sha384-LwHuZ7plyN5JU8IQ7sXn3/c8TOpZ0Uf4fPk/jSuN9oIjABOACSDckPoLDYrxIA/J"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//elasticlunr.min.js?Q8viz7" integrity="sha384-Q8viz7rndi8MSNDtItDgVWNSrCumjepopRMlz2nElkWPRXDQAcfiZGJbrCJVXdtw"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/theme-change.js?gM9XbB" integrity="sha384-gM9XbBfkmzkXwbv3Fzmg8HcuRwG3ztPWQdYOehA6v3ucToLTTfl2TtAXj7+BiiSG" ></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//js/search.js?f9VC9c" integrity="sha384-f9VC9cWOi7oZUfcv6qrREQQHyq1gZsRq1vqGrbAxTKGR3c4qTRXFEOQudrg+ky0R" lang="de"></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//elasticlunr.min.js?Q8viz7" integrity="sha384-Q8viz7rndi8MSNDtItDgVWNSrCumjepopRMlz2nElkWPRXDQAcfiZGJbrCJVXdtw" ></script>
+
+    
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//lunr.stemmer.support.min.js?A0Vfx&#x2F;" integrity="sha384-A0Vfx/TDhoU6e4n+yHq8obaqc2ibS2c1bTImKO9GWTA1yIuAdL9pj3ozE+/qF/Ty" ></script>
+
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/daisy//lunr.de.min.js?U4g8TM" integrity="sha384-U4g8TMVqkgI9hONJRHvisXolE5ZeCqJFFbiVYQjB1EGllwEwEz3NMkk64SgeX1Br" ></script>
+
+    
     
 </body>

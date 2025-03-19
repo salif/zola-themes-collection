@@ -3,7 +3,8 @@ This style file is included in Zluinav theme which is distributed under the term
 
 Note: Style is not verified by sighted people, this is best bet for text display.
 */
-//Skip link to be invisible for sighted visitors
+
+/* Skip link to be invisible for sighted visitors */
 .skip-link {
 	position: absolute;
 	left: -9999px;
@@ -13,7 +14,8 @@ Note: Style is not verified by sighted people, this is best bet for text display
 	overflow: hidden;
 	z-index: -1;
 }
-//When skip link is focused, make visible again.
+
+/* When skip link is focused, make visible again. */
 .skip-link:focus {
 	position: static;
 	width: auto;
@@ -21,6 +23,7 @@ Note: Style is not verified by sighted people, this is best bet for text display
 	overflow: visible;
 	z-index: 1;
 }
+
 .tab {
 	padding: 10px 20px;
 	background-color: #f0f0f0;
@@ -29,15 +32,23 @@ Note: Style is not verified by sighted people, this is best bet for text display
 	cursor: pointer;
 	transition: background-color 0.3s;
 }
+
 .tab:hover {
 	background-color: #ddd;
 }
+
 .tab.active {
 	background-color: #ccc;
 }
+
 .tab-content {
 	padding: 20px;
 	border: 1px solid #ccc;
 	border-top: none;
 	display: none;
+}
+
+/* Enable horizontal scrolling on pre elements if content overflows */
+pre {
+	overflow: auto;       
 }

@@ -1,3 +1,5 @@
+const lang = document.currentScript.lang;
+
 function debounce(func, wait) {
     var timeout;
 
@@ -154,7 +156,7 @@ function initSearch() {
 
     var initIndex = async function () {
         if (index === undefined) {
-            index = fetch("/search_index.en.json")
+            index = fetch(`/search_index.${lang}.json`)
                 .then(
                     async function (response) {
                         return await elasticlunr.Index.load(await response.json());
