@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  
+  
+    
+  
+  <meta name="description" content="Demo collections page of zola-theme-serene">
+
+  <title>serene::collections</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://salif.github.io/zola-themes-collection/demo/serene/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/serene/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://salif.github.io/zola-themes-collection/demo/serene/img/apple-touch-icon.png">
+  
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #5871a2;
+    --primary-pale-color: #5871a233;
+    --primary-decoration-color: #5871a210;
+    --bg-color: #ffffff;
+    --text-color: #2f3030;
+    --text-pale-color: #767676;
+    --text-decoration-color: #a9a9a9;
+    --highlight-mark-color: #5f75b020;
+
+    --callout-note-color: #5871a2;
+    --callout-tip-color: #268556;
+    --callout-important-color: #885fc9;
+    --callout-warning-color: #ab6632;
+    --callout-caution-color: #c64e4e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6f8fd1;
+    --primary-pale-color: #6f8fd166;
+    --primary-decoration-color: #6f8fd112;
+    --bg-color: #1c1c1c;
+    --text-color: #c1c1c1;
+    --text-pale-color: #848484;
+    --text-decoration-color: #5f5f5f;
+    --highlight-mark-color: #8296cb3b;
+
+    --callout-note-color: #6f8fd1;
+    --callout-tip-color: #47976f;
+    --callout-important-color: #9776cd;
+    --callout-warning-color: #ad7a52;
+    --callout-caution-color: #d06161;
+  }
+
+  /* typography */
+  body {
+    --main-font: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --homepage-max-width: 768px;
+    --main-max-width: 768px;
+    --avatar-size: 56px;
+    --font-size: 16px;
+    --line-height: 1.75;
+    --img-border-radius: 0px;
+    --detail-border-radius: 0px;
+    --dark-mode-img-brightness: 0.75;
+    --dark-mode-chart-brightness: 0.75;
+    --inline-code-border-radius: 2px;
+    --inline-code-bg-color: var(--primary-decoration-color);
+    --block-code-border-radius: 0px;
+    --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
+  }
+
+</style>
+
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/serene/main.css">
+  
+
+<link id="hl" rel="stylesheet" type="text/css" href="/hl-light.css" />
+
+
+
+  
+</head>
+
+<body class="prose-page">
+  
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = 'https://salif.github.io/zola-themes-collection/demo/serene/hl-dark.css';
+    }
+  </script>
+  
+  
+<div id="wrapper">
+  <main>
+    
+<header>
+  <nav>
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;serene">← Back</a>
+  </nav>
+</header>
+
+    
+<div class="section-title">
+  
+  <h1>Collections</h1>
+  
+  
+  <p>Special blocks for showcasing your list</p>
+  
+</div>
+
+
+    <div>
+      
+      <article class="prose">
+        <p>This theme has several special shortcodes for creating collections of items.
+These collections can be used to showcase various types of your list, such as projects, publications, blogroll, bookmarks, etc.</p>
+<p>Here are some examples:</p>
+<h2 id="projects">Projects</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Tokio</a>
+    
+    
+  </div>
+  
+  <div class="content"><p>Tokio is an asynchronous runtime for the Rust programming language. It provides the building blocks needed for writing network applications. It gives the flexibility to target a wide range of systems, from large servers with dozens of cores to small embedded devices.</p>
+</div>
+  
+  <div class="tags">
+    
+    <div><span>#</span>rust</div>
+    
+    <div><span>#</span>async</div>
+    
+    <div><span>#</span>runtime</div>
+    
+  </div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Kubernetes</a>
+    
+    
+  </div>
+  
+  <div class="content"><p>Kubernetes, also known as K8s, is an open source system for managing containerized applications across multiple hosts. It provides basic mechanisms for the deployment, maintenance, and scaling of applications.</p>
+</div>
+  
+  <div class="tags">
+    
+    <div><span>#</span>k8s</div>
+    
+    <div><span>#</span>golang</div>
+    
+  </div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Next.js</a>
+    
+    
+  </div>
+  
+  <div class="content"><p>Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.</p>
+</div>
+  
+  <div class="tags">
+    
+    <div><span>#</span>typescript</div>
+    
+    <div><span>#</span>react</div>
+    
+    <div><span>#</span>frontend</div>
+    
+  </div>
+  
+</blockquote>
+
+  
+
+</section>
+<h2 id="publications">Publications</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Attention Is All You Need</a>
+    
+    
+  </div>
+  
+    <div class="subtitle">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, ...</div>
+  
+  <div class="content"><p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.</p>
+<p><em>arXiv:1706.03762v7 [cs.CL] 02 Aug 2023</em></p>
+</div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Deep Residual Learning for Image Recognition</a>
+    
+    
+  </div>
+  
+    <div class="subtitle">Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun</div>
+  
+  <div class="content"><p>Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions.</p>
+<p><em>arXiv:1512.03385v1 [cs.CV] 10 Dec 2015</em></p>
+</div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Generative Adversarial Networks</a>
+    
+    
+  </div>
+  
+    <div class="subtitle">Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio</div>
+  
+  <div class="content"><p>We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake.</p>
+<p><em>arXiv:1406.2661v1 [stat.ML] 10 Jun 2014</em></p>
+</div>
+  
+</blockquote>
+
+  
+
+</section>
+<h2 id="experiences">Experiences</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-deepseek.svg" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">DeepSeek</div>
+    
+    
+    <div class="date">2025-present</div>
+    
+  </div>
+  
+    <div class="subtitle">AI Researcher</div>
+  
+  <div class="content"><p>Work on the DeepSeek project, a research project that aims to develop a new generation of AI models that can understand and generate natural language text.</p>
+<p>The project is focused on developing models that can generate text that is coherent, informative, and engaging, and that can be used in a wide range of applications, including chatbots, virtual assistants, and content generation tools.</p>
+</div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-openai.png" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">OpenAI</div>
+    
+    
+    <div class="date">2021-2025</div>
+    
+  </div>
+  
+    <div class="subtitle">Machine Learning Engineer</div>
+  
+  <div class="content"><p>Alone with the team, I worked on developing new machine learning models and algorithms for a wide range of applications, including natural language processing, computer vision, and reinforcement learning. I also worked on developing new tools and frameworks for training and deploying machine learning models, and on building systems that can scale to handle large amounts of data and compute resources.</p>
+</div>
+  
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-google.webp" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">Google</div>
+    
+    
+    <div class="date">2018-2022</div>
+    
+  </div>
+  
+    <div class="subtitle">Backend Engineer</div>
+  
+  <div class="content"><p>As a backend engineer at Google, I worked on developing and maintaining the backend systems that power Google's search engine, as well as other products and services. I worked on developing new features and improvements for the search engine, as well as on optimizing the performance and scalability of the backend systems.</p>
+</div>
+  
+</blockquote>
+
+  
+
+</section>
+<h2 id="projects-simple">Projects (Simple)</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Tokio</a>
+    
+    <div class="content"><p>An asynchronous runtime for the Rust programming language</p>
+</div>
+    
+    <div class="date">2025</div>
+    
+  </div>
+  <div class="content-narrow"><p>An asynchronous runtime for the Rust programming language</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Kubernetes</a>
+    
+    <div class="content"><p>Production-Grade Container Scheduling and Management</p>
+</div>
+    
+    <div class="date">2024</div>
+    
+  </div>
+  <div class="content-narrow"><p>Production-Grade Container Scheduling and Management</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Next.js</a>
+    
+    <div class="content"><p>React framework for building full-stack web applications</p>
+</div>
+    
+    <div class="date">2022</div>
+    
+  </div>
+  <div class="content-narrow"><p>React framework for building full-stack web applications</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Deno</a>
+    
+    <div class="content"><p>A modern runtime for JavaScript and TypeScript</p>
+</div>
+    
+    <div class="date">2022</div>
+    
+  </div>
+  <div class="content-narrow"><p>A modern runtime for JavaScript and TypeScript</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Grafana</a>
+    
+    <div class="content"><p>The open and composable observability and data visualization platform</p>
+</div>
+    
+    <div class="date">2020</div>
+    
+  </div>
+  <div class="content-narrow"><p>The open and composable observability and data visualization platform</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener">Zustand</a>
+    
+    <div class="content"><p>Bear necessities for state management in React</p>
+</div>
+    
+    <div class="date">2021</div>
+    
+  </div>
+  <div class="content-narrow"><p>Bear necessities for state management in React</p>
+</div>
+</blockquote>
+
+  
+
+</section>
+<h2 id="experiences-simple">Experiences (Simple)</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-deepseek.svg" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">DeepSeek</div>
+    
+    <div class="content"><p>AI Researcher</p>
+</div>
+    
+    <div class="date">2025-present</div>
+    
+  </div>
+  <div class="content-narrow"><p>AI Researcher</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-openai.png" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">OpenAI</div>
+    
+    <div class="content"><p>Machine Learning Engineer</p>
+</div>
+    
+    <div class="date">2021-2025</div>
+    
+  </div>
+  <div class="content-narrow"><p>Machine Learning Engineer</p>
+</div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection card-simple">
+  <div class="meta">
+    
+    <div class="icon-wrapper">
+      <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-google.webp" alt="icon" width="16" height="16">
+    </div>
+    
+    
+    <div class="title">Google</div>
+    
+    <div class="content"><p>Backend Engineer</p>
+</div>
+    
+    <div class="date">2018-2022</div>
+    
+  </div>
+  <div class="content-narrow"><p>Backend Engineer</p>
+</div>
+</blockquote>
+
+  
+
+</section>
+<h2 id="bookmarks">Bookmarks</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;johnresig.com&#x2F;blog&#x2F;write-code-every-day" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;johnresig.com&#x2F;wp-content&#x2F;uploads&#x2F;2022&#x2F;11&#x2F;cropped-cropped-khan-john-resig-photo-square-32x32.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Write Code Every Day</div>
+    
+    
+    <div class="subtitle">John Resig</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;overreacted.io&#x2F;the-elements-of-ui-engineering" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;overreacted.io&#x2F;icon.png?e0852c1e2c7f0e65" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">The Elements of UI Engineering</div>
+    
+    
+    <div class="subtitle">Dan Abramov</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;norvig.com&#x2F;21-days.html" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;placehold.co&#x2F;16" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Teach Yourself Programming in Ten Years</div>
+    
+    
+    <div class="subtitle">Peter Norvig</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    <br />
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;www.scattered-thoughts.net&#x2F;writing&#x2F;reflections-on-a-decade-of-coding" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;www.scattered-thoughts.net&#x2F;&#x2F;favicon.ico" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Reflections on a decade of coding</div>
+    
+    
+    <div class="subtitle">Jamie Brandon</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;www.ee.torontomu.ca&#x2F;~elf&#x2F;hack" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;placehold.co&#x2F;16" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Hacker&#x27;s Wisdom</div>
+    
+    
+    <div class="subtitle">~elf&#x2F;hack</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;drmingdrmer.github.io&#x2F;tech&#x2F;bla&#x2F;2018&#x2F;09&#x2F;27&#x2F;toaster.html" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;placehold.co&#x2F;16" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">软件工程是个面包机</div>
+    
+    
+    <div class="subtitle">drmingdrmer.github.io</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;shud.in&#x2F;thoughts&#x2F;the-non-existing-nostalgic" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="https:&#x2F;&#x2F;shud.in&#x2F;favicon.ico" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">不存在的乡愁</div>
+    
+    
+    <div class="subtitle">shud.in</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+</section>
+<h2 id="bookmarks-without-icon">Bookmarks (Without icon)</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;johnresig.com&#x2F;blog&#x2F;write-code-every-day" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">Write Code Every Day</div>
+    
+    
+    <div class="subtitle">John Resig</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;overreacted.io&#x2F;the-elements-of-ui-engineering" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">The Elements of UI Engineering</div>
+    
+    
+    <div class="subtitle">Dan Abramov</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;norvig.com&#x2F;21-days.html" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">Teach Yourself Programming in Ten Years</div>
+    
+    
+    <div class="subtitle">Peter Norvig</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    <br />
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;www.scattered-thoughts.net&#x2F;writing&#x2F;reflections-on-a-decade-of-coding" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">Reflections on a decade of coding</div>
+    
+    
+    <div class="subtitle">Jamie Brandon</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;www.ee.torontomu.ca&#x2F;~elf&#x2F;hack" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">Hacker&#x27;s Wisdom</div>
+    
+    
+    <div class="subtitle">~elf&#x2F;hack</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;drmingdrmer.github.io&#x2F;tech&#x2F;bla&#x2F;2018&#x2F;09&#x2F;27&#x2F;toaster.html" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">软件工程是个面包机</div>
+    
+    
+    <div class="subtitle">drmingdrmer.github.io</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+  
+    
+
+<a href="https:&#x2F;&#x2F;shud.in&#x2F;thoughts&#x2F;the-non-existing-nostalgic" target="_blank" rel="noreferrer noopener" class="collection entry">
+
+  
+  
+  <div class="text">
+    
+    <div class="title">不存在的乡愁</div>
+    
+    
+    <div class="subtitle">shud.in</div>
+    
+  </div>
+  
+
+</a>
+
+
+  
+
+</section>
+<h2 id="games">Games</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-game-6.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Elden Ring</div>
+    
+    
+    <div class="subtitle">200+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-game-5.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Sekiro: Shadows Die Twice</div>
+    
+    
+    <div class="subtitle">300+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-dead-cells.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Dead Cells</div>
+    
+    
+    <div class="subtitle">80+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-game-2.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Baldur&#x27;s Gate 3</div>
+    
+    
+    <div class="subtitle">100+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-game-4.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">It Takes Two</div>
+    
+    
+    <div class="subtitle">20+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+  
+    
+
+<blockquote class="collection entry">
+
+  
+  <div class="icon-wrapper">
+    <img class="icon no-lightense" src="&#x2F;assets&#x2F;icon-game-3.jpg" alt="icon" width="16" height="16" />
+  </div>
+  
+  
+  <div class="text">
+    
+    <div class="title">Monster Hunter: World</div>
+    
+    
+    <div class="subtitle">50+ hrs</div>
+    
+  </div>
+  
+
+</blockquote>
+
+
+  
+
+</section>
+<h2 id="blogroll">Blogroll</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Reze</div>
+    
+    <div class="subtitle">Let’s run away together</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-1.jpg" alt="Reze" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Kobeni Higashiyama</div>
+    
+    <div class="subtitle">I-I just want to survive...</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-2.jpg" alt="Kobeni Higashiyama" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Power</div>
+    
+    <div class="subtitle">Bow before me, humans!</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-3.jpg" alt="Power" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Denji</div>
+    
+    <div class="subtitle">I want to live a normal life, eat good food, and maybe touch some boobs</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-4.jpg" alt="Denji" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Kishibe</div>
+    
+    <div class="subtitle">The stronger you are, the more you lose</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-9.jpg" alt="Kishibe" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Himeno</div>
+    
+    <div class="subtitle">I’ll protect you, even if it costs me my life</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-6.jpg" alt="Himeno" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Yoru</div>
+    
+    <div class="subtitle">I am the War Devil. I will make humans fear war again</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-7.jpg" alt="Yoru" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Pochita</div>
+    
+    <div class="subtitle">Take care of Denji for me</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-13.jpg" alt="Pochita" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Aki Hayakawa</div>
+    
+    <div class="subtitle">I will kill the Gun Devil, no matter what it takes</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-5.jpg" alt="Aki Hayakawa" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+  
+    
+<div class="collection-box-wrapper">
+
+<a href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" class="collection box">
+
+  <div class="text">
+    <div class="title">Makima</div>
+    
+    <div class="subtitle">You are my dog, Denji. You belong to me</div>
+    
+  </div>
+  
+    <img class="no-lightense rotate" src="&#x2F;assets&#x2F;box-12.jpg" alt="Makima" width="48" height="48" />
+    
+
+</a>
+
+</div>
+
+  
+
+</section>
+<h2 id="books">Books</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection art">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;book-3.jpg" alt="The Old Man and the Sea" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >The Old Man and the Sea</a>
+    
+    
+    <div class="subtitle">[American] Ernest Hemingway</div>
+    
+    
+    <div class="content">A novella that tells the story of Santiago, an aging Cuban fisherman who struggles with a giant marlin far out in the Gulf Stream. The story is a tale of endurance, perseverance, and the human spirit&#x27;s struggle against nature. It explores themes of courage, pride, and the relationship between man and the natural world.</div>
+    
+    
+    <div class="footer">⭐︎⭐︎⭐︎⭐︎⭐︎</div>
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;book-2.jpg" alt="To Kill a Mockingbird" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >To Kill a Mockingbird</a>
+    
+    
+    <div class="subtitle">[American] Harper Lee</div>
+    
+    
+    <div class="content">A novel set in the American South during the 1930s. It tells the story of Scout Finch, her brother Jem, and their father Atticus, a lawyer who defends a black man falsely accused of raping a white woman. The novel addresses themes of racial injustice, moral growth, and the loss of innocence.</div>
+    
+    
+    <div class="footer">⭐︎⭐︎⭐︎</div>
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;book-1.jpg" alt="1984" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >1984</a>
+    
+    
+    <div class="subtitle">[British] George Orwell</div>
+    
+    
+    <div class="content">A dystopian novel set in a totalitarian society ruled by the Party, which has total control over every aspect of people&#x27;s lives. The story follows Winston Smith, a low-ranking member of the Party, as he becomes disillusioned with the oppressive regime and begins to rebel against it. The novel explores themes of surveillance, censorship, and the manipulation of truth.</div>
+    
+    
+    <div class="footer">⭐︎⭐︎⭐︎⭐︎</div>
+    
+  </div>
+</blockquote>
+
+  
+
+</section>
+<h2 id="movies">Movies</h2>
+
+
+<section class="collection-wrapper">
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-6.webp" alt="Anatomy of a Fall" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >Anatomy of a Fall</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-9.webp" alt="Inception" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >Inception</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-1.webp" alt="一直游到海水变蓝" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >一直游到海水变蓝</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-8.webp" alt="Interstellar" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >Interstellar</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-3.webp" alt="影" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >影</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-7.webp" alt="La La Land" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >La La Land</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-10.webp" alt="her" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >her</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-4.webp" alt="Flipped" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >Flipped</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-12.webp" alt="Léon" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >Léon</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+  
+    
+<blockquote class="collection art-simple">
+  <div class="img-wrapper">
+    <img src="&#x2F;assets&#x2F;movie-2.webp" alt="千と千尋の神隠し" height="175">
+  </div>
+  <div class="text">
+    
+    <a class="title" href="https:&#x2F;&#x2F;example.com" target="_blank" rel="noreferrer noopener" >千と千尋の神隠し</a>
+    
+    
+  </div>
+</blockquote>
+
+  
+
+</section>
+
+      </article>
+
+      
+      
+
+      
+    </div>
+
+    
+
+
+<footer>
+  <div class="left">
+    <div class="copyright">
+      © 2025 Serene
+      
+      <span>|</span>
+      Built with <a href="https://www.getzola.org" rel="noreferrer" target="_blank">zola</a> and <a href="https://github.com/isunjn/serene" rel="noreferrer" target="_blank">serene</a>
+      
+    </div>
+  </div>
+
+  <div class="right">
+    
+
+    
+    
+    
+    <button id="theme-toggle" aria-label="theme switch">
+      <span class="moon-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+</span>
+      <span class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z" fill="currentColor"></path></svg>
+</span>
+    </button>
+    
+  </div>
+</footer>
+
+
+
+  </main>
+</div>
+
+  
+<script src="/js/lightense.min.js"></script>
+
+
+  <script src="https://salif.github.io/zola-themes-collection/demo/serene/js/main.js"></script>
+</body>
+
+</html>

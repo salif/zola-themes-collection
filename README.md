@@ -45,7 +45,7 @@
 - [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
 - [eips-theme](https://github.com/eips-wg/theme.git): 475 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 39 commits
-- [navhive](https://github.com/idevsig/navhive): 5 commits
+- [navhive](https://github.com/idevsig/navhive): 13 commits
 - [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
 - [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
@@ -76,6 +76,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
 - [zola-scribble](https://github.com/jzbor/zola-scribble): 24 commits
 - [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 4 commits
+- [neovim-theme](https://github.com/Super-Botman/neovim-theme): 40 commits
 
 ### No license that allows me to host a live demo
 

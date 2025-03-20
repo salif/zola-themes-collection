@@ -442,6 +442,61 @@ theme = "bearplus"
   js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "serene"
+name = "serene"
+desc = "A spiffy blog theme for zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-serene'></summary>
+
+### Installation{#h-install-serene}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/isunjn/serene.git themes/serene
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/isunjn/serene.git themes/serene
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "serene"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-serene'></summary>
+
+### Info{#h-info-serene}
+- **Author**: [isunjn](https://github.com/isunjn)
+- **License**: MIT
+- **Homepage**: <https://github.com/isunjn/serene>
+- **Offic. Live Demo**: <https://serene-demo.pages.dev>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/serene/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/isunjn/serene"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-serene"
+  js = "const b=document.getElementById('install-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-serene"
+  js = "const b=document.getElementById('info-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "hook"
 name = "Hook"
 desc = "Clean and simple personal site/blog theme"
@@ -1938,58 +1993,3 @@ theme = "doc"
   name = "Info"
   url = "#info-doc"
   js = "const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "serene"
-name = "serene"
-desc = "A spiffy blog theme for zola"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-serene'></summary>
-
-### Installation{#h-install-serene}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/isunjn/serene.git themes/serene
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/isunjn/serene.git themes/serene
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "serene"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-serene'></summary>
-
-### Info{#h-info-serene}
-- **Author**: [isunjn](https://github.com/isunjn)
-- **License**: MIT
-- **Homepage**: <https://github.com/isunjn/serene>
-- **Offic. Live Demo**: <https://serene-demo.pages.dev>
-- **Min Zola version**: 0.19.0
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/serene/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/isunjn/serene"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-serene"
-  js = "const b=document.getElementById('install-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-serene"
-  js = "const b=document.getElementById('info-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
