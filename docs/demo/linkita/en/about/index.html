@@ -37,7 +37,7 @@
 
   
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=23b46b8b83f31c73f815" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=d42ff1fd3be7d5551e30" />
   <style>
     :root {
       --bg: #f4f4f5;
@@ -151,6 +151,7 @@
   <header class="mb-16">
     <h1 class="!my-0">Linkita</h1>
   </header>
+  
 
   <section>
 
@@ -231,12 +232,16 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= []
 </span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= []
 </span><span style="color:#89ddff;">[extra]
-</span><span style="font-style:italic;color:#4a4a4a;"># comment = true
-</span><span style="font-style:italic;color:#4a4a4a;"># math = true
-</span><span style="font-style:italic;color:#4a4a4a;"># mermaid = true
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable comments
+</span><span style="color:#f07178;">comment </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable KaTeX support
+</span><span style="color:#f07178;">math </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable Mermaid support
+</span><span style="color:#f07178;">mermaid </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span style="color:#89ddff;">[extra.cover]
-</span><span style="font-style:italic;color:#4a4a4a;"># image = &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># alt = &quot;&quot;
+</span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of the cover image
+</span><span style="color:#f07178;">alt </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="yaml-frontmatter">YAML frontmatter</h3>
@@ -244,7 +249,7 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">title</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span style="color:#f07178;">description</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span style="color:#f07178;">date</span><span style="color:#89ddff;">: 
-</span><span style="font-style:italic;color:#4a4a4a;"># updated: 
+</span><span style="color:#f07178;">updated</span><span style="color:#89ddff;">: 
 </span><span style="color:#f07178;">taxonomies</span><span style="color:#89ddff;">:
 </span><span>  </span><span style="color:#f07178;">categories</span><span style="color:#89ddff;">:
 </span><span>  </span><span style="color:#f07178;">tags</span><span style="color:#89ddff;">:
@@ -258,66 +263,71 @@ Set the ones you need.</p>
 </span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
 </span><span>---
 </span></code></pre>
-<h3 id="extra-frontmatter-variables">Extra frontmatter variables</h3>
+<h3 id="other-extra-frontmatter-variables">Other extra frontmatter variables</h3>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra]
-</span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
+</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_info`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: config.extra.page_info;)
+</span><span style="color:#f07178;">page_info </span><span style="color:#89ddff;">= []
+</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.toc`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean or object; default value: config.extra.toc;)
+</span><span style="color:#f07178;">toc </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="color:#89ddff;">[extra.cover]
 </span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="font-style:italic;color:#4a4a4a;"># width =
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
+</span><span style="color:#f07178;">width </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Height of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="font-style:italic;color:#4a4a4a;"># height =
-</span></code></pre>
-<h3 id="open-graph-frontmatter-variables">Open Graph frontmatter variables</h3>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.open_graph]
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
+</span><span style="color:#f07178;">height </span><span style="color:#89ddff;">=
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Open Graph frontmatter variables
+</span><span style="color:#89ddff;">[extra.open_graph]
 </span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: datetime; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: datetime; no default value;)
 </span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Describes the tier status for an article. e.g. `free`, `locked`, or `metered`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">content_tier </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># Defines the location to target for the article. e.g. `[&quot;county:COUNTY&quot;]` or `[&quot;city:CITY,COUNTY&quot;]`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; no default value;)
 </span><span style="color:#f07178;">locations </span><span style="color:#89ddff;">= []
 </span><span style="font-style:italic;color:#4a4a4a;"># A high-level section name. e.g. `Technology`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># Indicates whether the article is an opinion piece or not. e.g. `true` or `false`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: boolean; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; no default value;)
 </span><span style="color:#f07178;">opinion </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># The URL for the audio.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">audio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the audio. e.g. `audio/vnd.facebook.bridge`, `audio/mpeg`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">audio_type </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># The URL for the video.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">video </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the video. e.g. `application/x-shockwave-flash`, `video/mp4`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">video_type </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># Width of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
 </span><span style="color:#f07178;">video_width </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Height of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: number; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
 </span><span style="color:#f07178;">video_height </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from canonical page URL.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: current_url;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: current_url;)
 </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
-</span></code></pre>
-<h3 id="sitemap-frontmatter-variables">Sitemap frontmatter variables</h3>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.sitemap]
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Sitemap frontmatter variables
+</span><span style="color:#89ddff;">[extra.sitemap]
 </span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; default value: page.updated;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: page.updated;)
 </span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Valid values are `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">changefreq </span><span style="color:#89ddff;">=
 </span><span style="font-style:italic;color:#4a4a4a;"># Valid values range from 0.0 to 1.0. The default priority of a page is 0.5.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: string; no default value;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">priority </span><span style="color:#89ddff;">=
 </span></code></pre>
 <h3 id="home-page-profile">Home page profile</h3>
@@ -336,6 +346,8 @@ For French, the file name is <code>content/_index.fr.md</code>.</p>
 Replace <code>author_username</code> with author's username.
 See <a href="#profiles">Profiles</a>.</p>
 <h3 id="non-post-pages">Non-post pages</h3>
+<p>The default page template <code>page.html</code> is for blog posts.
+For pages that are not blog posts, create a <code>pages</code> directory and use the <code>pages.html</code> template.</p>
 <p>Create <code>content/pages/_index.md</code> file in your blog:</p>
 <pre data-lang="toml" data-name="content/pages/_index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/_index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">render </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
@@ -362,14 +374,15 @@ See <a href="#profiles">Profiles</a>.</p>
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
 <h3 id="page-authors">Page authors</h3>
-<h4 id="option-1-using-page-authors">Option 1: Using <code>page.authors</code></h4>
+<p>Choose one of the following options or skip if you don't know what you're doing:</p>
+<h4 id="option-a-using-page-authors">Option A: Using <code>page.authors</code></h4>
 <p>You don't need to set <code>page.authors</code> in the frontmatter if you are the only author of the post.</p>
 <p>Otherwise, set <code>page.authors</code>:</p>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">author_username</span><span style="color:#89ddff;">&quot;]
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
-<h4 id="option-2-using-taxonomies">Option 2: Using Taxonomies</h4>
+<h4 id="option-b-using-taxonomies">Option B: Using Taxonomies</h4>
 <p>Useful if the blog has a team of several authors.
 If you choose this option you should set taxonomies in each page.</p>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -399,13 +412,18 @@ All variables are optional.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages. See `extra.profiles`. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># See `extra.profiles`. (type: string;)
 </span><span style="color:#f07178;">author </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The site title. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># The site title. Will be in all page titles.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The site description. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># The site description.
+</span><span style="font-style:italic;color:#4a4a4a;"># If set, will be used as a fallback description
+</span><span style="font-style:italic;color:#4a4a4a;"># when no description is set in the frontmatter.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Automatically generate a feed. (type: boolean;)
@@ -415,7 +433,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">feed_filenames </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">atom.xml</span><span style="color:#89ddff;">&quot;] </span><span style="font-style:italic;color:#4a4a4a;"># or [&quot;rss.xml&quot;]
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Build a search index from the pages and section content
-</span><span style="font-style:italic;color:#4a4a4a;">#  for `default_language`. (type: boolean;)
+</span><span style="font-style:italic;color:#4a4a4a;"># for `default_language`. (type: boolean;)
 </span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span></code></pre>
 <p>Taxonomies with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
@@ -467,18 +485,22 @@ All variables are optional.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">header_menu_name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">menu_name</span><span style="color:#89ddff;">&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="font-style:italic;color:#4a4a4a;"># If you disable default favicons, you can use
+</span><span style="font-style:italic;color:#4a4a4a;"># the inject support to set your own favicons.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">disable_default_favicon </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="font-style:italic;color:#4a4a4a;"># If you want to reimplement the JS code
+</span><span style="font-style:italic;color:#4a4a4a;"># yourself, set to true and use the inject support.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">disable_javascript </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: false;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">use_cdn </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># You can reorder the strings, remove them, or replace them.
-</span><span style="font-style:italic;color:#4a4a4a;">#  For example, you can replace `site_title` with `home_button`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; default value: `[&quot;site_title&quot;, &quot;theme_button&quot;, &quot;search_button&quot;, &quot;translations_button&quot;]`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># For example, you can replace `site_title` with `home_button`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: `[&quot;site_title&quot;, &quot;theme_button&quot;, &quot;search_button&quot;, &quot;translations_button&quot;]`;)
 </span><span style="font-style:italic;color:#4a4a4a;"># header_buttons = []
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Valid values:
@@ -488,8 +510,18 @@ All variables are optional.</p>
 </span><span style="font-style:italic;color:#4a4a4a;">#  `word_count`, `word_count_on_page`, `word_count_on_paginator`,
 </span><span style="font-style:italic;color:#4a4a4a;">#  `authors`, `authors_on_page`, `authors_on_paginator`,
 </span><span style="font-style:italic;color:#4a4a4a;">#  `tags`, `tags_on_page`, `tags_on_paginator`.
-</span><span style="font-style:italic;color:#4a4a4a;">#  (type: array of strings; default value: `[&quot;date&quot;, &quot;date_updated_on_page&quot;, &quot;reading_time&quot;, &quot;authors&quot;]`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: `[&quot;date&quot;, &quot;date_updated_on_page&quot;, &quot;reading_time&quot;, &quot;authors&quot;]`;)
 </span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Enable table of contents on all pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># If not set, toc is enabled only on post pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># If set to false, toc is disabled on all pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean or object;)
+</span><span style="font-style:italic;color:#4a4a4a;"># toc = true
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Reverse the order of prev and next post links.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># invert_page_navigation = false
 </span></code></pre>
 <h3 id="style-config">Style config</h3>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.style]
@@ -502,29 +534,29 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">header_blur </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The custom header color, only available
-</span><span style="font-style:italic;color:#4a4a4a;">#  when `header_blur` is false. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># when `header_blur` is false. (type: string;)
 </span><span style="color:#f07178;">header_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#e4e4e7</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># The custom header color in dark mode, only available
-</span><span style="font-style:italic;color:#4a4a4a;">#  when `header_blur` is false. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># when `header_blur` is false. (type: string;)
 </span><span style="color:#f07178;">header_dark_color </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">#27272a</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h3 id="menus">Menus</h3>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.menus]
 </span><span style="color:#f07178;">menu_name </span><span style="color:#89ddff;">= [
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;},
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;},
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot;},
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot;},
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot; },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot; },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot; },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot; },
 </span><span style="color:#89ddff;">]
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Example multilingual menu.
 </span><span style="color:#f07178;">multilingual_menu_name </span><span style="color:#89ddff;">= [
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About in French</span><span style="color:#89ddff;">&quot;} },
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/projects/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects in French</span><span style="color:#89ddff;">&quot;} },
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive in French</span><span style="color:#89ddff;">&quot;} },
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories in French</span><span style="color:#89ddff;">&quot;} },
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags in French</span><span style="color:#89ddff;">&quot;} },
-</span><span>  </span><span style="color:#89ddff;">{</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/authors/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= {</span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors in French</span><span style="color:#89ddff;">&quot;} },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/about/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About in French</span><span style="color:#89ddff;">&quot; } },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/projects/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Projects in French</span><span style="color:#89ddff;">&quot; } },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/pages/archive/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Archive in French</span><span style="color:#89ddff;">&quot; } },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/categories/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Categories in French</span><span style="color:#89ddff;">&quot; } },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/tags/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Tags in French</span><span style="color:#89ddff;">&quot; } },
+</span><span>  </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/authors/</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">names </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">en </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">fr </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Authors in French</span><span style="color:#89ddff;">&quot; } },
 </span><span style="color:#89ddff;">]
 </span></code></pre>
 <p>To use a menu, set <code>extra.header_menu_name</code>.</p>
@@ -683,10 +715,10 @@ fallback open graph image for all pages.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># IETF tag for artificial languages. (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;"># language_code = &quot;art-x-code&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Taxonomy/term pages do not have a description by default.
-</span><span style="font-style:italic;color:#4a4a4a;"># Optionally you can set a generic description. `$NAME` will be automatically replaced.
-</span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_list_description = &quot;A map of all $NAME on this site. Start exploring!&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># taxonomy_single_description = &quot;Browse articles related to $NAME. Start exploring!&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Set a generic description for taxonomy/term pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># `$NAME` will be automatically replaced.
+</span><span style="color:#f07178;">taxonomy_list_description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">A map of all $NAME on this site. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">taxonomy_single_description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Browse articles related to $NAME. Start exploring!</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French
 </span><span style="color:#89ddff;">[extra.languages.fr]
@@ -727,37 +759,38 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 </span><span style="color:#f07178;">category </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">category_id </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `pathname`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `pathname`;)
 </span><span style="color:#f07178;">mapping </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">pathname</span><span style="color:#89ddff;">&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `1`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `1`;)
 </span><span style="color:#f07178;">strict </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">1
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`;)
 </span><span style="color:#f07178;">reactions_enabled </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">0
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: `0`;)
 </span><span style="color:#f07178;">emit_metadata </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">0
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `top`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `top`;)
 </span><span style="color:#f07178;">input_position </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">top</span><span style="color:#89ddff;">&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `light`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `light`;)
 </span><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">light</span><span style="color:#89ddff;">&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `en`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `en`;)
 </span><span style="color:#f07178;">lang </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `lazy`)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: `lazy`;)
 </span><span style="color:#f07178;">loading </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">lazy</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <h2 id="license">License</h2>
 <p>See the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a> file.</p>
 <h2 id="contributing">Contributing</h2>
 <p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.</p>
-<p>If you notice even the slightest ambiguity or bug in this repo, report it IMMEDIATELY before it breeds and takes over the entire project!</p>
+<p>If you notice even the slightest ambiguity or bug in this repo,
+report it IMMEDIATELY, before it breeds and takes over the entire project!</p>
 <h2 id="sites-using-linkita">Sites using Linkita</h2>
 <ul>
 <li><a href="https://github.com/salif/zola-themes-collection">Zola Themes Collection</a></li>
 <li><a href="https://github.com/salif/personal-web-page">salif.eu</a>: Personal website</li>
+<li><a href="https://github.com/Rratic/rratic.github.io">Rratic's blog</a>: Personal website</li>
 </ul>
 <p>If your blog uses Linkita and is open source, feel free to create a pull request to add it to this list.</p>
 
 </section>
-  <!-- Post Nav -->
   
 
 </article>
