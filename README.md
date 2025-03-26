@@ -50,6 +50,7 @@
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
 - [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
 - [Ergo](https://github.com/insipx/Ergo): 115 commits
+- [boring](https://github.com/clflushopt/boring): 70 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

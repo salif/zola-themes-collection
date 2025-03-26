@@ -194,6 +194,7 @@
 <li>Improved search engine optimization</li>
 <li>Improved configurability</li>
 <li>Author profiles</li>
+<li>Projects shortcode</li>
 <li>Keyboard shortcuts</li>
 </ul>
 <h2 id="installing">Installing</h2>
@@ -202,7 +203,7 @@
 </ol>
 <pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">git submodule add https://codeberg.org/salif/linkita.git themes/linkita
 </span></code></pre>
-<p>Alternatively, clone the repository: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code>.</p>
+<p>Alternatively, clone the repository: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code></p>
 <ol start="2">
 <li>Set <code>linkita</code> as your theme in your <code>config.toml</code> file.</li>
 </ol>
@@ -225,12 +226,17 @@ Set the ones you need.</p>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># date = 
-</span><span style="font-style:italic;color:#4a4a4a;"># updated = 
+</span><span style="font-style:italic;color:#4a4a4a;"># The date of the post
+</span><span style="color:#f07178;">date </span><span style="color:#89ddff;">= </span><span>2025-12-30
+</span><span style="font-style:italic;color:#4a4a4a;"># The last updated date of the post,
+</span><span style="font-style:italic;color:#4a4a4a;"># if different from the date
+</span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">= </span><span>2025-12-31
+</span><span>
 </span><span style="color:#89ddff;">[taxonomies]
 </span><span style="color:#f07178;">categories </span><span style="color:#89ddff;">= []
 </span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= []
 </span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= []
+</span><span>
 </span><span style="color:#89ddff;">[extra]
 </span><span style="font-style:italic;color:#4a4a4a;"># Enable comments
 </span><span style="color:#f07178;">comment </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
@@ -333,6 +339,8 @@ Set the ones you need.</p>
 <h3 id="home-page-profile">Home page profile</h3>
 <p>Create <code>content/_index.md</code> file in your blog and set <code>extra.profile</code> to your username:</p>
 <pre data-lang="toml" data-name="content/_index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/_index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># title = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
 </span><span style="color:#f07178;">sort_by </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">date</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span><span style="color:#89ddff;">[extra]
@@ -341,10 +349,7 @@ Set the ones you need.</p>
 </span></code></pre>
 <p>Do it for each language in your blog.
 For French, the file name is <code>content/_index.fr.md</code>.</p>
-<h3 id="profiles-for-authors">Profiles for authors</h3>
-<p>Add <code>extra.profiles.author_username</code> table in your <code>config.toml</code> file for each author in your blog.
-Replace <code>author_username</code> with author's username.
-See <a href="#profiles">Profiles</a>.</p>
+<p>See <a href="#profiles">Profiles</a> for more.</p>
 <h3 id="non-post-pages">Non-post pages</h3>
 <p>The default page template <code>page.html</code> is for blog posts.
 For pages that are not blog posts, create a <code>pages</code> directory and use the <code>pages.html</code> template.</p>
@@ -353,6 +358,16 @@ For pages that are not blog posts, create a <code>pages</code> directory and use
 </span><span style="color:#f07178;">render </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span style="color:#f07178;">page_template </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">pages.html</span><span style="color:#89ddff;">&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span></code></pre>
+<h4 id="about-you-page">About you page</h4>
+<p>Create <code>content/pages/about.md</code> file in your blog:</p>
+<pre data-lang="toml" data-name="content/pages/about.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/about.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About me</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;about&quot;
+</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;">## Hello, world!
 </span></code></pre>
 <h4 id="archive-page">Archive page</h4>
 <p>Create <code>content/pages/archive.md</code> file in your blog:</p>
@@ -365,13 +380,24 @@ For pages that are not blog posts, create a <code>pages</code> directory and use
 </span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">_index.md</span><span style="color:#89ddff;">&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
 </span></code></pre>
-<h4 id="about-you-page">About you page</h4>
-<p>Create <code>content/pages/about.md</code> file in your blog:</p>
-<pre data-lang="toml" data-name="content/pages/about.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/about.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">About me</span><span style="color:#89ddff;">&quot;
+<h4 id="projects-page">Projects page</h4>
+<p>Create <code>content/pages/projects/index.md</code> file in your blog:</p>
+<pre data-lang="toml" data-name="content/pages/projects/index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/projects/index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">My Projects</span><span style="color:#89ddff;">&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># description = &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;about&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># path = &quot;projects&quot;
 </span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
+</span></code></pre>
+<p>Include the following shortcode too: {{ projects(path="data.toml", format="toml") }}</p>
+<p>Create <code>content/pages/projects/data.toml</code> file in your blog:</p>
+<pre data-lang="toml" data-name="content/pages/projects/data.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/projects/data.toml"><span style="color:#89ddff;">[[project]]
+</span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">lorem</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">desc </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Lorem ipsum dolor sit.</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">lorem</span><span style="color:#89ddff;">&quot;, &quot;</span><span style="color:#c3e88d;">ipsum</span><span style="color:#89ddff;">&quot;]
+</span><span style="color:#f07178;">links </span><span style="color:#89ddff;">= [
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">homepage</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://example.com</span><span style="color:#89ddff;">&quot; },
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">source</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://example.com</span><span style="color:#89ddff;">&quot; },
+</span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="page-authors">Page authors</h3>
 <p>Choose one of the following options or skip if you don't know what you're doing:</p>
@@ -409,34 +435,42 @@ If you choose this option you should set taxonomies in each page.</p>
 <p>Copy and paste the examples into your <code>config.toml</code> file
 and comment out the variables you don't use instead of setting empty values.
 All variables are optional.</p>
-<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># The default language. (type: string;)
+<pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># The URL the site will be built for
+</span><span style="color:#f07178;">base_url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://example.com</span><span style="color:#89ddff;">&quot;
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># The site theme to use.
+</span><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">linkita</span><span style="color:#89ddff;">&quot;
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># The default language.
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages.
-</span><span style="font-style:italic;color:#4a4a4a;"># See `extra.profiles`. (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># See `extra.profiles`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
 </span><span style="color:#f07178;">author </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">your_username</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The site title. Will be in all page titles.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The site description.
-</span><span style="font-style:italic;color:#4a4a4a;"># If set, will be used as a fallback description
-</span><span style="font-style:italic;color:#4a4a4a;"># when no description is set in the frontmatter.
+</span><span style="font-style:italic;color:#4a4a4a;"># The site description. Used in feeds by default.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Automatically generate a feed. (type: boolean;)
+</span><span style="font-style:italic;color:#4a4a4a;"># Automatically generate a feed.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean;)
 </span><span style="color:#f07178;">generate_feeds </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The filenames to use for the feeds. (type: array of strings;)
+</span><span style="font-style:italic;color:#4a4a4a;"># The filenames to use for the feeds.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings;)
 </span><span style="color:#f07178;">feed_filenames </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">atom.xml</span><span style="color:#89ddff;">&quot;] </span><span style="font-style:italic;color:#4a4a4a;"># or [&quot;rss.xml&quot;]
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Build a search index from the pages and section content
 </span><span style="font-style:italic;color:#4a4a4a;"># for `default_language`. (type: boolean;)
 </span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span></code></pre>
-<p>Taxonomies with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
+<p>Zola has built-in support for taxonomies.
+Taxonomies on Linkita with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[[taxonomies]]
 </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">categories</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
@@ -452,7 +486,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span></code></pre>
-<p>Add more languages ​​by replacing <code>fr</code> from the example with the language code.</p>
+<p>Add more languages by replacing <code>fr</code> from the example with the language code:</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[languages.fr]
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site title in French</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site description in French</span><span style="color:#89ddff;">&quot;
@@ -460,7 +494,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">feed_filenames </span><span style="color:#89ddff;">= [&quot;</span><span style="color:#c3e88d;">atom.xml</span><span style="color:#89ddff;">&quot;] </span><span style="font-style:italic;color:#4a4a4a;"># or [&quot;rss.xml&quot;]
 </span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="color:#f07178;">taxonomies </span><span style="color:#89ddff;">= [
-</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">authors</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true</span><span style="color:#89ddff;">, </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5 </span><span style="color:#89ddff;">}
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">tags</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true</span><span style="color:#89ddff;">, </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5 </span><span style="color:#89ddff;">}
 </span><span style="color:#89ddff;">]
 </span></code></pre>
 <h3 id="general-config">General config</h3>
@@ -586,14 +620,6 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; supports markdown; no default value;)
 </span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Profile email.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="font-style:italic;color:#4a4a4a;"># email = &quot;&quot;
-</span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Profile website.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="font-style:italic;color:#4a4a4a;"># url = &quot;&quot;
-</span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Social icons.
 </span><span style="font-style:italic;color:#4a4a4a;"># The `name` should be the file name of `static/icons/*.svg` or the icon name of https://simpleicons.org/
 </span><span style="font-style:italic;color:#4a4a4a;"># The `url` supports `$BASE_URL`.
@@ -607,21 +633,21 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 <h3 id="profile-translations">Profile translations</h3>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French. Replace `your_username` with your username.
 </span><span style="color:#89ddff;">[extra.profiles.your_username.languages.fr]
+</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the avatar.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default avatar: extra.profiles.your_username.avatar_alt;)
+</span><span style="color:#f07178;">avatar_alt </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Profile name.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.url;)
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.name;)
 </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Profile bio.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; supports markdown; default value: extra.profiles.your_username.bio;)
 </span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Profile website.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: extra.profiles.your_username.url;)
-</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># A description of what is in the avatar.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default avatar: extra.profiles.your_username.avatar_alt;)
-</span><span style="color:#f07178;">avatar_alt </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># Social icons.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of tables; default value: extra.profiles.your_username.social;)
+</span><span style="color:#f07178;">social </span><span style="color:#89ddff;">= []
 </span></code></pre>
 <h3 id="open-graph-for-profiles">Open Graph for profiles</h3>
 <p>See <a href="https://ogp.me/">the Open Graph protocol</a>.</p>
@@ -644,8 +670,9 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span><span style="font-style:italic;color:#4a4a4a;">#  handle - Your Fediverse handle. (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;">#  domain - Your Fediverse instance. (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;">#  url - Your Fediverse account URL. (type: string; optional;)
-</span><span style="font-style:italic;color:#4a4a4a;"># Example for @user@mastodon.social:
-</span><span style="font-style:italic;color:#4a4a4a;"># fediverse_creator = { handle = &quot;user&quot;, domain = &quot;mastodon.social&quot; }
+</span><span style="font-style:italic;color:#4a4a4a;"># Example for @me@mastodon.social:
+</span><span style="font-style:italic;color:#4a4a4a;"># fediverse_creator = { handle = &quot;me&quot;, domain = &quot;mastodon.social&quot; }
+</span><span style="color:#f07178;">fediverse_creator </span><span style="color:#89ddff;">= { </span><span style="color:#f07178;">handle </span><span style="color:#89ddff;">= &quot;&quot;, </span><span style="color:#f07178;">domain </span><span style="color:#89ddff;">= &quot;&quot; }
 </span></code></pre>
 <p><code>fb_app_id</code> and <code>fb_admins</code> are only allowed in the default author's profile.
 In addition, <code>image</code> and <code>image_alt</code> of the profile will be used as a
@@ -715,10 +742,18 @@ fallback open graph image for all pages.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># IETF tag for artificial languages. (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;"># language_code = &quot;art-x-code&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Set a generic description for taxonomy/term pages.
+</span><span style="font-style:italic;color:#4a4a4a;"># Set a description for taxonomy pages.
+</span><span style="color:#89ddff;">[extra.languages.en.taxonomy_descriptions]
+</span><span style="color:#f07178;">categories </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">A map of all categories on this site. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">A map of all tags on this site. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">A map of all authors on this site. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Set a description for term pages.
 </span><span style="font-style:italic;color:#4a4a4a;"># `$NAME` will be automatically replaced.
-</span><span style="color:#f07178;">taxonomy_list_description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">A map of all $NAME on this site. Start exploring!</span><span style="color:#89ddff;">&quot;
-</span><span style="color:#f07178;">taxonomy_single_description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Browse articles related to $NAME. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#89ddff;">[extra.languages.en.term_descriptions]
+</span><span style="color:#f07178;">categories </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Browse articles related to $NAME. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Browse articles related to $NAME. Start exploring!</span><span style="color:#89ddff;">&quot;
+</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Browse articles written by $NAME. Start exploring!</span><span style="color:#89ddff;">&quot;
 </span></code></pre>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="font-style:italic;color:#4a4a4a;"># For French
 </span><span style="color:#89ddff;">[extra.languages.fr]

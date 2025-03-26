@@ -93,10 +93,10 @@ Additionally, a search button will be displayed in the navigation bar.&lt;&#x2F;
 &lt;li&gt;Type: Array of objects&lt;&#x2F;li&gt;
 &lt;li&gt;Default: []&lt;&#x2F;li&gt;
 &lt;li&gt;Usage:&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;menu &lt;&#x2F;span&gt;&lt;span&gt;= [
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;posts&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;posts&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;projects&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;projects&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;3 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;posts&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;posts&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;projects&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;projects&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;about&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;3 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;&#x2F;tags&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;weight &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;4 &lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;,
 &lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
@@ -202,7 +202,7 @@ Additionally, a search button will be displayed in the navigation bar.&lt;&#x2F;
 &lt;p&gt;Do you want to link to the source code of your blog post? You can turn on the &lt;code&gt;repo_view&lt;&#x2F;code&gt; inside the &lt;code&gt;[extra]&lt;&#x2F;code&gt; section of your blog post.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;repo_view &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ff8f40;&quot;&gt;true
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;repo_url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;github.com&#x2F;not-matthias&#x2F;apollo&#x2F;tree&#x2F;main&#x2F;content&amp;quot;   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#abb0b6;&quot;&gt;# Alternatively add the repo here
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#399ee6;&quot;&gt;repo_url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;github.com&#x2F;not-matthias&#x2F;apollo&#x2F;tree&#x2F;main&#x2F;content&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#abb0b6;&quot;&gt;# Alternatively add the repo here
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;repo_url&lt;&#x2F;code&gt; can be set in the &lt;code&gt;[extra]&lt;&#x2F;code&gt; section or in your &lt;code&gt;config.toml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;comments-comment&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#comments-comment&quot; aria-label=&quot;Anchor link for: comments-comment&quot;&gt;Comments (&lt;code&gt;comment&lt;&#x2F;code&gt;)&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
@@ -254,42 +254,36 @@ When enabled, this allows readers to leave comments on your blog posts. This fea
 &lt;p&gt;Here is an example of the &lt;code&gt;note&lt;&#x2F;code&gt; shortcode:&lt;&#x2F;p&gt;
 &lt;p&gt;This one is static!
 &lt;div class=&quot;note-container&quot;&gt;
-  
-    &lt;div class=&quot;note-header&quot;&gt;
-      
-        &lt;div class=&quot;note-icon&quot;&gt;
-        &lt;p&gt;Note!&lt;&#x2F;p&gt;
-
-        &lt;&#x2F;div&gt;
-      
-    &lt;&#x2F;div&gt;
-    &lt;div class=&quot;note-content&quot;&gt;
-      &lt;p&gt;This blog assumes basic terminal maturity&lt;&#x2F;p&gt;
-
-    &lt;&#x2F;div&gt;
-  
+    
+            &lt;div class=&quot;note-header&quot;&gt;
+                
+                    &lt;div class=&quot;note-icon&quot;&gt;&lt;p&gt;Note!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
+                
+            &lt;&#x2F;div&gt;
+            &lt;div class=&quot;note-content&quot;&gt;&lt;p&gt;This blog assumes basic terminal maturity&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+        
+    &lt;&#x2F;div&gt;
 &lt;&#x2F;p&gt;
 &lt;p&gt;This one is clickable!
 &lt;div class=&quot;note-container&quot;&gt;
-  
-    &lt;button class=&quot;note-toggle&quot;&gt;
-      
-        &lt;div class=&quot;note-icon&quot;&gt;
-        &lt;p&gt;Quiz!&lt;&#x2F;p&gt;
-
-        &lt;&#x2F;div&gt;
-      
-    &lt;&#x2F;button&gt;
-
     
-    &lt;div class=&quot;note-content&quot; style=&quot;display: none;&quot;&gt;
-    
-    &lt;p&gt;The answer to the quiz!&lt;&#x2F;p&gt;
-
-    &lt;&#x2F;div&gt;
-  
+        &lt;button class=&quot;note-toggle&quot;&gt;
+            
+                &lt;div class=&quot;note-icon&quot;&gt;&lt;p&gt;Quiz!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
+            
+        &lt;&#x2F;button&gt;
+
+        
+            &lt;div class=&quot;note-content&quot; style=&quot;display: none;&quot;&gt;
+            
+                &lt;p&gt;The answer to the quiz!&lt;&#x2F;p&gt;
+
+            &lt;&#x2F;div&gt;
+        
+    &lt;&#x2F;div&gt;
 &lt;&#x2F;p&gt;
 &lt;p&gt;Syntax:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#fafafa;color:#61676c;&quot;&gt;&lt;code&gt;&lt;span&gt;{{ note(header=&amp;quot;Note!&amp;quot;, body=&amp;quot;This blog assumes basic terminal maturity&amp;quot;) }}
@@ -297,20 +291,16 @@ When enabled, this allows readers to leave comments on your blog posts. This fea
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;You can also use some HTML in the text:
 &lt;div class=&quot;note-container&quot;&gt;
-  
-    &lt;div class=&quot;note-header&quot;&gt;
-      
-        &lt;div class=&quot;note-icon&quot;&gt;
-        &lt;p&gt;Note!&lt;&#x2F;p&gt;
-
-        &lt;&#x2F;div&gt;
-      
-    &lt;&#x2F;div&gt;
-    &lt;div class=&quot;note-content&quot;&gt;
-      &lt;h1&gt;This blog assumes basic terminal maturity&lt;&#x2F;h1&gt;
-    &lt;&#x2F;div&gt;
-  
+    
+            &lt;div class=&quot;note-header&quot;&gt;
+                
+                    &lt;div class=&quot;note-icon&quot;&gt;&lt;p&gt;Note!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
+                
+            &lt;&#x2F;div&gt;
+            &lt;div class=&quot;note-content&quot;&gt;&lt;h1&gt;This blog assumes basic terminal maturity&lt;&#x2F;h1&gt;&lt;&#x2F;div&gt;
+        
+    &lt;&#x2F;div&gt;
 &lt;&#x2F;p&gt;
 &lt;p&gt;Literal shortcode:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#fafafa;color:#61676c;&quot;&gt;&lt;code&gt;&lt;span&gt;{{ note(header=&amp;quot;Note!&amp;quot;, body=&amp;quot;&amp;lt;h1&amp;gt;This blog assumes basic terminal maturity&amp;lt;&#x2F;h1&amp;gt;&amp;quot;) }}
@@ -318,29 +308,27 @@ When enabled, this allows readers to leave comments on your blog posts. This fea
 &lt;p&gt;Pretty cool, right?&lt;&#x2F;p&gt;
 &lt;p&gt;Finally, you can do something like this (hopefully):&lt;&#x2F;p&gt;
 &lt;div class=&quot;note-container&quot;&gt;
-  
-    &lt;button class=&quot;note-toggle&quot;&gt;
-      
-        &lt;div class=&quot;note-icon&quot;&gt;
-        &lt;p&gt;Quiz!&lt;&#x2F;p&gt;
-
-        &lt;&#x2F;div&gt;
-      
-    &lt;&#x2F;button&gt;
-
     
-    &lt;div class=&quot;note-content&quot; style=&quot;display: block;&quot;&gt;
-    
-    &lt;h1 id=&quot;hello-this-is-markdown-inside-a-note-shortcode&quot;&gt;Hello this is markdown inside a note shortcode&lt;&#x2F;h1&gt;
+        &lt;button class=&quot;note-toggle&quot;&gt;
+            
+                &lt;div class=&quot;note-icon&quot;&gt;&lt;p&gt;Quiz!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+            
+        &lt;&#x2F;button&gt;
+
+        
+                &lt;div class=&quot;note-content&quot; style=&quot;display: block;&quot;&gt;
+                
+                &lt;h1 id=&quot;hello-this-is-markdown-inside-a-note-shortcode&quot;&gt;Hello this is markdown inside a note shortcode&lt;&#x2F;h1&gt;
 &lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#fa6e32;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f29718;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f07171;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;Hello World&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676ccc;&quot;&gt;;
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;We can&#x27;t call another shortcode inside a shortcode, but this is good enough.&lt;&#x2F;p&gt;
 
+            &lt;&#x2F;div&gt;
+        
     &lt;&#x2F;div&gt;
-  
-&lt;&#x2F;div&gt;
 &lt;p&gt;Here is the raw markdown:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ note(clickable=true, header=&amp;quot;Quiz!&amp;quot;) }}
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -358,21 +346,17 @@ When enabled, this allows readers to leave comments on your blog posts. This fea
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, we have center
 &lt;div class=&quot;note-container&quot;&gt;
-  
-    &lt;div class=&quot;note-header&quot;&gt;
-      
-        &lt;div class=&quot;note-center&quot;&gt;
-        &lt;p&gt;Centered Text&lt;&#x2F;p&gt;
-
-        &lt;&#x2F;div&gt;
-      
-    &lt;&#x2F;div&gt;
-    &lt;div class=&quot;note-content&quot;&gt;
-      &lt;p&gt;This is centered text&lt;&#x2F;p&gt;
-
-    &lt;&#x2F;div&gt;
-  
+    
+            &lt;div class=&quot;note-header&quot;&gt;
+                
+                    &lt;div class=&quot;note-center&quot;&gt;&lt;p&gt;Centered Text&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
+                
+            &lt;&#x2F;div&gt;
+            &lt;div class=&quot;note-content&quot;&gt;&lt;p&gt;This is centered text&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+        
+    &lt;&#x2F;div&gt;
 &lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#fafafa;color:#61676c;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ note(center=true, header=&amp;quot;Centered Text&amp;quot;, body=&amp;quot;This is centered text&amp;quot;) }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
