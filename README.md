@@ -43,7 +43,7 @@
 - [citrus](https://github.com/tatumroaquin/citrus): 80 commits
 - [datum](https://github.com/davidmreed/datum): 16 commits
 - [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
-- [eips-theme](https://github.com/eips-wg/theme.git): 475 commits
+- [eips-theme](https://github.com/eips-wg/theme): 475 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 39 commits
 - [navhive](https://github.com/idevsig/navhive): 13 commits
 - [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
@@ -51,6 +51,8 @@
 - [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
 - [Ergo](https://github.com/insipx/Ergo): 115 commits
 - [boring](https://github.com/clflushopt/boring): 70 commits
+- [rahix](https://github.com/Rahix/blog-theme): 88 commits
+- [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
