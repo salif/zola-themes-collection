@@ -131,16 +131,15 @@ function formatSearchResultItem(item, terms) {
 }
 
 function initSearch() {
-    var $searchInput = document.getElementById("search");
     var $searchResults = document.querySelector(".search-results");
     var $searchResultsItems = document.querySelector(".search-results__items");
     var MAX_ITEMS = 10;
 
-    // keyboard shortcut for
+    // keyboard shortcut for focusing the search input
     document.addEventListener('keydown', function (event) {
         if (event.metaKey && event.key === 'k') {
             event.preventDefault();
-            $searchInput.focus()
+            document.getElementById("desktop-search").focus()
         }
     });
 
@@ -167,34 +166,51 @@ function initSearch() {
         return res;
     }
 
-    $searchInput.addEventListener("keyup", debounce(async function () {
-        var term = $searchInput.value.trim();
-        if (term === currentTerm) {
-            return;
-        }
-        $searchResults.style.display = term === "" ? "none" : "block";
-        $searchResultsItems.innerHTML = "";
-        currentTerm = term;
-        if (term === "") {
-            return;
-        }
+    document.querySelectorAll(".search-input").forEach($searchInput => {
+        $searchInput.addEventListener("keyup", debounce(async function () {
+            var term = $searchInput.value.trim();
+            if (term === currentTerm) {
+                return;
+            }
+            $searchResults.style.display = term === "" ? "none" : "block";
+            $searchResultsItems.innerHTML = "";
+            currentTerm = term;
+            if (term === "") {
+                return;
+            }
 
-        var results = (await initIndex()).search(term, options);
-        if (results.length === 0) {
-            $searchResults.style.display = "none";
-            return;
-        }
+            var results = (await initIndex()).search(term, options);
+            if (results.length === 0) {
+                $searchResults.style.display = "none";
+                return;
+            }
 
-        for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-            var item = document.createElement("li");
-            item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
-            $searchResultsItems.appendChild(item);
-        }
-    }, 150));
+            for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
+                var item = document.createElement("li");
+                item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+                $searchResultsItems.appendChild(item);
+            }
 
-    window.addEventListener('click', function (e) {
-        if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
-            $searchResults.style.display = "none";
+            window.scrollTo(0, 0);
+        }, 150));
+
+        window.addEventListener('click', function (e) {
+            if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
+                $searchResults.style.display = "none";
+            }
+            $searchInput.value = ""; // clear the input field when closing the search
+        });
+    })
+
+    // find the search button, open and focus mobile search bar on click
+    $searchButton = document.querySelector("#search-button");
+    $searchButton.addEventListener('click', function (e) {
+        $searchBar = document.querySelector("#search-bar")
+        if ($searchBar.classList.contains("hidden")) {
+            $searchBar.classList.remove("hidden")
+            $searchBar.querySelector(".search-input").focus()
+        } else {
+            $searchBar.classList.add("hidden")
         }
     });
 }

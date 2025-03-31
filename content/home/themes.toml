@@ -1216,8 +1216,8 @@ theme = "devnzt"
 [[project]]
 theme = "daisy"
 name = "Daisy"
-desc = "Theme for a project portfolio (based on Tailwind CSS)."
-tags = [ ]
+desc = "Beautiful and fast responsive theme based on TailwindCSS and DaisyUI."
+tags = [ "multilingual", "responsive", "search" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
 
@@ -1229,11 +1229,11 @@ They should work for most themes in this collection.
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+git submodule add https://codeberg.org/winterstein/zola-theme-daisy.git themes/daisy
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/awinterstein/zola-theme-daisy.git themes/daisy
+git clone https://codeberg.org/winterstein/zola-theme-daisy.git themes/daisy
 ```
 2. Set theme in your `config.toml`
 ```toml
@@ -1245,7 +1245,7 @@ theme = "daisy"
 ### Info{#h-info-daisy}
 - **Author**: [Adrian Winterstein](https://www.winterstein.biz)
 - **License**: MIT
-- **Homepage**: <https://github.com/awinterstein/zola-theme-daisy>
+- **Homepage**: <https://codeberg.org/winterstein/zola-theme-daisy>
 - **Offic. Live Demo**: <https://zola-daisy.winterstein.biz>
 - **Min Zola version**: 0.9.0
 </details>"""
@@ -1256,7 +1256,7 @@ theme = "daisy"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/awinterstein/zola-theme-daisy"
+  url = "https://codeberg.org/winterstein/zola-theme-daisy"
 
   [[project.links]]
   name = "Install"
