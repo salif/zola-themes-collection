@@ -271,6 +271,9 @@ Set the ones you need.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_info`.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: config.extra.page_info;)
 </span><span style="color:#f07178;">page_info </span><span style="color:#89ddff;">= []
+</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_summary_on_paginator`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: config.extra.page_summary_on_paginator;)
+</span><span style="color:#f07178;">page_summary_on_paginator </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.toc`.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean or object; default value: config.extra.toc;)
 </span><span style="color:#f07178;">toc </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
@@ -543,6 +546,10 @@ Taxonomies on Linkita with translated names are <code>tags</code>, <code>categor
 </span><span style="font-style:italic;color:#4a4a4a;">#  `tags`, `tags_on_page`, `tags_on_paginator`.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: `[&quot;date&quot;, &quot;date_updated_on_page&quot;, &quot;reading_time&quot;, &quot;authors&quot;]`;)
 </span><span style="font-style:italic;color:#4a4a4a;"># page_info = []
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Prioritize summary over description.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="font-style:italic;color:#4a4a4a;"># page_summary_on_paginator = true
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Enable table of contents on all pages.
 </span><span style="font-style:italic;color:#4a4a4a;"># If not set, toc is enabled only on post pages.
