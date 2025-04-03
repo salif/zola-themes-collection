@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready overflow-y-scroll lg:text-base" lang="en">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="en">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
   <meta charset="utf-8" />
@@ -23,7 +23,7 @@
   
   <!-- End Head inject -->
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=6ca0ac09450d944545d3" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=483b4e5ae28a7f32d249" />
   <style>
   :root {
     --bg: #f6f8fa; --header: #f6f8fa; color-scheme: light; }
@@ -1923,6 +1923,85 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-daisy"
+        >Info</a
+      >
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Ametrine</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-ametrine.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-ametrine.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-ametrine.webp"
+        alt="Screenshot of the Ametrine theme" width="1360" height="765" />
+    </picture>
+    <p>Modern, pretty, and clean theme.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ametrine'></summary>
+<h3 id="h-install-ametrine">Installation</h3>
+<p>The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/daudix/ametrine.git themes/ametrine
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/daudix/ametrine.git themes/ametrine
+</span></code></pre>
+<ol start="2">
+<li>Set theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">ametrine</span><span>&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ametrine'></summary>
+<h3 id="h-info-ametrine">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://daudix.one">David Lapshin</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/daudix/ametrine">https://codeberg.org/daudix/ametrine</a></li>
+<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://ametrine.daudix.one">https://ametrine.daudix.one</a></li>
+<li><strong>Min Zola version</strong>: 0.19.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/ametrine/"
+        rel="noopener"
+        target="_blank"
+        >Live Demo</a
+      >
+      <a
+        class="underline"
+        href="https://codeberg.org/daudix/ametrine"
+        rel="noopener"
+        target="_blank"
+        >Repository</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('install-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-ametrine"
+        >Install</a
+      >
+      <a
+        class="underline"
+        onclick="const b=document.getElementById('info-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-ametrine"
         >Info</a
       >
     </div>

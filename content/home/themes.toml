@@ -1269,6 +1269,61 @@ theme = "daisy"
   js = "const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "ametrine"
+name = "Ametrine"
+desc = "Modern, pretty, and clean theme."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ametrine'></summary>
+
+### Installation{#h-install-ametrine}
+The following instructions are not official so may be incomplete.
+They should work for most themes in this collection.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/daudix/ametrine.git themes/ametrine
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/daudix/ametrine.git themes/ametrine
+```
+2. Set theme in your `config.toml`
+```toml
+theme = "ametrine"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ametrine'></summary>
+
+### Info{#h-info-ametrine}
+- **Author**: [David Lapshin](https://daudix.one)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/daudix/ametrine>
+- **Offic. Live Demo**: <https://ametrine.daudix.one>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [[project.links]]
+  name = "Live Demo"
+  url = "https://salif.github.io/zola-themes-collection/demo/ametrine/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/daudix/ametrine"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-ametrine"
+  js = "const b=document.getElementById('install-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-ametrine"
+  js = "const b=document.getElementById('info-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "book"
 name = "book"
 desc = "A book theme inspired from GitBook/mdBook"

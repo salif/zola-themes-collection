@@ -6,7 +6,7 @@
     {%- set projects = load_data(path=data, format=format, required=true) %}
   {% endif %}
 {%- endif %}
-{%- set base_url_lang = get_url(path="", lang=lang) %}
+{%- set lang_base_url = get_url(path=``, lang=lang) %}
 
 {%- for project in projects.project %}
   {%- set name = project.languages[lang].name | default(value=project.name) %}
@@ -41,7 +41,7 @@
         onclick="{{ link.js | safe }}"
         href="{{ link.url | escape_xml | safe }}"
         {%- else %}
-        href="{{ link.url | replace(from=`$BASE_URL`, to=base_url_lang) | escape_xml | safe }}"
+        href="{{ link.url | replace(from=`$BASE_URL`, to=lang_base_url) | escape_xml | safe }}"
         rel="noopener"
         target="_blank"
         {%- endif %}
