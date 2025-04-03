@@ -158,7 +158,7 @@ submodule-add url name: && (build-check "themes/" + name)
 
 [group('help')]
 submodule-update-all:
-    git submodule update --init --remote --merge
+    git submodule update --remote
     git submodule foreach --recursive git submodule update --init
     git submodule summary
 

@@ -17,11 +17,10 @@
 - [halve-z](https://github.com/charlesrocket/halve-z): 540 commits
 - [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits
 - [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits
-- [ennui](https://codeberg.org/leana8959/ennui): 36 commits
 - [re137](https://github.com/tinikov/re137): 11 commits
 - [butler](https://github.com/shalzz/butler): 105 commits
 - [polymathic](https://github.com/anvlkv/polymathic): 95 commits
-- [magic-box](https://github.com/dulvui/magic-box): 187 commits
+- [magic-box](https://github.com/dulvui/magic-box): 189 commits
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
 - [anatole-zola](https://github.com/longfangsong/anatole-zola): 49 commits
@@ -80,6 +79,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-scribble](https://github.com/jzbor/zola-scribble): 24 commits
 - [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 4 commits
 - [neovim-theme](https://github.com/Super-Botman/neovim-theme): 40 commits
+- [ennui](https://codeberg.org/leana8959/ennui): 41 commits
 
 ### No license that allows me to host a live demo
 
