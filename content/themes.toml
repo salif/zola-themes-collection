@@ -307,9 +307,9 @@ theme = "project-portfolio"
 ### Info{#h-info-project-portfolio}
 - **Author**: [Adrian Winterstein](https://www.winterstein.biz)
 - **License**: MIT
-- **Homepage**: <https://github.com/awinterstein/zola-theme-project-portfolio>
+- **Homepage**: <https://codeberg.org/winterstein/zola-theme-project-portfolio>
 - **Offic. Live Demo**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
-- **Min Zola version**: 0.9.0
+- **Min Zola version**: 0.19.0
 </details>"""
 
   [[project.links]]
@@ -937,62 +937,6 @@ theme = "hacker"
   name = "Info"
   url = "#info-hacker"
   js = "const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "mo8it-mod"
-name = "mo8it-mod"
-desc = "mo8it-mod is a Zola theme based on the templates on mo8it.com"
-tags = [ "Blog", "Multilingual" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it-mod'></summary>
-
-### Installation{#h-install-mo8it-mod}
-The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/salif/mo8it-mod.git themes/mo8it-mod
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/salif/mo8it-mod.git themes/mo8it-mod
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "mo8it-mod"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mo8it-mod'></summary>
-
-### Info{#h-info-mo8it-mod}
-- **Author**: [Salif Mehmed](https://salif.eu)
-- **License**: AGPLv3
-- **Homepage**: <https://codeberg.org/salif/mo8it-mod>
-- **Offic. Live Demo**: <https://salif.github.io/zola-themes-collection/demo/mo8it-mod/>
-- **Min Zola version**: 0.19.2
-- **Original**: <https://codeberg.org/mo8it/website>
-</details>"""
-
-  [[project.links]]
-  name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/mo8it-mod/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/salif/mo8it-mod"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-mo8it-mod"
-  js = "const b=document.getElementById('install-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-mo8it-mod"
-  js = "const b=document.getElementById('info-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "academic-paper"
@@ -1995,14 +1939,14 @@ theme = "DogFood"
   js = "const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "doc"
-name = "EasyDocs"
-desc = "An easy way to create docs for your project"
+theme = "concrete-css-zola"
+name = "concrete-css-zola"
+desc = ""
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-doc'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-concrete-css-zola'></summary>
 
-### Installation{#h-install-doc}
+### Installation{#h-install-concrete-css-zola}
 The following instructions are not official so may be incomplete.
 They should work for most themes in this collection.
 
@@ -2010,41 +1954,38 @@ They should work for most themes in this collection.
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+git submodule add https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+git clone https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
 ```
 2. Set theme in your `config.toml`
 ```toml
-theme = "doc"
+theme = "concrete-css-zola"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-doc'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-concrete-css-zola'></summary>
 
-### Info{#h-info-doc}
-- **Author**: [Roman Soldatenkov](https://codeandmedia.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/codeandmedia/zola_easydocs_theme>
-- **Offic. Live Demo**: <https://easydocs.codeandmedia.com>
-- **Min Zola version**: 0.13.0
+### Info{#h-info-concrete-css-zola}
+- **License**: undefined
+- **Homepage**: <https://codeberg.org/Pontoporeia/concrete-css-zola>
 </details>"""
 
   [[project.links]]
   name = "Live Demo"
-  url = "https://salif.github.io/zola-themes-collection/demo/doc/"
+  url = "https://salif.github.io/zola-themes-collection/demo/concrete-css-zola/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/ProPixelizer/doc_zola_theme"
+  url = "https://codeberg.org/Pontoporeia/concrete-css-zola"
 
   [[project.links]]
   name = "Install"
-  url = "#install-doc"
-  js = "const b=document.getElementById('install-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-concrete-css-zola"
+  js = "const b=document.getElementById('install-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-doc"
-  js = "const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-concrete-css-zola"
+  js = "const b=document.getElementById('info-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"

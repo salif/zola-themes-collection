@@ -104,7 +104,7 @@ function doUpdateData(baseURL, themes) {
 		if (null != themeInfo) data.push(themeInfo);
 		else console.error(theme);
 	}
-	fs.writeFileSync('content/home/themes.toml', TOML.stringify({ project: data }));
+	fs.writeFileSync('content/themes.toml', TOML.stringify({ project: data }));
 }
 function onlyIf(v, ifFalse, ifTrue) {
 	if (undefined == v || v.length == 0) return ifFalse;
