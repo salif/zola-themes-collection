@@ -20,6 +20,7 @@ check-requirements:
         if ! command -v "${COMMAND}" 2>&1 >/dev/null; then \
             printf "%sWarning: '%s' is not installed or not in PATH%s\n" \
                 "{{ style("warning") }}" "${COMMAND}" "{{ NORMAL }}" >&2; \
+            printf "%sTry 'npm install' inside 'scripts' directory\n"; \
         fi; \
     done;
 

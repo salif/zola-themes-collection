@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="en">
 
-<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+<head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -13,7 +13,7 @@
   <meta property="og:description" content="A curated directory of themes for the Zola static site generator." />
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/screenshot.png" />
   <meta property="og:image:alt" content="A screenshot of this website." />
   <meta property="og:image:width" content="1360" />
@@ -22,14 +22,14 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=483b4e5ae28a7f32d249" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=0745654a511f81d99b7c" />
   <style>
   :root {
     --bg: #f6f8fa; --header: #f6f8fa; color-scheme: light; }
   :root.dark {
     --bg: #1d212c; --header: #1d212c; color-scheme: dark; }
   </style>
+  <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
   <script src="https://salif.github.io/zola-themes-collection/js/linkita.min.js?h=2cfe69bc508021cbd3c5"></script>
   <!-- Begin Head End inject -->
   
@@ -38,7 +38,7 @@
 
 <body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -46,15 +46,7 @@
           href="https://salif.github.io/zola-themes-collection/" class="text-2xl font-semibold">Zola Themes</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
-          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
-            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
-            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
-            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
-            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
-            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
-            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
-            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
         ></button>
       </div>
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -93,6 +85,7 @@
 
   <!-- Content -->
   <section>
+  
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear</h2>
   <div class="not-prose">
@@ -108,7 +101,7 @@
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
 <h3 id="h-install-zola-bearblog">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -147,14 +140,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/zola-bearblog/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/alanpearce/zola-bearblog"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -188,7 +179,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
 <h3 id="h-install-duckquill">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -226,14 +217,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/duckquill/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/daudix/duckquill"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -267,7 +256,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
 <h3 id="h-install-linkita">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -311,14 +300,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/linkita/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/salif/linkita"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -352,7 +339,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
 <h3 id="h-install-tabi">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -390,14 +377,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/tabi/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/welpo/tabi"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -431,7 +416,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
 <h3 id="h-install-researchlab">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -469,14 +454,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/researchlab/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/plaublin/researchlab"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -510,7 +493,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
 <h3 id="h-install-project-portfolio">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -536,9 +519,9 @@ They should work for most themes in this collection.</p>
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.winterstein.biz">Adrian Winterstein</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/awinterstein/zola-theme-project-portfolio">https://github.com/awinterstein/zola-theme-project-portfolio</a></li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/winterstein/zola-theme-project-portfolio">https://codeberg.org/winterstein/zola-theme-project-portfolio</a></li>
 <li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://awinterstein.github.io/zola-theme-project-portfolio-example/">https://awinterstein.github.io/zola-theme-project-portfolio-example/</a></li>
-<li><strong>Min Zola version</strong>: 0.9.0</li>
+<li><strong>Min Zola version</strong>: 0.19.0</li>
 </ul>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
@@ -548,14 +531,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/awinterstein/zola-theme-project-portfolio"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -589,7 +570,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
 <h3 id="h-install-radion">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -630,14 +611,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/radion/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/micahkepe/radion"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -671,7 +650,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
 <h3 id="h-install-bearplus">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -710,14 +689,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/bearplus/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/francoposa/zola-bearplusplus"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -751,7 +728,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-serene'></summary>
 <h3 id="h-install-serene">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -779,7 +756,7 @@ They should work for most themes in this collection.</p>
 <li><strong>License</strong>: MIT</li>
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/isunjn/serene">https://github.com/isunjn/serene</a></li>
 <li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://serene-demo.pages.dev">https://serene-demo.pages.dev</a></li>
-<li><strong>Min Zola version</strong>: 0.19.0</li>
+<li><strong>Min Zola version</strong>: 0.20.0</li>
 </ul>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
@@ -789,14 +766,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/serene/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/isunjn/serene"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -830,7 +805,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
 <h3 id="h-install-hook">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -868,14 +843,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/hook/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/InputUsername/zola-hook"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -909,7 +882,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
 <h3 id="h-install-apollo">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -947,14 +920,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/apollo/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/not-matthias/apollo"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -988,7 +959,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
 <h3 id="h-install-kita">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1027,14 +998,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/kita/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/st1020/kita"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1068,7 +1037,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod'></summary>
 <h3 id="h-install-papermod">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1107,14 +1076,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/papermod/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/cydave/zola-theme-papermod"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1148,7 +1115,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cela'></summary>
 <h3 id="h-install-cela">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1184,14 +1151,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/cela/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/edwardzcn-decade/cela"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1225,7 +1190,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
 <h3 id="h-install-mabuya">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1264,14 +1229,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/mabuya/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/semanticdata/mabuya"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1305,7 +1268,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
 <h3 id="h-install-abridge">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1343,14 +1306,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/abridge/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/jieiku/abridge"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1384,7 +1345,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
 <h3 id="h-install-hacker">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1423,14 +1384,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/hacker/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/en9inerd/zola-hacker"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1444,88 +1403,6 @@ They should work for most themes in this collection.</p>
         class="underline"
         onclick="const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
         href="#info-hacker"
-        >Info</a
-      >
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">mo8it-mod</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-mo8it-mod.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-mo8it-mod.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-mo8it-mod.webp"
-        alt="Screenshot of the mo8it-mod theme" width="1360" height="765" />
-    </picture>
-    <p>mo8it-mod is a Zola theme based on the templates on mo8it.com</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mo8it-mod'></summary>
-<h3 id="h-install-mo8it-mod">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
-They should work for most themes in this collection.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/salif/mo8it-mod.git themes/mo8it-mod
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/salif/mo8it-mod.git themes/mo8it-mod
-</span></code></pre>
-<ol start="2">
-<li>Set theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">mo8it-mod</span><span>&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mo8it-mod'></summary>
-<h3 id="h-info-mo8it-mod">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://salif.eu">Salif Mehmed</a></li>
-<li><strong>License</strong>: AGPLv3</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/salif/mo8it-mod">https://codeberg.org/salif/mo8it-mod</a></li>
-<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/">https://salif.github.io/zola-themes-collection/demo/mo8it-mod/</a></li>
-<li><strong>Min Zola version</strong>: 0.19.2</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/mo8it/website">https://codeberg.org/mo8it/website</a></li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#Blog</span>
-      <span>#Multilingual</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/mo8it-mod/"
-        rel="noopener"
-        target="_blank"
-        >Live Demo</a
-      >
-      <a
-        class="underline"
-        href="https://codeberg.org/salif/mo8it-mod"
-        rel="noopener"
-        target="_blank"
-        >Repository</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('install-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-mo8it-mod"
-        >Install</a
-      >
-      <a
-        class="underline"
-        onclick="const b=document.getElementById('info-mo8it-mod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-mo8it-mod"
         >Info</a
       >
     </div>
@@ -1546,7 +1423,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
 <h3 id="h-install-academic-paper">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1584,14 +1461,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/academic-paper/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/aterenin/academic-paper"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1625,7 +1500,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
 <h3 id="h-install-academic-workshop">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1663,14 +1538,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/aterenin/academic-workshop"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1704,7 +1577,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
 <h3 id="h-install-ski">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1742,14 +1615,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/ski/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/un1970ix/ski"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1783,7 +1654,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
 <h3 id="h-install-devnzt">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1820,14 +1691,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/devnzt/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/devendrn/devnzt"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1861,7 +1730,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
 <h3 id="h-install-daisy">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1902,14 +1771,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/daisy/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/winterstein/zola-theme-daisy"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -1943,7 +1810,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ametrine'></summary>
 <h3 id="h-install-ametrine">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -1981,14 +1848,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/ametrine/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://codeberg.org/daudix/ametrine"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2022,7 +1887,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-book'></summary>
 <h3 id="h-install-book">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2060,14 +1925,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/book/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/getzola/book"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2101,7 +1964,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-minimal'></summary>
 <h3 id="h-install-zola-minimal">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2140,14 +2003,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/zola-minimal/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/semanticdata/zola-minimal"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2181,7 +2042,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-futu'></summary>
 <h3 id="h-install-zola-futu">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2219,14 +2080,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/zola-futu/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/inhzus/zola-futu"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2260,7 +2119,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
 <h3 id="h-install-zluinav">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2306,14 +2165,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/zluinav/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/harrymkt/zluinav"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2347,7 +2204,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
 <h3 id="h-install-sandbox">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2385,14 +2242,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/sandbox/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/semanticdata/zola-sandbox"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2426,7 +2281,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anatole-zola'></summary>
 <h3 id="h-install-anatole-zola">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2465,14 +2320,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/anatole-zola/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/longfangsong/anatole-zola"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2506,7 +2359,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-silk'></summary>
 <h3 id="h-install-silk">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2544,14 +2397,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/silk/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/DenysVuika/zola-silk"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2585,7 +2436,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-Seje2'></summary>
 <h3 id="h-install-Seje2">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2624,14 +2475,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/Seje2/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/eatradish/Seje2"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2665,7 +2514,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
 <h3 id="h-install-terminimal">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2704,14 +2553,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/terminimal/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/pawroman/zola-theme-terminimal"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2745,7 +2592,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
 <h3 id="h-install-oceanic-zen">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2783,14 +2630,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/barlog-m/oceanic-zen"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2824,7 +2669,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
 <h3 id="h-install-olivine">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2861,14 +2706,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/olivine/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/dongryul-kim/olivine"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2902,7 +2745,7 @@ They should work for most themes in this collection.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
 <h3 id="h-install-DogFood">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2939,14 +2782,12 @@ They should work for most themes in this collection.</p>
       <a
         class="underline"
         href="https://salif.github.io/zola-themes-collection/demo/DogFood/"
-        rel="noopener"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
         href="https://github.com/CSUwangj/DogFood"
-        rel="noopener"
         target="_blank"
         >Repository</a
       >
@@ -2966,21 +2807,21 @@ They should work for most themes in this collection.</p>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">EasyDocs</h2>
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">concrete-css-zola</h2>
   <div class="not-prose">
     <picture>
-      <source srcset="./screenshots/light-doc.webp" type="image/webp"
+      <source srcset="./screenshots/light-concrete-css-zola.webp" type="image/webp"
         media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-doc.webp" type="image/webp"
+      <source srcset="./screenshots/dark-concrete-css-zola.webp" type="image/webp"
         media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-doc.webp"
-        alt="Screenshot of the EasyDocs theme" width="1360" height="765" />
+      <img src="./screenshots/light-concrete-css-zola.webp"
+        alt="Screenshot of the concrete-css-zola theme" width="1360" height="765" />
     </picture>
-    <p>An easy way to create docs for your project</p>
+    <p></p>
   </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-doc'></summary>
-<h3 id="h-install-doc">Installation</h3>
-<p>The following instructions are not official so may be incomplete.
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-concrete-css-zola'></summary>
+<h3 id="h-install-concrete-css-zola">Installation</h3>
+<p>The following instructions may be incomplete.
 They should work for most themes in this collection.</p>
 <ol start="0">
 <li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
@@ -2989,26 +2830,23 @@ They should work for most themes in this collection.</p>
 <ul>
 <li>Option A: Add the theme as a git submodule:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> submodule add https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
 </span></code></pre>
 <ul>
 <li>Option B: Clone the theme into your themes directory:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://github.com/ProPixelizer/doc_zola_theme.git themes/doc
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">git</span><span> clone https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
 </span></code></pre>
 <ol start="2">
 <li>Set theme in your <code>config.toml</code></li>
 </ol>
-<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">doc</span><span>&quot;
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">theme </span><span>= &quot;</span><span style="color:#a3be8c;">concrete-css-zola</span><span>&quot;
 </span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-doc'></summary>
-<h3 id="h-info-doc">Info</h3>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-concrete-css-zola'></summary>
+<h3 id="h-info-concrete-css-zola">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://codeandmedia.com">Roman Soldatenkov</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/codeandmedia/zola_easydocs_theme">https://github.com/codeandmedia/zola_easydocs_theme</a></li>
-<li><strong>Offic. Live Demo</strong>: <a rel="noopener" target="_blank" href="https://easydocs.codeandmedia.com">https://easydocs.codeandmedia.com</a></li>
-<li><strong>Min Zola version</strong>: 0.13.0</li>
+<li><strong>License</strong>: undefined</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/Pontoporeia/concrete-css-zola">https://codeberg.org/Pontoporeia/concrete-css-zola</a></li>
 </ul>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
@@ -3017,36 +2855,32 @@ They should work for most themes in this collection.</p>
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/doc/"
-        rel="noopener"
+        href="https://salif.github.io/zola-themes-collection/demo/concrete-css-zola/"
         target="_blank"
         >Live Demo</a
       >
       <a
         class="underline"
-        href="https://github.com/ProPixelizer/doc_zola_theme"
-        rel="noopener"
+        href="https://codeberg.org/Pontoporeia/concrete-css-zola"
         target="_blank"
         >Repository</a
       >
       <a
         class="underline"
-        onclick="const b=document.getElementById('install-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#install-doc"
+        onclick="const b=document.getElementById('install-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#install-concrete-css-zola"
         >Install</a
       >
       <a
         class="underline"
-        onclick="const b=document.getElementById('info-doc').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-        href="#info-doc"
+        onclick="const b=document.getElementById('info-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+        href="#info-concrete-css-zola"
         >Info</a
       >
     </div>
   </div>
 </div>
 </section>
-  <!-- Post Nav -->
-
 </article>
 
   </main>
@@ -3057,8 +2891,7 @@ They should work for most themes in this collection.</p>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
-      Powered by <a
-      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+      <a class="link" href="https://www.getzola.org/" target="_blank">Powered by Zola</a>
     </span>
     <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
   </div>

@@ -1,6 +1,223 @@
-function toggleSearchModal(){var e=document.getElementById("search-modal");e.classList.toggle("opacity-0"),e.classList.toggle("pointer-events-none"),document.body.classList.toggle("search-active"),[...document.body.classList].includes("search-active")&&(document.getElementById("search-input").value="",document.getElementById("search-input").focus())}function formatResultItem(e){return console.log(e),htmlToElement(`<li class="flex hover:bg-gray-200 dark:hover:bg-gray-600 text-black dark:text-gray-200 p-2 rounded-lg border border-black dark:border-gray-200 bg-gray-200 dark:bg-gray-500 rounded-lg hover:shadow-xl mb-2">
-  <a href="${e.doc.path}">
-  <span class="text-xl text-bold">${e.doc.title}</span>
-  <span class="text-lg">${e.doc.description}</span>
-  </a>
-  </li>`)}function htmlToElement(e){var t=document.createElement("template");return e=e.trim(),t.innerHTML=e,t.content.firstChild}document.addEventListener("DOMContentLoaded",function(){document.getElementById("search").addEventListener("click",function(e){e.preventDefault(),toggleSearchModal()});document.querySelector(".modal-overlay").addEventListener("click",toggleSearchModal);for(var e=document.querySelectorAll(".modal-close"),o=0;o<e.length;o++)e[o].addEventListener("click",toggleSearchModal);document.onkeydown=function(e){let t=!1,n=!1;"key"in(e=e||window.event)?(t="Escape"===e.key||"Esc"===e.key,n="k"===e.key&&!0===e.metaKey):(n=75===e.keyCode&&e.metaKey,t=27===e.keyCode),n&&e.preventDefault(),(t&&document.body.classList.contains("search-active")||n)&&toggleSearchModal()};let a=elasticlunr.Index.load(window.searchIndex),l={bool:"AND",fields:{title:{boost:2},body:{boost:1}}},r,c,d=document.getElementById("search-input");document.getElementById("search-results");d.addEventListener("keyup",function(e){if([...document.body.classList].includes("search-active")&&3<d.value.trim().length&&(r=d.value.trim(),c=a.search(r,l),Array.isArray(c))&&0<c.length){var t=document.getElementById("results-list");t.replaceChildren();for(o=0;o<c.length;o++){var n=formatResultItem(c[o]);t.appendChild(n)}}})});
+const lang = document.currentScript.lang;
+
+function debounce(func, wait) {
+    var timeout;
+
+    return function () {
+        var context = this;
+        var args = arguments;
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function () {
+            timeout = null;
+            func.apply(context, args);
+        }, wait);
+    };
+}
+
+// Taken from mdbook
+// The strategy is as follows:
+// First, assign a value to each word in the document:
+//  Words that correspond to search terms (stemmer aware): 40
+//  Normal words: 2
+//  First word in a sentence: 8
+// Then use a sliding window with a constant number of words and count the
+// sum of the values of the words within the window. Then use the window that got the
+// maximum sum. If there are multiple maximas, then get the last one.
+// Enclose the terms in <b>.
+function makeTeaser(body, terms) {
+    var TERM_WEIGHT = 40;
+    var NORMAL_WORD_WEIGHT = 2;
+    var FIRST_WORD_WEIGHT = 8;
+    var TEASER_MAX_WORDS = 30;
+
+    var stemmedTerms = terms.map(function (w) {
+        return elasticlunr.stemmer(w.toLowerCase());
+    });
+    var termFound = false;
+    var index = 0;
+    var weighted = []; // contains elements of ["word", weight, index_in_document]
+
+    // split in sentences, then words
+    var sentences = body.toLowerCase().split(". ");
+
+    for (var i in sentences) {
+        var words = sentences[i].split(" ");
+        var value = FIRST_WORD_WEIGHT;
+
+        for (var j in words) {
+            var word = words[j];
+
+            if (word.length > 0) {
+                for (var k in stemmedTerms) {
+                    if (elasticlunr.stemmer(word).startsWith(stemmedTerms[k])) {
+                        value = TERM_WEIGHT;
+                        termFound = true;
+                    }
+                }
+                weighted.push([word, value, index]);
+                value = NORMAL_WORD_WEIGHT;
+            }
+
+            index += word.length;
+            index += 1;  // ' ' or '.' if last word in sentence
+        }
+
+        index += 1;  // because we split at a two-char boundary '. '
+    }
+
+    if (weighted.length === 0) {
+        return body;
+    }
+
+    var windowWeights = [];
+    var windowSize = Math.min(weighted.length, TEASER_MAX_WORDS);
+    // We add a window with all the weights first
+    var curSum = 0;
+    for (var i = 0; i < windowSize; i++) {
+        curSum += weighted[i][1];
+    }
+    windowWeights.push(curSum);
+
+    for (var i = 0; i < weighted.length - windowSize; i++) {
+        curSum -= weighted[i][1];
+        curSum += weighted[i + windowSize][1];
+        windowWeights.push(curSum);
+    }
+
+    // If we didn't find the term, just pick the first window
+    var maxSumIndex = 0;
+    if (termFound) {
+        var maxFound = 0;
+        // backwards
+        for (var i = windowWeights.length - 1; i >= 0; i--) {
+            if (windowWeights[i] > maxFound) {
+                maxFound = windowWeights[i];
+                maxSumIndex = i;
+            }
+        }
+    }
+
+    var teaser = [];
+    var startIndex = weighted[maxSumIndex][2];
+    for (var i = maxSumIndex; i < maxSumIndex + windowSize; i++) {
+        var word = weighted[i];
+        if (startIndex < word[2]) {
+            // missing text from index to start of `word`
+            teaser.push(body.substring(startIndex, word[2]));
+            startIndex = word[2];
+        }
+
+        // add <em/> around search terms
+        if (word[1] === TERM_WEIGHT) {
+            teaser.push("<b>");
+        }
+        startIndex = word[2] + word[0].length;
+        teaser.push(body.substring(word[2], startIndex));
+
+        if (word[1] === TERM_WEIGHT) {
+            teaser.push("</b>");
+        }
+    }
+    teaser.push("…");
+    return teaser.join("");
+}
+
+function formatSearchResultItem(item, terms) {
+    return '<div class="search-results__item flex flex-col">'
+        + `<a href="${item.ref}"><h2>${item.doc.title}</h2>`
+        + `${makeTeaser(item.doc.body, terms)}</a>`
+        + '</div>';
+}
+
+function initSearch() {
+    var $searchResults = document.querySelector(".search-results");
+    var $searchResultsItems = document.querySelector(".search-results__items");
+    var MAX_ITEMS = 10;
+
+    // keyboard shortcut for focusing the search input
+    document.addEventListener('keydown', function (event) {
+        if (event.metaKey && event.key === 'k') {
+            event.preventDefault();
+            document.getElementById("desktop-search").focus()
+        }
+    });
+
+    var options = {
+        bool: "AND",
+        fields: {
+            title: { boost: 2 },
+            body: { boost: 1 },
+        }
+    };
+    var currentTerm = "";
+    var index;
+
+    var initIndex = async function () {
+        if (index === undefined) {
+            index = fetch(`/search_index.${lang}.json`)
+                .then(
+                    async function (response) {
+                        return await elasticlunr.Index.load(await response.json());
+                    }
+                );
+        }
+        let res = await index;
+        return res;
+    }
+
+    document.querySelectorAll(".search-input").forEach($searchInput => {
+        $searchInput.addEventListener("keyup", debounce(async function () {
+            var term = $searchInput.value.trim();
+            if (term === currentTerm) {
+                return;
+            }
+            $searchResults.style.display = term === "" ? "none" : "block";
+            $searchResultsItems.innerHTML = "";
+            currentTerm = term;
+            if (term === "") {
+                return;
+            }
+
+            var results = (await initIndex()).search(term, options);
+            if (results.length === 0) {
+                $searchResults.style.display = "none";
+                return;
+            }
+
+            for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
+                var item = document.createElement("li");
+                item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+                $searchResultsItems.appendChild(item);
+            }
+
+            window.scrollTo(0, 0);
+        }, 150));
+
+        window.addEventListener('click', function (e) {
+            if ($searchResults.style.display == "block" && !$searchResults.contains(e.target)) {
+                $searchResults.style.display = "none";
+            }
+            $searchInput.value = ""; // clear the input field when closing the search
+        });
+    })
+
+    // find the search button, open and focus mobile search bar on click
+    $searchButton = document.querySelector("#search-button");
+    $searchButton.addEventListener('click', function (e) {
+        $searchBar = document.querySelector("#search-bar")
+        if ($searchBar.classList.contains("hidden")) {
+            $searchBar.classList.remove("hidden")
+            $searchBar.querySelector(".search-input").focus()
+        } else {
+            $searchBar.classList.add("hidden")
+        }
+    });
+}
+
+
+if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+    initSearch();
+} else {
+    document.addEventListener("DOMContentLoaded", initSearch);
+}

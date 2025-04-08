@@ -22,14 +22,14 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=483b4e5ae28a7f32d249" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=0745654a511f81d99b7c" />
   <style>
   :root {
     --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
   :root.dark {
     --bg: #18181b; --header: #27272a; color-scheme: dark; }
   </style>
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/github.svg?h=3bf8cceead820aec50d4" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/home.svg?h=95f3cff5b954b2546150" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/rss.svg?h=b7cbb1db263715b5634e" />
@@ -44,7 +44,7 @@
 
 <body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -52,15 +52,7 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/" class="text-2xl font-semibold">Linkita</a>
         <button type="button" title="Ŝanĝi kolorskemon" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
-          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
-            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
-            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
-            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
-            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
-            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
-            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
-            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
         ></button>
       </div>
       <div title="Menuo" role="button" accesskey="+" tabindex="0"
@@ -106,7 +98,7 @@
   <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
     max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
     
-    <!-- Profile -->
+<!-- Profile -->
 <div class="mb-16 flex items-start">
   <div>
     <h1 class="mb-2 text-3xl font-bold">Kita</h1>
@@ -120,6 +112,7 @@
         href="https://github.com/st1020/kita"
         target="_blank"
         rel="me"
+        title="github"
         >github</a>
       <a
         class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
@@ -127,6 +120,7 @@
         href="https://kita-zola.pages.dev/"
         target="_blank"
         rel="me"
+        title="home"
         >home</a>
       <a
         class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
@@ -134,6 +128,7 @@
         href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/authors/kita/atom.xml"
         target="_blank"
         rel="alternate"
+        title="rss"
         >rss</a>
     </nav>
   </div>
@@ -166,7 +161,6 @@
         class="mx-1">&middot;</span><span>Kita</span>,&nbsp;<span>Salif</span>
 </div>
 
-
   <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/">Gvidilo pri Markdown-Sintakso</a>
 </section>
 <section
@@ -185,7 +179,6 @@
       datetime="PT0H1M0S">1&nbsp;min</time><span
         class="mx-1">&middot;</span><span>Kita</span>,&nbsp;<span>Salif</span>
 </div>
-
 
   <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/math-typesetting/">Matematika Kompostado</a>
 </section>
@@ -206,7 +199,6 @@
         class="mx-1">&middot;</span><span>Kita</span>,&nbsp;<span>Salif</span>
 </div>
 
-
   <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/shortcodes/">Mallongigoj</a>
 </section>
 <nav class="mt-16 flex">
@@ -221,8 +213,7 @@
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
-      Funkciigita de <a
-      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+      <a class="link" href="https://www.getzola.org/" target="_blank">Funkciigita de Zola</a>
     </span>
     <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
   </div>
@@ -237,7 +228,6 @@
     src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=1a7235ddf71175cb7d2a",
     endpoint: "https://sgi.goatcounter.com/count"
   });</script>
-  <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/eo/authors/kita/" alt=""></noscript>
 
   <!-- Begin Body End inject -->
   

@@ -20,14 +20,14 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=483b4e5ae28a7f32d249" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/main.min.css?h=0745654a511f81d99b7c" />
   <style>
   :root {
     --bg: #f6f8fa; --header: #f6f8fa; color-scheme: light; }
   :root.dark {
     --bg: #1d212c; --header: #1d212c; color-scheme: dark; }
   </style>
+  <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
   <script src="https://salif.github.io/zola-themes-collection/js/linkita.min.js?h=2cfe69bc508021cbd3c5"></script>
   <!-- Begin Head End inject -->
   
@@ -36,7 +36,7 @@
 
 <body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -44,15 +44,7 @@
           href="https://salif.github.io/zola-themes-collection/" class="text-2xl font-semibold">Zola Themes</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
-          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
-            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
-            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
-            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
-            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
-            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
-            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
-            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
         ></button>
       </div>
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -93,8 +85,7 @@
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
-      Powered by <a
-      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+      <a class="link" href="https://www.getzola.org/" target="_blank">Powered by Zola</a>
     </span>
     <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
   </div>

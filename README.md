@@ -80,6 +80,8 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 4 commits
 - [neovim-theme](https://github.com/Super-Botman/neovim-theme): 40 commits
 - [ennui](https://codeberg.org/leana8959/ennui): 41 commits
+- [doc_zola_theme](https://github.com/ProPixelizer/doc_zola_theme): 62 commits
+- [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
 
 ### No license that allows me to host a live demo
 

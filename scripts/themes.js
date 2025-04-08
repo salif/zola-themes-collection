@@ -104,7 +104,7 @@ function doUpdateData(baseURL, themes) {
 		if (null != themeInfo) data.push(themeInfo);
 		else console.error(theme);
 	}
-	fs.writeFileSync('content/home/themes.toml', TOML.stringify({ project: data }));
+	fs.writeFileSync('content/themes.toml', TOML.stringify({ project: data }));
 }
 function onlyIf(v, ifFalse, ifTrue) {
 	if (undefined == v || v.length == 0) return ifFalse;
@@ -146,7 +146,7 @@ ${content}
 		"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
 	const themeDetails = newDetails("install", `
 ### Installation{#h-install-${themeName}}
-The following instructions are not official so may be incomplete.
+The following instructions may be incomplete.
 They should work for most themes in this collection.
 
 0. Create a new Zola site: \`zola init\` and initialize a Git repository: \`git init\`

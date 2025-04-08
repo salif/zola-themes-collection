@@ -38,14 +38,14 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=483b4e5ae28a7f32d249" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=0745654a511f81d99b7c" />
   <style>
   :root {
     --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
   :root.dark {
     --bg: #18181b; --header: #27272a; color-scheme: dark; }
   </style>
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
@@ -58,7 +58,7 @@
 
 <body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full">
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -66,32 +66,17 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/en/" class="text-2xl font-semibold">Linkita</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--url-dark)] dark:[background-image:var(--url-light)]"
-          style="--url-light: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
-            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-sun\' \
-            ><circle cx=\'12\' cy=\'12\' r=\'5\'></circle><line x1=\'12\' y1=\'1\' x2=\'12\' y2=\'3\'></line><line x1=\'12\' y1=\'21\' x2=\'12\' y2=\'23\' \
-            ></line><line x1=\'4.22\' y1=\'4.22\' x2=\'5.64\' y2=\'5.64\'></line><line x1=\'18.36\' y1=\'18.36\' x2=\'19.78\' y2=\'19.78\'></line><line \
-            x1=\'1\' y1=\'12\' x2=\'3\' y2=\'12\'></line><line x1=\'21\' y1=\'12\' x2=\'23\' y2=\'12\'></line><line x1=\'4.22\' y1=\'19.78\' x2=\'5.64\' \
-            y2=\'18.36\'></line><line x1=\'18.36\' y1=\'5.64\' x2=\'19.78\' y2=\'4.22\'></line></svg>'); --url-dark: url('data:image/svg+xml;utf8,<svg \
-            xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' \
-            stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-moon\'><path d=\'M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z\'></path></svg>');"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
         ></button>
         <button type="button" title="Search" accesskey="/"
           onclick="window.linkita.toggleSearch();"
-          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
-          style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' viewBox=\'0 0 24 24\' \
-            fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' class=\'feather feather-search\' \
-            ><circle cx=\'11\' cy=\'11\' r=\'8\'></circle><line x1=\'21\' y1=\'21\' x2=\'16.65\' y2=\'16.65\'></line></svg>');"
+          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
         ></button>
         <script>window.linkita.initSearchButton({
           scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"]
         });</script>
         <button type="button" title="Go to translation of the page" accesskey=";"
-          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert"
-          style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\' \
-            viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\' \
-            class=\'feather feather-globe\'><circle cx=\'12\' cy=\'12\' r=\'10\'></circle><line x1=\'2\' y1=\'12\' x2=\'22\' y2=\'12\'></line><path \
-            d=\'M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\'></path></svg>');"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
         <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
       </div>
@@ -221,14 +206,12 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># The date of the post
 </span><span style="color:#f07178;">date </span><span style="color:#89ddff;">= </span><span>2025-12-30
-</span><span style="font-style:italic;color:#4a4a4a;"># The last updated date of the post,
-</span><span style="font-style:italic;color:#4a4a4a;"># if different from the date
+</span><span style="font-style:italic;color:#4a4a4a;"># The last updated date of the post
 </span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">= </span><span>2025-12-31
 </span><span>
 </span><span style="color:#89ddff;">[taxonomies]
 </span><span style="color:#f07178;">categories </span><span style="color:#89ddff;">= []
 </span><span style="color:#f07178;">tags </span><span style="color:#89ddff;">= []
-</span><span style="color:#f07178;">authors </span><span style="color:#89ddff;">= []
 </span><span>
 </span><span style="color:#89ddff;">[extra]
 </span><span style="font-style:italic;color:#4a4a4a;"># Enable comments
@@ -238,6 +221,7 @@ Set the ones you need.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># Enable Mermaid support
 </span><span style="color:#f07178;">mermaid </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span style="color:#89ddff;">[extra.cover]
+</span><span style="font-style:italic;color:#4a4a4a;"># Path to the cover image
 </span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># A description of the cover image
 </span><span style="color:#f07178;">alt </span><span style="color:#89ddff;">= &quot;&quot;
@@ -252,7 +236,6 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">taxonomies</span><span style="color:#89ddff;">:
 </span><span>  </span><span style="color:#f07178;">categories</span><span style="color:#89ddff;">:
 </span><span>  </span><span style="color:#f07178;">tags</span><span style="color:#89ddff;">:
-</span><span>  </span><span style="color:#f07178;">authors</span><span style="color:#89ddff;">:
 </span><span style="color:#f07178;">extra</span><span style="color:#89ddff;">:
 </span><span>  </span><span style="color:#f07178;">comment</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
 </span><span>  </span><span style="color:#f07178;">math</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
@@ -621,12 +604,14 @@ set <code>names_i18n</code> to a <code>common_</code> key.</p>
 </span><span style="color:#f07178;">bio </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># Social icons.
-</span><span style="font-style:italic;color:#4a4a4a;"># The `name` should be the file name of `static/icons/*.svg` or the icon name of https://simpleicons.org/
-</span><span style="font-style:italic;color:#4a4a4a;"># The `url` supports `$BASE_URL`.
+</span><span style="font-style:italic;color:#4a4a4a;"># `name` should be the file name of `static/icons/*.svg` or the icon name of https://simpleicons.org/
+</span><span style="font-style:italic;color:#4a4a4a;"># `url` supports `$BASE_URL`.
+</span><span style="font-style:italic;color:#4a4a4a;"># Other: `urls`, `title`, `titles`.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: array of tables; no default value;)
 </span><span style="color:#f07178;">social </span><span style="color:#89ddff;">= [
-</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">github</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://github.com/username</span><span style="color:#89ddff;">&quot; },
 </span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">bluesky</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://bsky.app/profile/username</span><span style="color:#89ddff;">&quot; },
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">github</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://github.com/username</span><span style="color:#89ddff;">&quot; },
+</span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">email</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">mailto:example@example.com</span><span style="color:#89ddff;">&quot; },
 </span><span>    </span><span style="color:#89ddff;">{ </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">rss</span><span style="color:#89ddff;">&quot;, </span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">$BASE_URL/atom.xml</span><span style="color:#89ddff;">&quot; },
 </span><span style="color:#89ddff;">]
 </span></code></pre>
@@ -739,8 +724,10 @@ fallback open graph image for all pages.</p>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: extra.header_buttons;)
 </span><span style="font-style:italic;color:#4a4a4a;"># header_buttons = []
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># IETF tag for artificial languages. (type: string;)
-</span><span style="font-style:italic;color:#4a4a4a;"># language_code = &quot;art-x-code&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># To set a different `lang` attribute of the document.
+</span><span style="font-style:italic;color:#4a4a4a;"># You can set IETF tag for artificial languages, e.g. `art-x-code`.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: string;)
+</span><span style="font-style:italic;color:#4a4a4a;"># language_code = &quot;&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># To use a different interface language, e.g. English. (type: string;)
 </span><span style="font-style:italic;color:#4a4a4a;"># i18n_code = &quot;en&quot;
@@ -770,11 +757,12 @@ fallback open graph image for all pages.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.goatcounter]
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="color:#f07178;">endpoint </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">https://MYCODE.goatcounter.com/count</span><span style="color:#89ddff;">&quot;
+</span><span style="font-style:italic;color:#4a4a4a;"># To enable tracking pixel, set `noscript_prefix` to an empty string.
+</span><span style="font-style:italic;color:#4a4a4a;"># If your `base_url` includes a subpath, set `noscript_prefix` to
+</span><span style="font-style:italic;color:#4a4a4a;"># the subpath without a trailing slash.
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
 </span><span style="font-style:italic;color:#4a4a4a;"># noscript_prefix = &quot;&quot;
 </span></code></pre>
-<p>To enable <a href="https://www.goatcounter.com/help/pixel">pixel</a>, set <code>noscript_prefix</code> to an empty string.
-If your <code>base_url</code> includes a subpath, set <code>noscript_prefix</code> to the subpath without a trailing slash.</p>
 <h4 id="vercel-analytics">Vercel Analytics</h4>
 <p>Set only if you use <a href="https://vercel.com/docs/analytics">Vercel Web Analytics</a>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[extra.vercel_analytics]
@@ -829,8 +817,6 @@ report it IMMEDIATELY, before it breeds and takes over the entire project!</p>
 <p>If your blog uses Linkita and is open source, feel free to create a pull request to add it to this list.</p>
 
 </section>
-  <!-- Post Nav -->
-
 </article>
 
   </main>
@@ -841,8 +827,7 @@ report it IMMEDIATELY, before it breeds and takes over the entire project!</p>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">
-      Powered by <a
-      class="link" href="https://www.getzola.org/" target="_blank">Zola</a>
+      <a class="link" href="https://www.getzola.org/" target="_blank">Powered by Zola</a>
     </span>
     <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
   </div>
@@ -857,7 +842,6 @@ report it IMMEDIATELY, before it breeds and takes over the entire project!</p>
     src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=1a7235ddf71175cb7d2a",
     endpoint: "https://sgi.goatcounter.com/count"
   });</script>
-  <noscript><img src="https://sgi.goatcounter.com/count?p=/linkita/en/about/" alt=""></noscript>
 
   <!-- Begin Body End inject -->
   
