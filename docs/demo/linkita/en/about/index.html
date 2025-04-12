@@ -38,7 +38,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=0745654a511f81d99b7c" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
   :root {
     --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
@@ -49,14 +49,14 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=2cfe69bc508021cbd3c5"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=b7b1c593133083519ac3"></script>
   <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.min.js?h=698547b4b081d012c661"></script>
   <!-- Begin Head End inject -->
   
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
 <header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
@@ -78,7 +78,7 @@
         <button type="button" title="Go to translation of the page" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
-        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
       </div>
       <div title="Menu" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
@@ -92,22 +92,26 @@
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/projects/">Projects</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/projects/"
+          >Projects</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/archive/">Archive</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/archive/"
+          >Archive</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/tags/">Tags</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/tags/"
+          >Tags</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/">About</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/en/about/"
+          >About</a>
         </li>
       </menu>
       <!-- Begin Header Nav inject -->
@@ -142,7 +146,7 @@
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>For discussion, join the <a href="https://matrix.to/#/#linkita:mozilla.org">Matrix chat room</a>.</li>
 <li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
-<li>See <a href="https://codeberg.org/salif/linkita-demo">demo source code</a> and screenshots for <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.png">light mode</a> and <a href="https://codeberg.org/salif/linkita/src/branch/linkita/screenshot.dark.png">dark mode</a>.</li>
+<li>See <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
 <li>Live preview in:
 <ul>
 <li><a href="https://salif.github.io/linkita/en/">English</a>, <a href="https://salif.github.io/linkita/">Bulgarian</a>, <a href="https://salif.github.io/linkita/eo/">Esperanto</a>.</li>
@@ -178,14 +182,15 @@
 <li>Author profiles</li>
 <li>Projects shortcode</li>
 <li>Keyboard shortcuts</li>
+<li>Relative URLs support</li>
 </ul>
 <h2 id="installing">Installing</h2>
 <ol>
-<li>Add this theme as a submodule.</li>
+<li>Add this theme as a git submodule.</li>
 </ol>
 <pre data-lang="sh" style="background-color:#212121;color:#eeffff;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#82aaff;">git submodule add https://codeberg.org/salif/linkita.git themes/linkita
 </span></code></pre>
-<p>Alternatively, clone the repository: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code></p>
+<p>If you don't want to use git submodules, you can clone the repository instead: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code></p>
 <ol start="2">
 <li>Set <code>linkita</code> as your theme in your <code>config.toml</code> file.</li>
 </ol>
@@ -198,11 +203,30 @@
 <p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a>
 for all versions after the one you are using; there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
-<p>All variables are optional.
+<p>Linkita uses the following frontmatter variables.
+All variables are optional.
 Set the ones you need.</p>
+<h3 id="yaml-frontmatter">YAML frontmatter</h3>
+<pre data-lang="yaml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-yaml "><code class="language-yaml" data-lang="yaml" data-name="frontmatter"><span>---
+</span><span style="color:#f07178;">title</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span style="color:#f07178;">description</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span style="color:#f07178;">date</span><span style="color:#89ddff;">: 
+</span><span style="color:#f07178;">updated</span><span style="color:#89ddff;">: 
+</span><span style="color:#f07178;">taxonomies</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">categories</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">tags</span><span style="color:#89ddff;">:
+</span><span style="color:#f07178;">extra</span><span style="color:#89ddff;">:
+</span><span>  </span><span style="color:#f07178;">comment</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">math</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">mermaid</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
+</span><span>  </span><span style="color:#f07178;">cover</span><span style="color:#89ddff;">:
+</span><span>    </span><span style="color:#f07178;">image</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
+</span><span>---
+</span></code></pre>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
+<p>Put the variables between the opening and closing <code>+++</code>.</p>
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># The date of the post
 </span><span style="color:#f07178;">date </span><span style="color:#89ddff;">= </span><span>2025-12-30
@@ -225,96 +249,9 @@ Set the ones you need.</p>
 </span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
 </span><span style="font-style:italic;color:#4a4a4a;"># A description of the cover image
 </span><span style="color:#f07178;">alt </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
-</span></code></pre>
-<h3 id="yaml-frontmatter">YAML frontmatter</h3>
-<pre data-lang="yaml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-yaml "><code class="language-yaml" data-lang="yaml" data-name="frontmatter"><span>---
-</span><span style="color:#f07178;">title</span><span style="color:#89ddff;">: &quot;&quot;
-</span><span style="color:#f07178;">description</span><span style="color:#89ddff;">: &quot;&quot;
-</span><span style="color:#f07178;">date</span><span style="color:#89ddff;">: 
-</span><span style="color:#f07178;">updated</span><span style="color:#89ddff;">: 
-</span><span style="color:#f07178;">taxonomies</span><span style="color:#89ddff;">:
-</span><span>  </span><span style="color:#f07178;">categories</span><span style="color:#89ddff;">:
-</span><span>  </span><span style="color:#f07178;">tags</span><span style="color:#89ddff;">:
-</span><span style="color:#f07178;">extra</span><span style="color:#89ddff;">:
-</span><span>  </span><span style="color:#f07178;">comment</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
-</span><span>  </span><span style="color:#f07178;">math</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
-</span><span>  </span><span style="color:#f07178;">mermaid</span><span style="color:#89ddff;">: </span><span style="color:#f78c6c;">false
-</span><span>  </span><span style="color:#f07178;">cover</span><span style="color:#89ddff;">:
-</span><span>    </span><span style="color:#f07178;">image</span><span style="color:#89ddff;">: &quot;&quot;
-</span><span>    </span><span style="color:#f07178;">alt</span><span style="color:#89ddff;">: &quot;&quot;
-</span><span>---
 </span></code></pre>
 <h3 id="other-extra-frontmatter-variables">Other extra frontmatter variables</h3>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra]
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_info`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: config.extra.page_info;)
-</span><span style="color:#f07178;">page_info </span><span style="color:#89ddff;">= []
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_summary_on_paginator`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: config.extra.page_summary_on_paginator;)
-</span><span style="color:#f07178;">page_summary_on_paginator </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.toc`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean or object; default value: config.extra.toc;)
-</span><span style="color:#f07178;">toc </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
-</span><span style="color:#89ddff;">[extra.cover]
-</span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">width </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Height of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">height </span><span style="color:#89ddff;">=
-</span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Open Graph frontmatter variables
-</span><span style="color:#89ddff;">[extra.open_graph]
-</span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: datetime; no default value;)
-</span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Describes the tier status for an article. e.g. `free`, `locked`, or `metered`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">content_tier </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># Defines the location to target for the article. e.g. `[&quot;county:COUNTY&quot;]` or `[&quot;city:CITY,COUNTY&quot;]`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; no default value;)
-</span><span style="color:#f07178;">locations </span><span style="color:#89ddff;">= []
-</span><span style="font-style:italic;color:#4a4a4a;"># A high-level section name. e.g. `Technology`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># Indicates whether the article is an opinion piece or not. e.g. `true` or `false`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; no default value;)
-</span><span style="color:#f07178;">opinion </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the audio.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">audio </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the audio. e.g. `audio/vnd.facebook.bridge`, `audio/mpeg`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">audio_type </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the video.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">video </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the video. e.g. `application/x-shockwave-flash`, `video/mp4`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">video_type </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># Width of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
-</span><span style="color:#f07178;">video_width </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Height of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
-</span><span style="color:#f07178;">video_height </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from canonical page URL.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: current_url;)
-</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Sitemap frontmatter variables
-</span><span style="color:#89ddff;">[extra.sitemap]
-</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: page.updated;)
-</span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Valid values are `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">changefreq </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Valid values range from 0.0 to 1.0. The default priority of a page is 0.5.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">priority </span><span style="color:#89ddff;">=
-</span></code></pre>
+<p>Linkita supports <a href="https://salif.github.io/linkita/en/extra-frontmatter/">more extra variables, listed here</a>.</p>
 <h3 id="home-page-profile">Home page profile</h3>
 <p>Create <code>content/_index.md</code> file in your blog and set <code>extra.profile</code> to your username:</p>
 <pre data-lang="toml" data-name="content/_index.md" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/_index.md"><span style="background-color:#ff5370;color:#ffffff;">+++</span><span>
@@ -421,6 +358,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">theme </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">linkita</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The default language.
+</span><span style="font-style:italic;color:#4a4a4a;"># &quot;en&quot; is for English.
 </span><span style="color:#f07178;">default_language </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">en</span><span style="color:#89ddff;">&quot;
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># The default author for pages.
@@ -449,7 +387,7 @@ All variables are optional.</p>
 </span><span style="color:#f07178;">build_search_index </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span></code></pre>
 <p>Zola has built-in support for taxonomies.
-Taxonomies on Linkita with translated names are <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
+Linkita has special support for taxonomies called <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[[taxonomies]]
 </span><span style="color:#f07178;">name </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">categories</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
@@ -465,7 +403,7 @@ Taxonomies on Linkita with translated names are <code>tags</code>, <code>categor
 </span><span style="color:#f07178;">feed </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
 </span><span style="color:#f07178;">paginate_by </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">5
 </span></code></pre>
-<p>Add more languages by replacing <code>fr</code> from the example with the language code:</p>
+<p>You can add more languages by replacing <code>fr</code> from the following example with the language code:</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#89ddff;">[languages.fr]
 </span><span style="color:#f07178;">title </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site title in French</span><span style="color:#89ddff;">&quot;
 </span><span style="color:#f07178;">description </span><span style="color:#89ddff;">= &quot;</span><span style="color:#c3e88d;">Site description in French</span><span style="color:#89ddff;">&quot;
@@ -510,6 +448,15 @@ Taxonomies on Linkita with translated names are <code>tags</code>, <code>categor
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
 </span><span style="color:#f07178;">use_cdn </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># Use relative urls.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">relative_urls </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
+</span><span>
+</span><span style="font-style:italic;color:#4a4a4a;"># If you want to view the site without a webserver
+</span><span style="font-style:italic;color:#4a4a4a;"># set this and `relative_urls` to true.
+</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: `false`;)
+</span><span style="color:#f07178;">urls_to_index_html </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">false
 </span><span>
 </span><span style="font-style:italic;color:#4a4a4a;"># You can reorder the strings, remove them, or replace them.
 </span><span style="font-style:italic;color:#4a4a4a;"># For example, you can replace `site_title` with `home_button`.
@@ -806,8 +753,6 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 <p>See the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a> file.</p>
 <h2 id="contributing">Contributing</h2>
 <p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.</p>
-<p>If you notice even the slightest ambiguity or bug in this repo,
-report it IMMEDIATELY, before it breeds and takes over the entire project!</p>
 <h2 id="sites-using-linkita">Sites using Linkita</h2>
 <ul>
 <li><a href="https://github.com/salif/zola-themes-collection">Zola Themes Collection</a></li>

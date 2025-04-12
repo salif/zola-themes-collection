@@ -43,7 +43,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=0745654a511f81d99b7c" />
+  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
   :root {
     --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
@@ -54,13 +54,13 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=2cfe69bc508021cbd3c5"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=b7b1c593133083519ac3"></script>
   <!-- Begin Head End inject -->
   
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-200 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
   <!-- Header -->
 <header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
@@ -75,7 +75,7 @@
         <button type="button" title="Iri al traduko de la paĝo" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
-        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations")});</script>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
       </div>
       <div title="Menuo" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
@@ -89,22 +89,26 @@
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/projects/">Projektoj</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/projects/"
+          >Projektoj</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/archive/">Arkivo</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/archive/"
+          >Arkivo</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/tags/">Etikedoj</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/tags/"
+          >Etikedoj</a>
         </li>
         <li>
           <a
             class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
-            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/about/">Pri</a>
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/about/"
+          >Pri</a>
         </li>
       </menu>
       <!-- Begin Header Nav inject -->
@@ -456,6 +460,7 @@ sequenceDiagram
 <p>Ĝi estas el la <a href="https://www.getzola.org/documentation/content/image-processing/">dokumentaro de Zola</a></p>
 <pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
+
 <div class="not-prose flex flex-wrap gap-2">
 
   <a href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/shortcodes/01-zola.png" target="_blank">

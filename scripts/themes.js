@@ -146,8 +146,8 @@ ${content}
 		"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
 	const themeDetails = newDetails("install", `
 ### Installation{#h-install-${themeName}}
-The following instructions may be incomplete.
-They should work for most themes in this collection.
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
 0. Create a new Zola site: \`zola init\` and initialize a Git repository: \`git init\`
 1. Download the theme

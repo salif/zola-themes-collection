@@ -89,7 +89,8 @@ screenshot-all mode="dark" url=local_base_url:
 
 [group('screenshot')]
 screenshot name mode="dark" url=local_base_url:
-    {{ browser }} --headless --disable-gpu --screenshot="static/screenshots/temp.png" \
+    {{ browser }} --headless --disable-gpu \
+        --system-font-family="Roboto" --screenshot="static/screenshots/temp.png" \
         --window-size=1360,936 --hide-scrollbars "{{ url }}{{ name }}"
     magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.webp"
     rm -f static/screenshots/temp.png
@@ -141,7 +142,7 @@ screenshots-to-fix:
 
 [group('build')]
 local-test-all: (build-demo-all local_base_url) update-data-local
-    zola serve --open
+    zola serve
 
 [group('help')]
 submodule-remove path: && screenshots-to-fix
@@ -159,7 +160,7 @@ submodule-add url name: && (build-check "themes/" + name)
 
 [group('help')]
 submodule-update-all:
-    git submodule update --remote
+    git submodule update --remote --merge
     git submodule foreach --recursive git submodule update --init
     git submodule summary
 
