@@ -41,12 +41,10 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
-  :root {
-    --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
-  :root.dark {
-    --bg: #18181b; --header: #27272a; color-scheme: dark; }
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
   </style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
@@ -144,10 +142,9 @@
     <h1 class="!my-0 pb-2.5">Shortcodes</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
-        datetime="2022-10-20T00:00:00+00:00">2022-10-20</time><span
-          class="mx-1">&middot;</span><time
-      datetime="PT0H2M0S">2&nbsp;min</time><span
-        class="mx-1">&middot;</span><span>Salif</span>
+      datetime="2022-10-20T00:00:00+00:00">2022-10-20</time><span
+        class="mx-1">&middot;</span><time
+    datetime="PT0H2M0S">2&nbsp;min</time>
 </div>
 
   </header>
@@ -178,7 +175,7 @@
 <p>Never heard of shortcodes? See <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola documentation</a> for more information.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>To use Mermaid in your page, you have to set <code>extra.mermaid = true</code> in the frontmatter of page.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
 </span><span>title = &quot;Your page title&quot;
 </span><span>
 </span><span>[extra]
@@ -186,7 +183,7 @@
 </span><span>+++
 </span></code></pre>
 <p>Then you can use the <code>mermaid()</code> shortcodes like:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
 </span><span>graph TD;
 </span><span>A--&gt;B;
@@ -206,9 +203,9 @@ C--&gt;D;
 </pre>
 <p>In addition, you can use code block inside <code>mermaid()</code> shortcodes and the code block will be ignored.</p>
 <p>The code block prevents formatter from breaking mermaid's formatting.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
-</span><span style="color:#4a4a4a;">```</span><span>mermaid
+</span><span>```</span><span style="color:#7697d6;">mermaid
 </span><span>sequenceDiagram
 </span><span>    participant Alice
 </span><span>    participant Bob
@@ -220,7 +217,7 @@ C--&gt;D;
 </span><span>    John--&gt;&gt;Alice: Great!
 </span><span>    John-&gt;&gt;Bob: How about you?
 </span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span style="color:#4a4a4a;">```
+</span><span>```
 </span><span>
 </span><span>{% end %}
 </span></code></pre>
@@ -243,8 +240,8 @@ sequenceDiagram
 <h2 id="admonition">Admonition</h2>
 <p>The <code>admonition()</code> shortcode displays a banner to help you put notice in your page.</p>
 <p>You can use the <code>admonition()</code> shortcode like:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;tip&quot;) %}
-</span><span>The </span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">tip</span><span style="color:#4a4a4a;">`</span><span> admonition.
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;tip&quot;) %}
+</span><span>The `tip` admonition.
 </span><span>{% end %}
 </span></code></pre>
 <p>The admonition shortcode has 12 different types:</p>
@@ -467,7 +464,7 @@ sequenceDiagram
 <h2 id="gallery">Gallery</h2>
 <p>The <code>gallery()</code> shortcode is very simple html-only clickable picture gallery that displays all images from the page assets.</p>
 <p>It's from <a href="https://www.getzola.org/documentation/content/image-processing/">Zola documentation</a></p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
 
 <div class="not-prose flex flex-wrap gap-2">

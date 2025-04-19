@@ -46,7 +46,7 @@
 &lt;p&gt;Kısa kodları hiç duymadınız mı? Daha fazla bilgi için &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola dokümantasyonuna&lt;&#x2F;a&gt; bakın.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;Sayfanızda Mermaid kullanmak için, sayfanın ön yüzünde &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; olarak ayarlamanız gerekir.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Sayfa başlığınız&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;[extra]
@@ -54,7 +54,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Ardından &lt;code&gt;mermaid()&lt;&#x2F;code&gt; kısa kodlarını şu şekilde kullanabilirsiniz:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;graph TD;
 &lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
@@ -74,9 +74,9 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;Ek olarak, &lt;code&gt;mermaid()&lt;&#x2F;code&gt; kısa kodlarının içinde kod bloğu kullanabilirsiniz ve kod bloğu göz ardı edilecektir.&lt;&#x2F;p&gt;
 &lt;p&gt;Kod bloğu, biçimlendiricinin mermaid&#x27;in biçimlendirmesini bozmasını engeller.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
 &lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
@@ -88,7 +88,7 @@ C--&amp;gt;D;
 &lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Harika!
 &lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: Sen nasılsın?
 &lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Çok iyi!
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```
+&lt;&#x2F;span&gt;&lt;span&gt;```
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -111,8 +111,8 @@ sequenceDiagram
 &lt;h2 id=&quot;uyari-kutulari&quot;&gt;Uyarı Kutuları&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;admonition()&lt;&#x2F;code&gt; kısa kodu, sayfanıza dikkat çekici notlar yerleştirmenize yardımcı olacak bir başlık görüntüler.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;admonition()&lt;&#x2F;code&gt; kısa kodunu şu şekilde kullanabilirsiniz:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;ipucu&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c792ea;&quot;&gt;ipucu&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt; uyarı kutusu.
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;ipucu&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;`ipucu` uyarı kutusu.
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Uyarı kutusu kısa kodunun 12 farklı türü vardır:&lt;&#x2F;p&gt;
@@ -335,7 +335,7 @@ sequenceDiagram
 &lt;h2 id=&quot;galeri&quot;&gt;Galeri&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;gallery()&lt;&#x2F;code&gt; kısa kodu, sayfa varlıklarındaki tüm resimleri görüntüleyen çok basit, yalnızca HTML tabanlı tıklanabilir bir resim galerisidir.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola dokümantasyonundan&lt;&#x2F;a&gt; alınmıştır.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 
 &lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;

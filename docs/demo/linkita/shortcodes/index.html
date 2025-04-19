@@ -42,12 +42,10 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
-  :root {
-    --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
-  :root.dark {
-    --bg: #18181b; --header: #27272a; color-scheme: dark; }
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
   </style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
@@ -132,12 +130,11 @@
     <h1 class="!my-0 pb-2.5">Шорткодове</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
-        datetime="2022-10-20T00:00:00+00:00">20 окт 2022</time><span
-          class="mx-1">&middot;</span>&lpar;<time
-        datetime="2024-10-24T00:00:00+00:00">24 окт 2024</time>&rpar;<span
-          class="mx-1">&middot;</span><time
-      datetime="PT0H2M0S">2&nbsp;мин</time><span
-        class="mx-1">&middot;</span><span>Салиф</span>
+      datetime="2022-10-20T00:00:00+00:00">20 окт 2022</time><span
+        class="mx-1">&middot;</span>(<time
+      datetime="2024-10-24T00:00:00+00:00">24 окт 2024</time>)<span
+        class="mx-1">&middot;</span><time
+    datetime="PT0H2M0S">2&nbsp;мин</time>
 </div>
 
   </header>
@@ -168,7 +165,7 @@
 <p>Ако не сте чували за шорткодове, вижте <a href="https://www.getzola.org/documentation/content/shortcodes/">документацията на Зола</a> за повече информация.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>За да използвате Mermaid във вашата страница, трябва да зададете <code>extra.mermaid = true</code> в предните данни (frontmatter) на страницата.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
 </span><span>title = &quot;Заглавие на вашата страница&quot;
 </span><span>
 </span><span>[extra]
@@ -176,7 +173,7 @@
 </span><span>+++
 </span></code></pre>
 <p>След това можете да използвате шорткодовете <code>mermaid()</code> ето така:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
 </span><span>graph TD;
 </span><span>A--&gt;B;
@@ -196,9 +193,9 @@ C--&gt;D;
 </pre>
 <p>Освен това, можете да използвате блок с код вътре в шорткодовете <code>mermaid()</code> и блокът с код ще бъде игнориран.</p>
 <p>Блокът с код предотвратява форматирането на Mermaid от форматиращия инструмент.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
-</span><span style="color:#4a4a4a;">```</span><span>mermaid
+</span><span>```</span><span style="color:#7697d6;">mermaid
 </span><span>sequenceDiagram
 </span><span>    participant Alice
 </span><span>    participant Bob
@@ -210,7 +207,7 @@ C--&gt;D;
 </span><span>    John--&gt;&gt;Alice: Great!
 </span><span>    John-&gt;&gt;Bob: How about you?
 </span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span style="color:#4a4a4a;">```
+</span><span>```
 </span><span>
 </span><span>{% end %}
 </span></code></pre>
@@ -233,8 +230,8 @@ sequenceDiagram
 <h2 id="preduprezhdenie">Предупреждение</h2>
 <p>Шорткодът <code>admonition()</code> показва банер, който ви помага да поставите известие на вашата страница.</p>
 <p>Можете да използвате шорткодът <code>admonition()</code> по този начин:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;съвет&quot;) %}
-</span><span>Предупреждението </span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">tip</span><span style="color:#4a4a4a;">`</span><span>.
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;съвет&quot;) %}
+</span><span>Предупреждението `tip`.
 </span><span>{% end %}
 </span></code></pre>
 <p>Шорткодът <code>admonition</code> има 12 различни типа:</p>
@@ -457,7 +454,7 @@ sequenceDiagram
 <h2 id="galeriia">Галерия</h2>
 <p>Шорткодът <code>gallery()</code> е много проста, само с HTML, галерия с изображения, която показва всички изображения от „assets“ на страницата.</p>
 <p>Взето е от <a href="https://www.getzola.org/documentation/content/image-processing/">документацията на Зола</a></p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
 
 <div class="not-prose flex flex-wrap gap-2">

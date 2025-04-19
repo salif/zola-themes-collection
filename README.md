@@ -52,6 +52,8 @@
 - [boring](https://github.com/clflushopt/boring): 70 commits
 - [rahix](https://github.com/Rahix/blog-theme): 88 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
+- [cblanken-terminimal](https://github.com/cblanken/zola-theme-terminimal): 172 commits
+- [anpu-zola-theme](https://github.com/zbrox/anpu-zola-theme): 30 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -82,6 +84,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [ennui](https://codeberg.org/leana8959/ennui): 41 commits
 - [doc_zola_theme](https://github.com/ProPixelizer/doc_zola_theme): 62 commits
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
+- [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 
 ### No license that allows me to host a live demo
 

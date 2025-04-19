@@ -65,7 +65,7 @@
 &lt;p&gt;Ако не сте чували за шорткодове, вижте &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt; за повече информация.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;За да използвате Mermaid във вашата страница, трябва да зададете &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; в предните данни (frontmatter) на страницата.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Заглавие на вашата страница&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;[extra]
@@ -73,7 +73,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;След това можете да използвате шорткодовете &lt;code&gt;mermaid()&lt;&#x2F;code&gt; ето така:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;graph TD;
 &lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
@@ -93,9 +93,9 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;Освен това, можете да използвате блок с код вътре в шорткодовете &lt;code&gt;mermaid()&lt;&#x2F;code&gt; и блокът с код ще бъде игнориран.&lt;&#x2F;p&gt;
 &lt;p&gt;Блокът с код предотвратява форматирането на Mermaid от форматиращия инструмент.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
 &lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
@@ -107,7 +107,7 @@ C--&amp;gt;D;
 &lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
 &lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
 &lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```
+&lt;&#x2F;span&gt;&lt;span&gt;```
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -130,8 +130,8 @@ sequenceDiagram
 &lt;h2 id=&quot;preduprezhdenie&quot;&gt;Предупреждение&lt;&#x2F;h2&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;admonition()&lt;&#x2F;code&gt; показва банер, който ви помага да поставите известие на вашата страница.&lt;&#x2F;p&gt;
 &lt;p&gt;Можете да използвате шорткодът &lt;code&gt;admonition()&lt;&#x2F;code&gt; по този начин:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;съвет&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;Предупреждението &lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c792ea;&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt;.
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;съвет&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;Предупреждението `tip`.
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;admonition&lt;&#x2F;code&gt; има 12 различни типа:&lt;&#x2F;p&gt;
@@ -354,7 +354,7 @@ sequenceDiagram
 &lt;h2 id=&quot;galeriia&quot;&gt;Галерия&lt;&#x2F;h2&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;gallery()&lt;&#x2F;code&gt; е много проста, само с HTML, галерия с изображения, която показва всички изображения от „assets“ на страницата.&lt;&#x2F;p&gt;
 &lt;p&gt;Взето е от &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 
 &lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;

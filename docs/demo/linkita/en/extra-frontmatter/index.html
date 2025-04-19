@@ -28,12 +28,10 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
-  :root {
-    --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
-  :root.dark {
-    --bg: #18181b; --header: #27272a; color-scheme: dark; }
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
   </style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
@@ -131,10 +129,9 @@
     <h1 class="!my-0 pb-2.5">Extra frontmatter</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
-        datetime="2025-04-11T00:00:00+00:00">2025-04-11</time><span
-          class="mx-1">&middot;</span><time
-      datetime="PT0H1M0S">1&nbsp;min</time><span
-        class="mx-1">&middot;</span><span>Salif</span>
+      datetime="2025-04-11T00:00:00+00:00">2025-04-11</time><span
+        class="mx-1">&middot;</span><time
+    datetime="PT0H1M0S">1&nbsp;min</time>
 </div>
 
   </header>
@@ -158,110 +155,113 @@
 </div>
 
   <!-- Content -->
-  <section><pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra]
+  <section><pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>]
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Enable comments.
-</span><span style="color:#f07178;">comment </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#888888;"># Enable comments.
+</span><span style="color:#ffb964;">comment </span><span>= true
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Enable KaTeX support.
-</span><span style="color:#f07178;">math </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#888888;"># Enable KaTeX support.
+</span><span style="color:#ffb964;">math </span><span>= true
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Enable Mermaid support.
-</span><span style="color:#f07178;">mermaid </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#888888;"># Enable Mermaid support.
+</span><span style="color:#ffb964;">mermaid </span><span>= true
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_info`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; default value: config.extra.page_info;)
-</span><span style="color:#f07178;">page_info </span><span style="color:#89ddff;">= []
+</span><span style="color:#888888;"># Default value: config.extra.page_summary_on_paginator
+</span><span style="color:#ffb964;">page_summary_on_paginator </span><span>= true
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.page_summary_on_paginator`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; default value: config.extra.page_summary_on_paginator;)
-</span><span style="color:#f07178;">page_summary_on_paginator </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#888888;"># Default value:
+</span><span style="color:#888888;">#  config.extra.page_info or config.extra.page_info_on_paginator
+</span><span style="color:#ffb964;">page_info </span><span>= []
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># See `config.extra.toc`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean or object; default value: config.extra.toc;)
-</span><span style="color:#f07178;">toc </span><span style="color:#89ddff;">= </span><span style="color:#f78c6c;">true
+</span><span style="color:#888888;"># Default value: config.extra.toc
+</span><span style="color:#ffb964;">toc </span><span>= true
 </span><span>
-</span><span style="color:#89ddff;">[extra.cover]
+</span><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">cover</span><span>]
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Path to the cover image.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">image </span><span style="color:#89ddff;">= &quot;&quot;
-</span><span style="font-style:italic;color:#4a4a4a;"># A description of the cover image.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">alt </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># Path to the cover image.
+</span><span style="color:#ffb964;">image </span><span>= </span><span style="color:#556633;">&quot;&quot;
+</span><span style="color:#888888;"># A description of the cover image.
+</span><span style="color:#ffb964;">alt </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Width of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">width </span><span style="color:#89ddff;">=
-</span><span style="font-style:italic;color:#4a4a4a;"># Height of the cover image in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; default value: uses `get_image_metadata()`;)
-</span><span style="color:#f07178;">height </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Width of the cover image in pixels.
+</span><span style="color:#888888;"># Default value: get_image_metadata()
+</span><span style="color:#ffb964;">width </span><span>=
+</span><span style="color:#888888;"># Height of the cover image in pixels.
+</span><span style="color:#888888;"># Default value: get_image_metadata()
+</span><span style="color:#ffb964;">height </span><span>=
 </span></code></pre>
 <h2 id="open-graph-variables">Open Graph variables</h2>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.open_graph]
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">open_graph</span><span>]
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># When the article is out of date after. e.g. `2024-02-29`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: datetime; no default value;)
-</span><span style="color:#f07178;">expiration_time </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># When the article is out of date after.
+</span><span style="color:#888888;"># e.g. 2024-02-29
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">expiration_time </span><span>=
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Describes the tier status for an article. e.g. `free`, `locked`, or `metered`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">content_tier </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># Describes the tier status for an article.
+</span><span style="color:#888888;"># e.g. &quot;free&quot;, &quot;locked&quot;, or &quot;metered&quot;.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">content_tier </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Defines the location to target for the article. e.g. `[&quot;county:COUNTY&quot;]` or `[&quot;city:CITY,COUNTY&quot;]`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: array of strings; no default value;)
-</span><span style="color:#f07178;">locations </span><span style="color:#89ddff;">= []
+</span><span style="color:#888888;"># Defines the location to target for the article.
+</span><span style="color:#888888;"># e.g. [&quot;county:COUNTY&quot;] or [&quot;city:CITY,COUNTY&quot;]
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">locations </span><span>= []
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># A high-level section name. e.g. `Technology`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">section </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># A high-level section name. e.g. &quot;Technology&quot;.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">section </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Indicates whether the article is an opinion piece or not. e.g. `true` or `false`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: boolean; no default value;)
-</span><span style="color:#f07178;">opinion </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Indicates whether the article is an opinion piece or not.
+</span><span style="color:#888888;"># Type: boolean. No default value.
+</span><span style="color:#ffb964;">opinion </span><span>=
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the audio.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">audio </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># The URL for the audio.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">audio </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the audio. e.g. `audio/vnd.facebook.bridge`, `audio/mpeg`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">audio_type </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># MIME type of the audio.
+</span><span style="color:#888888;"># e.g. &quot;audio/vnd.facebook.bridge&quot;, &quot;audio/mpeg&quot;.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">audio_type </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># The URL for the video.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">video </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># The URL for the video.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">video </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># MIME type of the video. e.g. `application/x-shockwave-flash`, `video/mp4`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">video_type </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># MIME type of the video.
+</span><span style="color:#888888;"># e.g. &quot;application/x-shockwave-flash&quot;, &quot;video/mp4&quot;.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">video_type </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Width of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
-</span><span style="color:#f07178;">video_width </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Width of the video in pixels.
+</span><span style="color:#888888;"># Type: number. No default value.
+</span><span style="color:#ffb964;">video_width </span><span>=
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Height of the video in pixels.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: number; no default value;)
-</span><span style="color:#f07178;">video_height </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Height of the video in pixels.
+</span><span style="color:#888888;"># Type: number. No default value.
+</span><span style="color:#ffb964;">video_height </span><span>=
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from canonical page URL.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: current_url;)
-</span><span style="color:#f07178;">url </span><span style="color:#89ddff;">= &quot;&quot;
+</span><span style="color:#888888;"># Set only if different from canonical page URL.
+</span><span style="color:#888888;"># Default value: current_url
+</span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span></code></pre>
 <h2 id="sitemap-variables">Sitemap variables</h2>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#212121;color:#eeffff;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#89ddff;">[extra.sitemap]
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">sitemap</span><span>]
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Set only if different from `page.updated`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; default value: page.updated;)
-</span><span style="color:#f07178;">updated </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Set only if different from &quot;page.updated&quot;.
+</span><span style="color:#888888;"># Default value: page.updated
+</span><span style="color:#ffb964;">updated </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Valid values are `always`, `hourly`, `daily`, `weekly`, `monthly`, `yearly`, `never`.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">changefreq </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Valid values: &quot;always&quot;, &quot;hourly&quot;, &quot;daily&quot;,
+</span><span style="color:#888888;"># &quot;weekly&quot;, &quot;monthly&quot;, &quot;yearly&quot;, &quot;never&quot;.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">changefreq </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
-</span><span style="font-style:italic;color:#4a4a4a;"># Valid values range from 0.0 to 1.0. The default priority of a page is 0.5.
-</span><span style="font-style:italic;color:#4a4a4a;"># (type: string; no default value;)
-</span><span style="color:#f07178;">priority </span><span style="color:#89ddff;">=
+</span><span style="color:#888888;"># Valid values range from 0.0 to 1.0.
+</span><span style="color:#888888;"># The default priority of a page is 0.5.
+</span><span style="color:#888888;"># No default value.
+</span><span style="color:#ffb964;">priority </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span></code></pre>
 </section>
   <hr />

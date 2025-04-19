@@ -46,7 +46,7 @@
 &lt;p&gt;没听说过简码？请参阅 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola 文档&lt;&#x2F;a&gt; 获取更多信息。&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;要在页面中使用 Mermaid，您需要在页面的 frontmatter 中设置 &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;您的页面标题&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;[extra]
@@ -54,7 +54,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;然后您可以使用 &lt;code&gt;mermaid()&lt;&#x2F;code&gt; 简码，例如：&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;graph TD;
 &lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
@@ -74,9 +74,9 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;此外，您可以在 &lt;code&gt;mermaid()&lt;&#x2F;code&gt; 简码内使用代码块，代码块将被忽略。&lt;&#x2F;p&gt;
 &lt;p&gt;代码块可以防止格式化程序破坏 mermaid 的格式。&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
 &lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
 &lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
@@ -88,7 +88,7 @@ C--&amp;gt;D;
 &lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
 &lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
 &lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;```
+&lt;&#x2F;span&gt;&lt;span&gt;```
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -111,8 +111,8 @@ sequenceDiagram
 &lt;h2 id=&quot;ti-shi-kuang&quot;&gt;提示框&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;admonition()&lt;&#x2F;code&gt; 简码显示一个横幅，帮助您在页面中放置提示。&lt;&#x2F;p&gt;
 &lt;p&gt;您可以像这样使用 &lt;code&gt;admonition()&lt;&#x2F;code&gt; 简码：&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color:#c792ea;&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#4a4a4a;&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt; 提示框。
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;`tip` 提示框。
 &lt;&#x2F;span&gt;&lt;span&gt;{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;提示框简码有 12 种不同的类型：&lt;&#x2F;p&gt;
@@ -335,7 +335,7 @@ sequenceDiagram
 &lt;h2 id=&quot;hua-lang&quot;&gt;画廊&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;gallery()&lt;&#x2F;code&gt; 简码是一个非常简单的纯 HTML 可点击图片画廊，用于显示页面资源中的所有图像。&lt;&#x2F;p&gt;
 &lt;p&gt;它来自 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola 文档&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#212121;color:#eeffff;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 
 &lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;

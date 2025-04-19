@@ -43,12 +43,10 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="preload stylesheet" as="style" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
   <style>
-  :root {
-    --bg: #f4f4f5; --header: #e4e4e7; color-scheme: light; }
-  :root.dark {
-    --bg: #18181b; --header: #27272a; color-scheme: dark; }
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
   </style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
@@ -146,12 +144,11 @@
     <h1 class="!my-0 pb-2.5">Kısa Kodlar</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
-        datetime="2022-10-20T00:00:00+00:00">20 Eki 2022</time><span
-          class="mx-1">&middot;</span>&lpar;<time
-        datetime="2025-01-23T00:00:00+00:00">23 Oca 2025</time>&rpar;<span
-          class="mx-1">&middot;</span><time
-      datetime="PT0H2M0S">2&nbsp;dk</time><span
-        class="mx-1">&middot;</span><span>Kita</span>,&nbsp;<span>Salif</span>
+      datetime="2022-10-20T00:00:00+00:00">20 Eki 2022</time><span
+        class="mx-1">&middot;</span>(<time
+      datetime="2025-01-23T00:00:00+00:00">23 Oca 2025</time>)<span
+        class="mx-1">&middot;</span><time
+    datetime="PT0H2M0S">2&nbsp;dk</time>
 </div>
 
   </header>
@@ -182,7 +179,7 @@
 <p>Kısa kodları hiç duymadınız mı? Daha fazla bilgi için <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola dokümantasyonuna</a> bakın.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>Sayfanızda Mermaid kullanmak için, sayfanın ön yüzünde <code>extra.mermaid = true</code> olarak ayarlamanız gerekir.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
 </span><span>title = &quot;Sayfa başlığınız&quot;
 </span><span>
 </span><span>[extra]
@@ -190,7 +187,7 @@
 </span><span>+++
 </span></code></pre>
 <p>Ardından <code>mermaid()</code> kısa kodlarını şu şekilde kullanabilirsiniz:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
 </span><span>graph TD;
 </span><span>A--&gt;B;
@@ -210,9 +207,9 @@ C--&gt;D;
 </pre>
 <p>Ek olarak, <code>mermaid()</code> kısa kodlarının içinde kod bloğu kullanabilirsiniz ve kod bloğu göz ardı edilecektir.</p>
 <p>Kod bloğu, biçimlendiricinin mermaid'in biçimlendirmesini bozmasını engeller.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
 </span><span>
-</span><span style="color:#4a4a4a;">```</span><span>mermaid
+</span><span>```</span><span style="color:#7697d6;">mermaid
 </span><span>sequenceDiagram
 </span><span>    participant Alice
 </span><span>    participant Bob
@@ -224,7 +221,7 @@ C--&gt;D;
 </span><span>    John--&gt;&gt;Alice: Harika!
 </span><span>    John-&gt;&gt;Bob: Sen nasılsın?
 </span><span>    Bob--&gt;&gt;John: Çok iyi!
-</span><span style="color:#4a4a4a;">```
+</span><span>```
 </span><span>
 </span><span>{% end %}
 </span></code></pre>
@@ -247,8 +244,8 @@ sequenceDiagram
 <h2 id="uyari-kutulari">Uyarı Kutuları</h2>
 <p><code>admonition()</code> kısa kodu, sayfanıza dikkat çekici notlar yerleştirmenize yardımcı olacak bir başlık görüntüler.</p>
 <p><code>admonition()</code> kısa kodunu şu şekilde kullanabilirsiniz:</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;ipucu&quot;) %}
-</span><span style="color:#4a4a4a;">`</span><span style="color:#c792ea;">ipucu</span><span style="color:#4a4a4a;">`</span><span> uyarı kutusu.
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;ipucu&quot;) %}
+</span><span>`ipucu` uyarı kutusu.
 </span><span>{% end %}
 </span></code></pre>
 <p>Uyarı kutusu kısa kodunun 12 farklı türü vardır:</p>
@@ -471,7 +468,7 @@ sequenceDiagram
 <h2 id="galeri">Galeri</h2>
 <p><code>gallery()</code> kısa kodu, sayfa varlıklarındaki tüm resimleri görüntüleyen çok basit, yalnızca HTML tabanlı tıklanabilir bir resim galerisidir.</p>
 <p><a href="https://www.getzola.org/documentation/content/image-processing/">Zola dokümantasyonundan</a> alınmıştır.</p>
-<pre data-lang="markdown" style="background-color:#212121;color:#eeffff;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
 </span></code></pre>
 
 <div class="not-prose flex flex-wrap gap-2">
