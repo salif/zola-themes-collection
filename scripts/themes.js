@@ -169,7 +169,7 @@ theme = "${themeName}"
 - **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
 - **License**: ${themeInfo.license}
 - **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
-- **Offic. Live Demo**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
+- **Main Live Preview**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
 - **Min Zola version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
 - **Original**: <${themeInfo.originalRepo}>`));
 	return {
@@ -179,7 +179,7 @@ theme = "${themeName}"
 		tags: themeInfo.tags,
 		details: themeDetails,
 		links: [
-			{ name: "Live Demo", url: new URL(themeName + "/", baseURL).href },
+			{ name: "Live Preview", url: new URL(themeName + "/", baseURL).href },
 			{ name: "Repository", url: themeInfo.repo },
 			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName) },
 			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },
