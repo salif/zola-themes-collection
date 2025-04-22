@@ -1,0 +1,200 @@
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+@keyframes firefly {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
+.link-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(0);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.theme-option {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+}
+
+.theme-option:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.theme-option.active {
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.3) rotate(5deg);
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 1.5s infinite;
+}
+
+.firefly {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: firefly 10s linear infinite;
+    filter: blur(1px);
+}
+
+/* Theme 1 - Deep Ocean (modified) */
+.theme-1 {
+    background: linear-gradient(135deg, #0a192f, #172a45, #1f3a5f);
+    color: #e6f7ff;
+}
+
+.theme-1 .sparkle {
+    background: rgba(100, 210, 255, 0.8);
+    box-shadow: 0 0 10px 2px rgba(100, 210, 255, 0.6);
+}
+
+.theme-1 .firefly {
+    background: rgba(100, 210, 255, 0.6);
+    box-shadow: 0 0 8px 2px rgba(100, 210, 255, 0.4);
+}
+
+/* Theme 2 - Mint Fresh (softer) */
+.theme-2 {
+    background: linear-gradient(135deg, #0d9488, #2dd4bf);
+    color: #f0fdfa;
+}
+
+.theme-2 .sparkle {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+}
+
+.theme-2 .firefly {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Theme 3 - Sunset (softer) */
+.theme-3 {
+    background: linear-gradient(135deg, #f9a25b, #f97316);
+    color: #fff7ed;
+}
+
+.theme-3 .sparkle {
+    background: rgba(255, 230, 100, 0.8);
+    box-shadow: 0 0 10px 2px rgba(255, 230, 100, 0.6);
+}
+
+.theme-3 .firefly {
+    background: rgba(255, 230, 100, 0.6);
+    box-shadow: 0 0 8px 2px rgba(255, 230, 100, 0.4);
+}
+
+body {
+    transition: all 0.8s ease;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+}
+
+.theme-indicator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: white;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.theme-indicator:hover {
+    opacity: 1;
+}
+
+.profile-img {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    position: relative;
+    z-index: 10;
+}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.theme-selector {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    padding: 8px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    z-index: 100;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.theme-selector:hover {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        padding: 4rem 2rem;
+    }
+}

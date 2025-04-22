@@ -7,9 +7,8 @@
     <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/olivine//manifest.json">
     <meta name="theme-color" content="#786"/>
     <title>Olivine &middot; Documentation</title>
-    <meta name="description" content="Documentation - Olivine is a theme for creating a personal knowledge base.
-asdf
-"/>
+    <meta name="description" content="Documentation - Olivine is a theme for creating a personal knowledge base. It is not supposed to
+be a book and there are better themes f…"/>
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
@@ -19,7 +18,23 @@ asdf
 </script>
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -30,7 +45,9 @@ asdf
     <header>
       <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
 <div dir="rtl" id="olivine-breadcrumb">
-<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
+<span> / </span>
+Documentation
 </div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
@@ -44,6 +61,7 @@ asdf
   <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/"><span class="olivine-icon"><i class="fa-regular fa-file-lines"></i></span> Getting started</a></li>
   <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/"><span class="olivine-icon"><i class="fa-regular fa-file-lines"></i></span> Styles demo</a></li>
   <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/03-configuration/"><span class="olivine-icon"><i class="fa-regular fa-file-lines"></i></span> Configuration</a></li>
+  <li><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/04-section-page/"><span class="olivine-icon"><i class="fa-regular fa-file-lines"></i></span> Sections and pages</a></li>
 </ul>
 <hr noshade style="width:100%;">
 <ul>
@@ -65,14 +83,6 @@ asdf
 
     <div class="sidebar" id="rightbar">
       <div class="sidebar-content">
-<div id="olivine-toc">
-<h3>Table of contents</h3>
-<ul>
-  <li>
-    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/#asdf">asdf</a>
-  </li>
-</ul>
-</div>
 
 <div id="olivine-backlinks">
 <h3>Backlinks</h3>
@@ -86,10 +96,35 @@ asdf
     </div>
 
     <div id="main-area">
-      <main><h1>Documentation</h1>
+      <main><h1><span>Documentation</span></h1>
 
-<p>Olivine is a theme for creating a personal knowledge base.</p>
-<h2 id="asdf">asdf</h2>
+<p>Olivine is a theme for creating a personal knowledge base. It is not supposed to
+be a book and there are better themes for writing documentations, but here it is
+anyways.</p>
+<p>Here is a list of features.</p>
+<ul>
+<li>Header bar
+<ul>
+<li>Breadcrumbs</li>
+<li>Light and dark color schemes</li>
+</ul>
+</li>
+<li>Left bar
+<ul>
+<li>Navigation of folder structures</li>
+<li>Journaling</li>
+<li>Graph view</li>
+<li>Tags</li>
+</ul>
+</li>
+<li>Right bar
+<ul>
+<li>Table of contents</li>
+<li>Backlinks</li>
+<li>Forward links</li>
+</ul>
+</li>
+</ul>
 
 
 

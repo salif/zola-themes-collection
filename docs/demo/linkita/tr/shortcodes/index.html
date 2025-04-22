@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/shortcodes/" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
-  <meta property="article:modified_time" content="2025-01-23T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2025-04-20T00:00:00+00:00" />
   <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/tr/authors/kita/" />
   <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/tr/authors/salif/" />
   <meta property="article:tag" content="markdown" />
@@ -43,7 +43,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=fc65ba308cf36d3ba82c" />
   <style>
   :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
   :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
@@ -52,7 +52,7 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=b7b1c593133083519ac3"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=1dd3ed42fc674277bc34"></script>
   <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.min.js?h=698547b4b081d012c661"></script>
   <!-- Begin Head End inject -->
   
@@ -146,7 +146,7 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 Eki 2022</time><span
         class="mx-1">&middot;</span>(<time
-      datetime="2025-01-23T00:00:00+00:00">23 Oca 2025</time>)<span
+      datetime="2025-04-20T00:00:00+00:00">20 Nis 2025</time>)<span
         class="mx-1">&middot;</span><time
     datetime="PT0H2M0S">2&nbsp;dk</time>
 </div>
@@ -169,6 +169,9 @@
         <li>
           <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/shortcodes/#galeri">Galeri</a>
         </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/shortcodes/#projeler">Projeler</a>
+        </li>
       </ul>
     </div>
   </details>
@@ -179,11 +182,11 @@
 <p>Kısa kodları hiç duymadınız mı? Daha fazla bilgi için <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola dokümantasyonuna</a> bakın.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>Sayfanızda Mermaid kullanmak için, sayfanın ön yüzünde <code>extra.mermaid = true</code> olarak ayarlamanız gerekir.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;Sayfa başlığınız&quot;
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>+++
+</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Sayfa başlığınız</span><span style="color:#556633;">&quot;
 </span><span>
-</span><span>[extra]
-</span><span>mermaid = true
+</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
+</span><span style="color:#ffb964;">mermaid </span><span>= true
 </span><span>+++
 </span></code></pre>
 <p>Ardından <code>mermaid()</code> kısa kodlarını şu şekilde kullanabilirsiniz:</p>
@@ -498,6 +501,53 @@ sequenceDiagram
     <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/08-example.5c0108fc0d117d1c.jpg" alt="Galeri için demo resim" />
   </a>
 </div>
+<h2 id="projeler">Projeler</h2>
+<p><code>projects()</code> kısa kodu, projeleriniz için bir sayfa oluşturmanıza olanak tanır.</p>
+<p>Bir <code>content/pages/projects/index.md</code> dosyası oluşturun:</p>
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Projelerim&quot;
+</span><span>description = &quot;&quot;
+</span><span>path = &quot;projects&quot;
+</span><span>+++
+</span><span>
+</span><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}
+</span></code></pre>
+<p>Bir <code>content/pages/projects/data.toml</code> dosyası oluşturun:</p>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
+</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
+</span><span style="color:#ffb964;">links </span><span>= [
+</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
+</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
+</span><span>]
+</span></code></pre>
+<p>Bu şu şekilde görüntülenecektir:</p>
+
+<div class="not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="my-2 text-xl font-bold text-black dark:text-white">lorem</h2>
+  <p>Lorem ipsum dolor sit.</p>
+  <div class="my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#lorem</span>
+      <span>#ipsum</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://example.com"
+        target="_blank"
+        >homepage</a
+      >
+      <a
+        class="underline"
+        href="https://example.com"
+        target="_blank"
+        >source</a
+      >
+    </div>
+  </div>
+</div>
 </section>
   <hr />
   <!-- Post Taxonomies -->
@@ -547,7 +597,7 @@ sequenceDiagram
 
   </main>
   <!-- Footer -->
-<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
+<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
   © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>

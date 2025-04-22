@@ -7,7 +7,9 @@
     <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/olivine//manifest.json">
     <meta name="theme-color" content="#786"/>
     <title>Olivine &middot; Configuration</title>
-    <meta name="description" content="Configuration"/>
+    <meta name="description" content="Configuration - Here are some configuration options specific to the Olivine theme.
+[extra.olivine]
+journal = true   # Enables journal fu…"/>
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
@@ -17,7 +19,23 @@
 </script>
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -28,7 +46,11 @@
     <header>
       <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
 <div dir="rtl" id="olivine-breadcrumb">
-<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/03-configuration/">Configuration</a>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
+<span> / </span>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a>
+<span> / </span>
+Configuration
 </div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
@@ -67,8 +89,15 @@
     </div>
 
     <div id="main-area">
-      <main><h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;02-styles-demo&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-left"></i></span></a>Configuration</h1>
+      <main><h1><a title="Styles demo" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;02-styles-demo&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-left"></i></span></a><span>Configuration</span><a title="Sections and pages" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;04-section-page&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-right"></i></span></a></h1>
 
+<p>Here are some configuration options specific to the Olivine theme.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>[extra.olivine]
+</span><span>journal = true   # Enables journal functionality
+</span><span>mathjax = false  # Enables MathJax
+</span><span>graph = true     # Enables graph view
+</span><span>extra_js = [ ]   # Extra javascript files, an array of strings
+</span></code></pre>
 
 
 

@@ -38,7 +38,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=3ba2e5397a70e4af4b3b" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=fc65ba308cf36d3ba82c" />
   <style>
   :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
   :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
@@ -47,7 +47,7 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=b7b1c593133083519ac3"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=1dd3ed42fc674277bc34"></script>
   <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.min.js?h=698547b4b081d012c661"></script>
   <!-- Begin Head End inject -->
   
@@ -183,29 +183,37 @@
 <li>Relative URLs support</li>
 </ul>
 <h2 id="installing">Installing</h2>
+<ol start="0">
+<li>Create a new Zola site if you haven't already:</li>
+</ol>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">zola</span><span> init myblog
+</span><span>cd myblog
+</span><span style="color:#ffb964;">git</span><span> init
+</span></code></pre>
 <ol>
-<li>Add this theme as a git submodule.</li>
+<li>Add the theme as a git submodule:</li>
 </ol>
 <pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/salif/linkita.git themes/linkita
 </span></code></pre>
 <p>If you don't want to use git submodules, you can clone the repository instead: <code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code></p>
 <ol start="2">
-<li>Set <code>linkita</code> as your theme in your <code>config.toml</code> file.</li>
+<li>Enable the theme in your <code>config.toml</code> file:</li>
 </ol>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">linkita</span><span style="color:#556633;">&quot;
 </span></code></pre>
+<p>Place it near the <code>base_url</code> variable, not under <code>[extra]</code>.</p>
 <h2 id="managing-versions">Managing versions</h2>
 <p>To update the theme, run:</p>
 <pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule update</span><span style="color:#ffb964;"> --remote</span><span> themes/linkita
 </span></code></pre>
 <p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a>
 for all versions after the one you are using. There may be breaking changes that require manual involvement.</p>
-<p>If you use Tailwind classes in your templates directory, run:</p>
+<p>If and only if you use Tailwind classes in your templates directory, run:</p>
 <pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span>cd themes/linkita
 </span><span style="color:#ffb964;">pnpm</span><span> tailwindcss</span><span style="color:#ffb964;"> -i</span><span> ./src/app.css</span><span style="color:#ffb964;"> -o</span><span> ../../static/main.min.css</span><span style="color:#ffb964;"> --minify
 </span></code></pre>
 <h2 id="usage">Usage</h2>
-<p>Linkita uses the following frontmatter variables.
+<p>Linkita uses the following front matter variables.
 All variables are optional.
 Set the ones you need.</p>
 <h3 id="yaml-frontmatter">YAML frontmatter</h3>
@@ -227,8 +235,8 @@ Set the ones you need.</p>
 </span><span style="color:#ffb964;">---
 </span></code></pre>
 <h3 id="toml-frontmatter">TOML frontmatter</h3>
-<p>Put the variables between the opening and closing <code>+++</code>.</p>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;&quot;
+<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>+++
+</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#ffb964;">description </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#888888;"># The date of the post
 </span><span style="color:#ffb964;">date </span><span>= </span><span style="color:#7697d6;">2025-12-30
@@ -251,14 +259,14 @@ Set the ones you need.</p>
 </span><span style="color:#ffb964;">image </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#888888;"># A description of the cover image
 </span><span style="color:#ffb964;">alt </span><span>= </span><span style="color:#556633;">&quot;&quot;
+</span><span>+++
 </span></code></pre>
-<h3 id="other-extra-frontmatter-variables">Other extra frontmatter variables</h3>
+<h3 id="other-extra-front-matter-variables">Other extra front matter variables</h3>
 <p>Linkita supports <a href="https://salif.github.io/linkita/en/extra-frontmatter/">more extra variables, listed here</a>.</p>
-<h3 id="home-page-profile">Home page profile</h3>
-<p>Create <code>content/_index.md</code> file in your blog and set <code>extra.profile</code> to your username:</p>
+<h3 id="pages-and-posts">Pages and Posts</h3>
+<h4 id="home-page">Home page</h4>
+<p>Create a <code>content/_index.md</code> file and set <code>extra.profile</code> to your username:</p>
 <pre data-lang="toml" data-name="content/_index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/_index.md"><span>+++
-</span><span style="color:#888888;"># title = &quot;&quot;
-</span><span style="color:#888888;"># description = &quot;&quot;
 </span><span style="color:#ffb964;">sort_by </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">date</span><span style="color:#556633;">&quot;
 </span><span style="color:#ffb964;">paginate_by </span><span>= </span><span style="color:#cf6a4c;">4
 </span><span>[</span><span style="color:#ffb964;">extra</span><span>]
@@ -268,69 +276,59 @@ Set the ones you need.</p>
 <p>Do it for each language in your blog.
 For French, the file name is <code>content/_index.fr.md</code>.</p>
 <p>See <a href="#profiles">Profiles</a> for more.</p>
-<h3 id="non-post-pages">Non-post pages</h3>
+<h4 id="posts">Posts</h4>
+<p>In the <code>content</code> directory, create a subdirectory named <code>blog</code> or another name of your choice.</p>
+<p>Create a <code>content/blog/_index.md</code> file:</p>
+<pre data-lang="toml" data-name="content/blog/_index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/blog/_index.md"><span>+++
+</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Blog</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">template </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">archive.html</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">transparent </span><span>= true
+</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
+</span><span style="color:#ffb964;">date_format </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">%m-%d</span><span style="color:#556633;">&quot;
+</span><span>+++
+</span></code></pre>
+<p>Create a <code>content/blog/hello.md</code> file:</p>
+<pre data-lang="md" data-name="content/blog/hello.md" style="background-color:#151515;color:#e8e8d3;" class="language-md "><code class="language-md" data-lang="md" data-name="content/blog/hello.md"><span>+++
+</span><span>title = &quot;Title&quot;
+</span><span>date = 2025-12-30
+</span><span>+++
+</span><span>
+</span><span>Summary </span><span style="color:#888888;">&lt;!-- more --&gt;
+</span><span>
+</span><span>## </span><span style="color:#ffb964;">Hello, world!
+</span></code></pre>
+<h4 id="pages">Pages</h4>
 <p>The default page template <code>page.html</code> is for blog posts.
-For pages that are not blog posts, you can make <code>content/pages</code> directory and use the <code>pages.html</code> template.</p>
-<p>Create <code>content/pages/_index.md</code> file in your blog:</p>
+For pages that are not blog posts you can use the <code>pages.html</code> template.</p>
+<p>In the <code>content</code> directory, create a subdirectory named <code>pages</code> and
+create a <code>content/pages/_index.md</code> file:</p>
 <pre data-lang="toml" data-name="content/pages/_index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/_index.md"><span>+++
 </span><span style="color:#ffb964;">render </span><span>= false
 </span><span style="color:#ffb964;">page_template </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">pages.html</span><span style="color:#556633;">&quot;
 </span><span>+++
 </span></code></pre>
-<h4 id="about-you-page">About you page</h4>
-<p>Create <code>content/pages/about.md</code> file in your blog:</p>
-<pre data-lang="toml" data-name="content/pages/about.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/about.md"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About me</span><span style="color:#556633;">&quot;
-</span><span style="color:#888888;"># description = &quot;&quot;
-</span><span style="color:#888888;"># path = &quot;about&quot;
+<p>Create a <code>content/pages/about.md</code> file:</p>
+<pre data-lang="md" data-name="content/pages/about.md" style="background-color:#151515;color:#e8e8d3;" class="language-md "><code class="language-md" data-lang="md" data-name="content/pages/about.md"><span>+++
+</span><span>title = &quot;About me&quot;
+</span><span>description = &quot;&quot;
+</span><span>path = &quot;about&quot;
 </span><span>+++
 </span><span>
-</span><span style="color:#888888;">## Hello, world!
+</span><span>## </span><span style="color:#ffb964;">Hello, world!
 </span></code></pre>
-<h4 id="archive-page">Archive page</h4>
-<p>Create <code>content/pages/archive.md</code> file in your blog:</p>
-<pre data-lang="toml" data-name="content/pages/archive.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/archive.md"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot;
-</span><span style="color:#888888;"># description = &quot;&quot;
-</span><span style="color:#888888;"># path = &quot;archive&quot;
-</span><span style="color:#ffb964;">template </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">archive.html</span><span style="color:#556633;">&quot;
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span style="color:#ffb964;">section </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">_index.md</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">date_format </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">%m-%d</span><span style="color:#556633;">&quot;
-</span><span>+++
-</span></code></pre>
-<h4 id="projects-page">Projects page</h4>
-<p>Create <code>content/pages/projects/index.md</code> file in your blog:</p>
-<pre data-lang="toml" data-name="content/pages/projects/index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/projects/index.md"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">My Projects</span><span style="color:#556633;">&quot;
-</span><span style="color:#888888;"># description = &quot;&quot;
-</span><span style="color:#888888;"># path = &quot;projects&quot;
-</span><span>+++
-</span></code></pre>
-<p>Include the following shortcode too: {{ projects(path="data.toml", format="toml") }}</p>
-<p>Create <code>content/pages/projects/data.toml</code> file in your blog:</p>
-<pre data-lang="toml" data-name="content/pages/projects/data.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/pages/projects/data.toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
-</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
-</span><span style="color:#ffb964;">links </span><span>= [
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>]
-</span></code></pre>
+<p>If you want, you can also create <a href="https://salif.github.io/linkita/en/shortcodes/#projects">a page for your projects</a>.</p>
 <h3 id="setting-page-authors">Setting page authors</h3>
 <p>Choose one of the following options or skip if you don't know what you're doing:</p>
 <h4 id="option-a-using-page-authors-and-config-author">Option A: Using <code>page.authors</code> and <code>config.author</code></h4>
-<p>The default author for pages is set using the <code>author</code> variable in the <code>config.toml</code> file.</p>
-<p>You don't need to set <code>authors</code> in the frontmatter if the default author is the only author of the post.</p>
-<p>Otherwise, set <code>authors</code>:</p>
+<p>The default author for posts is set using the <code>author</code> variable in the <code>config.toml</code> file.</p>
+<p>You don't need to set <code>authors</code> in the front matter if the default author is the only author of the post. Otherwise, set <code>authors</code>:</p>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>+++
 </span><span style="color:#ffb964;">authors </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">author_username</span><span style="color:#556633;">&quot;</span><span>]
 </span><span>+++
 </span></code></pre>
 <h4 id="option-b-using-taxonomies">Option B: Using Taxonomies</h4>
 <p>Useful if the blog has a team of several authors.
-If you choose this option you should set taxonomies in each page.</p>
+If you choose this option you should set taxonomies in each post.</p>
 <pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>+++
 </span><span>[</span><span style="color:#ffb964;">taxonomies</span><span>]
 </span><span style="color:#ffb964;">authors </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">author_username</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">author2_username</span><span style="color:#556633;">&quot;</span><span>]
@@ -389,10 +387,10 @@ All variables are optional.</p>
 </span><span>
 </span><span style="color:#888888;"># Build a search index from the pages and section content
 </span><span style="color:#888888;"># for &quot;default_language&quot;.
-</span><span style="color:#ffb964;">build_search_index </span><span>= true
+</span><span style="color:#888888;"># build_search_index = true
 </span></code></pre>
 <p>Zola has built-in support for taxonomies.
-Linkita has special support for taxonomies called <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
+Linkita has special support for taxonomies named <code>tags</code>, <code>categories</code>, and <code>authors</code>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span>[[</span><span style="color:#ffb964;">taxonomies</span><span>]]
 </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">categories</span><span style="color:#556633;">&quot;
 </span><span style="color:#ffb964;">feed </span><span>= true
@@ -445,7 +443,7 @@ Linkita has special support for taxonomies called <code>tags</code>, <code>categ
 </span><span style="color:#888888;"># Default value: false
 </span><span style="color:#ffb964;">disable_default_favicon </span><span>= false
 </span><span>
-</span><span style="color:#888888;"># If you want to reimplement the JS code
+</span><span style="color:#888888;"># If you want to implement the JS code
 </span><span style="color:#888888;"># yourself, set to true and use the inject support.
 </span><span style="color:#888888;"># Default value: false
 </span><span style="color:#ffb964;">disable_javascript </span><span>= false
@@ -509,17 +507,17 @@ Linkita has special support for taxonomies called <code>tags</code>, <code>categ
 <h3 id="menus">Menus</h3>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">menus</span><span>]
 </span><span style="color:#ffb964;">menu_name </span><span>= [
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/pages/archive/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/categories</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Categories</span><span style="color:#556633;">&quot; </span><span>},
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/blog/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot; </span><span>},
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/categories/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Categories</span><span style="color:#556633;">&quot; </span><span>},
 </span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/tags/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Tags</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/pages/about/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About</span><span style="color:#556633;">&quot; </span><span>},
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/about/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About</span><span style="color:#556633;">&quot; </span><span>},
 </span><span>]
 </span><span>
 </span><span style="color:#888888;"># Example multilingual menu.
 </span><span style="color:#ffb964;">multilingual_menu_name </span><span>= [
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/pages/about/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About in French</span><span style="color:#556633;">&quot; </span><span>} },
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/pages/projects/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Projects</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Projects in French</span><span style="color:#556633;">&quot; </span><span>} },
-</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/pages/archive/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive in French</span><span style="color:#556633;">&quot; </span><span>} },
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/about/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">About in French</span><span style="color:#556633;">&quot; </span><span>} },
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/projects/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Projects</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Projects in French</span><span style="color:#556633;">&quot; </span><span>} },
+</span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/blog/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive in French</span><span style="color:#556633;">&quot; </span><span>} },
 </span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/categories/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Categories</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Categories in French</span><span style="color:#556633;">&quot; </span><span>} },
 </span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/tags/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Tags</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Tags in French</span><span style="color:#556633;">&quot; </span><span>} },
 </span><span>  { </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">$BASE_URL/authors/</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">names </span><span>= { </span><span style="color:#ffb964;">en </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Authors</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">fr </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Authors in French</span><span style="color:#556633;">&quot; </span><span>} },
@@ -722,7 +720,7 @@ Do this once for each browser and device.
 For example, open <a href="http://127.0.0.1:1111/#disable-analytics">http://127.0.0.1:1111/#disable-analytics</a>.</p>
 <h3 id="comments">Comments</h3>
 <p>See <a href="https://giscus.app/">giscus.app</a>.
-Only available when <code>extra.comment</code> in the frontmatter or <code>extra.comment</code> in the config is set to true.</p>
+Only available when <code>extra.comment</code> in the front matter or <code>extra.comment</code> in the config is set to true.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">giscus</span><span>]
 </span><span style="color:#888888;"># No default value.
 </span><span style="color:#ffb964;">repo </span><span>= </span><span style="color:#556633;">&quot;&quot;
@@ -766,7 +764,7 @@ Only available when <code>extra.comment</code> in the frontmatter or <code>extra
 
   </main>
   <!-- Footer -->
-<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-8 py-3 text-sm opacity-60">
+<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
   © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>

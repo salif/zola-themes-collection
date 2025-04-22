@@ -7,10 +7,9 @@
     <link rel="manifest" href="https://salif.github.io/zola-themes-collection/demo/olivine//manifest.json">
     <meta name="theme-color" content="#786"/>
     <title>Olivine &middot; Getting started</title>
-    <meta name="description" content="Getting started - To get started, please read this.
+    <meta name="description" content="Getting started - To get started, follow the instructions below.
 Installing Zola
-Installing Olivine
-"/>
+Check out the Zola project website for instructions on in…"/>
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
@@ -20,7 +19,23 @@ Installing Olivine
 </script>
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -31,7 +46,11 @@ Installing Olivine
     <header>
       <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
 <div dir="rtl" id="olivine-breadcrumb">
-<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/">Getting started</a>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
+<span> / </span>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a>
+<span> / </span>
+Getting started
 </div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
@@ -71,6 +90,14 @@ Installing Olivine
   </li>
   <li>
     <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/#installing-olivine">Installing Olivine</a>
+    <li><ul>
+      <li>
+        <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/#option-1-template-repository">Option 1: template repository</a>
+      </li>
+      <li>
+        <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/#option-2-manual-configuration">Option 2: manual configuration</a>
+      </li>
+    </ul></li>
   </li>
 </ul>
 </div>
@@ -81,12 +108,48 @@ Installing Olivine
     </div>
 
     <div id="main-area">
-      <main><h1>Getting started<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;02-styles-demo&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-right"></i></span></a></h1>
+      <main><h1><span>Getting started</span><a title="Styles demo" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;02-styles-demo&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-right"></i></span></a></h1>
 
 <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/olivine/">#olivine</a></span>
-<p>To get started, please read this.</p>
+<p>To get started, follow the instructions below.</p>
 <h2 id="installing-zola">Installing Zola</h2>
+<p>Check out the Zola project website for instructions on installing it.</p>
+<ul>
+<li><a rel="noopener" target="_blank" href="https://github.com/getzola/zola">Github repository</a></li>
+<li><a rel="noopener" target="_blank" href="https://www.getzola.org/">Zola documentation</a></li>
+<li><a rel="noopener" target="_blank" href="https://keats.github.io/tera/">Tera documentation</a></li>
+<li><a rel="noopener" target="_blank" href="https://zola.discourse.group/">Zola community forum</a></li>
+</ul>
 <h2 id="installing-olivine">Installing Olivine</h2>
+<p>You can use either clone a template repository or manually set up the theme.</p>
+<h3 id="option-1-template-repository">Option 1: template repository</h3>
+<p>Simply clone the template repository.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> git clone git@github.com:dongryul-kim/olivine-template.git &lt;your-folder-name&gt;
+</span></code></pre>
+<h3 id="option-2-manual-configuration">Option 2: manual configuration</h3>
+<p>There is a page in the Zola documentation on <a rel="noopener" target="_blank" href="https://www.getzola.org/documentation/themes/installing-and-using-themes/">installing and using
+themes</a>.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> mkdir &lt;your-folder-name&gt;
+</span><span style="color:#bf616a;">$</span><span> cd &lt;your-folder-name&gt;
+</span><span style="color:#bf616a;">$</span><span> zola init
+</span><span style="color:#bf616a;">$</span><span> git clone git@github.com:dongryul-kim/olivine.git themes/olivine
+</span><span style="color:#65737e;"># Add the option theme = &quot;olivine&quot; to config.toml
+</span><span style="color:#bf616a;">$</span><span> zola serve
+</span><span style="color:#65737e;"># Navigate to localhost:1111 on the web browser
+</span></code></pre>
+<p>Because of some limitations, there are additional steps one has to take. Create
+a file a named <code>content/olivine-internal-graph.md</code> with contents</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+++
+</span><span>title = &quot;Graph&quot;
+</span><span>template = &quot;internal/graph.html&quot;
+</span><span>+++
+</span></code></pre>
+<p>and also a file named <code>content/olivine-internal-sitemap.md</code> with contents</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+++
+</span><span>title = &quot;Sitemap&quot;
+</span><span>template = &quot;internal/sitemap.html&quot;
+</span><span>+++
+</span></code></pre>
 
 
 

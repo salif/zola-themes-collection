@@ -18,7 +18,23 @@
 
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/cytoscape@3/dist/cytoscape.min.js"></script>
 
   </head>
@@ -31,7 +47,9 @@
     <header>
       <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
 <div dir="rtl" id="olivine-breadcrumb">
-<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine-internal-graph/">Graph</a>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
+<span> / </span>
+Graph
 </div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
@@ -78,6 +96,8 @@
 let cy_elements = [
 { data: { id: '/tags/adic-spaces/', type: 'tag', name: '#adic-spaces' } },
 { data: { source: '/math/olivine/', target: '/tags/adic-spaces/' } },
+{ data: { id: '/tags/markdown/', type: 'tag', name: '#markdown' } },
+{ data: { source: '/docs/02-styles-demo/', target: '/tags/markdown/' } },
 { data: { id: '/tags/olivine/', type: 'tag', name: '#olivine' } },
 { data: { source: '/math/olivine/', target: '/tags/olivine/' } },
 { data: { source: '/docs/01-intro/', target: '/tags/olivine/' } },
@@ -87,6 +107,14 @@ let cy_elements = [
 { data: { source: '/olivine-internal-sitemap/', target: '/' } },
 { data: { id: '/olivine-internal-graph/', type: 'page', name: 'Graph' } },
 { data: { source: '/olivine-internal-graph/', target: '/' } },
+{ data: { id: '/math/', type: 'section', name: 'Mathematics' } },
+{ data: { id: '/math/olivine/', type: 'page', name: 'The olivine spectrum' } },
+{ data: { source: '/math/olivine/', target: '/math/' } },
+{ data: { source: '/math/', target: '/' } },
+{ data: { id: '/journal/', type: 'section', name: 'Journal' } },
+{ data: { id: '/journal/2023-08-03/', type: 'page', name: '2023-08-03' } },
+{ data: { source: '/journal/2023-08-03/', target: '/journal/' } },
+{ data: { source: '/journal/', target: '/' } },
 { data: { id: '/docs/', type: 'section', name: 'Documentation' } },
 { data: { source: 'docs/02-styles-demo/', target: '/docs/' } },
 { data: { id: '/docs/01-intro/', type: 'page', name: 'Getting started' } },
@@ -96,15 +124,9 @@ let cy_elements = [
 { data: { source: 'docs/02-styles-demo/', target: '/docs/02-styles-demo/' } },
 { data: { id: '/docs/03-configuration/', type: 'page', name: 'Configuration' } },
 { data: { source: '/docs/03-configuration/', target: '/docs/' } },
+{ data: { id: '/docs/04-section-page/', type: 'page', name: 'Sections and pages' } },
+{ data: { source: '/docs/04-section-page/', target: '/docs/' } },
 { data: { source: '/docs/', target: '/' } },
-{ data: { id: '/journal/', type: 'section', name: 'Journal' } },
-{ data: { id: '/journal/2023-08-03/', type: 'page', name: '2023-08-03' } },
-{ data: { source: '/journal/2023-08-03/', target: '/journal/' } },
-{ data: { source: '/journal/', target: '/' } },
-{ data: { id: '/math/', type: 'section', name: 'Mathematics' } },
-{ data: { id: '/math/olivine/', type: 'page', name: 'The olivine spectrum' } },
-{ data: { source: '/math/olivine/', target: '/math/' } },
-{ data: { source: '/math/', target: '/' } },
 ];
 
 // Clean up data

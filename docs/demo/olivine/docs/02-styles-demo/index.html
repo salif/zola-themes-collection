@@ -8,8 +8,8 @@
     <meta name="theme-color" content="#786"/>
     <title>Olivine &middot; Styles demo</title>
     <meta name="description" content="Styles demo - This page shows the basic styles and features of the theme.
-Text demo
-The above section is a &amp;lt;h2&amp;gt; element. Here ar…"/>
+Text
+There are the standard italic and strong and italic str…"/>
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
@@ -19,7 +19,23 @@ The above section is a &amp;lt;h2&amp;gt; element. Here ar…"/>
 </script>
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -30,7 +46,11 @@ The above section is a &amp;lt;h2&amp;gt; element. Here ar…"/>
     <header>
       <div><div><img src="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg" width="24" height="32" onclick="toggleBar('leftbar')" alt="Olivine logo" style="display:block;"></img></div>
 <div dir="rtl" id="olivine-breadcrumb">
-<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a><span> / </span><a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/">Styles demo</a>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
+<span> / </span>
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">Documentation</a>
+<span> / </span>
+Styles demo
 </div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
@@ -66,15 +86,30 @@ The above section is a &amp;lt;h2&amp;gt; element. Here ar…"/>
 <h3>Table of contents</h3>
 <ul>
   <li>
-    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#text-demo">Text demo</a>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#text">Text</a>
+  </li>
+  <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#sections-h2">Sections (h2)</a>
     <li><ul>
       <li>
-        <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#this-is-a-subsection">This is a subsection</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#this-is-a-subsection-h3">This is a subsection (h3)</a>
       </li>
     </ul></li>
   </li>
   <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#lists-and-links">Lists and links</a>
+  </li>
+  <li>
     <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#tables-and-images">Tables and images</a>
+  </li>
+  <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#code-and-math">Code and math</a>
+  </li>
+  <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#blockquotes-and-footnotes">Blockquotes and footnotes</a>
+  </li>
+  <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#tags">Tags</a>
   </li>
 </ul>
 </div>
@@ -93,7 +128,7 @@ The above section is a &amp;lt;h2&amp;gt; element. Here ar…"/>
 </div>
 <script>
 forward_list = [
- "docs/",  "docs/02-styles-demo/#text-demo",  "/tags/olivine/", 
+ "docs/",  "docs/02-styles-demo/#sections-h2",  "/tags/olivine/",  "docs/02-styles-demo/#blockquotes-and-footnotes", 
 ];
 hydrateForward("olivine-forward-link-lists", forward_list,
 "https://salif.github.io/zola-themes-collection/demo/olivine//olivine-internal-sitemap/");
@@ -103,16 +138,24 @@ hydrateForward("olivine-forward-link-lists", forward_list,
     </div>
 
     <div id="main-area">
-      <main><h1><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;01-intro&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-left"></i></span></a>Styles demo<a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;03-configuration&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-right"></i></span></a></h1>
+      <main><h1><a title="Getting started" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;01-intro&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-left"></i></span></a><span>Styles demo</span><a title="Configuration" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;olivine&#x2F;docs&#x2F;03-configuration&#x2F;"><span class="olivine-icon"><i class="fa-solid fa-angle-right"></i></span></a></h1>
 
+<span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/markdown/">#markdown</a></span>
 <p>This page shows the basic styles and features of the theme.</p>
-<h2 id="text-demo">Text demo</h2>
-<p>The above section is a <code>&lt;h2&gt;</code> element. Here are some lower-level sections.</p>
-<h3 id="this-is-a-subsection">This is a subsection</h3>
-<p>Some random text inside the <code>&lt;h3&gt;</code> element.</p>
-<h4 id="this-is-a-subsubsection">This is a subsubsection</h4>
-<p>Some other random text inside the <code>&lt;h4&gt;</code> element. Anything below this is not
-very useful in my opinion.</p>
+<h2 id="text">Text</h2>
+<p>There are the standard <em>italic</em> and <strong>strong</strong> and <em><strong>italic strong</strong></em> fonts.
+There is also <del>strikethrough</del>.</p>
+<h2 id="sections-h2">Sections (h2)</h2>
+<p>The table of contents appear in the right sidebar (expanded and folded using the
+book icon). Here are some lower-level sections.</p>
+<h3 id="this-is-a-subsection-h3">This is a subsection (h3)</h3>
+<p>Some random text in a subsection</p>
+<h4 id="this-is-a-subsubsection-h4">This is a subsubsection (h4)</h4>
+<p>Some other random text in a subsubsection. Anything below this is probably not
+that useful.</p>
+<hr />
+<p>We can also insert a break line.</p>
+<h2 id="lists-and-links">Lists and links</h2>
 <p>Here are some numbered and bulleted lists.</p>
 <ul>
 <li>A first bullet item</li>
@@ -133,21 +176,84 @@ very useful in my opinion.</p>
 <li>Here is an external link to the
 <a rel="noopener" target="_blank" href="https://github.com/dongryul-kim/olivine">Github repository</a>.</li>
 <li>Here is an internal link to <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/">documentation page</a>.</li>
-<li>We can also link to sections like <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#text-demo">Text demo</a>, which is this
-section.</li>
+<li>We can also link to sections like <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#sections-h2">Sections</a>, which is the
+previous section.</li>
 </ol>
-<p>There is also a feature of creating a link to a tag. <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/olivine/">#olivine</a></span>
-
-Note that this is a one-sided link, meaning that including this link does not
-make this page have this tag. This is implemented as a shortcode.</p>
-<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{{ tag(name=&quot;olivine&quot;) }}
-</span></code></pre>
+<p>Items in lists can have checkboxes.</p>
+<ol>
+<li><input disabled="" type="checkbox" checked=""/>
+Write this todo list.</li>
+<li><input disabled="" type="checkbox"/>
+Some big project that has multiple tasks.
+<ul>
+<li><input disabled="" type="checkbox"/>
+This is not finished.</li>
+<li><input disabled="" type="checkbox" checked=""/>
+This is finished.</li>
+</ul>
+</li>
+</ol>
 <h2 id="tables-and-images">Tables and images</h2>
 <p>Here are some physical properties of minerals.</p>
 <table><thead><tr><th style="text-align: center">Mineral</th><th style="text-align: center">Chemical composition</th><th style="text-align: center">Melting temperature</th></tr></thead><tbody>
 <tr><td style="text-align: center">Olivine</td><td style="text-align: center">(Mg,Fe)₂SiO₄</td><td style="text-align: center">1200–1900℃</td></tr>
 <tr><td style="text-align: center">Obsidian</td><td style="text-align: center">SiO₂, MgO, Fe₃O₄</td><td style="text-align: center">700–900℃</td></tr>
 </tbody></table>
+<p>In Markdown, an image is an <code>&lt;img&gt;</code> tag with surrounding text. For example, <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Olivine-gem7-10a.jpg" alt="An image of olivine" />
+can be part of a sentence.</p>
+<h2 id="code-and-math">Code and math</h2>
+<p>Both inline code <code>sudo rm -rf /</code> as well as (syntax-colored) block code</p>
+<pre data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">fibonacci</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">n</span><span>) {
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(n = </span><span style="color:#d08770;">0</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span>;
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(n = </span><span style="color:#d08770;">1</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span>;
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">fibonacci</span><span>(n-</span><span style="color:#d08770;">1</span><span>) + </span><span style="color:#bf616a;">fibonacci</span><span>(n-</span><span style="color:#d08770;">2</span><span>);
+</span><span>}
+</span></code></pre>
+<p>are supported. We can also include line numbers and highlight lines</p>
+<pre data-linenos data-lang="c" style="background-color:#2b303b;color:#c0c5ce;" class="language-c "><code class="language-c" data-lang="c"><table><tbody><tr><td>1</td><td><span style="color:#b48ead;">int </span><span style="color:#8fa1b3;">fibonacci</span><span>(</span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">n</span><span>) {
+</span></td></tr><tr><td><mark style="background-color:#65737e30;">2</mark></td><td><mark style="background-color:#65737e30;"><span>    </span><span style="color:#b48ead;">if </span><span>(n = </span><span style="color:#d08770;">0</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">0</span><span>;
+</span></mark></td></tr><tr><td><mark style="background-color:#65737e30;">3</mark></td><td><mark style="background-color:#65737e30;"><span>    </span><span style="color:#b48ead;">if </span><span>(n = </span><span style="color:#d08770;">1</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">1</span><span>;
+</span></mark></td></tr><tr><td>4</td><td><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">fibonacci</span><span>(n-</span><span style="color:#d08770;">1</span><span>) + </span><span style="color:#bf616a;">fibonacci</span><span>(n-</span><span style="color:#d08770;">2</span><span>);
+</span></td></tr><tr><td>5</td><td><span>}
+</span></td></tr></tbody></table></code></pre>
+<p>by adding in the options <code>linenos</code> and <code>hl_lines</code>.</p>
+<p>Inline math such as $a^2 + b^2 = c^2$ can be used, and there are also
+displayed equations
+$$ \Theta \colon \mathbf{Sh}(\mathsf{G}, \mathsf{X})_ E^\lozenge
+\times_{\mathrm{Bun}_ G} \mathrm{Gr}_ {G,\lbrace \mu^{-1} \rbrace,E} \to
+\mathbf{Sh}(\mathsf{G}, \mathsf{X})_ E^\lozenge. $$
+However, to use this feature, the <code>config.extra.olivine.mathjax</code> option needs to
+be enabled.</p>
+<h2 id="blockquotes-and-footnotes">Blockquotes and footnotes</h2>
+<p>The following is a quote from Alexander Grothendieck’s <em>Récoltes et
+semailles</em>.</p>
+<blockquote>
+<p>The unknown thing to be known appeared to me as some stretch of earth or hard
+marl, resisting penetration… the sea advances insensibly in silence, nothing
+seems to happen, nothing moves, the water is so far off you hardly hear it…
+yet it finally surrounds the resistant substance.</p>
+</blockquote>
+<p>Here is a footnote<sup class="footnote-reference"><a href="#1">1</a></sup> to a text. As you can see, footnotes can be placed
+anywhere<sup class="footnote-reference"><a href="#2">2</a></sup> in the document.</p>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>This footnote is at the end of the section, but it can also go at the
+bottom of the document.</p>
+</div>
+<h2 id="tags">Tags</h2>
+<p>There is also a feature of creating a link to a tag. <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine//tags/olivine/">#olivine</a></span>
+
+Note that this is a one-sided link, meaning that including this link does not
+make this page have this tag. This is implemented as a shortcode.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{{ tag(name=&quot;olivine&quot;) }}
+</span></code></pre>
+<p>To add the tag to a page, use the option <code>taxonomies.tags</code> in the frontmatter.
+For example, the frontmatter for this page includes the following line.</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>taxonomies.tags = [&quot;markdown&quot;]
+</span></code></pre>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>This footnote is at the bottom of the document. It is from the
+<a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#blockquotes-and-footnotes">Blockquotes and footnotes</a> section.</p>
+</div>
 
 
 

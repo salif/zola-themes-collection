@@ -5,7 +5,7 @@
     <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/tags/html/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-01-23T00:00:00+00:00</updated>
+    <updated>2025-04-20T00:00:00+00:00</updated>
     <id>https://salif.github.io/zola-themes-collection/demo/linkita/tr/tags/html/atom.xml</id>
     <entry xml:lang="tr">
         <title>Markdown Sözdizimi Kılavuzu</title>
@@ -29,7 +29,7 @@
     <entry xml:lang="tr">
         <title>Kısa Kodlar</title>
         <published>2022-10-20T00:00:00+00:00</published>
-        <updated>2025-01-23T00:00:00+00:00</updated>
+        <updated>2025-04-20T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -46,11 +46,11 @@
 &lt;p&gt;Kısa kodları hiç duymadınız mı? Daha fazla bilgi için &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola dokümantasyonuna&lt;&#x2F;a&gt; bakın.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;Sayfanızda Mermaid kullanmak için, sayfanın ön yüzünde &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; olarak ayarlamanız gerekir.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Sayfa başlığınız&amp;quot;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Sayfa başlığınız&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[extra]
-&lt;&#x2F;span&gt;&lt;span&gt;mermaid = true
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
 &lt;&#x2F;span&gt;&lt;span&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Ardından &lt;code&gt;mermaid()&lt;&#x2F;code&gt; kısa kodlarını şu şekilde kullanabilirsiniz:&lt;&#x2F;p&gt;
@@ -364,6 +364,53 @@ sequenceDiagram
   &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;tr&#x2F;shortcodes&#x2F;08-example.jpg&quot; target=&quot;_blank&quot;&gt;
     &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;08-example.5c0108fc0d117d1c.jpg&quot; alt=&quot;Galeri için demo resim&quot; &#x2F;&gt;
   &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;projeler&quot;&gt;Projeler&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;code&gt;projects()&lt;&#x2F;code&gt; kısa kodu, projeleriniz için bir sayfa oluşturmanıza olanak tanır.&lt;&#x2F;p&gt;
+&lt;p&gt;Bir &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;index.md&lt;&#x2F;code&gt; dosyası oluşturun:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Projelerim&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Bir &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;data.toml&lt;&#x2F;code&gt; dosyası oluşturun:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;desc &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;links &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Bu şu şekilde görüntülenecektir:&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5&quot;&gt;
+  &lt;h2 class=&quot;my-2 text-xl font-bold text-black dark:text-white&quot;&gt;lorem&lt;&#x2F;h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit.&lt;&#x2F;p&gt;
+  &lt;div class=&quot;my-2 flex flex-wrap items-center justify-between&quot;&gt;
+    &lt;div class=&quot;flex flex-wrap gap-x-2 text-sm opacity-80&quot;&gt;
+      &lt;span&gt;#lorem&lt;&#x2F;span&gt;
+      &lt;span&gt;#ipsum&lt;&#x2F;span&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;flex flex-wrap gap-x-2&quot;&gt;
+      &lt;a
+        class=&quot;underline&quot;
+        href=&quot;https:&#x2F;&#x2F;example.com&quot;
+        target=&quot;_blank&quot;
+        &gt;homepage&lt;&#x2F;a
+      &gt;
+      &lt;a
+        class=&quot;underline&quot;
+        href=&quot;https:&#x2F;&#x2F;example.com&quot;
+        target=&quot;_blank&quot;
+        &gt;source&lt;&#x2F;a
+      &gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;
 </content>
         

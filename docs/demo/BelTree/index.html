@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BelTree</title>
+    <meta name="description" content="Alex | Frontend Web Developer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-1">
+    <!-- Floating elements -->
+    <div id="sparkles-container"></div>
+    <div id="fireflies-container"></div>
+
+    <!-- Theme indicator -->
+    <div class="theme-indicator hidden md:flex">
+        <i class="fas fa-palette mr-2"></i>
+        <span>Theme: Deep Ocean</span>
+    </div>
+    
+    <div class="content-wrapper">
+        <!-- Profile Section -->
+        <div class="text-center mb-12">
+    <div class="flex justify-center mb-2">
+        <img src="images/profile.jpg" 
+             alt="Profile" class="rounded-full w-32 h-32 object-cover profile-img floating">
+    </div>
+    <h1 id="profile-name" class="text-4xl font-bold mb-2">Alex</h1>
+    <p id="profile-title" class="text-xl opacity-90">Frontend Web Developer</p>
+</div>
+        
+        <!-- Links Section -->
+        <div class="space-y-4 mb-8">
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="fab fa-twitter text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">Twitter</h3>
+            <p class="text-sm opacity-90">Follow me for updates</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="far fa-envelope text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">Mail</h3>
+            <p class="text-sm opacity-90">Contact me via email</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+    
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="fab fa-instagram text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">Instagram</h3>
+            <p class="text-sm opacity-90">See my daily life</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+    
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="fab fa-linkedin-in text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">LinkedIn</h3>
+            <p class="text-sm opacity-90">Professional profile</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+    
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="fab fa-github text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">GitHub</h3>
+            <p class="text-sm opacity-90">My open-source projects</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+    
+    <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="fab fa-youtube text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">YouTube</h3>
+            <p class="text-sm opacity-90">Tutorials & content</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a>
+
+    <!-- Use the following html to add more links. Make use of fontawesome for more icons. -->
+
+    <!-- <a href="#" class="link-card block rounded-xl p-3 flex items-center">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center bg-white bg-opacity-30 mr-4">
+            <i class="far fa-envelope text-xl"></i>
+        </div>
+        <div class="text-left flex-1">
+            <h3 class="font-semibold text-lg">YouTube</h3>
+            <p class="text-sm opacity-90">Tutorials & content</p>
+        </div>
+        <i class="fas fa-chevron-right opacity-70"></i>
+    </a> -->
+
+</div>
+
+        <!-- Contact Guidelines -->
+        <div class="info-box rounded-xl p-1 mb-2 theme-border-1">
+    <h3 class="font-bold theme-text-1 text-lg mb-3 flex items-center justify-center">
+        <i class="fas fa-comment-dots mr-2"></i>Contact Guidelines
+    </h3>
+    <ul class="bg-white bg-opacity-10 rounded-lg p-3 text-xs theme-text-1 font-mono overflow-x-auto border theme-border-1">
+        <li class="flex items-start">
+            <i class="fas fa-check-circle mr-2 text-xs"></i>
+            <span>Please be respectful in all communications</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check-circle mr-2 text-xs"></i>
+            <span>Business inquiries only via LinkedIn</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check-circle mr-2 text-xs"></i>
+            <span>Allow 48 hours for response</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check-circle mr-2 text-xs"></i>
+            <span>Include clear subject lines</span>
+        </li>
+    </ul>
+</div>
+        
+        <!-- Theme Selector -->
+        <div class="theme-selector">
+    <div class="theme-option w-6 h-6 rounded bg-gradient-to-br from-[#0a192f] to-[#1f3a5f] cursor-pointer active" 
+         data-theme="1" onclick="changeTheme(1)" title="Deep Ocean">
+        <div class="w-full h-full rounded-full flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity">
+            <i class="fas fa-water text-xs"></i>
+        </div>
+    </div>
+    <div class="theme-option w-6 h-6 rounded bg-gradient-to-br from-[#0d9488] to-[#2dd4bf] cursor-pointer" 
+         data-theme="2" onclick="changeTheme(2)" title="Mint Fresh">
+        <div class="w-full h-full rounded-full flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity">
+            <i class="fas fa-leaf text-xs"></i>
+        </div>
+    </div>
+    <div class="theme-option w-6 h-6 rounded bg-gradient-to-br from-[#fb923c] to-[#f97316] cursor-pointer" 
+         data-theme="3" onclick="changeTheme(3)" title="Sunset">
+        <div class="w-full h-full rounded-full flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity">
+            <i class="fas fa-sun text-xs"></i>
+        </div>
+    </div>
+</div>
+        
+        <!-- Footer -->
+        <div class="text-center text-sm opacity-80 mt-10 mb-4">
+    <p>© 2025 <b>BelTree</b>. All rights reserved.</p>
+    <div class="flex justify-center space-x-5 mt-4">
+        <a href="https://github.com/cx48/BelTree" class="social-icon text-lg"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

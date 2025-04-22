@@ -17,7 +17,23 @@
 </script>
 
     <script src="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+    
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      macros: {br: '\\\\'},
+      packages: {'[+]': ['amscd']}
+    },
+  };
+  for (oper of ['id', 'im', 'tr', 'coker', 'Hom', 'End', 'Aut', 'Ext', 'Tor',
+    'Gal', 'Spec', 'Spf']) {
+    MathJax.tex.macros[oper] = '\\operatorname{' + oper + '}';
+  }
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -68,6 +84,8 @@
 <h1>Tags</h1>
 
 <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/olivine/">#olivine</a> 3</span>
+
+<span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/markdown/">#markdown</a> 1</span>
 
 <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/adic-spaces/">#adic-spaces</a> 1</span>
 

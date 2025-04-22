@@ -91,7 +91,7 @@ screenshot-all mode="dark" url=local_base_url:
 screenshot name mode="dark" url=local_base_url:
     {{ browser }} --headless --disable-gpu \
         --system-font-family="Roboto" --screenshot="static/screenshots/temp.png" \
-        --window-size=1360,936 --hide-scrollbars "{{ url }}{{ name }}"
+        --window-size=1360,936 --hide-scrollbars "{{ url }}{{ name }}/"
     magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.webp"
     rm -f static/screenshots/temp.png
 
