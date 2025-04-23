@@ -75,10 +75,11 @@
     
 <script>
   const p = window.location.pathname;
-  const n = p.substring(p.indexOf("/demo/")+6).indexOf("/");
-  if (n>0 && !p.endsWith("404.html")) {
+  const b = p.indexOf("/demo/");
+  const n = b > -1 ? p.substring(b+6).indexOf("/") : -1;
+  if (n > 0 && !p.endsWith("404.html")) {
   window.location.replace(
-    window.location.href.replace(p.substring(0, 6+n), p.substring(0, 6+n) + "/404.html?err="));
+    window.location.href.replace(p.substring(0, b+6+n), p.substring(0, b+6+n) + "/404.html?err="));
   }
 </script>
 <h1 class="absolute inset-x-8 bottom-20 top-0 flex items-center justify-center text-6xl">404: Page not found</h1>
