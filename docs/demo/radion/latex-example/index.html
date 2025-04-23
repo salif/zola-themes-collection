@@ -241,18 +241,17 @@ $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p>
             <!-- Render the rest of the content after removing the summary portion -->
             
 <span id="continue-reading"></span>
-<p>Some fancy math thingy:</p>
+<p>We can show LaTeX display math by using either the <code>\\[ ... \\]</code> or <code>$$ ... $$</code>
+environments:</p>
 <p>$$
 \frac{d}{dx} \left( \int_{0}^{x} f(u) , du \right) = f(x)
 $$</p>
-<p>$$
+<p>\[
 \frac{d}{dx} \left( \int_{g(x)}^{h(x)} f(u) , du \right) = f(h(x)) h'(x) -
 f(g(x)) g'(x)
-$$</p>
-<p>$$
-\texttt{Isn't that cool?!}
-$$</p>
-<hr />
+\]</p>
+<p>LaTeX can be written inline as well using the <code>\\( ... \\)</code> or <code>$ ... $</code>
+environments: $x = 25$ or \(y = \pi\)</p>
 <h2 id="another-cool-thingy">Another cool thingy</h2>
 <p>We will prove this statement by induction on $h$.</p>
 <h3 id="base-case-h-0">Base Case: $h = 0$</h3>

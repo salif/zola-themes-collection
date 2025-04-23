@@ -73,6 +73,14 @@
   <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
     max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
     
+<script>
+  const p = window.location.pathname;
+  const n = p.substring(p.indexOf("/demo/")+6).indexOf("/");
+  if (n>0 && !p.endsWith("404.html")) {
+  window.location.replace(
+    window.location.href.replace(p.substring(0, 6+n), p.substring(0, 6+n) + "/404.html?err="));
+  }
+</script>
 <h1 class="absolute inset-x-8 bottom-20 top-0 flex items-center justify-center text-6xl">404: Page not found</h1>
 
   </main>

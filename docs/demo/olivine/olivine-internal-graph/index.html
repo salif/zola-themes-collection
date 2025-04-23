@@ -51,6 +51,11 @@
 <span> / </span>
 Graph
 </div>
+<noscript><style>#search{display:none;}</style></noscript>
+<div id="search">
+  <input id="search-input" type="search" placeholder="Search..."/>
+  <div id="search-results"></div>
+</div>
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
 
@@ -107,14 +112,14 @@ let cy_elements = [
 { data: { source: '/olivine-internal-sitemap/', target: '/' } },
 { data: { id: '/olivine-internal-graph/', type: 'page', name: 'Graph' } },
 { data: { source: '/olivine-internal-graph/', target: '/' } },
-{ data: { id: '/math/', type: 'section', name: 'Mathematics' } },
-{ data: { id: '/math/olivine/', type: 'page', name: 'The olivine spectrum' } },
-{ data: { source: '/math/olivine/', target: '/math/' } },
-{ data: { source: '/math/', target: '/' } },
 { data: { id: '/journal/', type: 'section', name: 'Journal' } },
 { data: { id: '/journal/2023-08-03/', type: 'page', name: '2023-08-03' } },
 { data: { source: '/journal/2023-08-03/', target: '/journal/' } },
 { data: { source: '/journal/', target: '/' } },
+{ data: { id: '/math/', type: 'section', name: 'Mathematics' } },
+{ data: { id: '/math/olivine/', type: 'page', name: 'The olivine spectrum' } },
+{ data: { source: '/math/olivine/', target: '/math/' } },
+{ data: { source: '/math/', target: '/' } },
 { data: { id: '/docs/', type: 'section', name: 'Documentation' } },
 { data: { source: 'docs/02-styles-demo/', target: '/docs/' } },
 { data: { id: '/docs/01-intro/', type: 'page', name: 'Getting started' } },
@@ -197,4 +202,9 @@ cy.on('tap', 'node', function(evt){
       </main>
     </div>
   </body>
+  
+  <script src="https://salif.github.io/zola-themes-collection/demo/olivine/search_index.en.js"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/olivine/elasticlunr.min.js"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/olivine/search.js"></script>
+  
 </html>
