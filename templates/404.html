@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block main %}
+<script>
+  const p = window.location.pathname;
+  const n = p.substring(p.indexOf("/demo/")+6).indexOf("/");
+  if (n>0 && !p.endsWith("404.html")) {
+  window.location.replace(
+    window.location.href.replace(p.substring(0, 6+n), p.substring(0, 6+n) + "/404.html?err="));
+  }
+</script>
+<h1 class="absolute inset-x-8 bottom-20 top-0 flex items-center justify-center text-6xl">{{
+  m_i18n::tr(key=`error_not_found`, lk=g_lang_k, d=g_trans_d) }}</h1>
+{% endblock main %}
