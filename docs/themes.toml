@@ -20,7 +20,7 @@ git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-
 ```sh
 git clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "zola-bearblog"
 ```
@@ -35,6 +35,14 @@ theme = "zola-bearblog"
 - **Min Zola version**: 0.4.0
 - **Original**: <https://github.com/janraasch/hugo-bearblog/>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zola-bearblog.webp"
+  dark = "./screenshots/dark-zola-bearblog.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Bear theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -76,7 +84,7 @@ git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill
 ```sh
 git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "duckquill"
 ```
@@ -90,6 +98,14 @@ theme = "duckquill"
 - **Main Live Preview**: <https://duckquill.daudix.one>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-duckquill.webp"
+  dark = "./screenshots/dark-duckquill.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Duckquill theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -131,7 +147,7 @@ git submodule add https://codeberg.org/salif/linkita.git themes/linkita
 ```sh
 git clone https://codeberg.org/salif/linkita.git themes/linkita
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "linkita"
 ```
@@ -147,9 +163,17 @@ theme = "linkita"
 - **Original**: <https://github.com/st1020/kita>
 </details>"""
 
+  [project.screenshot]
+  light = "./screenshots/light-linkita.webp"
+  dark = "./screenshots/dark-linkita.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Linkita theme"
+
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/linkita/"
+  url = "https://salif.github.io/zola-themes-collection/demo/linkita/en/"
 
   [[project.links]]
   name = "Repository"
@@ -187,7 +211,7 @@ git submodule add https://github.com/welpo/tabi.git themes/tabi
 ```sh
 git clone https://github.com/welpo/tabi.git themes/tabi
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "tabi"
 ```
@@ -201,6 +225,14 @@ theme = "tabi"
 - **Main Live Preview**: <https://welpo.github.io/tabi>
 - **Min Zola version**: 0.17.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-tabi.webp"
+  dark = "./screenshots/dark-tabi.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the tabi theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -242,7 +274,7 @@ git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchl
 ```sh
 git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "researchlab"
 ```
@@ -256,6 +288,14 @@ theme = "researchlab"
 - **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
 - **Min Zola version**: 0.19.2
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-researchlab.webp"
+  dark = "./screenshots/dark-researchlab.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the researchlab theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -297,7 +337,7 @@ git submodule add https://codeberg.org/winterstein/zola-theme-daisy.git themes/d
 ```sh
 git clone https://codeberg.org/winterstein/zola-theme-daisy.git themes/daisy
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "daisy"
 ```
@@ -311,6 +351,14 @@ theme = "daisy"
 - **Main Live Preview**: <https://zola-daisy.winterstein.biz>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-daisy.webp"
+  dark = "./screenshots/dark-daisy.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Daisy theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -352,7 +400,7 @@ git submodule add https://github.com/awinterstein/zola-theme-project-portfolio.g
 ```sh
 git clone https://github.com/awinterstein/zola-theme-project-portfolio.git themes/project-portfolio
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "project-portfolio"
 ```
@@ -366,6 +414,14 @@ theme = "project-portfolio"
 - **Main Live Preview**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-project-portfolio.webp"
+  dark = "./screenshots/dark-project-portfolio.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Project Portfolio theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -407,7 +463,7 @@ git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duck
 ```sh
 git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "duckling"
 ```
@@ -421,6 +477,14 @@ theme = "duckling"
 - **Main Live Preview**: <https://duckling.aparoksha.dev>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-duckling.webp"
+  dark = "./screenshots/dark-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Duckling theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -462,7 +526,7 @@ git submodule add https://github.com/micahkepe/radion.git themes/radion
 ```sh
 git clone https://github.com/micahkepe/radion.git themes/radion
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "radion"
 ```
@@ -476,6 +540,14 @@ theme = "radion"
 - **Main Live Preview**: <https://micahkepe.com/radion/>
 - **Min Zola version**: 0.19.2
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-radion.webp"
+  dark = "./screenshots/dark-radion.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the radion theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -517,7 +589,7 @@ git submodule add https://github.com/francoposa/zola-bearplusplus.git themes/bea
 ```sh
 git clone https://github.com/francoposa/zola-bearplusplus.git themes/bearplus
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "bearplus"
 ```
@@ -532,6 +604,14 @@ theme = "bearplus"
 - **Min Zola version**: 0.17.2
 - **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-bearplus.webp"
+  dark = "./screenshots/dark-bearplus.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Bear+ theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -573,7 +653,7 @@ git submodule add https://github.com/isunjn/serene.git themes/serene
 ```sh
 git clone https://github.com/isunjn/serene.git themes/serene
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "serene"
 ```
@@ -587,6 +667,14 @@ theme = "serene"
 - **Main Live Preview**: <https://serene-demo.pages.dev>
 - **Min Zola version**: 0.20.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-serene.webp"
+  dark = "./screenshots/dark-serene.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the serene theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -628,7 +716,7 @@ git submodule add https://github.com/InputUsername/zola-hook.git themes/hook
 ```sh
 git clone https://github.com/InputUsername/zola-hook.git themes/hook
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "hook"
 ```
@@ -642,6 +730,14 @@ theme = "hook"
 - **Main Live Preview**: <https://inputusername.github.io/zola-hook/>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-hook.webp"
+  dark = "./screenshots/dark-hook.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Hook theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -683,7 +779,7 @@ git submodule add https://github.com/not-matthias/apollo.git themes/apollo
 ```sh
 git clone https://github.com/not-matthias/apollo.git themes/apollo
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "apollo"
 ```
@@ -697,6 +793,14 @@ theme = "apollo"
 - **Main Live Preview**: <https://not-matthias.github.io/apollo>
 - **Min Zola version**: 0.14.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-apollo.webp"
+  dark = "./screenshots/dark-apollo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the apollo theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -738,7 +842,7 @@ git submodule add https://github.com/st1020/kita.git themes/kita
 ```sh
 git clone https://github.com/st1020/kita.git themes/kita
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "kita"
 ```
@@ -753,6 +857,14 @@ theme = "kita"
 - **Min Zola version**: 0.17.0
 - **Original**: <https://github.com/nanxiaobei/hugo-paper>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-kita.webp"
+  dark = "./screenshots/dark-kita.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Kita theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -794,7 +906,7 @@ git submodule add https://github.com/cydave/zola-theme-papermod.git themes/paper
 ```sh
 git clone https://github.com/cydave/zola-theme-papermod.git themes/papermod
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "papermod"
 ```
@@ -809,6 +921,14 @@ theme = "papermod"
 - **Min Zola version**: 0.4.0
 - **Original**: <https://github.com/adityatelange/hugo-PaperMod>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-papermod.webp"
+  dark = "./screenshots/dark-papermod.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the PaperMod theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -850,7 +970,7 @@ git submodule add https://github.com/edwardzcn-decade/cela.git themes/cela
 ```sh
 git clone https://github.com/edwardzcn-decade/cela.git themes/cela
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "cela"
 ```
@@ -862,6 +982,14 @@ theme = "cela"
 - **Homepage**: <https://github.com/edwardzcn-decade/cela>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-cela.webp"
+  dark = "./screenshots/dark-cela.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the cela theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -903,7 +1031,7 @@ git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
 ```sh
 git clone https://github.com/semanticdata/mabuya.git themes/mabuya
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "mabuya"
 ```
@@ -918,6 +1046,14 @@ theme = "mabuya"
 - **Min Zola version**: 0.18.0
 - **Original**: <https://github.com/chesterhow/tale>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-mabuya.webp"
+  dark = "./screenshots/dark-mabuya.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Mabuya theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -959,7 +1095,7 @@ git submodule add https://github.com/jieiku/abridge.git themes/abridge
 ```sh
 git clone https://github.com/jieiku/abridge.git themes/abridge
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "abridge"
 ```
@@ -973,6 +1109,14 @@ theme = "abridge"
 - **Main Live Preview**: <https://abridge.pages.dev/>
 - **Min Zola version**: 0.19.1
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-abridge.webp"
+  dark = "./screenshots/dark-abridge.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the abridge theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1014,7 +1158,7 @@ git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
 ```sh
 git clone https://github.com/en9inerd/zola-hacker.git themes/hacker
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "hacker"
 ```
@@ -1029,6 +1173,14 @@ theme = "hacker"
 - **Min Zola version**: 0.19.1
 - **Original**: <https://github.com/pages-themes/hacker>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-hacker.webp"
+  dark = "./screenshots/dark-hacker.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the zola-hacker theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1070,7 +1222,7 @@ git submodule add https://github.com/un1970ix/ski.git themes/ski
 ```sh
 git clone https://github.com/un1970ix/ski.git themes/ski
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "ski"
 ```
@@ -1084,6 +1236,14 @@ theme = "ski"
 - **Main Live Preview**: <https://ski.un1970ix.com>
 - **Min Zola version**: 0.19.2
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-ski.webp"
+  dark = "./screenshots/dark-ski.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the ski theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1125,7 +1285,7 @@ git submodule add https://github.com/devendrn/devnzt.git themes/devnzt
 ```sh
 git clone https://github.com/devendrn/devnzt.git themes/devnzt
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "devnzt"
 ```
@@ -1138,6 +1298,14 @@ theme = "devnzt"
 - **Homepage**: <https://github.com/devendrn/devnzt/>
 - **Min Zola version**: 0.18.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-devnzt.webp"
+  dark = "./screenshots/dark-devnzt.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the devnzt theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1179,7 +1347,7 @@ git submodule add https://github.com/aterenin/academic-paper.git themes/academic
 ```sh
 git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "academic-paper"
 ```
@@ -1193,6 +1361,14 @@ theme = "academic-paper"
 - **Main Live Preview**: <https://aterenin.github.io/academic-paper>
 - **Min Zola version**: 0.18.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-academic-paper.webp"
+  dark = "./screenshots/dark-academic-paper.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Academic Paper theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1234,7 +1410,7 @@ git submodule add https://github.com/aterenin/academic-workshop.git themes/acade
 ```sh
 git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "academic-workshop"
 ```
@@ -1248,6 +1424,14 @@ theme = "academic-workshop"
 - **Main Live Preview**: <https://aterenin.github.io/academic-workshop>
 - **Min Zola version**: 0.18.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-academic-workshop.webp"
+  dark = "./screenshots/dark-academic-workshop.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Academic Workshop theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1289,7 +1473,7 @@ git submodule add https://github.com/cx48/BelResume.git themes/BelResume
 ```sh
 git clone https://github.com/cx48/BelResume.git themes/BelResume
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "BelResume"
 ```
@@ -1303,6 +1487,14 @@ theme = "BelResume"
 - **Main Live Preview**: <https://cx48.github.io/BelResume/>
 - **Min Zola version**: 0.20.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-BelResume.webp"
+  dark = "./screenshots/dark-BelResume.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the BelResume theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1344,7 +1536,7 @@ git submodule add https://github.com/cx48/BelTree.git themes/BelTree
 ```sh
 git clone https://github.com/cx48/BelTree.git themes/BelTree
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "BelTree"
 ```
@@ -1358,6 +1550,14 @@ theme = "BelTree"
 - **Main Live Preview**: <https://cx48.github.io/BelTree>
 - **Min Zola version**: 0.20.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-BelTree.webp"
+  dark = "./screenshots/dark-BelTree.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the BelTree theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1399,7 +1599,7 @@ git submodule add https://github.com/getzola/book.git themes/book
 ```sh
 git clone https://github.com/getzola/book.git themes/book
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "book"
 ```
@@ -1413,6 +1613,14 @@ theme = "book"
 - **Main Live Preview**: <https://getzola.github.io/book/>
 - **Min Zola version**: 0.17.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-book.webp"
+  dark = "./screenshots/dark-book.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the book theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1454,7 +1662,7 @@ git submodule add https://github.com/semanticdata/zola-minimal.git themes/zola-m
 ```sh
 git clone https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "zola-minimal"
 ```
@@ -1469,6 +1677,14 @@ theme = "zola-minimal"
 - **Min Zola version**: 0.20.0
 - **Original**: <https://github.com/pages-themes/minimal>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zola-minimal.webp"
+  dark = "./screenshots/dark-zola-minimal.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Minimal theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1510,7 +1726,7 @@ git submodule add https://github.com/inhzus/zola-futu.git themes/zola-futu
 ```sh
 git clone https://github.com/inhzus/zola-futu.git themes/zola-futu
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "zola-futu"
 ```
@@ -1524,6 +1740,14 @@ theme = "zola-futu"
 - **Min Zola version**: 0.20.0
 - **Original**: <https://github.com/yuanji-dev/futu>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zola-futu.webp"
+  dark = "./screenshots/dark-zola-futu.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the futu theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1574,7 +1798,7 @@ git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
 ```sh
 git clone https://github.com/harrymkt/zluinav.git themes/zluinav
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "zluinav"
 ```
@@ -1588,6 +1812,14 @@ theme = "zluinav"
 - **Main Live Preview**: <https://harrymkt.github.io/zluinav>
 - **Min Zola version**: 0.19.2
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zluinav.webp"
+  dark = "./screenshots/dark-zluinav.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the UI Navigation theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1629,7 +1861,7 @@ git submodule add https://github.com/semanticdata/zola-sandbox.git themes/sandbo
 ```sh
 git clone https://github.com/semanticdata/zola-sandbox.git themes/sandbox
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "sandbox"
 ```
@@ -1643,6 +1875,14 @@ theme = "sandbox"
 - **Main Live Preview**: <https://zola-sandbox.vercel.app/>
 - **Min Zola version**: 0.18.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-sandbox.webp"
+  dark = "./screenshots/dark-sandbox.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Sandbox theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1684,7 +1924,7 @@ git submodule add https://github.com/longfangsong/anatole-zola.git themes/anatol
 ```sh
 git clone https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "anatole-zola"
 ```
@@ -1699,6 +1939,14 @@ theme = "anatole-zola"
 - **Min Zola version**: 0.4.0
 - **Original**: <https://github.com/hi-caicai/farbox-theme-Anatole>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-anatole-zola.webp"
+  dark = "./screenshots/dark-anatole-zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the anatole-zola theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1740,7 +1988,7 @@ git submodule add https://github.com/DenysVuika/zola-silk.git themes/silk
 ```sh
 git clone https://github.com/DenysVuika/zola-silk.git themes/silk
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "silk"
 ```
@@ -1754,6 +2002,14 @@ theme = "silk"
 - **Min Zola version**: 0.19.0
 - **Original**: <https://github.com/lukehsiao/zola-pickles>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-silk.webp"
+  dark = "./screenshots/dark-silk.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the silk theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1795,7 +2051,7 @@ git submodule add https://github.com/eatradish/Seje2.git themes/Seje2
 ```sh
 git clone https://github.com/eatradish/Seje2.git themes/Seje2
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "Seje2"
 ```
@@ -1810,6 +2066,14 @@ theme = "Seje2"
 - **Min Zola version**: 0.15.0
 - **Original**: <https://www.github.com/mdo/hyde>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-Seje2.webp"
+  dark = "./screenshots/dark-Seje2.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Seje2 theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1851,7 +2115,7 @@ git submodule add https://codeberg.org/daudix/ametrine.git themes/ametrine
 ```sh
 git clone https://codeberg.org/daudix/ametrine.git themes/ametrine
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "ametrine"
 ```
@@ -1865,6 +2129,14 @@ theme = "ametrine"
 - **Main Live Preview**: <https://ametrine.daudix.one>
 - **Min Zola version**: 0.19.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-ametrine.webp"
+  dark = "./screenshots/dark-ametrine.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Ametrine theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1906,7 +2178,7 @@ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/t
 ```sh
 git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "terminimal"
 ```
@@ -1921,6 +2193,14 @@ theme = "terminimal"
 - **Min Zola version**: 0.11.0
 - **Original**: <https://github.com/panr/hugo-theme-terminal>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-terminimal.webp"
+  dark = "./screenshots/dark-terminimal.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the terminimal theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -1962,7 +2242,7 @@ git submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
 ```sh
 git clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "oceanic-zen"
 ```
@@ -1976,6 +2256,14 @@ theme = "oceanic-zen"
 - **Main Live Preview**: <https://oceanic-zen.netlify.app>
 - **Min Zola version**: 0.12.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-oceanic-zen.webp"
+  dark = "./screenshots/dark-oceanic-zen.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Oceanic Zen theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -2017,7 +2305,7 @@ git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
 ```sh
 git clone https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "olivine"
 ```
@@ -2031,6 +2319,14 @@ theme = "olivine"
 - **Main Live Preview**: <https://dongryul-kim.github.io/olivine/>
 - **Min Zola version**: 0.17.2
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-olivine.webp"
+  dark = "./screenshots/dark-olivine.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Olivine theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -2072,7 +2368,7 @@ git submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood
 ```sh
 git clone https://github.com/CSUwangj/DogFood.git themes/DogFood
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "DogFood"
 ```
@@ -2085,6 +2381,14 @@ theme = "DogFood"
 - **Homepage**: <https://github.com/CSUwangj/DogFood>
 - **Min Zola version**: 0.4.0
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-DogFood.webp"
+  dark = "./screenshots/dark-DogFood.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the DogFood theme"
 
   [[project.links]]
   name = "Live Preview"
@@ -2103,61 +2407,6 @@ theme = "DogFood"
   name = "Info"
   url = "#info-DogFood"
   js = "const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "zola-devin"
-name = "zola-devin"
-desc = "A Zola theme powered by Tailwind CSS and built by Devin AI"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-devin'></summary>
-
-### Installation{#h-install-zola-devin}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/seankearney/zola-devin.git themes/zola-devin
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/seankearney/zola-devin.git themes/zola-devin
-```
-2. Set theme in your `config.toml`
-```toml
-theme = "zola-devin"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-devin'></summary>
-
-### Info{#h-info-zola-devin}
-- **Author**: [Sean Kearney](https://github.com/seankearney/zola-devin)
-- **License**: MIT
-- **Homepage**: <https://github.com/seankearney/zola-devin>
-- **Main Live Preview**: <https://seankearney.github.io/zola-devin/>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-devin/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/seankearney/zola-devin"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zola-devin"
-  js = "const b=document.getElementById('install-zola-devin').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zola-devin"
-  js = "const b=document.getElementById('info-zola-devin').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "concrete-css-zola"
@@ -2181,7 +2430,7 @@ git submodule add https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/
 ```sh
 git clone https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
 ```
-2. Set theme in your `config.toml`
+2. Enable the theme in your `config.toml`
 ```toml
 theme = "concrete-css-zola"
 ```
@@ -2192,6 +2441,14 @@ theme = "concrete-css-zola"
 - **License**: undefined
 - **Homepage**: <https://codeberg.org/Pontoporeia/concrete-css-zola>
 </details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-concrete-css-zola.webp"
+  dark = "./screenshots/dark-concrete-css-zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the concrete-css-zola theme"
 
   [[project.links]]
   name = "Live Preview"

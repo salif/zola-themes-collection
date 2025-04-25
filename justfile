@@ -6,6 +6,8 @@ demo_base_url := "https://salif.github.io/zola-themes-collection/demo/"
 local_base_url := "http://127.0.0.1:1111/demo/"
 just := just_executable() + " --justfile '" + justfile() + "'"
 browser := "chromium"
+font := "Roboto"
+ext := "webp"
 scripts := justfile_directory() / "scripts"
 export PATH := scripts / "node_modules" / ".bin" + ":" + env_var('PATH')
 export NODE_PATH := scripts / "node_modules"
@@ -90,9 +92,9 @@ screenshot-all mode="dark" url=local_base_url:
 [group('screenshot')]
 screenshot name mode="dark" url=local_base_url:
     {{ browser }} --headless --disable-gpu \
-        --system-font-family="Roboto" --screenshot="static/screenshots/temp.png" \
-        --window-size=1360,936 --hide-scrollbars "{{ url }}{{ name }}/"
-    magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.webp"
+        --system-font-family="{{ font }}" --screenshot="static/screenshots/temp.png" \
+        --window-size=1360,936 --hide-scrollbars "{{ url }}$(test 'linkita' = '{{ name }}' && printf '{{ name }}/en/' || printf '{{ name }}/')"
+    magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.{{ ext }}"
     rm -f static/screenshots/temp.png
 
 [group('screenshot')]
@@ -104,10 +106,10 @@ screenshots-to-fix:
     const missing = []
     for (const demo of demos) {
         const themeName = path.basename(demo)
-        if (!(await fs.pathExists(path.join("static", "screenshots", `light-${themeName}.webp`)))) {
+        if (!(await fs.pathExists(path.join("static", "screenshots", `light-${themeName}.{{ ext }}`)))) {
             missing.push(`  light for ${themeName}`)
         }
-        if (!(await fs.pathExists(path.join("static", "screenshots", `dark-${themeName}.webp`)))) {
+        if (!(await fs.pathExists(path.join("static", "screenshots", `dark-${themeName}.{{ ext }}`)))) {
             missing.push(`  dark for ${themeName}`)
         }
     }
@@ -115,12 +117,12 @@ screenshots-to-fix:
     const toDelete = []
     for (const screenshotPath of screenshots) {
         const screenshot = path.basename(screenshotPath)
-        if (screenshot.startsWith("light-") && screenshot.endsWith(".webp")) {
+        if (screenshot.startsWith("light-") && screenshot.endsWith(".{{ ext }}")) {
             const demo = screenshot.substring(6, screenshot.length-5)
             if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
                 toDelete.push(screenshot)
             }
-        } else if (screenshot.startsWith("dark-") && screenshot.endsWith(".webp")) {
+        } else if (screenshot.startsWith("dark-") && screenshot.endsWith(".{{ ext }}")) {
             const demo = screenshot.substring(5, screenshot.length-5)
             if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
                 toDelete.push(screenshot)

@@ -159,7 +159,7 @@ git submodule add ${themeInfo.clone} themes/${themeName}
 \`\`\`sh
 git clone ${themeInfo.clone} themes/${themeName}
 \`\`\`
-2. Set theme in your \`config.toml\`
+2. Enable the theme in your \`config.toml\`
 \`\`\`toml
 theme = "${themeName}"
 \`\`\`
@@ -177,9 +177,17 @@ theme = "${themeName}"
 		name: themeInfo.name,
 		desc: themeInfo.description,
 		tags: themeInfo.tags,
+		screenshot: {
+			light: `./screenshots/light-${themeName}.webp`,
+			dark: `./screenshots/dark-${themeName}.webp`,
+			type: "image/webp",
+			width: "1360",
+			height: "765",
+			alt: `Screenshot of the ${themeInfo.name} theme`,
+		},
 		details: themeDetails,
 		links: [
-			{ name: "Live Preview", url: new URL(themeName + "/", baseURL).href },
+			{ name: "Live Preview", url: new URL(themeName + (themeName === "linkita" ? "/en/" : "/"), baseURL).href },
 			{ name: "Repository", url: themeInfo.repo },
 			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName) },
 			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },

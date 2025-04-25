@@ -54,6 +54,7 @@
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
 - [cblanken-terminimal](https://github.com/cblanken/zola-theme-terminimal): 172 commits
 - [anpu-zola-theme](https://github.com/zbrox/anpu-zola-theme): 30 commits
+- [zola-devin](https://github.com/seankearney/zola-devin): 36 commits
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

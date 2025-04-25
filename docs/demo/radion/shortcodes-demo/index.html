@@ -243,6 +243,9 @@ your posts more exciting.</p>
 <p>Here are some examples:</p>
 <h1 id="gif-suport">GIF-Suport</h1>
 <p>Level up your posts with GIFs!</p>
+<p>$$
+\texttt{{{ gif(sources=["path/to/file"], width=[1-100], caption=[""]) }}}
+$$</p>
 <div
   style="width: 100%; max-width: 50%; margin: 0 auto; text-align: center;">
   <video autoplay loop muted playsinline
@@ -251,20 +254,33 @@ your posts more exciting.</p>
     Your browser doesn't support the video tag, which I use in place of .gifs, and/or the video formats in use here
     – sorry!
   </video>
+  
 </div>
 <h1 id="fancy-notes">Fancy Notes</h1>
-<div class="note-container" style="border:  1px solid #e0e0e0">
-  
-    
+<p>$$
+\texttt{{{ note(body="...", header=["" | "Note"], center=[true/false | false]) }}}
+$$</p>
+<div class="note-container">
+  <details open class="note-details">
+    <summary class="note-header">
+      
+      <div class="note-icon">
+        <p>Note</p>
 
+      </div>
+      
+    </summary>
     <div class="note-content">
-      <p><strong>Note:</strong> Some really insightful note here.</p>
+      <p>Some really insightful note here.</p>
 <p>$$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} $$</p>
 
     </div>
-    
-  </div>
+  </details>
+</div>
 <h1 id="youtube-video-embedding">YouTube Video Embedding</h1>
+<p>$$
+\texttt{{{ youtube(id="youtube-id", width=[1-100]) }}}
+$$</p>
 <div class="responsive-iframe"
   style="width: 100%; max-width: 80%; margin: 0 auto; text-align: center;">
   <iframe src="https://www.youtube.com/embed/ym3y13nA3ew" webkitallowfullscreen
@@ -272,6 +288,9 @@ your posts more exciting.</p>
   </iframe>
 </div>
 <h1 id="audio-file-embedding">Audio File Embedding</h1>
+<p>$$
+\texttt{{{ audio(source="path/to/file") }}}
+$$</p>
 <div
   style="width: 100%; max-width: 100%; margin: 0 auto; text-align: center;">
 
@@ -287,6 +306,8 @@ your posts more exciting.</p>
 <blockquote>
 <p>If you're still falling for this, I don't know what to tell you.</p>
 </blockquote>
+<p>$$
+$$</p>
 
 
 
