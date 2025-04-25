@@ -24,12 +24,12 @@
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ name }}</h2>
   <div class="not-prose">
     <picture>
-      <source srcset="./screenshots/light-{{ project.theme }}.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-{{ project.theme }}.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-{{ project.theme }}.webp"
-        alt="Screenshot of the {{ name }} theme" width="1360" height="765" />
+      <source srcset="{{ project.screenshot.light | escape_xml | safe }}" type="{{ project.screenshot.type | escape_xml | safe }}"
+        media="(prefers-color-scheme: light)" width="{{ project.screenshot.width }}" height="{{ project.screenshot.height }}" />
+      <source srcset="{{ project.screenshot.dark | escape_xml | safe }}" type="{{ project.screenshot.type | escape_xml | safe }}"
+        media="(prefers-color-scheme: dark)" width="{{ project.screenshot.width }}" height="{{ project.screenshot.height }}" />
+      <img src="{{ project.screenshot.light | escape_xml | safe }}"
+        alt="{{ project.screenshot.alt | escape_xml | safe }}" width="{{ project.screenshot.width }}" height="{{ project.screenshot.height }}" />
     </picture>
     <p>{{ desc }}</p>
   </div>
