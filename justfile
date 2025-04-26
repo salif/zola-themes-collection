@@ -91,11 +91,11 @@ screenshot-all mode="dark" url=local_base_url:
 
 [group('screenshot')]
 screenshot name mode="dark" url=local_base_url:
-    {{ browser }} --headless --disable-gpu \
-        --system-font-family="{{ font }}" --screenshot="static/screenshots/temp.png" \
-        --window-size=1360,936 --hide-scrollbars "{{ url }}$(test 'linkita' = '{{ name }}' && printf '{{ name }}/en/' || printf '{{ name }}/')"
-    magick static/screenshots/temp.png -gravity north -crop '1360x765+0+0' "static/screenshots/{{ mode }}-{{ name }}.{{ ext }}"
-    rm -f static/screenshots/temp.png
+    {{ browser }} --headless --screenshot=/tmp/ztc.webp \
+        --hide-scrollbars --system-font-family="{{ font }}" --window-size=1360,888 \
+        "{{ url }}$(test 'linkita' = '{{ name }}' && printf '{{ name }}/en/' || printf '{{ name }}/')"
+    magick /tmp/ztc.webp -gravity north -crop "1360x765+0+0" "static/screenshots/{{ mode }}-{{ name }}.{{ ext }}"
+    rm -f /tmp/ztc.webp
 
 [group('screenshot')]
 [script('zx')]
