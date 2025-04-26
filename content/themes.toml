@@ -63,69 +63,6 @@ theme = "zola-bearblog"
   js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "duckquill"
-name = "Duckquill"
-desc = "Modern, pretty, and clean theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
-
-### Installation{#h-install-duckquill}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "duckquill"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
-
-### Info{#h-info-duckquill}
-- **Author**: [David Lapshin](https://daudix.one)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/daudix/duckquill>
-- **Main Live Preview**: <https://duckquill.daudix.one>
-- **Min Zola version**: 0.19.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-duckquill.webp"
-  dark = "./screenshots/dark-duckquill.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Duckquill theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/duckquill/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/daudix/duckquill"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-duckquill"
-  js = "const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-duckquill"
-  js = "const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
 theme = "linkita"
 name = "Linkita"
 desc = "A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly."
@@ -190,6 +127,132 @@ theme = "linkita"
   js = "const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
+theme = "duckquill"
+name = "Duckquill"
+desc = "Modern, pretty, and clean theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
+
+### Installation{#h-install-duckquill}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "duckquill"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
+
+### Info{#h-info-duckquill}
+- **Author**: [David Lapshin](https://daudix.one)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/daudix/duckquill>
+- **Main Live Preview**: <https://duckquill.daudix.one>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-duckquill.webp"
+  dark = "./screenshots/dark-duckquill.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Duckquill theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/duckquill/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/daudix/duckquill"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-duckquill"
+  js = "const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-duckquill"
+  js = "const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
+theme = "duckling"
+name = "Duckling"
+desc = "Feature-rich and modern theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckling'></summary>
+
+### Installation{#h-install-duckling}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "duckling"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
+
+### Info{#h-info-duckling}
+- **Author**: [david-swift](https://david.aparoksha.dev)
+- **License**: MIT
+- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
+- **Main Live Preview**: <https://duckling.aparoksha.dev>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-duckling.webp"
+  dark = "./screenshots/dark-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Duckling theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/duckling/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://git.aparoksha.dev/david-swift/duckling"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-duckling"
+  js = "const b=document.getElementById('install-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-duckling"
+  js = "const b=document.getElementById('info-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+
+[[project]]
 theme = "tabi"
 name = "tabi"
 desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
@@ -251,69 +314,6 @@ theme = "tabi"
   name = "Info"
   url = "#info-tabi"
   js = "const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "researchlab"
-name = "researchlab"
-desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
-
-### Installation{#h-install-researchlab}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "researchlab"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
-
-### Info{#h-info-researchlab}
-- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/plaublin/researchlab>
-- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-researchlab.webp"
-  dark = "./screenshots/dark-researchlab.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the researchlab theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/plaublin/researchlab"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-researchlab"
-  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-researchlab"
-  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "daisy"
@@ -442,14 +442,14 @@ theme = "project-portfolio"
   js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
-theme = "duckling"
-name = "Duckling"
-desc = "Feature-rich and modern theme"
+theme = "researchlab"
+name = "researchlab"
+desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckling'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
 
-### Installation{#h-install-duckling}
+### Installation{#h-install-researchlab}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -457,52 +457,52 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "duckling"
+theme = "researchlab"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
 
-### Info{#h-info-duckling}
-- **Author**: [david-swift](https://david.aparoksha.dev)
+### Info{#h-info-researchlab}
+- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
 - **License**: MIT
-- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
-- **Main Live Preview**: <https://duckling.aparoksha.dev>
-- **Min Zola version**: 0.19.0
+- **Homepage**: <https://codeberg.org/plaublin/researchlab>
+- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
+- **Min Zola version**: 0.19.2
 </details>"""
 
   [project.screenshot]
-  light = "./screenshots/light-duckling.webp"
-  dark = "./screenshots/dark-duckling.webp"
+  light = "./screenshots/light-researchlab.webp"
+  dark = "./screenshots/dark-researchlab.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Duckling theme"
+  alt = "Screenshot of the researchlab theme"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/duckling/"
+  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://git.aparoksha.dev/david-swift/duckling"
+  url = "https://codeberg.org/plaublin/researchlab"
 
   [[project.links]]
   name = "Install"
-  url = "#install-duckling"
-  js = "const b=document.getElementById('install-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-researchlab"
+  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
   [[project.links]]
   name = "Info"
-  url = "#info-duckling"
-  js = "const b=document.getElementById('info-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-researchlab"
+  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
 
 [[project]]
 theme = "radion"
@@ -1455,7 +1455,7 @@ theme = "academic-workshop"
 theme = "BelResume"
 name = "BelResume"
 desc = "A beautiful, modern, and minimal single-page resume site"
-tags = [ "minimal", "resume" ]
+tags = [ ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelResume'></summary>
 
@@ -1518,7 +1518,7 @@ theme = "BelResume"
 theme = "BelTree"
 name = "BelTree"
 desc = "A clean and elegant Linktree alternative that offers customizable links and a user-friendly design"
-tags = [ "minimal" ]
+tags = [ ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelTree'></summary>
 
@@ -2407,63 +2407,3 @@ theme = "DogFood"
   name = "Info"
   url = "#info-DogFood"
   js = "const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-[[project]]
-theme = "concrete-css-zola"
-name = "concrete-css-zola"
-desc = ""
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-concrete-css-zola'></summary>
-
-### Installation{#h-install-concrete-css-zola}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/Pontoporeia/concrete-css-zola.git themes/concrete-css-zola
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "concrete-css-zola"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-concrete-css-zola'></summary>
-
-### Info{#h-info-concrete-css-zola}
-- **License**: undefined
-- **Homepage**: <https://codeberg.org/Pontoporeia/concrete-css-zola>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-concrete-css-zola.webp"
-  dark = "./screenshots/dark-concrete-css-zola.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the concrete-css-zola theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/concrete-css-zola/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/Pontoporeia/concrete-css-zola"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-concrete-css-zola"
-  js = "const b=document.getElementById('install-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-concrete-css-zola"
-  js = "const b=document.getElementById('info-concrete-css-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
