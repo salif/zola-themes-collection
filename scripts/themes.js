@@ -189,8 +189,8 @@ theme = "${themeName}"
 		links: [
 			{ name: "Live Preview", url: new URL(themeName + (themeName === "linkita" ? "/en/" : "/"), baseURL).href },
 			{ name: "Repository", url: themeInfo.repo },
-			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName) },
-			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName) },
+			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName), newtab: false },
+			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName), newtab: false },
 		],
 	};
 }

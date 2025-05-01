@@ -45,14 +45,14 @@
       <a
         class="underline"
         {%- if link.js %}
-        onclick="{{ link.js | safe }}"
         href="{{ link.url | escape_xml | safe }}"
+        onclick="{{ link.js | safe }}"
         {%- else %}
         href="{{ m_url::get(url=link.url) }}"
-        target="_blank"
         {%- endif %}
-        >{{ link.name }}</a
-      >
+        {%- if link.newtab | default(value=true) %}
+        target="_blank"{% endif %}
+      >{{ link.name }}</a>
       {%- endfor %}
     </div>
   </div>
