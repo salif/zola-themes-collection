@@ -12,49 +12,46 @@
 
 ### Build failed
 
-- [DeepThought](https://github.com/RatanShreshtha/DeepThought): 153 commits
-- [zola-inky](https://github.com/jimmyff/zola-inky): 30 commits
-- [halve-z](https://github.com/charlesrocket/halve-z): 540 commits
-- [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits
-- [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits
-- [re137](https://github.com/tinikov/re137): 11 commits
-- [butler](https://github.com/shalzz/butler): 105 commits
-- [polymathic](https://github.com/anvlkv/polymathic): 95 commits
-- [magic-box](https://github.com/dulvui/magic-box): 189 commits
-- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits
-- [bluetheme](https://github.com/bluerobotics/bluetheme): 21 commits
-- [anatole-zola](https://github.com/longfangsong/anatole-zola): 49 commits
-- [parchment](https://github.com/jsonfry/parchment): 5 commits
-- [hermit_zola](https://github.com/VersBinarii/hermit_zola): 61 commits
-- [hayflow](https://github.com/aaw3/hayflow): 19 commits
-- [bd](https://github.com/flabbergastedbd/bd): 20 commits
-- [stardust-theme](https://github.com/UWCS/stardust-theme): 256 commits
-- [zola-metro](https://github.com/RedstoneParadox/zola-metro): 18 commits
-- [sigmund](https://github.com/videah/sigmund): 36 commits
-- [zola-pickles](https://github.com/lukehsiao/zola-pickles): 92 commits
-- [archie-zola](https://github.com/XXXMrG/archie-zola): 59 commits
-- [archie-zola-modified](https://codeberg.org/akselmo/archie-zola-modified): 62 commits
-- [arsmateria-zola-theme](https://github.com/mboleary/arsmateria-zola-theme): 19 commits
-- [snow-kitty](https://codeberg.org/SnowCode/snow-kitty): 94 commits
-- [zola-rahix](https://github.com/Rahix/blog-theme): 88 commits
-- [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits
-- [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits
-- [citrus](https://github.com/tatumroaquin/citrus): 80 commits
-- [datum](https://github.com/davidmreed/datum): 16 commits
-- [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits
-- [eips-theme](https://github.com/eips-wg/theme): 475 commits
-- [kireizola](https://codeberg.org/pitbuster/kireizola): 39 commits
-- [navhive](https://github.com/idevsig/navhive): 13 commits
-- [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits
-- [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits
-- [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits
-- [Ergo](https://github.com/insipx/Ergo): 115 commits
-- [boring](https://github.com/clflushopt/boring): 70 commits
-- [rahix](https://github.com/Rahix/blog-theme): 88 commits
-- [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
-- [cblanken-terminimal](https://github.com/cblanken/zola-theme-terminimal): 172 commits
-- [anpu-zola-theme](https://github.com/zbrox/anpu-zola-theme): 30 commits
-- [zola-devin](https://github.com/seankearney/zola-devin): 36 commits
+- [DeepThought](https://github.com/RatanShreshtha/DeepThought): 153 commits: `unknown field generate_feed`
+- [zola-inky](https://github.com/jimmyff/zola-inky): 30 commits: `unknown field images`
+- [halve-z](https://github.com/charlesrocket/halve-z): 553 commits: `.git/HEAD doesn't exist`
+- [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits: `Undefined operation`
+- [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits: `unknown field generate_rss`
+- [re137](https://github.com/tinikov/zola-theme-re137): 17 commits: `style.css doesn't exist`
+- [butler](https://github.com/shalzz/butler): 108 commits: `critical.css doesn't exist`
+- [polymathic](https://github.com/anvlkv/polymathic): 95 commits: `config.toml not found`
+- [magic-box](https://github.com/dulvui/magic-box): 189 commits: `unknown field date`
+- [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits: `unknown field generate_feed`
+- [parchment](https://github.com/jsonfry/parchment): 5 commits: `unknown field generate_feed`
+- [hermit_zola](https://github.com/VersBinarii/hermit_zola): 66 commits: `unknown field highlight_code`
+- [hayflow](https://github.com/aaw3/hayflow): 19 commits: `variable not found`
+- [stardust-theme](https://github.com/UWCS/stardust-theme): 269 commits: `config.toml not found`
+- [zola-metro](https://github.com/RedstoneParadox/zola-metro): 30 commits: `unknown field generate_feed`
+- [sigmund](https://github.com/videah/sigmund): 45 commits: `unknown field generate_feed`
+- [zola-pickles](https://github.com/lukehsiao/zola-pickles): 94 commits: `failed to render youtube shortcode`
+- [archie-zola](https://github.com/XXXMrG/archie-zola): 59 commits: `unknown field path`
+- [archie-zola-modified](https://codeberg.org/akselmo/archie-zola-modified): 71 commits: `unknown field path`
+- [arsmateria-zola-theme](https://github.com/mboleary/arsmateria-zola-theme): 19 commits: `unknown field highlight_code`
+- [snow-kitty](https://codeberg.org/SnowCode/snow-kitty): 94 commits: `unknown field generate_feed`
+- [zola-academic](https://github.com/zola-academic/zola-academic): 85 commits: `unknown field highlight_code`
+- [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits: `unknown field highlight_code`
+- [citrus](https://github.com/tatumroaquin/citrus): 93 commits: `sun.svg doesn't exist`
+- [datum](https://github.com/davidmreed/datum): 16 commits: `config.toml not found`
+- [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits: `can't find stylesheet to import`
+- [navhive](https://github.com/idevsig/navhive): 13 commits: `failed to open file theme.toml`
+- [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits: `tried to iterate`
+- [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits: `config.toml not found`
+- [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits: `unknown field highlight_code`
+- [Ergo](https://github.com/insipx/Ergo): 115 commits: `unknown field highlight_theme`
+- [boring](https://github.com/clflushopt/boring): 70 commits: `archived`
+- [rahix](https://github.com/Rahix/blog-theme): 88 commits: `unknown field highlight_code`
+- [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits: `archived`
+- [cblanken-terminimal](https://github.com/cblanken/zola-theme-terminimal): 174 commits:  `variable not found`
+- [anpu-zola-theme](https://github.com/zbrox/anpu-zola-theme): 30 commits: `unknown field highlight_code`
+- [zola-devin](https://github.com/seankearney/zola-devin): 36 commits: `cannot find file`
+- [zerm](https://github.com/ejmg/zerm): 76 commits: `unknown field generate_feed`
+- [zola.386](https://github.com/lopes/zola.386): 26 commits: `unknown field highlight_code`
+- [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -92,3 +89,10 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [attention](https://github.com/tongyul/attention-theme-zola): 19 commits
 - [bare-room](https://github.com/ghrrlp/bare-room): 2 commits
 - [zola-es-theme](https://github.com/scouten/zola-es-theme): 252 commits
+
+### Other
+
+- [juice](https://github.com/huhu/juice): 73 commits
+- [bluetheme](https://github.com/bluerobotics/bluetheme): 28 commits
+- [bd](https://github.com/flabbergastedbd/bd): 20 commits
+- [eips-wg](https://github.com/bluerobotics/bluetheme): 503 commits
