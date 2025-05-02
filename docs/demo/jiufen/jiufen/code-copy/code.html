@@ -1,0 +1,12 @@
+{%- if copy -%}
+    {%- set copy = '<button class="copy-button"><i class="fa fa-copy"> Copy </i></button>' -%}
+{%- else-%}
+    {%- set copy = '' -%}
+{%- endif -%}
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">{{ code }}</span>
+        {{ copy | safe }}
+    </div>
+    {{ body | markdown | safe }}
+</div>

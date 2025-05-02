@@ -1,0 +1,51 @@
+/* 整個程式碼區塊容器的樣式 */
+.code-container {
+    border: 1px solid #e0e0e0; /* 邊框 */
+    margin: 1em 0; /* 上下外邊距 */
+    border-radius: 5px; /* 圓角 */
+    overflow: hidden; /* 確保內容不溢出邊框 */
+    background-color: #f7f7f7; /* 背景色 */
+}
+
+/* 標頭（語言和按鈕）的樣式 */
+.code-header {
+    background-color: #eeeeee; /* 標頭背景色 */
+    padding: 0.5em 1em; /* 內邊距 */
+    display: flex; /* 使用 Flexbox 佈局 */
+    justify-content: space-between; /* 讓內容靠兩端對齊 (語言左，按鈕右) */
+    align-items: center; /* 垂直居中對齊 */
+    border-bottom: 1px solid #e0e0e0; /* 底部邊框 */
+}
+
+/* 程式碼語言顯示的樣式 */
+.code-lang {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* 複製按鈕的樣式 */
+.copy-button {
+    background-color: #4CAF50; /* 按鈕背景色 */
+    color: white; /* 文字顏色 */
+    border: none; /* 無邊框 */
+    padding: 0.3em 0.8em; /* 內邊距 */
+    border-radius: 4px; /* 圓角 */
+    cursor: pointer; /* 滑鼠指標變為手型 */
+    font-size: 0.8em;
+    transition: background-color 0.3s ease; /* 背景色過渡動畫 */
+}
+
+.copy-button:hover {
+    background-color: #8bc34a; /* 滑鼠懸停時背景色 */
+}
+
+/* 程式碼內容區塊的樣式 */
+/* Zola 預設會在 code.html 中渲染一個 pre 標籤，裡面包含 code 標籤和語法高亮 */
+.code-container pre {
+    margin: 0; /* 移除預設 pre 標籤的外邊距 */
+    padding: 1em; /* 增加內邊距 */
+    overflow-x: auto; /* 如果程式碼太長則顯示水平滾動條 */
+    font-size: 0.95em; /* 字體大小 */
+    line-height: 1.4; /* 行高 */
+}

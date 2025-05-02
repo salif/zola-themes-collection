@@ -456,136 +456,6 @@ theme = "project-portfolio"
   newtab = false
 
 [[project]]
-theme = "researchlab"
-name = "researchlab"
-desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
-
-### Installation{#h-install-researchlab}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "researchlab"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
-
-### Info{#h-info-researchlab}
-- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/plaublin/researchlab>
-- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-researchlab.webp"
-  dark = "./screenshots/dark-researchlab.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the researchlab theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/plaublin/researchlab"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-researchlab"
-  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-researchlab"
-  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "radion"
-name = "radion"
-desc = "A sleek, modern blog theme."
-tags = [ "SEO", "search", "accessible" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
-
-### Installation{#h-install-radion}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/micahkepe/radion.git themes/radion
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/micahkepe/radion.git themes/radion
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "radion"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-
-### Info{#h-info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Main Live Preview**: <https://micahkepe.com/radion/>
-- **Min Zola version**: 0.20.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-radion.webp"
-  dark = "./screenshots/dark-radion.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the radion theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/micahkepe/radion"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-radion"
-  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-radion"
-  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "bearplus"
 name = "Bear+"
 desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
@@ -1239,14 +1109,14 @@ theme = "hacker"
   newtab = false
 
 [[project]]
-theme = "ski"
-name = "ski"
-desc = "A minimalist Zola theme inspired by Swiss design principles."
-tags = [ ]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ "SEO", "search", "accessible" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
 
-### Installation{#h-install-ski}
+### Installation{#h-install-radion}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1254,53 +1124,183 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/un1970ix/ski.git themes/ski
+git submodule add https://github.com/micahkepe/radion.git themes/radion
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/un1970ix/ski.git themes/ski
+git clone https://github.com/micahkepe/radion.git themes/radion
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "ski"
+theme = "radion"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
 
-### Info{#h-info-ski}
-- **Author**: [Bedir Ekim](https://un1970ix.com)
+### Info{#h-info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
 - **License**: MIT
-- **Homepage**: <https://github.com/un1970ix/ski>
-- **Main Live Preview**: <https://ski.un1970ix.com>
-- **Min Zola version**: 0.19.2
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Main Live Preview**: <https://micahkepe.com/radion/>
+- **Min Zola version**: 0.20.0
 </details>"""
 
   [project.screenshot]
-  light = "./screenshots/light-ski.webp"
-  dark = "./screenshots/dark-ski.webp"
+  light = "./screenshots/light-radion.webp"
+  dark = "./screenshots/dark-radion.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the ski theme"
+  alt = "Screenshot of the radion theme"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/ski/"
+  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/un1970ix/ski"
+  url = "https://github.com/micahkepe/radion"
 
   [[project.links]]
   name = "Install"
-  url = "#install-ski"
-  js = "const b=document.getElementById('install-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-radion"
+  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
   [[project.links]]
   name = "Info"
-  url = "#info-ski"
-  js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-radion"
+  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "jiufen"
+name = "jiufen"
+desc = "The ‘jiufen’ theme is a theme that references the W3.CSS Template and incorporates ZOLA-related features."
+tags = [ "Blog", "Responsive", "Search" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-jiufen'></summary>
+
+### Installation{#h-install-jiufen}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "jiufen"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-jiufen'></summary>
+
+### Info{#h-info-jiufen}
+- **Author**: [Saint Huang](https://github.com/4yuinfo)
+- **License**: MIT
+- **Homepage**: <https://github.com/4yuinfo/zola-theme_jiufen>
+- **Main Live Preview**: <https://4yuinfo.github.io/zola-theme_jiufen/>
+- **Min Zola version**: 0.20.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-jiufen.webp"
+  dark = "./screenshots/dark-jiufen.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the jiufen theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/jiufen/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/4yuinfo/zola-theme_jiufen"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-jiufen"
+  js = "const b=document.getElementById('install-jiufen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-jiufen"
+  js = "const b=document.getElementById('info-jiufen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "researchlab"
+name = "researchlab"
+desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
+
+### Installation{#h-install-researchlab}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchlab
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "researchlab"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
+
+### Info{#h-info-researchlab}
+- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/plaublin/researchlab>
+- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-researchlab.webp"
+  dark = "./screenshots/dark-researchlab.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the researchlab theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/plaublin/researchlab"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-researchlab"
+  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-researchlab"
+  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -1498,6 +1498,71 @@ theme = "academic-workshop"
   newtab = false
 
 [[project]]
+theme = "BelTree"
+name = "BelTree"
+desc = "A clean and elegant Linktree alternative that offers customizable links and a user-friendly design"
+tags = [ "minimal", "linktree" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelTree'></summary>
+
+### Installation{#h-install-BelTree}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/cx48/BelTree.git themes/BelTree
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/cx48/BelTree.git themes/BelTree
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "BelTree"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelTree'></summary>
+
+### Info{#h-info-BelTree}
+- **Author**: [cx48](https://cx48.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/cx48/BelTree>
+- **Main Live Preview**: <https://cx48.github.io/BelTree>
+- **Min Zola version**: 0.20.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-BelTree.webp"
+  dark = "./screenshots/dark-BelTree.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the BelTree theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/BelTree/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/cx48/BelTree"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-BelTree"
+  js = "const b=document.getElementById('install-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-BelTree"
+  js = "const b=document.getElementById('info-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "BelResume"
 name = "BelResume"
 desc = "A beautiful, modern, and minimal single-page resume site"
@@ -1560,71 +1625,6 @@ theme = "BelResume"
   name = "Info"
   url = "#info-BelResume"
   js = "const b=document.getElementById('info-BelResume').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "BelTree"
-name = "BelTree"
-desc = "A clean and elegant Linktree alternative that offers customizable links and a user-friendly design"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelTree'></summary>
-
-### Installation{#h-install-BelTree}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/cx48/BelTree.git themes/BelTree
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/cx48/BelTree.git themes/BelTree
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "BelTree"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelTree'></summary>
-
-### Info{#h-info-BelTree}
-- **Author**: [cx48](https://cx48.dev)
-- **License**: MIT
-- **Homepage**: <https://github.com/cx48/BelTree>
-- **Main Live Preview**: <https://cx48.github.io/BelTree>
-- **Min Zola version**: 0.20.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-BelTree.webp"
-  dark = "./screenshots/dark-BelTree.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the BelTree theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/BelTree/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/cx48/BelTree"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-BelTree"
-  js = "const b=document.getElementById('install-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-BelTree"
-  js = "const b=document.getElementById('info-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -2091,6 +2091,71 @@ theme = "silk"
   name = "Info"
   url = "#info-silk"
   js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "ski"
+name = "ski"
+desc = "A minimalist Zola theme inspired by Swiss design principles."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
+
+### Installation{#h-install-ski}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/un1970ix/ski.git themes/ski
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/un1970ix/ski.git themes/ski
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "ski"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
+
+### Info{#h-info-ski}
+- **Author**: [Bedir Ekim](https://un1970ix.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/un1970ix/ski>
+- **Main Live Preview**: <https://ski.un1970ix.com>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-ski.webp"
+  dark = "./screenshots/dark-ski.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the ski theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/ski/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/un1970ix/ski"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-ski"
+  js = "const b=document.getElementById('install-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-ski"
+  js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
