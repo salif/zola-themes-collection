@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <title>install - Jiufen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/css/zh-font-family.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/code-copy/code-copy.css">
+</head>
+<body class="w3-light-grey">
+
+
+    <nav>
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="mobileNavigation()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="fa fa-home"></i></a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;theme&#x2F;" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Theme</a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;travel&#x2F;" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Travel</a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;404&#x2F;" class="w3-bar-item w3-button w3-padding-large w3-hide-small">404</a></div>
+    </div>
+    <div id="navMoblie" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px"><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;" class="w3-bar-item w3-button w3-padding-large" onclick="mobileNavigation()"><i class="fa fa-home"></i></a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;theme&#x2F;" class="w3-bar-item w3-button w3-padding-large" onclick="mobileNavigation()">Theme</a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;travel&#x2F;" class="w3-bar-item w3-button w3-padding-large" onclick="mobileNavigation()">Travel</a><a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;jiufen&#x2F;404&#x2F;" class="w3-bar-item w3-button w3-padding-large" onclick="mobileNavigation()">404</a></div>
+</nav>
+
+
+<main>
+    <div class="w3-content" style="max-width:1400px;margin-top:30px"><header class="w3-container w3-center w3-padding-32">
+            <h1><b><img src="https://4yuinfo.github.io/zola-theme_jiufen/images/header001.png" width="100%")</b></h1><p>Welcome to the Zola Theme Jiufen introduction website.</p>
+            
+        </header>
+        <div class="w3-row">
+            <div class="w3-col l8 s12">
+                
+<div class="w3-card-4 w3-margin w3-white"><img src="https:&#x2F;&#x2F;4yuinfo.github.io&#x2F;zola-theme_jiufen&#x2F;images&#x2F;header002.png" style="width:100%;"><div class="w3-container w3-light-grey">
+    <h1><b>install</b></h1>
+    <h5>
+        <span class="w3-opacity">
+            2025-05-01</span>
+    </h5>
+  </div>
+  <div class="w3-container"><p><h1 id="jiufen">jiufen</h1>
+<p>The ‘jiufen’ theme is a theme that references the <a href="https://www.w3schools.com/w3css/">W3.CSS</a>
+Template and incorporates <a href="https://www.getzola.org/">ZOLA</a>-related features.</p>
+<p>Jiufen is the name of an old street located on the island of Formosa (Taiwan).
+If you have the chance, you should definitely visit this island to experience life here.</p>
+<img src="https:&#x2F;&#x2F;4yuinfo.github.io&#x2F;zola-theme_jiufen&#x2F;images&#x2F;screenshot.png" style="width: 100%;height: auto;max-width: 100%;"><h2 id="installation">Installation</h2>
+<pre class="mermaid bg-inherit" translate="no">
+  
+flowchart
+    A[1.Installation Zola]
+    B[2.Initialize Site]
+    C[3.1.Git Initialize]
+    D[3.2.Download Theme]
+    E[4.Initialize Theme]
+    F[4.1.Copy Sample]
+    G[4.2.Edit Config]
+    H[5.Other Options Setting]
+    A --&gt; B
+    B --&gt;| Use Git | C
+    B --&gt;| No Git | D
+    C --&gt;E
+    D--&gt;E
+    E--&gt;F
+    E--&gt;G
+    F--&gt;H
+    G--&gt;H
+    click A &quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot; &quot;Install Zola&quot; _blank
+    click B &quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;overview&#x2F;#initialize-site&quot; &quot;Initialize Site&quot; _blank
+
+</pre><h3 id="1-install-zola">1.Install Zola</h3>
+<p>ZOLA DOCS <a href="https://www.getzola.org/documentation/getting-started/installation/">Installation</a></p>
+<h3 id="2-initialize-site">2.Initialize Site</h3>
+<p>ZOLA DOCS <a href="https://www.getzola.org/documentation/getting-started/overview/#initialize-site">Initialize Site</a></p>
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">SHELL</span>
+        
+    </div>
+    <pre data-lang="sh" style="background-color:#002b36;color:#839496;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#586e75;"># rename [myblog]
+</span><span>
+</span><span style="color:#b58900;">zola</span><span> init </span><span style="color:#859900;">[</span><span>myblog</span><span style="color:#859900;">]
+</span><span>
+</span><span style="color:#657b83;">&gt;</span><span> What </span><span style="color:#b58900;">is</span><span> the URL of your site</span><span style="color:#859900;">?</span><span> (https://example.com)</span><span style="color:#859900;">:
+</span><span style="color:#657b83;">&gt;</span><span> Do </span><span style="color:#b58900;">you</span><span> want to enable Sass compilation</span><span style="color:#859900;">? [</span><span>Y/n</span><span style="color:#859900;">]</span><span>: n
+</span><span style="color:#657b83;">&gt;</span><span> Do </span><span style="color:#b58900;">you</span><span> want to enable syntax highlighting</span><span style="color:#859900;">? [</span><span>y/N</span><span style="color:#859900;">]</span><span>: y
+</span><span style="color:#657b83;">&gt;</span><span> Do </span><span style="color:#b58900;">you</span><span> want to build a search index of the content</span><span style="color:#859900;">? [</span><span>y/N</span><span style="color:#859900;">]</span><span>: y
+</span><span>
+</span><span style="color:#859900;">cd [</span><span>myblog</span><span style="color:#859900;">]
+</span></code></pre>
+
+</div><h3 id="3-1-git-initialize">3.1.Git Initialize</h3>
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">SHELL</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="sh" style="background-color:#002b36;color:#839496;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#b58900;">git</span><span> init</span><span style="color:#859900;">;</span><span style="color:#b58900;">touch</span><span> .gitignore
+</span><span style="color:#b58900;">git</span><span> submodule add https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
+</span></code></pre>
+
+</div><h3 id="3-2-download-theme">3.2.Download Theme</h3>
+<p>Download And Upzip to Theme</p>
+<h3 id="4-1-copy-sample">4.1 Copy Sample</h3>
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">SHELL</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="sh" style="background-color:#002b36;color:#839496;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#b58900;">mkdir</span><span style="color:#268bd2;"> -p</span><span> content/posts
+</span><span style="color:#b58900;">cp</span><span> themes/jiufen/config.toml .
+</span><span style="color:#b58900;">cp</span><span> themes/jiufen/content/home.md content/
+</span></code></pre>
+
+</div><h3 id="4-2-edit-config">4.2.Edit Config</h3>
+<p>ZOLA DOCS <a href="https://www.getzola.org/documentation/getting-started/configuration/">Configuration</a></p>
+<p>Adjust config.toml
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;">#config.toml
+</span><span style="color:#268bd2;">theme</span><span>=&quot;</span><span style="color:#2aa198;">jiufen</span><span>&quot;
+</span></code></pre>
+
+</div></p>
+<h3 id="5-other-options-setting">5.Other Options Setting</h3>
+<h4 id="header-and-footer">Header And Footer</h4>
+<blockquote>
+<p>If Not Setting Hidden Header</p>
+<p>Can Use Picture(html tag width set 100%)</p>
+</blockquote>
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;"># config.toml
+</span><span>[</span><span style="color:#b58900;">extra</span><span>]
+</span><span style="color:#268bd2;">site_name </span><span>= &#39;</span><span style="color:#2aa198;">Zola Theme Jiufen</span><span>&#39;
+</span><span style="color:#268bd2;">site_desc </span><span>= &quot;</span><span style="color:#2aa198;">Welcome to the Zola Theme Jiufen introduction website.</span><span>&quot;
+</span><span style="color:#268bd2;">copyright </span><span>= &quot;</span><span style="color:#2aa198;">Copyright © 2025 Saint Huang All rights reserved.</span><span>&quot;
+</span></code></pre>
+
+</div><h4 id="navigation">Navigation</h4>
+<p>Navigation Display Control</p>
+<blockquote>
+<p>The top (bar) and sidebar are optional, if you want the display.</p>
+</blockquote>
+<pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;"># config.toml
+</span><span>[</span><span style="color:#b58900;">extra</span><span>]
+</span><span style="color:#268bd2;">navigation_display_top </span><span>= </span><span style="color:#b58900;">true
+</span><span style="color:#268bd2;">navigation_display_sidebar </span><span>= </span><span style="color:#b58900;">true
+</span><span style="color:#268bd2;">navigation </span><span>= [
+</span><span>    {</span><span style="color:#268bd2;">name </span><span>= &#39;</span><span style="color:#2aa198;">&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt;</span><span>&#39;, </span><span style="color:#268bd2;">url </span><span>= &quot;</span><span style="color:#2aa198;">/</span><span>&quot;,</span><span style="color:#268bd2;">top</span><span>=</span><span style="color:#b58900;">true</span><span>, </span><span style="color:#268bd2;">sitebar</span><span>=</span><span style="color:#b58900;">false </span><span>},
+</span><span>    {</span><span style="color:#268bd2;">name </span><span>= &quot;</span><span style="color:#2aa198;">Blog</span><span>&quot;, </span><span style="color:#268bd2;">url </span><span>= &quot;</span><span style="color:#2aa198;">/blog/</span><span>&quot;, </span><span style="color:#268bd2;">top</span><span>=</span><span style="color:#b58900;">false</span><span>, </span><span style="color:#268bd2;">sitebar</span><span>=</span><span style="color:#b58900;">true </span><span>},
+</span><span>    {</span><span style="color:#268bd2;">name </span><span>= &quot;</span><span style="color:#2aa198;">Camp</span><span>&quot;, </span><span style="color:#268bd2;">url </span><span>= &quot;</span><span style="color:#2aa198;">/camp/</span><span>&quot;, </span><span style="color:#268bd2;">top</span><span>=</span><span style="color:#b58900;">true</span><span>, </span><span style="color:#268bd2;">sitebar</span><span>=</span><span style="color:#b58900;">false </span><span>},
+</span><span>    {</span><span style="color:#268bd2;">name </span><span>= &quot;</span><span style="color:#2aa198;">Travel</span><span>&quot;, </span><span style="color:#268bd2;">url </span><span>= &quot;</span><span style="color:#2aa198;">/travel/</span><span>&quot;, </span><span style="color:#268bd2;">top</span><span>=</span><span style="color:#b58900;">true</span><span>, </span><span style="color:#268bd2;">sitebar</span><span>=</span><span style="color:#b58900;">false </span><span>},
+</span><span>    {</span><span style="color:#268bd2;">name </span><span>= &quot;</span><span style="color:#2aa198;">404</span><span>&quot;, </span><span style="color:#268bd2;">url </span><span>= &quot;</span><span style="color:#2aa198;">/404/</span><span>&quot;, </span><span style="color:#268bd2;">top</span><span>=</span><span style="color:#b58900;">true</span><span>, </span><span style="color:#268bd2;">sitebar</span><span>=</span><span style="color:#b58900;">false </span><span>},
+</span><span>]
+</span></code></pre>
+<h4 id="search">Search</h4>
+<blockquote>
+<p>Optional, if you want search</p>
+</blockquote>
+<p>Only Support fuse_javascript</p>
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;"># config.toml
+</span><span style="color:#268bd2;">build_search_index </span><span>= </span><span style="color:#b58900;">true
+</span><span>
+</span><span>[</span><span style="color:#b58900;">slugify</span><span>]
+</span><span style="color:#268bd2;">taxonomies </span><span>= &quot;</span><span style="color:#2aa198;">safe</span><span>&quot;
+</span><span>
+</span><span>[</span><span style="color:#b58900;">search</span><span>]
+</span><span style="color:#268bd2;">include_title </span><span>= </span><span style="color:#b58900;">true
+</span><span style="color:#268bd2;">include_content </span><span>= </span><span style="color:#b58900;">true
+</span><span style="color:#268bd2;">include_description </span><span>= </span><span style="color:#b58900;">true
+</span><span style="color:#268bd2;">include_date </span><span>= </span><span style="color:#b58900;">false
+</span><span style="color:#268bd2;">include_path </span><span>= </span><span style="color:#b58900;">false
+</span><span style="color:#268bd2;">index_format </span><span>= &quot;</span><span style="color:#2aa198;">fuse_javascript</span><span>&quot;
+</span></code></pre>
+
+</div><h4 id="home-md">Home.md</h4>
+<p>home.md
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;"># home.md
+</span><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span><span style="color:#268bd2;">title </span><span>= &#39;</span><span style="color:#2aa198;">Home</span><span>&#39;
+</span><span style="color:#268bd2;">in_search_index </span><span>= </span><span style="color:#b58900;">false
+</span><span>[</span><span style="color:#b58900;">extra</span><span>]
+</span><span style="color:#268bd2;">image </span><span>= &quot;</span><span style="color:#2aa198;">/images/jiufen.png</span><span>&quot;    </span><span style="color:#586e75;"># Option
+</span><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span></code></pre>
+
+</div></p>
+<h3 id="context">Context</h3>
+<p>context.md
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span><span style="color:#586e75;"># context.md
+</span><span style="color:#268bd2;">title </span><span>= &quot;</span><span style="color:#2aa198;">Blog01</span><span>&quot;
+</span><span style="color:#268bd2;">date </span><span>= </span><span style="color:#6c71c4;">2025</span><span style="background-color:#6e2e32;color:#839496;">-5-1</span><span>
+</span><span>[</span><span style="color:#b58900;">taxonomies</span><span>]
+</span><span style="color:#268bd2;">tags</span><span>=[&quot;</span><span style="color:#2aa198;">Blog</span><span>&quot;, &quot;</span><span style="color:#2aa198;">Camp</span><span>&quot;]
+</span><span>[</span><span style="color:#b58900;">extra</span><span>]
+</span><span style="color:#268bd2;">image </span><span>= &quot;</span><span style="color:#2aa198;">/images/jiufen.png</span><span>&quot; </span><span style="color:#586e75;"># Option
+</span><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span></code></pre>
+
+</div></p>
+<p>context/[folder]/_index.md
+<div class="code-container">
+    <div class="code-header">
+        <span class="code-lang">Editor</span>
+        <button class="copy-button"><i class="fa fa-copy"> Copy </i></button>
+    </div>
+    <pre data-lang="toml" style="background-color:#002b36;color:#839496;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#586e75;"># context/[folder]/_index.md
+</span><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span><span style="color:#268bd2;">title </span><span>= &quot;</span><span style="color:#2aa198;">List Theme Posts</span><span>&quot;
+</span><span style="color:#268bd2;">sort_by </span><span>= &quot;</span><span style="color:#2aa198;">date</span><span>&quot;  </span><span style="color:#586e75;"># &quot;date&quot;, &quot;update_date&quot;, &quot;title&quot;, &quot;title_bytes&quot;, &quot;weight&quot;, &quot;slug&quot;
+</span><span style="color:#268bd2;">paginate_by </span><span>= </span><span style="color:#6c71c4;">5
+</span><span style="background-color:#6e2e32;color:#839496;">+++</span><span>
+</span></code></pre>
+
+</div></p>
+<h3 id="shortcodes">Shortcodes</h3>
+<p>youtube(id=“”)</p>
+<p>imageh100(path=“”)</p>
+<p>imageh200(path=“”)</p>
+<p>imageh300(path=“”)</p>
+<p>imagehw(path=“”)</p>
+<p>code(code=“”, copy=true)
+context</p>
+<p>mermaid()
+context</p>
+</p></div>
+  <div class="w3-container w3-light-grey">
+      <h5>
+        <span class="w3-opacity"><i class="fa fa-tag"></i><span class="w3-tag w3-light-grey w3-margin-bottom">
+                        <a href="https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Theme/" >Theme</a>
+                    </span></span>
+        </h5>
+    </div>
+</div><hr/>
+
+            </div>
+            <div class="w3-col l4">
+                <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+        <h4><i class="fa fa-indent"> Index </i></h4>
+    </div>
+    <div class="w3-container w3-white">
+        <ul>
+            
+            <li>
+                <a href="https://salif.github.io/zola-themes-collection/demo/jiufen/theme/theme001/#jiufen" style="text-decoration:none">jiufen</a>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="https://salif.github.io/zola-themes-collection/demo/jiufen/theme/theme001/#installation" style="text-decoration:none">Installation</a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div><hr/>
+
+                <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+        <h4><i class="fa-solid fa-sitemap"> Navigation </i></h4>
+    </div>
+    <div class="w3-container w3-white">
+        <ul class="w3-ul w3-hoverable w3-white"></ul>
+    </div>
+</div><hr/>
+                <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+        <h4><i class="fa fa-tags"> tags </i></h4>
+    </div>
+    <div class="w3-container w3-white">
+        <p>
+        <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Jiufen/" class="w3-button">Jiufen <span class="w3-badge w3-green">1</span></a></span>&nbsp;
+            <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Theme/" class="w3-button">Theme <span class="w3-badge w3-green">1</span></a></span>&nbsp;
+            <span class="w3-tag w3-light-grey w3-margin-bottom"><a href="https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Travel/" class="w3-button">Travel <span class="w3-badge w3-green">3</span></a></span>&nbsp;
+            </p>
+    </div>
+</div><hr/>
+
+                <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+        <h4><i class="fa fa-search"> Search </i></h4>
+    </div>
+    <div class="w3-container w3-white">
+        <input class="w3-input w3-border w3-round" type="text" id="search-input">
+    </div>
+    <div class="w3-container w3-white">
+        <ul class="w3-ul" id="search-results">
+        </ul>
+    </div>
+</div><hr/>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="https://salif.github.io/zola-themes-collection/demo/jiufen/search_index.zh-Hant-TW.js"></script>
+<script>
+    function generateSearchContext(rs){
+        context = '';
+        rs.forEach((li) => {
+            context+= '<li>';
+            context+= '<a href="' + li.item.url + '">';
+            context+= li.item.title;
+            context+= '</a>';
+            context+= '</li>';
+        });
+        return context;
+    }
+    const fuseOptions = {
+        // isCaseSensitive: false,
+        // includeScore: false,
+        // ignoreDiacritics: false,
+        // shouldSort: true,
+        // includeMatches: false,
+        // findAllMatches: false,
+        // minMatchCharLength: 1,
+        // location: 0,
+        // threshold: 0.6,
+        // distance: 100,
+        // useExtendedSearch: false,
+        // ignoreLocation: false,
+        // ignoreFieldNorm: false,
+        // fieldNormWeight: 1,
+        keys: [
+            "title",
+            "description",
+            "body"
+        ]
+    };
+    var fuse = new Fuse(searchIndex, fuseOptions);
+    var searchInput = document.getElementById("search-input");
+    var searchResults = document.getElementById("search-results");
+    if (searchInput && searchResults) {
+        searchInput.oninput = function() {
+            var rs = fuse.search(searchInput.value);
+            var SerchRS = generateSearchContext(rs);
+            searchResults.innerHTML = SerchRS;
+        }
+    }
+
+
+
+</script>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top w3-center">
+    <p>Copyright © 2025 Jiufen All rights reserved.<br/>
+        Powered by
+        <a href="https://www.getzola.org/" target="_blank">Zola</a>,
+        <a href="https://www.w3schools.com/w3css/" target="_blank">W3.CSS</a>,
+        <a href="https://github.com/4yuinfo/zola-theme_jiufen" target="_blank">JiuFen</a>.
+    </p>
+</footer>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/+esm'
+</script>
+<script src="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/js/navigation.js"></script>
+<script src="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/code-copy/code-copy.js"></script>
+</div>
+</body>
+</html>

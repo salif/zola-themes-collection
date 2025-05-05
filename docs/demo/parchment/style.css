@@ -1,0 +1,354 @@
+/* RESET */
+
+/**
+ * Eric Meyer's Reset Stylesheet
+ *
+ * v2.0
+ * 2011-01-26
+ * Author: Eric Meyer - http://meyerweb.com/eric/tools/css/reset/
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* LAYOUT */
+
+body > header, body > footer, body > main {
+  max-width: 40rem;
+  width:96%;
+  margin: 0 auto;
+}
+
+/* STYLE */
+
+/* global */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+}
+
+body {
+  /* https://github.com/system-fonts/modern-font-stacks#transitional */
+  font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  border-top: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  text-decoration: underline;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+/* site header */
+
+body > header {
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body > header h1, body > header nav, body > header ul {
+  margin: 0;
+}
+
+body > header nav a {
+  font-size: 1.25rem;
+  font-style: italic;
+  text-decoration: none;
+}
+
+body > header nav a:hover {
+  text-decoration: underline;
+}
+
+body > header ul {
+  list-style: none;
+}
+
+body > header li {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+body > header h1, body > header {
+  font-size: 1.5rem;
+}
+
+/* page list */
+
+.archive li time {
+  margin-right: 0.25rem;
+  width: 6ch;
+  display: inline-block;
+}
+
+.archive li {
+  margin-bottom: 0.25rem;
+}
+
+.archive a:hover {
+  text-decoration: underline;
+}
+
+h2.archive {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs ul, .breadcrumbs li, .breadcrumbs a, .breadcrumbs h1 {
+display: inline
+}
+
+.breadcrumbs h1 {
+  font-size: 1rem;
+}
+
+.breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+/* articles */
+
+p, ol, ul, a, pre {
+  line-height: 1.5;
+}
+
+article header h1, article header h1 a {
+  line-height: 1.2;
+}
+
+article header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6, img, iframe, object, article li {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h4 {
+  font-style: italic;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+
+h6 {
+  font-style: italic;
+  font-size: 0.5rem;
+}
+
+img {
+  height: auto;
+}
+
+img, iframe, object {
+  max-width: 99%;
+}
+
+iframe {
+  display: block;
+}
+
+pre {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  padding: 1rem;
+  overflow: auto;
+  border-style: dotted;
+  border-width: 1px;
+}
+
+article li {
+  margin-left: 1.25rem;
+  font-weight:normal;
+  list-style-type: disc;
+}
+
+article ul {
+  padding-bottom: 0.5rem;
+}
+
+article > footer {
+  font-size: 0.75rem;
+  font-weight: normal;
+  margin-top: 1.5rem;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  padding-bottom: 0.25rem;
+  width: 100%;
+}
+article {
+  margin-bottom: 3rem !important;
+}
+
+/* Site footer */
+
+body > footer {
+  margin-top: 6rem;
+  margin-bottom: 2.5rem;
+}
+
+body > footer a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+body > footer .links li {
+  margin-right: 1rem;
+}
+
+body > footer .links li {
+  display: inline;
+}
+
+body > footer .links {
+  margin-bottom: 1.5rem;
+}
+
+/* COLORS */
+
+:root {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --highlight: #859900;
+
+  /* Solarized light */
+  --background: var(--base3);
+  --background-highlights: var(--base2);
+  --primary: var(--base00);
+  --secondary: var(--base1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Solarized dark */
+    --background: var(--base03);
+    --background-highlights: var(--base02);
+    --primary: var(--base0);
+    --secondary: var(--base01);
+  }
+}
+
+/* background */
+body {
+  background-color: var(--background);
+}
+pre, code {
+  background-color: var(--background-highlights) !important;
+}
+
+/* primary */
+body > header h1 a,
+body > header nav a,
+article header h1 a,
+h1, h2, h3, h4, h5, h6, p, li,
+.archive a {
+  color: var(--primary);
+}
+
+/* secondary */
+article > footer a,
+body > footer a,
+article > footer,
+body > footer a {
+  color: var(--secondary);
+}
+article > footer {
+  border-bottom-color: var(--secondary);
+}
+pre {
+  border-color: var(--secondary);
+}
+
+/* highlight */
+a {
+  color: var(--highlight);
+}

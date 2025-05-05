@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hant-TW">
+    <title>Jiufen - Theme</title>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Theme/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/jiufen/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-05-01T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/jiufen/tags/Theme/atom.xml</id>
+    <entry xml:lang="zh-Hant-TW">
+        <title>install</title>
+        <published>2025-05-01T00:00:00+00:00</published>
+        <updated>2025-05-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/jiufen/theme/theme001/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/jiufen/theme/theme001/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/jiufen/theme/theme001/">&lt;h1 id=&quot;jiufen&quot;&gt;jiufen&lt;&#x2F;h1&gt;
+&lt;p&gt;The ‘jiufen’ theme is a theme that references the &lt;a href=&quot;https:&#x2F;&#x2F;www.w3schools.com&#x2F;w3css&#x2F;&quot;&gt;W3.CSS&lt;&#x2F;a&gt;
+Template and incorporates &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;ZOLA&lt;&#x2F;a&gt;-related features.&lt;&#x2F;p&gt;
+&lt;p&gt;Jiufen is the name of an old street located on the island of Formosa (Taiwan).
+If you have the chance, you should definitely visit this island to experience life here.&lt;&#x2F;p&gt;
+&lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;4yuinfo.github.io&amp;#x2F;zola-theme_jiufen&amp;#x2F;images&amp;#x2F;screenshot.png&quot; style=&quot;width: 100%;height: auto;max-width: 100%;&quot;&gt;&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
+  
+flowchart
+    A[1.Installation Zola]
+    B[2.Initialize Site]
+    C[3.1.Git Initialize]
+    D[3.2.Download Theme]
+    E[4.Initialize Theme]
+    F[4.1.Copy Sample]
+    G[4.2.Edit Config]
+    H[5.Other Options Setting]
+    A --&amp;gt; B
+    B --&amp;gt;| Use Git | C
+    B --&amp;gt;| No Git | D
+    C --&amp;gt;E
+    D--&amp;gt;E
+    E--&amp;gt;F
+    E--&amp;gt;G
+    F--&amp;gt;H
+    G--&amp;gt;H
+    click A &amp;quot;https:&amp;#x2F;&amp;#x2F;www.getzola.org&amp;#x2F;documentation&amp;#x2F;getting-started&amp;#x2F;installation&amp;#x2F;&amp;quot; &amp;quot;Install Zola&amp;quot; _blank
+    click B &amp;quot;https:&amp;#x2F;&amp;#x2F;www.getzola.org&amp;#x2F;documentation&amp;#x2F;getting-started&amp;#x2F;overview&amp;#x2F;#initialize-site&amp;quot; &amp;quot;Initialize Site&amp;quot; _blank
+
+&lt;&#x2F;pre&gt;&lt;h3 id=&quot;1-install-zola&quot;&gt;1.Install Zola&lt;&#x2F;h3&gt;
+&lt;p&gt;ZOLA DOCS &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;installation&#x2F;&quot;&gt;Installation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;2-initialize-site&quot;&gt;2.Initialize Site&lt;&#x2F;h3&gt;
+&lt;p&gt;ZOLA DOCS &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;overview&#x2F;#initialize-site&quot;&gt;Initialize Site&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;SHELL&lt;&#x2F;span&gt;
+        
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# rename [myblog]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init &lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;myblog&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#657b83;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; What &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;is&lt;&#x2F;span&gt;&lt;span&gt; the URL of your site&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt; (https:&#x2F;&#x2F;example.com)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#657b83;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;you&lt;&#x2F;span&gt;&lt;span&gt; want to enable Sass compilation&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;? [&lt;&#x2F;span&gt;&lt;span&gt;Y&#x2F;n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;: n
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#657b83;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;you&lt;&#x2F;span&gt;&lt;span&gt; want to enable syntax highlighting&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;? [&lt;&#x2F;span&gt;&lt;span&gt;y&#x2F;N&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;: y
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#657b83;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; Do &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;you&lt;&#x2F;span&gt;&lt;span&gt; want to build a search index of the content&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;? [&lt;&#x2F;span&gt;&lt;span&gt;y&#x2F;N&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;]&lt;&#x2F;span&gt;&lt;span&gt;: y
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;cd [&lt;&#x2F;span&gt;&lt;span&gt;myblog&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;3-1-git-initialize&quot;&gt;3.1.Git Initialize&lt;&#x2F;h3&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;SHELL&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; init&lt;&#x2F;span&gt;&lt;span style=&quot;color:#859900;&quot;&gt;;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;touch&lt;&#x2F;span&gt;&lt;span&gt; .gitignore
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule add https:&#x2F;&#x2F;github.com&#x2F;4yuinfo&#x2F;zola-theme_jiufen.git themes&#x2F;jiufen
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;3-2-download-theme&quot;&gt;3.2.Download Theme&lt;&#x2F;h3&gt;
+&lt;p&gt;Download And Upzip to Theme&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;4-1-copy-sample&quot;&gt;4.1 Copy Sample&lt;&#x2F;h3&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;SHELL&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;sh&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-sh &quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt; -p&lt;&#x2F;span&gt;&lt;span&gt; content&#x2F;posts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;jiufen&#x2F;config.toml .
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;jiufen&#x2F;content&#x2F;home.md content&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;4-2-edit-config&quot;&gt;4.2.Edit Config&lt;&#x2F;h3&gt;
+&lt;p&gt;ZOLA DOCS &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;configuration&#x2F;&quot;&gt;Configuration&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Adjust config.toml
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;#config.toml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;theme&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;jiufen&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;5-other-options-setting&quot;&gt;5.Other Options Setting&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;header-and-footer&quot;&gt;Header And Footer&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If Not Setting Hidden Header&lt;&#x2F;p&gt;
+&lt;p&gt;Can Use Picture(html tag width set 100%)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;site_name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Zola Theme Jiufen&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;site_desc &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Welcome to the Zola Theme Jiufen introduction website.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;copyright &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Copyright © 2025 Saint Huang All rights reserved.&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;h4 id=&quot;navigation&quot;&gt;Navigation&lt;&#x2F;h4&gt;
+&lt;p&gt;Navigation Display Control&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The top (bar) and sidebar are optional, if you want the display.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;navigation_display_top &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;navigation_display_sidebar &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;navigation &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&amp;lt;i class=&amp;quot;fa fa-home&amp;quot;&amp;gt;&amp;lt;&#x2F;i&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;,&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sitebar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Blog&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;blog&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sitebar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Camp&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;camp&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sitebar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Travel&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;travel&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sitebar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;404&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;404&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;top&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sitebar&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;search&quot;&gt;Search&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Optional, if you want search&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Only Support fuse_javascript&lt;&#x2F;p&gt;
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# config.toml
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;build_search_index &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;slugify&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;taxonomies &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;safe&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;search&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;include_title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;include_content &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;include_description &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;include_date &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;include_path &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;index_format &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;fuse_javascript&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;h4 id=&quot;home-md&quot;&gt;Home.md&lt;&#x2F;h4&gt;
+&lt;p&gt;home.md
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# home.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Home&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;in_search_index &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;image &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;images&#x2F;jiufen.png&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# Option
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;context&quot;&gt;Context&lt;&#x2F;h3&gt;
+&lt;p&gt;context.md
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# context.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Blog01&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;date &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;2025&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;-5-1&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;taxonomies&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt;=[&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Blog&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;Camp&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b58900;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;image &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;&#x2F;images&#x2F;jiufen.png&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# Option
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;context&#x2F;[folder]&#x2F;_index.md
+&lt;div class=&quot;code-container&quot;&gt;
+    &lt;div class=&quot;code-header&quot;&gt;
+        &lt;span class=&quot;code-lang&quot;&gt;Editor&lt;&#x2F;span&gt;
+        &lt;button class=&quot;copy-button&quot;&gt;&lt;i class=&quot;fa fa-copy&quot;&gt; Copy &lt;&#x2F;i&gt;&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#002b36;color:#839496;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# context&#x2F;[folder]&#x2F;_index.md
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;List Theme Posts&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;sort_by &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#2aa198;&quot;&gt;date&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#586e75;&quot;&gt;# &amp;quot;date&amp;quot;, &amp;quot;update_date&amp;quot;, &amp;quot;title&amp;quot;, &amp;quot;title_bytes&amp;quot;, &amp;quot;weight&amp;quot;, &amp;quot;slug&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#268bd2;&quot;&gt;paginate_by &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#6c71c4;&quot;&gt;5
+&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#6e2e32;color:#839496;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;shortcodes&quot;&gt;Shortcodes&lt;&#x2F;h3&gt;
+&lt;p&gt;youtube(id=“”)&lt;&#x2F;p&gt;
+&lt;p&gt;imageh100(path=“”)&lt;&#x2F;p&gt;
+&lt;p&gt;imageh200(path=“”)&lt;&#x2F;p&gt;
+&lt;p&gt;imageh300(path=“”)&lt;&#x2F;p&gt;
+&lt;p&gt;imagehw(path=“”)&lt;&#x2F;p&gt;
+&lt;p&gt;code(code=“”, copy=true)
+context&lt;&#x2F;p&gt;
+&lt;p&gt;mermaid()
+context&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,101 @@
+/* TOC container */
+#toc-container {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+@theme {
+  --color-blue-600: oklch(54.6% 0.245 262.881);
+  --color-blue-400: oklch(70.7% 0.165 254.624);
+}
+
+.dark #toc-container {
+  color: oklch(92.2% 0 0); /* netural-200 */
+}
+
+/* Active link highlighting */
+.toc-link.active {
+  color: var(--color-blue-600); /* blue-600 in Tailwind */
+  font-weight: 600;
+}
+
+.dark .toc-link.active {
+  color: var(--color-blue-400); /* blue-400 in Tailwind */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure headings have margin for scrolling to prevent them being hidden under fixed elements */
+h2, h3, h4 {
+  scroll-margin-top: 2rem;
+}
+
+/* TOC list styles */
+#table-of-contents ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* TOC link styles */
+.toc-link {
+  display: block;
+  padding: 0.25rem 0;
+  color: oklch(43.9% 0 0); /* netural-600 in Tailwind */
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 1.2;
+}
+
+.dark .toc-link {
+  color: oklch(70.8% 0 0); /* netural-400 in Tailwind */
+}
+
+.toc-link:hover {
+  color: var(--color-blue-600); /* blue-600 in Tailwind */
+}
+
+.dark .toc-link:hover {
+  color: var(--color-blue-400); /* blue-400 in Tailwind */
+}
+
+/* Style nested lists */
+.nested-toc {
+  transition: all 0.3s ease;
+}
+
+/* Heading level styles */
+.toc-h2 {
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.toc-h3 {
+  padding-left: 1rem;
+  font-size: 0.8rem;
+}
+
+.toc-h4 {
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  color: oklch(70.8% 0 0); /* netural-500 in Tailwind */
+}
+
+.dark .toc-h4 {
+  color: oklch(70.8% 0 0); /* netural-400 in Tailwind */
+}
+
+/* Hide empty TOC */
+#toc-container:empty,
+#table-of-contents:empty {
+  display: none;
+}

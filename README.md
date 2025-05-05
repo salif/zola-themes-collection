@@ -22,7 +22,6 @@
 - [polymathic](https://github.com/anvlkv/polymathic): 95 commits: `config.toml not found`
 - [magic-box](https://github.com/dulvui/magic-box): 189 commits: `unknown field date`
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits: `unknown field generate_feed`
-- [parchment](https://github.com/jsonfry/parchment): 5 commits: `unknown field generate_feed`
 - [hermit_zola](https://github.com/VersBinarii/hermit_zola): 66 commits: `unknown field highlight_code`
 - [hayflow](https://github.com/aaw3/hayflow): 19 commits: `variable not found`
 - [stardust-theme](https://github.com/UWCS/stardust-theme): 269 commits: `config.toml not found`
