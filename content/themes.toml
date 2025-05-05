@@ -1304,6 +1304,70 @@ theme = "researchlab"
   newtab = false
 
 [[project]]
+theme = "lookr"
+name = "lookr"
+desc = "Personal theme for my Zola blog."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-lookr'></summary>
+
+### Installation{#h-install-lookr}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/m0ddr/lookr.git themes/lookr
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/m0ddr/lookr.git themes/lookr
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "lookr"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-lookr'></summary>
+
+### Info{#h-info-lookr}
+- **Author**: [m0ddr](https://github.com/m0ddr)
+- **License**: MIT
+- **Homepage**: <https://github.com/m0ddr/lookr>
+- **Min Zola version**: 0.16.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-lookr.webp"
+  dark = "./screenshots/dark-lookr.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the lookr theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/lookr/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/m0ddr/lookr"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-lookr"
+  js = "const b=document.getElementById('install-lookr').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-lookr"
+  js = "const b=document.getElementById('info-lookr').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "devnzt"
 name = "devnzt"
 desc = "A simple zola theme for personal use."
@@ -2222,6 +2286,71 @@ theme = "Seje2"
   name = "Info"
   url = "#info-Seje2"
   js = "const b=document.getElementById('info-Seje2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "parchment"
+name = "parchment"
+desc = "Parchemnt theme, by jasonfry.co.uk"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-parchment'></summary>
+
+### Installation{#h-install-parchment}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jsonfry/parchment.git themes/parchment
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jsonfry/parchment.git themes/parchment
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "parchment"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-parchment'></summary>
+
+### Info{#h-info-parchment}
+- **Author**: [Jason Fry](https://jasonfry.co.uk)
+- **License**: MIT
+- **Homepage**: <https://github.com/json/parchment>
+- **Main Live Preview**: <https://whispers-on-parchment.jasonfry.co.uk>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-parchment.webp"
+  dark = "./screenshots/dark-parchment.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the parchment theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/parchment/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jsonfry/parchment"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-parchment"
+  js = "const b=document.getElementById('install-parchment').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-parchment"
+  js = "const b=document.getElementById('info-parchment').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
