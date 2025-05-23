@@ -20,7 +20,6 @@
 - [re137](https://github.com/tinikov/zola-theme-re137): 17 commits: `style.css doesn't exist`
 - [butler](https://github.com/shalzz/butler): 108 commits: `critical.css doesn't exist`
 - [polymathic](https://github.com/anvlkv/polymathic): 95 commits: `config.toml not found`
-- [magic-box](https://github.com/dulvui/magic-box): 189 commits: `unknown field date`
 - [tranquil](https://github.com/TeaDrinkingProgrammer/tranquil): 298 commits: `unknown field generate_feed`
 - [hermit_zola](https://github.com/VersBinarii/hermit_zola): 66 commits: `unknown field highlight_code`
 - [hayflow](https://github.com/aaw3/hayflow): 19 commits: `variable not found`
@@ -51,6 +50,7 @@
 - [zerm](https://github.com/ejmg/zerm): 76 commits: `unknown field generate_feed`
 - [zola.386](https://github.com/lopes/zola.386): 26 commits: `unknown field highlight_code`
 - [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
+- [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -76,8 +76,8 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
 - [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
 - [zola-scribble](https://github.com/jzbor/zola-scribble): 24 commits
-- [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 4 commits
-- [neovim-theme](https://github.com/Super-Botman/neovim-theme): 40 commits
+- [zola-theme-by-g](https://github.com/akshithg/zola-theme-by-g): 8 commits
+- [neovim-theme](https://github.com/Super-Botman/neovim-theme): 71 commits
 - [ennui](https://codeberg.org/leana8959/ennui): 41 commits
 - [doc_zola_theme](https://github.com/ProPixelizer/doc_zola_theme): 62 commits
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
