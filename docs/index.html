@@ -2745,6 +2745,79 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Magic Box</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-magic-box.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-magic-box.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-magic-box.webp"
+        alt="Screenshot of the Magic Box theme" width="1360" height="765" />
+    </picture>
+    <p>A simple blog theme with project landing-pages</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-magic-box'></summary>
+<h3 id="h-install-magic-box">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/dulvui/magic-box.git themes/magic-box
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/dulvui/magic-box.git themes/magic-box
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">magic-box</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-magic-box'></summary>
+<h3 id="h-info-magic-box">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://simondalvai.org">Simon Dalvai</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/dulvui/magic-box">https://github.com/dulvui/magic-box</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://simondalvai.org">https://simondalvai.org</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/magic-box/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/dulvui/magic-box"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-magic-box"
+        onclick="const b=document.getElementById('install-magic-box').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-magic-box"
+        onclick="const b=document.getElementById('info-magic-box').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Ametrine</h2>
   <div class="not-prose">
     <picture>
@@ -2892,6 +2965,79 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">dark-magic</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-dark-magic.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-dark-magic.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-dark-magic.webp"
+        alt="Screenshot of the dark-magic theme" width="1360" height="765" />
+    </picture>
+    <p>Elegant dark theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-dark-magic'></summary>
+<h3 id="h-install-dark-magic">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/DirectorX/dark-magic.git themes/dark-magic
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/DirectorX/dark-magic.git themes/dark-magic
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">dark-magic</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-dark-magic'></summary>
+<h3 id="h-info-dark-magic">Info</h3>
+<ul>
+<li><strong>Author</strong>: DirectorX</li>
+<li><strong>License</strong>: ICS</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/DirectorX/dark-magic">https://github.com/DirectorX/dark-magic</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://directorx.github.io/dark-magic/">https://directorx.github.io/dark-magic/</a></li>
+<li><strong>Min Zola version</strong>: 0.1.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/dark-magic/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/DirectorX/dark-magic"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-dark-magic"
+        onclick="const b=document.getElementById('install-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-dark-magic"
+        onclick="const b=document.getElementById('info-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Oceanic Zen</h2>
   <div class="not-prose">
     <picture>
@@ -3007,7 +3153,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <li><strong>License</strong>: MIT</li>
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/dongryul-kim/olivine">https://github.com/dongryul-kim/olivine</a></li>
 <li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://dongryul-kim.github.io/olivine/">https://dongryul-kim.github.io/olivine/</a></li>
-<li><strong>Min Zola version</strong>: 0.17.2</li>
+<li><strong>Min Zola version</strong>: 0.20.0</li>
 </ul>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">

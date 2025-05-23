@@ -100,6 +100,9 @@
       document.documentElement.dataset.theme =
         "toggle";
     </script>
+
+    <!-- Reference return to click position script -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
   </head>
 
   <body class="hack dark main container">
@@ -112,7 +115,7 @@
         itemtype="http://schema.org/SiteNavigationElement"
         class="navbar"
       >
-        <div class="nav-links">
+        <section class="nav-links">
           
           <a
             itemprop="url"
@@ -138,9 +141,9 @@
             <span itemprop="name">Tags</span>
           </a>
           
-        </div>
+        </section>
       </nav>
-      <div class="user-actions-container">
+      <aside class="user-actions-container">
         
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -156,9 +159,9 @@
           />
         </svg>
         <input type="text" id="search" placeholder="Search..." />
-        <div class="search-results">
-          <div class="search-results__items"></div>
-        </div>
+        <section class="search-results" aria-live="polite">
+          <article class="search-results__items" role="list"></article>
+        </section>
          
         <a id="dark-mode-toggle" href="#">
           <img
@@ -200,7 +203,7 @@
           />
         </a>
         
-      </div>
+      </aside>
     </header>
      
     

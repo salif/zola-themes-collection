@@ -13,8 +13,11 @@ There are the standard italic and strong and italic str…"/>
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
+  // Import Zola variables to Javascript
   var olivine = {
     base_url: "https://salif.github.io/zola-themes-collection/demo/olivine",
+    lower: "https://salif.github.io/zola-themes-collection/demo/olivine/docs/01-intro/",
+    higher: "https://salif.github.io/zola-themes-collection/demo/olivine/docs/03-configuration/",
   };
 </script>
 
@@ -36,6 +39,11 @@ There are the standard italic and strong and italic str…"/>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
+    
+<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/fonts.css">
+<script src="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/tikzjax.js" defer></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -52,11 +60,13 @@ There are the standard italic and strong and italic str…"/>
 <span> / </span>
 Styles demo
 </div>
+
 <noscript><style>#search{display:none;}</style></noscript>
 <div id="search">
   <input id="search-input" type="search" placeholder="Search..."/>
   <div id="search-results"></div>
 </div>
+
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
 
@@ -71,7 +81,7 @@ Styles demo
 <ul>
   <li><a id="olivine-today"><span class="olivine-icon"><i class="fa-regular fa-calendar-check"></i></span> Today</a></li>
   <li><a id="olivine-yesterday"><span class="olivine-icon"><i class="fa-regular fa-calendar-minus"></i></span> Yesterday</a></li>
-  <li><a id="olivine-calendar"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
+  <li><a id="olivine-calendar" href="https://salif.github.io/zola-themes-collection/demo/olivine/journal"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
   <script>setJournal();</script>
 </ul>
 
@@ -115,6 +125,9 @@ Styles demo
   </li>
   <li>
     <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#tags">Tags</a>
+  </li>
+  <li>
+    <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#admonition-blocks">Admonition blocks</a>
   </li>
 </ul>
 </div>
@@ -255,6 +268,13 @@ make this page have this tag. This is implemented as a shortcode.</p>
 For example, the frontmatter for this page includes the following line.</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>taxonomies.tags = [&quot;markdown&quot;]
 </span></code></pre>
+<h2 id="admonition-blocks">Admonition blocks</h2>
+<p>A <code>&lt;div&gt;</code> element with class <code>olivine-admonish</code> is styled to be inside a bubble.</p>
+<div class="olivine-admonish">
+<p><strong>Remark.</strong> One way to create an admonition block is to write raw HTML in your
+markdown file. A better way is to write a simple shortcode that does for you.</p>
+</div>
+<p>At this point, it doesn’t come with fancy headers or icons.</p>
 <div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
 <p>This footnote is at the bottom of the document. It is from the
 <a href="https://salif.github.io/zola-themes-collection/demo/olivine/docs/02-styles-demo/#blockquotes-and-footnotes">Blockquotes and footnotes</a> section.</p>
@@ -264,6 +284,27 @@ For example, the frontmatter for this page includes the following line.</p>
 
       </main>
     </div>
+    <div id="help-window" style="display:none;">
+  <div>
+    <h1>Keyboard shortcuts</h1>
+    <div id="help-shortcuts">
+      <div><code>j</code> scroll down</div>
+      <div><code>k</code> scroll up</div>
+      <div><code>h</code> go to previous sibling</div>
+      <div><code>l</code> go to next sibling</div>
+      <div><code>u</code> go to parent</div>
+      <div><code>H</code> go to root</div>
+      <div><code>p</code> go to previous page</div>
+      <div><code>n</code> go to next page</div>
+      <div><code>[</code> toggle left sidebar</div>
+      <div><code>]</code> toggle right sidebar</div>
+      <div><code>?</code> toggle keyboard shortcuts</div>
+      <div><code>/</code> focus searchbar</div>
+      <div><code>Esc</code> focus document</div>
+    </div>
+  </div>
+</div>
+
   </body>
   
   <script src="https://salif.github.io/zola-themes-collection/demo/olivine/search_index.en.js"></script>

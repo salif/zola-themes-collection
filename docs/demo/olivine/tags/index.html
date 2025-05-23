@@ -11,8 +11,11 @@
     <link rel="icon" type="image/x-icon" href="https://salif.github.io/zola-themes-collection/demo/olivine/icon.svg">
     <link href="https://salif.github.io/zola-themes-collection/demo/olivine/olivine.css" rel="stylesheet"/>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/></noscript><script>
+  // Import Zola variables to Javascript
   var olivine = {
     base_url: "https://salif.github.io/zola-themes-collection/demo/olivine",
+    
+    
   };
 </script>
 
@@ -34,6 +37,11 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
+    
+<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/fonts.css">
+<script src="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/tikzjax.js" defer></script>
+
+
   </head>
 
   <body class="leftbar">
@@ -46,11 +54,13 @@
 <div dir="rtl" id="olivine-breadcrumb">
 <a href="https://salif.github.io/zola-themes-collection/demo/olivine/">Olivine</a>
 </div>
+
 <noscript><style>#search{display:none;}</style></noscript>
 <div id="search">
   <input id="search-input" type="search" placeholder="Search..."/>
   <div id="search-results"></div>
 </div>
+
 <div onclick="toggleTheme()"><span class="olivine-icon"><i class="fa-solid fa-palette"></i></span></div>
 <div onclick="toggleBar('rightbar')"><span class="olivine-icon"><i class="fa-solid fa-book"></i></span></div>
 
@@ -62,7 +72,7 @@
 <ul>
   <li><a id="olivine-today"><span class="olivine-icon"><i class="fa-regular fa-calendar-check"></i></span> Today</a></li>
   <li><a id="olivine-yesterday"><span class="olivine-icon"><i class="fa-regular fa-calendar-minus"></i></span> Yesterday</a></li>
-  <li><a id="olivine-calendar"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
+  <li><a id="olivine-calendar" href="https://salif.github.io/zola-themes-collection/demo/olivine/journal"><span class="olivine-icon"><i class="fa-regular fa-calendar-days"></i></span> All entries</a></li>
   <script>setJournal();</script>
 </ul>
 
@@ -88,7 +98,9 @@
       <main>
 <h1>Tags</h1>
 
-<span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/olivine/">#olivine</a> 3</span>
+<span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/olivine/">#olivine</a> 2</span>
+
+<span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/configuration/">#configuration</a> 2</span>
 
 <span class="olivine-tag"><a href="https://salif.github.io/zola-themes-collection/demo/olivine/tags/markdown/">#markdown</a> 1</span>
 
@@ -97,6 +109,27 @@
 
       </main>
     </div>
+    <div id="help-window" style="display:none;">
+  <div>
+    <h1>Keyboard shortcuts</h1>
+    <div id="help-shortcuts">
+      <div><code>j</code> scroll down</div>
+      <div><code>k</code> scroll up</div>
+      <div><code>h</code> go to previous sibling</div>
+      <div><code>l</code> go to next sibling</div>
+      <div><code>u</code> go to parent</div>
+      <div><code>H</code> go to root</div>
+      <div><code>p</code> go to previous page</div>
+      <div><code>n</code> go to next page</div>
+      <div><code>[</code> toggle left sidebar</div>
+      <div><code>]</code> toggle right sidebar</div>
+      <div><code>?</code> toggle keyboard shortcuts</div>
+      <div><code>/</code> focus searchbar</div>
+      <div><code>Esc</code> focus document</div>
+    </div>
+  </div>
+</div>
+
   </body>
   
   <script src="https://salif.github.io/zola-themes-collection/demo/olivine/search_index.en.js"></script>

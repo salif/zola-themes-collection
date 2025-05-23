@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+  Example content 1
+</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width" />
+  
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/dark-magic/style.css">
+  
+  
+  <link rel="alternate" type="application/atom+xml"
+    title="RSS" href="https://salif.github.io/zola-themes-collection/demo/dark-magic/atom.xml">
+</head>
+
+<body>
+  <div class="container">
+    
+    <div id="header">
+
+        <h1><a class="site-title" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;dark-magic&#x2F;/">dark-magic</a></h1>
+
+        <ul class="nav nav-tabs">
+
+
+
+
+            <li ><a class="page-link" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;dark-magic&#x2F;&#x2F;">home</a></li>
+
+
+
+
+            <li class="active"><a class="page-link" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;dark-magic&#x2F;&#x2F;blog&#x2F;">blog</a></li>
+
+
+
+
+            <li ><a class="page-link" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;dark-magic&#x2F;&#x2F;links&#x2F;">links</a></li>
+
+
+
+
+            <li><a class="page-link" href="https:&#x2F;&#x2F;github.com&#x2F;DirectorX&#x2F;dark-magic" target="_blank">code</a></li>
+
+
+        </ul>
+    </div>
+
+    
+<div class="page-content">
+    <div class="wrapper">
+        <div id="content" class="text-justify">
+            <h1>Example content 1</h1><time>15 May 2019</time>
+            <h2 id="inline-html-elements"><a class="zola-anchor" href="#inline-html-elements" aria-label="Anchor link for: inline-html-elements">🔗</a>
+Inline HTML elements</h2>
+<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+<ul>
+<li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
+<li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
+<li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code>&lt;abbr&gt;</code>, with an optional <code>title</code> attribute for the full phrase.</li>
+<li>Citations, like <cite>— Mark otto</cite>, should use <code>&lt;cite&gt;</code>.</li>
+<li><del>Deleted</del> text should use <code>&lt;del&gt;</code> and <ins>inserted</ins> text should use <code>&lt;ins&gt;</code>.</li>
+<li>Superscript <sup>text</sup> uses <code>&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code>&lt;sub&gt;</code>.</li>
+</ul>
+<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+<span id="continue-reading"></span><h2 id="footnotes"><a class="zola-anchor" href="#footnotes" aria-label="Anchor link for: footnotes">🔗</a>
+Footnotes</h2>
+<p>Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number<sup class="footnote-reference"><a href="#fn-sample_footnote">1</a></sup> will lead you to a footnote. The syntax looks like:</p>
+<pre data-lang="md" style="background-color:#272822;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span>Clicking this number[^fn-sample_footnote]
+</span></code></pre>
+<p>Each footnote needs the <code>^fn-</code> prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:</p>
+<pre data-lang="md" style="background-color:#272822;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span>[^fn-sample_footnote]: Handy! Now click the return link to go back.
+</span></code></pre>
+<p>You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.</p>
+<h2 id="heading"><a class="zola-anchor" href="#heading" aria-label="Anchor link for: heading">🔗</a>
+Heading</h2>
+<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<h3 id="code"><a class="zola-anchor" href="#code" aria-label="Anchor link for: code">🔗</a>
+Code</h3>
+<p>Inline code is available with the <code>&lt;code&gt;</code> element. Snippets of multiple lines of code are supported through Pygments. Longer lines will automatically scroll horizontally when needed.</p>
+<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#75715e;">// Example can be run directly in your JavaScript console
+</span><span>
+</span><span style="color:#75715e;">// Create a function that takes two arguments and returns the sum of those arguments
+</span><span style="font-style:italic;color:#66d9ef;">var </span><span>adder </span><span style="color:#f92672;">= new </span><span>Function(</span><span style="color:#e6db74;">&quot;a&quot;</span><span>, </span><span style="color:#e6db74;">&quot;b&quot;</span><span>, </span><span style="color:#e6db74;">&quot;return a + b&quot;</span><span>);
+</span><span>
+</span><span style="color:#75715e;">// Call the function
+</span><span style="color:#a6e22e;">adder</span><span>(</span><span style="color:#ae81ff;">2</span><span>, </span><span style="color:#ae81ff;">6</span><span>);
+</span><span style="color:#75715e;">// &gt; 8
+</span></code></pre>
+<p>You may also optionally show code snippets with line numbers. Add <code>linenos</code> to the Pygments tags.</p>
+<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#75715e;">// Example can be run directly in your JavaScript console
+</span><span>
+</span><span style="color:#75715e;">// Create a function that takes two arguments and returns the sum of those arguments
+</span><span style="font-style:italic;color:#66d9ef;">var </span><span>adder </span><span style="color:#f92672;">= new </span><span>Function(</span><span style="color:#e6db74;">&quot;a&quot;</span><span>, </span><span style="color:#e6db74;">&quot;b&quot;</span><span>, </span><span style="color:#e6db74;">&quot;return a + b&quot;</span><span>);
+</span><span>
+</span><span style="color:#75715e;">// Call the function
+</span><span style="color:#a6e22e;">adder</span><span>(</span><span style="color:#ae81ff;">2</span><span>, </span><span style="color:#ae81ff;">6</span><span>);
+</span><span style="color:#75715e;">// &gt; 8
+</span></code></pre>
+<p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+<h3 id="gists-via-github-pages"><a class="zola-anchor" href="#gists-via-github-pages" aria-label="Anchor link for: gists-via-github-pages">🔗</a>
+Gists via GitHub Pages</h3>
+<p>Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui.</p>
+<div >
+  <script src="https:&#x2F;&#x2F;gist.github.com&#x2F;shalzz&#x2F;281559a80af7adb5ab71320f5a802f94.js"></script>
+</div>
+<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.</p>
+<h3 id="lists"><a class="zola-anchor" href="#lists" aria-label="Anchor link for: lists">🔗</a>
+Lists</h3>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<ul>
+<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+<li>Donec id elit non mi porta gravida at eget metus.</li>
+<li>Nulla vitae elit libero, a pharetra augue.</li>
+</ul>
+<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+<ol>
+<li>Vestibulum id ligula porta felis euismod semper.</li>
+<li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+</ol>
+<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+<dl>
+  <dt>HyperText Markup Language (HTML)</dt>
+  <dd>The language used to describe and define the content of a Web page</dd>
+  <dt>Cascading Style Sheets (CSS)</dt>
+  <dd>Used to describe the appearance of Web content</dd>
+  <dt>JavaScript (JS)</dt>
+  <dd>The programming language used to build advanced Web sites and applications</dd>
+</dl>
+<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<h3 id="images"><a class="zola-anchor" href="#images" aria-label="Anchor link for: images">🔗</a>
+Images</h3>
+<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+<p><img src="http://placehold.it/800x400" alt="placeholder" title="Large example image" />
+<img src="http://placehold.it/400x200" alt="placeholder" title="Medium example image" />
+<img src="http://placehold.it/200x200" alt="placeholder" title="Small example image" /></p>
+<h3 id="tables"><a class="zola-anchor" href="#tables" aria-label="Anchor link for: tables">🔗</a>
+Tables</h3>
+<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Upvotes</th>
+      <th>Downvotes</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Totals</td>
+      <td>21</td>
+      <td>23</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>Alice</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<hr />
+<p>Want to see something else added? <a href="https://github.com/DirectorX/dark-magic/issues">Open an issue.</a></p>
+<div class="footnote-definition" id="fn-sample_footnote"><sup class="footnote-definition-label">1</sup>
+<p>Handy! Now click the return link to go back.</p>
+</div>
+
+        </div>
+      </div>
+</div>
+
+    
+    
+    
+    <div id="footer" class="modal-footer">
+      Copyright &copy; 2019-2025
+         <span>dark-magic</span> <a target="_blank"
+          href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;dark-magic&#x2F;/atom.xml">subscribe</a>
+        
+    </div>
+  </div>
+  
+  
+</body>
+
+</html>

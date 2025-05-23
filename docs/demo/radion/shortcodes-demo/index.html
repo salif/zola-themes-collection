@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     
-    <meta name="description" content="A elegant light and dark theme for Zola" />
-    <meta property="og:description" content="A elegant light and dark theme for Zola" />
-    <meta property="twitter:description" content="A elegant light and dark theme for Zola" />
+    
+    <meta name="description" content="radion comes with some handy shortcodes to make your life easier and
+your posts more exciting." />
+    <meta property="og:description" content="radion comes with some handy shortcodes to make your life easier and
+your posts more exciting." />
+    <meta property="twitter:description" content="radion comes with some handy shortcodes to make your life easier and
+your posts more exciting." />
     
 
     <!-- Title -->
@@ -104,6 +108,9 @@
       document.documentElement.dataset.theme =
         "toggle";
     </script>
+
+    <!-- Reference return to click position script -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
   </head>
 
   <body class="hack dark main container">
@@ -116,7 +123,7 @@
         itemtype="http://schema.org/SiteNavigationElement"
         class="navbar"
       >
-        <div class="nav-links">
+        <section class="nav-links">
           
           <a
             itemprop="url"
@@ -142,9 +149,9 @@
             <span itemprop="name">Tags</span>
           </a>
           
-        </div>
+        </section>
       </nav>
-      <div class="user-actions-container">
+      <aside class="user-actions-container">
         
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +167,9 @@
           />
         </svg>
         <input type="text" id="search" placeholder="Search..." />
-        <div class="search-results">
-          <div class="search-results__items"></div>
-        </div>
+        <section class="search-results" aria-live="polite">
+          <article class="search-results__items" role="list"></article>
+        </section>
          
         <a id="dark-mode-toggle" href="#">
           <img
@@ -204,7 +211,7 @@
           />
         </a>
         
-      </div>
+      </aside>
     </header>
      
     
@@ -246,7 +253,7 @@ your posts more exciting.</p>
 <p>$$
 \texttt{{{ gif(sources=["path/to/file"], width=[1-100], caption=[""]) }}}
 $$</p>
-<div
+<section
   style="width: 100%; max-width: 50%; margin: 0 auto; text-align: center;">
   <video autoplay loop muted playsinline
     style="max-width: 100%; height: auto; display: inline-block;">
@@ -255,28 +262,28 @@ $$</p>
     – sorry!
   </video>
   
-</div>
+</section>
 <h2 id="fancy-notes"><a class="zola-anchor" href="#fancy-notes" aria-label="Anchor link for: fancy-notes">Fancy Notes</a></h2>
 <p>$$
 \texttt{{{ note(body="...", header=["" | "Note"], center=[true/false | false]) }}}
 $$</p>
-<div class="note-container">
+<article class="note-container">
   <details open class="note-details">
     <summary class="note-header">
       
-      <div class="note-icon">
+      <section class="note-icon">
         <p>Note</p>
 
-      </div>
+      </section>
       
     </summary>
-    <div class="note-content">
+    <section class="note-content">
       <p>Some really insightful note here.</p>
 <p>$$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2} $$</p>
 
-    </div>
+    </section>
   </details>
-</div>
+</article>
 <h2 id="youtube-video-embedding"><a class="zola-anchor" href="#youtube-video-embedding" aria-label="Anchor link for: youtube-video-embedding">YouTube Video Embedding</a></h2>
 <p>$$
 \texttt{{{ youtube(id="youtube-id", width=[1-100]) }}}
@@ -291,9 +298,7 @@ $$</p>
 <p>$$
 \texttt{{{ audio(source="path/to/file") }}}
 $$</p>
-<div
-  style="width: 100%; max-width: 100%; margin: 0 auto; text-align: center;">
-
+<section style="width: 100%; max-width: 100%; margin: 0 auto; text-align: center;">
   <audio controls="controls">
     <source type="audio/mp3" src="https://salif.github.io/zola-themes-collection/demo/radion//shortcodes-demo/assets/audio.mp3">
     </source>
@@ -301,11 +306,24 @@ $$</p>
     </source>
     <p>Your browser does not support the audio element.</p>
   </audio>
-
-</div>
+</section>
 <blockquote>
 <p>If you're still falling for this, I don't know what to tell you.</p>
 </blockquote>
+<h2 id="responsive-images"><a class="zola-anchor" href="#responsive-images" aria-label="Anchor link for: responsive-images">Responsive Images</a></h2>
+<p>$$
+\texttt{ {{ responsive(src="path/to/image", caption="Optional caption")}} }
+$$</p>
+<section
+  style="width: 100%; max-width: 100%; margin: 0 auto; text-align: center;">
+  <img src="assets/ferris.png" 
+    style="max-width: 100%; height: auto; display: inline-block;">
+  
+  <caption style="margin-top: 0.5em;">
+    <p style="font-style: italic;">Everyone say 'Hi Ferris' in the comments</p>
+  </caption>
+  
+</section>
 
 
 

@@ -8,9 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     
-    <meta name="description" content="A elegant light and dark theme for Zola" />
-    <meta property="og:description" content="A elegant light and dark theme for Zola" />
-    <meta property="twitter:description" content="A elegant light and dark theme for Zola" />
+    
+    <meta name="description" content="This page demonstrates various Markdown formatting features that can be used in
+the theme. The following sections showcase different elements, such as blockquotes,
+headings, lists, and more." />
+    <meta property="og:description" content="This page demonstrates various Markdown formatting features that can be used in
+the theme. The following sections showcase different elements, such as blockquotes,
+headings, lists, and more." />
+    <meta property="twitter:description" content="This page demonstrates various Markdown formatting features that can be used in
+the theme. The following sections showcase different elements, such as blockquotes,
+headings, lists, and more." />
     
 
     <!-- Title -->
@@ -104,6 +111,9 @@
       document.documentElement.dataset.theme =
         "toggle";
     </script>
+
+    <!-- Reference return to click position script -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
   </head>
 
   <body class="hack dark main container">
@@ -116,7 +126,7 @@
         itemtype="http://schema.org/SiteNavigationElement"
         class="navbar"
       >
-        <div class="nav-links">
+        <section class="nav-links">
           
           <a
             itemprop="url"
@@ -142,9 +152,9 @@
             <span itemprop="name">Tags</span>
           </a>
           
-        </div>
+        </section>
       </nav>
-      <div class="user-actions-container">
+      <aside class="user-actions-container">
         
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +170,9 @@
           />
         </svg>
         <input type="text" id="search" placeholder="Search..." />
-        <div class="search-results">
-          <div class="search-results__items"></div>
-        </div>
+        <section class="search-results" aria-live="polite">
+          <article class="search-results__items" role="list"></article>
+        </section>
          
         <a id="dark-mode-toggle" href="#">
           <img
@@ -204,7 +214,7 @@
           />
         </a>
         
-      </div>
+      </aside>
     </header>
      
     

@@ -46,18 +46,18 @@
         }
       </script>
     
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/lookr/css/base.css?h=c293fe16771758419f24" />
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/lookr/css/base.css?h=89044fea4bbf6eadf4b1" />
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/lookr/css/toc.css?h=64e76fc5c7af0c68aa07" />
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/lookr/styles/styles.css?h=af90b38788f757e02fee" />
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/lookr/styles/styles.css?h=6a0b2a7e847586dba937" />
 
 </head>
 
-<body class="flex justify-center text-black dark:text-white transition dark:bg-neutral-900">
+<body class="flex justify-center text-black dark:text-white transition dark:bg-zinc-900">
     <div class="w-full max-w-[70rem] px-4 sm:px-7 lg:px-10">
     <header class="flex flex-col max-w-3xl mx-auto text-center sm:flex-row items-center justify-between flex-wrap py-5">
         <div class="flex flex-col items-start">
         <h1 class="text-center sm:text-left text-5xl w-full font-semibold dark:text-blue-500 text-blue-600 hover:scale-110"><a href="https://salif.github.io/zola-themes-collection/demo/lookr/">lookr</a></h1>
-        <span class="text-neutral-500">A really cool blog</span>
+        <span class="text-zinc-500">A really cool blog</span>
         </div>
         <div class="flex items-center">
         
@@ -97,13 +97,13 @@
         
                         <!-- Three-column grid layout with larger middle column -->
                         <div
-                            class="grid grid-cols-1 lg:grid-cols-8 gap-10">
+                            class="grid grid-cols-1 lg:grid-cols-6 gap-10">
                             <!-- Left empty column (only visible on large screens) -->
                             <div class="hidden lg:block lg:col-span-1"></div>
 
                             <!-- Middle column - main content (larger) -->
-                            <div class="lg:col-span-5">
-                                <article class="grid-prose transition prose prose-h2: max-w-full prose-neutral prose-base dark:prose-invert">
+                            <div class="lg:col-span-4">
+                                <article class="grid-prose transition prose prose-h2: max-w-full prose-zinc prose-base dark:prose-invert">
                                     
                                     
                                         <figure class="!mb-4 !mt-0">
@@ -113,21 +113,30 @@
                                                     <img height="500px" class="absolute end-0 top-4 z-0 mt-0 h-full rounded-3xl opacity-60 blur-xl transition-opacity duration-300" src="https://salif.github.io/zola-themes-collection/demo/lookr/rust-post/banner.png?h=0399ea9b97305d898d35" fetchpriority="high" loading="eager"></picture>
                                                 </div>
                                                 
-                                                    <figcaption class="!mt-0 text-sm text-neutral-500">A little crab</figcaption>
+                                                    <figcaption class="!mt-0 text-sm text-zinc-500 text-center">A little crab</figcaption>
                                                 
                                             </figure>
                                         
                                         <div class="flex flex-col mb-4">
                                             <h1 class="!mb-0 !mt-4 !sm:mt-2 !blur-none">Rusty post</h1>
                                             
-                                                <p class="text-sm">Yet another example post!</p>
+                                                <p class="text-sm">"Yet another example post!"</p>
                                             
                                             
-                                                <label class="text-neutral-500 text-sm">Posted on
-                                                    <time datetime="2025-02-11T00:00:00+00:00">February 11, 2025</time>
-                                                    •
-                                                    1
-                                                    minute read</label>
+                                                <label class="text-zinc-500 flex flex-col text-sm">
+                                                    <time datetime="2025-02-11T00:00:00+00:00">
+                                                        <div class="flex flex-row">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar-week mt-0.5 mr-2" viewBox="0 0 16 16">
+                                                            <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                                          </svg>Feb 11, 2025</time>
+                                                    
+                                                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clock mt-0.5 ml-4 mr-2" viewBox="0 0 16 16">
+                                                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                                                    </svg>1 minute read
+                                                </div>
+                                                </label>
                                             
                                         </div>
                                         <hr class="!mb-4 !mt-4 w-1/3">
@@ -149,7 +158,7 @@
                                     </div>
 
                                     <!-- Right column - TOC or empty space -->
-                                    <div class="lg:col-span-2">
+                                    <div class="lg:col-span-1">
                                         
                                     </div>
                                 </div>
@@ -159,7 +168,7 @@
                             
     </main>
 
-    <footer class="mt-10 p-3 flex flex-col justify-center items-center dark:text-neutral-400 text-neutral-600 w-full"">
+    <footer class="mt-10 p-3 flex flex-col justify-center items-center dark:text-zinc-400 text-zinc-600 w-full"">
         <p class="text-sm">&copy; moddr 2025</p>
         <p class="text-sm">Powered by <a href="https://www.getzola.org/">Zola</a> using the <a href="https://github.com/m0ddr/lookr">lookr</a> theme
 
