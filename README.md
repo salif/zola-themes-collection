@@ -51,6 +51,7 @@
 - [zola.386](https://github.com/lopes/zola.386): 26 commits: `unknown field highlight_code`
 - [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
 - [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
+- [lightspeed](https://github.com/carpetscheme/lightspeed): 37 commits: `style.css doesn't exist`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -82,6 +83,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [doc_zola_theme](https://github.com/ProPixelizer/doc_zola_theme): 62 commits
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
 - [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
+- [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
 
 ### No license that allows me to host a live demo
 

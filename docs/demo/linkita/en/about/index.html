@@ -70,9 +70,7 @@
           onclick="window.linkita.toggleSearch();"
           class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
         ></button>
-        <script>window.linkita.initSearchButton({
-          scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"]
-        });</script>
+        <script>window.linkita.initSearchButton({ scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"] });</script>
         <button type="button" title="Go to translation of the page" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
@@ -139,7 +137,8 @@
   <!-- Content -->
   <section>
 
-<p>A clean and elegant blog theme for <a href="https://www.getzola.org/">Zola</a>. Linkita is based on <a href="https://github.com/st1020/kita">Kita</a> and <a href="https://github.com/nanxiaobei/hugo-paper">Hugo-Paper</a> and is multilingual and SEO friendly.</p>
+<p>A clean and elegant blog theme for <a href="https://www.getzola.org/">Zola</a>.
+Linkita is based on <a href="https://github.com/st1020/kita">Kita</a> and <a href="https://github.com/nanxiaobei/hugo-paper">Hugo-Paper</a> and is multilingual and SEO friendly.</p>
 <ul>
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>For discussion, join the <a href="https://matrix.to/#/#linkita:mozilla.org">Matrix chat room</a>.</li>
@@ -153,7 +152,6 @@
 </li>
 </ul>
 <h2 id="features">Features</h2>
-<h3 id="kita-features">Kita features</h3>
 <ul>
 <li>Easy to use and modify</li>
 <li>No preset limits</li>
@@ -170,9 +168,6 @@
 <li>Comments using <a href="https://giscus.app/">Giscus</a></li>
 <li>Mathematical notations using <a href="https://katex.org/">KaTeX</a></li>
 <li>Diagrams and charts using <a href="https://mermaid.js.org/">Mermaid</a></li>
-</ul>
-<h3 id="linkita-features">Linkita features</h3>
-<ul>
 <li>Multilingual support</li>
 <li>Search support (elasticlunr_javascript)</li>
 <li>Improved search engine optimization</li>
@@ -267,6 +262,8 @@ Set the ones you need.</p>
 <h4 id="home-page">Home page</h4>
 <p>Create a <code>content/_index.md</code> file and set <code>extra.profile</code> to your username:</p>
 <pre data-lang="toml" data-name="content/_index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/_index.md"><span>+++
+</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;&quot;
+</span><span style="color:#ffb964;">description </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#ffb964;">sort_by </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">date</span><span style="color:#556633;">&quot;
 </span><span style="color:#ffb964;">paginate_by </span><span>= </span><span style="color:#cf6a4c;">4
 </span><span>[</span><span style="color:#ffb964;">extra</span><span>]
@@ -280,7 +277,8 @@ For French, the file name is <code>content/_index.fr.md</code>.</p>
 <p>In the <code>content</code> directory, create a subdirectory named <code>blog</code> or another name of your choice.</p>
 <p>Create a <code>content/blog/_index.md</code> file:</p>
 <pre data-lang="toml" data-name="content/blog/_index.md" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="content/blog/_index.md"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Blog</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Archive</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">description </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#ffb964;">template </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">archive.html</span><span style="color:#556633;">&quot;
 </span><span style="color:#ffb964;">transparent </span><span>= true
 </span><span>[</span><span style="color:#ffb964;">extra</span><span>]
@@ -416,6 +414,15 @@ Linkita has special support for taxonomies named <code>tags</code>, <code>catego
 </span><span style="color:#ffb964;">taxonomies </span><span>= [
 </span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">tags</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">feed </span><span>= true, </span><span style="color:#ffb964;">paginate_by </span><span>= </span><span style="color:#cf6a4c;">4 </span><span>}
 </span><span>]
+</span></code></pre>
+<p>By default, taxonomy pages are sorted in descending order by the number of posts.
+You can customize this behavior using the <code>extra.taxonomy_sorting</code> variable:</p>
+<pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">taxonomy_sorting</span><span>]
+</span><span style="color:#888888;"># &quot;ascending_frequency&quot;, &quot;descending_frequency&quot; or &quot;name&quot;
+</span><span style="color:#888888;"># Default value: &quot;descending_frequency&quot;
+</span><span style="color:#ffb964;">categories </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">tags </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">descending_frequency</span><span style="color:#556633;">&quot;
+</span><span style="color:#ffb964;">authors </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">name</span><span style="color:#556633;">&quot;
 </span></code></pre>
 <h3 id="general-config">General config</h3>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span>[</span><span style="color:#ffb964;">extra</span><span>]
