@@ -1,3 +1,8 @@
+/**
+ * @file reference-return.js Linking footnotes to their references
+ * @author Micah Kepe
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
   const footnotes = document.querySelectorAll(".footnote-definition");
   footnotes.forEach((fn) => {
@@ -15,7 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const returnLink = document.createElement("a");
     returnLink.href = `#${refId}`;
     returnLink.classList = "footnote-return";
-    returnLink.textContent = " ↩";
-    fn.appendChild(returnLink);
+    returnLink.textContent = "↩";
+
+    // ARIA
+    returnLink.setAttribute("aria-label", "Return to footnote reference");
+    returnLink.setAttribute("role", "link");
+    returnLink.setAttribute("tabindex", "0");
+
+    // Append to the last p tag
+    const lastParagraph = fn.querySelector("p:last-of-type");
+    if (lastParagraph) {
+      lastParagraph.appendChild(returnLink);
+    } else {
+      // If no paragraph, append to the footnote definition directly
+      fn.appendChild(returnLink);
+    }
   });
 });
