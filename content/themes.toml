@@ -2419,71 +2419,6 @@ theme = "magic-box"
   newtab = false
 
 [[project]]
-theme = "ametrine"
-name = "Ametrine"
-desc = "Modern, pretty, and clean theme."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ametrine'></summary>
-
-### Installation{#h-install-ametrine}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/daudix/ametrine.git themes/ametrine
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/daudix/ametrine.git themes/ametrine
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "ametrine"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ametrine'></summary>
-
-### Info{#h-info-ametrine}
-- **Author**: [David Lapshin](https://daudix.one)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/daudix/ametrine>
-- **Main Live Preview**: <https://ametrine.daudix.one>
-- **Min Zola version**: 0.19.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-ametrine.webp"
-  dark = "./screenshots/dark-ametrine.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Ametrine theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/ametrine/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/daudix/ametrine"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-ametrine"
-  js = "const b=document.getElementById('install-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-ametrine"
-  js = "const b=document.getElementById('info-ametrine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "terminimal"
 name = "terminimal"
 desc = "A simple, minimal retro theme"
@@ -2742,6 +2677,70 @@ theme = "olivine"
   name = "Info"
   url = "#info-olivine"
   js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "photography"
+name = "photography theme"
+desc = "a theme for a photography portfolio"
+tags = [ "Blog" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-photography'></summary>
+
+### Installation{#h-install-photography}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/arbs09/photography-theme.git themes/photography
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/arbs09/photography-theme.git themes/photography
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "photography"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-photography'></summary>
+
+### Info{#h-info-photography}
+- **Author**: [arbs09](https://arbs09.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/arbs09/photography-theme>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-photography.webp"
+  dark = "./screenshots/dark-photography.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the photography theme theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/photography/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/arbs09/photography-theme"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-photography"
+  js = "const b=document.getElementById('install-photography').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-photography"
+  js = "const b=document.getElementById('info-photography').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]

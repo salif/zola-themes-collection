@@ -52,6 +52,8 @@
 - [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
 - [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
 - [lightspeed](https://github.com/carpetscheme/lightspeed): 37 commits: `style.css doesn't exist`
+- [zolanote](https://github.com/ghventix/zolanote): 1 commit: `can't find stylesheet to import`
+- [ametrine](https://codeberg.org/daudix/ametrine): 200 commits: `filter call 'urlencode' failed`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -84,6 +86,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
 - [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
+- [carbon](https://github.com/nik-rev/carbon.git): 274 commits
 
 ### No license that allows me to host a live demo
 
