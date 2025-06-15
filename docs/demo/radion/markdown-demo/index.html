@@ -107,16 +107,36 @@ headings, lists, and more." />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Pass Theme Preference as Data Attribute -->
-    <script>
-      document.documentElement.dataset.theme =
-        "toggle";
-    </script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/init-theme.js"></script>
 
     <!-- Reference return to click position script -->
-    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
+    <script defer src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
+
+    <!-- additional scripts -->
+    
+      
+        <script defer src="https://salif.github.io/zola-themes-collection/demo/radion/js/codeblock.js"></script>
+      
+      
+        <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/toggle-theme.js"></script>
+      
+      
+<!-- MathJax script for rendering LaTeX math equations -->
+<script src="https://salif.github.io/zola-themes-collection/demo/radion/js/mathjax-config.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async
+></script>
+
+
+      
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/radion/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/radion/js/search.js"></script>
+
+    
   </head>
 
-  <body class="hack dark main container">
+  <body class="hack main container">
     
     
          
@@ -313,6 +333,11 @@ headings, lists, and more.</p>
                                             </li>
                                             
                                         
+                                            <li>
+                                                <a href="https://salif.github.io/zola-themes-collection/demo/radion/markdown-demo/#nested-lists">Nested Lists</a>
+                                            </li>
+                                            
+                                        
                                     </ul>
                                 
                             </li>
@@ -399,6 +424,61 @@ to create a nested structure.</p>
 <li>Item 2</li>
 <li>Item 3</li>
 </ol>
+<h3 id="nested-lists"><a class="zola-anchor" href="#nested-lists" aria-label="Anchor link for: nested-lists">Nested Lists</a></h3>
+<p>Example of 3-level nested ordered lists:</p>
+<ol>
+<li>
+<p>a</p>
+</li>
+<li>
+<p>First sublist:</p>
+<ol>
+<li>
+<p>One (with additional sublist)</p>
+<ol>
+<li>Another</li>
+<li>ordered</li>
+<li>sublist.</li>
+</ol>
+</li>
+<li>
+<p>Two</p>
+</li>
+<li>
+<p>Three</p>
+</li>
+</ol>
+</li>
+<li>
+<p>c</p>
+</li>
+<li>
+<p>d</p>
+</li>
+</ol>
+<hr />
+<p>Example of 3-level nested unordered lists:</p>
+<ul>
+<li>
+<p>a</p>
+<ul>
+<li>b</li>
+<li>c</li>
+</ul>
+</li>
+<li>
+<p>d</p>
+<ul>
+<li>e</li>
+<li>f
+<ul>
+<li>g</li>
+<li>h</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="code-blocks"><a class="zola-anchor" href="#code-blocks" aria-label="Anchor link for: code-blocks">Code Blocks</a></h2>
 <pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
 </span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;Hello, world!&quot;</span><span style="color:#abb2bf;">);
@@ -486,23 +566,5 @@ of the footnote.</p>
 </article>
 
 
-
-    <!-- optional scripts -->
-     
-    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/codeblock.js"></script>
-     
-    <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/toggle-theme.js"></script>
-     
-<!-- MathJax script for rendering LaTeX math equations -->
-<script src="https://salif.github.io/zola-themes-collection/demo/radion/js/mathjax-config.js"></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-  async
-></script>
-
- 
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/radion/elasticlunr.min.js"></script>
-<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/radion/js/search.js"></script>
- 
   </body>
 </html>

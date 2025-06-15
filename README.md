@@ -54,6 +54,8 @@
 - [lightspeed](https://github.com/carpetscheme/lightspeed): 37 commits: `style.css doesn't exist`
 - [zolanote](https://github.com/ghventix/zolanote): 1 commit: `can't find stylesheet to import`
 - [ametrine](https://codeberg.org/daudix/ametrine): 200 commits: `filter call 'urlencode' failed`
+- [lookr](https://github.com/m0ddr/lookr): 12 commits: `base.css doesn't exist`
+- [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 

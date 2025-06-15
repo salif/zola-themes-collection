@@ -1304,70 +1304,6 @@ theme = "researchlab"
   newtab = false
 
 [[project]]
-theme = "lookr"
-name = "lookr"
-desc = "Personal theme for my Zola blog."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-lookr'></summary>
-
-### Installation{#h-install-lookr}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/m0ddr/lookr.git themes/lookr
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/m0ddr/lookr.git themes/lookr
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "lookr"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-lookr'></summary>
-
-### Info{#h-info-lookr}
-- **Author**: [m0ddr](https://github.com/m0ddr)
-- **License**: MIT
-- **Homepage**: <https://github.com/m0ddr/lookr>
-- **Min Zola version**: 0.16.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-lookr.webp"
-  dark = "./screenshots/dark-lookr.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the lookr theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/lookr/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/m0ddr/lookr"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-lookr"
-  js = "const b=document.getElementById('install-lookr').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-lookr"
-  js = "const b=document.getElementById('info-lookr').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "devnzt"
 name = "devnzt"
 desc = "A simple zola theme for personal use."
@@ -1689,6 +1625,84 @@ theme = "BelResume"
   name = "Info"
   url = "#info-BelResume"
   js = "const b=document.getElementById('info-BelResume').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "peritus"
+name = "peritus"
+desc = "A beautiful theme for academic/professional portfolio sites"
+tags = [
+  "cv",
+  "academic",
+  "professional",
+  "portfolio",
+  "research",
+  "bio",
+  "publications",
+  "education",
+  "experience",
+  "resume",
+  "peritus"
+]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-peritus'></summary>
+
+### Installation{#h-install-peritus}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jskaza/peritus.git themes/peritus
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jskaza/peritus.git themes/peritus
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "peritus"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-peritus'></summary>
+
+### Info{#h-info-peritus}
+- **Author**: [Jonathan Skaza](https://jskaza.github.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jskaza/peritus>
+- **Main Live Preview**: <https://jskaza.github.io/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/HugoBlox/theme-academic-cv>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-peritus.webp"
+  dark = "./screenshots/dark-peritus.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the peritus theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/peritus/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jskaza/peritus"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-peritus"
+  js = "const b=document.getElementById('install-peritus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-peritus"
+  js = "const b=document.getElementById('info-peritus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -2354,6 +2368,72 @@ theme = "parchment"
   newtab = false
 
 [[project]]
+theme = "vonge"
+name = "Vonge"
+desc = "Vonge is a Personal portfolio/blog site template"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-vonge'></summary>
+
+### Installation{#h-install-vonge}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/paberr/vonge-zola-theme.git themes/vonge
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/paberr/vonge-zola-theme.git themes/vonge
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "vonge"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-vonge'></summary>
+
+### Info{#h-info-vonge}
+- **Author**: [Pascal Berrang](https://pascal-berrang.de)
+- **License**: MIT
+- **Homepage**: <https://github.com/paberr/vonge>
+- **Main Live Preview**: <https://paberr.github.io/vonge-zola-theme/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/CloudCannon/vonge-hugo-bookshop-template>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-vonge.webp"
+  dark = "./screenshots/dark-vonge.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Vonge theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/vonge/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/paberr/vonge-zola-theme"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-vonge"
+  js = "const b=document.getElementById('install-vonge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-vonge"
+  js = "const b=document.getElementById('info-vonge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "magic-box"
 name = "Magic Box"
 desc = "A simple blog theme with project landing-pages"
@@ -2677,6 +2757,70 @@ theme = "olivine"
   name = "Info"
   url = "#info-olivine"
   js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "noobping"
+name = "noobping"
+desc = "A minimalistic theme for Zola static site generator. It uses the file names as titles and the folder for the menu structure. The theme is designed to be simple and easy to use, with a focus on content."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-noobping'></summary>
+
+### Installation{#h-install-noobping}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/noobping/zola-theme.git themes/noobping
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/noobping/zola-theme.git themes/noobping
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "noobping"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-noobping'></summary>
+
+### Info{#h-info-noobping}
+- **Author**: [Nick](https://noobping.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/noobping/zola-theme>
+- **Min Zola version**: 0.20.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-noobping.webp"
+  dark = "./screenshots/dark-noobping.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the noobping theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/noobping/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/noobping/zola-theme"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-noobping"
+  js = "const b=document.getElementById('install-noobping').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-noobping"
+  js = "const b=document.getElementById('info-noobping').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
