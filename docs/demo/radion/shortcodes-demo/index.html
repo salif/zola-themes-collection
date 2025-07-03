@@ -306,14 +306,29 @@ $$</p>
 </article>
 <h2 id="youtube-video-embedding"><a class="zola-anchor" href="#youtube-video-embedding" aria-label="Anchor link for: youtube-video-embedding">YouTube Video Embedding</a></h2>
 <p>$$
-\texttt{{{ youtube(id="youtube-id", width=[1-100]) }}}
+\texttt{{{ youtube(id="youtube-id", width=[1-100], [playlist="playlist id"]) }}}
 $$</p>
+<p>Standalone video:</p>
 <div class="responsive-iframe"
   style="width: 100%; max-width: 80%; margin: 0 auto; text-align: center;">
-  <iframe src="https://www.youtube.com/embed/ym3y13nA3ew" webkitallowfullscreen
-    mozallowfullscreen allowfullscreen>
+  <iframe src="https://www.youtube.com/embed/ym3y13nA3ew"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen>
   </iframe>
 </div>
+<p>$$
+\texttt{{{ youtube(id="ym3y13nA3ew", width=80) }}}
+$$</p>
+<br>
+<p>Video from a playlist:</p>
+<div class="responsive-iframe"
+  style="width: 100%; max-width: 80%; margin: 0 auto; text-align: center;">
+  <iframe src="https://www.youtube.com/embed/LnzuMJLZRdU?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH"
+    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  </iframe>
+</div>
+<p>$$
+\texttt{{{ youtube( id="LnzuMJLZRdU", width=80, playlist="PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH") }}}
+$$</p>
 <h2 id="audio-file-embedding"><a class="zola-anchor" href="#audio-file-embedding" aria-label="Anchor link for: audio-file-embedding">Audio File Embedding</a></h2>
 <p>$$
 \texttt{{{ audio(source="path/to/file") }}}
@@ -377,12 +392,13 @@ $$</p>
     
 
 
+    <!-- Page footer -->
     
         <footer>
             <hr>
             <p>
                 
-                    Published by John Doe
+                    Published by Micah Kepe
                 
                 
                     

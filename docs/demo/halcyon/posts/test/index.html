@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple blog for me to write my thoughts">
+    <title>Halcyon | Test Post</title>
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=60e36f5323e85cf56b31"> 
+    
+    
+        
+            
+                
+                    
+                        <link rel="alternate" type="application/atom+xml" title="Halcyon - Atom Feed" href="https://salif.github.io/zola-themes-collection/demo/halcyon/atom.xml">
+                    
+                
+            
+        
+    
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+<body>
+    
+<header class="doublespace footnote-definition">
+    <a href="javascript:history.go(-1)">&LeftArrow; Back</a>
+</header>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" integrity="sha384-HORx6nWi8j5/mYA+y57/9/CZc5z8HnEw4WUZWy5yOn9ToKBv1l58vJaufFAn9Zzi" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true }
+            ],
+            throwOnError: false
+        });
+    });
+</script>
+
+
+
+    
+<main>
+    <div class="doublespace">
+    <h1>Test Post</h1>
+    
+    <p class="secondary small">
+        29 Jul, 2025
+
+        
+        
+        
+        
+        
+
+        
+        
+        - 
+        
+        
+        <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;tags&#x2F;test&#x2F;"># test</a>
+        
+        
+    </p>
+    </div>
+    
+    <p>This is just a quick and dirty test</p>
+<h2 id="math">Math<a class="anchor" aria-hidden="true" href="#math">#</a></h2>
+<p>Maths is rendered by KaTex</p>
+<p>Inline math: $f(a,b,c) = (a^2+b^2+c^2)^3$</p>
+<p><strong>Block math:</strong>
+$$f(a,b,c) = (a^2+b^2+c^2)^3$$</p>
+<p>If you wanted to use maths you need to ensure it's enabled when writing the post:</p>
+<pre data-lang="yaml" style="background-color:#151515;color:#e8e8d3;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>[</span><span style="color:#99ad6a;">extra</span><span>]
+</span><span style="color:#99ad6a;">maths = true
+</span></code></pre>
+<p>This will call the KaTex auto-render extension CDN and math contained in the following tags will be rendered accordingly:</p>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>$math$ for inline math
+</span><span>$$math$$ for display math
+</span></code></pre>
+<h2 id="images">Images<a class="anchor" aria-hidden="true" href="#images">#</a></h2>
+<p>Images should be pretty self explainitory, for personal preference I've set images to center themselves subject to size on the page</p>
+<p><img src="https://salif.github.io/zola-themes-collection/demo/halcyon/posts/test/images/1.jpg" alt="image" /></p>
+<h2 id="youtube-shortcode">Youtube shortcode<a class="anchor" aria-hidden="true" href="#youtube-shortcode">#</a></h2>
+<p>I've also added a youtube shorcode. It's set up with a few handy defaults and takes a video ID.</p>
+<iframe
+	class="video"
+	src="https://www.youtube-nocookie.com/embed/6BBgKWJRx1o"
+	title="YouTube video"
+	frameborder="0"
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	allowfullscreen>
+</iframe>
+<p>Usage:</p>
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{ youtube(id=&quot;6BBgKWJRx1o&quot;) } # This would be double curly brackets
+</span></code></pre>
+<h2 id="github-repos">Github Repos<a class="anchor" aria-hidden="true" href="#github-repos">#</a></h2>
+<p>Lastly the only other shortcode I've implimented is github repos:</p>
+<p><strong>Rust:</strong>
+<div class="doublespace" data-owner="rust-lang" data-repo="rust">
+  <div class="repo-header">
+    <a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener">
+      rust-lang/rust
+    </a>
+    <div class="repo-stats small secondary">
+      <span class="stars">
+        <svg width="16" height="16" viewBox="0 0 576 512" fill="currentColor">
+          <path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0z"/>
+        </svg>
+        <span class="count">-</span>
+      </span>
+      <span class="forks">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
+        </svg>
+        <span class="count">-</span>
+      </span>
+    </div>
+  </div>
+  <div class="repo-description small secondary"></div>
+  <div class="repo-tags small accent"></div>
+</div></p>
+<p>Usage:</p>
+<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{gh_repo(owner=&quot;rust-lang&quot;, repo=&quot;rust&quot;)} # This would be double curly brackets
+</span></code></pre>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://salif.github.io/zola-themes-collection/demo/halcyon/icons/moon.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://salif.github.io/zola-themes-collection/demo/halcyon/icons/sun.svg" width="24" height="24" style="filter: invert(100%);" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=ca000b833f4c29d9bbde"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/theme.js?h=24d735a43f66e8a8e58c"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=c7a3911a432d47f46b1f"></script>
+    </body>
+</html>

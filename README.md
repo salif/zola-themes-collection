@@ -56,6 +56,9 @@
 - [ametrine](https://codeberg.org/daudix/ametrine): 200 commits: `filter call 'urlencode' failed`
 - [lookr](https://github.com/m0ddr/lookr): 12 commits: `base.css doesn't exist`
 - [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
+- [mintec-zola-theme](https://github.com/Coffeeri/mintec-zola-theme): 9 commits: `config.toml not found`
+- [hayakuchi](https://github.com/deepcodesoln/hayakuchi): 10 commits: `Section 'blog/_index.md' not found`
+- [zola-theme-brief](https://github.com/w4ngzhen/zola-theme-brief.git): 2 commits: `config.toml not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
