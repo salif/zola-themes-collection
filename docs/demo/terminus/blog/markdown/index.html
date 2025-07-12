@@ -10,9 +10,10 @@
 
     <link rel="preload" href="https://salif.github.io/zola-themes-collection/demo/terminus/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://salif.github.io/zola-themes-collection/demo/terminus/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/terminus/css/style.css?h=8fcfc93d50dd282d06fb">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/terminus/css/style.css?h=5d653e9a5b66bd488081">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <script src="https://salif.github.io/zola-themes-collection/demo/terminus/js/copy-code-to-clipboard.js?h=6aac77c47d552a0ac847" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/terminus/js/auto-close-popover-on-resize.js?h=4ef87d6fc7b98b22e044" defer></script>
 
     <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/terminus/blog/markdown/">
     <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/terminus/atom.xml" title="Terminus">
@@ -28,7 +29,7 @@
     <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/terminus/blog/markdown/">
     <meta property="og:description" content="This is an article description with some Markdown.">
     <meta property="og:site_name" content="Terminus">
-    <meta property="og:updated_time" content="2025-07-03T13:48:54.538819811+03:00">
+    <meta property="og:updated_time" content="2025-07-12T23:12:43.405014444+03:00">
     <meta property="article:published_time" content="2025-05-18T00:00:00+00:00">
     <meta property="article:modified_time" content="2025-06-17T00:00:00+00:00">
     <meta property="article:section" content="hello">
@@ -47,18 +48,14 @@
             </span>
         </div>
         <nav class="main-menu" aria-label="Main Menu">
-            <ul>
-                <li><a class="skip-to-content" href="#main">Skip to main content</a></li>
-                <li class="main-menu-dropdown">
-                    <button class="main-menu-dropdown-button" aria-haspopup="true">Menu</button>
-                    <ul class="main-menu-items" aria-label="Site Navigation">
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/blog/">blog</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/archive/">archive</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/tags/">tags</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/projects/">projects</a></li>
-                        <li><a href="https://github.com/ebkalderon/terminus" target="_blank">github</a></li>
-                    </ul>
-                </li>
+            <a class="skip-to-content" href="#main">Skip to main content</a>
+            <button class="main-menu-dropdown-button" popovertarget="nav-menu">Menu</button>
+            <ul id="nav-menu" class="main-menu-items" aria-label="Site Navigation" popover>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/blog/">blog</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/archive/">archive</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/tags/">tags</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/projects/">projects</a></li>
+                <li><a href="https://github.com/ebkalderon/terminus" target="_blank">github</a></li>
             </ul>
         </nav>
     </header>
@@ -71,7 +68,7 @@
                 <ul class="post-meta">
                     <li title="Published on 2025-05-18, last updated 2025-06-17"><time datetime="2025-05-18">2025.05.18</time>&nbsp;[Updated: <time datetime="2025-06-17">2025.06.17</time>]</li>
                     <li role="separator" aria-hidden="true">::</li>
-                    <li title="495 words"><time datetime="PT3M">3 min</time> read</li>
+                    <li title="509 words"><time datetime="PT3M">3 min</time> read</li>
                 </ul>
                 <div class="post-tags">
                     <span>&lbrace;<a href="https://salif.github.io/zola-themes-collection/demo/terminus/categories/hello/">hello</a>&rbrace;</span>
@@ -164,7 +161,7 @@ box.</p>
 <li>Another item</li>
 <li>And another item</li>
 </ul>
-<h4 id="nested-unordered-list">Nested Unordered list<a class="post-anchor" href="#nested-unordered-list" aria-label="Anchor link for: nested-unordered-list"><span aria-hidden="true">#</span></a>
+<h4 id="nested-unordered-list">Nested Unordered List<a class="post-anchor" href="#nested-unordered-list" aria-label="Anchor link for: nested-unordered-list"><span aria-hidden="true">#</span></a>
 </h4>
 <ul>
 <li>Fruit
@@ -192,7 +189,7 @@ box.</p>
 </ul>
 </li>
 </ul>
-<h4 id="nested-ordered-list">Nested Ordered list<a class="post-anchor" href="#nested-ordered-list" aria-label="Anchor link for: nested-ordered-list"><span aria-hidden="true">#</span></a>
+<h4 id="nested-ordered-list">Nested Ordered List<a class="post-anchor" href="#nested-ordered-list" aria-label="Anchor link for: nested-ordered-list"><span aria-hidden="true">#</span></a>
 </h4>
 <ol>
 <li>Fruit
@@ -220,6 +217,21 @@ box.</p>
 </ol>
 </li>
 </ol>
+<h4 id="task-list">Task List<a class="post-anchor" href="#task-list" aria-label="Anchor link for: task-list"><span aria-hidden="true">#</span></a>
+</h4>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Completed item</li>
+<li><input disabled="" type="checkbox"/>
+Incomplete item
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Nested completed item</li>
+<li><input disabled="" type="checkbox"/>
+Nested incomplete item</li>
+</ul>
+</li>
+</ul>
 <h2 id="preformatted-text">Preformatted Text<a class="post-anchor" href="#preformatted-text" aria-label="Anchor link for: preformatted-text"><span aria-hidden="true">#</span></a>
 </h2>
 <pre style="background-color:#272822;color:#f8f8f2;"><code><span>This text is preformatted!
@@ -343,9 +355,9 @@ November 18, 2015. <a href="#fr-1-1">↩</a></p>
                     </a>
                 </li>
                 <li>
-                    <a class="social-link" rel="me" href="https://keybase.io/ebkalderon" title="keybase">
-                        <svg role="img" aria-label="keybase">
-                            <use aria-hidden="true" href="https://salif.github.io/zola-themes-collection/demo/terminus/images/social_icons/keybase.svg#icon" />
+                    <a class="social-link" rel="me" href="https://keyoxide.org/d5ad5bd47835b0f0b0c3046c00ab4c0942dcba25" title="keyoxide">
+                        <svg role="img" aria-label="keyoxide">
+                            <use aria-hidden="true" href="https://salif.github.io/zola-themes-collection/demo/terminus/images/social_icons/keyoxide.svg#icon" />
                         </svg>
                     </a>
                 </li>

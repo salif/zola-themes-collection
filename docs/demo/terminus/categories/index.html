@@ -10,9 +10,10 @@
 
     <link rel="preload" href="https://salif.github.io/zola-themes-collection/demo/terminus/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://salif.github.io/zola-themes-collection/demo/terminus/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/terminus/css/style.css?h=8fcfc93d50dd282d06fb">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/terminus/css/style.css?h=5d653e9a5b66bd488081">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <script src="https://salif.github.io/zola-themes-collection/demo/terminus/js/copy-code-to-clipboard.js?h=6aac77c47d552a0ac847" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/terminus/js/auto-close-popover-on-resize.js?h=4ef87d6fc7b98b22e044" defer></script>
 
     <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/terminus/categories/">
     <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/terminus/atom.xml" title="Terminus">
@@ -27,7 +28,7 @@
     <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/terminus/categories/">
     <meta property="og:description" content="Demo website for the Terminus theme for Zola">
     <meta property="og:site_name" content="Terminus">
-    <meta property="og:updated_time" content="2025-07-03T13:48:54.556523428+03:00">
+    <meta property="og:updated_time" content="2025-07-12T23:12:43.436194794+03:00">
     <meta name="fediverse:creator" content="@ebkalderon@hachyderm.io">
 </head>
 
@@ -41,18 +42,14 @@
             </span>
         </div>
         <nav class="main-menu" aria-label="Main Menu">
-            <ul>
-                <li><a class="skip-to-content" href="#main">Skip to main content</a></li>
-                <li class="main-menu-dropdown">
-                    <button class="main-menu-dropdown-button" aria-haspopup="true">Menu</button>
-                    <ul class="main-menu-items" aria-label="Site Navigation">
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/blog/">blog</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/archive/">archive</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/tags/">tags</a></li>
-                        <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/projects/">projects</a></li>
-                        <li><a href="https://github.com/ebkalderon/terminus" target="_blank">github</a></li>
-                    </ul>
-                </li>
+            <a class="skip-to-content" href="#main">Skip to main content</a>
+            <button class="main-menu-dropdown-button" popovertarget="nav-menu">Menu</button>
+            <ul id="nav-menu" class="main-menu-items" aria-label="Site Navigation" popover>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/blog/">blog</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/archive/">archive</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/tags/">tags</a></li>
+                <li><a href="https://salif.github.io/zola-themes-collection/demo/terminus/projects/">projects</a></li>
+                <li><a href="https://github.com/ebkalderon/terminus" target="_blank">github</a></li>
             </ul>
         </nav>
     </header>
@@ -101,9 +98,9 @@
                     </a>
                 </li>
                 <li>
-                    <a class="social-link" rel="me" href="https://keybase.io/ebkalderon" title="keybase">
-                        <svg role="img" aria-label="keybase">
-                            <use aria-hidden="true" href="https://salif.github.io/zola-themes-collection/demo/terminus/images/social_icons/keybase.svg#icon" />
+                    <a class="social-link" rel="me" href="https://keyoxide.org/d5ad5bd47835b0f0b0c3046c00ab4c0942dcba25" title="keyoxide">
+                        <svg role="img" aria-label="keyoxide">
+                            <use aria-hidden="true" href="https://salif.github.io/zola-themes-collection/demo/terminus/images/social_icons/keyoxide.svg#icon" />
                         </svg>
                     </a>
                 </li>

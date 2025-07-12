@@ -92,6 +92,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
 - [carbon](https://github.com/nik-rev/carbon.git): 274 commits
+- [goyo](https://github.com/hahwul/goyo): 127 commits
 
 ### No license that allows me to host a live demo
 
