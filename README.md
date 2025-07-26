@@ -6,7 +6,7 @@
 
 - Have a `config.toml` or `config.example.toml` file. Can be on a separate repository.
 - Have a `theme.toml` file or `themes/theme-name/theme.toml` file.
-- Building is successful using the latest Zola version (0.20.0).
+- Building is successful using the latest Zola version (0.21.0).
 
 ## Non-eligible themes
 
@@ -93,6 +93,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
 - [carbon](https://github.com/nik-rev/carbon.git): 274 commits
 - [goyo](https://github.com/hahwul/goyo): 127 commits
+- [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 4 commits
 
 ### No license that allows me to host a live demo
 
