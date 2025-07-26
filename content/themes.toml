@@ -2032,6 +2032,71 @@ theme = "halcyon"
   newtab = false
 
 [[project]]
+theme = "rilling_dev"
+name = "rilling_dev"
+desc = "rilling.dev custom theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-rilling_dev'></summary>
+
+### Installation{#h-install-rilling_dev}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/RillingDev/rilling.dev_theme.git themes/rilling_dev
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/RillingDev/rilling.dev_theme.git themes/rilling_dev
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "rilling_dev"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-rilling_dev'></summary>
+
+### Info{#h-info-rilling_dev}
+- **Author**: [F. Rilling](https://rilling.dev)
+- **License**: GPL-3.0-or-later
+- **Homepage**: <https://github.com/RillingDev/rilling.dev_theme>
+- **Main Live Preview**: <https://rilling.dev>
+- **Min Zola version**: 0.19.1
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-rilling_dev.webp"
+  dark = "./screenshots/dark-rilling_dev.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the rilling_dev theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/rilling_dev/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/RillingDev/rilling.dev_theme"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-rilling_dev"
+  js = "const b=document.getElementById('install-rilling_dev').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-rilling_dev"
+  js = "const b=document.getElementById('info-rilling_dev').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "zluinav"
 name = "UI Navigation"
 desc = "A multilingual theme designed for accessibility rather than visual."

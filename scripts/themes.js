@@ -11,6 +11,7 @@ const demoRepoThemes = new Map([
 	["serene", "https://github.com/isunjn/serene.git"],
 	["daisy", "https://codeberg.org/winterstein/zola-theme-daisy.git"],
 	["noobping", "https://github.com/noobping/zola-theme.git"],
+	["rilling_dev", "https://github.com/RillingDev/rilling.dev_theme.git"],
 ])
 
 const versionWarn = "Does not work with the latest version of Zola"
