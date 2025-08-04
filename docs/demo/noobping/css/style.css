@@ -42,6 +42,31 @@ body {
     margin: auto;
 }
 
+progress {
+    accent-color: var(--primary);
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    height: 0.5em;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background-color: transparent;
+    border: none;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--primary);
+    border: none;
+}
+
 main {
     border: 1px solid var(--border);
     background-color: var(--secondary-background);
@@ -117,10 +142,10 @@ nav a {
 a:hover,
 a:active,
 a:focus {
-    color: var(--primary);
+    color: var(--secondary);
+    text-decoration: underline;
 }
 
-a,
 h1,
 h2,
 h3,
@@ -164,6 +189,10 @@ img {
     vertical-align: middle;
 }
 
+footer a {
+    color: var(--secondary);
+}
+
 main ul,
 main ul li {
     display: block;
@@ -180,6 +209,7 @@ main ul li span {
 }
 
 main ul li a {
+    color: var(--primary-text);
     display: block;
     padding: 0.5em;
     margin: 0.5em 0;
@@ -190,12 +220,14 @@ main ul li a:hover,
 main ul li a:active,
 main ul li a:focus {
     border: 1px solid var(--secondary);
+    text-decoration: none;
 }
 
 main ul li a:hover span,
 main ul li a:active span,
 main ul li a:focus span {
     color: var(--secondary);
+    text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {

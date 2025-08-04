@@ -16,6 +16,7 @@ const demoRepoThemes = new Map([
 
 const versionWarn = "Does not work with the latest version of Zola"
 const errors = []
+const warnings = []
 
 export function buildCheckAll(baseURL, commands) {
 	listThemes().then(themes => buildThemes(themes, false, baseURL, commands))
@@ -39,19 +40,25 @@ async function buildThemes(themes, doInstall, baseURL, commands) {
 		const themePath = path.join(basePath, theme.path)
 		const themeName = path.basename(themePath)
 		cd(themePath)
-		await buildTheme(themeName, baseURL, commands)
-		if (doInstall) await installDemo(themePath, themeName,
+		const b = await buildTheme(themeName, baseURL, commands)
+		if (b && doInstall) await installDemo(themePath, themeName,
 			path.join(basePath, "static", "demo", themeName))
 		await remPublic()
 	}
-	if (errors.length > 0) errors.forEach(err => { console.error(err) })
+	if (warnings.length > 0) {
+		warnings.forEach(w => { console.warn("Warning:", w) })
+	}
+	if (errors.length > 0) {
+		errors.forEach(err => { console.error("Error:", err) })
+		throw new Error(`${errors.length} errors!`)
+	}
 }
 async function buildTheme(themeName, baseURL, commands) {
 	if (!(await fs.pathExists("theme.toml")) && !(await fs.pathExists(path.join("themes", themeName, "theme.toml")))) {
-		errors.push(`Warning: theme.toml not found! themes/${themeName}`)
+		warnings.push(`theme.toml not found! themes/${themeName}`)
 	}
 	if ((await fs.pathExists("theme.toml")) && (await fs.pathExists("themes"))) {
-		errors.push(`Warning: themes dir found! themes/${themeName}`)
+		warnings.push(`themes dir found! themes/${themeName}`)
 	}
 
 	let configFile
@@ -60,13 +67,14 @@ async function buildTheme(themeName, baseURL, commands) {
 	} else if (await fs.pathExists("config.example.toml")) {
 		configFile = "config.example.toml"
 	} else {
-		errors.push(`Error: config.toml not found! themes/${themeName}`)
-		return
+		errors.push(`config.toml not found! themes/${themeName}`)
+		return false
 	}
 	await remPublic()
 	const demoBaseURL = new URL(themeName + "/", baseURL).href
 	let buildArgs = ['--config', configFile, 'build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']
 	await $`${commands.zola} ${buildArgs}`
+	return true
 }
 async function installDemo(themePath, themeName, demoPath) {
 	if (await fs.pathExists(demoPath)) {

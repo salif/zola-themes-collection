@@ -88,15 +88,19 @@
     
 
     <!-- Load Styles -->
-    <link
-      rel="stylesheet"
-      href="https://salif.github.io/zola-themes-collection/demo/radion/site.css"
-    />
+    
+      <link
+        rel="stylesheet"
+        href="https://salif.github.io/zola-themes-collection/demo/radion/site.css"
+      />
+    
 
+    <!-- Load Fonts -->
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
 
     <!-- Pass Theme Preference as Data Attribute -->
     <script src="https://salif.github.io/zola-themes-collection/demo/radion/js/init-theme.js"></script>
@@ -104,7 +108,7 @@
     <!-- Reference return to click position script -->
     <script defer src="https://salif.github.io/zola-themes-collection/demo/radion/js/reference-return.js"></script>
 
-    <!-- additional scripts -->
+    <!-- Additional scripts -->
     
       
         <script defer src="https://salif.github.io/zola-themes-collection/demo/radion/js/codeblock.js"></script>
@@ -128,107 +132,112 @@
     
   </head>
 
+  <!-- Body element (contents of the page) -->
   <body class="hack main container">
     
     
-         
-    <header class="nav-header">
-      <nav
-        itemscope
-        itemtype="http://schema.org/SiteNavigationElement"
-        class="navbar"
+        
+      
+  
+  <section class="nav-header">
+    <nav
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+      class="navbar"
+    >
+      <section class="nav-links">
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://salif.github.io/zola-themes-collection/demo/radion//"
+        >
+          <span itemprop="name">Home</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://salif.github.io/zola-themes-collection/demo/radion//categories"
+        >
+          <span itemprop="name">Categories</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://salif.github.io/zola-themes-collection/demo/radion//tags"
+        >
+          <span itemprop="name">Tags</span>
+        </a>
+        
+      </section>
+    </nav>
+    <aside class="user-actions-container">
+      
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="search-icon"
       >
-        <section class="nav-links">
-          
-          <a
-            itemprop="url"
-            class=""
-            href="https://salif.github.io/zola-themes-collection/demo/radion//"
-          >
-            <span itemprop="name">Home</span>
-          </a>
-          
-          <a
-            itemprop="url"
-            class=""
-            href="https://salif.github.io/zola-themes-collection/demo/radion//categories"
-          >
-            <span itemprop="name">Categories</span>
-          </a>
-          
-          <a
-            itemprop="url"
-            class=""
-            href="https://salif.github.io/zola-themes-collection/demo/radion//tags"
-          >
-            <span itemprop="name">Tags</span>
-          </a>
-          
-        </section>
-      </nav>
-      <aside class="user-actions-container">
-        
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          class="search-icon"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-          />
-        </svg>
-        <input type="text" id="search" placeholder="Search..." />
-        <section class="search-results" aria-live="polite">
-          <article class="search-results__items" role="list"></article>
-        </section>
-         
-        <a id="dark-mode-toggle" href="#">
-          <img
-            src="https://salif.github.io/zola-themes-collection/demo/radion/icons/sun.svg"
-            id="sun-icon"
-            style="filter: invert(1)"
-            alt="Light mode"
-          />
-          <img
-            src="https://salif.github.io/zola-themes-collection/demo/radion/icons/moon.svg"
-            id="moon-icon"
-            alt="Dark mode"
-          />
-        </a>
-         
-        <a
-          href="https://salif.github.io/zola-themes-collection/demo/radion/atom.xml"
-          class="feed-icon"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://salif.github.io/zola-themes-collection/demo/radion/icons/rss.svg"
-            id="rss-icon"
-            alt="RSS feed"
-            class="social-icon"
-          />
-        </a>
-         
-        <a
-          href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe"
-          class="feed-icon"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://salif.github.io/zola-themes-collection/demo/radion/icons/github.svg"
-            id="github-icon"
-            alt="GitHub"
-            class="social-icon"
-          />
-        </a>
-        
-      </aside>
-    </header>
-     
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </svg>
+      <input type="text" id="search" placeholder="Search..." />
+      <section class="search-results" aria-live="polite">
+        <article class="search-results__items" role="list"></article>
+      </section>
+       
+      <a id="dark-mode-toggle" href="#">
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/sun.svg"
+          id="sun-icon"
+          style="filter: invert(1)"
+          alt="Light mode"
+        />
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/moon.svg"
+          id="moon-icon"
+          alt="Dark mode"
+        />
+      </a>
+       
+      <a
+        href="https://salif.github.io/zola-themes-collection/demo/radion/atom.xml"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/rss.svg"
+          id="rss-icon"
+          alt="RSS feed"
+          class="social-icon"
+        />
+      </a>
+       
+      <a
+        href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/github.svg"
+          id="github-icon"
+          alt="GitHub"
+          class="social-icon"
+        />
+      </a>
+      
+    </aside>
+  </section>
+  
+
+    
     
 
     <h1>Categories</h1>
