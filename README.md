@@ -13,7 +13,7 @@
 ### Build failed
 
 - [DeepThought](https://github.com/RatanShreshtha/DeepThought): 153 commits: `unknown field generate_feed`
-- [zola-inky](https://github.com/jimmyff/zola-inky): 30 commits: `unknown field images`
+- [zola-inky](https://github.com/jimmyff/zola-inky): 34 commits: `unknown field images`
 - [halve-z](https://github.com/charlesrocket/halve-z): 553 commits: `.git/HEAD doesn't exist`
 - [apocalisse-peluche](https://github.com/lanzani/apocalisse-peluche): 37 commits: `Undefined operation`
 - [zola-clean-blog](https://github.com/dave-tucker/zola-clean-blog): 12 commits: `unknown field generate_rss`
@@ -71,15 +71,15 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [norwind](https://github.com/nobodygx/norwind): 12 commits
 - [zola-nomad-theme](https://github.com/nomad-dev-writer/zola-nomad-theme): 26 commits
 - [cosmic__cube](https://github.com/ccarral/cosmic__cube): 56 commits
-- [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang): 35 commits
+- [jiaxiang.wang](https://github.com/iWangJiaxiang/zola-theme-jiaxiang.wang): 101 commits
 - [Homepage-Creators](https://github.com/iWangJiaxiang/Homepage-Creators): 6 commits
-- [anemone](https://github.com/Speyll/anemone): 62 commits
+- [anemone](https://github.com/Speyll/anemone): 78 commits
 - [book-shelf](https://github.com/anccnuer/book-shelf): 5 commits
 - [zola-aurora](https://github.com/vimpostor/zola-aurora): 86 commits
 - [zola-folio](https://github.com/evjrob/zola-folio): 50 commits
 - [fl1tzi-com-theme](https://codeberg.org/Fl1tzi/fl1tzi-com-theme): 13 commits
 - [zizotto](https://github.com/xihn/zizotto): 12 commits
-- [Baie](https://github.com/Wtoll/Baie): 7 commits
+- [Baie](https://github.com/Wtoll/Baie): 8 commits
 - [zola-theme](https://github.com/rutrum/zola-theme): 16 commits
 - [portfolio-starter-kit](https://github.com/roblesch/portfolio-starter-kit): 4 commits
 - [cablab-theme](https://codeberg.org/cablab/cablab-theme): 8 commits
@@ -91,9 +91,10 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
 - [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
-- [carbon](https://github.com/nik-rev/carbon.git): 274 commits
-- [goyo](https://github.com/hahwul/goyo): 127 commits
-- [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 4 commits
+- [carbon](https://github.com/nik-rev/carbon.git): 294 commits
+- [goyo](https://github.com/hahwul/goyo): 186 commits
+- [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 5 commits
+- [magic-box](https://codeberg.org/dulvui/magic-box): 207 commits
 
 ### No license that allows me to host a live demo
 
@@ -107,3 +108,4 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 28 commits
 - [bd](https://github.com/flabbergastedbd/bd): 20 commits
 - [eips-wg](https://github.com/bluerobotics/bluetheme): 503 commits
+- [zola-researcher](https://github.com/lukehsiao/zola-researcher): 1 commit
