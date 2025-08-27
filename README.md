@@ -58,7 +58,11 @@
 - [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
 - [mintec-zola-theme](https://github.com/Coffeeri/mintec-zola-theme): 9 commits: `config.toml not found`
 - [hayakuchi](https://github.com/deepcodesoln/hayakuchi): 10 commits: `Section 'blog/_index.md' not found`
-- [zola-theme-brief](https://github.com/w4ngzhen/zola-theme-brief.git): 2 commits: `config.toml not found`
+- [zola-theme-brief](https://github.com/w4ngzhen/zola-theme-brief): 2 commits: `config.toml not found`
+- [zola-blog-awesome](https://github.com/andwati/zola-blog-awesome): 4 commits: `error parsing templates`
+- [planet](https://github.com/higuoxing/planet): 6 commits: `config.toml not found`
+- [zola-persona-theme](https://github.com/hanson-hschang/zola-persona-theme): 11 commits: `variable not found`
+- [Camilla](https://codeberg.org/PanSi21/Camilla): 4 commits: `error parsing templates`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -91,10 +95,10 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
 - [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
-- [carbon](https://github.com/nik-rev/carbon.git): 294 commits
-- [goyo](https://github.com/hahwul/goyo): 186 commits
+- [carbon](https://github.com/nik-rev/carbon): 294 commits
 - [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 5 commits
 - [magic-box](https://codeberg.org/dulvui/magic-box): 207 commits
+- [mycowiki](https://codeberg.org/fungal/mycowiki): 11 commits
 
 ### No license that allows me to host a live demo
 

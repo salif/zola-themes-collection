@@ -31,6 +31,8 @@ function setSidebar() {
     var sidebar = sessionStorage.getItem(bartype);
     if (sidebar === "true")
       document.body.classList.add(bartype);
+    else
+      document.body.classList.remove(bartype);
   }
 }
 
@@ -111,7 +113,13 @@ function directoryExpand() {
 
 // Hotkeys
 document.addEventListener("keydown", function(e) {
-  if (e.key == 'Escape') {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
+  if (e.key === "Shift") return;
+  if (window.goElems.length > 0) {
+    followGoElems(e.key);
+    return;
+  }
+  if (e.key === "Escape") {
     document.activeElement.blur();
     document.getElementById("search-results").innerHTML = "";
     document.getElementById("help-window").style.display = "none";
@@ -125,6 +133,12 @@ document.addEventListener("keydown", function(e) {
     case 'j':
       if (!e.repeat) window.scrollBy({top: scrollDist, behavior: "smooth"});
       else window.scrollBy({top: scrollDist/2, behavior: "instant"});
+      break;
+    case 'g':
+      window.scrollTo({top: 0, behavior: "smooth"});
+      break;
+    case 'G':
+      window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
       break;
     case 'h':
       if (olivine.lower !== undefined)
@@ -141,14 +155,17 @@ document.addEventListener("keydown", function(e) {
       if (!newUrl.startsWith(olivine.base_url)) break;
       window.location.href = newUrl;
       break;
-    case 'H':
+    case 'U':
       window.location.href = olivine.base_url;
       break;
-    case 'p':
+    case 'H':
       history.back();
       break;
-    case 'n':
+    case 'L':
       history.forward();
+      break;
+    case 'r':
+      window.location.reload();
       break;
     case '[':
       toggleBar("leftbar");
@@ -160,11 +177,64 @@ document.addEventListener("keydown", function(e) {
       let helpElem = document.getElementById("help-window");
       helpElem.style.display = (helpElem.style.display === 'none') ? '' : 'none';
       break;
+    case 'f':
+      addGoElems();
+      break;
+    case 't':
+      toggleTheme();
+      break;
   }
 });
 document.addEventListener("keyup", function(e) {
+  if (e.altKey || e.ctrlKey || e.metaKey) return;
   if (e.target.nodeName != "BODY") return;
   if (e.key == '/')
     document.getElementById("search-input").focus();
 });
 
+window.goElems = [];
+
+// Create the Go elements
+function addGoElems() {
+  const goElems = window.goElems;
+  if (goElems.length > 0) return;
+  const keyStr = "qwertyasdghzxcvbuiop[]jkl;'nm,./`1234567890-=QWERTYASDFGHZXCVBUIOP{}JKL:\"NM<>?~!@#$%^&*()_+";
+  for (elem of document.querySelectorAll("a")) {
+    // Throw away if it is outside the window viewport
+    const rect = elem.getBoundingClientRect();
+    if (rect.top <= 0 || rect.left <= 0 || rect.bottom >= window.innerHeight ||
+      rect.right >= window.innerWidth || rect.width == 0 || rect.height == 0)
+      continue;
+    // Create elements
+    const label = document.createElement("span");
+    const key = keyStr[goElems.length];
+    label.innerText = key;
+    label.classList.add("goelems");
+    label.style = `top: ${rect.top}px; left: ${rect.left}px;`
+    document.body.append(label);
+    goElems.push({elem: elem, label: label, key: key});
+    if (goElems.length >= keyStr.length) return;
+  }
+}
+
+// Follow the link along Go elements
+function followGoElems(key) {
+  const goElems = window.goElems;
+  if (goElems.length == 0) return;
+  for (item of goElems) {
+    if (item.key === key) {
+      const elem = item.elem;
+      clearGoElems();
+      elem.click();
+      return;
+    }
+  }
+  clearGoElems();
+}
+
+// Remove all the Go elements
+function clearGoElems() {
+  const goElems = window.goElems;
+  for (item of goElems) item.label.remove();
+  goElems.length = 0;
+}

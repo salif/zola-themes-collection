@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+        
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: "Pretendard-Regular";
+            src: url('https://salif.github.io/zola-themes-collection/demo/goyo/fonts/Pretendard-Regular.woff') format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+        body {
+            font-family: "Pretendard-Regular", sans-serif;
+        }
+    </style>
+
+    
+        
+            <meta name="description" content="Goyo로 현대적이고 기능이 풍부한 랜딩 페이지를 만드는 방법을 알아보세요." />
+        
+    
+
+    <title>랜딩 페이지 만들기 | Goyo</title>
+
+    
+    
+
+      <!-- SEO: Open Graph / Twitter Card -->
+      <meta property="og:title" content="랜딩 페이지 만들기 | Goyo" />
+      <meta property="og:description" content="Goyo로 현대적이고 기능이 풍부한 랜딩 페이지를 만드는 방법을 알아보세요." />
+      <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/goyo/" />
+      <meta property="og:type" content="website" />
+      
+      <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/goyo/images/default_thumbnail.jpg" />
+      
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="랜딩 페이지 만들기" />
+      <meta name="twitter:description" content="Goyo로 현대적이고 기능이 풍부한 랜딩 페이지를 만드는 방법을 알아보세요." />
+      
+      <meta name="twitter:site" content="@hahwul" />
+      
+      
+      <meta name="twitter:creator" content="@hahwul" />
+      
+      
+      <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/goyo/images/default_thumbnail.jpg" />
+      
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/goyo/css/main.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/goyo/css/font-awesome.min.css">
+
+    <script src="https://salif.github.io/zola-themes-collection/demo/goyo/js/mermaid.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/goyo/js/copy_code.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/goyo/js/copy_heading_link.js"></script>
+
+    
+    
+</head>
+<body>
+    
+
+<!-- Search Modal -->
+<input type="checkbox" id="search-modal" class="modal-toggle" />
+<div class="modal modal-top sm:modal-middle">
+    <div class="modal-box relative">
+        <label for="search-modal" class="btn btn-sm btn-ghost absolute right-2 top-2">✕</label>
+        <div class="search-container py-4 h-96">
+            <input id="search" type="search" placeholder="Search.." class="input input-bordered w-full bg-transparent focus:outline-none">
+            <div class="search-results overflow-y-auto h-full no-scrollbar">
+                <div class="search-results__header my-2 text-xs"></div>
+                <ul class="search-results__items menu p-2"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col pt-16">
+            
+<div class="navbar opacity-95 fixed top-0 left-0 right-0 z-50 h-16 border-b border-gray-500/15 backdrop-blur-3xl">
+    <!-- Mobile hamburger -->
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer-2" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label>
+    </div>
+    <!-- Logo -->
+    <div class="flex-1">
+        <a href="/" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl">
+            
+                <img src="https://salif.github.io/zola-themes-collection/demo/goyo/images/goyo.png" alt="Goyo" class="h-18 w-auto" />
+            
+        </a>
+    </div>
+    <!-- Desktop Menu -->
+    <div class="flex-none hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 items-center">
+            
+                
+                    
+                        <li>
+                            <a class="btn btn-ghost hover:no-underline" href="/introduction">
+                                <i class="fa-solid fa-book"></i>
+                                Documents
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li>
+                            <a class="btn btn-ghost hover:no-underline" href="https://github.com/hahwul/goyo">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown dropdown-end">
+                            <div tabindex="0" role="button" class="btn btn-ghost">
+                                <i class="fa-solid fa-link"></i>
+                                Links
+                                <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </div>
+                            <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
+                                
+                                    <li>
+                                        <a class="btn btn-ghost hover:no-underline" href="https://www.hahwul.com">
+                                            <i class="fa-solid fa-fire-flame-curved"></i>
+                                            Creator Blog
+                                        </a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="btn btn-ghost hover:no-underline" href="https://getzola.org">
+                                            <i class="fa-solid fa-z"></i>
+                                            Zola Offical
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+            
+            
+            <li>
+                <div class="dropdown dropdown-end p-0">
+                    <div tabindex="0" role="button" class="btn btn-ghost px-2" aria-label="Languages">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 5h7"></path>
+                            <path d="M7 4c0 4.846 0 7 .5 8"></path>
+                            <path d="M10 8.5c0 2.286 -2 4.5 -3.5 4.5s-2.5 -1.135 -2.5 -2c0 -2 1 -3 3 -3s5 .57 5 2.857c0 1.524 -.667 2.571 -2 3.143"></path>
+                            <path d="M12 20l4 -9l4 9"></path>
+                            <path d="M19.1 18h-6.2"></path>
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg">
+                        
+                            
+                                
+                                
+                                
+                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/goyo/get_started/creating-landing/">en</a></li>
+                                
+                            
+                            
+                        
+                    </ul>
+                </div>
+            </li>
+            
+
+            
+            <li>
+                <label class="swap swap-rotate btn btn-ghost">
+                  <input type="checkbox" class="theme-controller" value="night" aria-labelledby="swap color"/>
+                  <svg class="swap-off h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
+                  <svg class="swap-on h-5 w-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
+                </label>
+            </li>
+            
+
+        </ul>
+    </div>
+</div>
+
+
+            
+            
+            <div class="p-8 w-full max-w-7xl mx-auto lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
+                <main class="prose w-full max-w-7xl mx-auto">
+            
+                    
+    <div class="mb-12 pb-4 border-b border-gray-500/15">
+        <h1>랜딩 페이지 만들기</h1>
+        <p class="text-gray-500">Goyo로 현대적이고 기능이 풍부한 랜딩 페이지를 만드는 방법을 알아보세요.</p>
+    </div>
+    <p>랜딩 페이지는 방문자가 가장 먼저 보게 되는 페이지입니다. Goyo에서는 <code>landing.html</code>을 사용하여 제작되며, <code>content/_index.md</code>에서 설정합니다. 이를 통해 프로젝트를 위한 풍부하고 매력적인 진입점을 만들 수 있습니다.</p>
+<p>다른 언어의 랜딩 페이지를 만들려면, <code>content/_index.ko.md</code>와 같이 해당 언어의 파일을 생성하면 됩니다.</p>
+<h2 id="tempeulris-seoljeong">템플릿 설정</h2>
+<p>먼저 <code>_index.md</code> 파일이 <code>landing.html</code> 템플릿을 사용하도록 설정되었는지 확인하세요.</p>
+<pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#73d0ff;">template </span><span>= </span><span style="color:#bae67e;">&quot;landing.html&quot;
+</span></code></pre>
+<h2 id="jeonce-seoljeong-yesi">전체 설정 예시</h2>
+<p>Goyo 랜딩 페이지는 <code>_index.md</code> 파일의 <code>[extra]</code> 섹션을 통해 매우 유연하게 사용자 정의할 수 있습니다. 아래는 사용 가능한 모든 섹션을 보여주는 전체 예시입니다. 필요하지 않은 섹션은 생략할 수 있으며, 그 경우 해당 섹션은 렌더링되지 않습니다.</p>
+<pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ff3333;">+++
+</span><span style="color:#73d0ff;">template </span><span>= </span><span style="color:#bae67e;">&quot;landing.html&quot;
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;Goyo&quot;
+</span><span>
+</span><span>[</span><span style="color:#73d0ff;">extra</span><span>]
+</span><span style="color:#73d0ff;">version </span><span>= </span><span style="color:#bae67e;">&quot;v0.1.0&quot;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Hero 섹션
+</span><span style="font-style:italic;color:#5c6773;"># 페이지 상단의 메인 섹션입니다.
+</span><span>[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">hero</span><span>]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;Goyo에 오신 것을 환영합니다!&quot;
+</span><span style="color:#73d0ff;">description </span><span>= </span><span style="color:#bae67e;">&quot;문서화를 위한 간단하고 깔끔한 Zola 테마입니다.&quot;
+</span><span style="color:#73d0ff;">image </span><span>= </span><span style="color:#bae67e;">&quot;/images/landing.jpg&quot; </span><span style="font-style:italic;color:#5c6773;"># 배경 이미지
+</span><span style="color:#73d0ff;">cta_buttons </span><span>= [
+</span><span>    { </span><span style="color:#73d0ff;">text </span><span>= </span><span style="color:#bae67e;">&quot;시작하기&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;/get-started/installation/&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">style </span><span>= </span><span style="color:#bae67e;">&quot;primary&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">text </span><span>= </span><span style="color:#bae67e;">&quot;GitHub에서 보기&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://github.com/your/repo&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">style </span><span>= </span><span style="color:#bae67e;">&quot;secondary&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>]
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Features 섹션
+</span><span style="font-style:italic;color:#5c6773;"># 주요 기능을 그리드 형태로 강조합니다.
+</span><span>[[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">features</span><span>]]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;문서 친화적&quot;
+</span><span style="color:#73d0ff;">desc </span><span>= </span><span style="color:#bae67e;">&quot;깔끔한 문서 작성 경험을 제공합니다.&quot;
+</span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-book&quot;
+</span><span>
+</span><span>[[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">features</span><span>]]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;심플한 디자인&quot;
+</span><span style="color:#73d0ff;">desc </span><span>= </span><span style="color:#bae67e;">&quot;미니멀리즘을 추구하는 테마입니다.&quot;
+</span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-minimize&quot;
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Trust 섹션
+</span><span style="font-style:italic;color:#5c6773;"># 당신을 신뢰하는 회사나 프로젝트의 로고를 보여줍니다.
+</span><span>[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">trust_section</span><span>]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;최고의 기업들이 신뢰합니다&quot;
+</span><span style="color:#73d0ff;">logos </span><span>= [
+</span><span>    { </span><span style="color:#73d0ff;">src </span><span>= </span><span style="color:#bae67e;">&quot;/images/logo1.svg&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">alt </span><span>= </span><span style="color:#bae67e;">&quot;Company One&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">src </span><span>= </span><span style="color:#bae67e;">&quot;/images/logo2.svg&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">alt </span><span>= </span><span style="color:#bae67e;">&quot;Company Two&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>]
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Social Proof 섹션
+</span><span style="font-style:italic;color:#5c6773;"># 사용자들의 추천사를 보여줍니다.
+</span><span>[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">social_proof_section</span><span>]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;사용자들의 평가&quot;
+</span><span style="color:#73d0ff;">testimonials </span><span>= [
+</span><span>    {
+</span><span>        </span><span style="color:#ff3333;">author = &quot;Jane Doe&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">role = &quot;TechCorp 개발자&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">quote = &quot;Goyo는 우리의 문서화 프로세스를 완전히 바꾸어 놓았습니다. 간단하고</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ff3333;">우아하며</span><span style="color:#ccc9c2cc;">, </span><span style="color:#ff3333;">믿을 수 없을 정도로 빠릅니다.&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">avatar = &quot;/images/avatars/jane.png&quot;
+</span><span>    </span><span style="color:#ff3333;">}</span><span style="color:#ccc9c2cc;">,
+</span><span>    {
+</span><span>        </span><span style="color:#ff3333;">author = &quot;John Smith&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">role = &quot;Innovate LLC 프로젝트 관리자&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">quote = &quot;최고의 Zola 문서 테마입니다. 설정이 매우 쉬웠습니다.&quot;</span><span style="color:#ccc9c2cc;">,
+</span><span>        </span><span style="color:#ff3333;">avatar = &quot;/images/avatars/john.png&quot;
+</span><span>    </span><span style="color:#ff3333;">}</span><span style="color:#ccc9c2cc;">,
+</span><span>]
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Final Call to Action 섹션
+</span><span style="font-style:italic;color:#5c6773;"># 푸터 전 사용자에게 마지막으로 행동을 유도하는 섹션입니다.
+</span><span>[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">final_cta_section</span><span>]
+</span><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;시작할 준비가 되셨나요?&quot;
+</span><span style="color:#73d0ff;">description </span><span>= </span><span style="color:#bae67e;">&quot;오늘 Goyo와 함께 여정을 시작하고 아름다운 문서를 쉽게 만들어보세요.&quot;
+</span><span style="color:#73d0ff;">button </span><span>= { </span><span style="color:#73d0ff;">text </span><span>= </span><span style="color:#bae67e;">&quot;지금 시작하기&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;/get-started/installation/&quot; </span><span>}
+</span><span style="color:#73d0ff;">image </span><span>= </span><span style="color:#bae67e;">&quot;/images/contribute.png&quot;
+</span><span style="color:#ff3333;">+++
+</span></code></pre>
+<h2 id="segsyeonbyeol-seolmyeong">섹션별 설명</h2>
+<ul>
+<li>
+<p><strong><code>[extra.hero]</code></strong>: 메인 배너입니다. <code>title</code>, <code>description</code>, 전체 화면 배경 <code>image</code>, 그리고 클릭 유도 버튼 목록(<code>cta_buttons</code>)을 포함합니다. 각 버튼은 <code>text</code>, <code>url</code>, 그리고 <code>style</code>(<code>primary</code>는 주 버튼, <code>secondary</code>는 보조 버튼)을 가집니다.</p>
+</li>
+<li>
+<p><strong><code>[[extra.features]]</code></strong>: 그리드에 표시할 기능 목록입니다. 각 기능은 <code>title</code>, <code>desc</code>(설명), 그리고 <a href="https://fontawesome.com/">Font Awesome</a>의 <code>icon</code>을 가집니다.</p>
+</li>
+<li>
+<p><strong><code>[extra.trust_section]</code></strong>: 회사나 프로젝트의 로고를 보여줍니다. <code>logos</code>는 각 항목이 이미지 <code>src</code>와 <code>alt</code> 텍스트를 가지는 목록입니다.</p>
+</li>
+<li>
+<p><strong><code>[extra.social_proof_section]</code></strong>: 사용자 추천사를 표시합니다. <code>testimonials</code>는 각 객체가 <code>author</code>, <code>role</code>, <code>quote</code>, <code>avatar</code> 이미지를 가지는 목록입니다.</p>
+</li>
+<li>
+<p><strong><code>[extra.final_cta_section]</code></strong>: <code>title</code>, <code>description</code>, 그리고 <code>text</code>와 <code>url</code>을 가진 단일 <code>button</code>으로 구성된 마지막 클릭 유도 블록입니다.</p>
+<ul>
+<li><code>image</code> 필드를 추가하면 CTA 섹션에 이미지를 함께 보여줄 수 있습니다. 예시: <code>image = "/images/contribute.png"</code></li>
+</ul>
+</li>
+</ul>
+
+
+
+                    
+
+
+
+                    <div class="flex justify-between mt-8">
+                        <div class="prev-link">
+                            
+    
+        
+        <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko/get_started/">‹ Get Started</a>
+    
+
+                        </div>
+                        <div class="next-link">
+                            
+    
+        <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko/get_started/configuration/">Configuration ›</a>
+    
+
+                        </div>
+                    </div>
+                </main>
+
+                
+                    
+
+<div class="hidden lg:block">
+    <div class="sticky top-20 px-4 py-2 border-l border-gray-500/15">
+        <h4 class="text-lg font-bold mb-1">ON THIS PAGE</h4>
+            <ul class="menu menu-sm toc-menu">
+            
+                <li>
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/goyo/ko/get_started/creating-landing/#tempeulris-seoljeong" class="toc-link">템플릿 설정</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/goyo/ko/get_started/creating-landing/#jeonce-seoljeong-yesi" class="toc-link">전체 설정 예시</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/goyo/ko/get_started/creating-landing/#segsyeonbyeol-seolmyeong" class="toc-link">섹션별 설명</a>
+                    
+                </li>
+            
+            </ul>
+    </div>
+</div>
+
+
+                
+                
+            </div>
+
+            <script>
+              // Determine theme: localStorage > extra.default_colorset > night
+              // Expose theme config for global use (e.g., goyo.js)
+              window.defaultColorset = "dark";
+              window.themeMap = { "dark": "night", "light": "lofi" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "night";
+              var currentTheme = localStorage.getItem('theme') || window.fallbackTheme;
+              var mermaidTheme = "dark";
+              if(currentTheme == "lofi") {
+                mermaidTheme = "light";
+              }
+              mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+              document.addEventListener('DOMContentLoaded', async () => {
+                const mermaidElements = document.querySelectorAll('.mermaid');
+
+                if (mermaidElements.length > 0) {
+                    await mermaid.run({
+                        nodes: mermaidElements
+                    });
+                }
+              });
+            </script>
+
+        </div>
+
+        
+        
+        <div id="sidebar" class="drawer-side fixed top-0 pt-12 bottom-0 z-40 border-r border-gray-500/15">
+        
+            
+                
+
+<label for="my-drawer-2" class="drawer-overlay"></label>
+<div class="mt-4 w-68 h-[calc(100vh-4rem)] bg-base-100 text-base-content flex flex-col overflow-auto">
+    
+    <div class="px-2 pt-4 pb-0 flex flex-col items-center gap-2">
+        <div class="w-full flex items-center gap-2">
+            <label for="search-modal" class="input w-full flex items-center justify-between text-left bg-base-100 cursor-pointer border-gray-500/15 hover:border-gray-500/55 hover:border-1 transition" aria-label="검색">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="text-gray-400"><kbd class="kbd">⌘</kbd><kbd class="kbd">K</kbd></span>
+            </label>
+        </div>
+    </div>
+    
+    <ul class="menu w-full flex-grow">
+        
+        
+        
+        
+            
+            <li>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//resources"></a>
+            </li>
+        
+            
+            <li>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//introduction">Introduction</a>
+            </li>
+        
+            
+            <li>
+                
+                    <details open>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//get_started">Get Started</a></summary>
+                        <ul>
+                            
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//get_started/installation">Installation</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//get_started/creating-content">Creating a Content</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//get_started/creating-landing">Creating a Landing Page</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//get_started/configuration">Configuration</a></li>
+                            
+                            
+                        </ul>
+                    </details>
+                
+            </li>
+        
+            
+            <li>
+                
+                    <details open>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing">Writing</a></summary>
+                        <ul>
+                            
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/markdown-syntax">Markdown Syntax</a></li>
+                            
+                            
+                                
+                                <li>
+                                    
+                                        <details >
+                                            <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes">Shortcodes</a></summary>
+                                            <ul>
+                                                
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/alert">Alert</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/asciinema">Asciinema</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/browser">Browser</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/collapse">Collapse</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/youtube">YouTube</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/badge">Badge</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/image-diff">Image Diff</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//writing/shortcodes/mermaid">Mermaid Chart</a></li>
+                                                
+                                                
+                                            </ul>
+                                        </details>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </details>
+                
+            </li>
+        
+            
+            <li>
+                
+                    <details open>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//deployments">Deployments</a></summary>
+                        <ul>
+                            
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//deployments/github-pages">Github</a></li>
+                            
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//deployments/other">Other</a></li>
+                            
+                            
+                        </ul>
+                    </details>
+                
+            </li>
+        
+            
+            <li>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/goyo/ko//references">References</a>
+            </li>
+        
+    </ul>
+
+    
+<footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
+    <aside>
+        <p>
+            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>
+        </p>
+    </aside>
+</footer>
+
+</div>
+
+            
+        </div>
+    </div>
+
+    
+        
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/goyo/fuse.min.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/goyo/search_index.ko.js"></script>
+        
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/goyo/goyo.js"></script>
+    
+</body>
+</html>

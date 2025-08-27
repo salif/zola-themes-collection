@@ -139,17 +139,17 @@ Getting started
 <p>You can use either clone a template repository or manually set up the theme.</p>
 <h3 id="option-1-template-repository">Option 1: template repository</h3>
 <p>Simply clone the template repository.</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> git clone git@github.com:dongryul-kim/olivine-template.git &lt;your-folder-name&gt;
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> clone</span><span style="color:#bf616a;"> --depth</span><span> 1</span><span style="color:#bf616a;"> --recurse-submodules</span><span> git@github.com:dongryul-kim/olivine-quickstart.git &lt;your-folder-name&gt;
 </span></code></pre>
 <h3 id="option-2-manual-configuration">Option 2: manual configuration</h3>
 <p>There is a page in the Zola documentation on <a rel="noopener" target="_blank" href="https://www.getzola.org/documentation/themes/installing-and-using-themes/">installing and using
 themes</a>.</p>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> mkdir &lt;your-folder-name&gt;
-</span><span style="color:#bf616a;">$</span><span> cd &lt;your-folder-name&gt;
-</span><span style="color:#bf616a;">$</span><span> zola init
-</span><span style="color:#bf616a;">$</span><span> git clone git@github.com:dongryul-kim/olivine.git themes/olivine
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir </span><span>&lt;your-folder-name&gt;
+</span><span style="color:#96b5b4;">cd </span><span>&lt;your-folder-name&gt;
+</span><span style="color:#bf616a;">zola</span><span> init
+</span><span style="color:#bf616a;">git</span><span> clone git@github.com:dongryul-kim/olivine.git themes/olivine
 </span><span style="color:#65737e;"># Add the option theme = &quot;olivine&quot; to config.toml
-</span><span style="color:#bf616a;">$</span><span> zola serve
+</span><span style="color:#bf616a;">zola</span><span> serve
 </span><span style="color:#65737e;"># Navigate to localhost:1111 on the web browser
 </span></code></pre>
 <p>Because of some limitations, there are additional steps one has to take. Create
@@ -159,10 +159,17 @@ a file a named <code>content/olivine-internal-graph.md</code> with contents</p>
 </span><span>template = &quot;internal/graph.html&quot;
 </span><span>+++
 </span></code></pre>
-<p>and also a file named <code>content/olivine-internal-sitemap.md</code> with contents</p>
+<p>a file named <code>content/olivine-internal-sitemap.md</code> with contents</p>
 <pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+++
 </span><span>title = &quot;Sitemap&quot;
 </span><span>template = &quot;internal/sitemap.html&quot;
+</span><span>+++
+</span></code></pre>
+<p>and also a file named <code>content/journal/_index.md</code> with contents</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>+++
+</span><span>title = &quot;Journal&quot;
+</span><span>template = &quot;internal/journal.html&quot;
+</span><span>extra.siblings = true
 </span><span>+++
 </span></code></pre>
 
@@ -176,16 +183,21 @@ a file a named <code>content/olivine-internal-graph.md</code> with contents</p>
     <div id="help-shortcuts">
       <div><code>j</code> scroll down</div>
       <div><code>k</code> scroll up</div>
+      <div><code>g</code> scroll to top</div>
+      <div><code>G</code> scroll to bottom</div>
       <div><code>h</code> go to previous sibling</div>
       <div><code>l</code> go to next sibling</div>
       <div><code>u</code> go to parent</div>
-      <div><code>H</code> go to root</div>
-      <div><code>p</code> go to previous page</div>
-      <div><code>n</code> go to next page</div>
+      <div><code>U</code> go to root</div>
+      <div><code>r</code> reload page</div>
+      <div><code>H</code> go back in history</div>
+      <div><code>L</code> go forward in history</div>
+      <div><code>t</code> toggle theme</div>
       <div><code>[</code> toggle left sidebar</div>
       <div><code>]</code> toggle right sidebar</div>
-      <div><code>?</code> toggle keyboard shortcuts</div>
+      <div><code>f</code> open and close link options</div>
       <div><code>/</code> focus searchbar</div>
+      <div><code>?</code> toggle keyboard shortcuts</div>
       <div><code>Esc</code> focus document</div>
     </div>
   </div>

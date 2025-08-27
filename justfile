@@ -172,7 +172,7 @@ fix-docs-dir:
     "use strict"
     const zx = require("zx")
     const fs = zx.fs, path = zx.path
-    const filesToDelete = zx.globby.globbySync(["docs/demo/**/*.mp4", "docs/demo/*/robots.txt"])
+    const filesToDelete = zx.globby.globbySync(["docs/demo/**/*.mp4", "docs/demo/**/*.webm", "docs/demo/*/robots.txt"])
     for (const fileToDelete of filesToDelete) {
         fs.rm(fileToDelete)
     }

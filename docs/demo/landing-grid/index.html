@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Grid</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+    
+    <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(102, 126, 234, 0.6); }
+    }
+    
+    .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+    .animate-scale-in { animation: scaleIn 0.4s ease-out; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-dark {
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .tile-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .tile-hover:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 font-inter overflow-x-hidden">
+    <!-- Animated background elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-white opacity-5 rounded-full animate-float"></div>
+        <div class="absolute top-1/2 -left-20 w-60 h-60 bg-white opacity-3 rounded-full animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 right-20 w-40 h-40 bg-white opacity-10 rounded-full animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Enhanced Professional Navigation -->
+    <nav class="fixed left-0 top-0 h-full w-16 z-50 glass-dark border-r border-white/10">
+        <div class="h-full flex flex-col items-center py-6">
+            <!-- Logo -->
+            <div class="mb-8 p-3 rounded-xl bg-white/10 hover:bg-white/15 transition-all duration-200 cursor-pointer">
+                <i class="fas fa-home text-white text-xl"></i>
+            </div>
+            
+            <!-- Nav Items -->
+            <ul class="flex-1 flex flex-col items-center space-y-3">
+                <li>
+                    <a href="#" class="nav-item active" data-filter="all" title="All Apps">
+                        <i class="fas fa-th text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#favorite" class="nav-item" data-filter="favorite" title="Favorites">
+                        <i class="fas fa-star text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#search" class="nav-item" data-filter="search" title="Search">
+                        <i class="fas fa-search text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#shopping" class="nav-item" data-filter="shopping" title="Shopping">
+                        <i class="fas fa-shopping-bag text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#music" class="nav-item" data-filter="music" title="Music">
+                        <i class="fas fa-music text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#video" class="nav-item" data-filter="video" title="Video">
+                        <i class="fas fa-play text-lg"></i>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                
+            </ul>
+            
+            <!-- App Counter -->
+            <div class="mt-4 text-center">
+                <div id="nav-counter" class="text-xs text-white/50 font-medium"></div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="ml-16 min-h-screen">
+        <div class="container mx-auto px-6 py-16">
+            <!-- Hero -->
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6">
+                    <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                        Landing Grid
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto">
+                    Your personal dashboard to access all your favorite websites and tools
+                </p>
+            </div>
+            
+            <!-- Search -->
+            <div class="max-w-2xl mx-auto mb-12 animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="relative">
+                    <input type="text" 
+                           id="search-input" 
+                           placeholder="Search your apps and tools..."
+                           class="w-full px-6 py-4 pl-14 glass rounded-2xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all duration-300">
+                    <div class="absolute left-5 top-1/2 transform -translate-y-1/2">
+                        <i class="fas fa-search text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Grid -->
+            
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 max-w-7xl mx-auto">
+    
+    
+    
+        <div class="tile" data-groups="favorite,search">
+            <a href="https:&#x2F;&#x2F;perplexity.ai" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #1debf2CC, #1debf299);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #1debf2;color: #FFFFFF;"
+                     data-name="Perplexity">
+                    Perplexity
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">favorite search</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Perplexity</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="favorite,search">
+            <a href="https:&#x2F;&#x2F;google.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #4285F4CC, #4285F499);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #4285F4;color: #FFFFFF;"
+                     data-name="Google">
+                    Google
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">favorite search</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Google</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="favorite,video">
+            <a href="https:&#x2F;&#x2F;youtube.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #FF0000CC, #FF000099);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #FF0000;color: #FFFFFF;"
+                     data-name="YouTube">
+                    YouTube
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">favorite video</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">YouTube</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="favorite">
+            <a href="https:&#x2F;&#x2F;github.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #24292ECC, #24292E99);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #24292E;color: #FFFFFF;"
+                     data-name="GitHub">
+                    GitHub
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">favorite</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">GitHub</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="shopping">
+            <a href="https:&#x2F;&#x2F;amazon.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #FF9900CC, #FF990099);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #FF9900;color: #000000;"
+                     data-name="Amazon">
+                    Amazon
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">shopping</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Amazon</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="music">
+            <a href="https:&#x2F;&#x2F;spotify.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #1DB954CC, #1DB95499);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #1DB954;color: #FFFFFF;"
+                     data-name="Spotify">
+                    Spotify
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">music</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Spotify</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="video">
+            <a href="https:&#x2F;&#x2F;netflix.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #E50914CC, #E5091499);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #E50914;color: #FFFFFF;"
+                     data-name="Netflix">
+                    Netflix
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">video</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Netflix</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="">
+            <a href="https:&#x2F;&#x2F;twitter.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #1DA1F2CC, #1DA1F299);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #1DA1F2;color: #FFFFFF;"
+                     data-name="Twitter">
+                    Twitter
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden"></div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Twitter</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="">
+            <a href="https:&#x2F;&#x2F;instagram.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #E4405FCC, #E4405F99);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #E4405F;color: #FFFFFF;"
+                     data-name="Instagram">
+                    Instagram
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden"></div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Instagram</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="">
+            <a href="https:&#x2F;&#x2F;linkedin.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #0077B5CC, #0077B599);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #0077B5;color: #FFFFFF;"
+                     data-name="LinkedIn">
+                    LinkedIn
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden"></div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">LinkedIn</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="">
+            <a href="https:&#x2F;&#x2F;discord.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #5865F2CC, #5865F299);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #5865F2;color: #FFFFFF;"
+                     data-name="Discord">
+                    Discord
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden"></div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Discord</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="">
+            <a href="https:&#x2F;&#x2F;reddit.com" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #FF4500CC, #FF450099);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #FF4500;color: #FFFFFF;"
+                     data-name="Reddit">
+                    Reddit
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden"></div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Reddit</h3>
+            </div>
+        </div>
+    
+        <div class="tile" data-groups="video">
+            <a href="https:&#x2F;&#x2F;twitch.tv" 
+               target="_blank" rel="noopener noreferrer"
+               class="block tile-hover rounded-2xl p-6 h-32 flex flex-col items-center justify-center text-center"
+               style="background: linear-gradient(135deg, #9146FFCC, #9146FF99);backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                
+                <!-- Icon/Letter -->
+                <div class="tile-icon w-12 h-12 rounded-xl flex items-center justify-center mb-3 text-2xl font-bold"
+                     style="background-color: #9146FF;color: #FFFFFF;"
+                     data-name="Twitch">
+                    Twitch
+                </div>
+                
+                <!-- Tags (hidden, for filtering) -->
+                <div class="hidden">video</div>
+            </a>
+            
+            <!-- Title -->
+            <div class="tile-title mt-3 text-center">
+                <h3 class="text-sm font-medium text-white truncate">Twitch</h3>
+            </div>
+        </div>
+    
+</div>
+
+<!-- Empty State -->
+<div id="empty-state" class="hidden text-center py-20">
+    <div class="glass rounded-3xl p-12 max-w-md mx-auto">
+        <i class="fas fa-search text-4xl text-white/50 mb-6"></i>
+        <h3 class="text-xl font-semibold text-white mb-4">No apps found</h3>
+        <p class="text-white/70">Try adjusting your search or filter.</p>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <style>
+    /* Enhanced Professional Navigation with Better Active States */
+    .nav-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-item:hover {
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item.active {
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+        animation: pulse-glow 2s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.4), 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-item.active:hover {
+        transform: scale(1.15);
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .nav-indicator {
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 32px;
+        background: linear-gradient(to bottom, #667eea, #764ba2);
+        border-radius: 9999px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+    
+    .nav-item.active .nav-indicator {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
+        box-shadow: 0 0 15px rgba(102, 126, 234, 0.8);
+    }
+    
+    /* Smooth fade transitions for tiles */
+    .tile {
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    filter 0.4s ease;
+    }
+    
+    .tile.fade-out {
+        opacity: 0;
+        transform: scale(0.95);
+        filter: blur(2px);
+    }
+    
+    .tile.fade-in {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+
+    /* Enhanced category display */
+    #nav-counter {
+        padding: 4px 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        font-size: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('.nav-item');
+        const tiles = document.querySelectorAll('.tile');
+        const searchInput = document.getElementById('search-input');
+        const navCounter = document.getElementById('nav-counter');
+        
+        // Convert tile icons to show first letter only
+        document.querySelectorAll('.tile-icon').forEach(icon => {
+            const name = icon.getAttribute('data-name');
+            if (name) {
+                icon.textContent = name.charAt(0).toUpperCase();
+            }
+        });
+        
+        // Stagger tile animations on initial load
+        tiles.forEach((tile, index) => {
+            tile.style.animationDelay = `${index * 0.1}s`;
+            tile.classList.add('animate-scale-in');
+        });
+        
+        // Update counter with enhanced display
+        function updateCounter(filter, visibleCount) {
+            if (navCounter) {
+                const totalCount = tiles.length;
+                if (filter === 'all') {
+                    navCounter.textContent = `${totalCount} apps`;
+                    navCounter.style.color = 'rgba(255, 255, 255, 0.7)';
+                } else {
+                    navCounter.textContent = `${visibleCount}/${totalCount}`;
+                    navCounter.style.color = 'rgba(102, 126, 234, 0.9)';
+                }
+            }
+        }
+        
+        // Enhanced filtering with smooth transitions
+        function filterTiles(filter) {
+            let visibleCount = 0;
+            const filterName = filter === 'all' ? 'All Apps' : 
+                               document.querySelector(`[data-filter="${filter}"]`)?.title || filter;
+            
+            // Phase 1: Fade out all tiles
+            tiles.forEach(tile => {
+                tile.classList.add('fade-out');
+                tile.classList.remove('fade-in');
+            });
+            
+            // Phase 2: After fade out, determine visibility and fade in relevant tiles
+            setTimeout(() => {
+                tiles.forEach((tile, index) => {
+                    const groups = tile.getAttribute('data-groups') || '';
+                    const shouldShow = filter === 'all' || groups.includes(filter);
+                    
+                    if (shouldShow) {
+                        visibleCount++;
+                        tile.style.display = 'block';
+                        
+                        // Staggered fade in
+                        setTimeout(() => {
+                            tile.classList.remove('fade-out');
+                            tile.classList.add('fade-in');
+                        }, index * 50);
+                    } else {
+                        tile.style.display = 'none';
+                    }
+                });
+                
+                updateCounter(filter, visibleCount);
+                
+                // Show empty state if no tiles visible
+                checkEmptyState();
+            }, 200);
+        }
+        
+        // Enhanced search with smooth transitions
+        function searchTiles(query) {
+            let visibleCount = 0;
+            
+            tiles.forEach(tile => {
+                tile.classList.add('fade-out');
+                tile.classList.remove('fade-in');
+            });
+            
+            setTimeout(() => {
+                tiles.forEach((tile, index) => {
+                    const title = tile.querySelector('.tile-title').textContent.toLowerCase();
+                    const shouldShow = title.includes(query.toLowerCase());
+                    
+                    if (shouldShow) {
+                        visibleCount++;
+                        tile.style.display = 'block';
+                        
+                        setTimeout(() => {
+                            tile.classList.remove('fade-out');
+                            tile.classList.add('fade-in');
+                        }, index * 30);
+                    } else {
+                        tile.style.display = 'none';
+                    }
+                });
+                
+                if (query) {
+                    navCounter.textContent = `${visibleCount} found`;
+                    navCounter.style.color = 'rgba(34, 197, 94, 0.9)';
+                } else {
+                    updateCounter('all', tiles.length);
+                }
+                
+                checkEmptyState();
+            }, 150);
+        }
+        
+        // Check for empty state
+        function checkEmptyState() {
+            const visibleTiles = document.querySelectorAll('.tile:not([style*="display: none"])');
+            const emptyState = document.getElementById('empty-state');
+            
+            if (emptyState) {
+                if (visibleTiles.length === 0) {
+                    emptyState.classList.remove('hidden');
+                } else {
+                    emptyState.classList.add('hidden');
+                }
+            }
+        }
+        
+        // Enhanced navigation click handlers
+        navItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Clear search when filtering
+                if (searchInput) {
+                    searchInput.value = '';
+                }
+                
+                // Update active state with enhanced feedback
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Add a brief scale animation for feedback
+                this.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+                
+                const filter = this.getAttribute('data-filter');
+                filterTiles(filter);
+                
+                // Update URL hash
+                if (filter !== 'all') {
+                    window.history.replaceState({}, '', '#' + filter);
+                } else {
+                    window.history.replaceState({}, '', '/');
+                }
+            });
+        });
+        
+        // Search functionality
+        let searchTimeout;
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value;
+                
+                // Clear active nav state when searching
+                if (query) {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                }
+                
+                // Debounce search for better performance
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    searchTiles(query);
+                }, 200);
+            });
+        }
+        
+        // Initialize counter
+        updateCounter('all', tiles.length);
+        
+        // Handle initial URL hash
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            const navItem = document.querySelector(`[data-filter="${hash}"]`);
+            if (navItem) {
+                setTimeout(() => {
+                    navItem.click();
+                }, 500);
+            }
+        }
+        
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // ESC to clear search and show all
+            if (e.key === 'Escape') {
+                if (searchInput) {
+                    searchInput.value = '';
+                    searchInput.blur();
+                }
+                document.querySelector('[data-filter="all"]').click();
+            }
+            
+            // Number keys for quick navigation
+            const numKey = parseInt(e.key);
+            if (numKey >= 1 && numKey <= navItems.length && !e.ctrlKey && !e.metaKey) {
+                navItems[numKey - 1].click();
+            }
+        });
+    });
+    </script>
+</body>
+</html>
