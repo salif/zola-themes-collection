@@ -62,6 +62,10 @@ h1 {
 	flex-grow: 1;
 }
 
+h1 a {
+	text-decoration: none;
+}
+
 h2 {
 	font-size: 2.6rem;
 }
@@ -158,6 +162,33 @@ code * {
 	font-size: 16px;
 }
 
+/* The line numbers already provide some kind of left/right padding */
+pre[data-linenos] {
+  padding: 0;
+}
+
+pre table td {
+  padding: 0;
+}
+
+/* The line number cells */
+pre table td:nth-of-type(1) {
+  text-align: center;
+  padding-right: 1em;
+  vertical-align: top;
+  user-select: none;
+  color: var(--theme-gray)
+}
+
+pre table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+pre table * {
+	border: none;
+}
+
 article {
 	border-bottom: 1px solid var(--theme-text);
 	padding: 2.2em 0;
@@ -185,8 +216,12 @@ article p {
 
 article blockquote {
 	font-style: italic;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	max-width: 60ch;
+}
+
+article img {
+	max-width: 100%;
 }
 
 p.reading-time {

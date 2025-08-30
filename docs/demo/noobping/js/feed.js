@@ -13,10 +13,8 @@ async function setupPeriodicSync() {
                 }
             });
             console.log('Periodic sync set up.');
-            alert('Periodic background sync is set up. You will receive notifications for new poems.');
         } else {
             console.warn('Periodic background sync permission:', status.state);
-            alert('Periodic background sync permission is not granted. You will not receive notifications for new poems.');
         }
 
     } else console.warn('Periodic background sync not supported.');
