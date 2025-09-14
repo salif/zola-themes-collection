@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>:root {--primary-color: #002fff;--secondary-color: #555;} </style>
+
+    
+      <link rel="icon" href="icon.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.2ba158c29ea9a455.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.23cbf8143893ca80.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.095f4ce3d4e92d7b.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.e7f778fc290b0430.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.e75e551e83dfc464.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.66f86727951c914e.jpg" />
+      
+    
+
+    <meta property="og:type" content="website">
+    
+
+    
+
+    
+      
+        <meta name="description" content="This is a demo site" />
+      
+    
+
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;tags&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;categories&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.eaf09454cbab304b.jpg" />
+
+    <title>
+      
+        
+          Automating Your Development Workflow: Tools and Techniques
+        
+      
+    </title>
+
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/edge/style.css">
+    
+
+    
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.eaf09454cbab304b.jpg" alt="Icon">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;about&#x2F;">About</a>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+            <a href="&#x2F;tags&#x2F;">Tags</a>
+          
+            <a href="&#x2F;categories&#x2F;">Categories</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="page-title">
+    <h1 class="post-title">Automating Your Development Workflow: Tools and Techniques</h1>
+
+    <div class="meta-section">
+      <span class="date-read">
+        July 12, 2024 - 198 words - 1 mins
+      </span>
+
+      
+        <span class="tags">
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/edge/tags/development/" class="secondary-link">#development</a>
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/edge/tags/automation/" class="secondary-link">#automation</a>
+          
+        </span>
+      
+
+      
+        <span class="tags">
+          
+          in <strong><a href="https://salif.github.io/zola-themes-collection/demo/edge/categories/tools/" class="secondary-link"> tools</a></strong>
+          
+        </span>
+      
+    </div>
+  </div>
+
+  <div>
+    <p>A well-automated development workflow can save hours of repetitive work and reduce human error. Here’s how to set up automation that actually makes your life easier.</p>
+<h2 id="git-hooks-for-quality-control">Git Hooks for Quality Control</h2>
+<p>Git hooks run automatically at certain points in the Git workflow:</p>
+<h3 id="pre-commit-hook">Pre-commit Hook</h3>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#888888;">#!/bin/sh
+</span><span style="color:#888888;"># Run linting and formatting
+</span><span style="color:#ffb964;">npm</span><span> run lint
+</span><span style="color:#ffb964;">npm</span><span> run format
+</span><span style="color:#ffb964;">npm</span><span> test -- --passWithNoTests
+</span></code></pre>
+<h3 id="pre-push-hook">Pre-push Hook</h3>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#888888;">#!/bin/sh
+</span><span style="color:#888888;"># Run full test suite before pushing
+</span><span style="color:#ffb964;">npm</span><span> run test:ci
+</span><span style="color:#ffb964;">npm</span><span> run build
+</span></code></pre>
+<h2 id="continuous-integration-setup">Continuous Integration Setup</h2>
+<h3 id="github-actions-example">GitHub Actions Example</h3>
+<pre data-lang="yaml" style="background-color:#151515;color:#e8e8d3;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#ffb964;">name</span><span>: </span><span style="color:#99ad6a;">CI
+</span><span>on: [</span><span style="color:#99ad6a;">push</span><span>, </span><span style="color:#99ad6a;">pull_request</span><span>]
+</span><span style="color:#ffb964;">jobs</span><span>:
+</span><span>  </span><span style="color:#ffb964;">test</span><span>:
+</span><span>    </span><span style="color:#ffb964;">runs-on</span><span>: </span><span style="color:#99ad6a;">ubuntu-latest
+</span><span>    </span><span style="color:#ffb964;">steps</span><span>:
+</span><span>      - </span><span style="color:#ffb964;">uses</span><span>: </span><span style="color:#99ad6a;">actions/checkout@v3
+</span><span>      - </span><span style="color:#ffb964;">uses</span><span>: </span><span style="color:#99ad6a;">actions/setup-node@v3
+</span><span>        </span><span style="color:#ffb964;">with</span><span>:
+</span><span>          </span><span style="color:#ffb964;">node-version</span><span>: </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">18</span><span style="color:#556633;">&#39;
+</span><span>      - </span><span style="color:#ffb964;">run</span><span>: </span><span style="color:#99ad6a;">npm ci
+</span><span>      - </span><span style="color:#ffb964;">run</span><span>: </span><span style="color:#99ad6a;">npm test
+</span><span>      - </span><span style="color:#ffb964;">run</span><span>: </span><span style="color:#99ad6a;">npm run build
+</span></code></pre>
+<h2 id="local-development-automation">Local Development Automation</h2>
+<h3 id="package-json-scripts">Package.json Scripts</h3>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">scripts</span><span style="color:#556633;">&quot;</span><span>: {
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">dev</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">concurrently &#39;npm:watch:*&#39;</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">watch:build</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">webpack --watch</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">watch:test</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">jest --watch</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">watch:lint</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">eslint --watch src/</span><span style="color:#556633;">&quot;</span><span>,
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">prepare</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">husky install</span><span style="color:#556633;">&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h3 id="makefile-for-multi-language-projects">Makefile for Multi-language Projects</h3>
+<pre data-lang="make" style="background-color:#151515;color:#e8e8d3;" class="language-make "><code class="language-make" data-lang="make"><span style="color:#fad07a;">.PHONY</span><span>: </span><span style="color:#99ad6a;">install test build clean deploy
+</span><span>
+</span><span style="color:#fad07a;">install</span><span>:
+</span><span>	</span><span style="color:#ffb964;">npm</span><span> install
+</span><span>	</span><span style="color:#ffb964;">pip</span><span> install</span><span style="color:#ffb964;"> -r</span><span> requirements.txt
+</span><span>
+</span><span style="color:#fad07a;">test</span><span>:
+</span><span>	</span><span style="color:#ffb964;">npm</span><span> test
+</span><span>	</span><span style="color:#ffb964;">python -m</span><span> pytest
+</span><span>
+</span><span style="color:#fad07a;">build</span><span>:
+</span><span>	</span><span style="color:#ffb964;">npm</span><span> run build
+</span><span>	</span><span style="color:#ffb964;">python</span><span> setup.py build
+</span><span>
+</span><span style="color:#fad07a;">deploy</span><span>: </span><span style="color:#99ad6a;">test build
+</span><span>	</span><span style="color:#ffb964;">./scripts/deploy.sh
+</span></code></pre>
+<h2 id="code-quality-automation">Code Quality Automation</h2>
+<h3 id="eslint-prettier-configuration">ESLint + Prettier Configuration</h3>
+<pre data-lang="json" style="background-color:#151515;color:#e8e8d3;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">extends</span><span style="color:#556633;">&quot;</span><span>: [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">eslint:recommended</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">@typescript-eslint/recommended</span><span style="color:#556633;">&quot;</span><span>],
+</span><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">plugins</span><span style="color:#556633;">&quot;</span><span>: [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">prettier</span><span style="color:#556633;">&quot;</span><span>],
+</span><span>  </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">rules</span><span style="color:#556633;">&quot;</span><span>: {
+</span><span>    </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">prettier/prettier</span><span style="color:#556633;">&quot;</span><span>: </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">error</span><span style="color:#556633;">&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+<h3 id="pre-commit-configuration">Pre-commit Configuration</h3>
+<pre data-lang="yaml" style="background-color:#151515;color:#e8e8d3;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#ffb964;">repos</span><span>:
+</span><span>  - </span><span style="color:#ffb964;">repo</span><span>: </span><span style="color:#99ad6a;">https://github.com/pre-commit/pre-commit-hooks
+</span><span>    </span><span style="color:#ffb964;">rev</span><span>: </span><span style="color:#99ad6a;">v4.4.0
+</span><span>    </span><span style="color:#ffb964;">hooks</span><span>:
+</span><span>      - </span><span style="color:#ffb964;">id</span><span>: </span><span style="color:#99ad6a;">trailing-whitespace
+</span><span>      - </span><span style="color:#ffb964;">id</span><span>: </span><span style="color:#99ad6a;">end-of-file-fixer
+</span><span>      - </span><span style="color:#ffb964;">id</span><span>: </span><span style="color:#99ad6a;">check-yaml
+</span><span>  - </span><span style="color:#ffb964;">repo</span><span>: </span><span style="color:#99ad6a;">https://github.com/psf/black
+</span><span>    </span><span style="color:#ffb964;">rev</span><span>: </span><span style="color:#cf6a4c;">22.10.0
+</span><span>    </span><span style="color:#ffb964;">hooks</span><span>:
+</span><span>      - </span><span style="color:#ffb964;">id</span><span>: </span><span style="color:#99ad6a;">black
+</span></code></pre>
+<h2 id="environment-management">Environment Management</h2>
+<h3 id="docker-development-environment">Docker Development Environment</h3>
+<pre data-lang="dockerfile" style="background-color:#151515;color:#e8e8d3;" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#8fbfdc;">FROM</span><span> node:</span><span style="color:#ffb964;">18-alpine
+</span><span style="color:#8fbfdc;">WORKDIR </span><span>/app
+</span><span style="color:#8fbfdc;">COPY</span><span> package*.json ./
+</span><span style="color:#8fbfdc;">RUN </span><span>npm ci
+</span><span style="color:#8fbfdc;">COPY</span><span> . .
+</span><span style="color:#8fbfdc;">EXPOSE </span><span>3000
+</span><span>CMD [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">npm</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">run</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">dev</span><span style="color:#556633;">&quot;</span><span>]
+</span></code></pre>
+<h3 id="development-scripts">Development Scripts</h3>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#888888;">#!/bin/bash
+</span><span style="color:#888888;"># dev-setup.sh
+</span><span>set </span><span style="color:#ffb964;">-e
+</span><span>
+</span><span>echo </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Setting up development environment...</span><span style="color:#556633;">&quot;
+</span><span>
+</span><span style="color:#888888;"># Install dependencies
+</span><span style="color:#ffb964;">npm</span><span> install
+</span><span>
+</span><span style="color:#888888;"># Set up git hooks
+</span><span style="color:#ffb964;">npx</span><span> husky install
+</span><span>
+</span><span style="color:#888888;"># Create local environment file
+</span><span style="color:#ffb964;">cp</span><span> .env.example .env.local
+</span><span>
+</span><span style="color:#888888;"># Start services
+</span><span style="color:#ffb964;">docker-compose</span><span> up</span><span style="color:#ffb964;"> -d
+</span><span>
+</span><span>echo </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Development environment ready!</span><span style="color:#556633;">&quot;
+</span></code></pre>
+<h2 id="deployment-automation">Deployment Automation</h2>
+<h3 id="simple-deployment-script">Simple Deployment Script</h3>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#888888;">#!/bin/bash
+</span><span style="color:#888888;"># deploy.sh
+</span><span>set </span><span style="color:#ffb964;">-e
+</span><span>
+</span><span>echo </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Starting deployment...</span><span style="color:#556633;">&quot;
+</span><span>
+</span><span style="color:#888888;"># Run tests
+</span><span style="color:#ffb964;">npm</span><span> test
+</span><span>
+</span><span style="color:#888888;"># Build for production
+</span><span style="color:#ffb964;">npm</span><span> run build
+</span><span>
+</span><span style="color:#888888;"># Deploy to server
+</span><span style="color:#ffb964;">rsync -avz --delete</span><span> dist/ user@server:/var/www/app/
+</span><span>
+</span><span style="color:#888888;"># Restart services
+</span><span style="color:#ffb964;">ssh</span><span> user@server </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">sudo systemctl restart nginx</span><span style="color:#556633;">&#39;
+</span><span>
+</span><span>echo </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Deployment complete!</span><span style="color:#556633;">&quot;
+</span></code></pre>
+<h2 id="monitoring-and-notifications">Monitoring and Notifications</h2>
+<h3 id="slack-integration">Slack Integration</h3>
+<pre data-lang="javascript" style="background-color:#151515;color:#e8e8d3;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#8fbfdc;">const </span><span style="color:#ffb964;">webhook </span><span>= process.env.</span><span style="color:#ffb964;">SLACK_WEBHOOK</span><span>;
+</span><span>
+</span><span style="color:#8fbfdc;">async function </span><span style="color:#fad07a;">notifyDeployment</span><span>(</span><span style="color:#ffb964;">status</span><span>) {
+</span><span>  </span><span style="color:#8fbfdc;">await </span><span style="color:#fad07a;">fetch</span><span>(</span><span style="color:#ffb964;">webhook</span><span>, {
+</span><span>    method: </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">POST</span><span style="color:#556633;">&#39;</span><span>,
+</span><span>    headers: { </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">Content-Type</span><span style="color:#556633;">&#39;</span><span>: </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">application/json</span><span style="color:#556633;">&#39; </span><span>},
+</span><span>    body: JSON.stringify({
+</span><span>      text: </span><span style="color:#99ad6a;">`🚀 Deployment ${</span><span style="color:#ffb964;">status</span><span style="color:#99ad6a;">}: ${process.env.</span><span style="color:#ffb964;">GITHUB_SHA</span><span style="color:#99ad6a;">}`
+</span><span>    })
+</span><span>  });
+</span><span>}
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Start Small</strong>: Automate one pain point at a time</li>
+<li><strong>Make it Visible</strong>: Log what your automation is doing</li>
+<li><strong>Fail Fast</strong>: Stop the process if something goes wrong</li>
+<li><strong>Version Control</strong>: Keep automation scripts in your repo</li>
+<li><strong>Documentation</strong>: Comment your scripts and maintain README</li>
+</ol>
+<h2 id="tools-worth-exploring">Tools Worth Exploring</h2>
+<ul>
+<li><strong>Husky</strong>: Git hooks made easy</li>
+<li><strong>lint-staged</strong>: Run linters on staged files only</li>
+<li><strong>concurrently</strong>: Run multiple commands in parallel</li>
+<li><strong>nodemon</strong>: Auto-restart applications during development</li>
+<li><strong>chokidar</strong>: File watching for custom scripts</li>
+</ul>
+<p>Remember: automation should reduce cognitive load, not create it. If your automation is complex and fragile, it might be doing more harm than good.</p>
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+
+      
+        <hr>
+        <p>This site is powered by <a href="https://www.getzola.org/">Zola</a> written in Rust ❤️
+© 2025 Sergey Silaev. <a href="https://github.com/sesav/zola-theme-edge">Souce code</a> of this template.</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

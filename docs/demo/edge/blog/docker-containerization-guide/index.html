@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>:root {--primary-color: #002fff;--secondary-color: #555;} </style>
+
+    
+      <link rel="icon" href="icon.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.2ba158c29ea9a455.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.23cbf8143893ca80.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.095f4ce3d4e92d7b.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.e7f778fc290b0430.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.e75e551e83dfc464.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.66f86727951c914e.jpg" />
+      
+    
+
+    <meta property="og:type" content="website">
+    
+
+    
+
+    
+      
+        <meta name="description" content="This is a demo site" />
+      
+    
+
+    
+      <link rel="prerender" href="&#x2F;about&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;tags&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;categories&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.eaf09454cbab304b.jpg" />
+
+    <title>
+      
+        
+          Docker Containerization Guide
+        
+      
+    </title>
+
+    
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/edge/style.css">
+    
+
+    
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;edge&#x2F;processed_images&#x2F;icon.eaf09454cbab304b.jpg" alt="Icon">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;about&#x2F;">About</a>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+            <a href="&#x2F;tags&#x2F;">Tags</a>
+          
+            <a href="&#x2F;categories&#x2F;">Categories</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="page-title">
+    <h1 class="post-title">Docker Containerization Guide</h1>
+
+    <div class="meta-section">
+      <span class="date-read">
+        January 28, 2024 - 98 words - 1 mins
+      </span>
+
+      
+        <span class="tags">
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/edge/tags/development/" class="secondary-link">#development</a>
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/edge/tags/tools/" class="secondary-link">#tools</a>
+          
+        </span>
+      
+
+      
+        <span class="tags">
+          
+          in <strong><a href="https://salif.github.io/zola-themes-collection/demo/edge/categories/tools/" class="secondary-link"> tools</a></strong>
+          
+        </span>
+      
+    </div>
+  </div>
+
+  <div>
+    <p>Docker has revolutionized how we package and deploy applications. Learn the fundamentals of containerization.</p>
+<span id="continue-reading"></span><h2 id="why-docker">Why Docker?</h2>
+<p>Docker solves the “it works on my machine” problem by packaging applications with all their dependencies into portable containers.</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<h3 id="images-vs-containers">Images vs Containers</h3>
+<ul>
+<li><strong>Image</strong>: Read-only template used to create containers</li>
+<li><strong>Container</strong>: Running instance of an image</li>
+</ul>
+<h3 id="dockerfile-basics">Dockerfile Basics</h3>
+<pre data-lang="dockerfile" style="background-color:#151515;color:#e8e8d3;" class="language-dockerfile "><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#8fbfdc;">FROM</span><span> node:</span><span style="color:#ffb964;">18-alpine
+</span><span>
+</span><span style="color:#8fbfdc;">WORKDIR </span><span>/app
+</span><span>
+</span><span style="color:#8fbfdc;">COPY</span><span> package*.json ./
+</span><span style="color:#8fbfdc;">RUN </span><span>npm install
+</span><span>
+</span><span style="color:#8fbfdc;">COPY</span><span> . .
+</span><span>
+</span><span style="color:#8fbfdc;">EXPOSE </span><span>3000
+</span><span>CMD [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">npm</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">start</span><span style="color:#556633;">&quot;</span><span>]
+</span></code></pre>
+<h2 id="essential-commands">Essential Commands</h2>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#888888;"># Build an image
+</span><span style="color:#ffb964;">docker</span><span> build</span><span style="color:#ffb964;"> -t</span><span> myapp .
+</span><span>
+</span><span style="color:#888888;"># Run a container
+</span><span style="color:#ffb964;">docker</span><span> run</span><span style="color:#ffb964;"> -p</span><span> 3000:3000 myapp
+</span><span>
+</span><span style="color:#888888;"># List running containers
+</span><span style="color:#ffb964;">docker</span><span> ps
+</span><span>
+</span><span style="color:#888888;"># Stop a container
+</span><span style="color:#ffb964;">docker</span><span> stop container_id
+</span></code></pre>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>For multi-container applications:</p>
+<pre data-lang="yaml" style="background-color:#151515;color:#e8e8d3;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#ffb964;">version</span><span>: </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">3.8</span><span style="color:#556633;">&#39;
+</span><span style="color:#ffb964;">services</span><span>:
+</span><span>  </span><span style="color:#ffb964;">web</span><span>:
+</span><span>    </span><span style="color:#ffb964;">build</span><span>: </span><span style="color:#cf6a4c;">.
+</span><span>    </span><span style="color:#ffb964;">ports</span><span>:
+</span><span>      - </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">3000:3000</span><span style="color:#556633;">&quot;
+</span><span>  </span><span style="color:#ffb964;">db</span><span>:
+</span><span>    </span><span style="color:#ffb964;">image</span><span>: </span><span style="color:#99ad6a;">postgres:13
+</span><span>    </span><span style="color:#ffb964;">environment</span><span>:
+</span><span>      </span><span style="color:#ffb964;">POSTGRES_PASSWORD</span><span>: </span><span style="color:#99ad6a;">password
+</span></code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li>Use official base images</li>
+<li>Minimize image layers</li>
+<li>Don’t run as root</li>
+<li>Use .dockerignore files</li>
+<li>Keep containers stateless</li>
+</ol>
+<p>Docker simplifies deployment and ensures consistency across different environments.</p>
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+
+      
+        <hr>
+        <p>This site is powered by <a href="https://www.getzola.org/">Zola</a> written in Rust ❤️
+© 2025 Sergey Silaev. <a href="https://github.com/sesav/zola-theme-edge">Souce code</a> of this template.</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

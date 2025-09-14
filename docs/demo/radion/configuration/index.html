@@ -17,15 +17,14 @@
     
 
     <!-- Title -->
+    
       
-
+    
     <title>
     
     Configuration Options
     
 </title>
-    <meta property="og:title" content="radion theme" />
-    <meta name="twitter:title" content="radion theme" />
 
     <!-- Additional Facebook Meta Tags -->
     <meta property="og:site_name" content="radion theme" />
@@ -38,10 +37,6 @@
       content="article"
     />
     <meta property="og:title" content="Configuration Options" />
-    <meta
-      property="og:image"
-      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/web-app-manifest-512x512.png"
-    />
 
     <!-- Additional Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -50,10 +45,22 @@
       content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;configuration&#x2F;"
     />
     <meta name="twitter:title" content="Configuration Options" />
+
+    <!-- Cover images -->
+    
+    
+
+    <meta
+      property="og:image"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
+    />
+
     <meta
       name="twitter:image"
-      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/icons/favicon/web-app-manifest-512x512.png"
+      content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
     />
+
+
 
     <!-- Favicons -->
     
@@ -229,7 +236,7 @@
       </a>
        
       <a
-        href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe"
+        href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe&#x2F;radion"
         class="feed-icon"
         rel="noopener noreferrer"
       >
@@ -261,7 +268,7 @@
         <circle cx="16" cy="16" r="14"/>
         <path d="M16 8 L16 16 20 20"/>
     </svg>
-    <data>4 minute read</data>
+    <data>5 minute read</data>
     <svg class="icon i-edit" viewBox="0 0 32 32"
          width="16" height="16" fill="none" stroke="currentcolor"
          stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
@@ -357,6 +364,14 @@
          
         <li>
           <a href="https://salif.github.io/zola-themes-collection/demo/radion/configuration/#comments">Comments</a>
+        </li>
+         
+        <li>
+          <a href="https://salif.github.io/zola-themes-collection/demo/radion/configuration/#post-revision-history">Post Revision History</a>
+        </li>
+         
+        <li>
+          <a href="https://salif.github.io/zola-themes-collection/demo/radion/configuration/#set-post-open-graph-image-cover-image">Set Post Open Graph Image (Cover Image)</a>
         </li>
          
       </ul>
@@ -595,6 +610,62 @@ front matter. For example, to disable comments on a specific post:</p>
 example, if you globally disable comments in your <code>config.toml</code> by setting
 <code>comments = false</code>, then trying to enabling comments through a page's front
 matter will have no effect.</p>
+<h3 id="post-revision-history"><a class="zola-anchor" href="#post-revision-history" aria-label="Anchor link for: post-revision-history">Post Revision History</a></h3>
+<p>To enable revision history links that allow readers to view the commit history
+for individual posts, configure the following in your <code>config.toml</code>:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[extra]
+</span><span style="font-style:italic;color:#5f697a;"># Enable revision history globally
+</span><span style="color:#eb6772;">revision_history </span><span style="color:#abb2bf;">= </span><span style="color:#db9d63;">true
+</span><span style="font-style:italic;color:#5f697a;"># Your blog&#39;s GitHub repository URL
+</span><span style="color:#eb6772;">blog_github_repo_url </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;https://github.com/username/repository-name&quot;
+</span></code></pre>
+<p>Revision history can be enabled or disabled on a per-page basis by adding the
+following to a page's front matter:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[extra]
+</span><span style="color:#eb6772;">revision_history </span><span style="color:#abb2bf;">= </span><span style="color:#db9d63;">true  </span><span style="font-style:italic;color:#5f697a;"># or false to disable for this page
+</span></code></pre>
+<p>When enabled, a "(revision history)" link will appear in the page footer that
+links directly to the GitHub commit history for that specific content file,
+allowing readers to see how the post has evolved over time.</p>
+<h3 id="set-post-open-graph-image-cover-image"><a class="zola-anchor" href="#set-post-open-graph-image-cover-image" aria-label="Anchor link for: set-post-open-graph-image-cover-image">Set Post Open Graph Image (Cover Image)</a></h3>
+<p><a href="https://ogp.me/">Open Graph</a> is a standard for embedding rich previews of
+content on the Internet. It is used by social media platforms like Facebook,
+Twitter, and LinkedIn to display a preview of a page when a user shares the
+page on their social media network.</p>
+<p>For example, to set the Open Graph image for a post <code>my-post</code> to be the page
+asset <code>cover.png</code>, add the following to the front matter of the post:</p>
+<ol>
+<li>
+<p>Make sure the image is located in the page's content directory (i.e.
+<code>content/my-post/</code>. For example:</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">content/
+</span><span style="color:#abb2bf;">└── my-post/
+</span><span style="color:#abb2bf;">    ├── index.md
+</span><span style="color:#abb2bf;">    ├── cover.png        # Your cover image
+</span><span style="color:#abb2bf;">    └── assets/
+</span><span style="color:#abb2bf;">        └── other-image.jpg
+</span></code></pre>
+<p>or</p>
+<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">content/
+</span><span style="color:#abb2bf;">└── my-post/
+</span><span style="color:#abb2bf;">    ├── index.md
+</span><span style="color:#abb2bf;">    └── assets/
+</span><span style="color:#abb2bf;">        ├── other-image.jpg
+</span><span style="color:#abb2bf;">        └── cover.png    # Your cover image
+</span></code></pre>
+</li>
+<li>
+<p>Add the following to the front matter of the post:</p>
+</li>
+</ol>
+<pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[extra]
+</span><span style="color:#eb6772;">cover_image </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;cover.png&quot;
+</span></code></pre>
+<blockquote>
+<p><strong>NOTE</strong>: The image must be located within the page's content directory and
+<code>cover_image</code> expects just the filename of the image (e.g., <code>"cover.png"</code>, not
+a path like <code>"assets/cover.png"</code>). The first filename match will be used.</p>
+</blockquote>
 <hr />
 <h2 id="acknowledgements"><a class="zola-anchor" href="#acknowledgements" aria-label="Anchor link for: acknowledgements">Acknowledgements</a></h2>
 <p>Lots of inspiration and code snippets taken from these awesome Zola themes:</p>
@@ -665,6 +736,24 @@ matter will have no effect.</p>
                 
             
         </p>
+
+        <!-- Revision history (optional) -->
+        
+          
+            
+              
+                
+                
+                <section class="revision-history">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe&#x2F;radion&#x2F;commits&#x2F;main&#x2F;content&#x2F;configuration&#x2F;index.md" target="_blank" rel="noopener noreferrer">
+                    (revision history)
+                  </a>
+                </section>
+              
+            
+          
+        
+
         
         
     </footer>

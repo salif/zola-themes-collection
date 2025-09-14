@@ -22,13 +22,13 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="main.min.css?h=2e89f7f30f1019877d14" />
+  <link rel="stylesheet" href="main.min.css?h=53eee0cbd49cb600ef95" />
   <style>
   :root{--bg: #f6f8fa; --header: #f6f8fa; color-scheme: light;}
   :root.dark{--bg: #1d212c; --header: #1d212c; color-scheme: dark;}
   </style>
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-  <script src="js/linkita.min.js?h=1dd3ed42fc674277bc34"></script>
+  <script src="js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
   <!-- Begin Head End inject -->
   
   <!-- End Head End inject -->
@@ -44,7 +44,8 @@
           href="" class="text-2xl font-semibold">Zola Themes</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
       </div>
       <div title="Menu" role="button" accesskey="+" tabindex="0"
@@ -73,8 +74,8 @@
   <!-- Begin Body Start inject -->
   
   <!-- End Body Start inject -->
-  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
-    max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
+  <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
+    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <article>
   <header class="mb-16">
@@ -1271,80 +1272,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-kita"
         onclick="const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">PaperMod</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-papermod.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-papermod.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-papermod.webp"
-        alt="Screenshot of the PaperMod theme" width="1360" height="765" />
-    </picture>
-    <p>A fast, clean, responsive theme ported to Zola.</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod'></summary>
-<h3 id="h-install-papermod">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/cydave/zola-theme-papermod.git themes/papermod
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/cydave/zola-theme-papermod.git themes/papermod
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">papermod</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod'></summary>
-<h3 id="h-info-papermod">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/cydave">cydave</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/cydave/zola-theme-papermod">https://github.com/cydave/zola-theme-papermod</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://cydave.github.io/zola-theme-papermod/">https://cydave.github.io/zola-theme-papermod/</a></li>
-<li><strong>Min Zola version</strong>: 0.4.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/adityatelange/hugo-PaperMod">https://github.com/adityatelange/hugo-PaperMod</a></li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/papermod/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/cydave/zola-theme-papermod"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-papermod"
-        onclick="const b=document.getElementById('install-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-papermod"
-        onclick="const b=document.getElementById('info-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -3726,6 +3653,79 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">pico</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-pico.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-pico.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-pico.webp"
+        alt="Screenshot of the pico theme" width="1360" height="765" />
+    </picture>
+    <p>Clean and minimalistic dark theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-pico'></summary>
+<h3 id="h-install-pico">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/kuznetsov17/pico.git themes/pico
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/kuznetsov17/pico.git themes/pico
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">pico</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-pico'></summary>
+<h3 id="h-info-pico">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://viku.me">Vitaliy Kuznetsov</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/kuznetsov17/pico">https://github.com/kuznetsov17/pico</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://kuznetsov17.github.io/pico/">https://kuznetsov17.github.io/pico/</a></li>
+<li><strong>Min Zola version</strong>: 0.18.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/pico/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/kuznetsov17/pico"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-pico"
+        onclick="const b=document.getElementById('install-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-pico"
+        onclick="const b=document.getElementById('info-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Martinique</h2>
   <div class="not-prose">
     <picture>
@@ -3881,7 +3881,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
       <img src="./screenshots/light-coffee.webp"
         alt="Screenshot of the coffee theme" width="1360" height="765" />
     </picture>
-    <p></p>
+    <p>A simple theme for Zola inspired by coffee.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coffee'></summary>
 <h3 id="h-install-coffee">Installation</h3>
@@ -3943,6 +3943,82 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-coffee"
         onclick="const b=document.getElementById('info-coffee').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">coast</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-coast.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-coast.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-coast.webp"
+        alt="Screenshot of the coast theme" width="1360" height="765" />
+    </picture>
+    <p>A simple theme for Zola that evokes the feel the sea breeze.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coast'></summary>
+<h3 id="h-install-coast">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/Myxogastria0808/coast.git themes/coast
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/Myxogastria0808/coast.git themes/coast
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">coast</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coast'></summary>
+<h3 id="h-info-coast">Info</h3>
+<ul>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/Myxogastria0808/coast/">https://github.com/Myxogastria0808/coast/</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-coast-theme.netlify.app/">https://zola-coast-theme.netlify.app/</a></li>
+<li><strong>Min Zola version</strong>: 0.19.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#light</span>
+      <span>#simple</span>
+      <span>#mermaid</span>
+      <span>#katex</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/coast/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/Myxogastria0808/coast"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-coast"
+        onclick="const b=document.getElementById('install-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-coast"
+        onclick="const b=document.getElementById('info-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -4024,6 +4100,80 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     </div>
   </div>
 </div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">edge</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-edge.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-edge.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-edge.webp"
+        alt="Screenshot of the edge theme" width="1360" height="765" />
+    </picture>
+    <p>A lightweight, responsive, and minimalist theme for Zola</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-edge'></summary>
+<h3 id="h-install-edge">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/sesav/zola-theme-edge.git themes/edge
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/sesav/zola-theme-edge.git themes/edge
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">edge</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-edge'></summary>
+<h3 id="h-info-edge">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/sesav">Sergey Silaev</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/sesav/zola-theme-edge">https://github.com/sesav/zola-theme-edge</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-theme-edge.vercel.app">https://zola-theme-edge.vercel.app</a></li>
+<li><strong>Min Zola version</strong>: 0.17.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/sesav/zola-theme-edge">https://github.com/sesav/zola-theme-edge</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="https://salif.github.io/zola-themes-collection/demo/edge/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/sesav/zola-theme-edge"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-edge"
+        onclick="const b=document.getElementById('install-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-edge"
+        onclick="const b=document.getElementById('info-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
 </section>
 </article>
 
@@ -4047,7 +4197,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   
   <!-- GoatCounter -->
   <script>window.linkita.initGoatCounterAnalytics({
-    src: "js/gc.min.js?h=1a7235ddf71175cb7d2a",
+    src: "js/gc.min.js?h=3df8de3015e302c56efa",
     endpoint: "https://sgi.goatcounter.com/count"
   });</script>
   <noscript><img src="https://sgi.goatcounter.com/count?p=/zola-themes-collection/" alt=""></noscript>

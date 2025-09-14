@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Edge Theme for Zola - tools</title>
+    <subtitle>This is a demo site</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/edge/tags/tools/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-09-18T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/edge/tags/tools/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Essential Command-Line Tools for Developer Productivity</title>
+        <published>2024-09-18T00:00:00+00:00</published>
+        <updated>2024-09-18T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Sergey Silaev
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/blog/cli-productivity-tools/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/edge/blog/cli-productivity-tools/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/edge/blog/cli-productivity-tools/">&lt;p&gt;The command line is a developer’s secret weapon for productivity. While GUI tools have their place, mastering these CLI tools can dramatically speed up your workflow and make you a more efficient developer.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;file-and-directory-navigation&quot;&gt;File and Directory Navigation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;exa-a-modern-ls-replacement&quot;&gt;exa - A Modern ls Replacement&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install exa  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install exa  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;exa -la --git --icons  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Detailed view with git status
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;exa -T  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Tree view
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;ls&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;exa --icons&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Replace ls
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;fd-a-fast-find-alternative&quot;&gt;fd - A Fast find Alternative&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install fd  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install fd-find  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fd&lt;&#x2F;span&gt;&lt;span&gt; config  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Find files containing &amp;quot;config&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fd -e&lt;&#x2F;span&gt;&lt;span&gt; js  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Find all JavaScript files
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fd -t&lt;&#x2F;span&gt;&lt;span&gt; d node_modules  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Find directories named node_modules
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;bat-enhanced-cat-with-syntax-highlighting&quot;&gt;bat - Enhanced cat with Syntax Highlighting&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install bat  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install bat  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bat&lt;&#x2F;span&gt;&lt;span&gt; script.js  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# View file with syntax highlighting
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bat -A&lt;&#x2F;span&gt;&lt;span&gt; file.txt  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Show all characters including whitespace
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;bat&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Replace cat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;text-processing-and-search&quot;&gt;Text Processing and Search&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;ripgrep-rg-blazingly-fast-grep&quot;&gt;ripgrep (rg) - Blazingly Fast grep&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install ripgrep  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install ripgrep  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rg &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;TODO&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --type&lt;&#x2F;span&gt;&lt;span&gt; js  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Search for TODO in JavaScript files
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rg -i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; logs&#x2F;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Case-insensitive search in logs directory
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rg -n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;function.*async&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Show line numbers for async functions
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;fzf-fuzzy-finder&quot;&gt;fzf - Fuzzy Finder&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install fzf  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install fzf  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Setup key bindings
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;$(brew --prefix)&#x2F;opt&#x2F;fzf&#x2F;install  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;vim &lt;&#x2F;span&gt;&lt;span&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fzf&lt;&#x2F;span&gt;&lt;span&gt;)  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Open file in vim using fuzzy search
+&lt;&#x2F;span&gt;&lt;span&gt;kill -9 $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ps&lt;&#x2F;span&gt;&lt;span&gt; aux | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fzf &lt;&#x2F;span&gt;&lt;span&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;awk &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;{print $2}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;)  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Kill process interactively
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; checkout $(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; branch | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;fzf&lt;&#x2F;span&gt;&lt;span&gt;)  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Checkout branch interactively
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;jq-json-processor&quot;&gt;jq - JSON Processor&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install jq  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install jq  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; api.github.com&#x2F;users&#x2F;octocat | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;jq &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;.name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;cat&lt;&#x2F;span&gt;&lt;span&gt; package.json | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;jq &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;.dependencies | keys[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;{&amp;quot;name&amp;quot;: &amp;quot;John&amp;quot;, &amp;quot;age&amp;quot;: 30}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;jq -r &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;.name&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;system-monitoring-and-process-management&quot;&gt;System Monitoring and Process Management&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;htop-interactive-process-viewer&quot;&gt;htop - Interactive Process Viewer&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install htop  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install htop  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;htop  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Interactive process monitor
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;htop -u&lt;&#x2F;span&gt;&lt;span&gt; username  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Show processes for specific user
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;ncdu-disk-usage-analyzer&quot;&gt;ncdu - Disk Usage Analyzer&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install ncdu  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install ncdu  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ncdu&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Analyze disk usage from root
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ncdu ~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;Downloads  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Analyze specific directory
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;glances-system-monitor&quot;&gt;glances - System Monitor&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pip&lt;&#x2F;span&gt;&lt;span&gt; install glances
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;glances  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Comprehensive system monitoring
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;glances -w  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Web interface mode
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;git-and-version-control&quot;&gt;Git and Version Control&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;tig-text-mode-interface-for-git&quot;&gt;tig - Text-mode Interface for Git&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install tig  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install tig  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tig  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Browse repository history
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tig&lt;&#x2F;span&gt;&lt;span&gt; status  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Interactive git status
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tig&lt;&#x2F;span&gt;&lt;span&gt; blame filename  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Interactive git blame
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;gh-github-cli&quot;&gt;gh - GitHub CLI&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install gh  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install gh  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gh&lt;&#x2F;span&gt;&lt;span&gt; repo create my-project&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --private
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gh&lt;&#x2F;span&gt;&lt;span&gt; pr create&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --title &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Fix bug&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --body &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Description&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gh&lt;&#x2F;span&gt;&lt;span&gt; issue list&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --assignee&lt;&#x2F;span&gt;&lt;span&gt; @me
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;lazygit-simple-terminal-ui-for-git&quot;&gt;lazygit - Simple Terminal UI for Git&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install lazygit  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;lazygit  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Interactive git interface
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;network-and-web-tools&quot;&gt;Network and Web Tools&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;httpie-user-friendly-http-client&quot;&gt;httpie - User-friendly HTTP Client&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install httpie  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install httpie  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt; GET api.github.com&#x2F;users&#x2F;octocat
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;http&lt;&#x2F;span&gt;&lt;span&gt; POST httpbin.org&#x2F;post name=John age:=30
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;http --auth&lt;&#x2F;span&gt;&lt;span&gt; user:pass GET api.example.com&#x2F;data
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;curl-with-modern-alternatives&quot;&gt;curl with Modern Alternatives&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;xh-fast-and-friendly-http-client&quot;&gt;xh - Fast and Friendly HTTP Client&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install xh  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage (similar to httpie but faster)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;xh&lt;&#x2F;span&gt;&lt;span&gt; GET httpbin.org&#x2F;json
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;xh&lt;&#x2F;span&gt;&lt;span&gt; POST httpbin.org&#x2F;post name=John
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;development-tools&quot;&gt;Development Tools&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;docker-and-docker-compose-shortcuts&quot;&gt;docker and docker-compose Shortcuts&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Useful aliases
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;dps&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker ps --format &amp;quot;table {{.Names}}\t{{.Status}}\t{{.Ports}}&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;dcu&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker-compose up -d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;dcd&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker-compose down&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;dcl&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker-compose logs -f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;nvm-node-version-manager&quot;&gt;nvm - Node Version Manager&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -o-&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nvm-sh&#x2F;nvm&#x2F;v0.39.0&#x2F;install.sh | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bash
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;nvm&lt;&#x2F;span&gt;&lt;span&gt; install 18  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install Node.js v18
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;nvm&lt;&#x2F;span&gt;&lt;span&gt; use 16  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Switch to Node.js v16
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;nvm&lt;&#x2F;span&gt;&lt;span&gt; ls  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# List installed versions
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;pyenv-python-version-manager&quot;&gt;pyenv - Python Version Manager&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;pyenv.run | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bash
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pyenv&lt;&#x2F;span&gt;&lt;span&gt; install 3.11.0  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install Python 3.11.0
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pyenv&lt;&#x2F;span&gt;&lt;span&gt; global 3.11.0  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set global Python version
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pyenv&lt;&#x2F;span&gt;&lt;span&gt; versions  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# List installed versions
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;terminal-enhancements&quot;&gt;Terminal Enhancements&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;zsh-with-oh-my-zsh&quot;&gt;zsh with Oh My Zsh&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install Oh My Zsh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sh -c &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt; https:&#x2F;&#x2F;raw.github.com&#x2F;ohmyzsh&#x2F;ohmyzsh&#x2F;master&#x2F;tools&#x2F;install.sh)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Useful plugins in ~&#x2F;.zshrc
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;plugins&lt;&#x2F;span&gt;&lt;span&gt;=(git docker kubectl z fzf)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;starship-cross-shell-prompt&quot;&gt;Starship - Cross-shell Prompt&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -sS&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;starship.rs&#x2F;install.sh | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sh
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Add to shell config
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;eval &amp;quot;$(starship init zsh)&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;~&lt;&#x2F;span&gt;&lt;span&gt;&#x2F;.zshrc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;tmux-terminal-multiplexer&quot;&gt;tmux - Terminal Multiplexer&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install tmux  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install tmux  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Basic usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tmux&lt;&#x2F;span&gt;&lt;span&gt; new&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -s&lt;&#x2F;span&gt;&lt;span&gt; mysession  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Create new session
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tmux&lt;&#x2F;span&gt;&lt;span&gt; attach&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -t&lt;&#x2F;span&gt;&lt;span&gt; mysession  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Attach to session
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Ctrl-b&lt;&#x2F;span&gt;&lt;span&gt; d  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Detach from session
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;Ctrl-b&lt;&#x2F;span&gt;&lt;span&gt; c  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Create new window
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;productivity-aliases-and-functions&quot;&gt;Productivity Aliases and Functions&lt;&#x2F;h2&gt;
+&lt;p&gt;Add these to your &lt;code&gt;.zshrc&lt;&#x2F;code&gt; or &lt;code&gt;.bashrc&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Navigation
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;cd ..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;...&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;cd ..&#x2F;..&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;l&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;exa -la --git --icons&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;ll&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;exa -la --git --icons&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Git shortcuts
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;gs&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;git status&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;ga&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;git add&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;gc&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;git commit -m&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;gp&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;git push&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;gl&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;git pull&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Docker shortcuts
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;d&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;dc&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;docker-compose&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Quick edit configs
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;zshrc&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;vim ~&#x2F;.zshrc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;vimrc&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;vim ~&#x2F;.vimrc&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Network
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;myip&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;curl ipinfo.io&#x2F;ip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;alias &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;ports&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;netstat -tuln&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Utilities
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;mkcd&lt;&#x2F;span&gt;&lt;span&gt;() { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mkdir -p &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&amp;amp; cd &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;; }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;extract&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;-f &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;] ; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;case &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;in
+&lt;&#x2F;span&gt;&lt;span&gt;      *.tar.bz2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span&gt; xjf $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.tar.gz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span&gt; xzf $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.bz2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bunzip2 &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.rar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;unrar&lt;&#x2F;span&gt;&lt;span&gt; e $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.gz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;gunzip &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1      &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.tar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span&gt; xf $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1      &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.tbz2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span&gt; xjf $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.tgz&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tar&lt;&#x2F;span&gt;&lt;span&gt; xzf $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1     &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.zip&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)       &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;unzip &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1       &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.Z&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)         &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;uncompress &lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1  &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *.7z&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;7z&lt;&#x2F;span&gt;&lt;span&gt; x $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1        &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;      *&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;)     &lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;&amp;#39;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;&amp;#39; cannot be extracted via extract()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;esac
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;else
+&lt;&#x2F;span&gt;&lt;span&gt;    echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;&amp;#39;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;&amp;#39; is not a valid file&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;installation-script&quot;&gt;Installation Script&lt;&#x2F;h2&gt;
+&lt;p&gt;Save this as &lt;code&gt;setup-cli-tools.sh&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#!&#x2F;bin&#x2F;bash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# CLI Tools Installation Script
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Detect OS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;[[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OSTYPE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;darwin&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;* ]]; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install exa fd bat ripgrep fzf jq htop ncdu tig gh httpie
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;[[ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;OSTYPE&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;linux-gnu&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;* ]]; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;then
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Ubuntu&#x2F;Debian
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt update
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -y&lt;&#x2F;span&gt;&lt;span&gt; exa fd-find bat ripgrep fzf jq htop ncdu tig httpie
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install gh CLI
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -fsSL&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;cli.github.com&#x2F;packages&#x2F;githubcli-archive-keyring.gpg | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; gpg&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; --dearmor -o&lt;&#x2F;span&gt;&lt;span&gt; &#x2F;usr&#x2F;share&#x2F;keyrings&#x2F;githubcli-archive-keyring.gpg
+&lt;&#x2F;span&gt;&lt;span&gt;    echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;deb [arch=$(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;dpkg --print-architecture&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;) signed-by=&#x2F;usr&#x2F;share&#x2F;keyrings&#x2F;githubcli-archive-keyring.gpg] https:&#x2F;&#x2F;cli.github.com&#x2F;packages stable main&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;| &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; tee &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;github-cli.list &amp;gt; &#x2F;dev&#x2F;null
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt update
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span&gt; apt install gh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;fi
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install language version managers
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -o-&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nvm-sh&#x2F;nvm&#x2F;v0.39.0&#x2F;install.sh | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;pyenv.run | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;bash
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install Starship prompt
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;curl -sS&lt;&#x2F;span&gt;&lt;span&gt; https:&#x2F;&#x2F;starship.rs&#x2F;install.sh | &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sh
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;CLI tools installation complete! Restart your terminal to use the new tools.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;tips-for-mastery&quot;&gt;Tips for Mastery&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Start with one tool at a time&lt;&#x2F;strong&gt; - Don’t overwhelm yourself&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Create aliases&lt;&#x2F;strong&gt; for frequently used commands&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learn keyboard shortcuts&lt;&#x2F;strong&gt; for your terminal&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Practice regularly&lt;&#x2F;strong&gt; - consistency is key&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Customize your setup&lt;&#x2F;strong&gt; - make it yours&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The command line becomes incredibly powerful when you combine these tools. Start with the basics and gradually incorporate more tools into your workflow as you become comfortable.&lt;&#x2F;p&gt;
+&lt;p&gt;Remember: the goal isn’t to use every tool, but to find the ones that make &lt;strong&gt;you&lt;&#x2F;strong&gt; more productive!&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Docker Containerization Guide</title>
+        <published>2024-01-28T00:00:00+00:00</published>
+        <updated>2024-01-28T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Sergey Silaev
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/blog/docker-containerization-guide/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/edge/blog/docker-containerization-guide/</id>
+        
+        <summary type="html">&lt;p&gt;Docker has revolutionized how we package and deploy applications. Learn the fundamentals of containerization.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Git Workflow Best Practices</title>
+        <published>2023-12-20T00:00:00+00:00</published>
+        <updated>2023-12-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Sergey Silaev
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/blog/git-workflow-best-practices/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/edge/blog/git-workflow-best-practices/</id>
+        
+        <summary type="html">&lt;p&gt;Effective Git workflows improve team collaboration and code quality. Learn the strategies used by successful development teams.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

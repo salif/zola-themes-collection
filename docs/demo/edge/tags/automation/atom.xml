@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Edge Theme for Zola - automation</title>
+    <subtitle>This is a demo site</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/edge/tags/automation/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-07-12T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/edge/tags/automation/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Automating Your Development Workflow: Tools and Techniques</title>
+        <published>2024-07-12T00:00:00+00:00</published>
+        <updated>2024-07-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Sergey Silaev
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/edge/blog/development-workflow-automation/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/edge/blog/development-workflow-automation/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/edge/blog/development-workflow-automation/">&lt;p&gt;A well-automated development workflow can save hours of repetitive work and reduce human error. Here’s how to set up automation that actually makes your life easier.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;git-hooks-for-quality-control&quot;&gt;Git Hooks for Quality Control&lt;&#x2F;h2&gt;
+&lt;p&gt;Git hooks run automatically at certain points in the Git workflow:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;pre-commit-hook&quot;&gt;Pre-commit Hook&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#!&#x2F;bin&#x2F;sh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Run linting and formatting
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run lint
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run format
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; test -- --passWithNoTests
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;pre-push-hook&quot;&gt;Pre-push Hook&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#!&#x2F;bin&#x2F;sh
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Run full test suite before pushing
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run test:ci
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run build
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;continuous-integration-setup&quot;&gt;Continuous Integration Setup&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;github-actions-example&quot;&gt;GitHub Actions Example&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;CI
+&lt;&#x2F;span&gt;&lt;span&gt;on: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;pull_request&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;test&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;runs-on&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ubuntu-latest
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;steps&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;uses&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;actions&#x2F;checkout@v3
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;uses&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;actions&#x2F;setup-node@v3
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;with&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;node-version&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;18&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;npm ci
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;npm test
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;npm run build
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;local-development-automation&quot;&gt;Local Development Automation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;package-json-scripts&quot;&gt;Package.json Scripts&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;scripts&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;dev&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;concurrently &amp;#39;npm:watch:*&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;watch:build&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;webpack --watch&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;watch:test&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;jest --watch&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;watch:lint&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;eslint --watch src&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;prepare&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;husky install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;makefile-for-multi-language-projects&quot;&gt;Makefile for Multi-language Projects&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;make&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-make &quot;&gt;&lt;code class=&quot;language-make&quot; data-lang=&quot;make&quot;&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;.PHONY&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;install test build clean deploy
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;install&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;pip&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -r&lt;&#x2F;span&gt;&lt;span&gt; requirements.txt
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;test&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; test
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;python -m&lt;&#x2F;span&gt;&lt;span&gt; pytest
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run build
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;python&lt;&#x2F;span&gt;&lt;span&gt; setup.py build
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;deploy&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;test build
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;.&#x2F;scripts&#x2F;deploy.sh
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;code-quality-automation&quot;&gt;Code Quality Automation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;eslint-prettier-configuration&quot;&gt;ESLint + Prettier Configuration&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;json&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-json &quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;extends&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;eslint:recommended&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;@typescript-eslint&#x2F;recommended&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;],
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;plugins&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;prettier&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;],
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;rules&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;prettier&#x2F;prettier&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;error&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;pre-commit-configuration&quot;&gt;Pre-commit Configuration&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;repos&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;repo&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;pre-commit&#x2F;pre-commit-hooks
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rev&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;v4.4.0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;hooks&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;trailing-whitespace
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;end-of-file-fixer
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;check-yaml
+&lt;&#x2F;span&gt;&lt;span&gt;  - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;repo&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;psf&#x2F;black
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rev&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#cf6a4c;&quot;&gt;22.10.0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;hooks&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;black
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;environment-management&quot;&gt;Environment Management&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;docker-development-environment&quot;&gt;Docker Development Environment&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;dockerfile&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-dockerfile &quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;FROM&lt;&#x2F;span&gt;&lt;span&gt; node:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;18-alpine
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;WORKDIR &lt;&#x2F;span&gt;&lt;span&gt;&#x2F;app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; package*.json .&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;RUN &lt;&#x2F;span&gt;&lt;span&gt;npm ci
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;COPY&lt;&#x2F;span&gt;&lt;span&gt; . .
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;EXPOSE &lt;&#x2F;span&gt;&lt;span&gt;3000
+&lt;&#x2F;span&gt;&lt;span&gt;CMD [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;dev&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;development-scripts&quot;&gt;Development Scripts&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#!&#x2F;bin&#x2F;bash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# dev-setup.sh
+&lt;&#x2F;span&gt;&lt;span&gt;set &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;-e
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Setting up development environment...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Install dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set up git hooks
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npx&lt;&#x2F;span&gt;&lt;span&gt; husky install
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Create local environment file
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; .env.example .env.local
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Start services
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;docker-compose&lt;&#x2F;span&gt;&lt;span&gt; up&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt; -d
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Development environment ready!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;deployment-automation&quot;&gt;Deployment Automation&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;simple-deployment-script&quot;&gt;Simple Deployment Script&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#!&#x2F;bin&#x2F;bash
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# deploy.sh
+&lt;&#x2F;span&gt;&lt;span&gt;set &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;-e
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Starting deployment...&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Run tests
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; test
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Build for production
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run build
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Deploy to server
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;rsync -avz --delete&lt;&#x2F;span&gt;&lt;span&gt; dist&#x2F; user@server:&#x2F;var&#x2F;www&#x2F;app&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Restart services
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;ssh&lt;&#x2F;span&gt;&lt;span&gt; user@server &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;sudo systemctl restart nginx&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;echo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Deployment complete!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;monitoring-and-notifications&quot;&gt;Monitoring and Notifications&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;slack-integration&quot;&gt;Slack Integration&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;javascript&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-javascript &quot;&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;webhook &lt;&#x2F;span&gt;&lt;span&gt;= process.env.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;SLACK_WEBHOOK&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;async function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;notifyDeployment&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;status&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;await &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;fetch&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;webhook&lt;&#x2F;span&gt;&lt;span&gt;, {
+&lt;&#x2F;span&gt;&lt;span&gt;    method: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;POST&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    headers: { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Content-Type&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;application&#x2F;json&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;#39; &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    body: JSON.stringify({
+&lt;&#x2F;span&gt;&lt;span&gt;      text: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;`🚀 Deployment ${&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;status&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;}: ${process.env.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;GITHUB_SHA&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;}`
+&lt;&#x2F;span&gt;&lt;span&gt;    })
+&lt;&#x2F;span&gt;&lt;span&gt;  });
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;best-practices&quot;&gt;Best Practices&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Start Small&lt;&#x2F;strong&gt;: Automate one pain point at a time&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Make it Visible&lt;&#x2F;strong&gt;: Log what your automation is doing&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fail Fast&lt;&#x2F;strong&gt;: Stop the process if something goes wrong&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Version Control&lt;&#x2F;strong&gt;: Keep automation scripts in your repo&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Documentation&lt;&#x2F;strong&gt;: Comment your scripts and maintain README&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;tools-worth-exploring&quot;&gt;Tools Worth Exploring&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Husky&lt;&#x2F;strong&gt;: Git hooks made easy&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;lint-staged&lt;&#x2F;strong&gt;: Run linters on staged files only&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;concurrently&lt;&#x2F;strong&gt;: Run multiple commands in parallel&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;nodemon&lt;&#x2F;strong&gt;: Auto-restart applications during development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;chokidar&lt;&#x2F;strong&gt;: File watching for custom scripts&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Remember: automation should reduce cognitive load, not create it. If your automation is complex and fragile, it might be doing more harm than good.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
