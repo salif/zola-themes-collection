@@ -1045,72 +1045,6 @@ theme = "kita"
   newtab = false
 
 [[project]]
-theme = "papermod"
-name = "PaperMod"
-desc = "A fast, clean, responsive theme ported to Zola."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod'></summary>
-
-### Installation{#h-install-papermod}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/cydave/zola-theme-papermod.git themes/papermod
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/cydave/zola-theme-papermod.git themes/papermod
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "papermod"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod'></summary>
-
-### Info{#h-info-papermod}
-- **Author**: [cydave](https://github.com/cydave)
-- **License**: MIT
-- **Homepage**: <https://github.com/cydave/zola-theme-papermod>
-- **Main Live Preview**: <https://cydave.github.io/zola-theme-papermod/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/adityatelange/hugo-PaperMod>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-papermod.webp"
-  dark = "./screenshots/dark-papermod.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the PaperMod theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/papermod/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/cydave/zola-theme-papermod"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-papermod"
-  js = "const b=document.getElementById('install-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-papermod"
-  js = "const b=document.getElementById('info-papermod').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "cela"
 name = "cela"
 desc = "A modern, clean Zola theme for personal blogs."
@@ -3225,6 +3159,71 @@ theme = "lekhz"
   newtab = false
 
 [[project]]
+theme = "pico"
+name = "pico"
+desc = "Clean and minimalistic dark theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-pico'></summary>
+
+### Installation{#h-install-pico}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/kuznetsov17/pico.git themes/pico
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/kuznetsov17/pico.git themes/pico
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "pico"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-pico'></summary>
+
+### Info{#h-info-pico}
+- **Author**: [Vitaliy Kuznetsov](https://viku.me)
+- **License**: MIT
+- **Homepage**: <https://github.com/kuznetsov17/pico>
+- **Main Live Preview**: <https://kuznetsov17.github.io/pico/>
+- **Min Zola version**: 0.18.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-pico.webp"
+  dark = "./screenshots/dark-pico.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the pico theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/pico/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/kuznetsov17/pico"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-pico"
+  js = "const b=document.getElementById('install-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-pico"
+  js = "const b=document.getElementById('info-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "martinique"
 name = "Martinique"
 desc = "A simple dark/light theme for Zola."
@@ -3355,7 +3354,7 @@ theme = "photography"
 [[project]]
 theme = "coffee"
 name = "coffee"
-desc = ""
+desc = "A simple theme for Zola inspired by coffee."
 tags = [ "dark", "simple", "mermaid", "katex" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coffee'></summary>
@@ -3415,6 +3414,70 @@ theme = "coffee"
   name = "Info"
   url = "#info-coffee"
   js = "const b=document.getElementById('info-coffee').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "coast"
+name = "coast"
+desc = "A simple theme for Zola that evokes the feel the sea breeze."
+tags = [ "light", "simple", "mermaid", "katex" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coast'></summary>
+
+### Installation{#h-install-coast}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/Myxogastria0808/coast.git themes/coast
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/Myxogastria0808/coast.git themes/coast
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "coast"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coast'></summary>
+
+### Info{#h-info-coast}
+- **License**: MIT
+- **Homepage**: <https://github.com/Myxogastria0808/coast/>
+- **Main Live Preview**: <https://zola-coast-theme.netlify.app/>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-coast.webp"
+  dark = "./screenshots/dark-coast.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the coast theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/coast/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/Myxogastria0808/coast"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-coast"
+  js = "const b=document.getElementById('install-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-coast"
+  js = "const b=document.getElementById('info-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -3480,4 +3543,70 @@ theme = "goyo"
   name = "Info"
   url = "#info-goyo"
   js = "const b=document.getElementById('info-goyo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "edge"
+name = "edge"
+desc = "A lightweight, responsive, and minimalist theme for Zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-edge'></summary>
+
+### Installation{#h-install-edge}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/sesav/zola-theme-edge.git themes/edge
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/sesav/zola-theme-edge.git themes/edge
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "edge"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-edge'></summary>
+
+### Info{#h-info-edge}
+- **Author**: [Sergey Silaev](https://github.com/sesav)
+- **License**: MIT
+- **Homepage**: <https://github.com/sesav/zola-theme-edge>
+- **Main Live Preview**: <https://zola-theme-edge.vercel.app>
+- **Min Zola version**: 0.17.0
+- **Original**: <https://github.com/sesav/zola-theme-edge>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-edge.webp"
+  dark = "./screenshots/dark-edge.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the edge theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/edge/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/sesav/zola-theme-edge"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-edge"
+  js = "const b=document.getElementById('install-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-edge"
+  js = "const b=document.getElementById('info-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false

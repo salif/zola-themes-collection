@@ -41,9 +41,7 @@
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits: `config.toml not found`
 - [2020_dt](https://github.com/0xSbock/2020_dt): 47 commits: `unknown field highlight_code`
 - [Ergo](https://github.com/insipx/Ergo): 115 commits: `unknown field highlight_theme`
-- [boring](https://github.com/clflushopt/boring): 70 commits: `archived`
 - [rahix](https://github.com/Rahix/blog-theme): 88 commits: `unknown field highlight_code`
-- [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits: `archived`
 - [cblanken-terminimal](https://github.com/cblanken/zola-theme-terminimal): 174 commits:  `variable not found`
 - [anpu-zola-theme](https://github.com/zbrox/anpu-zola-theme): 30 commits: `unknown field highlight_code`
 - [zola-devin](https://github.com/seankearney/zola-devin): 36 commits: `cannot find file`
@@ -113,3 +111,6 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [bd](https://github.com/flabbergastedbd/bd): 20 commits
 - [eips-wg](https://github.com/bluerobotics/bluetheme): 503 commits
 - [zola-researcher](https://github.com/lukehsiao/zola-researcher): 1 commit
+- [zola-theme-papermod](https://github.com/cydave/zola-theme-papermod): 45 commits
+- [boring](https://github.com/clflushopt/boring): 70 commits
+- [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
