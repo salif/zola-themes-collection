@@ -196,71 +196,6 @@ theme = "duckquill"
   newtab = false
 
 [[project]]
-theme = "duckling"
-name = "Duckling"
-desc = "Feature-rich and modern theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckling'></summary>
-
-### Installation{#h-install-duckling}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "duckling"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
-
-### Info{#h-info-duckling}
-- **Author**: [david-swift](https://david.aparoksha.dev)
-- **License**: MIT
-- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
-- **Main Live Preview**: <https://duckling.aparoksha.dev>
-- **Min Zola version**: 0.19.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-duckling.webp"
-  dark = "./screenshots/dark-duckling.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Duckling theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/duckling/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://git.aparoksha.dev/david-swift/duckling"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-duckling"
-  js = "const b=document.getElementById('install-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-duckling"
-  js = "const b=document.getElementById('info-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "tabi"
 name = "tabi"
 desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
@@ -518,6 +453,71 @@ theme = "project-portfolio"
   name = "Info"
   url = "#info-project-portfolio"
   js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "trankwilo"
+name = "Goyo"
+desc = "A simplicity and clean documentation theme"
+tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-trankwilo'></summary>
+
+### Installation{#h-install-trankwilo}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "trankwilo"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-trankwilo'></summary>
+
+### Info{#h-info-trankwilo}
+- **Author**: [hahwul](https://www.hahwul.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/hahwul/goyo>
+- **Main Live Preview**: <https://goyo.hahwul.com>
+- **Min Zola version**: 0.17.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-trankwilo.webp"
+  dark = "./screenshots/dark-trankwilo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Goyo theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/trankwilo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/trankwilo"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-trankwilo"
+  js = "const b=document.getElementById('install-trankwilo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-trankwilo"
+  js = "const b=document.getElementById('info-trankwilo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -1045,6 +1045,72 @@ theme = "kita"
   newtab = false
 
 [[project]]
+theme = "papermod_2"
+name = "PaperMod"
+desc = "A fast, clean, responsive theme ported to Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod_2'></summary>
+
+### Installation{#h-install-papermod_2}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/dawnandrew100/zola-theme-papermod-2.git themes/papermod_2
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/dawnandrew100/zola-theme-papermod-2.git themes/papermod_2
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "papermod_2"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod_2'></summary>
+
+### Info{#h-info-papermod_2}
+- **Author**: [cydave](https://github.com/cydave)
+- **License**: MIT
+- **Homepage**: <https://github.com/cydave/zola-theme-papermod>
+- **Main Live Preview**: <https://cydave.github.io/zola-theme-papermod/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/adityatelange/hugo-PaperMod>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-papermod_2.webp"
+  dark = "./screenshots/dark-papermod_2.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the PaperMod theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/papermod_2/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/dawnandrew100/zola-theme-papermod-2"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-papermod_2"
+  js = "const b=document.getElementById('install-papermod_2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-papermod_2"
+  js = "const b=document.getElementById('info-papermod_2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
 theme = "cela"
 name = "cela"
 desc = "A modern, clean Zola theme for personal blogs."
@@ -1105,6 +1171,72 @@ theme = "cela"
   name = "Info"
   url = "#info-cela"
   js = "const b=document.getElementById('info-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "tukan"
+name = "Tukan"
+desc = "Inspired from Toucan theme"
+tags = [ "Blog", "Multilingual" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tukan'></summary>
+
+### Installation{#h-install-tukan}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/salif/tukan.git themes/tukan
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/salif/tukan.git themes/tukan
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "tukan"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tukan'></summary>
+
+### Info{#h-info-tukan}
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: AGPL
+- **Homepage**: <https://codeberg.org/salif/tukan>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/tukan/>
+- **Min Zola version**: 0.19.0
+- **Original**: <https://git.42l.fr/HugoTrentesaux/toucan>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-tukan.webp"
+  dark = "./screenshots/dark-tukan.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Tukan theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/tukan/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/tukan"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-tukan"
+  js = "const b=document.getElementById('install-tukan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-tukan"
+  js = "const b=document.getElementById('info-tukan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -2626,70 +2758,6 @@ theme = "sandbox"
   newtab = false
 
 [[project]]
-theme = "ebn-toucan"
-name = "zola-blog-theme"
-desc = "Inspired from Toucan theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ebn-toucan'></summary>
-
-### Installation{#h-install-ebn-toucan}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/ebn/zola-blog-theme.git themes/ebn-toucan
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/ebn/zola-blog-theme.git themes/ebn-toucan
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "ebn-toucan"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ebn-toucan'></summary>
-
-### Info{#h-info-ebn-toucan}
-- **License**: AGPL
-- **Homepage**: <https://codeberg.org/ebn/zola-blog-theme>
-- **Min Zola version**: 0.8.0
-- **Original**: <https://git.42l.fr/HugoTrentesaux/toucan>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-ebn-toucan.webp"
-  dark = "./screenshots/dark-ebn-toucan.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the zola-blog-theme theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/ebn-toucan/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/ebn/zola-blog-theme"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-ebn-toucan"
-  js = "const b=document.getElementById('install-ebn-toucan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-ebn-toucan"
-  js = "const b=document.getElementById('info-ebn-toucan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "terminimal"
 name = "terminimal"
 desc = "A simple, minimal retro theme"
@@ -3224,70 +3292,6 @@ theme = "pico"
   newtab = false
 
 [[project]]
-theme = "martinique"
-name = "Martinique"
-desc = "A simple dark/light theme for Zola."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-martinique'></summary>
-
-### Installation{#h-install-martinique}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/martinlarsson/martinique.git themes/martinique
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/martinlarsson/martinique.git themes/martinique
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "martinique"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-martinique'></summary>
-
-### Info{#h-info-martinique}
-- **Author**: [Martin Larsson](https://mlarsson.se)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/martinlarsson/martinique>
-- **Min Zola version**: 0.21.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-martinique.webp"
-  dark = "./screenshots/dark-martinique.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Martinique theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/martinique/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/martinlarsson/martinique"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-martinique"
-  js = "const b=document.getElementById('install-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-martinique"
-  js = "const b=document.getElementById('info-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "photography"
 name = "photography theme"
 desc = "a theme for a photography portfolio"
@@ -3349,6 +3353,135 @@ theme = "photography"
   name = "Info"
   url = "#info-photography"
   js = "const b=document.getElementById('info-photography').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "duckling"
+name = "Duckling"
+desc = "Feature-rich and modern theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckling'></summary>
+
+### Installation{#h-install-duckling}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "duckling"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
+
+### Info{#h-info-duckling}
+- **Author**: [david-swift](https://david.aparoksha.dev)
+- **License**: MIT
+- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
+- **Main Live Preview**: <https://duckling.aparoksha.dev>
+- **Min Zola version**: 0.19.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-duckling.webp"
+  dark = "./screenshots/dark-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Duckling theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/duckling/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://git.aparoksha.dev/david-swift/duckling"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-duckling"
+  js = "const b=document.getElementById('install-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-duckling"
+  js = "const b=document.getElementById('info-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "martinique"
+name = "Martinique"
+desc = "A simple dark/light theme for Zola."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-martinique'></summary>
+
+### Installation{#h-install-martinique}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/martinlarsson/martinique.git themes/martinique
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/martinlarsson/martinique.git themes/martinique
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "martinique"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-martinique'></summary>
+
+### Info{#h-info-martinique}
+- **Author**: [Martin Larsson](https://mlarsson.se)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/martinlarsson/martinique>
+- **Min Zola version**: 0.21.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-martinique.webp"
+  dark = "./screenshots/dark-martinique.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Martinique theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "https://salif.github.io/zola-themes-collection/demo/martinique/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/martinlarsson/martinique"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-martinique"
+  js = "const b=document.getElementById('install-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-martinique"
+  js = "const b=document.getElementById('info-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -3446,6 +3579,7 @@ theme = "coast"
 </details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coast'></summary>
 
 ### Info{#h-info-coast}
+- **Author**: [Myxogastria0808](https://yukiosada.work)
 - **License**: MIT
 - **Homepage**: <https://github.com/Myxogastria0808/coast/>
 - **Main Live Preview**: <https://zola-coast-theme.netlify.app/>
@@ -3478,135 +3612,4 @@ theme = "coast"
   name = "Info"
   url = "#info-coast"
   js = "const b=document.getElementById('info-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "goyo"
-name = "Goyo"
-desc = "A simplicity and clean documentation theme"
-tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-goyo'></summary>
-
-### Installation{#h-install-goyo}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/hahwul/goyo.git themes/goyo
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/hahwul/goyo.git themes/goyo
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "goyo"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-goyo'></summary>
-
-### Info{#h-info-goyo}
-- **Author**: [hahwul](https://www.hahwul.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/hahwul/goyo>
-- **Main Live Preview**: <https://goyo.hahwul.com>
-- **Min Zola version**: 0.17.0
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-goyo.webp"
-  dark = "./screenshots/dark-goyo.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Goyo theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/goyo/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/hahwul/goyo"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-goyo"
-  js = "const b=document.getElementById('install-goyo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-goyo"
-  js = "const b=document.getElementById('info-goyo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "edge"
-name = "edge"
-desc = "A lightweight, responsive, and minimalist theme for Zola"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-edge'></summary>
-
-### Installation{#h-install-edge}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/sesav/zola-theme-edge.git themes/edge
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/sesav/zola-theme-edge.git themes/edge
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "edge"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-edge'></summary>
-
-### Info{#h-info-edge}
-- **Author**: [Sergey Silaev](https://github.com/sesav)
-- **License**: MIT
-- **Homepage**: <https://github.com/sesav/zola-theme-edge>
-- **Main Live Preview**: <https://zola-theme-edge.vercel.app>
-- **Min Zola version**: 0.17.0
-- **Original**: <https://github.com/sesav/zola-theme-edge>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-edge.webp"
-  dark = "./screenshots/dark-edge.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the edge theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/edge/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/sesav/zola-theme-edge"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-edge"
-  js = "const b=document.getElementById('install-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-edge"
-  js = "const b=document.getElementById('info-edge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false

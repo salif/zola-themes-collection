@@ -124,21 +124,20 @@ function onlyIf(v, ifFalse, ifTrue) {
 function readThemeInfo(theme, baseURL, TOML) {
 	if (!theme.path.startsWith("themes/")) return;
 	const themeName = theme.path.substring(7);
-	let themeTomlPath = path.join(theme.path, "theme.toml");
 	const themeInfo = {};
 	if (demoRepoThemes.has(themeName)) {
 		themeInfo.clone = demoRepoThemes.get(themeName);
-		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
 	} else {
 		themeInfo.clone = theme.url;
 	}
 	themeInfo.repo = themeInfo.clone.endsWith(".git") ?
 		themeInfo.clone.substring(0, themeInfo.clone.length - 4) :
 		themeInfo.clone;
-	let themeToml = {};
-	if (fs.existsSync(themeTomlPath)) {
-		themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
+	let themeTomlPath = path.join(theme.path, "theme.toml");
+	if (!fs.existsSync(themeTomlPath)) {
+		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
 	}
+	const themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
 	themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name);
 	themeInfo.description = onlyIf(themeToml.description, "", themeToml.description);
 	themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags;
