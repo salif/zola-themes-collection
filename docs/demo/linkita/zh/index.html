@@ -38,7 +38,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=2e89f7f30f1019877d14" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
   <style>
   :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
   :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
@@ -51,7 +51,7 @@
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
-  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=1dd3ed42fc674277bc34"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
   <!-- Begin Head End inject -->
   
   <!-- End Head End inject -->
@@ -67,7 +67,8 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/" class="text-2xl font-semibold">林基塔</a>
         <button type="button" title="切换颜色方案" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover dark:invert [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)]"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
         <button type="button" title="转到页面翻译" accesskey=";"
           class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
@@ -118,13 +119,13 @@
   <!-- Begin Body Start inject -->
   
   <!-- End Body Start inject -->
-  <main class="prose prose-neutral relative mx-auto min-h-[calc(100%-4rem)]
-    max-w-3xl break-words px-4 pb-12 pt-28 lg:pt-32 dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg">
+  <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
+    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
     <!-- Profile -->
 <div class="mb-16 flex items-start">
   <div
-    class="not-prose mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow dark:bg-white/[15%]">
+    class="not-prose mr-5 shrink-0 rounded-full border-[0.5px] border-black/10 bg-white/50 p-3 shadow-sm dark:bg-white/10">
     <img
       class="dark:invert my-0 aspect-square w-16 rounded-full !bg-black/5 hover:animate-spin"
       src="https://salif.github.io/zola-themes-collection/demo/linkita/icons/github.svg?h=3bf8cceead820aec50d4" alt="演示个人资料头像。" />
@@ -167,7 +168,7 @@
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
-  <figure class="mb-4 mt-0">
+  <figure class="mt-0 mb-4">
     <img
       class="h-auto w-full rounded-lg"
       src="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png"
@@ -177,7 +178,7 @@
     />
   </figure>
 
-  <h2 class="!my-0 pb-1 font-bold !leading-none">Markdown 语法指南</h2>
+  <h2 class="!my-0 pb-1 !leading-none font-bold">Markdown 语法指南</h2>
   <div class="not-prose my-1 truncate">
     <p>示例文章，展示了 HTML 元素的基本 Markdown 语法和格式。</p>
   </div>
@@ -196,7 +197,7 @@
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 font-bold !leading-none">数学排版</h2>
+  <h2 class="!my-0 pb-1 !leading-none font-bold">数学排版</h2>
   <div class="not-prose my-1 truncate">
     <p>KaTeX 设置简要指南。</p>
   </div>
@@ -215,7 +216,7 @@
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 font-bold !leading-none">简码</h2>
+  <h2 class="!my-0 pb-1 !leading-none font-bold">简码</h2>
   <div class="not-prose my-1 truncate">
     <p>林基塔主题的简码。</p>
   </div>
@@ -230,7 +231,7 @@
 
   <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/">简码</a>
 </section>
-<nav class="mt-16 flex">
+<nav class="not-prose mt-16 flex font-bold">
 </nav>
 
     
@@ -254,7 +255,7 @@
   
   <!-- GoatCounter -->
   <script>window.linkita.initGoatCounterAnalytics({
-    src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=1a7235ddf71175cb7d2a",
+    src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=3df8de3015e302c56efa",
     endpoint: "https://sgi.goatcounter.com/count"
   });</script>
 

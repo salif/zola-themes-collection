@@ -97,6 +97,9 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 5 commits
 - [magic-box](https://codeberg.org/dulvui/magic-box): 207 commits
 - [mycowiki](https://codeberg.org/fungal/mycowiki): 11 commits
+- [zola-theme-edge](https://github.com/sesav/zola-theme-edge): 2 commits
+- [zola-blog-theme](https://codeberg.org/ebn/zola-blog-theme): 20 commits
+- [goyo](https://github.com/hahwul/goyo): 263 commits
 
 ### No license that allows me to host a live demo
 
