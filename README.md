@@ -61,6 +61,7 @@
 - [planet](https://github.com/higuoxing/planet): 6 commits: `config.toml not found`
 - [zola-persona-theme](https://github.com/hanson-hschang/zola-persona-theme): 11 commits: `variable not found`
 - [Camilla](https://codeberg.org/PanSi21/Camilla): 4 commits: `error parsing templates`
+- [silo](https://github.com/joewe/silo): 21 commits: `unknown field generate_feed`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
