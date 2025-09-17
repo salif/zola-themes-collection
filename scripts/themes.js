@@ -32,7 +32,7 @@ export function buildDemo(themePath, baseURL, commands) {
 	buildThemes([{ path: themePath }], true, baseURL, commands)
 }
 export function updateData(baseURL) {
-	listThemes().then(themes => doUpdateData(baseURL, themes))
+	listThemes().then(themes => doUpdateData(themes))
 }
 
 async function buildThemes(themes, doInstall, baseURL, commands) {
@@ -108,10 +108,10 @@ async function listThemes() {
 	if (result["themes/linkita-theme"]) delete result["themes/linkita-theme"]
 	return Object.values(result).filter(r => r.path.startsWith("themes/"));
 }
-function doUpdateData(baseURL, themes) {
+function doUpdateData(themes) {
 	const data = [];
 	for (const theme of themes) {
-		const themeInfo = readThemeInfo(theme, baseURL, TOML);
+		const themeInfo = readThemeInfo(theme, TOML);
 		if (null != themeInfo) data.push(themeInfo);
 		else console.error(theme);
 	}
@@ -121,7 +121,7 @@ function onlyIf(v, ifFalse, ifTrue) {
 	if (undefined == v || v.length == 0) return ifFalse;
 	else return ifTrue;
 }
-function readThemeInfo(theme, baseURL, TOML) {
+function readThemeInfo(theme, TOML) {
 	if (!theme.path.startsWith("themes/")) return;
 	const themeName = theme.path.substring(7);
 	const themeInfo = {};
@@ -197,7 +197,7 @@ theme = "${themeName}"
 		},
 		details: themeDetails,
 		links: [
-			{ name: "Live Preview", url: new URL(themeName + (themeName === "linkita" ? "/en/" : "/"), baseURL).href },
+			{ name: "Live Preview", url: "./demo/" + themeName + (themeName === "linkita" ? "/en/" : "/") },
 			{ name: "Repository", url: themeInfo.repo },
 			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName), newtab: false },
 			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName), newtab: false },

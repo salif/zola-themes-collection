@@ -86,80 +86,6 @@
   <!-- Content -->
   <section>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-zola-bearblog.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-zola-bearblog.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-zola-bearblog.webp"
-        alt="Screenshot of the Bear theme" width="1360" height="765" />
-    </picture>
-    <p>Bear blog theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
-<h3 id="h-install-zola-bearblog">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">zola-bearblog</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
-<h3 id="h-info-zola-bearblog">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://alanpearce.eu">Alan Pearce</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-bearblog.vercel.app/">https://zola-bearblog.vercel.app/</a></li>
-<li><strong>Min Zola version</strong>: 0.4.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/janraasch/hugo-bearblog/">https://github.com/janraasch/hugo-bearblog/</a></li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/zola-bearblog/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://codeberg.org/alanpearce/zola-bearblog"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-zola-bearblog"
-        onclick="const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-zola-bearblog"
-        onclick="const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Linkita</h2>
   <div class="not-prose">
     <picture>
@@ -217,7 +143,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/linkita/en/"
+        href="./demo/linkita/en/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -290,7 +216,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/duckquill/"
+        href="./demo/duckquill/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -363,7 +289,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/tabi/"
+        href="./demo/tabi/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -436,7 +362,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/apollo/"
+        href="./demo/apollo/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -512,7 +438,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/daisy/"
+        href="./demo/daisy/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -585,7 +511,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+        href="./demo/project-portfolio/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -662,7 +588,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/trankwilo/"
+        href="./demo/trankwilo/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -742,7 +668,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/terminus/"
+        href="./demo/terminus/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -816,7 +742,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/hacker/"
+        href="./demo/hacker/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -892,7 +818,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/radion/"
+        href="./demo/radion/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -909,6 +835,80 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-radion"
         onclick="const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-zola-bearblog.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-zola-bearblog.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-zola-bearblog.webp"
+        alt="Screenshot of the Bear theme" width="1360" height="765" />
+    </picture>
+    <p>Bear blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
+<h3 id="h-install-zola-bearblog">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">zola-bearblog</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
+<h3 id="h-info-zola-bearblog">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://alanpearce.eu">Alan Pearce</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-bearblog.vercel.app/">https://zola-bearblog.vercel.app/</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/janraasch/hugo-bearblog/">https://github.com/janraasch/hugo-bearblog/</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/zola-bearblog/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/alanpearce/zola-bearblog"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-zola-bearblog"
+        onclick="const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-zola-bearblog"
+        onclick="const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -965,7 +965,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/serene/"
+        href="./demo/serene/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1039,7 +1039,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/mabuya/"
+        href="./demo/mabuya/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1112,7 +1112,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/rilling_dev/"
+        href="./demo/rilling_dev/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1185,7 +1185,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/abridge/"
+        href="./demo/abridge/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1259,7 +1259,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/kita/"
+        href="./demo/kita/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1333,7 +1333,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/papermod_2/"
+        href="./demo/papermod_2/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1404,7 +1404,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/cela/"
+        href="./demo/cela/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1480,7 +1480,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/tukan/"
+        href="./demo/tukan/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1556,7 +1556,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/jiufen/"
+        href="./demo/jiufen/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1629,7 +1629,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/researchlab/"
+        href="./demo/researchlab/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1703,7 +1703,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/vonge/"
+        href="./demo/vonge/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1775,7 +1775,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/devnzt/"
+        href="./demo/devnzt/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1848,7 +1848,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/academic-paper/"
+        href="./demo/academic-paper/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1921,7 +1921,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
+        href="./demo/academic-workshop/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -1993,7 +1993,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/noobping/"
+        href="./demo/noobping/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2066,7 +2066,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/olivine/"
+        href="./demo/olivine/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2139,7 +2139,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/landing-grid/"
+        href="./demo/landing-grid/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2214,7 +2214,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/BelTree/"
+        href="./demo/BelTree/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2289,7 +2289,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/BelResume/"
+        href="./demo/BelResume/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2374,7 +2374,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/peritus/"
+        href="./demo/peritus/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2447,7 +2447,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/zola-futu/"
+        href="./demo/zola-futu/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2520,7 +2520,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/book/"
+        href="./demo/book/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2594,7 +2594,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/zola-minimal/"
+        href="./demo/zola-minimal/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2611,81 +2611,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-zola-minimal"
         onclick="const b=document.getElementById('info-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear+</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-bearplus.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-bearplus.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-bearplus.webp"
-        alt="Screenshot of the Bear+ theme" width="1360" height="765" />
-    </picture>
-    <p>Minimalistic yet a bit featureful theme for the Zola static site generator.</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
-<h3 id="h-install-bearplus">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/salif/bearplus.git themes/bearplus
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/salif/bearplus.git themes/bearplus
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">bearplus</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
-<h3 id="h-info-bearplus">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://mar%C3%A7al.cc">Marçal Comajoan Cara</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/salif/bearplus">https://github.com/salif/bearplus</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://salif.github.io/zola-themes-collection/demo/bearplus/">https://salif.github.io/zola-themes-collection/demo/bearplus/</a></li>
-<li><strong>Min Zola version</strong>: 0.17.2</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#Blog</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/bearplus/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/salif/bearplus"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-bearplus"
-        onclick="const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-bearplus"
-        onclick="const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -2742,7 +2667,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/hook/"
+        href="./demo/hook/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2814,7 +2739,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/halcyon/"
+        href="./demo/halcyon/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2887,7 +2812,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/ski/"
+        href="./demo/ski/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -2961,7 +2886,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/Seje2/"
+        href="./demo/Seje2/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3034,7 +2959,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/parchment/"
+        href="./demo/parchment/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3051,6 +2976,373 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-parchment"
         onclick="const b=document.getElementById('info-parchment').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Bear+</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-bearplus.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-bearplus.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-bearplus.webp"
+        alt="Screenshot of the Bear+ theme" width="1360" height="765" />
+    </picture>
+    <p>Minimalistic yet a bit featureful theme for the Zola static site generator.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
+<h3 id="h-install-bearplus">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/salif/bearplus.git themes/bearplus
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/salif/bearplus.git themes/bearplus
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">bearplus</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
+<h3 id="h-info-bearplus">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://mar%C3%A7al.cc">Marçal Comajoan Cara</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/salif/bearplus">https://github.com/salif/bearplus</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://salif.github.io/zola-themes-collection/demo/bearplus/">https://salif.github.io/zola-themes-collection/demo/bearplus/</a></li>
+<li><strong>Min Zola version</strong>: 0.17.2</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#Blog</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/bearplus/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/salif/bearplus"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-bearplus"
+        onclick="const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-bearplus"
+        onclick="const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">terminimal</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-terminimal.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-terminimal.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-terminimal.webp"
+        alt="Screenshot of the terminimal theme" width="1360" height="765" />
+    </picture>
+    <p>A simple, minimal retro theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+<h3 id="h-install-terminimal">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">terminimal</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
+<h3 id="h-info-terminimal">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/pawroman">Paweł Romanowski</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/pawroman/zola-theme-terminimal">https://github.com/pawroman/zola-theme-terminimal</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://pawroman.github.io/zola-theme-terminimal/">https://pawroman.github.io/zola-theme-terminimal/</a></li>
+<li><strong>Min Zola version</strong>: 0.11.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/terminimal/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/pawroman/zola-theme-terminimal"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-terminimal"
+        onclick="const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-terminimal"
+        onclick="const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">dark-magic</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-dark-magic.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-dark-magic.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-dark-magic.webp"
+        alt="Screenshot of the dark-magic theme" width="1360" height="765" />
+    </picture>
+    <p>Elegant dark theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-dark-magic'></summary>
+<h3 id="h-install-dark-magic">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/DirectorX/dark-magic.git themes/dark-magic
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/DirectorX/dark-magic.git themes/dark-magic
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">dark-magic</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-dark-magic'></summary>
+<h3 id="h-info-dark-magic">Info</h3>
+<ul>
+<li><strong>Author</strong>: DirectorX</li>
+<li><strong>License</strong>: ICS</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/DirectorX/dark-magic">https://github.com/DirectorX/dark-magic</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://directorx.github.io/dark-magic/">https://directorx.github.io/dark-magic/</a></li>
+<li><strong>Min Zola version</strong>: 0.1.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/dark-magic/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/DirectorX/dark-magic"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-dark-magic"
+        onclick="const b=document.getElementById('install-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-dark-magic"
+        onclick="const b=document.getElementById('info-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">DogFood</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-DogFood.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-DogFood.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-DogFood.webp"
+        alt="Screenshot of the DogFood theme" width="1360" height="765" />
+    </picture>
+    <p>A blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
+<h3 id="h-install-DogFood">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/CSUwangj/DogFood.git themes/DogFood
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">DogFood</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
+<h3 id="h-info-DogFood">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://CSUwangj.github.io">CSUwangj</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/CSUwangj/DogFood">https://github.com/CSUwangj/DogFood</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/DogFood/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/CSUwangj/DogFood"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-DogFood"
+        onclick="const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-DogFood"
+        onclick="const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Oceanic Zen</h2>
+  <div class="not-prose">
+    <picture>
+      <source srcset="./screenshots/light-oceanic-zen.webp" type="image/webp"
+        media="(prefers-color-scheme: light)" width="1360" height="765" />
+      <source srcset="./screenshots/dark-oceanic-zen.webp" type="image/webp"
+        media="(prefers-color-scheme: dark)" width="1360" height="765" />
+      <img src="./screenshots/light-oceanic-zen.webp"
+        alt="Screenshot of the Oceanic Zen theme" width="1360" height="765" />
+    </picture>
+    <p>Minimalistic blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
+<h3 id="h-install-oceanic-zen">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">oceanic-zen</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
+<h3 id="h-info-oceanic-zen">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://barlog.li">Barlog M.</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/barlog-m/oceanic-zen">https://github.com/barlog-m/oceanic-zen</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://oceanic-zen.netlify.app">https://oceanic-zen.netlify.app</a></li>
+<li><strong>Min Zola version</strong>: 0.12.0</li>
+</ul>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/oceanic-zen/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/barlog-m/oceanic-zen"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#install-oceanic-zen"
+        onclick="const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+      >Install</a>
+      <a
+        class="underline"
+        href="#info-oceanic-zen"
+        onclick="const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -3115,7 +3407,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/zluinav/"
+        href="./demo/zluinav/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3189,7 +3481,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/sandbox/"
+        href="./demo/sandbox/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3206,298 +3498,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-sandbox"
         onclick="const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">terminimal</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-terminimal.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-terminimal.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-terminimal.webp"
-        alt="Screenshot of the terminimal theme" width="1360" height="765" />
-    </picture>
-    <p>A simple, minimal retro theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
-<h3 id="h-install-terminimal">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">terminimal</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
-<h3 id="h-info-terminimal">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/pawroman">Paweł Romanowski</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/pawroman/zola-theme-terminimal">https://github.com/pawroman/zola-theme-terminimal</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://pawroman.github.io/zola-theme-terminimal/">https://pawroman.github.io/zola-theme-terminimal/</a></li>
-<li><strong>Min Zola version</strong>: 0.11.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/terminimal/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/pawroman/zola-theme-terminimal"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-terminimal"
-        onclick="const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-terminimal"
-        onclick="const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">dark-magic</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-dark-magic.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-dark-magic.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-dark-magic.webp"
-        alt="Screenshot of the dark-magic theme" width="1360" height="765" />
-    </picture>
-    <p>Elegant dark theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-dark-magic'></summary>
-<h3 id="h-install-dark-magic">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/DirectorX/dark-magic.git themes/dark-magic
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/DirectorX/dark-magic.git themes/dark-magic
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">dark-magic</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-dark-magic'></summary>
-<h3 id="h-info-dark-magic">Info</h3>
-<ul>
-<li><strong>Author</strong>: DirectorX</li>
-<li><strong>License</strong>: ICS</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/DirectorX/dark-magic">https://github.com/DirectorX/dark-magic</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://directorx.github.io/dark-magic/">https://directorx.github.io/dark-magic/</a></li>
-<li><strong>Min Zola version</strong>: 0.1.0</li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/dark-magic/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/DirectorX/dark-magic"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-dark-magic"
-        onclick="const b=document.getElementById('install-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-dark-magic"
-        onclick="const b=document.getElementById('info-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">DogFood</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-DogFood.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-DogFood.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-DogFood.webp"
-        alt="Screenshot of the DogFood theme" width="1360" height="765" />
-    </picture>
-    <p>A blog theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
-<h3 id="h-install-DogFood">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/CSUwangj/DogFood.git themes/DogFood
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">DogFood</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
-<h3 id="h-info-DogFood">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://CSUwangj.github.io">CSUwangj</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/CSUwangj/DogFood">https://github.com/CSUwangj/DogFood</a></li>
-<li><strong>Min Zola version</strong>: 0.4.0</li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/DogFood/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/CSUwangj/DogFood"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-DogFood"
-        onclick="const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-DogFood"
-        onclick="const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">Oceanic Zen</h2>
-  <div class="not-prose">
-    <picture>
-      <source srcset="./screenshots/light-oceanic-zen.webp" type="image/webp"
-        media="(prefers-color-scheme: light)" width="1360" height="765" />
-      <source srcset="./screenshots/dark-oceanic-zen.webp" type="image/webp"
-        media="(prefers-color-scheme: dark)" width="1360" height="765" />
-      <img src="./screenshots/light-oceanic-zen.webp"
-        alt="Screenshot of the Oceanic Zen theme" width="1360" height="765" />
-    </picture>
-    <p>Minimalistic blog theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
-<h3 id="h-install-oceanic-zen">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">oceanic-zen</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
-<h3 id="h-info-oceanic-zen">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://barlog.li">Barlog M.</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/barlog-m/oceanic-zen">https://github.com/barlog-m/oceanic-zen</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://oceanic-zen.netlify.app">https://oceanic-zen.netlify.app</a></li>
-<li><strong>Min Zola version</strong>: 0.12.0</li>
-</ul>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/barlog-m/oceanic-zen"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#install-oceanic-zen"
-        onclick="const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-      >Install</a>
-      <a
-        class="underline"
-        href="#info-oceanic-zen"
-        onclick="const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
       >Info</a>
     </div>
   </div>
@@ -3554,7 +3554,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/silk/"
+        href="./demo/silk/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3628,7 +3628,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/anatole-zola/"
+        href="./demo/anatole-zola/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3713,7 +3713,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/lekhz/"
+        href="./demo/lekhz/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3786,7 +3786,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/pico/"
+        href="./demo/pico/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3859,7 +3859,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/photography/"
+        href="./demo/photography/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -3932,7 +3932,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/duckling/"
+        href="./demo/duckling/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -4004,7 +4004,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/martinique/"
+        href="./demo/martinique/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -4081,7 +4081,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/coffee/"
+        href="./demo/coffee/"
         target="_blank"
       >Live Preview</a>
       <a
@@ -4158,7 +4158,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="https://salif.github.io/zola-themes-collection/demo/coast/"
+        href="./demo/coast/"
         target="_blank"
       >Live Preview</a>
       <a

@@ -1,70 +1,4 @@
 [[project]]
-theme = "zola-bearblog"
-name = "Bear"
-desc = "Bear blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
-
-### Installation{#h-install-zola-bearblog}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "zola-bearblog"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
-
-### Info{#h-info-zola-bearblog}
-- **Author**: [Alan Pearce](https://alanpearce.eu)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
-- **Main Live Preview**: <https://zola-bearblog.vercel.app/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/janraasch/hugo-bearblog/>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-zola-bearblog.webp"
-  dark = "./screenshots/dark-zola-bearblog.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Bear theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-bearblog/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/alanpearce/zola-bearblog"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zola-bearblog"
-  js = "const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zola-bearblog"
-  js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
 theme = "linkita"
 name = "Linkita"
 desc = "A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly."
@@ -112,7 +46,7 @@ theme = "linkita"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/linkita/en/"
+  url = "./demo/linkita/en/"
 
   [[project.links]]
   name = "Repository"
@@ -177,7 +111,7 @@ theme = "duckquill"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/duckquill/"
+  url = "./demo/duckquill/"
 
   [[project.links]]
   name = "Repository"
@@ -242,7 +176,7 @@ theme = "tabi"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/tabi/"
+  url = "./demo/tabi/"
 
   [[project.links]]
   name = "Repository"
@@ -307,7 +241,7 @@ theme = "apollo"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/apollo/"
+  url = "./demo/apollo/"
 
   [[project.links]]
   name = "Repository"
@@ -372,7 +306,7 @@ theme = "daisy"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/daisy/"
+  url = "./demo/daisy/"
 
   [[project.links]]
   name = "Repository"
@@ -437,7 +371,7 @@ theme = "project-portfolio"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/project-portfolio/"
+  url = "./demo/project-portfolio/"
 
   [[project.links]]
   name = "Repository"
@@ -502,7 +436,7 @@ theme = "trankwilo"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/trankwilo/"
+  url = "./demo/trankwilo/"
 
   [[project.links]]
   name = "Repository"
@@ -568,7 +502,7 @@ theme = "terminus"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/terminus/"
+  url = "./demo/terminus/"
 
   [[project.links]]
   name = "Repository"
@@ -634,7 +568,7 @@ theme = "hacker"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/hacker/"
+  url = "./demo/hacker/"
 
   [[project.links]]
   name = "Repository"
@@ -699,7 +633,7 @@ theme = "radion"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/radion/"
+  url = "./demo/radion/"
 
   [[project.links]]
   name = "Repository"
@@ -715,6 +649,72 @@ theme = "radion"
   name = "Info"
   url = "#info-radion"
   js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "zola-bearblog"
+name = "Bear"
+desc = "Bear blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
+
+### Installation{#h-install-zola-bearblog}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zola-bearblog"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
+
+### Info{#h-info-zola-bearblog}
+- **Author**: [Alan Pearce](https://alanpearce.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
+- **Main Live Preview**: <https://zola-bearblog.vercel.app/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/janraasch/hugo-bearblog/>
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zola-bearblog.webp"
+  dark = "./screenshots/dark-zola-bearblog.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Bear theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola-bearblog/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/alanpearce/zola-bearblog"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zola-bearblog"
+  js = "const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zola-bearblog"
+  js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -764,7 +764,7 @@ theme = "serene"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/serene/"
+  url = "./demo/serene/"
 
   [[project.links]]
   name = "Repository"
@@ -830,7 +830,7 @@ theme = "mabuya"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/mabuya/"
+  url = "./demo/mabuya/"
 
   [[project.links]]
   name = "Repository"
@@ -895,7 +895,7 @@ theme = "rilling_dev"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/rilling_dev/"
+  url = "./demo/rilling_dev/"
 
   [[project.links]]
   name = "Repository"
@@ -960,7 +960,7 @@ theme = "abridge"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/abridge/"
+  url = "./demo/abridge/"
 
   [[project.links]]
   name = "Repository"
@@ -1026,7 +1026,7 @@ theme = "kita"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/kita/"
+  url = "./demo/kita/"
 
   [[project.links]]
   name = "Repository"
@@ -1092,7 +1092,7 @@ theme = "papermod_2"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/papermod_2/"
+  url = "./demo/papermod_2/"
 
   [[project.links]]
   name = "Repository"
@@ -1155,7 +1155,7 @@ theme = "cela"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/cela/"
+  url = "./demo/cela/"
 
   [[project.links]]
   name = "Repository"
@@ -1221,7 +1221,7 @@ theme = "tukan"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/tukan/"
+  url = "./demo/tukan/"
 
   [[project.links]]
   name = "Repository"
@@ -1286,7 +1286,7 @@ theme = "jiufen"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/jiufen/"
+  url = "./demo/jiufen/"
 
   [[project.links]]
   name = "Repository"
@@ -1351,7 +1351,7 @@ theme = "researchlab"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/researchlab/"
+  url = "./demo/researchlab/"
 
   [[project.links]]
   name = "Repository"
@@ -1417,7 +1417,7 @@ theme = "vonge"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/vonge/"
+  url = "./demo/vonge/"
 
   [[project.links]]
   name = "Repository"
@@ -1481,7 +1481,7 @@ theme = "devnzt"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/devnzt/"
+  url = "./demo/devnzt/"
 
   [[project.links]]
   name = "Repository"
@@ -1546,7 +1546,7 @@ theme = "academic-paper"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-paper/"
+  url = "./demo/academic-paper/"
 
   [[project.links]]
   name = "Repository"
@@ -1611,7 +1611,7 @@ theme = "academic-workshop"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/academic-workshop/"
+  url = "./demo/academic-workshop/"
 
   [[project.links]]
   name = "Repository"
@@ -1675,7 +1675,7 @@ theme = "noobping"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/noobping/"
+  url = "./demo/noobping/"
 
   [[project.links]]
   name = "Repository"
@@ -1740,7 +1740,7 @@ theme = "olivine"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/olivine/"
+  url = "./demo/olivine/"
 
   [[project.links]]
   name = "Repository"
@@ -1805,7 +1805,7 @@ theme = "landing-grid"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/landing-grid/"
+  url = "./demo/landing-grid/"
 
   [[project.links]]
   name = "Repository"
@@ -1870,7 +1870,7 @@ theme = "BelTree"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/BelTree/"
+  url = "./demo/BelTree/"
 
   [[project.links]]
   name = "Repository"
@@ -1935,7 +1935,7 @@ theme = "BelResume"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/BelResume/"
+  url = "./demo/BelResume/"
 
   [[project.links]]
   name = "Repository"
@@ -2013,7 +2013,7 @@ theme = "peritus"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/peritus/"
+  url = "./demo/peritus/"
 
   [[project.links]]
   name = "Repository"
@@ -2078,7 +2078,7 @@ theme = "zola-futu"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-futu/"
+  url = "./demo/zola-futu/"
 
   [[project.links]]
   name = "Repository"
@@ -2143,7 +2143,7 @@ theme = "book"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/book/"
+  url = "./demo/book/"
 
   [[project.links]]
   name = "Repository"
@@ -2209,7 +2209,7 @@ theme = "zola-minimal"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/zola-minimal/"
+  url = "./demo/zola-minimal/"
 
   [[project.links]]
   name = "Repository"
@@ -2225,72 +2225,6 @@ theme = "zola-minimal"
   name = "Info"
   url = "#info-zola-minimal"
   js = "const b=document.getElementById('info-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "bearplus"
-name = "Bear+"
-desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
-tags = [ "Blog" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
-
-### Installation{#h-install-bearplus}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/salif/bearplus.git themes/bearplus
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/salif/bearplus.git themes/bearplus
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "bearplus"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
-
-### Info{#h-info-bearplus}
-- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
-- **License**: MIT
-- **Homepage**: <https://github.com/salif/bearplus>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/bearplus/>
-- **Min Zola version**: 0.17.2
-- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-bearplus.webp"
-  dark = "./screenshots/dark-bearplus.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the Bear+ theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/bearplus/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/salif/bearplus"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-bearplus"
-  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-bearplus"
-  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -2340,7 +2274,7 @@ theme = "hook"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/hook/"
+  url = "./demo/hook/"
 
   [[project.links]]
   name = "Repository"
@@ -2404,7 +2338,7 @@ theme = "halcyon"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/halcyon/"
+  url = "./demo/halcyon/"
 
   [[project.links]]
   name = "Repository"
@@ -2469,7 +2403,7 @@ theme = "ski"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/ski/"
+  url = "./demo/ski/"
 
   [[project.links]]
   name = "Repository"
@@ -2535,7 +2469,7 @@ theme = "Seje2"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/Seje2/"
+  url = "./demo/Seje2/"
 
   [[project.links]]
   name = "Repository"
@@ -2600,7 +2534,7 @@ theme = "parchment"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/parchment/"
+  url = "./demo/parchment/"
 
   [[project.links]]
   name = "Repository"
@@ -2619,88 +2553,14 @@ theme = "parchment"
   newtab = false
 
 [[project]]
-theme = "zluinav"
-name = "UI Navigation"
-desc = "A multilingual theme designed for accessibility rather than visual."
-tags = [
-  "blind",
-  "multilingual",
-  "accessible",
-  "responsive",
-  "search",
-  "documentation",
-  "blog",
-  "SEO"
-]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
-
-### Installation{#h-install-zluinav}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/harrymkt/zluinav.git themes/zluinav
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "zluinav"
-```
-
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
-
-### Info{#h-info-zluinav}
-- **Author**: [Harry Min Khant](https://harrymkt.github.io)
-- **License**: MIT
-- **Homepage**: <https://github.com/harrymkt/zluinav>
-- **Main Live Preview**: <https://harrymkt.github.io/zluinav>
-- **Min Zola version**: 0.19.2
-</details>"""
-
-  [project.screenshot]
-  light = "./screenshots/light-zluinav.webp"
-  dark = "./screenshots/dark-zluinav.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Screenshot of the UI Navigation theme"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/zluinav/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/harrymkt/zluinav"
-
-  [[project.links]]
-  name = "Install"
-  url = "#install-zluinav"
-  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
-  name = "Info"
-  url = "#info-zluinav"
-  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-[[project]]
-theme = "sandbox"
-name = "Sandbox"
-desc = "Sandbox is a theme for Zola."
+theme = "bearplus"
+name = "Bear+"
+desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
 tags = [ "Blog" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
 
-### Installation{#h-install-sandbox}
+### Installation{#h-install-bearplus}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2708,53 +2568,54 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/salif/sandbox.git themes/sandbox
+git submodule add https://github.com/salif/bearplus.git themes/bearplus
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/salif/sandbox.git themes/sandbox
+git clone https://github.com/salif/bearplus.git themes/bearplus
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "sandbox"
+theme = "bearplus"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
 
-### Info{#h-info-sandbox}
-- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+### Info{#h-info-bearplus}
+- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
 - **License**: MIT
-- **Homepage**: <https://github.com/salif/sandbox>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/sandbox/>
-- **Min Zola version**: 0.18.0
+- **Homepage**: <https://github.com/salif/bearplus>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/bearplus/>
+- **Min Zola version**: 0.17.2
+- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
 </details>"""
 
   [project.screenshot]
-  light = "./screenshots/light-sandbox.webp"
-  dark = "./screenshots/dark-sandbox.webp"
+  light = "./screenshots/light-bearplus.webp"
+  dark = "./screenshots/dark-bearplus.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Sandbox theme"
+  alt = "Screenshot of the Bear+ theme"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/sandbox/"
+  url = "./demo/bearplus/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/salif/sandbox"
+  url = "https://github.com/salif/bearplus"
 
   [[project.links]]
   name = "Install"
-  url = "#install-sandbox"
-  js = "const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#install-bearplus"
+  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
   [[project.links]]
   name = "Info"
-  url = "#info-sandbox"
-  js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  url = "#info-bearplus"
+  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -2805,7 +2666,7 @@ theme = "terminimal"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/terminimal/"
+  url = "./demo/terminimal/"
 
   [[project.links]]
   name = "Repository"
@@ -2870,7 +2731,7 @@ theme = "dark-magic"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/dark-magic/"
+  url = "./demo/dark-magic/"
 
   [[project.links]]
   name = "Repository"
@@ -2934,7 +2795,7 @@ theme = "DogFood"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/DogFood/"
+  url = "./demo/DogFood/"
 
   [[project.links]]
   name = "Repository"
@@ -2999,7 +2860,7 @@ theme = "oceanic-zen"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/oceanic-zen/"
+  url = "./demo/oceanic-zen/"
 
   [[project.links]]
   name = "Repository"
@@ -3015,6 +2876,145 @@ theme = "oceanic-zen"
   name = "Info"
   url = "#info-oceanic-zen"
   js = "const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "zluinav"
+name = "UI Navigation"
+desc = "A multilingual theme designed for accessibility rather than visual."
+tags = [
+  "blind",
+  "multilingual",
+  "accessible",
+  "responsive",
+  "search",
+  "documentation",
+  "blog",
+  "SEO"
+]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+
+### Installation{#h-install-zluinav}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/harrymkt/zluinav.git themes/zluinav
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zluinav"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
+
+### Info{#h-info-zluinav}
+- **Author**: [Harry Min Khant](https://harrymkt.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/harrymkt/zluinav>
+- **Main Live Preview**: <https://harrymkt.github.io/zluinav>
+- **Min Zola version**: 0.19.2
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-zluinav.webp"
+  dark = "./screenshots/dark-zluinav.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the UI Navigation theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zluinav/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/harrymkt/zluinav"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-zluinav"
+  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-zluinav"
+  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+[[project]]
+theme = "sandbox"
+name = "Sandbox"
+desc = "Sandbox is a theme for Zola."
+tags = [ "Blog" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
+
+### Installation{#h-install-sandbox}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/salif/sandbox.git themes/sandbox
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/salif/sandbox.git themes/sandbox
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "sandbox"
+```
+
+</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
+
+### Info{#h-info-sandbox}
+- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+- **License**: MIT
+- **Homepage**: <https://github.com/salif/sandbox>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/sandbox/>
+- **Min Zola version**: 0.18.0
+</details>"""
+
+  [project.screenshot]
+  light = "./screenshots/light-sandbox.webp"
+  dark = "./screenshots/dark-sandbox.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Screenshot of the Sandbox theme"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/sandbox/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/salif/sandbox"
+
+  [[project.links]]
+  name = "Install"
+  url = "#install-sandbox"
+  js = "const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
+  newtab = false
+
+  [[project.links]]
+  name = "Info"
+  url = "#info-sandbox"
+  js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
 
 [[project]]
@@ -3064,7 +3064,7 @@ theme = "silk"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/silk/"
+  url = "./demo/silk/"
 
   [[project.links]]
   name = "Repository"
@@ -3130,7 +3130,7 @@ theme = "anatole-zola"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/anatole-zola/"
+  url = "./demo/anatole-zola/"
 
   [[project.links]]
   name = "Repository"
@@ -3208,7 +3208,7 @@ theme = "lekhz"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/lekhz/"
+  url = "./demo/lekhz/"
 
   [[project.links]]
   name = "Repository"
@@ -3273,7 +3273,7 @@ theme = "pico"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/pico/"
+  url = "./demo/pico/"
 
   [[project.links]]
   name = "Repository"
@@ -3337,7 +3337,7 @@ theme = "photography"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/photography/"
+  url = "./demo/photography/"
 
   [[project.links]]
   name = "Repository"
@@ -3402,7 +3402,7 @@ theme = "duckling"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/duckling/"
+  url = "./demo/duckling/"
 
   [[project.links]]
   name = "Repository"
@@ -3466,7 +3466,7 @@ theme = "martinique"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/martinique/"
+  url = "./demo/martinique/"
 
   [[project.links]]
   name = "Repository"
@@ -3531,7 +3531,7 @@ theme = "coffee"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/coffee/"
+  url = "./demo/coffee/"
 
   [[project.links]]
   name = "Repository"
@@ -3596,7 +3596,7 @@ theme = "coast"
 
   [[project.links]]
   name = "Live Preview"
-  url = "https://salif.github.io/zola-themes-collection/demo/coast/"
+  url = "./demo/coast/"
 
   [[project.links]]
   name = "Repository"
