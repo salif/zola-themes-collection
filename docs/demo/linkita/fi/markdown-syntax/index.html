@@ -1,0 +1,404 @@
+<!doctype html>
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="fi">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola v0.21.0" />
+  <title>Markdown-syntaksin opas | Linkita</title>
+  <meta property="og:site_name" content="Linkita" />
+  <meta property="og:title" content="Markdown-syntaksin opas" />
+  <meta name="description" content="Esimerkkiartikkeli, joka esittelee Markdownin perussyntaksin ja HTML-elementtien muotoilun." />
+  <meta property="og:description" content="Esimerkkiartikkeli, joka esittelee Markdownin perussyntaksin ja HTML-elementtien muotoilun." />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/" />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/fi/authors/kita/" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/fi/authors/salif/" />
+  <meta property="article:tag" content="markdown" />
+  <meta property="article:tag" content="css" />
+  <meta property="article:tag" content="html" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png" />
+  <meta property="og:image:alt" content="Markdown-logo" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" hreflang="ar" />
+  <meta property="og:locale:alternate" content="bg_BG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/markdown-syntax/" hreflang="bg" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/markdown-syntax/" hreflang="cs" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/markdown-syntax/" hreflang="en" />
+  <meta property="og:locale:alternate" content="eo" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/" hreflang="eo" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/es/markdown-syntax/" hreflang="es" />
+  <meta property="og:locale" content="fi_FI" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/" hreflang="fi" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/markdown-syntax/" hreflang="fr" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/" hreflang="ja" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ko/markdown-syntax/" hreflang="ko" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/markdown-syntax/" hreflang="tr" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" hreflang="zh" />
+  <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/atom.xml" title="Linkita | Atom" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+  <!-- Begin Head inject -->
+  
+  <!-- End Head inject -->
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
+  <style>
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
+  </style>
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
+  <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita-search.min.js?h=e3fea5ec115ce704318e"></script>
+  <!-- Begin Head End inject -->
+  
+  <!-- End Head End inject -->
+</head>
+
+<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+  <!-- Header -->
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8">
+        <a title="Siirry etusivulle" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/" class="text-2xl font-semibold">Linkita</a>
+        <button type="button" title="Vaihda väriteema" accesskey="$"
+          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
+        ></button>
+        <button type="button" title="Hae" accesskey="/"
+          onclick="window.linkita.toggleSearch();"
+          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
+        ></button>
+        <script>window.linkita.initSearchButton({ scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.fi.js"] });</script>
+        <button type="button" title="Siirry sivun käännösversioon" accesskey=";"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
+        ></button>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
+      </div>
+      <div title="Valikko" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+    </div>
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/projects/"
+          >Projektit</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/archive/"
+          >Arkisto</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/tags/"
+          >Tunnisteet</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/about/"
+          >Tietoa</a>
+        </li>
+      </menu>
+      <!-- Begin Header Nav inject -->
+      
+      <!-- End Header Nav inject -->
+    </nav>
+  </div>
+</header>
+
+  <!-- Begin Body Start inject -->
+  
+  <!-- End Body Start inject -->
+  <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
+    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+      <!-- Search -->
+<div id="linkita-search-wrapper" class="hidden">
+  <ul id="linkita-search-results"></ul>
+</div>
+
+    
+<article>
+  <!-- Begin Page Start inject -->
+  
+  <!-- End Page Start inject -->
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Markdown-syntaksin opas</h1>
+    <!-- Page Info -->
+<div class="text-sm antialiased opacity-80"><time
+      datetime="2022-10-20T00:00:00+00:00">20.10.2022</time><span
+        class="middot"></span><time
+    datetime="PT0H3M0S">3&nbsp;min</time>
+</div>
+
+  </header>
+  <figure class="mt-0 mb-12">
+    <img
+      class="h-auto w-full rounded-lg"
+      src="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png"
+      alt="Markdown-logo"
+      width="1600"
+      height="800"
+    />
+  </figure>
+  <!-- TOC -->
+<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
+      <span class="cursor-pointer">Sisällysluettelo</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#otsikot">Otsikot</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#h1">H1</a>
+          <ul>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#h2">H2</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#kappale">Kappale</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#lainauslohkot">Lainauslohkot</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#linkit">Linkit</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#kuvat">Kuvat</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#taulukot">Taulukot</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#koodilohkot">Koodilohkot</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#listatyypit">Listatyypit</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/#muut-elementit-abbr-sub-sup-kbd-mark">Muut elementit — abbr, sub, sup, kbd, mark</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+  <!-- Content -->
+  <section><p>Tämä artikkeli tarjoaa esimerkin perus-Markdown-syntaksista, jota voidaan käyttää Zolan sisältötiedostoissa. Lisäksi se näyttää, kuinka perus-HTML-elementit on muotoiltu CSS:llä Linkita-teemassa.</p>
+<span id="continue-reading"></span><h2 id="otsikot">Otsikot</h2>
+<p>Seuraavat HTML-elementit <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> edustavat kuutta eri tason osio-otsikkoa. <code>&lt;h1&gt;</code> on korkein otsikkotaso ja <code>&lt;h6&gt;</code> on matalin.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="kappale">Kappale</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="lainauslohkot">Lainauslohkot</h2>
+<p>Lainauslohko-elementti edustaa sisältöä, joka on lainattu toisesta lähteestä. Siihen voi valinnaisesti liittää lähdeviittauksen, jonka tulee olla <code>footer</code>- tai <code>cite</code>-elementin sisällä, sekä rivinsisäisiä muutoksia, kuten huomautuksia ja lyhenteitä.</p>
+<h4 id="lainauslohko-ilman-lahdeviitetta">Lainauslohko ilman lähdeviitettä</h4>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Huomaa</strong>, että voit käyttää <em>Markdown-syntaksia</em> lainauslohkon sisällä.</p>
+</blockquote>
+<h4 id="lainauslohko-lahdeviitteella">Lainauslohko lähdeviitteellä</h4>
+<blockquote>
+<p>Älä kommunikoi jakamalla muistia, jaa muistia kommunikoimalla.<br>
+— <cite>Rob Pike<sup class="footnote-reference" id="fr-1-1"><a href="#fn-1">1</a></sup></cite></p>
+</blockquote>
+<h2 id="linkit">Linkit</h2>
+<p>Luodaksesi linkin, laita linkkiteksti hakasulkeisiin ja heti sen perään URL-osoite kaarisulkeisiin.</p>
+<p><a href="https://github.com">GitHub</a></p>
+<p>Voit muuttaa URL-osoitteen tai sähköpostiosoitteen nopeasti linkiksi laittamalla sen kulmasulkeiden sisään.</p>
+<p><a href="https://github.com">https://github.com</a></p>
+<h2 id="kuvat">Kuvat</h2>
+<p><img src="../../images/markdown-syntax.png" alt="Markdown Guide" /></p>
+<h2 id="taulukot">Taulukot</h2>
+<p>Taulukot eivät ole osa Markdownin ydinmäärittelyä, mutta Zola tukee niitä suoraan.</p>
+<table><thead><tr><th>Nimi</th><th>Ikä</th></tr></thead><tbody>
+<tr><td>Bob</td><td>27</td></tr>
+<tr><td>Alice</td><td>23</td></tr>
+</tbody></table>
+<h4 id="markdown-syntaksi-taulukoiden-sisalla">Markdown-syntaksi taulukoiden sisällä</h4>
+<table><thead><tr><th>Kursiivi</th><th>Lihavointi</th><th>Koodi</th></tr></thead><tbody>
+<tr><td><em>kursiivi</em></td><td><strong>lihavointi</strong></td><td><code>koodi</code></td></tr>
+</tbody></table>
+<h2 id="koodilohkot">Koodilohkot</h2>
+<h4 id="koodilohko-backtick-merkeilla">Koodilohko "backtick"-merkeillä</h4>
+<pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
+</span><span>&lt;</span><span style="color:#ffb964;">html lang</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">en</span><span style="color:#556633;">&quot;</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ffb964;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">meta charset</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">utf-8</span><span style="color:#556633;">&quot; </span><span>/&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">title</span><span>&gt;Example HTML5 Document&lt;/</span><span style="color:#ffb964;">title</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#ffb964;">head</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ffb964;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">p</span><span>&gt;Test&lt;/</span><span style="color:#ffb964;">p</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#ffb964;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#ffb964;">html</span><span>&gt;
+</span></code></pre>
+<h4 id="koodilohko-sisennettyna-neljalla-valilyonnilla">Koodilohko sisennettynä neljällä välilyönnillä</h4>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>&lt;!doctype html&gt;
+</span><span>&lt;html lang=&quot;en&quot;&gt;
+</span><span>&lt;head&gt;
+</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
+</span><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+</span><span>&lt;/head&gt;
+</span><span>&lt;body&gt;
+</span><span>  &lt;p&gt;Test&lt;/p&gt;
+</span><span>&lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<h2 id="listatyypit">Listatyypit</h2>
+<h4 id="jarjestetty-lista">Järjestetty lista</h4>
+<ol>
+<li>Ensimmäinen kohta</li>
+<li>Toinen kohta</li>
+<li>Kolmas kohta</li>
+</ol>
+<h4 id="jarjestamaton-lista">Järjestämätön lista</h4>
+<ul>
+<li>Listan kohta</li>
+<li>Toinen kohta</li>
+<li>Ja vielä yksi kohta</li>
+</ul>
+<h4 id="sisakkainen-lista">Sisäkkäinen lista</h4>
+<ul>
+<li>Hedelmät
+<ul>
+<li>Omena</li>
+<li>Appelsiini</li>
+<li>Banaani</li>
+</ul>
+</li>
+<li>Maitotuotteet
+<ul>
+<li>Maito</li>
+<li>Juusto</li>
+</ul>
+</li>
+</ul>
+<h2 id="muut-elementit-abbr-sub-sup-kbd-mark">Muut elementit — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> on bittikarttakuvamuoto.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Paina <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> lopettaaksesi istunnon.</p>
+<p>Useimmat <mark>salamanterit</mark> ovat yöaktiivisia ja metsästävät hyönteisiä, matoja ja muita pieniä otuksia.</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-1">
+<p>Yllä oleva lainaus on ote Rob Piken <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">puheesta</a> Gopherfest-tapahtumassa 18. marraskuuta 2015. <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
+</section>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+<footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tekijät</span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/authors/kita/">Kita</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/authors/salif/">Salif</a>
+    
+  </div>
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">Tunnisteet</span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/tags/markdown/">markdown</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/tags/css/">css</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/tags/html/">html</a>
+    
+  </div>
+</footer>
+
+  <!-- Post Nav -->
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/math-typesetting/" accesskey="."
+    ><span>Matemaattinen ladonta</span><span class="ml-1.5">&#8250;</span></a>
+</nav>
+
+  <!-- Begin Page End inject -->
+  
+  <!-- End Page End inject -->
+</article>
+
+  </main>
+  <!-- Footer -->
+<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      <a class="link" href="https://www.getzola.org/" target="_blank">Voimanlähteenä Zola</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
+  </div>
+  <!-- Begin Footer inject -->
+  
+  <!-- End Footer inject -->
+</footer>
+
+  
+  <!-- GoatCounter -->
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=3df8de3015e302c56efa",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
+
+  <!-- Begin Body End inject -->
+  
+  <!-- End Body End inject -->
+</body>
+
+</html>

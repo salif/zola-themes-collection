@@ -4,191 +4,161 @@ set unstable := true
 
 demo_base_url := "https://salif.github.io/zola-themes-collection/demo/"
 local_base_url := "http://127.0.0.1:1111/demo/"
-just := just_executable() + " --justfile '" + justfile() + "'"
 browser := "chromium"
 font := "Roboto"
 ext := "webp"
-scripts := justfile_directory() / "scripts"
-export PATH := scripts / "node_modules" / ".bin" + ":" + env_var('PATH')
-export NODE_PATH := scripts / "node_modules"
+this_file := source_file()
+this := just_executable() + " -f " + quote(this_file)
+scripts := source_directory() / "scripts"
+node_modules := scripts / "node_modules"
 
-_: && check-requirements
-    @command {{ just }} --list --unsorted
+# export PATH := node_modules / ".bin" + PATH_VAR_SEP + env_var("PATH")
+
+_: && check-commands
+    @{{ this }} --list --unsorted
 
 [private]
-check-requirements:
-    @COMMANDS=("git" "zola" "zx"); \
-    for COMMAND in "${COMMANDS[@]}"; do \
-        if ! command -v "${COMMAND}" 2>&1 >/dev/null; then \
-            printf "%sWarning: '%s' is not installed or not in PATH%s\n" \
-                "{{ style("warning") }}" "${COMMAND}" "{{ NORMAL }}" >&2; \
-            printf "%sTry 'npm install' inside 'scripts' directory\n"; \
-        fi; \
+[script("bash")]
+check-commands:
+    set -eu
+    COMMANDS=(git zola node cwebp);
+    for COMMAND in "${COMMANDS[@]}"; do
+        if ! command -v "${COMMAND}" 2>&1 >/dev/null; then
+            printf "%sWarning: '%s' is not installed or not in PATH\n%s%s\n" \
+                "{{ style("warning") }}" "${COMMAND}" \
+                "Try 'npm install' inside 'scripts' directory" "{{ NORMAL }}" >&2;
+        fi;
     done;
 
-[extension(".mjs")]
-[group('build')]
+[group("build")]
 [script("node")]
-build-check-all:
-    import {buildCheckAll} from "{{ scripts }}/themes.js";
-    buildCheckAll("{{ local_base_url }}", {zola: "zola"});
-
-[extension(".mjs")]
-[group('build')]
-[script("node")]
-build-check path:
-    import {buildCheck} from "{{ scripts }}/themes.js";
-    buildCheck("{{ path }}", "{{ local_base_url }}", {zola: "zola"});
-
-[extension(".mjs")]
-[group('build')]
-[script("node")]
-build-demo-all base_url=demo_base_url:
+demo-checkbuild-all:
     import {buildDemoAll} from "{{ scripts }}/themes.js";
-    buildDemoAll("{{ base_url }}", {zola: "zola"});
+    buildDemoAll("{{ local_base_url }}", false, {zola: "zola"});
 
-[extension(".mjs")]
-[group('build')]
+[group("build")]
 [script("node")]
-build-demo path base_url=demo_base_url:
+demo-checkbuild path:
     import {buildDemo} from "{{ scripts }}/themes.js";
-    buildDemo("{{ path }}", "{{ base_url }}", {zola: "zola"});
+    buildDemo("{{ path }}", "{{ local_base_url }}", false, {zola: "zola"});
 
-[extension(".mjs")]
-[group('build')]
+[group("build")]
 [script("node")]
-update-data url=demo_base_url:
-    import {updateData} from "{{ scripts }}/themes.js";
-    updateData("{{ url }}");
+demo-build-all base_url=demo_base_url:
+    import {buildDemoAll} from "{{ scripts }}/themes.js";
+    buildDemoAll("{{ base_url }}", true, {zola: "zola"});
 
-[group('build')]
+[group("build")]
+[script("node")]
+demo-build path base_url=demo_base_url:
+    import {buildDemo} from "{{ scripts }}/themes.js";
+    buildDemo("{{ path }}", "{{ base_url }}", true, {zola: "zola"});
+
+[group("build")]
+[script("node")]
+update-data:
+    import {updateData} from "{{ scripts }}/themes.js";
+    updateData();
+
+[group("build")]
+[script("node")]
 remove-demo-all:
-    #!/usr/bin/env node
-    "use strict"
-    const fs = require("fs")
-    const path = require("path")
+    import fs from "fs"
+    import path from "path"
     const demos = fs.readdirSync(path.resolve("static", "demo"),
-        { withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name)
+        { withFileTypes: true }).filter(e => e.isDirectory())
     console.log(`Removing ${demos.length} dirs`)
     for (const demo of demos) {
-        fs.rm(path.resolve("static", "demo", demo), { recursive: true, force: true }, () => {})
+        fs.rmSync(path.join(demo.parentPath, demo.name), { recursive: true, force: true })
     }
 
-[group('screenshot')]
+[group("screenshot")]
 screenshot-all-dark url=local_base_url: (screenshot-all "dark" url)
 
-[group('screenshot')]
+[group("screenshot")]
 screenshot-all-light url=local_base_url: (screenshot-all "light" url)
 
-[group('screenshot')]
+[group("screenshot")]
 [private]
 screenshot-all mode="dark" url=local_base_url:
     find static/demo -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | xargs -I {} \
-        {{ just }} screenshot '{}' '{{ mode }}' '{{ url }}'
+        {{ this }} screenshot '{}' '{{ mode }}' '{{ url }}'
 
-[group('screenshot')]
+[group("screenshot")]
 screenshot name mode="dark" url=local_base_url:
     {{ browser }} --headless --screenshot=/tmp/ztc.png \
-        --hide-scrollbars --system-font-family="{{ font }}" --window-size=1360,888 \
-        "{{ url }}$(test 'linkita' = '{{ name }}' && printf '{{ name }}/en/' || printf '{{ name }}/')"
+        --hide-scrollbars --system-font-family="{{ font }}" --window-size=1360,888 "{{ url }}{{ name }}/"
     cwebp -lossless -crop 0 0 1360 765 /tmp/ztc.png -o "static/screenshots/{{ mode }}-{{ name }}.{{ ext }}"
     rm -f /tmp/ztc.png
 
-[group('screenshot')]
-[script('zx')]
+[group("screenshot")]
+[script("node")]
 screenshots-to-fix:
-    /*
-    #!/usr/bin/env node */
-    const demos = await glob("static/demo/*", { onlyDirectories: true })
-    const missing = []
-    for (const demo of demos) {
-        const themeName = path.basename(demo)
-        if (!(await fs.pathExists(path.join("static", "screenshots", `light-${themeName}.{{ ext }}`)))) {
-            missing.push(`  light for ${themeName}`)
-        }
-        if (!(await fs.pathExists(path.join("static", "screenshots", `dark-${themeName}.{{ ext }}`)))) {
-            missing.push(`  dark for ${themeName}`)
-        }
-    }
-    const screenshots = await glob("static/screenshots/*")
-    const toDelete = []
-    for (const screenshotPath of screenshots) {
-        const screenshot = path.basename(screenshotPath)
-        if (screenshot.startsWith("light-") && screenshot.endsWith(".{{ ext }}")) {
-            const demo = screenshot.substring(6, screenshot.length-5)
-            if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
-                toDelete.push(screenshot)
-            }
-        } else if (screenshot.startsWith("dark-") && screenshot.endsWith(".{{ ext }}")) {
-            const demo = screenshot.substring(5, screenshot.length-5)
-            if (!(await fs.pathExists(path.join("static", "demo", demo)))) {
-                toDelete.push(screenshot)
-            }
-        } else {
-            toDelete.push(screenshot)
-        }
-    }
-    if (missing.length > 0) {
-        console.error("missing screenshots:")
-        console.error(missing.join("\n"))
-        process.exitCode = 1
-    }
-    if (toDelete.length > 0) {
-        console.error("screenshots to delete:")
-        console.error(toDelete.join("\n"))
-        process.exitCode = 1
-    }
+    import {checkScreenshots} from "{{ scripts }}/themes.js";
+    checkScreenshots(".{{ ext }}");
 
-[group('build')]
-local-test-all: (build-demo-all local_base_url) update-data
+[group("build")]
+local-test-all: (demo-build-all local_base_url) update-data
     zola serve
 
-[group('help')]
+[confirm]
+[private]
+docker-build:
+    docker build -t zola-ztc -f Dockerfile .
+
+[private]
+docker-test:
+    docker run --rm -v "$PWD:/src" \
+    zola-ztc:latest sh -c \
+        "just"
+
+[group("help")]
 submodule-remove path: && screenshots-to-fix
+    @git diff --quiet .gitmodules
     test -d '{{ path }}'
     git submodule deinit -f '{{ path }}'
     rm -rf '.git/modules/{{ path }}'
     git rm -f '{{ path }}'
 
-[group('help')]
-submodule-add url name: && (build-check "themes/" + name)
+[group("help")]
+submodule-add url name: && (demo-checkbuild "themes/" + name)
     @if ! [[ "{{ name }}" =~ ^[A-Za-z0-9._-]+$ ]]; then \
         printf "Name not allowed!\n"; exit 1; fi;
+    @git diff --quiet .gitmodules
     ! test -d 'themes/{{ name }}'
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
 
-[group('help')]
+[group("help")]
 submodule-update-all:
+    @git diff --quiet .gitmodules
     git submodule update --remote
     git submodule foreach --recursive git submodule update --init
     git submodule summary
 
-[group('push')]
-fix-docs-dir:
-    #!/usr/bin/env node
-    "use strict"
-    const zx = require("zx")
-    const fs = zx.fs, path = zx.path
-    const filesToDelete = zx.globby.globbySync(["docs/demo/**/*.mp4", "docs/demo/**/*.webm", "docs/demo/*/robots.txt"])
+[group("push")]
+[script("node")]
+fix-public-dir:
+    import fs from "fs"
+    const filesToDelete = fs.globSync(["docs/demo/**/*.mp4", "docs/demo/**/*.webm", "docs/demo/*/robots.txt"])
     for (const fileToDelete of filesToDelete) {
-        fs.rm(fileToDelete)
+        fs.rmSync(fileToDelete, { recursive: true, force: true })
     }
     console.log(`Deleted ${filesToDelete.length} files`)
 
 [confirm]
-[group('push')]
-gh-pages: && remove-demo-all (build-demo-all demo_base_url) screenshots-to-fix (update-data demo_base_url) gh-pages-2
+[group("push")]
+gh-pages: && remove-demo-all (demo-build-all demo_base_url) screenshots-to-fix update-data gh-pages-2
     git diff --cached --quiet
     git switch gh-pages
     git merge main -X theirs --no-ff --no-commit
 
-[group('push')]
+[group("push")]
 [private]
-gh-pages-2: && fix-docs-dir gh-pages-3
+gh-pages-2: && fix-public-dir gh-pages-3
     rm -rf docs
     zola build -o docs
 
-[group('push')]
+[group("push")]
 [private]
 gh-pages-3:
     git add docs

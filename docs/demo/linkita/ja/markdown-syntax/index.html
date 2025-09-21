@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="ja">
+
+<head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="generator" content="Zola v0.21.0" />
+  <title>Markdown構文ガイド | Linkita</title>
+  <meta property="og:site_name" content="Linkita" />
+  <meta property="og:title" content="Markdown構文ガイド" />
+  <meta name="description" content="基本的なMarkdown構文とHTML要素のフォーマットを紹介するサンプル記事です。" />
+  <meta property="og:description" content="基本的なMarkdown構文とHTML要素のフォーマットを紹介するサンプル記事です。" />
+  <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/" />
+  <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2022-10-20T00:00:00+00:00" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/ja/authors/kita/" />
+  <meta property="article:author" content="https://salif.github.io/zola-themes-collection/demo/linkita/ja/authors/salif/" />
+  <meta property="article:tag" content="markdown" />
+  <meta property="article:tag" content="css" />
+  <meta property="article:tag" content="html" />
+  <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png" />
+  <meta property="og:image:alt" content="Markdownのロゴ" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="800" />
+  <meta property="og:locale:alternate" content="ar_EG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/" hreflang="ar" />
+  <meta property="og:locale:alternate" content="bg_BG" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/markdown-syntax/" hreflang="bg" />
+  <meta property="og:locale:alternate" content="cs_CZ" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/markdown-syntax/" hreflang="cs" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/markdown-syntax/" hreflang="en" />
+  <meta property="og:locale:alternate" content="eo" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/eo/markdown-syntax/" hreflang="eo" />
+  <meta property="og:locale:alternate" content="es_ES" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/es/markdown-syntax/" hreflang="es" />
+  <meta property="og:locale:alternate" content="fi_FI" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/markdown-syntax/" hreflang="fi" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/markdown-syntax/" hreflang="fr" />
+  <meta property="og:locale" content="ja_JP" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/" hreflang="ja" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/ko/markdown-syntax/" hreflang="ko" />
+  <meta property="og:locale:alternate" content="tr_TR" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/tr/markdown-syntax/" hreflang="tr" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/" hreflang="zh" />
+  <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/atom.xml" title="Linkita | Atom" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+  <!-- Begin Head inject -->
+  
+  <!-- End Head inject -->
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
+  <style>
+  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
+  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
+  </style>
+  <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
+  <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
+  <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
+  <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
+  <!-- Begin Head End inject -->
+  
+  <!-- End Head End inject -->
+</head>
+
+<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+  <!-- Header -->
+<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+  <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
+    <div class="flex justify-between">
+      <div class="flex items-center min-h-8">
+        <a title="ホームページへ行く" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/" class="text-2xl font-semibold">Linkita</a>
+        <button type="button" title="配色を切り替える" accesskey="$"
+          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
+        ></button>
+        <button type="button" title="ページの翻訳へ" accesskey=";"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
+        ></button>
+        <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
+      </div>
+      <div title="メニュー" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.linkita.toggleHeaderMenu();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      ></div>
+    </div>
+    <nav class="flex w-full items-center lg:w-auto">
+      <menu
+        class="nav-wrapper flex w-full flex-col py-2 lg:w-auto lg:flex-row lg:self-center lg:py-0">
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/projects/"
+          >プロジェクト</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/archive/"
+          >アーカイブ</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/tags/"
+          >タグ</a>
+        </li>
+        <li>
+          <a
+            class="primary-link block py-2 text-center text-lg font-medium lg:px-3 lg:py-0"
+            href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/about/"
+          >について</a>
+        </li>
+      </menu>
+      <!-- Begin Header Nav inject -->
+      
+      <!-- End Header Nav inject -->
+    </nav>
+  </div>
+</header>
+
+  <!-- Begin Body Start inject -->
+  
+  <!-- End Body Start inject -->
+  <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
+    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    
+<article>
+  <!-- Begin Page Start inject -->
+  
+  <!-- End Page Start inject -->
+
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Markdown構文ガイド</h1>
+    <!-- Page Info -->
+<div class="text-sm antialiased opacity-80"><time
+      datetime="2022-10-20T00:00:00+00:00">2022年10月20日</time><span
+        class="middot"></span><time
+    datetime="PT0H4M0S">4&nbsp;分</time>
+</div>
+
+  </header>
+  <figure class="mt-0 mb-12">
+    <img
+      class="h-auto w-full rounded-lg"
+      src="https://salif.github.io/zola-themes-collection/demo/linkita/images/markdown-syntax.png"
+      alt="Markdownのロゴ"
+      width="1600"
+      height="800"
+    />
+  </figure>
+  <!-- TOC -->
+<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+  <details>
+    <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
+      <span class="cursor-pointer">コンテンツ</span>
+    </summary>
+    <div class="px-2">
+      <ul>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#jian-chu-si">見出し</a>
+        </li>
+        <li>
+          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#h1">H1</a>
+          <ul>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#h2">H2</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#duan-luo">段落</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#yin-yong">引用</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#rinku">リンク</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#hua-xiang">画像</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#teburu">テーブル</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#kodoburotuku">コードブロック</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#risuto">リスト</a>
+            </li>
+            <li>
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/markdown-syntax/#sonota-noyao-su-abbr-sub-sup-kbd-mark">その他の要素 — abbr, sub, sup, kbd, mark</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+  <!-- Content -->
+  <section><p>この記事では、Zolaのコンテンツファイルで使用できる基本的なMarkdown構文のサンプルを紹介します。また、Linkitaテーマで基本的なHTML要素がCSSでどのように装飾されるかも示します。</p>
+<span id="continue-reading"></span><h2 id="jian-chu-si">見出し</h2>
+<p>以下のHTMLの <code>&lt;h1&gt;</code>～<code>&lt;h6&gt;</code> 要素は、6段階のセクション見出しを表します。 <code>&lt;h1&gt;</code> が最上位で、<code>&lt;h6&gt;</code> が最下位です。</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="duan-luo">段落</h2>
+<p>これはダミーテキストです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。意義を問わないでください。意味がないと思ったら、好きなテキストに置き換えてください。これはダミーテキストです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+<p>これはダミーテキストです。この文章はダミーで、意味をなさないものです。デザインの観点からテキストがどのようになるかを示すためにここに置かれています。</p>
+<h2 id="yin-yong">引用</h2>
+<p>引用要素は、他の情報源から引用されたコンテンツを表します。任意で <code>footer</code> または <code>cite</code> 要素内に引用元を記載したり、注釈や省略などのインラインでの変更を加えたりすることができます。</p>
+<h4 id="yin-yong-yuan-nonaiyin-yong">引用元のない引用</h4>
+<blockquote>
+<p>これは引用文の例です。
+<strong>注：</strong> 引用ブロック内では <em>Markdown構文</em> を使用できます。</p>
+</blockquote>
+<h4 id="yin-yong-yuan-noaruyin-yong">引用元のある引用</h4>
+<blockquote>
+<p>メモリを共有して通信するのではなく、通信してメモリを共有せよ。<br>
+— <cite>Rob Pike<sup class="footnote-reference" id="fr-1-1"><a href="#fn-1">1</a></sup></cite></p>
+</blockquote>
+<h2 id="rinku">リンク</h2>
+<p>リンクを作成するには、リンクテキストを角括弧で囲み、その直後にURLを丸括弧で囲みます。</p>
+<p><a href="https://github.com">GitHub</a></p>
+<p>URLやメールアドレスを素早くリンクに変換するには、山括弧で囲みます。</p>
+<p><a href="https://github.com">https://github.com</a></p>
+<h2 id="hua-xiang">画像</h2>
+<p><img src="../../images/markdown-syntax.png" alt="Markdown ガイド" /></p>
+<h2 id="teburu">テーブル</h2>
+<p>テーブルはMarkdownのコア仕様の一部ではありませんが、Zolaでは標準でサポートされています。</p>
+<table><thead><tr><th>名前</th><th>年齢</th></tr></thead><tbody>
+<tr><td>ボブ</td><td>27</td></tr>
+<tr><td>アリス</td><td>23</td></tr>
+</tbody></table>
+<h4 id="teburunei-noinrainmarkdown">テーブル内のインラインMarkdown</h4>
+<table><thead><tr><th>イタリック</th><th>ボールド</th><th>コード</th></tr></thead><tbody>
+<tr><td><em>italics</em></td><td><strong>bold</strong></td><td><code>code</code></td></tr>
+</tbody></table>
+<h2 id="kodoburotuku">コードブロック</h2>
+<h4 id="batukukuotoniyorukodoburotuku">バッククォートによるコードブロック</h4>
+<pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
+</span><span>&lt;</span><span style="color:#ffb964;">html lang</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">en</span><span style="color:#556633;">&quot;</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ffb964;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">meta charset</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">utf-8</span><span style="color:#556633;">&quot; </span><span>/&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">title</span><span>&gt;Example HTML5 Document&lt;/</span><span style="color:#ffb964;">title</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#ffb964;">head</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#ffb964;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#ffb964;">p</span><span>&gt;Test&lt;/</span><span style="color:#ffb964;">p</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#ffb964;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#ffb964;">html</span><span>&gt;
+</span></code></pre>
+<h4 id="4tunosupesudeindentosaretakodoburotuku">4つのスペースでインデントされたコードブロック</h4>
+<pre style="background-color:#151515;color:#e8e8d3;"><code><span>&lt;!doctype html&gt;
+</span><span>&lt;html lang=&quot;en&quot;&gt;
+</span><span>&lt;head&gt;
+</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
+</span><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+</span><span>&lt;/head&gt;
+</span><span>&lt;body&gt;
+</span><span>  &lt;p&gt;Test&lt;/p&gt;
+</span><span>&lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<h2 id="risuto">リスト</h2>
+<h4 id="fan-hao-fu-kirisuto">番号付きリスト</h4>
+<ol>
+<li>最初の項目</li>
+<li>2番目の項目</li>
+<li>3番目の項目</li>
+</ol>
+<h4 id="ge-tiao-shu-kirisuto">箇条書きリスト</h4>
+<ul>
+<li>リスト項目</li>
+<li>別の項目</li>
+<li>さらに別の項目</li>
+</ul>
+<h4 id="ru-rezi-norisuto">入れ子のリスト</h4>
+<ul>
+<li>果物
+<ul>
+<li>リンゴ</li>
+<li>オレンジ</li>
+<li>バナナ</li>
+</ul>
+</li>
+<li>乳製品
+<ul>
+<li>牛乳</li>
+<li>チーズ</li>
+</ul>
+</li>
+</ul>
+<h2 id="sonota-noyao-su-abbr-sub-sup-kbd-mark">その他の要素 — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr>はビットマップ画像フォーマットです。</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>セッションを終了するには <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> を押してください。</p>
+<p>ほとんどの<mark>サンショウウオ</mark>は夜行性で、昆虫やミミズなどの小動物を捕食します。</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-1">
+<p>上記の引用は、2015年11月18日に行われたGopherfestでのRob Pikeの<a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">講演</a>から抜粋したものです。 <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
+</section>
+</section>
+  <hr />
+  <!-- Post Taxonomies -->
+<footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">著者</span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/authors/kita/">Kita</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/authors/salif/">Salif</a>
+    
+  </div>
+  <div class="mb-2 flex flex-wrap">
+    <span class="block-bg mr-1.5 mb-1.5 rounded-lg px-5 py-1.5">タグ</span>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/tags/markdown/">markdown</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/tags/css/">css</a>
+    
+    <a
+      class="block-bg block-hover mr-1.5 mb-1.5 rounded-lg px-5 py-1.5 no-underline"
+      href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/tags/html/">html</a>
+    
+  </div>
+</footer>
+
+  <!-- Post Nav -->
+<nav class="block-bg mt-12 flex flex-wrap rounded-lg text-lg">
+  <a
+    class="block-hover-mask ml-auto flex min-w-[50%] grow items-center justify-end rounded-r-md p-6 pl-3 font-semibold no-underline"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/math-typesetting/" accesskey="."
+    ><span>数式組版</span><span class="ml-1.5">&#8250;</span></a>
+</nav>
+
+  <!-- Begin Page End inject -->
+  
+  <!-- End Page End inject -->
+</article>
+
+  </main>
+  <!-- Footer -->
+<footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
+  <div class="mr-auto basis-full lg:basis-1/2">
+  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  </div>
+  <div class="flex basis-full lg:basis-1/2 lg:justify-end">
+    <span class="mr-6 lg:ml-6">
+      <a class="link" href="https://www.getzola.org/" target="_blank">Powered by Zola</a>
+    </span>
+    <a class="link" href="https://www.getzola.org/themes/linkita/" target="_blank">&#9998; Linkita</a>
+  </div>
+  <!-- Begin Footer inject -->
+  
+  <!-- End Footer inject -->
+</footer>
+
+  
+  <!-- GoatCounter -->
+  <script>window.linkita.initGoatCounterAnalytics({
+    src: "https://salif.github.io/zola-themes-collection/demo/linkita/js/gc.min.js?h=3df8de3015e302c56efa",
+    endpoint: "https://sgi.goatcounter.com/count"
+  });</script>
+
+  <!-- Begin Body End inject -->
+  
+  <!-- End Body End inject -->
+</body>
+
+</html>

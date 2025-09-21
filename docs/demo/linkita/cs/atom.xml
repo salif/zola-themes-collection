@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="cs">
+    <title>Linkita</title>
+    <subtitle>Čistá a elegantní šablona blogu pro Zolu. Linkita je založena na šablonách Kita a Hugo-Paper, je vícejazyčná a přizpůsobená pro SEO.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-04-20T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/linkita/cs/atom.xml</id>
+    <entry xml:lang="cs">
+        <title>Průvodce syntaxí Markdownu</title>
+        <published>2022-10-20T00:00:00+00:00</published>
+        <updated>2022-10-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              sample_username
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/markdown-syntax/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/linkita/cs/markdown-syntax/</id>
+        
+        <summary type="html">&lt;p&gt;Tento článek nabízí ukázku základní syntaxe Markdownu, kterou lze použít v obsahových souborech Zoly. Také ukazuje, jak jsou základní HTML prvky stylovány pomocí CSS v šabloně Linkita.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="cs">
+        <title>Sazba matematiky</title>
+        <published>2022-10-20T00:00:00+00:00</published>
+        <updated>2022-10-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              sample_username
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/math-typesetting/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/linkita/cs/math-typesetting/</id>
+        
+        <summary type="html">&lt;p&gt;Šablona Linkita podporuje matematické vzorce $\LaTeX$ pomocí &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="cs">
+        <title>Shortcody</title>
+        <published>2022-10-20T00:00:00+00:00</published>
+        <updated>2025-04-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              sample_username
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/cs/shortcodes/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/linkita/cs/shortcodes/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/cs/shortcodes/">&lt;p&gt;Šablona Linkita poskytuje několik shortcodů.&lt;&#x2F;p&gt;
+&lt;p&gt;Nikdy jste o shortcodech neslyšeli? Více informací naleznete v &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;dokumentaci Zoly&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
+&lt;p&gt;Chcete-li na své stránce použít Mermaid, musíte v její frontmatter části nastavit &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Titulek vaší stránky&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Poté můžete shortcode &lt;code&gt;mermaid()&lt;&#x2F;code&gt; použít takto:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;graph TD;
+&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
+&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;C;
+&lt;&#x2F;span&gt;&lt;span&gt;B--&amp;gt;D;
+&lt;&#x2F;span&gt;&lt;span&gt;C--&amp;gt;D;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Toto bude vykresleno jako:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
+  graph TD;
+A--&amp;gt;B;
+A--&amp;gt;C;
+B--&amp;gt;D;
+C--&amp;gt;D;
+&lt;&#x2F;pre&gt;
+&lt;p&gt;Kromě toho můžete uvnitř shortcodu &lt;code&gt;mermaid()&lt;&#x2F;code&gt; použít blok kódu, který bude ignorován.&lt;&#x2F;p&gt;
+&lt;p&gt;Blok kódu zabraňuje formátovači, aby rozbil formátování diagramu Mermaid.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
+&lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
+&lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
+&lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
+&lt;&#x2F;span&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+&lt;&#x2F;span&gt;&lt;span&gt;    loop Healthcheck
+&lt;&#x2F;span&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria
+&lt;&#x2F;span&gt;&lt;span&gt;    end
+&lt;&#x2F;span&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!
+&lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
+&lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
+&lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;&#x2F;span&gt;&lt;span&gt;```
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Toto bude vykresleno jako:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
+  
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&amp;gt;&amp;gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &amp;lt;br&amp;#x2F;&amp;gt;prevail!
+    John--&amp;gt;&amp;gt;Alice: Great!
+    John-&amp;gt;&amp;gt;Bob: How about you?
+    Bob--&amp;gt;&amp;gt;John: Jolly good!
+
+&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;poznamky&quot;&gt;Poznámky&lt;&#x2F;h2&gt;
+&lt;p&gt;Shortcode &lt;code&gt;admonition()&lt;&#x2F;code&gt; zobrazí banner, který vám pomůže umístit na stránku upozornění.&lt;&#x2F;p&gt;
+&lt;p&gt;Shortcode &lt;code&gt;admonition()&lt;&#x2F;code&gt; můžete použít takto:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;`tip` poznámka.
+&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Shortcode pro poznámky má 12 různých typů:&lt;&#x2F;p&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(68, 138, 255, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;note.svg);&quot;
+    &gt;
+      note
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;poznámka&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;note&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 176, 255, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;abstract.svg);&quot;
+    &gt;
+      abstract
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;abstrakt&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;abstract&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(83, 211, 230, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;info.svg);&quot;
+    &gt;
+      info
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;info&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;info&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 191, 165, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;tip.svg);&quot;
+    &gt;
+      tip
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;tip&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;tip&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(0, 200, 83, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;success.svg);&quot;
+    &gt;
+      success
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;úspěch&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;success&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(100, 221, 23, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;question.svg);&quot;
+    &gt;
+      question
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;otázka&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;question&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 145, 0, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;warning.svg);&quot;
+    &gt;
+      warning
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;varování&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;warning&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 82, 82, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;failure.svg);&quot;
+    &gt;
+      failure
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;neúspěch&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;failure&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 23, 68, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;danger.svg);&quot;
+    &gt;
+      danger
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;nebezpečí&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;danger&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(255, 23, 68, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;bug.svg);&quot;
+    &gt;
+      bug
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;chyba&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;bug&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(101, 31, 255, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;example.svg);&quot;
+    &gt;
+      example
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;příklad&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;example&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+
+&lt;div
+  class=&quot;my-4 flex flex-col rounded-lg bg-[var(--admonition-bg)]&quot;
+  style=&quot;--admonition-bg: rgba(159, 159, 159, 0.1);&quot;
+&gt;
+  &lt;div class=&quot;flex items-center rounded-t-lg bg-[var(--admonition-bg)] p-1&quot;&gt;
+    &lt;div
+      class=&quot;mx-2 h-4 w-4 text-[0] [background:var(--url)_center_center_no-repeat] dark:invert&quot;
+      style=&quot;--url: url(.&#x2F;icons&#x2F;quote.svg);&quot;
+    &gt;
+      quote
+    &lt;&#x2F;div&gt;
+    &lt;span&gt;&lt;strong&gt;citace&lt;&#x2F;strong&gt;&lt;&#x2F;span&gt;
+  &lt;&#x2F;div&gt;
+  &lt;div class=&quot;pl-4&quot;&gt;&lt;p&gt;&lt;code&gt;quote&lt;&#x2F;code&gt; poznámka.&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;galerie&quot;&gt;Galerie&lt;&#x2F;h2&gt;
+&lt;p&gt;Shortcode &lt;code&gt;gallery()&lt;&#x2F;code&gt; je velmi jednoduchá, klikatelná obrázková galerie (pouze HTML), která zobrazuje všechny obrázky z prostředků stránky (page assets).&lt;&#x2F;p&gt;
+&lt;p&gt;Pochází z &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;dokumentace Zoly&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery(alt=&amp;quot;Ukázkový obrázek pro galerii&amp;quot;) }}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+
+&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
+
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;01-zola.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;01-zola.b673627618ae4d9e.png&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;02-zola-manet.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;02-zola-manet.6cacdaa0a00675f4.png&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;03-zola-cezanne.png&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;03-zola-cezanne.7278afdd982f9c0d.png&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;04-gutenberg.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;04-gutenberg.870b88ab978bdf22.jpg&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;05-example.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;05-example.fa7cb105347c93cf.jpg&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;06-example.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;06-example.eb57cde378878205.jpg&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;07-example.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;07-example.6ba4bc34b155528f.jpg&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+  &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;cs&#x2F;shortcodes&#x2F;08-example.jpg&quot; target=&quot;_blank&quot;&gt;
+    &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;08-example.13c3f7440797b6ed.jpg&quot; alt=&quot;Ukázkový obrázek pro galerii&quot; &#x2F;&gt;
+  &lt;&#x2F;a&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;projekty&quot;&gt;Projekty&lt;&#x2F;h2&gt;
+&lt;p&gt;Shortcode &lt;code&gt;projects()&lt;&#x2F;code&gt; vám umožní vytvořit stránku pro vaše projekty.&lt;&#x2F;p&gt;
+&lt;p&gt;Vytvořte soubor &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Moje projekty&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Vytvořte soubor &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;data.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;desc &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;links &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Toto bude zobrazeno jako:&lt;&#x2F;p&gt;
+
+&lt;div class=&quot;not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5&quot;&gt;
+  &lt;h2 class=&quot;my-2 text-xl font-bold text-black dark:text-white&quot;&gt;lorem&lt;&#x2F;h2&gt;
+  &lt;p&gt;Lorem ipsum dolor sit.&lt;&#x2F;p&gt;
+  &lt;div class=&quot;my-2 flex flex-wrap items-center justify-between&quot;&gt;
+    &lt;div class=&quot;flex flex-wrap gap-x-2 text-sm opacity-80&quot;&gt;
+      &lt;span&gt;#lorem&lt;&#x2F;span&gt;
+      &lt;span&gt;#ipsum&lt;&#x2F;span&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;flex flex-wrap gap-x-2&quot;&gt;
+      &lt;a
+        class=&quot;underline&quot;
+        href=&quot;https:&#x2F;&#x2F;example.com&quot;
+        target=&quot;_blank&quot;
+      &gt;homepage&lt;&#x2F;a&gt;
+      &lt;a
+        class=&quot;underline&quot;
+        href=&quot;https:&#x2F;&#x2F;example.com&quot;
+        target=&quot;_blank&quot;
+      &gt;source&lt;&#x2F;a&gt;
+    &lt;&#x2F;div&gt;
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+</content>
+        
+    </entry>
+</feed>

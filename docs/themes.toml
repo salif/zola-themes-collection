@@ -4,9 +4,17 @@ name = "Linkita"
 desc = "A clean and elegant blog theme for Zola. Linkita is based on Kita and Hugo-Paper and is multilingual and SEO friendly."
 tags = [ "Blog", "Multilingual", "Responsive", "SEO", "Search" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-linkita'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-linkita'></summary>
 
-### Installation{#h-install-linkita}
+### Info{#h-info-linkita}
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/salif/linkita>
+- **Main Live Preview**: <https://salif.github.io/linkita/>
+- **Min Zola version**: 0.19.0
+- **Original**: <https://github.com/st1020/kita>
+
+### Installation{#h-installation-linkita}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -25,44 +33,35 @@ git clone https://codeberg.org/salif/linkita.git themes/linkita
 theme = "linkita"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-linkita'></summary>
-
-### Info{#h-info-linkita}
-- **Author**: [Salif Mehmed](https://salif.eu)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/salif/linkita>
-- **Main Live Preview**: <https://salif.github.io/linkita/en/>
-- **Min Zola version**: 0.19.0
-- **Original**: <https://github.com/st1020/kita>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-linkita.webp"
-  dark = "./screenshots/dark-linkita.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-linkita.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Linkita theme"
+  alt = "Light mode screenshot of Linkita Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-linkita.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Linkita Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
-  url = "./demo/linkita/en/"
+  url = "./demo/linkita/"
 
   [[project.links]]
   name = "Repository"
   url = "https://codeberg.org/salif/linkita"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-linkita"
-  js = "const b=document.getElementById('install-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-linkita"
-  js = "const b=document.getElementById('info-linkita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-linkita"
+  js = "document.getElementById('info-linkita').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "duckquill"
@@ -70,9 +69,16 @@ name = "Duckquill"
 desc = "Modern, pretty, and clean theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckquill'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
 
-### Installation{#h-install-duckquill}
+### Info{#h-info-duckquill}
+- **Author**: [David Lapshin](https://daudix.one)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/daudix/duckquill>
+- **Main Live Preview**: <https://duckquill.daudix.one>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-duckquill}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -91,23 +97,21 @@ git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
 theme = "duckquill"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckquill'></summary>
-
-### Info{#h-info-duckquill}
-- **Author**: [David Lapshin](https://daudix.one)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/daudix/duckquill>
-- **Main Live Preview**: <https://duckquill.daudix.one>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-duckquill.webp"
-  dark = "./screenshots/dark-duckquill.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-duckquill.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Duckquill theme"
+  alt = "Light mode screenshot of Duckquill Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-duckquill.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Duckquill Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -118,16 +122,10 @@ theme = "duckquill"
   url = "https://codeberg.org/daudix/duckquill"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-duckquill"
-  js = "const b=document.getElementById('install-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-duckquill"
-  js = "const b=document.getElementById('info-duckquill').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-duckquill"
+  js = "document.getElementById('info-duckquill').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "tabi"
@@ -135,9 +133,16 @@ name = "tabi"
 desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tabi'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
 
-### Installation{#h-install-tabi}
+### Info{#h-info-tabi}
+- **Author**: [Óscar Fernández](https://osc.garden)
+- **License**: MIT
+- **Homepage**: <https://github.com/welpo/tabi>
+- **Main Live Preview**: <https://welpo.github.io/tabi>
+- **Min Zola version**: 0.17.0
+
+### Installation{#h-installation-tabi}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -156,23 +161,21 @@ git clone https://github.com/welpo/tabi.git themes/tabi
 theme = "tabi"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tabi'></summary>
-
-### Info{#h-info-tabi}
-- **Author**: [Óscar Fernández](https://osc.garden)
-- **License**: MIT
-- **Homepage**: <https://github.com/welpo/tabi>
-- **Main Live Preview**: <https://welpo.github.io/tabi>
-- **Min Zola version**: 0.17.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-tabi.webp"
-  dark = "./screenshots/dark-tabi.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-tabi.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the tabi theme"
+  alt = "Light mode screenshot of tabi Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-tabi.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of tabi Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -183,16 +186,10 @@ theme = "tabi"
   url = "https://github.com/welpo/tabi"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-tabi"
-  js = "const b=document.getElementById('install-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-tabi"
-  js = "const b=document.getElementById('info-tabi').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-tabi"
+  js = "document.getElementById('info-tabi').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "apollo"
@@ -200,9 +197,16 @@ name = "apollo"
 desc = "Modern and minimalistic blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-apollo'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
 
-### Installation{#h-install-apollo}
+### Info{#h-info-apollo}
+- **Author**: [not-matthias](https://github.com/not-matthias)
+- **License**: MIT
+- **Homepage**: <https://github.com/not-matthias/apollo>
+- **Main Live Preview**: <https://not-matthias.github.io/apollo>
+- **Min Zola version**: 0.14.0
+
+### Installation{#h-installation-apollo}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -221,23 +225,21 @@ git clone https://github.com/not-matthias/apollo.git themes/apollo
 theme = "apollo"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-apollo'></summary>
-
-### Info{#h-info-apollo}
-- **Author**: [not-matthias](https://github.com/not-matthias)
-- **License**: MIT
-- **Homepage**: <https://github.com/not-matthias/apollo>
-- **Main Live Preview**: <https://not-matthias.github.io/apollo>
-- **Min Zola version**: 0.14.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-apollo.webp"
-  dark = "./screenshots/dark-apollo.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-apollo.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the apollo theme"
+  alt = "Light mode screenshot of apollo Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-apollo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of apollo Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -248,16 +250,10 @@ theme = "apollo"
   url = "https://github.com/not-matthias/apollo"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-apollo"
-  js = "const b=document.getElementById('install-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-apollo"
-  js = "const b=document.getElementById('info-apollo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-apollo"
+  js = "document.getElementById('info-apollo').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "daisy"
@@ -265,9 +261,16 @@ name = "Daisy"
 desc = "Beautiful and fast responsive theme based on TailwindCSS and DaisyUI."
 tags = [ "multilingual", "responsive", "search" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-daisy'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
 
-### Installation{#h-install-daisy}
+### Info{#h-info-daisy}
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/winterstein/zola-theme-daisy>
+- **Main Live Preview**: <https://zola-daisy.winterstein.biz>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-daisy}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -286,23 +289,21 @@ git clone https://codeberg.org/winterstein/zola-theme-daisy.git themes/daisy
 theme = "daisy"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-daisy'></summary>
-
-### Info{#h-info-daisy}
-- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/winterstein/zola-theme-daisy>
-- **Main Live Preview**: <https://zola-daisy.winterstein.biz>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-daisy.webp"
-  dark = "./screenshots/dark-daisy.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-daisy.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Daisy theme"
+  alt = "Light mode screenshot of Daisy Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-daisy.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Daisy Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -313,16 +314,10 @@ theme = "daisy"
   url = "https://codeberg.org/winterstein/zola-theme-daisy"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-daisy"
-  js = "const b=document.getElementById('install-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-daisy"
-  js = "const b=document.getElementById('info-daisy').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-daisy"
+  js = "document.getElementById('info-daisy').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "project-portfolio"
@@ -330,9 +325,16 @@ name = "Project Portfolio"
 desc = "Theme for a project portfolio (based on Tailwind CSS)."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-project-portfolio'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
 
-### Installation{#h-install-project-portfolio}
+### Info{#h-info-project-portfolio}
+- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/winterstein/zola-theme-project-portfolio>
+- **Main Live Preview**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-project-portfolio}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -351,23 +353,21 @@ git clone https://github.com/awinterstein/zola-theme-project-portfolio.git theme
 theme = "project-portfolio"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-project-portfolio'></summary>
-
-### Info{#h-info-project-portfolio}
-- **Author**: [Adrian Winterstein](https://www.winterstein.biz)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/winterstein/zola-theme-project-portfolio>
-- **Main Live Preview**: <https://awinterstein.github.io/zola-theme-project-portfolio-example/>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-project-portfolio.webp"
-  dark = "./screenshots/dark-project-portfolio.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-project-portfolio.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Project Portfolio theme"
+  alt = "Light mode screenshot of Project Portfolio Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-project-portfolio.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Project Portfolio Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -378,16 +378,10 @@ theme = "project-portfolio"
   url = "https://github.com/awinterstein/zola-theme-project-portfolio"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-project-portfolio"
-  js = "const b=document.getElementById('install-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-project-portfolio"
-  js = "const b=document.getElementById('info-project-portfolio').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-project-portfolio"
+  js = "document.getElementById('info-project-portfolio').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "trankwilo"
@@ -395,9 +389,16 @@ name = "Goyo"
 desc = "A simplicity and clean documentation theme"
 tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-trankwilo'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-trankwilo'></summary>
 
-### Installation{#h-install-trankwilo}
+### Info{#h-info-trankwilo}
+- **Author**: [hahwul](https://www.hahwul.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/hahwul/goyo>
+- **Main Live Preview**: <https://goyo.hahwul.com>
+- **Min Zola version**: 0.17.0
+
+### Installation{#h-installation-trankwilo}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -416,23 +417,14 @@ git clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
 theme = "trankwilo"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-trankwilo'></summary>
-
-### Info{#h-info-trankwilo}
-- **Author**: [hahwul](https://www.hahwul.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/hahwul/goyo>
-- **Main Live Preview**: <https://goyo.hahwul.com>
-- **Min Zola version**: 0.17.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-trankwilo.webp"
-  dark = "./screenshots/dark-trankwilo.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-trankwilo.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Goyo theme"
+  alt = "Dark mode screenshot of Goyo Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -443,16 +435,10 @@ theme = "trankwilo"
   url = "https://codeberg.org/salif/trankwilo"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-trankwilo"
-  js = "const b=document.getElementById('install-trankwilo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-trankwilo"
-  js = "const b=document.getElementById('info-trankwilo').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-trankwilo"
+  js = "document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "terminus"
@@ -460,9 +446,17 @@ name = "terminus"
 desc = "A dark duotone retro theme for Zola"
 tags = [ "dark", "blog", "minimal", "personal", "responsive", "seo" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminus'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminus'></summary>
 
-### Installation{#h-install-terminus}
+### Info{#h-info-terminus}
+- **Author**: [Eyal Kalderon](https://eyalkalderon.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/ebkalderon/terminus>
+- **Main Live Preview**: <https://ebkalderon.github.io/terminus/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/panr/hugo-theme-terminal>
+
+### Installation{#h-installation-terminus}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -481,24 +475,21 @@ git clone https://github.com/ebkalderon/terminus.git themes/terminus
 theme = "terminus"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminus'></summary>
-
-### Info{#h-info-terminus}
-- **Author**: [Eyal Kalderon](https://eyalkalderon.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/ebkalderon/terminus>
-- **Main Live Preview**: <https://ebkalderon.github.io/terminus/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/panr/hugo-theme-terminal>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-terminus.webp"
-  dark = "./screenshots/dark-terminus.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-terminus.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the terminus theme"
+  alt = "Light mode screenshot of terminus Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-terminus.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of terminus Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -509,16 +500,10 @@ theme = "terminus"
   url = "https://github.com/ebkalderon/terminus"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-terminus"
-  js = "const b=document.getElementById('install-terminus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-terminus"
-  js = "const b=document.getElementById('info-terminus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-terminus"
+  js = "document.getElementById('info-terminus').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "hacker"
@@ -526,9 +511,17 @@ name = "zola-hacker"
 desc = "Hacker is a theme for Zola"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hacker'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hacker'></summary>
 
-### Installation{#h-install-hacker}
+### Info{#h-info-hacker}
+- **Author**: [Vladimir Loskutov](https://github.com/en9inerd)
+- **License**: MIT
+- **Homepage**: <https://github.com/en9inerd/zola-hacker>
+- **Main Live Preview**: <https://zola-hacker.enginerd.io/>
+- **Min Zola version**: 0.19.1
+- **Original**: <https://github.com/pages-themes/hacker>
+
+### Installation{#h-installation-hacker}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -547,24 +540,14 @@ git clone https://github.com/en9inerd/zola-hacker.git themes/hacker
 theme = "hacker"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hacker'></summary>
-
-### Info{#h-info-hacker}
-- **Author**: [Vladimir Loskutov](https://github.com/en9inerd)
-- **License**: MIT
-- **Homepage**: <https://github.com/en9inerd/zola-hacker>
-- **Main Live Preview**: <https://zola-hacker.enginerd.io/>
-- **Min Zola version**: 0.19.1
-- **Original**: <https://github.com/pages-themes/hacker>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-hacker.webp"
-  dark = "./screenshots/dark-hacker.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-hacker.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the zola-hacker theme"
+  alt = "Dark mode screenshot of zola-hacker Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -575,16 +558,10 @@ theme = "hacker"
   url = "https://github.com/en9inerd/zola-hacker"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-hacker"
-  js = "const b=document.getElementById('install-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-hacker"
-  js = "const b=document.getElementById('info-hacker').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-hacker"
+  js = "document.getElementById('info-hacker').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "radion"
@@ -592,9 +569,16 @@ name = "radion"
 desc = "A sleek, modern blog theme."
 tags = [ "SEO", "search", "accessible" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-radion'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
 
-### Installation{#h-install-radion}
+### Info{#h-info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Main Live Preview**: <https://micahkepe.com/radion/>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-radion}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -613,23 +597,14 @@ git clone https://github.com/micahkepe/radion.git themes/radion
 theme = "radion"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-radion'></summary>
-
-### Info{#h-info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Main Live Preview**: <https://micahkepe.com/radion/>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-radion.webp"
-  dark = "./screenshots/dark-radion.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-radion.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the radion theme"
+  alt = "Dark mode screenshot of radion Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -640,16 +615,10 @@ theme = "radion"
   url = "https://github.com/micahkepe/radion"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-radion"
-  js = "const b=document.getElementById('install-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-radion"
-  js = "const b=document.getElementById('info-radion').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-radion"
+  js = "document.getElementById('info-radion').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zola-bearblog"
@@ -657,9 +626,17 @@ name = "Bear"
 desc = "Bear blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-bearblog'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
 
-### Installation{#h-install-zola-bearblog}
+### Info{#h-info-zola-bearblog}
+- **Author**: [Alan Pearce](https://alanpearce.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
+- **Main Live Preview**: <https://zola-bearblog.vercel.app/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/janraasch/hugo-bearblog/>
+
+### Installation{#h-installation-zola-bearblog}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -678,24 +655,21 @@ git clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
 theme = "zola-bearblog"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-bearblog'></summary>
-
-### Info{#h-info-zola-bearblog}
-- **Author**: [Alan Pearce](https://alanpearce.eu)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
-- **Main Live Preview**: <https://zola-bearblog.vercel.app/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/janraasch/hugo-bearblog/>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-zola-bearblog.webp"
-  dark = "./screenshots/dark-zola-bearblog.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-bearblog.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Bear theme"
+  alt = "Light mode screenshot of Bear Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zola-bearblog.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Bear Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -706,16 +680,10 @@ theme = "zola-bearblog"
   url = "https://codeberg.org/alanpearce/zola-bearblog"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-zola-bearblog"
-  js = "const b=document.getElementById('install-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-zola-bearblog"
-  js = "const b=document.getElementById('info-zola-bearblog').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-zola-bearblog"
+  js = "document.getElementById('info-zola-bearblog').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "serene"
@@ -723,9 +691,16 @@ name = "serene"
 desc = "A spiffy blog theme for zola"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-serene'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-serene'></summary>
 
-### Installation{#h-install-serene}
+### Info{#h-info-serene}
+- **Author**: [isunjn](https://github.com/isunjn)
+- **License**: MIT
+- **Homepage**: <https://github.com/isunjn/serene>
+- **Main Live Preview**: <https://serene-demo.pages.dev>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-serene}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -744,23 +719,21 @@ git clone https://github.com/isunjn/serene.git themes/serene
 theme = "serene"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-serene'></summary>
-
-### Info{#h-info-serene}
-- **Author**: [isunjn](https://github.com/isunjn)
-- **License**: MIT
-- **Homepage**: <https://github.com/isunjn/serene>
-- **Main Live Preview**: <https://serene-demo.pages.dev>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-serene.webp"
-  dark = "./screenshots/dark-serene.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-serene.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the serene theme"
+  alt = "Light mode screenshot of serene Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-serene.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of serene Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -771,16 +744,10 @@ theme = "serene"
   url = "https://github.com/isunjn/serene"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-serene"
-  js = "const b=document.getElementById('install-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-serene"
-  js = "const b=document.getElementById('info-serene').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-serene"
+  js = "document.getElementById('info-serene').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "mabuya"
@@ -788,9 +755,17 @@ name = "Mabuya"
 desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-mabuya'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
 
-### Installation{#h-install-mabuya}
+### Info{#h-info-mabuya}
+- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/mabuya>
+- **Main Live Preview**: <https://mabuya.vercel.app/>
+- **Min Zola version**: 0.18.0
+- **Original**: <https://github.com/chesterhow/tale>
+
+### Installation{#h-installation-mabuya}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -809,24 +784,21 @@ git clone https://github.com/semanticdata/mabuya.git themes/mabuya
 theme = "mabuya"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-mabuya'></summary>
-
-### Info{#h-info-mabuya}
-- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
-- **License**: MIT
-- **Homepage**: <https://github.com/semanticdata/mabuya>
-- **Main Live Preview**: <https://mabuya.vercel.app/>
-- **Min Zola version**: 0.18.0
-- **Original**: <https://github.com/chesterhow/tale>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-mabuya.webp"
-  dark = "./screenshots/dark-mabuya.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-mabuya.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Mabuya theme"
+  alt = "Light mode screenshot of Mabuya Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-mabuya.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Mabuya Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -837,16 +809,10 @@ theme = "mabuya"
   url = "https://github.com/semanticdata/mabuya"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-mabuya"
-  js = "const b=document.getElementById('install-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-mabuya"
-  js = "const b=document.getElementById('info-mabuya').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-mabuya"
+  js = "document.getElementById('info-mabuya').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "rilling_dev"
@@ -854,9 +820,16 @@ name = "rilling_dev"
 desc = "rilling.dev custom theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-rilling_dev'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-rilling_dev'></summary>
 
-### Installation{#h-install-rilling_dev}
+### Info{#h-info-rilling_dev}
+- **Author**: [F. Rilling](https://rilling.dev)
+- **License**: GPL-3.0-or-later
+- **Homepage**: <https://github.com/RillingDev/rilling.dev_theme>
+- **Main Live Preview**: <https://rilling.dev>
+- **Min Zola version**: 0.19.1
+
+### Installation{#h-installation-rilling_dev}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -875,23 +848,21 @@ git clone https://github.com/RillingDev/rilling.dev_theme.git themes/rilling_dev
 theme = "rilling_dev"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-rilling_dev'></summary>
-
-### Info{#h-info-rilling_dev}
-- **Author**: [F. Rilling](https://rilling.dev)
-- **License**: GPL-3.0-or-later
-- **Homepage**: <https://github.com/RillingDev/rilling.dev_theme>
-- **Main Live Preview**: <https://rilling.dev>
-- **Min Zola version**: 0.19.1
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-rilling_dev.webp"
-  dark = "./screenshots/dark-rilling_dev.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-rilling_dev.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the rilling_dev theme"
+  alt = "Light mode screenshot of rilling_dev Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-rilling_dev.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of rilling_dev Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -902,16 +873,10 @@ theme = "rilling_dev"
   url = "https://github.com/RillingDev/rilling.dev_theme"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-rilling_dev"
-  js = "const b=document.getElementById('install-rilling_dev').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-rilling_dev"
-  js = "const b=document.getElementById('info-rilling_dev').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-rilling_dev"
+  js = "document.getElementById('info-rilling_dev').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "abridge"
@@ -919,9 +884,16 @@ name = "abridge"
 desc = "A fast and lightweight Zola theme using semantic html, a class-light abridge.css, and No mandatory JS."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-abridge'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
 
-### Installation{#h-install-abridge}
+### Info{#h-info-abridge}
+- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jieiku/abridge>
+- **Main Live Preview**: <https://abridge.pages.dev/>
+- **Min Zola version**: 0.19.1
+
+### Installation{#h-installation-abridge}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -940,23 +912,21 @@ git clone https://github.com/jieiku/abridge.git themes/abridge
 theme = "abridge"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-abridge'></summary>
-
-### Info{#h-info-abridge}
-- **Author**: [Jake G (jieiku)](https://github.com/jieiku/)
-- **License**: MIT
-- **Homepage**: <https://github.com/jieiku/abridge>
-- **Main Live Preview**: <https://abridge.pages.dev/>
-- **Min Zola version**: 0.19.1
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-abridge.webp"
-  dark = "./screenshots/dark-abridge.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-abridge.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the abridge theme"
+  alt = "Light mode screenshot of abridge Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-abridge.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of abridge Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -967,16 +937,10 @@ theme = "abridge"
   url = "https://github.com/jieiku/abridge"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-abridge"
-  js = "const b=document.getElementById('install-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-abridge"
-  js = "const b=document.getElementById('info-abridge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-abridge"
+  js = "document.getElementById('info-abridge').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "kita"
@@ -984,9 +948,17 @@ name = "Kita"
 desc = "Kita is a clean, elegant and simple blog theme for Zola."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-kita'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-kita'></summary>
 
-### Installation{#h-install-kita}
+### Info{#h-info-kita}
+- **Author**: [st1020](https://st1020.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/st1020/kita>
+- **Main Live Preview**: <https://kita-zola.pages.dev>
+- **Min Zola version**: 0.17.0
+- **Original**: <https://github.com/nanxiaobei/hugo-paper>
+
+### Installation{#h-installation-kita}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1005,24 +977,21 @@ git clone https://github.com/st1020/kita.git themes/kita
 theme = "kita"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-kita'></summary>
-
-### Info{#h-info-kita}
-- **Author**: [st1020](https://st1020.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/st1020/kita>
-- **Main Live Preview**: <https://kita-zola.pages.dev>
-- **Min Zola version**: 0.17.0
-- **Original**: <https://github.com/nanxiaobei/hugo-paper>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-kita.webp"
-  dark = "./screenshots/dark-kita.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-kita.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Kita theme"
+  alt = "Light mode screenshot of Kita Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-kita.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Kita Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1033,16 +1002,10 @@ theme = "kita"
   url = "https://github.com/st1020/kita"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-kita"
-  js = "const b=document.getElementById('install-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-kita"
-  js = "const b=document.getElementById('info-kita').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-kita"
+  js = "document.getElementById('info-kita').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "papermod_2"
@@ -1050,9 +1013,17 @@ name = "PaperMod"
 desc = "A fast, clean, responsive theme ported to Zola."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-papermod_2'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod_2'></summary>
 
-### Installation{#h-install-papermod_2}
+### Info{#h-info-papermod_2}
+- **Author**: [cydave](https://github.com/cydave)
+- **License**: MIT
+- **Homepage**: <https://github.com/cydave/zola-theme-papermod>
+- **Main Live Preview**: <https://cydave.github.io/zola-theme-papermod/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/adityatelange/hugo-PaperMod>
+
+### Installation{#h-installation-papermod_2}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1071,24 +1042,21 @@ git clone https://github.com/dawnandrew100/zola-theme-papermod-2.git themes/pape
 theme = "papermod_2"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-papermod_2'></summary>
-
-### Info{#h-info-papermod_2}
-- **Author**: [cydave](https://github.com/cydave)
-- **License**: MIT
-- **Homepage**: <https://github.com/cydave/zola-theme-papermod>
-- **Main Live Preview**: <https://cydave.github.io/zola-theme-papermod/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/adityatelange/hugo-PaperMod>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-papermod_2.webp"
-  dark = "./screenshots/dark-papermod_2.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-papermod_2.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the PaperMod theme"
+  alt = "Light mode screenshot of PaperMod Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-papermod_2.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of PaperMod Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1099,16 +1067,10 @@ theme = "papermod_2"
   url = "https://github.com/dawnandrew100/zola-theme-papermod-2"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-papermod_2"
-  js = "const b=document.getElementById('install-papermod_2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-papermod_2"
-  js = "const b=document.getElementById('info-papermod_2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-papermod_2"
+  js = "document.getElementById('info-papermod_2').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "cela"
@@ -1116,9 +1078,14 @@ name = "cela"
 desc = "A modern, clean Zola theme for personal blogs."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-cela'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cela'></summary>
 
-### Installation{#h-install-cela}
+### Info{#h-info-cela}
+- **License**: MIT
+- **Homepage**: <https://github.com/edwardzcn-decade/cela>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-cela}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1137,21 +1104,14 @@ git clone https://github.com/edwardzcn-decade/cela.git themes/cela
 theme = "cela"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-cela'></summary>
-
-### Info{#h-info-cela}
-- **License**: MIT
-- **Homepage**: <https://github.com/edwardzcn-decade/cela>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-cela.webp"
-  dark = "./screenshots/dark-cela.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-cela.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the cela theme"
+  alt = "Light mode screenshot of cela Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1162,16 +1122,10 @@ theme = "cela"
   url = "https://github.com/edwardzcn-decade/cela"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-cela"
-  js = "const b=document.getElementById('install-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-cela"
-  js = "const b=document.getElementById('info-cela').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-cela"
+  js = "document.getElementById('info-cela').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "tukan"
@@ -1179,9 +1133,17 @@ name = "Tukan"
 desc = "Inspired from Toucan theme"
 tags = [ "Blog", "Multilingual" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-tukan'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tukan'></summary>
 
-### Installation{#h-install-tukan}
+### Info{#h-info-tukan}
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: AGPL
+- **Homepage**: <https://codeberg.org/salif/tukan>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/tukan/>
+- **Min Zola version**: 0.19.0
+- **Original**: <https://git.42l.fr/HugoTrentesaux/toucan>
+
+### Installation{#h-installation-tukan}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1200,24 +1162,14 @@ git clone https://codeberg.org/salif/tukan.git themes/tukan
 theme = "tukan"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-tukan'></summary>
-
-### Info{#h-info-tukan}
-- **Author**: [Salif Mehmed](https://salif.eu)
-- **License**: AGPL
-- **Homepage**: <https://codeberg.org/salif/tukan>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/tukan/>
-- **Min Zola version**: 0.19.0
-- **Original**: <https://git.42l.fr/HugoTrentesaux/toucan>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-tukan.webp"
-  dark = "./screenshots/dark-tukan.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-tukan.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Tukan theme"
+  alt = "Light mode screenshot of Tukan Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1228,16 +1180,10 @@ theme = "tukan"
   url = "https://codeberg.org/salif/tukan"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-tukan"
-  js = "const b=document.getElementById('install-tukan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-tukan"
-  js = "const b=document.getElementById('info-tukan').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-tukan"
+  js = "document.getElementById('info-tukan').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "jiufen"
@@ -1245,9 +1191,16 @@ name = "jiufen"
 desc = "The ‘jiufen’ theme is a theme that references the W3.CSS Template and incorporates ZOLA-related features."
 tags = [ "Blog", "Responsive", "Search" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-jiufen'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-jiufen'></summary>
 
-### Installation{#h-install-jiufen}
+### Info{#h-info-jiufen}
+- **Author**: [Saint Huang](https://github.com/4yuinfo)
+- **License**: MIT
+- **Homepage**: <https://github.com/4yuinfo/zola-theme_jiufen>
+- **Main Live Preview**: <https://4yuinfo.github.io/zola-theme_jiufen/>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-jiufen}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1266,23 +1219,14 @@ git clone https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
 theme = "jiufen"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-jiufen'></summary>
-
-### Info{#h-info-jiufen}
-- **Author**: [Saint Huang](https://github.com/4yuinfo)
-- **License**: MIT
-- **Homepage**: <https://github.com/4yuinfo/zola-theme_jiufen>
-- **Main Live Preview**: <https://4yuinfo.github.io/zola-theme_jiufen/>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-jiufen.webp"
-  dark = "./screenshots/dark-jiufen.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-jiufen.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the jiufen theme"
+  alt = "Light mode screenshot of jiufen Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1293,16 +1237,10 @@ theme = "jiufen"
   url = "https://github.com/4yuinfo/zola-theme_jiufen"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-jiufen"
-  js = "const b=document.getElementById('install-jiufen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-jiufen"
-  js = "const b=document.getElementById('info-jiufen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-jiufen"
+  js = "document.getElementById('info-jiufen').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "researchlab"
@@ -1310,9 +1248,16 @@ name = "researchlab"
 desc = "A fast, lightweight, and modern Zola theme with two-languages support for building research laboratories website"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-researchlab'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
 
-### Installation{#h-install-researchlab}
+### Info{#h-info-researchlab}
+- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/plaublin/researchlab>
+- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
+- **Min Zola version**: 0.19.2
+
+### Installation{#h-installation-researchlab}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1331,23 +1276,14 @@ git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
 theme = "researchlab"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-researchlab'></summary>
-
-### Info{#h-info-researchlab}
-- **Author**: [Pierre Louis Aublin](https://codeberg.org/plaublin)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/plaublin/researchlab>
-- **Main Live Preview**: <https://plaublin.codeberg.page/researchlab/@pages>
-- **Min Zola version**: 0.19.2
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-researchlab.webp"
-  dark = "./screenshots/dark-researchlab.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-researchlab.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the researchlab theme"
+  alt = "Light mode screenshot of researchlab Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1358,16 +1294,10 @@ theme = "researchlab"
   url = "https://codeberg.org/plaublin/researchlab"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-researchlab"
-  js = "const b=document.getElementById('install-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-researchlab"
-  js = "const b=document.getElementById('info-researchlab').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-researchlab"
+  js = "document.getElementById('info-researchlab').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "vonge"
@@ -1375,9 +1305,17 @@ name = "Vonge"
 desc = "Vonge is a Personal portfolio/blog site template"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-vonge'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-vonge'></summary>
 
-### Installation{#h-install-vonge}
+### Info{#h-info-vonge}
+- **Author**: [Pascal Berrang](https://pascal-berrang.de)
+- **License**: MIT
+- **Homepage**: <https://github.com/paberr/vonge>
+- **Main Live Preview**: <https://paberr.github.io/vonge-zola-theme/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/CloudCannon/vonge-hugo-bookshop-template>
+
+### Installation{#h-installation-vonge}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1396,24 +1334,14 @@ git clone https://github.com/paberr/vonge-zola-theme.git themes/vonge
 theme = "vonge"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-vonge'></summary>
-
-### Info{#h-info-vonge}
-- **Author**: [Pascal Berrang](https://pascal-berrang.de)
-- **License**: MIT
-- **Homepage**: <https://github.com/paberr/vonge>
-- **Main Live Preview**: <https://paberr.github.io/vonge-zola-theme/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/CloudCannon/vonge-hugo-bookshop-template>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-vonge.webp"
-  dark = "./screenshots/dark-vonge.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-vonge.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Vonge theme"
+  alt = "Light mode screenshot of Vonge Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1424,16 +1352,10 @@ theme = "vonge"
   url = "https://github.com/paberr/vonge-zola-theme"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-vonge"
-  js = "const b=document.getElementById('install-vonge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-vonge"
-  js = "const b=document.getElementById('info-vonge').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-vonge"
+  js = "document.getElementById('info-vonge').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "devnzt"
@@ -1441,9 +1363,15 @@ name = "devnzt"
 desc = "A simple zola theme for personal use."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-devnzt'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-devnzt'></summary>
 
-### Installation{#h-install-devnzt}
+### Info{#h-info-devnzt}
+- **Author**: [devendrn](https://devendrn.github.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/devendrn/devnzt/>
+- **Min Zola version**: 0.18.0
+
+### Installation{#h-installation-devnzt}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1462,22 +1390,21 @@ git clone https://github.com/devendrn/devnzt.git themes/devnzt
 theme = "devnzt"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-devnzt'></summary>
-
-### Info{#h-info-devnzt}
-- **Author**: [devendrn](https://devendrn.github.io/)
-- **License**: MIT
-- **Homepage**: <https://github.com/devendrn/devnzt/>
-- **Min Zola version**: 0.18.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-devnzt.webp"
-  dark = "./screenshots/dark-devnzt.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-devnzt.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the devnzt theme"
+  alt = "Light mode screenshot of devnzt Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-devnzt.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of devnzt Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1488,16 +1415,10 @@ theme = "devnzt"
   url = "https://github.com/devendrn/devnzt"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-devnzt"
-  js = "const b=document.getElementById('install-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-devnzt"
-  js = "const b=document.getElementById('info-devnzt').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-devnzt"
+  js = "document.getElementById('info-devnzt').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "academic-paper"
@@ -1505,9 +1426,16 @@ name = "Academic Paper"
 desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-paper'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
 
-### Installation{#h-install-academic-paper}
+### Info{#h-info-academic-paper}
+- **Author**: [Alexander Terenin](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-paper>
+- **Main Live Preview**: <https://aterenin.github.io/academic-paper>
+- **Min Zola version**: 0.18.0
+
+### Installation{#h-installation-academic-paper}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1526,23 +1454,21 @@ git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
 theme = "academic-paper"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-paper'></summary>
-
-### Info{#h-info-academic-paper}
-- **Author**: [Alexander Terenin](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-paper>
-- **Main Live Preview**: <https://aterenin.github.io/academic-paper>
-- **Min Zola version**: 0.18.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-academic-paper.webp"
-  dark = "./screenshots/dark-academic-paper.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-academic-paper.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Academic Paper theme"
+  alt = "Light mode screenshot of Academic Paper Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-academic-paper.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Academic Paper Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1553,16 +1479,10 @@ theme = "academic-paper"
   url = "https://github.com/aterenin/academic-paper"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-academic-paper"
-  js = "const b=document.getElementById('install-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-academic-paper"
-  js = "const b=document.getElementById('info-academic-paper').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-academic-paper"
+  js = "document.getElementById('info-academic-paper').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "academic-workshop"
@@ -1570,9 +1490,16 @@ name = "Academic Workshop"
 desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-academic-workshop'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
 
-### Installation{#h-install-academic-workshop}
+### Info{#h-info-academic-workshop}
+- **Author**: [Alexander Terein](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-workshop>
+- **Main Live Preview**: <https://aterenin.github.io/academic-workshop>
+- **Min Zola version**: 0.18.0
+
+### Installation{#h-installation-academic-workshop}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1591,23 +1518,21 @@ git clone https://github.com/aterenin/academic-workshop.git themes/academic-work
 theme = "academic-workshop"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-academic-workshop'></summary>
-
-### Info{#h-info-academic-workshop}
-- **Author**: [Alexander Terein](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-workshop>
-- **Main Live Preview**: <https://aterenin.github.io/academic-workshop>
-- **Min Zola version**: 0.18.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-academic-workshop.webp"
-  dark = "./screenshots/dark-academic-workshop.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-academic-workshop.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Academic Workshop theme"
+  alt = "Light mode screenshot of Academic Workshop Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-academic-workshop.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Academic Workshop Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1618,16 +1543,10 @@ theme = "academic-workshop"
   url = "https://github.com/aterenin/academic-workshop"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-academic-workshop"
-  js = "const b=document.getElementById('install-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-academic-workshop"
-  js = "const b=document.getElementById('info-academic-workshop').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-academic-workshop"
+  js = "document.getElementById('info-academic-workshop').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "noobping"
@@ -1635,9 +1554,15 @@ name = "noobping"
 desc = "A minimalistic theme for Zola static site generator. It uses the file names as titles and the folder for the menu structure. The theme is designed to be simple and easy to use, with a focus on content."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-noobping'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-noobping'></summary>
 
-### Installation{#h-install-noobping}
+### Info{#h-info-noobping}
+- **Author**: [Nick](https://noobping.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/noobping/zola-theme>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-noobping}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1656,22 +1581,21 @@ git clone https://github.com/noobping/zola-theme.git themes/noobping
 theme = "noobping"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-noobping'></summary>
-
-### Info{#h-info-noobping}
-- **Author**: [Nick](https://noobping.dev)
-- **License**: MIT
-- **Homepage**: <https://github.com/noobping/zola-theme>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-noobping.webp"
-  dark = "./screenshots/dark-noobping.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-noobping.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the noobping theme"
+  alt = "Light mode screenshot of noobping Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-noobping.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of noobping Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1682,16 +1606,10 @@ theme = "noobping"
   url = "https://github.com/noobping/zola-theme"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-noobping"
-  js = "const b=document.getElementById('install-noobping').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-noobping"
-  js = "const b=document.getElementById('info-noobping').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-noobping"
+  js = "document.getElementById('info-noobping').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "olivine"
@@ -1699,9 +1617,16 @@ name = "Olivine"
 desc = "A Zola theme for a personal knowledge base"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-olivine'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
 
-### Installation{#h-install-olivine}
+### Info{#h-info-olivine}
+- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
+- **License**: MIT
+- **Homepage**: <https://github.com/dongryul-kim/olivine>
+- **Main Live Preview**: <https://dongryul-kim.github.io/olivine/>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-olivine}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1720,23 +1645,21 @@ git clone https://github.com/dongryul-kim/olivine.git themes/olivine
 theme = "olivine"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-olivine'></summary>
-
-### Info{#h-info-olivine}
-- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
-- **License**: MIT
-- **Homepage**: <https://github.com/dongryul-kim/olivine>
-- **Main Live Preview**: <https://dongryul-kim.github.io/olivine/>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-olivine.webp"
-  dark = "./screenshots/dark-olivine.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-olivine.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Olivine theme"
+  alt = "Light mode screenshot of Olivine Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-olivine.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Olivine Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1747,16 +1670,10 @@ theme = "olivine"
   url = "https://github.com/dongryul-kim/olivine"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-olivine"
-  js = "const b=document.getElementById('install-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-olivine"
-  js = "const b=document.getElementById('info-olivine').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-olivine"
+  js = "document.getElementById('info-olivine').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "landing-grid"
@@ -1764,9 +1681,16 @@ name = "landing-grid"
 desc = "A professional, responsive landing grid theme for Zola"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-landing-grid'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-landing-grid'></summary>
 
-### Installation{#h-install-landing-grid}
+### Info{#h-info-landing-grid}
+- **Author**: [Landing Grid Team](https://github.com/fastup-one)
+- **License**: MIT
+- **Homepage**: <https://github.com/fastup-one/landing-grid-zola>
+- **Main Live Preview**: <https://yourdemo.com/landing-grid>
+- **Min Zola version**: 0.17.0
+
+### Installation{#h-installation-landing-grid}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1785,23 +1709,14 @@ git clone https://github.com/fastup-one/landing-grid-zola.git themes/landing-gri
 theme = "landing-grid"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-landing-grid'></summary>
-
-### Info{#h-info-landing-grid}
-- **Author**: [Landing Grid Team](https://github.com/fastup-one)
-- **License**: MIT
-- **Homepage**: <https://github.com/fastup-one/landing-grid-zola>
-- **Main Live Preview**: <https://yourdemo.com/landing-grid>
-- **Min Zola version**: 0.17.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-landing-grid.webp"
-  dark = "./screenshots/dark-landing-grid.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-landing-grid.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the landing-grid theme"
+  alt = "Dark mode screenshot of landing-grid Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1812,16 +1727,10 @@ theme = "landing-grid"
   url = "https://github.com/fastup-one/landing-grid-zola"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-landing-grid"
-  js = "const b=document.getElementById('install-landing-grid').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-landing-grid"
-  js = "const b=document.getElementById('info-landing-grid').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-landing-grid"
+  js = "document.getElementById('info-landing-grid').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "BelTree"
@@ -1829,9 +1738,16 @@ name = "BelTree"
 desc = "A clean and elegant Linktree alternative that offers customizable links and a user-friendly design"
 tags = [ "minimal", "linktree" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelTree'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelTree'></summary>
 
-### Installation{#h-install-BelTree}
+### Info{#h-info-BelTree}
+- **Author**: [cx48](https://cx48.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/cx48/BelTree>
+- **Main Live Preview**: <https://cx48.github.io/BelTree>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-BelTree}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1850,23 +1766,14 @@ git clone https://github.com/cx48/BelTree.git themes/BelTree
 theme = "BelTree"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelTree'></summary>
-
-### Info{#h-info-BelTree}
-- **Author**: [cx48](https://cx48.dev)
-- **License**: MIT
-- **Homepage**: <https://github.com/cx48/BelTree>
-- **Main Live Preview**: <https://cx48.github.io/BelTree>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-BelTree.webp"
-  dark = "./screenshots/dark-BelTree.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-BelTree.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the BelTree theme"
+  alt = "Dark mode screenshot of BelTree Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1877,16 +1784,10 @@ theme = "BelTree"
   url = "https://github.com/cx48/BelTree"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-BelTree"
-  js = "const b=document.getElementById('install-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-BelTree"
-  js = "const b=document.getElementById('info-BelTree').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-BelTree"
+  js = "document.getElementById('info-BelTree').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "BelResume"
@@ -1894,9 +1795,16 @@ name = "BelResume"
 desc = "A beautiful, modern, and minimal single-page resume site"
 tags = [ "minimal", "resume" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-BelResume'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelResume'></summary>
 
-### Installation{#h-install-BelResume}
+### Info{#h-info-BelResume}
+- **Author**: [cx48](https://cx48.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/cx48/BelResume>
+- **Main Live Preview**: <https://cx48.github.io/BelResume/>
+- **Min Zola version**: 0.20.0
+
+### Installation{#h-installation-BelResume}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1915,23 +1823,14 @@ git clone https://github.com/cx48/BelResume.git themes/BelResume
 theme = "BelResume"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-BelResume'></summary>
-
-### Info{#h-info-BelResume}
-- **Author**: [cx48](https://cx48.dev)
-- **License**: MIT
-- **Homepage**: <https://github.com/cx48/BelResume>
-- **Main Live Preview**: <https://cx48.github.io/BelResume/>
-- **Min Zola version**: 0.20.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-BelResume.webp"
-  dark = "./screenshots/dark-BelResume.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-BelResume.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the BelResume theme"
+  alt = "Light mode screenshot of BelResume Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -1942,16 +1841,10 @@ theme = "BelResume"
   url = "https://github.com/cx48/BelResume"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-BelResume"
-  js = "const b=document.getElementById('install-BelResume').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-BelResume"
-  js = "const b=document.getElementById('info-BelResume').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-BelResume"
+  js = "document.getElementById('info-BelResume').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "peritus"
@@ -1971,9 +1864,17 @@ tags = [
   "peritus"
 ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-peritus'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-peritus'></summary>
 
-### Installation{#h-install-peritus}
+### Info{#h-info-peritus}
+- **Author**: [Jonathan Skaza](https://jskaza.github.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/jskaza/peritus>
+- **Main Live Preview**: <https://jskaza.github.io/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/HugoBlox/theme-academic-cv>
+
+### Installation{#h-installation-peritus}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1992,24 +1893,14 @@ git clone https://github.com/jskaza/peritus.git themes/peritus
 theme = "peritus"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-peritus'></summary>
-
-### Info{#h-info-peritus}
-- **Author**: [Jonathan Skaza](https://jskaza.github.io/)
-- **License**: MIT
-- **Homepage**: <https://github.com/jskaza/peritus>
-- **Main Live Preview**: <https://jskaza.github.io/>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/HugoBlox/theme-academic-cv>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-peritus.webp"
-  dark = "./screenshots/dark-peritus.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-peritus.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the peritus theme"
+  alt = "Light mode screenshot of peritus Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2020,16 +1911,10 @@ theme = "peritus"
   url = "https://github.com/jskaza/peritus"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-peritus"
-  js = "const b=document.getElementById('install-peritus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-peritus"
-  js = "const b=document.getElementById('info-peritus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-peritus"
+  js = "document.getElementById('info-peritus').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zola-futu"
@@ -2037,9 +1922,16 @@ name = "futu"
 desc = "Futu Theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-futu'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-futu'></summary>
 
-### Installation{#h-install-zola-futu}
+### Info{#h-info-zola-futu}
+- **Author**: [inhzus](https://inhzus.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/inhzus/zola-futu/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/yuanji-dev/futu>
+
+### Installation{#h-installation-zola-futu}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2058,23 +1950,14 @@ git clone https://github.com/inhzus/zola-futu.git themes/zola-futu
 theme = "zola-futu"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-futu'></summary>
-
-### Info{#h-info-zola-futu}
-- **Author**: [inhzus](https://inhzus.io/)
-- **License**: MIT
-- **Homepage**: <https://github.com/inhzus/zola-futu/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/yuanji-dev/futu>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-zola-futu.webp"
-  dark = "./screenshots/dark-zola-futu.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-futu.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the futu theme"
+  alt = "Light mode screenshot of futu Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2085,16 +1968,10 @@ theme = "zola-futu"
   url = "https://github.com/inhzus/zola-futu"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-zola-futu"
-  js = "const b=document.getElementById('install-zola-futu').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-zola-futu"
-  js = "const b=document.getElementById('info-zola-futu').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-zola-futu"
+  js = "document.getElementById('info-zola-futu').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "book"
@@ -2102,9 +1979,16 @@ name = "book"
 desc = "A book theme inspired from GitBook/mdBook"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-book'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-book'></summary>
 
-### Installation{#h-install-book}
+### Info{#h-info-book}
+- **Author**: [Vincent Prouillet](https://www.vincentprouillet.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/getzola/book>
+- **Main Live Preview**: <https://getzola.github.io/book/>
+- **Min Zola version**: 0.17.0
+
+### Installation{#h-installation-book}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2123,23 +2007,14 @@ git clone https://github.com/getzola/book.git themes/book
 theme = "book"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-book'></summary>
-
-### Info{#h-info-book}
-- **Author**: [Vincent Prouillet](https://www.vincentprouillet.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/getzola/book>
-- **Main Live Preview**: <https://getzola.github.io/book/>
-- **Min Zola version**: 0.17.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-book.webp"
-  dark = "./screenshots/dark-book.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-book.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the book theme"
+  alt = "Light mode screenshot of book Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2150,16 +2025,10 @@ theme = "book"
   url = "https://github.com/getzola/book"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-book"
-  js = "const b=document.getElementById('install-book').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-book"
-  js = "const b=document.getElementById('info-book').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-book"
+  js = "document.getElementById('info-book').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zola-minimal"
@@ -2167,9 +2036,17 @@ name = "Minimal"
 desc = "📚 Minimal is a Zola port of the Jekyll theme with the same name."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zola-minimal'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-minimal'></summary>
 
-### Installation{#h-install-zola-minimal}
+### Info{#h-info-zola-minimal}
+- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/zola-minimal/>
+- **Main Live Preview**: <https://zola-minimal.vercel.app/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/pages-themes/minimal>
+
+### Installation{#h-installation-zola-minimal}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2188,24 +2065,14 @@ git clone https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
 theme = "zola-minimal"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zola-minimal'></summary>
-
-### Info{#h-info-zola-minimal}
-- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
-- **License**: MIT
-- **Homepage**: <https://github.com/semanticdata/zola-minimal/>
-- **Main Live Preview**: <https://zola-minimal.vercel.app/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/pages-themes/minimal>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-zola-minimal.webp"
-  dark = "./screenshots/dark-zola-minimal.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-minimal.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Minimal theme"
+  alt = "Light mode screenshot of Minimal Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2216,16 +2083,10 @@ theme = "zola-minimal"
   url = "https://github.com/semanticdata/zola-minimal"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-zola-minimal"
-  js = "const b=document.getElementById('install-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-zola-minimal"
-  js = "const b=document.getElementById('info-zola-minimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-zola-minimal"
+  js = "document.getElementById('info-zola-minimal').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "hook"
@@ -2233,9 +2094,16 @@ name = "Hook"
 desc = "Clean and simple personal site/blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-hook'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
 
-### Installation{#h-install-hook}
+### Info{#h-info-hook}
+- **Author**: [Koen Bolhuis](https://koen.bolhu.is)
+- **License**: MIT
+- **Homepage**: <https://github.com/InputUsername/zola-hook>
+- **Main Live Preview**: <https://inputusername.github.io/zola-hook/>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-hook}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2254,23 +2122,21 @@ git clone https://github.com/InputUsername/zola-hook.git themes/hook
 theme = "hook"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-hook'></summary>
-
-### Info{#h-info-hook}
-- **Author**: [Koen Bolhuis](https://koen.bolhu.is)
-- **License**: MIT
-- **Homepage**: <https://github.com/InputUsername/zola-hook>
-- **Main Live Preview**: <https://inputusername.github.io/zola-hook/>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-hook.webp"
-  dark = "./screenshots/dark-hook.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-hook.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Hook theme"
+  alt = "Light mode screenshot of Hook Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-hook.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Hook Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2281,16 +2147,10 @@ theme = "hook"
   url = "https://github.com/InputUsername/zola-hook"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-hook"
-  js = "const b=document.getElementById('install-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-hook"
-  js = "const b=document.getElementById('info-hook').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-hook"
+  js = "document.getElementById('info-hook').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "halcyon"
@@ -2298,9 +2158,15 @@ name = "halcyon"
 desc = "Clean and simple personal site/blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-halcyon'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-halcyon'></summary>
 
-### Installation{#h-install-halcyon}
+### Info{#h-info-halcyon}
+- **Author**: [M0ddr](https://github.com/m0ddr)
+- **License**: MIT
+- **Homepage**: <https://github.com/m0ddr/halcyon>
+- **Min Zola version**: 0.1.0
+
+### Installation{#h-installation-halcyon}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2319,22 +2185,21 @@ git clone https://github.com/m0ddr/halcyon.git themes/halcyon
 theme = "halcyon"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-halcyon'></summary>
-
-### Info{#h-info-halcyon}
-- **Author**: [M0ddr](https://github.com/m0ddr)
-- **License**: MIT
-- **Homepage**: <https://github.com/m0ddr/halcyon>
-- **Min Zola version**: 0.1.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-halcyon.webp"
-  dark = "./screenshots/dark-halcyon.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-halcyon.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the halcyon theme"
+  alt = "Light mode screenshot of halcyon Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-halcyon.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of halcyon Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2345,16 +2210,10 @@ theme = "halcyon"
   url = "https://github.com/m0ddr/halcyon"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-halcyon"
-  js = "const b=document.getElementById('install-halcyon').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-halcyon"
-  js = "const b=document.getElementById('info-halcyon').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-halcyon"
+  js = "document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "ski"
@@ -2362,9 +2221,16 @@ name = "ski"
 desc = "A minimalist Zola theme inspired by Swiss design principles."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-ski'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
 
-### Installation{#h-install-ski}
+### Info{#h-info-ski}
+- **Author**: [Bedir Ekim](https://un1970ix.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/un1970ix/ski>
+- **Main Live Preview**: <https://ski.un1970ix.com>
+- **Min Zola version**: 0.19.2
+
+### Installation{#h-installation-ski}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2383,23 +2249,21 @@ git clone https://github.com/un1970ix/ski.git themes/ski
 theme = "ski"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-ski'></summary>
-
-### Info{#h-info-ski}
-- **Author**: [Bedir Ekim](https://un1970ix.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/un1970ix/ski>
-- **Main Live Preview**: <https://ski.un1970ix.com>
-- **Min Zola version**: 0.19.2
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-ski.webp"
-  dark = "./screenshots/dark-ski.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-ski.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the ski theme"
+  alt = "Light mode screenshot of ski Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-ski.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of ski Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2410,16 +2274,10 @@ theme = "ski"
   url = "https://github.com/un1970ix/ski"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-ski"
-  js = "const b=document.getElementById('install-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-ski"
-  js = "const b=document.getElementById('info-ski').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-ski"
+  js = "document.getElementById('info-ski').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "Seje2"
@@ -2427,9 +2285,17 @@ name = "Seje2"
 desc = "A beautiful zola theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-Seje2'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-Seje2'></summary>
 
-### Installation{#h-install-Seje2}
+### Info{#h-info-Seje2}
+- **Author**: [Mag Mell](https://blog.utopiosphere.net)
+- **License**: MIT
+- **Homepage**: <https://github.com/eatradish/Seje2>
+- **Main Live Preview**: <https://blog.miraclemilk.me/Seje2>
+- **Min Zola version**: 0.15.0
+- **Original**: <https://www.github.com/mdo/hyde>
+
+### Installation{#h-installation-Seje2}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2448,24 +2314,21 @@ git clone https://github.com/eatradish/Seje2.git themes/Seje2
 theme = "Seje2"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-Seje2'></summary>
-
-### Info{#h-info-Seje2}
-- **Author**: [Mag Mell](https://blog.utopiosphere.net)
-- **License**: MIT
-- **Homepage**: <https://github.com/eatradish/Seje2>
-- **Main Live Preview**: <https://blog.miraclemilk.me/Seje2>
-- **Min Zola version**: 0.15.0
-- **Original**: <https://www.github.com/mdo/hyde>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-Seje2.webp"
-  dark = "./screenshots/dark-Seje2.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-Seje2.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Seje2 theme"
+  alt = "Light mode screenshot of Seje2 Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-Seje2.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Seje2 Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2476,16 +2339,10 @@ theme = "Seje2"
   url = "https://github.com/eatradish/Seje2"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-Seje2"
-  js = "const b=document.getElementById('install-Seje2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-Seje2"
-  js = "const b=document.getElementById('info-Seje2').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-Seje2"
+  js = "document.getElementById('info-Seje2').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "parchment"
@@ -2493,9 +2350,16 @@ name = "parchment"
 desc = "Parchemnt theme, by jasonfry.co.uk"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-parchment'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-parchment'></summary>
 
-### Installation{#h-install-parchment}
+### Info{#h-info-parchment}
+- **Author**: [Jason Fry](https://jasonfry.co.uk)
+- **License**: MIT
+- **Homepage**: <https://github.com/json/parchment>
+- **Main Live Preview**: <https://whispers-on-parchment.jasonfry.co.uk>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-parchment}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2514,23 +2378,21 @@ git clone https://github.com/jsonfry/parchment.git themes/parchment
 theme = "parchment"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-parchment'></summary>
-
-### Info{#h-info-parchment}
-- **Author**: [Jason Fry](https://jasonfry.co.uk)
-- **License**: MIT
-- **Homepage**: <https://github.com/json/parchment>
-- **Main Live Preview**: <https://whispers-on-parchment.jasonfry.co.uk>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-parchment.webp"
-  dark = "./screenshots/dark-parchment.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-parchment.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the parchment theme"
+  alt = "Light mode screenshot of parchment Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-parchment.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of parchment Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2541,16 +2403,10 @@ theme = "parchment"
   url = "https://github.com/jsonfry/parchment"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-parchment"
-  js = "const b=document.getElementById('install-parchment').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-parchment"
-  js = "const b=document.getElementById('info-parchment').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-parchment"
+  js = "document.getElementById('info-parchment').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "bearplus"
@@ -2558,9 +2414,17 @@ name = "Bear+"
 desc = "Minimalistic yet a bit featureful theme for the Zola static site generator."
 tags = [ "Blog" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-bearplus'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
 
-### Installation{#h-install-bearplus}
+### Info{#h-info-bearplus}
+- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
+- **License**: MIT
+- **Homepage**: <https://github.com/salif/bearplus>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/bearplus/>
+- **Min Zola version**: 0.17.2
+- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
+
+### Installation{#h-installation-bearplus}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2579,24 +2443,21 @@ git clone https://github.com/salif/bearplus.git themes/bearplus
 theme = "bearplus"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-bearplus'></summary>
-
-### Info{#h-info-bearplus}
-- **Author**: [Marçal Comajoan Cara](https://marçal.cc)
-- **License**: MIT
-- **Homepage**: <https://github.com/salif/bearplus>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/bearplus/>
-- **Min Zola version**: 0.17.2
-- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-bearplus.webp"
-  dark = "./screenshots/dark-bearplus.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-bearplus.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Bear+ theme"
+  alt = "Light mode screenshot of Bear+ Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-bearplus.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Bear+ Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2607,16 +2468,10 @@ theme = "bearplus"
   url = "https://github.com/salif/bearplus"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-bearplus"
-  js = "const b=document.getElementById('install-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-bearplus"
-  js = "const b=document.getElementById('info-bearplus').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-bearplus"
+  js = "document.getElementById('info-bearplus').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "terminimal"
@@ -2624,9 +2479,17 @@ name = "terminimal"
 desc = "A simple, minimal retro theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-terminimal'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
 
-### Installation{#h-install-terminimal}
+### Info{#h-info-terminimal}
+- **Author**: [Paweł Romanowski](https://github.com/pawroman)
+- **License**: MIT
+- **Homepage**: <https://github.com/pawroman/zola-theme-terminimal>
+- **Main Live Preview**: <https://pawroman.github.io/zola-theme-terminimal/>
+- **Min Zola version**: 0.11.0
+- **Original**: <https://github.com/panr/hugo-theme-terminal>
+
+### Installation{#h-installation-terminimal}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2645,24 +2508,14 @@ git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminima
 theme = "terminimal"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-terminimal'></summary>
-
-### Info{#h-info-terminimal}
-- **Author**: [Paweł Romanowski](https://github.com/pawroman)
-- **License**: MIT
-- **Homepage**: <https://github.com/pawroman/zola-theme-terminimal>
-- **Main Live Preview**: <https://pawroman.github.io/zola-theme-terminimal/>
-- **Min Zola version**: 0.11.0
-- **Original**: <https://github.com/panr/hugo-theme-terminal>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-terminimal.webp"
-  dark = "./screenshots/dark-terminimal.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-terminimal.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the terminimal theme"
+  alt = "Dark mode screenshot of terminimal Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2673,16 +2526,10 @@ theme = "terminimal"
   url = "https://github.com/pawroman/zola-theme-terminimal"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-terminimal"
-  js = "const b=document.getElementById('install-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-terminimal"
-  js = "const b=document.getElementById('info-terminimal').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-terminimal"
+  js = "document.getElementById('info-terminimal').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "dark-magic"
@@ -2690,9 +2537,16 @@ name = "dark-magic"
 desc = "Elegant dark theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-dark-magic'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-dark-magic'></summary>
 
-### Installation{#h-install-dark-magic}
+### Info{#h-info-dark-magic}
+- **Author**: DirectorX
+- **License**: ICS
+- **Homepage**: <https://github.com/DirectorX/dark-magic>
+- **Main Live Preview**: <https://directorx.github.io/dark-magic/>
+- **Min Zola version**: 0.1.0
+
+### Installation{#h-installation-dark-magic}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2711,23 +2565,14 @@ git clone https://github.com/DirectorX/dark-magic.git themes/dark-magic
 theme = "dark-magic"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-dark-magic'></summary>
-
-### Info{#h-info-dark-magic}
-- **Author**: DirectorX
-- **License**: ICS
-- **Homepage**: <https://github.com/DirectorX/dark-magic>
-- **Main Live Preview**: <https://directorx.github.io/dark-magic/>
-- **Min Zola version**: 0.1.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-dark-magic.webp"
-  dark = "./screenshots/dark-dark-magic.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-dark-magic.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the dark-magic theme"
+  alt = "Dark mode screenshot of dark-magic Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2738,16 +2583,10 @@ theme = "dark-magic"
   url = "https://github.com/DirectorX/dark-magic"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-dark-magic"
-  js = "const b=document.getElementById('install-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-dark-magic"
-  js = "const b=document.getElementById('info-dark-magic').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-dark-magic"
+  js = "document.getElementById('info-dark-magic').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "DogFood"
@@ -2755,9 +2594,15 @@ name = "DogFood"
 desc = "A blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-DogFood'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
 
-### Installation{#h-install-DogFood}
+### Info{#h-info-DogFood}
+- **Author**: [CSUwangj](https://CSUwangj.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/CSUwangj/DogFood>
+- **Min Zola version**: 0.4.0
+
+### Installation{#h-installation-DogFood}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2776,22 +2621,14 @@ git clone https://github.com/CSUwangj/DogFood.git themes/DogFood
 theme = "DogFood"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-DogFood'></summary>
-
-### Info{#h-info-DogFood}
-- **Author**: [CSUwangj](https://CSUwangj.github.io)
-- **License**: MIT
-- **Homepage**: <https://github.com/CSUwangj/DogFood>
-- **Min Zola version**: 0.4.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-DogFood.webp"
-  dark = "./screenshots/dark-DogFood.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-DogFood.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the DogFood theme"
+  alt = "Dark mode screenshot of DogFood Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2802,16 +2639,10 @@ theme = "DogFood"
   url = "https://github.com/CSUwangj/DogFood"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-DogFood"
-  js = "const b=document.getElementById('install-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-DogFood"
-  js = "const b=document.getElementById('info-DogFood').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-DogFood"
+  js = "document.getElementById('info-DogFood').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "oceanic-zen"
@@ -2819,9 +2650,16 @@ name = "Oceanic Zen"
 desc = "Minimalistic blog theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-oceanic-zen'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
 
-### Installation{#h-install-oceanic-zen}
+### Info{#h-info-oceanic-zen}
+- **Author**: [Barlog M.](https://barlog.li)
+- **License**: MIT
+- **Homepage**: <https://github.com/barlog-m/oceanic-zen>
+- **Main Live Preview**: <https://oceanic-zen.netlify.app>
+- **Min Zola version**: 0.12.0
+
+### Installation{#h-installation-oceanic-zen}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2840,23 +2678,14 @@ git clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
 theme = "oceanic-zen"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-oceanic-zen'></summary>
-
-### Info{#h-info-oceanic-zen}
-- **Author**: [Barlog M.](https://barlog.li)
-- **License**: MIT
-- **Homepage**: <https://github.com/barlog-m/oceanic-zen>
-- **Main Live Preview**: <https://oceanic-zen.netlify.app>
-- **Min Zola version**: 0.12.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-oceanic-zen.webp"
-  dark = "./screenshots/dark-oceanic-zen.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-oceanic-zen.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Oceanic Zen theme"
+  alt = "Dark mode screenshot of Oceanic Zen Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2867,16 +2696,10 @@ theme = "oceanic-zen"
   url = "https://github.com/barlog-m/oceanic-zen"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-oceanic-zen"
-  js = "const b=document.getElementById('install-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-oceanic-zen"
-  js = "const b=document.getElementById('info-oceanic-zen').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-oceanic-zen"
+  js = "document.getElementById('info-oceanic-zen').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zluinav"
@@ -2893,9 +2716,16 @@ tags = [
   "SEO"
 ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-zluinav'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
 
-### Installation{#h-install-zluinav}
+### Info{#h-info-zluinav}
+- **Author**: [Harry Min Khant](https://harrymkt.github.io)
+- **License**: MIT
+- **Homepage**: <https://github.com/harrymkt/zluinav>
+- **Main Live Preview**: <https://harrymkt.github.io/zluinav>
+- **Min Zola version**: 0.19.2
+
+### Installation{#h-installation-zluinav}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2914,23 +2744,14 @@ git clone https://github.com/harrymkt/zluinav.git themes/zluinav
 theme = "zluinav"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-zluinav'></summary>
-
-### Info{#h-info-zluinav}
-- **Author**: [Harry Min Khant](https://harrymkt.github.io)
-- **License**: MIT
-- **Homepage**: <https://github.com/harrymkt/zluinav>
-- **Main Live Preview**: <https://harrymkt.github.io/zluinav>
-- **Min Zola version**: 0.19.2
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-zluinav.webp"
-  dark = "./screenshots/dark-zluinav.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-zluinav.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the UI Navigation theme"
+  alt = "Light mode screenshot of UI Navigation Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -2941,16 +2762,10 @@ theme = "zluinav"
   url = "https://github.com/harrymkt/zluinav"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-zluinav"
-  js = "const b=document.getElementById('install-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-zluinav"
-  js = "const b=document.getElementById('info-zluinav').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-zluinav"
+  js = "document.getElementById('info-zluinav').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "sandbox"
@@ -2958,9 +2773,16 @@ name = "Sandbox"
 desc = "Sandbox is a theme for Zola."
 tags = [ "Blog" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-sandbox'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
 
-### Installation{#h-install-sandbox}
+### Info{#h-info-sandbox}
+- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
+- **License**: MIT
+- **Homepage**: <https://github.com/salif/sandbox>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/sandbox/>
+- **Min Zola version**: 0.18.0
+
+### Installation{#h-installation-sandbox}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -2979,23 +2801,14 @@ git clone https://github.com/salif/sandbox.git themes/sandbox
 theme = "sandbox"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-sandbox'></summary>
-
-### Info{#h-info-sandbox}
-- **Author**: [Miguel Pimentel](https://miguelpimentel.do/)
-- **License**: MIT
-- **Homepage**: <https://github.com/salif/sandbox>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/sandbox/>
-- **Min Zola version**: 0.18.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-sandbox.webp"
-  dark = "./screenshots/dark-sandbox.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-sandbox.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Sandbox theme"
+  alt = "Light mode screenshot of Sandbox Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3006,16 +2819,10 @@ theme = "sandbox"
   url = "https://github.com/salif/sandbox"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-sandbox"
-  js = "const b=document.getElementById('install-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-sandbox"
-  js = "const b=document.getElementById('info-sandbox').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-sandbox"
+  js = "document.getElementById('info-sandbox').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "silk"
@@ -3023,9 +2830,16 @@ name = "silk"
 desc = "A modern, simple, clean blog theme for Zola."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-silk'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-silk'></summary>
 
-### Installation{#h-install-silk}
+### Info{#h-info-silk}
+- **Author**: [Denys Vuika](https://denys.dev)
+- **License**: Apache-2.0
+- **Homepage**: <https://github.com/DenysVuika/zola-silk>
+- **Min Zola version**: 0.19.0
+- **Original**: <https://github.com/lukehsiao/zola-pickles>
+
+### Installation{#h-installation-silk}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3044,23 +2858,14 @@ git clone https://github.com/DenysVuika/zola-silk.git themes/silk
 theme = "silk"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-silk'></summary>
-
-### Info{#h-info-silk}
-- **Author**: [Denys Vuika](https://denys.dev)
-- **License**: Apache-2.0
-- **Homepage**: <https://github.com/DenysVuika/zola-silk>
-- **Min Zola version**: 0.19.0
-- **Original**: <https://github.com/lukehsiao/zola-pickles>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-silk.webp"
-  dark = "./screenshots/dark-silk.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-silk.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the silk theme"
+  alt = "Light mode screenshot of silk Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3071,16 +2876,10 @@ theme = "silk"
   url = "https://github.com/DenysVuika/zola-silk"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-silk"
-  js = "const b=document.getElementById('install-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-silk"
-  js = "const b=document.getElementById('info-silk').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-silk"
+  js = "document.getElementById('info-silk').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "anatole-zola"
@@ -3088,9 +2887,17 @@ name = "anatole-zola"
 desc = "A port of farbox-theme-Anatole for zola"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-anatole-zola'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anatole-zola'></summary>
 
-### Installation{#h-install-anatole-zola}
+### Info{#h-info-anatole-zola}
+- **Author**: [longfangsong](https://github.com/longfangsong)
+- **License**: MIT
+- **Homepage**: <https://github.com/longfangsong/anatole-zola>
+- **Main Live Preview**: <https://longfangsong.github.io>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/hi-caicai/farbox-theme-Anatole>
+
+### Installation{#h-installation-anatole-zola}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3109,24 +2916,14 @@ git clone https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
 theme = "anatole-zola"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-anatole-zola'></summary>
-
-### Info{#h-info-anatole-zola}
-- **Author**: [longfangsong](https://github.com/longfangsong)
-- **License**: MIT
-- **Homepage**: <https://github.com/longfangsong/anatole-zola>
-- **Main Live Preview**: <https://longfangsong.github.io>
-- **Min Zola version**: 0.4.0
-- **Original**: <https://github.com/hi-caicai/farbox-theme-Anatole>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-anatole-zola.webp"
-  dark = "./screenshots/dark-anatole-zola.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-anatole-zola.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the anatole-zola theme"
+  alt = "Light mode screenshot of anatole-zola Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3137,16 +2934,10 @@ theme = "anatole-zola"
   url = "https://github.com/longfangsong/anatole-zola"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-anatole-zola"
-  js = "const b=document.getElementById('install-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-anatole-zola"
-  js = "const b=document.getElementById('info-anatole-zola').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-anatole-zola"
+  js = "document.getElementById('info-anatole-zola').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "lekhz"
@@ -3167,9 +2958,16 @@ tags = [
   "rss"
 ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-lekhz'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-lekhz'></summary>
 
-### Installation{#h-install-lekhz}
+### Info{#h-info-lekhz}
+- **Author**: [Rahul Tiwari](https://ba11b0y.github.io/rahul/)
+- **License**: MIT
+- **Homepage**: <https://github.com/ba11b0y/lekhz>
+- **Min Zola version**: 0.38
+- **Original**: <https://github.com/ba11b0y/lekh>
+
+### Installation{#h-installation-lekhz}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3188,23 +2986,21 @@ git clone https://github.com/ba11b0y/lekhz.git themes/lekhz
 theme = "lekhz"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-lekhz'></summary>
-
-### Info{#h-info-lekhz}
-- **Author**: [Rahul Tiwari](https://ba11b0y.github.io/rahul/)
-- **License**: MIT
-- **Homepage**: <https://github.com/ba11b0y/lekhz>
-- **Min Zola version**: 0.38
-- **Original**: <https://github.com/ba11b0y/lekh>
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-lekhz.webp"
-  dark = "./screenshots/dark-lekhz.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-lekhz.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Lekhz theme"
+  alt = "Light mode screenshot of Lekhz Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-lekhz.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Lekhz Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3215,16 +3011,10 @@ theme = "lekhz"
   url = "https://github.com/ba11b0y/lekhz"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-lekhz"
-  js = "const b=document.getElementById('install-lekhz').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-lekhz"
-  js = "const b=document.getElementById('info-lekhz').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-lekhz"
+  js = "document.getElementById('info-lekhz').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "pico"
@@ -3232,9 +3022,16 @@ name = "pico"
 desc = "Clean and minimalistic dark theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-pico'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-pico'></summary>
 
-### Installation{#h-install-pico}
+### Info{#h-info-pico}
+- **Author**: [Vitaliy Kuznetsov](https://viku.me)
+- **License**: MIT
+- **Homepage**: <https://github.com/kuznetsov17/pico>
+- **Main Live Preview**: <https://kuznetsov17.github.io/pico/>
+- **Min Zola version**: 0.18.0
+
+### Installation{#h-installation-pico}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3253,23 +3050,21 @@ git clone https://github.com/kuznetsov17/pico.git themes/pico
 theme = "pico"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-pico'></summary>
-
-### Info{#h-info-pico}
-- **Author**: [Vitaliy Kuznetsov](https://viku.me)
-- **License**: MIT
-- **Homepage**: <https://github.com/kuznetsov17/pico>
-- **Main Live Preview**: <https://kuznetsov17.github.io/pico/>
-- **Min Zola version**: 0.18.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-pico.webp"
-  dark = "./screenshots/dark-pico.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-pico.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the pico theme"
+  alt = "Light mode screenshot of pico Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-pico.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of pico Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3280,16 +3075,10 @@ theme = "pico"
   url = "https://github.com/kuznetsov17/pico"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-pico"
-  js = "const b=document.getElementById('install-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-pico"
-  js = "const b=document.getElementById('info-pico').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-pico"
+  js = "document.getElementById('info-pico').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "photography"
@@ -3297,9 +3086,15 @@ name = "photography theme"
 desc = "a theme for a photography portfolio"
 tags = [ "Blog" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-photography'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-photography'></summary>
 
-### Installation{#h-install-photography}
+### Info{#h-info-photography}
+- **Author**: [arbs09](https://arbs09.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/arbs09/photography-theme>
+- **Min Zola version**: 0.19.2
+
+### Installation{#h-installation-photography}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3318,22 +3113,14 @@ git clone https://github.com/arbs09/photography-theme.git themes/photography
 theme = "photography"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-photography'></summary>
-
-### Info{#h-info-photography}
-- **Author**: [arbs09](https://arbs09.dev)
-- **License**: MIT
-- **Homepage**: <https://github.com/arbs09/photography-theme>
-- **Min Zola version**: 0.19.2
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-photography.webp"
-  dark = "./screenshots/dark-photography.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-photography.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the photography theme theme"
+  alt = "Dark mode screenshot of photography theme Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3344,16 +3131,10 @@ theme = "photography"
   url = "https://github.com/arbs09/photography-theme"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-photography"
-  js = "const b=document.getElementById('install-photography').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-photography"
-  js = "const b=document.getElementById('info-photography').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-photography"
+  js = "document.getElementById('info-photography').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "duckling"
@@ -3361,9 +3142,16 @@ name = "Duckling"
 desc = "Feature-rich and modern theme"
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-duckling'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
 
-### Installation{#h-install-duckling}
+### Info{#h-info-duckling}
+- **Author**: [david-swift](https://david.aparoksha.dev)
+- **License**: MIT
+- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
+- **Main Live Preview**: <https://duckling.aparoksha.dev>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-duckling}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3382,23 +3170,21 @@ git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
 theme = "duckling"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-duckling'></summary>
-
-### Info{#h-info-duckling}
-- **Author**: [david-swift](https://david.aparoksha.dev)
-- **License**: MIT
-- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
-- **Main Live Preview**: <https://duckling.aparoksha.dev>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-duckling.webp"
-  dark = "./screenshots/dark-duckling.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-duckling.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Duckling theme"
+  alt = "Light mode screenshot of Duckling Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Duckling Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3409,16 +3195,10 @@ theme = "duckling"
   url = "https://git.aparoksha.dev/david-swift/duckling"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-duckling"
-  js = "const b=document.getElementById('install-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-duckling"
-  js = "const b=document.getElementById('info-duckling').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-duckling"
+  js = "document.getElementById('info-duckling').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "martinique"
@@ -3426,9 +3206,15 @@ name = "Martinique"
 desc = "A simple dark/light theme for Zola."
 tags = [ ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-martinique'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-martinique'></summary>
 
-### Installation{#h-install-martinique}
+### Info{#h-info-martinique}
+- **Author**: [Martin Larsson](https://mlarsson.se)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/martinlarsson/martinique>
+- **Min Zola version**: 0.21.0
+
+### Installation{#h-installation-martinique}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3447,22 +3233,21 @@ git clone https://codeberg.org/martinlarsson/martinique.git themes/martinique
 theme = "martinique"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-martinique'></summary>
-
-### Info{#h-info-martinique}
-- **Author**: [Martin Larsson](https://mlarsson.se)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/martinlarsson/martinique>
-- **Min Zola version**: 0.21.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-martinique.webp"
-  dark = "./screenshots/dark-martinique.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-martinique.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the Martinique theme"
+  alt = "Light mode screenshot of Martinique Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-martinique.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Martinique Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3473,16 +3258,10 @@ theme = "martinique"
   url = "https://codeberg.org/martinlarsson/martinique"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-martinique"
-  js = "const b=document.getElementById('install-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-martinique"
-  js = "const b=document.getElementById('info-martinique').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-martinique"
+  js = "document.getElementById('info-martinique').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "coffee"
@@ -3490,9 +3269,16 @@ name = "coffee"
 desc = "A simple theme for Zola inspired by coffee."
 tags = [ "dark", "simple", "mermaid", "katex" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coffee'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coffee'></summary>
 
-### Installation{#h-install-coffee}
+### Info{#h-info-coffee}
+- **Author**: [Myxogastria0808](https://yukiosada.work)
+- **License**: MIT
+- **Homepage**: <https://github.com/Myxogastria0808/coffee/>
+- **Main Live Preview**: <https://zola-coffee-theme.netlify.app/>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-coffee}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3511,23 +3297,14 @@ git clone https://github.com/Myxogastria0808/coffee.git themes/coffee
 theme = "coffee"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coffee'></summary>
-
-### Info{#h-info-coffee}
-- **Author**: [Myxogastria0808](https://yukiosada.work)
-- **License**: MIT
-- **Homepage**: <https://github.com/Myxogastria0808/coffee/>
-- **Main Live Preview**: <https://zola-coffee-theme.netlify.app/>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-coffee.webp"
-  dark = "./screenshots/dark-coffee.webp"
+  [[project.screenshots]]
+  src = "./screenshots/dark-coffee.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the coffee theme"
+  alt = "Dark mode screenshot of coffee Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3538,16 +3315,10 @@ theme = "coffee"
   url = "https://github.com/Myxogastria0808/coffee"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-coffee"
-  js = "const b=document.getElementById('install-coffee').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-coffee"
-  js = "const b=document.getElementById('info-coffee').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-coffee"
+  js = "document.getElementById('info-coffee').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "coast"
@@ -3555,9 +3326,16 @@ name = "coast"
 desc = "A simple theme for Zola that evokes the feel the sea breeze."
 tags = [ "light", "simple", "mermaid", "katex" ]
 details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='install-coast'></summary>
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coast'></summary>
 
-### Installation{#h-install-coast}
+### Info{#h-info-coast}
+- **Author**: [Myxogastria0808](https://yukiosada.work)
+- **License**: MIT
+- **Homepage**: <https://github.com/Myxogastria0808/coast/>
+- **Main Live Preview**: <https://zola-coast-theme.netlify.app/>
+- **Min Zola version**: 0.19.0
+
+### Installation{#h-installation-coast}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -3576,23 +3354,14 @@ git clone https://github.com/Myxogastria0808/coast.git themes/coast
 theme = "coast"
 ```
 
-</details><details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;' id='info-coast'></summary>
-
-### Info{#h-info-coast}
-- **Author**: [Myxogastria0808](https://yukiosada.work)
-- **License**: MIT
-- **Homepage**: <https://github.com/Myxogastria0808/coast/>
-- **Main Live Preview**: <https://zola-coast-theme.netlify.app/>
-- **Min Zola version**: 0.19.0
 </details>"""
 
-  [project.screenshot]
-  light = "./screenshots/light-coast.webp"
-  dark = "./screenshots/dark-coast.webp"
+  [[project.screenshots]]
+  src = "./screenshots/light-coast.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Screenshot of the coast theme"
+  alt = "Light mode screenshot of coast Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -3603,13 +3372,7 @@ theme = "coast"
   url = "https://github.com/Myxogastria0808/coast"
 
   [[project.links]]
-  name = "Install"
-  url = "#install-coast"
-  js = "const b=document.getElementById('install-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
-  newtab = false
-
-  [[project.links]]
   name = "Info"
-  url = "#info-coast"
-  js = "const b=document.getElementById('info-coast').parentElement;if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'"
   newtab = false
+  url = "#h-info-coast"
+  js = "document.getElementById('info-coast').parentElement.setAttribute('open', true); this.style.display='none';"
