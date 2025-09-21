@@ -1,8 +1,7 @@
-import "zx/globals"
 import TOML from "@iarna/toml"
-
-$.verbose = true
-process.env.CLICOLOR_FORCE = '1'
+import fs from "fs"
+import path from "path"
+import { execa } from "execa"
 
 const demoRepoThemes = new Map([
 	["linkita", "https://codeberg.org/salif/linkita.git"],
@@ -15,147 +14,162 @@ const demoRepoThemes = new Map([
 	["landing-grid", "https://github.com/fastup-one/landing-grid-zola.git"],
 ])
 
-const versionWarn = "Does not work with the latest version of Zola"
+
+let cmds = {}
 const errors = []
 const warnings = []
+const PUB_DIR = "ZTC_PUBLIC"
+// TODO: durationMs
 
-export function buildCheckAll(baseURL, commands) {
-	listThemes().then(themes => buildThemes(themes, false, baseURL, commands))
+export function buildDemoAll(baseURL, doInstall, commands) {
+	cmds = commands
+	buildThemes(allThemes(), doInstall, baseURL)
 }
-export function buildCheck(themePath, baseURL, commands) {
-	buildThemes([{ path: themePath }], false, baseURL, commands)
+export function buildDemo(themeRelPath, baseURL, doInstall, commands) {
+	cmds = commands
+	if (themeRelPath.endsWith("/")) themeRelPath = themeRelPath.slice(0, -1)
+	const theme = allThemes().find(e => e.path === themeRelPath)
+	if (theme != undefined) {
+		buildThemes([theme], doInstall, baseURL)
+	} else {
+		errors.push(`'${themeRelPath}' is not found!`)
+	}
+	checkErrors()
 }
-export function buildDemoAll(baseURL, commands) {
-	listThemes().then(themes => buildThemes(themes, true, baseURL, commands))
-}
-export function buildDemo(themePath, baseURL, commands) {
-	buildThemes([{ path: themePath }], true, baseURL, commands)
-}
-export function updateData(baseURL) {
-	listThemes().then(themes => doUpdateData(themes))
+export function updateData() {
+	const themesRelPaths = allThemes()
+	const data = []
+	for (const themeRelPath of themesRelPaths) {
+		const themeInfo = readThemeInfo(themeRelPath, TOML)
+		if (null != themeInfo) {
+			data.push(themeInfo)
+		} else {
+			errors.push(themeRelPath)
+		}
+	}
+	checkErrors()
+	fs.writeFileSync("content/themes.toml", TOML.stringify({ project: data }))
 }
 
-async function buildThemes(themes, doInstall, baseURL, commands) {
+function buildThemes(themes, doInstall, baseURL) {
 	const basePath = process.cwd()
+	if (themes.length > 1) {
+		console.log(`Building ${themes.length} themes`)
+	}
 	for (const theme of themes) {
 		const themePath = path.join(basePath, theme.path)
 		const themeName = path.basename(themePath)
-		cd(themePath)
-		const b = await buildTheme(themeName, baseURL, commands)
-		if (b && doInstall) await installDemo(themePath, themeName,
-			path.join(basePath, "static", "demo", themeName))
-		await remPublic()
+		buildTheme(themePath, themeName, baseURL).then(e => {
+			// console.log(JSON.stringify(e, null, 4))
+			if (e.failed) {
+				errors.push(e.message)
+				checkErrors()
+			} else if (doInstall) {
+				installDemo(themePath, path.join(basePath, "static", "demo", themeName))
+			} else {
+				fs.rmSync(path.join(themePath, PUB_DIR), { recursive: true })
+			}
+			console.log("$ " + e.command)
+			console.log(e.stdout)
+		})
 	}
 	if (warnings.length > 0) {
 		warnings.forEach(w => { console.warn("Warning:", w) })
 	}
-	if (errors.length > 0) {
-		errors.forEach(err => { console.error("Error:", err) })
-		throw new Error(`${errors.length} errors!`)
-	}
+	checkErrors()
 }
-async function buildTheme(themeName, baseURL, commands) {
-	if (!(await fs.pathExists("theme.toml")) && !(await fs.pathExists(path.join("themes", themeName, "theme.toml")))) {
+function buildTheme(themePath, themeName, baseURL) {
+	if (!fs.existsSync(path.join(themePath, "theme.toml")) && !fs.existsSync(path.join(themePath, "themes", themeName, "theme.toml"))) {
 		warnings.push(`theme.toml not found! themes/${themeName}`)
 	}
-	if ((await fs.pathExists("theme.toml")) && (await fs.pathExists("themes"))) {
+	if (fs.existsSync(path.join(themePath, "theme.toml")) && fs.existsSync(path.join(themePath, "themes"))) {
 		warnings.push(`themes dir found! themes/${themeName}`)
 	}
 
 	let configFile
-	if (await fs.pathExists("config.toml")) {
+	if (fs.existsSync("config.toml")) {
 		configFile = "config.toml"
-	} else if (await fs.pathExists("config.example.toml")) {
+	} else if (fs.existsSync("config.example.toml")) {
 		configFile = "config.example.toml"
 	} else {
 		errors.push(`config.toml not found! themes/${themeName}`)
-		return false
+		checkErrors()
 	}
-	await remPublic()
+	if (fs.existsSync(path.join(themePath, PUB_DIR))) {
+		fs.rmSync(path.join(themePath, PUB_DIR), { recursive: true })
+	}
 	const demoBaseURL = new URL(themeName + "/", baseURL).href
-	let buildArgs = ['--config', configFile, 'build', '-u', demoBaseURL, '-o', 'ZTC_PUBLIC']
-	await $`${commands.zola} ${buildArgs}`
-	return true
+	let buildArgs = ['--config', configFile, 'build', '-u', demoBaseURL, '-o', PUB_DIR]
+	return execa({ cwd: themePath, reject: false })`${cmds.zola} ${buildArgs}`
 }
-async function installDemo(themePath, themeName, demoPath) {
-	if (await fs.pathExists(demoPath)) {
-		await fs.remove(demoPath)
+function installDemo(themePath, demoPath) {
+	if (fs.existsSync(demoPath)) {
+		fs.rmSync(demoPath, { recursive: true })
 	}
-	await fs.rename(path.join(themePath, "ZTC_PUBLIC"), demoPath)
+	fs.renameSync(path.join(themePath, PUB_DIR), demoPath)
 }
-async function remPublic() {
-	if (await fs.pathExists("ZTC_PUBLIC")) {
-		await fs.remove("ZTC_PUBLIC")
-	}
-}
-async function listThemes() {
-	const content = await fs.readFile('.gitmodules', 'utf8');
-	const lines = content.split('\n');
-	const result = {};
-	let currentSubmodule = null;
+function allThemes() {
+	const content = fs.readFileSync(".gitmodules", "utf8")
+	const lines = content.split("\n")
+	const result = {}
+	let currentSubmodule = null
 	lines.forEach(line => {
-		line = line.trim();
-		if (line.startsWith('[submodule')) {
+		line = line.trim()
+		if (line.startsWith("[submodule")) {
 			// Extract submodule name
-			currentSubmodule = line.match(/"(.*)"/)[1];
-			result[currentSubmodule] = {};
-		} else if (currentSubmodule && line.includes('=')) {
+			currentSubmodule = line.match(/"(.*)"/)[1]
+			result[currentSubmodule] = {}
+		} else if (currentSubmodule && line.includes("=")) {
 			// Parse key-value pairs
-			const [key, value] = line.split('=').map(part => part.trim());
-			result[currentSubmodule][key] = value;
+			const [key, value] = line.split("=").map(part => part.trim())
+			result[currentSubmodule][key] = value
 		}
-	});
-	if (result["themes/linkita-theme"]) delete result["themes/linkita-theme"]
-	return Object.values(result).filter(r => r.path.startsWith("themes/"));
-}
-function doUpdateData(themes) {
-	const data = [];
-	for (const theme of themes) {
-		const themeInfo = readThemeInfo(theme, TOML);
-		if (null != themeInfo) data.push(themeInfo);
-		else console.error(theme);
-	}
-	fs.writeFileSync('content/themes.toml', TOML.stringify({ project: data }));
+	})
+	return Object.values(result).filter(e => e.color)
 }
 function onlyIf(v, ifFalse, ifTrue) {
-	if (undefined == v || v.length == 0) return ifFalse;
-	else return ifTrue;
+	return (undefined == v || v.length == 0) ? ifFalse : ifTrue
 }
 function readThemeInfo(theme, TOML) {
-	if (!theme.path.startsWith("themes/")) return;
-	const themeName = theme.path.substring(7);
-	const themeInfo = {};
+	if (!theme.path.startsWith("themes/")) return
+	const themeName = theme.path.substring(7)
+	const themeInfo = {}
 	if (demoRepoThemes.has(themeName)) {
-		themeInfo.clone = demoRepoThemes.get(themeName);
+		themeInfo.clone = demoRepoThemes.get(themeName)
 	} else {
-		themeInfo.clone = theme.url;
+		themeInfo.clone = theme.url
 	}
 	themeInfo.repo = themeInfo.clone.endsWith(".git") ?
 		themeInfo.clone.substring(0, themeInfo.clone.length - 4) :
-		themeInfo.clone;
-	let themeTomlPath = path.join(theme.path, "theme.toml");
+		themeInfo.clone
+	let themeTomlPath = path.join(theme.path, "theme.toml")
 	if (!fs.existsSync(themeTomlPath)) {
-		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml");
+		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml")
 	}
-	const themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"));
-	themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name);
-	themeInfo.description = onlyIf(themeToml.description, "", themeToml.description);
-	themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags;
-	themeInfo.license = themeToml.license;
-	themeInfo.homepage = onlyIf(themeToml.homepage, themeInfo.repo, themeToml.homepage);
-	themeInfo.demo = themeToml.demo;
-	themeInfo.minVersion = themeToml.min_version;
-	themeInfo.authorName = themeToml.author?.name;
-	themeInfo.authorHomepage = themeToml.author?.homepage;
-	themeInfo.originalRepo = themeToml.original?.repo;
-	const newDetails = (name, content) => `<details style='display: inline-block;'><summary class='not-prose' ` +
-		`style='list-style-type: none; display: none;' id='${name}-${themeName}'></summary>
-${content}
-</details>`;
-	const newJS = (name) => "const b=document.getElementById('" + name + "').parentElement;" +
-		"if(!b.hasAttribute('open')) b.setAttribute('open', true); this.style.display='none'";
-	const themeDetails = newDetails("install", `
-### Installation{#h-install-${themeName}}
+	const themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"))
+	themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name)
+	themeInfo.description = onlyIf(themeToml.description, "", themeToml.description)
+	themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags
+	themeInfo.license = themeToml.license
+	themeInfo.homepage = onlyIf(themeToml.homepage, themeInfo.repo, themeToml.homepage)
+	themeInfo.demo = themeToml.demo
+	themeInfo.minVersion = themeToml.min_version
+	themeInfo.authorName = themeToml.author?.name
+	themeInfo.authorHomepage = themeToml.author?.homepage
+	themeInfo.originalRepo = themeToml.original?.repo
+	const themeDetails = `<details style='display: inline-block;'><summary class='not-prose' ` +
+		`style='list-style-type: none; display: none;' id='info-${themeName}'></summary>
+
+### Info{#h-info-${themeName}}` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
+- **Author**: ${themeInfo.authorName}`), `
+- **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
+- **License**: ${themeInfo.license}
+- **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
+- **Main Live Preview**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
+- **Min Zola version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
+- **Original**: <${themeInfo.originalRepo}>`) + `
+
+### Installation{#h-installation-${themeName}}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -173,34 +187,96 @@ git clone ${themeInfo.clone} themes/${themeName}
 \`\`\`toml
 theme = "${themeName}"
 \`\`\`
-`) + newDetails("info", `
-### Info{#h-info-${themeName}}` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
-- **Author**: ${themeInfo.authorName}`), `
-- **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
-- **License**: ${themeInfo.license}
-- **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
-- **Main Live Preview**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
-- **Min Zola version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
-- **Original**: <${themeInfo.originalRepo}>`));
+
+</details>`
+	themeInfo.screenshots = []
+	if (theme.color === "light" || theme.color === "both") {
+		themeInfo.screenshots.push({
+			src: `./screenshots/light-${themeName}.webp`,
+			type: "image/webp",
+			width: "1360",
+			height: "765",
+			alt: `Light mode screenshot of ${themeInfo.name} Zola theme demo website`,
+		})
+	}
+	if (theme.color === "dark" || theme.color === "both") {
+		themeInfo.screenshots.push({
+			src: `./screenshots/dark-${themeName}.webp`,
+			type: "image/webp",
+			width: "1360",
+			height: "765",
+			alt: `Dark mode screenshot of ${themeInfo.name} Zola theme demo website`,
+		})
+	}
+	if (!["light", "dark", "both"].includes(theme.color)) {
+		errors.push(`Unknown theme.color: ${theme.color}`)
+		checkErrors()
+	}
 	return {
 		theme: themeName,
 		name: themeInfo.name,
 		desc: themeInfo.description,
 		tags: themeInfo.tags,
-		screenshot: {
-			light: `./screenshots/light-${themeName}.webp`,
-			dark: `./screenshots/dark-${themeName}.webp`,
-			type: "image/webp",
-			width: "1360",
-			height: "765",
-			alt: `Screenshot of the ${themeInfo.name} theme`,
-		},
+		screenshots: themeInfo.screenshots,
 		details: themeDetails,
 		links: [
-			{ name: "Live Preview", url: "./demo/" + themeName + (themeName === "linkita" ? "/en/" : "/") },
+			{ name: "Live Preview", url: `./demo/${themeName}/` },
 			{ name: "Repository", url: themeInfo.repo },
-			{ name: "Install", url: "#install-" + themeName, js: newJS("install-" + themeName), newtab: false },
-			{ name: "Info", url: "#info-" + themeName, js: newJS("info-" + themeName), newtab: false },
+			{
+				name: "Info", newtab: false, url: "#h-info-" + themeName,
+				js: "document.getElementById('info-" + themeName +
+					"').parentElement.setAttribute('open', true); this.style.display='none';"
+			},
 		],
-	};
+	}
+}
+
+export function checkScreenshots(ext) {
+	const themeNames = fs.readdirSync(path.resolve("static", "demo"),
+		{ withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name)
+	const missing = []
+	for (const themeName of themeNames) {
+		if (!fs.existsSync(path.join("static", "screenshots", `light-${themeName}${ext}`))) {
+			missing.push(`  light for ${themeName}`)
+		}
+		if (!fs.existsSync(path.join("static", "screenshots", `dark-${themeName}${ext}`))) {
+			missing.push(`  dark for ${themeName}`)
+		}
+	}
+	const screenshots = fs.readdirSync(path.resolve("static", "screenshots"),
+		{ withFileTypes: true }).filter(e => !e.isDirectory()).map(e => e.name)
+	const toDelete = []
+	for (const screenshot of screenshots) {
+		if (screenshot.startsWith("light-") && screenshot.endsWith(ext)) {
+			const demo = screenshot.substring(6, screenshot.length - 5)
+			if (!fs.existsSync(path.join("static", "demo", demo))) {
+				toDelete.push(screenshot)
+			}
+		} else if (screenshot.startsWith("dark-") && screenshot.endsWith(ext)) {
+			const demo = screenshot.substring(5, screenshot.length - 5)
+			if (!fs.existsSync(path.join("static", "demo", demo))) {
+				toDelete.push(screenshot)
+			}
+		} else {
+			toDelete.push(screenshot)
+		}
+	}
+	if (missing.length > 0) {
+		console.error("missing screenshots:")
+		console.error(missing.join("\n"))
+		process.exitCode = 1
+	}
+	if (toDelete.length > 0) {
+		console.error("screenshots to delete:")
+		console.error(toDelete.join("\n"))
+		process.exitCode = 1
+	}
+}
+
+function checkErrors() {
+	if (errors.length > 0) {
+		errors.forEach(err => { console.error("Error:", err) })
+		console.error(`Error: ${errors.length} errors!`)
+		process.exit(1)
+	}
 }
