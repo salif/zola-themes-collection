@@ -6,8 +6,8 @@ import { execa } from "execa"
 const demoRepoThemes = new Map([
 	["linkita", "https://codeberg.org/salif/linkita.git"],
 	["tabi", "https://github.com/welpo/tabi.git"],
-	["project-portfolio", "https://github.com/awinterstein/zola-theme-project-portfolio.git"],
 	["serene", "https://github.com/isunjn/serene.git"],
+	["project-portfolio", "https://codeberg.org/winterstein/zola-theme-project-portfolio.git"],
 	["daisy", "https://codeberg.org/winterstein/zola-theme-daisy.git"],
 	["noobping", "https://github.com/noobping/zola-theme.git"],
 	["rilling_dev", "https://github.com/RillingDev/rilling.dev_theme.git"],
@@ -47,6 +47,7 @@ export function updateData() {
 			errors.push(themeRelPath)
 		}
 	}
+	checkWarnings()
 	checkErrors()
 	fs.writeFileSync("content/themes.toml", TOML.stringify({ project: data }))
 }
@@ -73,9 +74,7 @@ function buildThemes(themes, doInstall, baseURL) {
 			console.log(e.stdout)
 		})
 	}
-	if (warnings.length > 0) {
-		warnings.forEach(w => { console.warn("Warning:", w) })
-	}
+	checkWarnings()
 	checkErrors()
 }
 function buildTheme(themePath, themeName, baseURL) {
@@ -127,7 +126,7 @@ function allThemes() {
 	})
 	return Object.values(result).filter(e => e.color)
 }
-function onlyIf(v, ifFalse, ifTrue) {
+function IfFalseIfTrue(v, ifFalse, ifTrue) {
 	return (undefined == v || v.length == 0) ? ifFalse : ifTrue
 }
 function readThemeInfo(theme, TOML) {
@@ -147,29 +146,29 @@ function readThemeInfo(theme, TOML) {
 		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml")
 	}
 	const themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"))
-	themeInfo.name = onlyIf(themeToml.name, themeName, themeToml.name)
-	themeInfo.description = onlyIf(themeToml.description, "", themeToml.description)
+	themeInfo.name = IfFalseIfTrue(themeToml.name, themeName, themeToml.name)
+	themeInfo.description = IfFalseIfTrue(themeToml.description, "", themeToml.description)
 	themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags
 	themeInfo.license = themeToml.license
-	themeInfo.homepage = onlyIf(themeToml.homepage, themeInfo.repo, themeToml.homepage)
+	themeInfo.homepage = IfFalseIfTrue(themeToml.homepage, themeInfo.repo, themeToml.homepage)
 	themeInfo.demo = themeToml.demo
 	themeInfo.minVersion = themeToml.min_version
 	themeInfo.authorName = themeToml.author?.name
 	themeInfo.authorHomepage = themeToml.author?.homepage
 	themeInfo.originalRepo = themeToml.original?.repo
 	const themeDetails = `<details style='display: inline-block;'><summary class='not-prose' ` +
-		`style='list-style-type: none; display: none;' id='info-${themeName}'></summary>
+		`style='list-style-type: none; display: none;'></summary>
 
-### Info{#h-info-${themeName}}` + onlyIf(themeInfo.authorHomepage, onlyIf(themeInfo.authorName, "", `
+### Info{#info-${themeName}}` + IfFalseIfTrue(themeInfo.authorHomepage, IfFalseIfTrue(themeInfo.authorName, "", `
 - **Author**: ${themeInfo.authorName}`), `
 - **Author**: [${themeInfo.authorName}](${themeInfo.authorHomepage})`) + `
 - **License**: ${themeInfo.license}
-- **Homepage**: <${themeInfo.homepage}>` + onlyIf(themeInfo.demo, "", `
-- **Main Live Preview**: <${themeInfo.demo}>`) + onlyIf(themeInfo.minVersion, "", `
-- **Min Zola version**: ${themeInfo.minVersion}`) + onlyIf(themeInfo.originalRepo, "", `
+- **Homepage**: <${themeInfo.homepage}>` + IfFalseIfTrue(themeInfo.demo, "", `
+- **Main Live Preview**: <${themeInfo.demo}>`) + IfFalseIfTrue(themeInfo.minVersion, "", `
+- **Min Zola version**: ${themeInfo.minVersion}`) + IfFalseIfTrue(themeInfo.originalRepo, "", `
 - **Original**: <${themeInfo.originalRepo}>`) + `
 
-### Installation{#h-installation-${themeName}}
+### Installation{#install-${themeName}}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -189,6 +188,11 @@ theme = "${themeName}"
 \`\`\`
 
 </details>`
+	if (undefined != themeToml.homepage &&
+		themeToml.homepage !== themeInfo.repo &&
+		themeToml.homepage !== themeInfo.repo + "/") {
+		warnings.push("diff: \n  " + themeToml.homepage + "\n  " + themeInfo.repo)
+	}
 	themeInfo.screenshots = []
 	if (theme.color === "light" || theme.color === "both") {
 		themeInfo.screenshots.push({
@@ -223,7 +227,7 @@ theme = "${themeName}"
 			{ name: "Live Preview", url: `./demo/${themeName}/` },
 			{ name: "Repository", url: themeInfo.repo },
 			{
-				name: "Info", newtab: false, url: "#h-info-" + themeName,
+				name: "Info", newtab: false, url: "#info-" + themeName,
 				js: "document.getElementById('info-" + themeName +
 					"').parentElement.setAttribute('open', true); this.style.display='none';"
 			},
@@ -270,6 +274,14 @@ export function checkScreenshots(ext) {
 		console.error("screenshots to delete:")
 		console.error(toDelete.join("\n"))
 		process.exitCode = 1
+	}
+}
+
+function checkWarnings() {
+	if (warnings.length > 0) {
+		warnings.forEach(w => {
+			console.warn("Warning:", w)
+		})
 	}
 }
 

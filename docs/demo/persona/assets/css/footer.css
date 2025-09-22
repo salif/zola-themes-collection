@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--default-color), transparent 97%);
+  font-size: var(--normal-font-size);
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  position: relative;
+  margin: var(--spacing-xxl) 0 0 0;
+}
+
+.footer h3 {
+  font-size: var(--heading-font-size);
+  font-weight: 700;
+  position: relative;
+  padding: 0;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.footer .quote {
+  font-size: var(--normal-font-size);
+  font-style: italic;
+  padding: 0 0 0 0;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.footer .social-links {
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  line-height: 1;
+  margin: 0 var(--spacing-xxs);
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent var(--transition-hover-transparency));
+}
+
+.footer .copyright {
+  font-size: var(--footer-font-size);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  font-size: var(--footer-font-size);
+  padding-top: var(--spacing-xxs);
+}
+
+.footer .credits p {
+  margin-bottom: 0;
+}

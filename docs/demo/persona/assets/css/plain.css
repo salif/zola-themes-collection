@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Plain Section
+--------------------------------------------------------------*/
+.plain .content h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.plain .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plain .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.plain .content ul strong {
+  margin-right: 10px;
+}
+
+.plain .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: var(--accent-color);
+  line-height: 0;
+}
+
+.plain .content p {
+  text-align: justify;
+}
+
+.plain img {
+  width: 100%;
+  display: flex;
+  border-radius: var(--img-border-radius);
+}

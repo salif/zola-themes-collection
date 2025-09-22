@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --transparency: 25%; /* Transparency level for color */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #45505b;  /* The default color of the main navmenu links */
+  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Font Sizes - The following variables define the base font sizes for the website. They can be used to maintain consistency in typography across different sections and elements */
+:root {
+  --normal-font-size: 16px; /* Base font size for the website */
+  --footer-font-size: 14px; /* Font size for footer text */
+  --heading-font-size: 32px; /* Base font size for headings */
+  --subtitle-font-size: 24px; /* Font size for subtitles, such as section titles */
+  --title-font-size: 64px; /* Font size for titles, such as hero section titles */
+}
+
+/* Nav Menu Dimensions */
+:root {
+  --nav-icon-size: 56px; /* The size of the navigation menu icons */
+  --nav-menu-width: 140px; /* The width of the navigation menu */
+  --nav-menu-mobile-width: 300px; /* The width of the navigation menu */
+  --nav-menu-border-padding: 15px; /* The padding width of the navigation menu */
+  --nav-menu-mobile-border-width: 1px; /* The border width of the navigation menu */
+}
+
+/* Nav Menu Colors */
+:root {
+  --header-background-color: color-mix(in srgb, var(--default-color), transparent 96%); /* Background color for the header section of the website */
+  --header-color: #ffffff;
+}
+
+/* Spacing Variables - These variables define the spacing used throughout the website. They can be used to maintain consistent spacing between elements, such as margins and paddings */
+:root {
+  --spacing-xxs: 0.25rem; /* 4px assuming 16px base */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-xxl: 4rem;    /* 64px */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
+
+/* .light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+} */
+
+:root {
+  --transition-hover-time: 0.3s; /* Transition time for hover effects */
+  --transition-hover-transparency: var(--transparency); /* Transparency level for hover effects */
+}
+
+:root {
+  --img-border-radius: 10px;
+  --botton-size: 40px;
+  --botton-position-away-from-corner-distance: 15px;
+  --botton-position-away-from-corner-horizontal-distance: var(--botton-position-away-from-corner-distance);
+  --botton-position-away-from-corner-vertical-distance: 30px;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition-hover-time);
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent var(--transition-hover-transparency));
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}

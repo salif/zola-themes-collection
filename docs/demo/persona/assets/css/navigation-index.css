@@ -1,0 +1,151 @@
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+/* Header - Desktop */
+.header {
+  color: var(--default-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0 var(--nav-menu-border-padding);
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
+  z-index: 997;
+}
+
+@media (max-width: 991px) {
+  .header {
+    width: calc(var(--nav-menu-mobile-width) + var(--nav-menu-mobile-border-width));
+    background: var(--background-color);
+    border-right: var(--nav-menu-mobile-border-width) solid color-mix(in srgb, var(--default-color), transparent 90%);
+    left: calc(-1 * var(--nav-menu-mobile-width));
+  }
+}
+
+@media (min-width: 992px) {
+  .header~main {
+    margin-left: calc(
+      var(--nav-menu-width) + 
+      calc(2*var(--nav-menu-border-padding))
+    );
+  }
+
+  .header~main .hero {
+    margin-left: calc(
+      calc(-1*var(--nav-menu-width)) -
+      calc(2*var(--nav-menu-border-padding))
+    );
+    width: 100vw;
+  }
+}
+
+.header.navmenu-show {
+  left: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navmenu {
+  padding: 0;
+  z-index: 9997;
+}
+
+.navmenu ul {
+  list-style: none;
+  padding: 0 0 20px 0;
+  margin: 0;
+  width: calc(var(--nav-menu-mobile-width)-2*var(--nav-menu-border-padding));
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--nav-color);
+  font-family: var(--nav-font);
+  display: flex;
+  align-items: center;
+  padding: 10px 18px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  border-radius: 50px;
+  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  height: var(--nav-icon-size);
+  width: 100%;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.navmenu a i,
+.navmenu a:focus i {
+  font-size: 20px;
+}
+
+.navmenu a span,
+.navmenu a:focus span {
+  padding: 0 5px 0 7px;
+}
+
+@media (min-width: 992px) {
+
+  .navmenu ul {
+    width: var(--nav-menu-width);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    max-width: var(--nav-icon-size);
+  }
+
+  .navmenu a span,
+  .navmenu a:focus span {
+    display: none;
+  }
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus,
+.navmenu li:hover>a {
+  color: var(--contrast-color);
+  background: var(--nav-hover-color);
+}
+
+.navmenu a:hover,
+.navmenu li:hover>a {
+  max-width: 100%;
+  color: var(--contrast-color);
+}
+
+.navmenu a:hover span,
+.navmenu li:hover>a span {
+  display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Toggle
+--------------------------------------------------------------*/
+.nav-toggle {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--botton-size);
+  height: var(--botton-size);
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: var(--botton-position-away-from-corner-vertical-distance);
+  right: var(--botton-position-away-from-corner-horizontal-distance);
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.nav-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}

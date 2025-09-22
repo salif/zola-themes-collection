@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+# Section
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: var(--spacing-xxl) 0 0 0;
+  overflow: clip;
+}
+
+.section .section-title {
+  text-align: center;
+  padding-bottom: var(--spacing-xxl);
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: var(--heading-font-size);
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 160px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 60%);
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  margin: auto;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: var(--spacing-xxl);
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+.section-title em {
+  font-style: normal;
+  font-family: "Courier New", Courier, monospace;
+  font-size: var(--subtitle-font-size);
+  color: var(--accent-color);
+}
+  

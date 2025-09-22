@@ -1,0 +1,177 @@
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item+.info-item {
+  margin-top: 40px;
+}
+
+.contact .info-item i {
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 15px;
+}
+
+.contact .info-item h3 {
+  font-size: var(--normal-font-size);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: var(--footer-font-size);
+}
+
+.contact .info-item:hover i {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.contact .contact-form {
+  height: 100%;
+}
+
+.contact .contact-form .error-message {
+  display: none;
+  background: #df1529;
+  color: #ffffff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.contact .contact-form .sent-message {
+  display: none;
+  color: #ffffff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.contact .contact-form .loading {
+  display: none;
+  background: var(--background-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.contact .contact-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--background-color);
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .contact-form fieldset {
+  margin-bottom: 24px;
+}
+
+.contact .contact-form .input-box {
+  position: relative;
+}
+
+.contact .contact-form .input-box input,
+.contact .contact-form .input-box textarea {
+  font-size: var(--footer-font-size);
+  outline: none;
+  padding: 15px 15px 10px 15px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  color: var(--default-color);
+  transition: var(--accent-color) 0.3s ease;
+}
+
+.contact .contact-form .input-box textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.contact .contact-form .input-box input:focus,
+.contact .contact-form .input-box input:valid,
+.contact .contact-form .input-box textarea:focus,
+.contact .contact-form .input-box textarea:valid {
+  border-color: var(--accent-color);
+}
+
+.contact .contact-form .input-box .label {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: var(--footer-font-size);
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 24px;
+  top: 15px;
+  transition: all 0.3s ease;
+  background: var(--background-color);
+  padding: 0 4px;
+}
+
+.contact .contact-form .input-box input:focus ~ .label,
+.contact .contact-form .input-box input:valid ~ .label,
+.contact .contact-form .input-box textarea:focus ~ .label,
+.contact .contact-form .input-box textarea:valid ~ .label {
+  transform: translateY(-25px);
+  font-size: var(--footer-font-size);
+  color: var(--accent-color);
+}
+
+.contact .contact-form .input-box input:user-invalid ~ .label {
+  transform: translateY(-25px);
+  font-size: var(--footer-font-size);
+}
+
+.contact .contact-form button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .contact-form button[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Show messaging elements when the 'show' class is added by JS */
+.contact .contact-form .loading.show,
+.contact .contact-form .error-message.show,
+.contact .contact-form .sent-message.show {
+  display: block;
+}

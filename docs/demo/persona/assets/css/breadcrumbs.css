@@ -1,0 +1,60 @@
+
+/*--------------------------------------------------------------
+# Global Page Titles & Breadcrumbs
+--------------------------------------------------------------*/
+.page-title {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  height: 60px;
+  position: relative;
+  margin-bottom: -60px;
+}
+
+@media (max-width: 767px) {
+  .page-title {
+    background-color: var(--header-background-color);
+    height: 100px;
+    margin-bottom: -40px;
+  }
+}
+
+.page-title.empty {
+  height: 40px;
+  padding: 0;
+  background-color: var(--background-color);
+  margin-bottom: -40px;
+}
+
+@media (max-width: 767px) {
+  .page-title.empty {
+    margin-bottom: 20px;
+  }
+}
+
+.page-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: var(--footer-font-size);
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}

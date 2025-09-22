@@ -1,0 +1,513 @@
+/*--------------------------------------------------------------
+# Blog Post Section
+--------------------------------------------------------------*/
+.blog-post {
+  padding-bottom: 30px;
+}
+
+.blog-post .article {
+  padding: 30px;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.blog-post .post-img {
+  margin: -30px -30px 20px -30px;
+  overflow: hidden;
+}
+
+.blog-post .title {
+  color: var(--heading-color);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.blog-post .post-content {
+  margin-top: 20px;
+}
+
+.blog-post .post-content p {
+  text-align: justify;
+}
+
+.blog-post .post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius:4px;
+  box-shadow:0 10px 16px rgba(0,0,0,0.33), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:20px;
+  margin-top:10px
+}
+
+.blog-post .post-content h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.blog-post .post-content blockquote {
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.blog-post .post-content blockquote p {
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.blog-post .post-content blockquote:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--accent-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* meta top styles */
+
+.meta-top-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.blog-post .meta-top {
+  margin-top: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 10px;
+}
+
+.blog-post .meta-top ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-post .meta-top #info li+li {
+  padding-left: 20px;
+}
+
+.blog-post .meta-top #action li+li {
+  padding-left: 10px;
+}
+
+.blog-post .meta-top #info li i {
+  font-size: 16px;
+  margin-right: 8px;
+  line-height: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.blog-post .meta-top time,
+.blog-post .meta-top span {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.blog-post .meta-bottom {
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.blog-post .meta-bottom i {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  display: inline;
+}
+
+.blog-post .meta-bottom a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  transition: 0.3s;
+}
+
+.blog-post .meta-bottom a:hover {
+  color: var(--accent-color);
+}
+
+.blog-post .meta-bottom .cats {
+  list-style: none;
+  display: inline;
+  padding: 0 20px 0 0;
+  font-size: 14px;
+}
+
+.blog-post .meta-bottom .cats li {
+  display: inline-block;
+}
+
+.blog-post .meta-bottom .tags {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  font-size: 14px;
+}
+
+.blog-post .meta-bottom .tags li {
+  display: inline-block;
+}
+
+.blog-post .meta-bottom .tags li+li::before {
+  padding-right: 6px;
+  color: var(--default-color);
+  content: ",";
+}
+
+.blog-post .meta-bottom .share {
+  font-size: 16px;
+}
+
+.blog-post .meta-bottom .share i {
+  padding-left: 5px;
+}
+
+
+.blog-post .post-tags {
+  margin-top: 0.5em;
+}
+
+.blog-post .post-tags .tag {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  font-size: 0.8em;
+  background-color: #f1f8ff;
+  border-radius: 3px;
+  margin-right: 0.5em;
+}
+
+.blog-post .post-content {
+  margin-top: 2em;
+}
+
+/* Post header layout */
+.post-header {
+  margin-bottom: 2em;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5em;
+}
+
+.post-title {
+  margin: 0;
+  flex: 1;
+}
+
+
+/* Share button styles */
+.share-container {
+  position: relative;
+  /* margin-left: 20px; */
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  /* border-radius: 50%; */
+  background-color: var(--background-color);
+  /* background-color: #f0f0f0; */
+  /* color: #333; */
+  border: none;
+  cursor: pointer;
+  /* transition: background-color 0.2s; */
+}
+
+/* .share-button:hover {
+  background-color: #e0e0e0;
+} */
+
+.share-button i {
+  font-size: 20px;
+}
+
+/* Share menu */
+.share-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.share-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.share-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.share-menu-item:hover {
+  background-color: #f5f5f5;
+}
+
+.share-menu-item:active {
+  background-color: #e0e0e0;
+}
+
+.share-menu-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+.share-menu-item i {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  fill: #333;
+}
+
+.share-menu-item span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* LaTeX equation styles */
+.MathJax {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+.post-content .mjx-chtml {
+  margin: 1em 0;
+}
+
+.post-content .mjx-chtml.MJXc-display {
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+/* Ensure equation numbers are visible */
+.post-content .mjx-chtml .mjx-right {
+  margin-right: 0 !important;
+  float: right !important;
+  text-align: right !important;
+}
+
+/* LaTeX equation overflow handling with centered content */
+.post-content .MathJax_Display,
+.post-content .mjx-chtml.MJXc-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1em 0;
+  padding: 0.5em 0;
+  width: 100% !important; /* Force width to ensure scrollbar works */
+  max-width: 100%;
+  display: flex !important; /* Use flexbox for centering */
+  justify-content: center !important;
+}
+
+/* Center the math content while allowing it to be wider than container */
+.post-content .mjx-chtml .mjx-math {
+  min-width: min-content !important; /* Allow content to determine width */
+  display: inline-block !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+/* Style the scrollbar for better appearance */
+.post-content .mjx-chtml.MJXc-display::-webkit-scrollbar,
+.post-content .MathJax_Display::-webkit-scrollbar {
+  height: 8px;
+}
+
+.post-content .mjx-chtml.MJXc-display::-webkit-scrollbar-track,
+.post-content .MathJax_Display::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.post-content .mjx-chtml.MJXc-display::-webkit-scrollbar-thumb,
+.post-content .MathJax_Display::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.post-content .mjx-chtml.MJXc-display::-webkit-scrollbar-thumb:hover,
+.post-content .MathJax_Display::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* Ensure equation container doesn't overflow */
+.post-content .MathJax_SVG_Display,
+.post-content .MathJax {
+  max-width: 100%;
+}
+
+/* Ensure container for equations has proper overflow */
+.post-content .mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Blog Comments Section
+--------------------------------------------------------------*/
+.blog-comments {
+  padding: 10px 0;
+}
+
+.blog-comments .comments-count {
+  font-weight: bold;
+}
+
+.blog-comments .comment {
+  margin-top: 30px;
+  position: relative;
+}
+
+.blog-comments .comment .comment-img {
+  margin-right: 14px;
+}
+
+.blog-comments .comment .comment-img img {
+  width: 60px;
+}
+
+.blog-comments .comment h5 {
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.blog-comments .comment h5 a {
+  font-weight: bold;
+  color: var(--default-color);
+  transition: 0.3s;
+}
+
+.blog-comments .comment h5 a:hover {
+  color: var(--accent-color);
+}
+
+.blog-comments .comment h5 .reply {
+  padding-left: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.blog-comments .comment h5 .reply i {
+  font-size: 20px;
+}
+
+.blog-comments .comment time {
+  display: block;
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 5px;
+}
+
+.blog-comments .comment.comment-reply {
+  padding-left: 40px;
+}
+
+/*--------------------------------------------------------------
+# Comment Form Section
+--------------------------------------------------------------*/
+.comment-form {
+  padding-top: 10px;
+}
+
+.comment-form form {
+  margin-top: 30px;
+  padding: 30px;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.comment-form form h4 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.comment-form form p {
+  font-size: 14px;
+}
+
+.comment-form form input {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+
+.comment-form form input:focus {
+  box-shadow: none;
+  border-color: var(--accent-color);
+}
+
+.comment-form form textarea {
+  background-color: var(--background-color);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-radius: 4px;
+  padding: 10px 10px;
+  font-size: 14px;
+  height: 120px;
+}
+
+.comment-form form textarea:focus {
+  box-shadow: none;
+  border-color: var(--accent-color);
+}
+
+.comment-form form .form-group {
+  margin-bottom: 25px;
+}
+
+.comment-form form .btn-primary {
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.comment-form form .btn-primary:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}

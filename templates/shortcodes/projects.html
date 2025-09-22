@@ -21,11 +21,10 @@
   {%- set tags = project.languages[lang].tags | default(value=project.tags) %}
   {%- set links = project.links %}
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white">{{ name }}</h2>
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-{{ project.theme }}">{{ name }}</h2>
   <div class="not-prose">
       {%- for screenshot in project.screenshots %}
       <img src="{{ screenshot.src | escape_xml | safe }}"
-        type="{{ screenshot.type | escape_xml | safe }}"
         alt="{{ screenshot.alt | escape_xml | safe }}"
         width="{{ screenshot.width }}" height="{{ screenshot.height }}" />
       {%- endfor %}
