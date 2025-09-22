@@ -73,6 +73,17 @@ remove-demo-all:
     }
 
 [group("screenshot")]
+[private]
+[script("node")]
+screenshot-changed mode:
+    import {execaSync} from "{{node_modules}}/execa/index.js"
+    const themes = await execaSync`git diff --cached --name-only`
+    themes.stdout.split("\n").filter(e=>e.startsWith("themes/")).forEach(e=>{
+        const theme = e.substr("themes/".length)
+        execaSync({verbose: 'full'})("{{just_executable()}}", ["screenshot", theme, "{{mode}}"])
+    })
+
+[group("screenshot")]
 screenshot-all-dark url=local_base_url: (screenshot-all "dark" url)
 
 [group("screenshot")]
@@ -127,6 +138,8 @@ submodule-add url name: && (demo-checkbuild "themes/" + name)
     @git diff --quiet .gitmodules
     ! test -d 'themes/{{ name }}'
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
+    git config -f .gitmodules submodule.'themes/{{ name }}'.ignore dirty
+    git config -f .gitmodules submodule.'themes/{{ name }}'.color both
 
 [group("help")]
 submodule-update-all:

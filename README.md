@@ -51,7 +51,6 @@
 - [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
 - [lightspeed](https://github.com/carpetscheme/lightspeed): 37 commits: `style.css doesn't exist`
 - [zolanote](https://github.com/ghventix/zolanote): 1 commit: `can't find stylesheet to import`
-- [ametrine](https://codeberg.org/daudix/ametrine): 200 commits: `filter call 'urlencode' failed`
 - [lookr](https://github.com/m0ddr/lookr): 12 commits: `base.css doesn't exist`
 - [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
 - [mintec-zola-theme](https://github.com/Coffeeri/mintec-zola-theme): 9 commits: `config.toml not found`
@@ -59,7 +58,6 @@
 - [zola-theme-brief](https://github.com/w4ngzhen/zola-theme-brief): 2 commits: `config.toml not found`
 - [zola-blog-awesome](https://github.com/andwati/zola-blog-awesome): 4 commits: `error parsing templates`
 - [planet](https://github.com/higuoxing/planet): 6 commits: `config.toml not found`
-- [zola-persona-theme](https://github.com/hanson-hschang/zola-persona-theme): 11 commits: `variable not found`
 - [Camilla](https://codeberg.org/PanSi21/Camilla): 4 commits: `error parsing templates`
 - [silo](https://github.com/joewe/silo): 21 commits: `unknown field generate_feed`
 
@@ -118,3 +116,4 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-theme-papermod](https://github.com/cydave/zola-theme-papermod): 45 commits
 - [boring](https://github.com/clflushopt/boring): 70 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
+- [ametrine](https://codeberg.org/daudix/ametrine): 274 commits
