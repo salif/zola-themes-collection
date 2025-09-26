@@ -1,0 +1,54 @@
+@import url("../fonts/inter/inter.css");
+
+:root {
+	--system-font-sans-serif:
+		-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+		helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial,
+		sans-serif;
+	--system-font-serif:
+		Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif,
+		Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji,
+		Segoe UI Symbol;
+
+	--system-font-monospace: Menlo, Consolas, Monaco, Liberation Mono, Lucida
+		Console, monospace;
+
+	--preferred-font-sans-serif: "Inter";
+	--preferred-font-serif: "";
+	--preferred-font-monospace: "";
+}
+
+:root {
+	--font-stack-sans-serif: var(--preferred-font-sans-serif),
+		var(--system-font-sans-serif);
+	--font-stack-serif: var(--preferred-font-serif), var(--system-font-serif);
+	--font-stack-monospace: var(--preferred-font-monospace),
+		var(--system-font-monospace);
+}
+
+body {
+	font-size: 0.9rem;
+	line-height: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+}
+
+h3 {
+	color: #a6aaad;
+	font-size: 0.8rem;
+	margin-top: 2rem;
+}
+
+h2 {
+	font-size: 120%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 200%;
+	margin-bottom: 0.24rem;
+	margin-top: 1rem;
+}

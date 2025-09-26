@@ -553,9 +553,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-terminus">terminus</h2>
   <div class="not-prose">
-      <img src="./screenshots/light-terminus.webp"
-        alt="Light mode screenshot of terminus Zola theme demo website"
-        width="1360" height="765" />
       <img src="./screenshots/dark-terminus.webp"
         alt="Dark mode screenshot of terminus Zola theme demo website"
         width="1360" height="765" />
@@ -2048,6 +2045,69 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-sidney-professional-resume">Sidney Professional</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-sidney-professional-resume.webp"
+        alt="Light mode screenshot of Sidney Professional Zola theme demo website"
+        width="1360" height="765" />
+    <p>Minimalist, clean, and professional</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-sidney-professional-resume">Info</h3>
+<ul>
+<li><strong>License</strong>: HL3-FULL</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume">https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+</ul>
+<h3 id="install-sidney-professional-resume">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://git.sr.ht/</span><span style="color:#ffb964;">~</span><span>xyhhx/zola-theme-sidney-professional-resume themes/sidney-professional-resume
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://git.sr.ht/</span><span style="color:#ffb964;">~</span><span>xyhhx/zola-theme-sidney-professional-resume themes/sidney-professional-resume
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">sidney-professional-resume</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#resume</span>
+      <span>#standard-resume</span>
+      <span>#professional</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/sidney-professional-resume/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-sidney-professional-resume"
+        onclick="document.getElementById('info-sidney-professional-resume').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-zola-futu">futu</h2>
   <div class="not-prose">
       <img src="./screenshots/light-zola-futu.webp"
@@ -3351,7 +3411,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <ul>
 <li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://arbs09.dev">arbs09</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/arbs09/photography-theme">https://github.com/arbs09/photography-theme</a></li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://arbs09.dev/projects/photography-theme/">https://arbs09.dev/projects/photography-theme/</a></li>
 <li><strong>Min Zola version</strong>: 0.19.2</li>
 </ul>
 <h3 id="install-photography">Installation</h3>
@@ -3364,12 +3424,12 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <ul>
 <li>Option A: Add the theme as a git submodule:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/arbs09/photography-theme.git themes/photography
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/arbs09/photography-theme.git themes/photography
 </span></code></pre>
 <ul>
 <li>Option B: Clone the theme into your themes directory:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/arbs09/photography-theme.git themes/photography
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/arbs09/photography-theme.git themes/photography
 </span></code></pre>
 <ol start="2">
 <li>Enable the theme in your <code>config.toml</code></li>
@@ -3389,7 +3449,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
       >Live Preview</a>
       <a
         class="underline"
-        href="https://github.com/arbs09/photography-theme"
+        href="https://codeberg.org/arbs09/photography-theme"
         target="_blank"
       >Repository</a>
       <a
@@ -3657,6 +3717,69 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-coast"
         onclick="document.getElementById('info-coast').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-hallo">hallo</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-hallo.webp"
+        alt="Light mode screenshot of hallo Zola theme demo website"
+        width="1360" height="765" />
+    <p>A single-page theme to introduce yourself.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-hallo">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://janbaudisch.dev">Jan Baudisch</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/janbaudisch/zola-hallo">https://codeberg.org/janbaudisch/zola-hallo</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-hallo.janbaudisch.dev">https://zola-hallo.janbaudisch.dev</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/EmielH/hallo-hugo">https://github.com/EmielH/hallo-hugo</a></li>
+</ul>
+<h3 id="install-hallo">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">hallo</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/hallo/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/janbaudisch/zola-hallo"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-hallo"
+        onclick="document.getElementById('info-hallo').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>

@@ -1,0 +1,172 @@
+@import url(reset.css);
+@import url(typography.css);
+
+body {
+	align-items: center;
+	background-color: #f2f7fc;
+	display: flex;
+	justify-content: center;
+}
+
+.document-wrapper {
+	background-color: #fff;
+	box-shadow: 0 1rem 3rem #0013;
+	color: #323336;
+	margin: 4rem auto;
+	max-width: 64rem;
+	padding: 3rem 4rem;
+	width: 100%;
+
+	> header,
+	> main {
+		margin: 0 3rem;
+		--inner-padding: 3rem;
+		padding-left: var(--inner-padding);
+		padding-right: var(--inner-padding);
+	}
+}
+
+header#intro {
+	color: #707678;
+	position: relative;
+	display: flex;
+	gap: 0.5rem;
+	flex-direction: column;
+
+	.flavor-badge {
+		position: absolute;
+		left: -1rem;
+		top: 0;
+		display: flex;
+		gap: 4px;
+		justify-content: center;
+		background: #43f398;
+		color: #000;
+		align-items: center;
+		height: 3rem;
+		white-space: pre;
+		width: 2.4rem;
+		flex-wrap: wrap;
+		flex-direction: column;
+		line-height: 0.9rem;
+		font-weight: 900;
+	}
+
+	a:hover,
+	a:focus,
+	h1,
+	.header-label {
+		color: #323336;
+	}
+
+	h1 {
+		line-height: 200%;
+		font-size: 1.7rem;
+		font-weight: 600;
+	}
+
+	.header-label {
+		font-size: 1rem;
+		line-height: 200%;
+	}
+
+	strong {
+		font-weight: 400;
+	}
+
+	.header-summary {
+		margin-top: 1rem;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: 1px solid #0002;
+
+		:hover,
+		:focus {
+			border-bottom-color: #000d;
+		}
+	}
+}
+
+#work-experience {
+	article {
+		.work-position-summary {
+			margin-bottom: 1rem;
+		}
+
+		ul {
+			margin-bottom: 1rem;
+		}
+
+		li {
+			list-style: outside disc;
+			margin-left: 2rem;
+			margin-bottom: 0.25rem;
+			margin-top: 0.25rem;
+		}
+	}
+
+	.work-position-brief {
+		color: #707678;
+		display: flex;
+		gap: 0.5rem;
+		margin-bottom: 0.7rem;
+
+		strong {
+			font-weight: 400;
+		}
+	}
+	.separator {
+		display: inline;
+	}
+}
+
+#skills ul {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+#skills li {
+	padding: 5px 18px;
+	font-size: 0.8rem;
+	background-color: #f1f5f7;
+}
+
+@media screen and (max-width: 750px) {
+	body {
+		font-size: .95rem;
+	}
+
+	.document-wrapper {
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+
+		> header,
+		> main {
+			margin: 0;
+			--inner-padding: 0;
+		}
+	}
+
+	header#intro {
+		.flavor-badge {
+			position: static;
+			margin-bottom: 2rem;
+		}
+	}
+
+	#work-experience {
+		.separator {
+			display: none;
+		}
+
+		.work-position-brief {
+			flex-direction: column;
+		}
+	}
+}
