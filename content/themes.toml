@@ -478,13 +478,6 @@ theme = "terminus"
 </details>"""
 
   [[project.screenshots]]
-  src = "./screenshots/light-terminus.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of terminus Zola theme demo website"
-
-  [[project.screenshots]]
   src = "./screenshots/dark-terminus.webp"
   type = "image/webp"
   width = "1360"
@@ -1854,6 +1847,61 @@ theme = "peritus"
   js = "document.getElementById('info-peritus').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "sidney-professional-resume"
+name = "Sidney Professional"
+desc = "Minimalist, clean, and professional"
+tags = [ "resume", "standard-resume", "professional" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-sidney-professional-resume}
+- **License**: HL3-FULL
+- **Homepage**: <https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume>
+- **Min Zola version**: 0.4.0
+
+### Installation{#install-sidney-professional-resume}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume themes/sidney-professional-resume
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume themes/sidney-professional-resume
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "sidney-professional-resume"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-sidney-professional-resume.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Sidney Professional Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/sidney-professional-resume/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-sidney-professional-resume"
+  js = "document.getElementById('info-sidney-professional-resume').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "zola-futu"
 name = "futu"
 desc = "Futu Theme"
@@ -3091,7 +3139,7 @@ details = """
 ### Info{#info-photography}
 - **Author**: [arbs09](https://arbs09.dev)
 - **License**: MIT
-- **Homepage**: <https://github.com/arbs09/photography-theme>
+- **Homepage**: <https://arbs09.dev/projects/photography-theme/>
 - **Min Zola version**: 0.19.2
 
 ### Installation{#install-photography}
@@ -3102,11 +3150,11 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/arbs09/photography-theme.git themes/photography
+git submodule add https://codeberg.org/arbs09/photography-theme.git themes/photography
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/arbs09/photography-theme.git themes/photography
+git clone https://codeberg.org/arbs09/photography-theme.git themes/photography
 ```
 2. Enable the theme in your `config.toml`
 ```toml
@@ -3128,7 +3176,7 @@ theme = "photography"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/arbs09/photography-theme"
+  url = "https://codeberg.org/arbs09/photography-theme"
 
   [[project.links]]
   name = "Info"
@@ -3376,6 +3424,64 @@ theme = "coast"
   newtab = false
   url = "#info-coast"
   js = "document.getElementById('info-coast').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "hallo"
+name = "hallo"
+desc = "A single-page theme to introduce yourself."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-hallo}
+- **Author**: [Jan Baudisch](https://janbaudisch.dev)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/janbaudisch/zola-hallo>
+- **Main Live Preview**: <https://zola-hallo.janbaudisch.dev>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/EmielH/hallo-hugo>
+
+### Installation{#install-hallo}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "hallo"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-hallo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of hallo Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/hallo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/janbaudisch/zola-hallo"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-hallo"
+  js = "document.getElementById('info-hallo').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "persona"

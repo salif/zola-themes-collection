@@ -236,10 +236,10 @@ theme = "${themeName}"
 }
 
 export function checkScreenshots(ext) {
-	const themeNames = fs.readdirSync(path.resolve("static", "demo"),
-		{ withFileTypes: true }).filter(e => e.isDirectory()).map(e => e.name)
+	const themes = allThemes()
 	const missing = []
-	for (const themeName of themeNames) {
+	for (const theme of themes) {
+		const themeName = path.basename(theme.path)
 		if (!fs.existsSync(path.join("static", "screenshots", `light-${themeName}${ext}`))) {
 			missing.push(`  light for ${themeName}`)
 		}
