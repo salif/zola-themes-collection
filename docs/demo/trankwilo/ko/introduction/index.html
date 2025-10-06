@@ -23,14 +23,14 @@
 
     
 
-    <title>Introduction | Goyo</title>
+    <title>Introduction | Trankwilo</title>
 
     
     
 
       <!-- SEO: Open Graph / Twitter Card -->
-      <meta property="og:title" content="Introduction | Goyo" />
-      <meta property="og:description" content="Goyo를 소개합니다." />
+      <meta property="og:title" content="Introduction | Trankwilo" />
+      <meta property="og:description" content="Trankwilo를 소개합니다." />
       <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/" />
       <meta property="og:type" content="website" />
       
@@ -39,7 +39,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="" />
-      <meta name="twitter:description" content="Goyo를 소개합니다." />
+      <meta name="twitter:description" content="Trankwilo를 소개합니다." />
       
       <meta name="twitter:site" content="@hahwul" />
       
@@ -53,7 +53,10 @@
       <!-- CSS -->
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/main.css">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/katex.min.css">
 
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/katex.min.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_code.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_heading_link.js"></script>
 
@@ -65,14 +68,39 @@
 
 <!-- Search Modal -->
 <input type="checkbox" id="search-modal" class="modal-toggle" />
-<div class="modal modal-top sm:modal-middle">
-    <div class="modal-box relative">
-        <label for="search-modal" class="btn btn-sm btn-ghost absolute right-2 top-2">✕</label>
-        <div class="search-container py-4 h-96">
-            <input id="search" type="search" placeholder="Search.." class="input input-bordered w-full bg-transparent focus:outline-none">
-            <div class="search-results overflow-y-auto h-full no-scrollbar">
-                <div class="search-results__header my-2 text-xs"></div>
-                <ul class="search-results__items menu p-2"></ul>
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 max-h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
             </div>
         </div>
     </div>
@@ -93,9 +121,9 @@
     </div>
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl">
+        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/goyo.png" alt="Goyo" class="h-18 w-auto" />
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.png" alt="Trankwilo" class="h-18 w-auto" />
             
         </a>
     </div>
@@ -103,21 +131,28 @@
     <div class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal px-1 items-center">
             
+            
+                
+                
+                    
+                
+            
+            
                 
                     
                         <li>
                             <a class="btn btn-ghost hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/introduction">
                                 <i class="fa-solid fa-book"></i>
-                                Documents
+                                문서
                             </a>
                         </li>
                     
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://github.com/hahwul/goyo">
+                            <a class="btn btn-ghost hover:no-underline" href="https://codeberg.org/salif/trankwilo">
                                 <i class="fa-brands fa-github"></i>
-                                GitHub
+                                Source
                             </a>
                         </li>
                     
@@ -126,7 +161,7 @@
                         <li class="dropdown dropdown-end">
                             <div tabindex="0" role="button" class="btn btn-ghost">
                                 <i class="fa-solid fa-link"></i>
-                                Links
+                                링크
                                 <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                             </div>
                             <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-sm">
@@ -134,14 +169,14 @@
                                     <li>
                                         <a class="btn btn-ghost hover:no-underline" href="https://www.hahwul.com">
                                             <i class="fa-solid fa-fire-flame-curved"></i>
-                                            Creator Blog
+                                            제작자 블로그
                                         </a>
                                     </li>
                                 
                                     <li>
                                         <a class="btn btn-ghost hover:no-underline" href="https://getzola.org">
                                             <i class="fa-solid fa-z"></i>
-                                            Zola Offical
+                                            Zola 공식
                                         </a>
                                     </li>
                                 
@@ -163,13 +198,13 @@
                             <path d="M19.1 18h-6.2"></path>
                         </svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg">
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg min-w-max whitespace-nowrap">
                         
                             
                                 
                                 
                                 
-                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/introduction/">en</a></li>
+                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/introduction/">English</a></li>
                                 
                             
                             
@@ -202,24 +237,23 @@
                     
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1>Introduction</h1>
-        <p class="text-gray-500">Goyo를 소개합니다.</p>
+        <p class="text-gray-500">Trankwilo를 소개합니다.</p>
     </div>
-    <p>Goyo는 Zola를 위한 미니멀하고 현대적인 테마입니다. 블로그, 문서 등 콘텐츠에 집중할 수 있는 깔끔하고 직관적인 디자인을 제공합니다.</p>
-<p>Goyo는 한국어의 "고요"를 의미합니다. 고요함 속에서 문서를 읽는 듯한 느낌을 주고 싶었어요.</p>
+    <p>Trankwilo는 Zola를 위한 미니멀하고 현대적인 테마입니다. 블로그, 문서 등 콘텐츠에 집중할 수 있는 깔끔하고 직관적인 디자인을 제공합니다.</p>
+<p>Trankwilo는 한국어의 "고요"를 의미합니다. 고요함 속에서 문서를 읽는 듯한 느낌을 주고 싶었어요.</p>
 <p>다크/라이트 모드, 반응형 디자인, 내장 검색, 다국어 지원 등 필수 기능을 갖추고 있으며, SEO에 최적화되어 있습니다. 또한 목차(ToC) 자동 생성과 Mermaid 차트, 알림, 뱃지 등 다양한 숏코드를 통해 콘텐츠 작성의 편의성을 높였습니다.</p>
-<p>Goyo와 함께 여러분의 지식과 아이디어를 아름답고 효과적으로 공유해 보세요.</p>
+<p>Trankwilo와 함께 여러분의 지식과 아이디어를 아름답고 효과적으로 공유해 보세요.</p>
 
-
-    
 
 
                     
 
 
 
-                    <div class="flex justify-between mt-8">
-                        <div class="prev-link">
-                            
+                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="prev-nav-item">
+                                
     
     
     
@@ -254,9 +288,9 @@
         
     
 
-                        </div>
-                        <div class="next-link">
-                            
+                            </div>
+                            <div class="next-nav-item">
+                                
     
         
         
@@ -287,8 +321,9 @@
         
     
 
+                            </div>
                         </div>
-                    </div>
+                    </nav>
                 </main>
 
                 
@@ -300,21 +335,24 @@
             </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > night
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > trankwilo-dark
+              // Expose theme config for global use (e.g., trankwilo.js)
               window.defaultColorset = "dark";
-              window.themeMap = { "dark": "night", "light": "lofi" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "night";
-            </script>
-            <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js" defer></script>
-            <script>
+              window.defaultBrightness = "normal";
+              window.themeMap = { "dark": "trankwilo-dark", "light": "trankwilo-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "trankwilo-dark";
+
               document.addEventListener('DOMContentLoaded', async () => {
-                var currentTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                // Theme mapping - maps user-friendly names to actual DaisyUI theme names
+                var themeMapping = { "trankwilo-dark": "night", "trankwilo-light": "lofi" };
+                var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
                 var mermaidTheme = "dark";
-                if(currentTheme == "lofi") {
+                if(currentUserTheme == "trankwilo-light") {
                   mermaidTheme = "light";
                 }
-                mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+              mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
                 const mermaidElements = document.querySelectorAll('.mermaid');
 
                 if (mermaidElements.length > 0) {
@@ -424,7 +462,11 @@
                                                 
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/mermaid">Mermaid Chart</a></li>
                                                 
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/math">Math</a></li>
+                                                
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/pretty-link">Pretty Link</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/carousel">Carousel</a></li>
                                                 
                                                 
                                             </ul>
@@ -466,7 +508,7 @@
 <footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
     <aside>
         <p>
-            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>
+            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://codeberg.org/salif/trankwilo'>Trankwilo</a>
         </p>
     </aside>
 </footer>
@@ -482,7 +524,7 @@
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/fuse.min.js"></script>
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/search_index.ko.js"></script>
         
-        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/goyo.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/trankwilo.js"></script>
     
 </body>
 </html>

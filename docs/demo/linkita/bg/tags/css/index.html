@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="bg">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="bg">
 
 <head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8" />
@@ -24,11 +24,9 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
@@ -39,9 +37,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -49,7 +47,7 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/" class="text-2xl font-semibold">Линкита</a>
         <button type="button" title="Превключване на цветовата схема" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
       </div>
@@ -98,7 +96,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <h1 class="mb-16">#css</h1>
 <!-- Page List -->
@@ -115,7 +113,7 @@
     />
   </figure>
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">Ръководство за синтаксиса на Маркдаун</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">Ръководство за синтаксиса на Маркдаун</h2>
   <div class="not-prose my-1 truncate">
     <p>Примерна статия, демонстрираща основния синтаксис на Маркдаун и форматиране на HTML елементи.</p>
   </div>
@@ -124,17 +122,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 окт 2022</time><span
         class="middot"></span><time
-    datetime="PT0H3M0S">3&nbsp;мин</time><span
-      class="middot"></span><span>Салиф</span>
+    datetime="PT0H3M0S">3&nbsp;мин</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/markdown-syntax/">Ръководство за синтаксиса на Маркдаун</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/markdown-syntax/">Ръководство за синтаксиса на Маркдаун</a>
 </section>
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">Шорткодове</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">Шорткодове</h2>
   <div class="not-prose my-1 truncate">
     <p>Шорткодовете на темата Линкита.</p>
   </div>
@@ -143,13 +140,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 окт 2022</time><span
         class="middot"></span><time
-    datetime="PT0H2M0S">2&nbsp;мин</time><span
-      class="middot"></span><span>Салиф</span>
+    datetime="PT0H2M0S">2&nbsp;мин</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/shortcodes/">Шорткодове</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/shortcodes/">Шорткодове</a>
 </section>
 <nav class="not-prose mt-16 flex font-bold">
+  <a
+    class="rounded-full bg-black px-4 py-3 text-sm text-white no-underline duration-75 active:scale-95 dark:bg-white/80 dark:text-black"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/tags/" accesskey=","
+    >&#8249; Етикети</a>
 </nav>
 
 

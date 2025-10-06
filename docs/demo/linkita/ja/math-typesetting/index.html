@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="ja">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="ja">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
   <meta charset="utf-8" />
@@ -51,18 +51,16 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
   <link rel="icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/android-icon.png?h=8d80ec95446bd2c36826" />
   <script src="https://salif.github.io/zola-themes-collection/demo/linkita/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/katex/katex.min.css?h=19095127357ed6d29fe0" />
-  <script defer src="https://salif.github.io/zola-themes-collection/demo/linkita/katex/katex.min.js?h=e8d885505949f3a5f4ab"></script>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/katex/katex.min.css?h=f3f371d2ca5058fef3a1" />
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/linkita/katex/katex.min.js?h=79bc41bf97a7e242ce99"></script>
   <script defer src="https://salif.github.io/zola-themes-collection/demo/linkita/katex/contrib/auto-render.min.js?h=bb53eb953394531aae36"></script>
   <script>document.addEventListener("DOMContentLoaded", window.linkita.initKatex);</script>
   <!-- Begin Head End inject -->
@@ -70,9 +68,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -80,11 +78,11 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/" class="text-2xl font-semibold">Linkita</a>
         <button type="button" title="配色を切り替える" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
         <button type="button" title="ページの翻訳へ" accesskey=";"
-          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
         <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
       </div>
@@ -133,7 +131,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <article>
   <!-- Begin Page Start inject -->
@@ -141,30 +139,31 @@
   <!-- End Page Start inject -->
 
   <header class="mb-16">
-    <h1 class="!my-0 pb-2.5">数式組版</h1>
+    <h1 class="my-0! pb-2.5">数式組版</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">2022年10月20日</time><span
         class="middot"></span><time
-    datetime="PT0H1M0S">1&nbsp;分</time>
+    datetime="PT0H1M0S">1&nbsp;分</time><span
+      class="middot"></span><span>142&nbsp;文字</span>
 </div>
 
   </header>
   <!-- TOC -->
-<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+<nav class="block-bg prose-a:secondary-link mb-12 rounded-lg p-2 text-lg">
   <details>
     <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
       <span class="cursor-pointer">コンテンツ</span>
     </summary>
     <div class="px-2">
       <ul>
-        <li>
+        <li class="ps-[0px]">
           <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/math-typesetting/#li">例</a>
           <ul>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/math-typesetting/#inrainshu-shi">インライン数式</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/ja/math-typesetting/#burotukushu-shi">ブロック数式</a>
             </li>
           </ul>
@@ -172,7 +171,7 @@
       </ul>
     </div>
   </details>
-</div>
+</nav>
 
   <!-- Content -->
   <section><p>Linkitaテーマは <a href="https://katex.org/">KaTeX</a> を利用して $\LaTeX$ の数式をサポートします。</p>

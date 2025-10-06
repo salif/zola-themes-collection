@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="en">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="en">
 
 <head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8" />
@@ -19,11 +19,9 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f6f8fa; --header: #f6f8fa; color-scheme: light;}
-  :root.dark{--bg: #1d212c; --header: #1d212c; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f6f8fa; --header: #f6f8fa;} :root.dark{--bg: #1d212c; --header: #1d212c;}</style>
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
   <script src="https://salif.github.io/zola-themes-collection/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
   <!-- Begin Head End inject -->
@@ -31,9 +29,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -41,7 +39,7 @@
           href="https://salif.github.io/zola-themes-collection/" class="text-2xl font-semibold">Zola Themes</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
       </div>
@@ -72,7 +70,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <script>
   const p = window.location.pathname;
@@ -83,7 +81,7 @@
     window.location.href.replace(p.substring(0, b+6+n), p.substring(0, b+6+n) + "/404.html?err="));
   }
 </script>
-<h1 class="absolute inset-x-8 bottom-20 top-0 flex items-center justify-center text-6xl">404: Page not found</h1>
+<h1 class="absolute inset-x-8 top-0 bottom-20 flex items-center justify-center text-6xl">404: Page not found</h1>
 
   </main>
   <!-- Footer -->

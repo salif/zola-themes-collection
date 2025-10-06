@@ -86,9 +86,9 @@ function buildTheme(themePath, themeName, baseURL) {
 	}
 
 	let configFile
-	if (fs.existsSync("config.toml")) {
+	if (fs.existsSync(path.join(themePath, "config.toml"))) {
 		configFile = "config.toml"
-	} else if (fs.existsSync("config.example.toml")) {
+	} else if (fs.existsSync(path.join(themePath, "config.example.toml"))) {
 		configFile = "config.example.toml"
 	} else {
 		errors.push(`config.toml not found! themes/${themeName}`)

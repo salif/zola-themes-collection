@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="zh">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="zh">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
   <meta charset="utf-8" />
@@ -54,11 +54,9 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
@@ -69,9 +67,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -79,11 +77,11 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/" class="text-2xl font-semibold">林基塔</a>
         <button type="button" title="切换颜色方案" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
         <button type="button" title="转到页面翻译" accesskey=";"
-          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
         <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
       </div>
@@ -132,7 +130,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <article>
   <!-- Begin Page Start inject -->
@@ -140,14 +138,15 @@
   <!-- End Page Start inject -->
 
   <header class="mb-16">
-    <h1 class="!my-0 pb-2.5">Markdown 语法指南</h1>
+    <h1 class="my-0! pb-2.5">Markdown 语法指南</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">2022年10月20日</time><span
         class="middot"></span>↻ <time
       datetime="2025-01-23T00:00:00+00:00">2025年01月23日</time><span
         class="middot"></span><time
-    datetime="PT0H4M0S">4&nbsp;分钟</time>
+    datetime="PT0H4M0S">4&nbsp;分钟</time><span
+      class="middot"></span><span>708&nbsp;字</span>
 </div>
 
   </header>
@@ -161,44 +160,44 @@
     />
   </figure>
   <!-- TOC -->
-<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+<nav class="block-bg prose-a:secondary-link mb-12 rounded-lg p-2 text-lg">
   <details>
     <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
       <span class="cursor-pointer">目录</span>
     </summary>
     <div class="px-2">
       <ul>
-        <li>
+        <li class="ps-[0px]">
           <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#biao-ti">标题</a>
         </li>
-        <li>
+        <li class="ps-[0px]">
           <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#h1">H1</a>
           <ul>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#h2">H2</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#duan-luo">段落</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#yin-yong-kuai">引用块</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#lian-jie">链接</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#tu-pian">图片</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#biao-ge">表格</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#dai-ma-kuai">代码块</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#lie-biao-lei-xing">列表类型</a>
             </li>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/markdown-syntax/#qi-ta-yuan-su-abbr-sub-sup-kbd-mark">其他元素 — abbr, sub, sup, kbd, mark</a>
             </li>
           </ul>
@@ -206,7 +205,7 @@
       </ul>
     </div>
   </details>
-</div>
+</nav>
 
   <!-- Content -->
   <section><p>本文提供了一个基本的 Markdown 语法示例，这些语法可以在 Zola 内容文件中使用。同时，本文也展示了基本的 HTML 元素在 林基塔 主题中是否会使用 CSS 进行装饰。</p>

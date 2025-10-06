@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="ar">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="ar">
 
 <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
   <meta charset="utf-8" />
@@ -14,6 +14,8 @@
   <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/" />
   <link rel="canonical" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/" />
   <meta property="og:type" content="profile" />
+  <meta name="fediverse:creator" content="@13@sharkey.world" />
+  <link rel="me" href="https://sharkey.world/@13" />
   <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/linkita/images/screenshot.png" />
   <meta property="og:image:alt" content="لقطة شاشة لهذا الموقع." />
   <meta property="og:image:width" content="1360" />
@@ -24,15 +26,13 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
+  <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/home.svg" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/codeberg.svg" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/github.svg" />
-  <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/home.svg" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/bluesky.svg" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/rss.svg" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
@@ -44,9 +44,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -54,7 +54,7 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/" class="text-2xl font-semibold">لينكيتا</a>
         <button type="button" title="تبديل مخطط الألوان" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
       </div>
@@ -103,34 +103,18 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
     
 <!-- Profile -->
 <div class="mb-16 flex items-start">
-  <div>
+  <div class="ml-4 lg:ml-6">
     <h1 class="mb-2 text-3xl font-bold">ساليف</h1>
     <div class="mb-2 break-words">
       مرحبًا! انا المؤلف.
     </div>
     <nav class="flex justify-start space-x-3 dark:invert">
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
-        style="--url: url(icons/codeberg.svg);"
-        href="https://codeberg.org/salif"
-        target="_blank"
-        rel="me"
-        title="codeberg"
-        >codeberg</a>
-      <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
-        style="--url: url(icons/github.svg);"
-        href="https://github.com/salif"
-        target="_blank"
-        rel="me"
-        title="github"
-        >github</a>
-      <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/home.svg);"
         href="https://salif.eu/"
         target="_blank"
@@ -138,15 +122,31 @@
         title="home"
         >home</a>
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
+        style="--url: url(icons/codeberg.svg);"
+        href="https://codeberg.org/salif"
+        target="_blank"
+        rel="me"
+        title="codeberg"
+        >codeberg</a>
+      <a
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
+        style="--url: url(icons/github.svg);"
+        href="https://github.com/salif"
+        target="_blank"
+        rel="me"
+        title="github"
+        >github</a>
+      <a
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/bluesky.svg);"
-        href="https://bsky.app/profile/bg.salif.eu"
+        href="https://bsky.app/profile/did:plc:eirne2vlczwdejeegserrfyr"
         target="_blank"
         rel="me"
         title="bluesky"
         >bluesky</a>
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/rss.svg);"
         href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/salif/atom.xml"
         target="_blank"
@@ -171,7 +171,7 @@
     />
   </figure>
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">دليل تنسيق ماركداون</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">دليل تنسيق ماركداون</h2>
   <div class="not-prose my-1 truncate">
     <p>نموذج مقال يعرض تنسيق ماركداون الأساسي وتنسيق عناصر HTML.</p>
   </div>
@@ -180,17 +180,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 أكت, 2022</time><span
         class="middot"></span><time
-    datetime="PT0H3M0S">3&nbsp;دقائق</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>ساليف</span>
+    datetime="PT0H3M0S">3&nbsp;دقائق</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/">دليل تنسيق ماركداون</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/markdown-syntax/">دليل تنسيق ماركداون</a>
 </section>
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">تنضيد المعادلات الرياضية</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">تنضيد المعادلات الرياضية</h2>
   <div class="not-prose my-1 truncate">
     <p>دليل موجز لإعداد KaTeX.</p>
   </div>
@@ -199,17 +198,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 أكت, 2022</time><span
         class="middot"></span><time
-    datetime="PT0H1M0S">1&nbsp;دقائق</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>ساليف</span>
+    datetime="PT0H1M0S">1&nbsp;دقائق</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/math-typesetting/">تنضيد المعادلات الرياضية</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/math-typesetting/">تنضيد المعادلات الرياضية</a>
 </section>
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">الاختصارات</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">الاختصارات</h2>
   <div class="not-prose my-1 truncate">
     <p>اختصارات قالب لينكيتا.</p>
   </div>
@@ -218,13 +216,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20 أكت, 2022</time><span
         class="middot"></span><time
-    datetime="PT0H2M0S">2&nbsp;دقائق</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>ساليف</span>
+    datetime="PT0H2M0S">2&nbsp;دقائق</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/shortcodes/">الاختصارات</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/shortcodes/">الاختصارات</a>
 </section>
 <nav class="not-prose mt-16 flex font-bold">
+  <a
+    class="rounded-full bg-black px-4 py-3 text-sm text-white no-underline duration-75 active:scale-95 dark:bg-white/80 dark:text-black"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/ar/authors/" accesskey=","
+    >&#8249; الكتّاب</a>
 </nav>
 
 

@@ -23,18 +23,18 @@
 
     
         
-            <meta name="description" content="How to install Goyo and get started." />
+            <meta name="description" content="How to install Trankwilo and get started." />
         
     
 
-    <title>Installation | Goyo</title>
+    <title>Installation | Trankwilo</title>
 
     
     
 
       <!-- SEO: Open Graph / Twitter Card -->
-      <meta property="og:title" content="Installation | Goyo" />
-      <meta property="og:description" content="How to install Goyo and get started." />
+      <meta property="og:title" content="Installation | Trankwilo" />
+      <meta property="og:description" content="How to install Trankwilo and get started." />
       <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/" />
       <meta property="og:type" content="website" />
       
@@ -43,7 +43,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Installation" />
-      <meta name="twitter:description" content="How to install Goyo and get started." />
+      <meta name="twitter:description" content="How to install Trankwilo and get started." />
       
       <meta name="twitter:site" content="@hahwul" />
       
@@ -57,7 +57,10 @@
       <!-- CSS -->
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/main.css">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/katex.min.css">
 
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/katex.min.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_code.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_heading_link.js"></script>
 
@@ -69,14 +72,39 @@
 
 <!-- Search Modal -->
 <input type="checkbox" id="search-modal" class="modal-toggle" />
-<div class="modal modal-top sm:modal-middle">
-    <div class="modal-box relative">
-        <label for="search-modal" class="btn btn-sm btn-ghost absolute right-2 top-2">✕</label>
-        <div class="search-container py-4 h-96">
-            <input id="search" type="search" placeholder="Search.." class="input input-bordered w-full bg-transparent focus:outline-none">
-            <div class="search-results overflow-y-auto h-full no-scrollbar">
-                <div class="search-results__header my-2 text-xs"></div>
-                <ul class="search-results__items menu p-2"></ul>
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 max-h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
             </div>
         </div>
     </div>
@@ -97,15 +125,17 @@
     </div>
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl">
+        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/goyo.png" alt="Goyo" class="h-18 w-auto" />
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.png" alt="Trankwilo" class="h-18 w-auto" />
             
         </a>
     </div>
     <!-- Desktop Menu -->
     <div class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal px-1 items-center">
+            
+            
             
                 
                     
@@ -119,9 +149,9 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://github.com/hahwul/goyo">
+                            <a class="btn btn-ghost hover:no-underline" href="https://codeberg.org/salif/trankwilo">
                                 <i class="fa-brands fa-github"></i>
-                                GitHub
+                                Source
                             </a>
                         </li>
                     
@@ -167,13 +197,13 @@
                             <path d="M19.1 18h-6.2"></path>
                         </svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg">
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg min-w-max whitespace-nowrap">
                         
                             
                                 
                                 
                                 
-                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/get_started/installation/">ko</a></li>
+                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/get_started/installation/">한국어</a></li>
                                 
                             
                             
@@ -206,9 +236,9 @@
                     
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1>Installation</h1>
-        <p class="text-gray-500">How to install Goyo and get started.</p>
+        <p class="text-gray-500">How to install Trankwilo and get started.</p>
     </div>
-    <p>Goyo is a theme for Zola. To use this documentation, you need to install Zola first. You can install it on various operating systems with a simple command like the one below.</p>
+    <p>Trankwilo is a theme for Zola. To use this documentation, you need to install Zola first. You can install it on various operating systems with a simple command like the one below.</p>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5c6773;"># macOS Example
 </span><span style="color:#ffd580;">brew</span><span> install zola
 </span></code></pre>
@@ -218,20 +248,20 @@
 </span><span style="color:#f28779;">cd</span><span> docs
 </span></code></pre>
 <p>You can then run the local development server with the <code>zola serve</code> command and view your site at <code>http://localhost:1111</code>.</p>
-<h2 id="install-the-goyo-theme">Install the Goyo Theme</h2>
+<h2 id="install-the-trankwilo-theme">Install the Trankwilo Theme</h2>
 <p>The easiest way to install a theme in Zola is to clone it or add it as a submodule into the <code>themes</code> subdirectory of your Zola project.</p>
 <p>Clone example</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">git</span><span> clone https://github.com/hahwul/goyo themes/goyo
+<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">git</span><span> clone https://codeberg.org/salif/trankwilo themes/trankwilo
 </span></code></pre>
 <p>Submodule example</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">git</span><span> submodule add https://github.com/hahwul/goyo themes/goyo
+<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">git</span><span> submodule add</span><span style="color:#ffcc66;"> -b</span><span> trankwilo https://codeberg.org/salif/trankwilo themes/trankwilo
 </span></code></pre>
-<h2 id="update-the-goyo-theme">Update the Goyo Theme</h2>
-<p>If you want to update the Goyo theme to the latest version, you can do so easily:</p>
+<h2 id="update-the-trankwilo-theme">Update the Trankwilo Theme</h2>
+<p>If you want to update the Trankwilo theme to the latest version, you can do so easily:</p>
 <ul>
 <li>
 <p>If you cloned the theme:</p>
-<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#f28779;">cd</span><span> themes/goyo
+<pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#f28779;">cd</span><span> themes/trankwilo
 </span><span style="color:#ffd580;">git</span><span> pull
 </span></code></pre>
 </li>
@@ -242,13 +272,13 @@
 </span></code></pre>
 </li>
 </ul>
-<p>This will ensure you always have the latest features and fixes from the Goyo theme.</p>
+<p>This will ensure you always have the latest features and fixes from the Trankwilo theme.</p>
 <h2 id="set-the-theme-in-config-toml">Set the theme in config.toml</h2>
-<p>This is the final step. Set the theme in your <code>config.toml</code> file to use Goyo.</p>
+<p>This is the final step. Set the theme in your <code>config.toml</code> file to use Trankwilo.</p>
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#73d0ff;">title </span><span>= </span><span style="color:#bae67e;">&quot;Your App&quot;
-</span><span style="color:#73d0ff;">theme </span><span>= </span><span style="color:#bae67e;">&quot;goyo&quot;
+</span><span style="color:#73d0ff;">theme </span><span>= </span><span style="color:#bae67e;">&quot;trankwilo&quot;
 </span></code></pre>
-<p>Now, when you run Zola, it will use the Goyo theme.</p>
+<p>Now, when you run Zola, it will use the Trankwilo theme.</p>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">zola</span><span> serve
 </span></code></pre>
 <p>However, since you don't have any content yet, you will only see a blank page with a brilliant color. In the next document, we'll create our first page.</p>
@@ -259,23 +289,45 @@
 
 
 
-                    <div class="flex justify-between mt-8">
-                        <div class="prev-link">
-                            
+                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="prev-nav-item">
+                                
     
         
-        <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/">‹ Get Started</a>
+        <a class="nav-button nav-button-prev group" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Get Started</div>
+            </div>
+        </a>
     
 
-                        </div>
-                        <div class="next-link">
-                            
+                            </div>
+                            <div class="next-nav-item">
+                                
     
-        <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/creating-content/">Creating a Content ›</a>
+        <a class="nav-button nav-button-next group" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/creating-content/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <span class="nav-button-label">Next</span>
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+                <div class="nav-button-title">Creating a Content</div>
+            </div>
+        </a>
     
 
+                            </div>
                         </div>
-                    </div>
+                    </nav>
                 </main>
 
                 
@@ -288,13 +340,13 @@
             
                 <li>
                     
-                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/installation/#install-the-goyo-theme" class="toc-link">Install the Goyo Theme</a>
+                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/installation/#install-the-trankwilo-theme" class="toc-link">Install the Trankwilo Theme</a>
                     
                 </li>
             
                 <li>
                     
-                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/installation/#update-the-goyo-theme" class="toc-link">Update the Goyo Theme</a>
+                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/installation/#update-the-trankwilo-theme" class="toc-link">Update the Trankwilo Theme</a>
                     
                 </li>
             
@@ -314,21 +366,24 @@
             </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > night
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > trankwilo-dark
+              // Expose theme config for global use (e.g., trankwilo.js)
               window.defaultColorset = "dark";
-              window.themeMap = { "dark": "night", "light": "lofi" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "night";
-            </script>
-            <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js" defer></script>
-            <script>
+              window.defaultBrightness = "normal";
+              window.themeMap = { "dark": "trankwilo-dark", "light": "trankwilo-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "trankwilo-dark";
+
               document.addEventListener('DOMContentLoaded', async () => {
-                var currentTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                // Theme mapping - maps user-friendly names to actual DaisyUI theme names
+                var themeMapping = { "trankwilo-dark": "night", "trankwilo-light": "lofi" };
+                var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
                 var mermaidTheme = "dark";
-                if(currentTheme == "lofi") {
+                if(currentUserTheme == "trankwilo-light") {
                   mermaidTheme = "light";
                 }
-                mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+              mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
                 const mermaidElements = document.querySelectorAll('.mermaid');
 
                 if (mermaidElements.length > 0) {
@@ -438,7 +493,11 @@
                                                 
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/mermaid">Mermaid Chart</a></li>
                                                 
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/math">Math</a></li>
+                                                
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/pretty-link">Pretty Link</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/carousel">Carousel</a></li>
                                                 
                                                 
                                             </ul>
@@ -480,7 +539,7 @@
 <footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
     <aside>
         <p>
-            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>
+            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://codeberg.org/salif/trankwilo'>Trankwilo</a>
         </p>
     </aside>
 </footer>
@@ -496,7 +555,7 @@
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/fuse.min.js"></script>
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/search_index.en.js"></script>
         
-        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/goyo.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/trankwilo.js"></script>
     
 </body>
 </html>

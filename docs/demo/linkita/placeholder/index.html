@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="en">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="en">
 
 <head prefix="og: https://ogp.me/ns# article: https://ogp.me/ns/article#">
   <meta charset="utf-8" />
@@ -25,18 +25,15 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:locale" content="en_US" />
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/placeholder/" hreflang="en" />
-  <!-- No locale for gb -->
   <link rel="alternate" href="https://salif.github.io/zola-themes-collection/demo/linkita/gb/placeholder/" hreflang="art-x-globasa" />
   <link rel="alternate" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/linkita/atom.xml" title="Linkita | Atom" />
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="icon" type="image/x-icon" sizes="16x16" href="https://salif.github.io/zola-themes-collection/demo/linkita/favicon.ico" />
   <link rel="apple-touch-icon" type="image/png" href="https://salif.github.io/zola-themes-collection/demo/linkita/apple-touch-icon.png?h=58bee300054c5308feb3" />
@@ -48,9 +45,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -58,16 +55,16 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/" class="text-2xl font-semibold">Linkita</a>
         <button type="button" title="Switch color scheme" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
         <button type="button" title="Search" accesskey="/"
           onclick="window.linkita.toggleSearch();"
-          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
+          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
         ></button>
         <script>window.linkita.initSearchButton({ scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.en.js"] });</script>
         <button type="button" title="Go to translation of the page" accesskey=";"
-          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
+          class="btn-translations hidden ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] bg-center bg-no-repeat bg-cover [background-image:var(--icon-translations)] dark:invert"
         ></button>
         <script>window.linkita.initTranslationsButton({btn: document.querySelector(".btn-translations"), rel: "false"});</script>
       </div>
@@ -116,7 +113,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
       <!-- Search -->
 <div id="linkita-search-wrapper" class="hidden">
   <ul id="linkita-search-results"></ul>
@@ -129,37 +126,41 @@
   <!-- End Page Start inject -->
 
   <header class="mb-16">
-    <h1 class="!my-0 pb-2.5">Placeholder Text</h1>
+    <h1 class="my-0! pb-2.5">Placeholder Text</h1>
     <!-- Page Info -->
 <div class="text-sm antialiased opacity-80"><time
       datetime="2025-04-12T00:00:00+00:00">2025-04-12</time><span
         class="middot"></span>↻ <time
       datetime="2025-04-22T00:00:00+00:00">2025-04-22</time><span
         class="middot"></span><time
-    datetime="PT0H2M0S">2&nbsp;min</time>
+    datetime="PT0H6M0S">6&nbsp;min</time><span
+      class="middot"></span><span>1,062&nbsp;words</span>
 </div>
 
   </header>
   <!-- TOC -->
-<div class="block-bg mb-12 rounded-lg p-2 text-lg">
+<nav class="block-bg prose-a:secondary-link mb-12 rounded-lg p-2 text-lg">
   <details>
     <summary class="select-none py-0.5 lg:py-1 pl-4" accesskey="=">
       <span class="cursor-pointer">Table of Contents</span>
     </summary>
     <div class="px-2">
       <ul>
-        <li>
+        <li class="ps-[0px]">
           <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/placeholder/#vagus-elidunt">Vagus elidunt</a>
           <ul>
-            <li>
+            <li class="ps-[0px]">
               <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/placeholder/#mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat</a>
+            </li>
+            <li class="ps-[0px]">
+              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/linkita/placeholder/#maecenas-eu-maximus-ipsum">Maecenas eu maximus ipsum</a>
             </li>
           </ul>
         </li>
       </ul>
     </div>
   </details>
-</div>
+</nav>
 
   <!-- Content -->
   <section><p>Lorem est tota propiore conpellat pectoribus de pectora summo. <span id="continue-reading"></span>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.</p>
@@ -178,14 +179,23 @@
 <li>Quidem et</li>
 </ol>
 <h2 id="vagus-elidunt">Vagus elidunt</h2>
-<figure class="horizontal-scroll">
-<svg style="background: #fff;" xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 496 373" height="373" width="496"><g fill="none"><path stroke="#000" stroke-width=".75" d="M.599 372.348L495.263 1.206M.312.633l494.95 370.853M.312 372.633L247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134L165.104 124.515"></path><path stroke="#ED1C24" stroke-width=".75" d="M275.73 41.616h166.224v249.05H275.73zM54.478 41.616h166.225v249.052H54.478z"></path><path stroke="#000" stroke-width=".75" d="M.479.375h495v372h-495zM247.979.875v372"></path><ellipse cx="498.729" cy="177.625" rx=".75" ry="1.25"></ellipse><ellipse cx="247.229" cy="377.375" rx=".75" ry="1.25"></ellipse></g></svg>
+<figure class="inline-svg">
+<svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 496 373" height="373" width="496"><g fill="none"><path stroke="#000" stroke-width=".75" d="M.599 372.348L495.263 1.206M.312.633l494.95 370.853M.312 372.633L247.643.92M248.502.92l246.76 370.566M330.828 123.869V1.134M330.396 1.134L165.104 124.515"></path><path stroke="#ED1C24" stroke-width=".75" d="M275.73 41.616h166.224v249.05H275.73zM54.478 41.616h166.225v249.052H54.478z"></path><path stroke="#000" stroke-width=".75" d="M.479.375h495v372h-495zM247.979.875v372"></path><ellipse cx="498.729" cy="177.625" rx=".75" ry="1.25"></ellipse><ellipse cx="247.229" cy="377.375" rx=".75" ry="1.25"></ellipse></g></svg>
+<figcaption>Van de Graaf canon</figcaption>
 </figure>
 <p><a href="https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon">The Van de Graaf Canon</a></p>
 <h3 id="mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat</h3>
 <p>Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. <strong>Faces illo pepulere</strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.</p>
 <p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.</p>
 <p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel <strong>mitis temploque</strong> vocatus, inque alis, <em>oculos nomen</em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides <strong>parte</strong>.</p>
+<h3 id="maecenas-eu-maximus-ipsum">Maecenas eu maximus ipsum</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce porta, nisl id malesuada malesuada, dolor dolor suscipit eros, quis condimentum nisl ante at lorem. Donec egestas, massa ac ullamcorper ultricies, orci mauris malesuada nunc, ac egestas nisl eros id metus. Sed dapibus purus faucibus efficitur faucibus. Suspendisse varius eget lectus sit amet posuere. Cras sollicitudin mollis condimentum. Fusce sit amet nibh sed nunc dignissim consequat mattis quis sapien. Quisque tincidunt tellus nisl, sed tristique turpis egestas at. Curabitur pretium vitae sem eu commodo. Fusce nisi est, porttitor quis convallis vitae, malesuada vel nibh.</p>
+<p>Vivamus in massa quis nisi ornare vehicula vel a odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus et felis velit. Aenean eu risus id ante placerat interdum. Pellentesque sodales, lacus et consectetur eleifend, elit elit ultricies magna, at congue elit sem sed sapien. Mauris accumsan sodales ex at tempus. Donec ut lectus ac mauris pulvinar scelerisque.</p>
+<p>Sed ultricies elit quis eros mattis auctor. Aliquam malesuada, neque tempus egestas venenatis, risus tortor tempor nunc, et finibus orci metus quis neque. Etiam eu tortor maximus mi pulvinar consequat at ac leo. Duis consectetur maximus convallis. Vestibulum eu neque ac libero posuere accumsan. In id eros molestie, condimentum leo nec, tincidunt magna. Quisque consectetur, eros vel feugiat blandit, odio lacus placerat diam, eget ultricies nisi augue id lorem. Vestibulum in augue sem. Cras sit amet nunc sed tortor porta vestibulum. Nunc pellentesque, justo ut fermentum cursus, purus lorem tincidunt velit, nec pulvinar odio lectus nec diam. Cras venenatis sit amet sapien id congue.</p>
+<p>Etiam non libero pulvinar, suscipit sem eu, consectetur metus. In gravida venenatis pulvinar. Morbi commodo nisi at venenatis rhoncus. Duis ac elit odio. Vestibulum vel interdum ante. Mauris ullamcorper nibh quis tincidunt rhoncus. Nulla nec pulvinar elit, vitae efficitur risus. Nullam commodo iaculis condimentum. Mauris euismod mi ut porta convallis. Vivamus dui risus, vestibulum non dolor at, gravida efficitur diam. Sed placerat, odio non laoreet tincidunt, mauris ligula aliquam neque, at cursus magna est ac ante. In ultrices eget mi varius pulvinar. Donec purus ipsum, lobortis sed ante vitae, ullamcorper imperdiet neque. Etiam bibendum quis massa et tempor. Sed diam odio, interdum nec felis at, hendrerit varius dui.</p>
+<p>Vestibulum lobortis tincidunt bibendum. Fusce a tortor sed justo varius imperdiet ac sed elit. Etiam metus sem, iaculis vitae lectus ac, venenatis laoreet lacus. Sed pellentesque massa purus, et euismod quam sagittis at. Fusce enim ipsum, rutrum eget volutpat eu, dignissim vitae velit. Cras iaculis tellus enim, vitae vehicula lorem euismod nec. Integer rhoncus urna lorem, eu aliquam risus pellentesque sed. Sed dapibus, orci id iaculis suscipit, urna lorem sollicitudin orci, et dictum nunc sapien ac ipsum. Morbi orci metus, vestibulum vel lorem sit amet, lobortis aliquam lacus. Nam vestibulum, ipsum non placerat suscipit, metus eros auctor erat, nec accumsan mi erat sed leo. Duis at gravida quam. Phasellus pulvinar, dolor et vehicula lacinia, nulla quam sollicitudin enim, a rhoncus elit ipsum id sem. In imperdiet felis a massa elementum tincidunt. Proin sagittis ullamcorper leo ac ullamcorper. Donec pharetra eu ipsum nec varius. Duis commodo ante sit amet elit rutrum eleifend.</p>
+<p>Pellentesque fringilla nisl tristique magna feugiat, ut faucibus odio convallis. Morbi tellus neque, laoreet vitae tortor non, vestibulum luctus elit. Nulla placerat, tortor et dictum congue, nunc neque efficitur neque, eu suscipit nibh leo a ante. Cras efficitur enim eget iaculis sagittis. Donec vehicula magna nec eleifend porttitor. Aliquam erat volutpat. Praesent lacinia sodales lacus, euismod dictum nisi molestie a. Vivamus ac hendrerit ipsum, at vulputate risus. Nunc eu luctus lacus, sed rutrum erat. Mauris placerat leo vitae dui scelerisque, vel maximus lectus tristique. Nam scelerisque sodales dolor ac feugiat.</p>
+<p>Sed placerat tellus at magna imperdiet vehicula. Nulla facilisi. In tristique accumsan malesuada. Proin pretium nulla ultrices volutpat pretium. Integer sit amet pharetra augue. Sed sit amet arcu vitae urna malesuada molestie. Aliquam sit amet nisi aliquet, vestibulum eros eget, volutpat arcu. Nam gravida varius purus ac mattis. Praesent convallis blandit convallis. Etiam consectetur egestas egestas. In dapibus feugiat vestibulum. Praesent et elementum sapien. In scelerisque arcu ac pellentesque aliquet.</p>
 </section>
   <hr />
   <!-- Post Taxonomies -->

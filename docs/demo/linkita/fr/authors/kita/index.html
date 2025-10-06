@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14" lang="fr">
+<html class="not-ready lg:text-base overflow-y-scroll scroll-pt-14 scheme-light dark:scheme-dark" lang="fr">
 
 <head prefix="og: https://ogp.me/ns# profile: https://ogp.me/ns/profile#">
   <meta charset="utf-8" />
@@ -24,11 +24,9 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=53eee0cbd49cb600ef95" />
-  <style>
-  :root{--bg: #f4f4f5; --header: #e4e4e7; color-scheme: light;}
-  :root.dark{--bg: #18181b; --header: #27272a; color-scheme: dark;}
-  </style>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=e5f9dea6af2451fd4951" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=0e5f84b7441420713dd4" />
+  <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/github.svg" />
   <link rel="preload" as="image" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons/home.svg" />
@@ -43,9 +41,9 @@
   <!-- End Head End inject -->
 </head>
 
-<body class="text-black duration-100 ease-out bg-[var(--bg)] dark:text-white">
+<body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="bg-[var(--header)] fixed top-0 z-40 mx-auto min-h-[3.25rem] w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
       <div class="flex items-center min-h-8">
@@ -53,12 +51,12 @@
           href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/" class="text-2xl font-semibold">Linkita</a>
         <button type="button" title="Changer le jeu de couleurs" accesskey="$"
           onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0]
+          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
           bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
         ></button>
         <button type="button" title="Rechercher" accesskey="/"
           onclick="window.linkita.toggleSearch();"
-          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
+          class="btn-search ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px] bg-center bg-no-repeat bg-cover [background-image:var(--icon-search)] dark:invert"
         ></button>
         <script>window.linkita.initSearchButton({ scripts: ["https://salif.github.io/zola-themes-collection/demo/linkita/elasticlunr.min.js", "https://salif.github.io/zola-themes-collection/demo/linkita/search_index.fr.js"] });</script>
       </div>
@@ -107,7 +105,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100%-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
       <!-- Search -->
 <div id="linkita-search-wrapper" class="hidden">
   <ul id="linkita-search-results"></ul>
@@ -116,14 +114,14 @@
     
 <!-- Profile -->
 <div class="mb-16 flex items-start">
-  <div>
+  <div class="ml-4 lg:ml-6">
     <h1 class="mb-2 text-3xl font-bold">Kita</h1>
     <div class="mb-2 break-words">
       Linkita is based on st1020's Kita theme.
     </div>
     <nav class="flex justify-start space-x-3 dark:invert">
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/github.svg);"
         href="https://github.com/st1020/kita"
         target="_blank"
@@ -131,7 +129,7 @@
         title="github"
         >github</a>
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/home.svg);"
         href="https://kita-zola.pages.dev/"
         target="_blank"
@@ -139,7 +137,7 @@
         title="home"
         >home</a>
       <a
-        class="primary-link h-8 w-8 text-[0] [background:var(--url)_center_center/cover_no-repeat]"
+        class="primary-link h-8 w-8 text-[0px] [background:var(--url)_center_center/cover_no-repeat]"
         style="--url: url(icons/rss.svg);"
         href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/authors/kita/atom.xml"
         target="_blank"
@@ -164,7 +162,7 @@
     />
   </figure>
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">Guide de la syntaxe Markdown</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">Guide de la syntaxe Markdown</h2>
   <div class="not-prose my-1 truncate">
     <p>Article d&#x27;exemple présentant la syntaxe Markdown de base et la mise en forme des éléments HTML.</p>
   </div>
@@ -173,17 +171,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20&#x2F;10&#x2F;2022</time><span
         class="middot"></span><time
-    datetime="PT0H3M0S">3&nbsp;min</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>Salif</span>
+    datetime="PT0H3M0S">3&nbsp;min</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/markdown-syntax/">Guide de la syntaxe Markdown</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/markdown-syntax/">Guide de la syntaxe Markdown</a>
 </section>
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">Typographie Mathématique</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">Typographie Mathématique</h2>
   <div class="not-prose my-1 truncate">
     <p>Un guide rapide pour configurer KaTeX.</p>
   </div>
@@ -192,17 +189,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20&#x2F;10&#x2F;2022</time><span
         class="middot"></span><time
-    datetime="PT0H1M0S">1&nbsp;min</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>Salif</span>
+    datetime="PT0H1M0S">1&nbsp;min</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/math-typesetting/">Typographie Mathématique</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/math-typesetting/">Typographie Mathématique</a>
 </section>
 <section
   class="block-bg relative mb-4 rounded-lg p-4 first-of-type:mt-0 last-of-type:mb-0 active:scale-95 lg:mb-6 lg:p-6"
 >
 
-  <h2 class="!my-0 pb-1 !leading-none font-bold">Shortcodes</h2>
+  <h2 class="my-0! pb-1 leading-none! font-bold">Shortcodes</h2>
   <div class="not-prose my-1 truncate">
     <p>Les shortcodes du thème Linkita.</p>
   </div>
@@ -211,13 +207,16 @@
 <div class="text-sm antialiased opacity-80"><time
       datetime="2022-10-20T00:00:00+00:00">20&#x2F;10&#x2F;2022</time><span
         class="middot"></span><time
-    datetime="PT0H2M0S">2&nbsp;min</time><span
-      class="middot"></span><span>Kita</span>,&nbsp;<span>Salif</span>
+    datetime="PT0H2M0S">2&nbsp;min</time>
 </div>
 
-  <a class="absolute inset-0 text-[0]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/shortcodes/">Shortcodes</a>
+  <a class="absolute inset-0 text-[0px]" href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/shortcodes/">Shortcodes</a>
 </section>
 <nav class="not-prose mt-16 flex font-bold">
+  <a
+    class="rounded-full bg-black px-4 py-3 text-sm text-white no-underline duration-75 active:scale-95 dark:bg-white/80 dark:text-black"
+    href="https://salif.github.io/zola-themes-collection/demo/linkita/fr/authors/" accesskey=","
+    >&#8249; Auteurs</a>
 </nav>
 
 

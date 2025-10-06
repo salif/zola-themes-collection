@@ -22,17 +22,17 @@
     </style>
 
     
-        <meta name="description" content="Goyo is Theme" />
+        <meta name="description" content="Trankwilo is Theme" />
     
 
-    <title>Goyo | Goyo</title>
+    <title>Trankwilo | Trankwilo</title>
 
     
     
 
       <!-- SEO: Open Graph / Twitter Card -->
-      <meta property="og:title" content="Goyo | Goyo" />
-      <meta property="og:description" content="Goyo is Theme" />
+      <meta property="og:title" content="Trankwilo | Trankwilo" />
+      <meta property="og:description" content="Trankwilo is Theme" />
       <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/" />
       <meta property="og:type" content="website" />
       
@@ -40,8 +40,8 @@
       
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Goyo" />
-      <meta name="twitter:description" content="Goyo is Theme" />
+      <meta name="twitter:title" content="Trankwilo" />
+      <meta name="twitter:description" content="Trankwilo is Theme" />
       
       <meta name="twitter:site" content="@hahwul" />
       
@@ -55,7 +55,10 @@
       <!-- CSS -->
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/main.css">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/katex.min.css">
 
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/katex.min.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_code.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_heading_link.js"></script>
 
@@ -67,14 +70,39 @@
 
 <!-- Search Modal -->
 <input type="checkbox" id="search-modal" class="modal-toggle" />
-<div class="modal modal-top sm:modal-middle">
-    <div class="modal-box relative">
-        <label for="search-modal" class="btn btn-sm btn-ghost absolute right-2 top-2">✕</label>
-        <div class="search-container py-4 h-96">
-            <input id="search" type="search" placeholder="Search.." class="input input-bordered w-full bg-transparent focus:outline-none">
-            <div class="search-results overflow-y-auto h-full no-scrollbar">
-                <div class="search-results__header my-2 text-xs"></div>
-                <ul class="search-results__items menu p-2"></ul>
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 max-h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
             </div>
         </div>
     </div>
@@ -95,15 +123,17 @@
     </div>
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl">
+        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/goyo.png" alt="Goyo" class="h-18 w-auto" />
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.png" alt="Trankwilo" class="h-18 w-auto" />
             
         </a>
     </div>
     <!-- Desktop Menu -->
     <div class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal px-1 items-center">
+            
+            
             
                 
                     
@@ -117,9 +147,9 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://github.com/hahwul/goyo">
+                            <a class="btn btn-ghost hover:no-underline" href="https://codeberg.org/salif/trankwilo">
                                 <i class="fa-brands fa-github"></i>
-                                GitHub
+                                Source
                             </a>
                         </li>
                     
@@ -165,13 +195,13 @@
                             <path d="M19.1 18h-6.2"></path>
                         </svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg">
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg min-w-max whitespace-nowrap">
                         
                             
                                 
                                 
                                 
-                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/">ko</a></li>
+                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/">한국어</a></li>
                                 
                             
                             
@@ -204,26 +234,53 @@
                     
     
     
-        <div class="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden">
+        <div class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+            <!-- Subtle Animated Background -->
             <div class="absolute inset-0">
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/landing.jpg" alt="Hero Background" class="w-full h-full rounded-none object-cover object-center filter brightness-50">
-            </div>
-            <div class="relative z-10 p-8">
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">Welcome to Goyo!</h1>
-                <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/90 mb-8 drop-shadow-md">Inspired by the Korean word &quot;Goyo&quot; (고요), meaning calm or serene, Goyo is a Zola theme that aims for simplicity and clean documentation. With Goyo, you can easily create beautiful and practical documentation pages.</p>
+                <div class="absolute inset-0 hero-background"></div>
+                <div class="absolute inset-0 opacity-20">
+                    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-gray-500/10 to-slate-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+                    <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-slate-500/10 to-gray-400/10 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
+                </div>
                 
-                    <div class="flex justify-center gap-4">
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/landing.jpg" alt="Hero Background" class="w-full h-full rounded-none object-cover object-center opacity-10">
+                
+            </div>
+            <div class="relative z-10 p-8 max-w-6xl mx-auto">
+                <div class="mb-8">
+                    <span class="inline-block px-6 py-2 rounded-full text-sm font-medium hero-badge mb-6">
+                        ✨ Minimalist Documentation Theme
+                    </span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black tracking-tight mb-8">
+                    <span class="hero-title">
+                        Welcome to Trankwilo!
+                    </span>
+                </h1>
+                <p class="max-w-3xl mx-auto text-xl md:text-2xl hero-description mb-12 leading-relaxed font-light">
+                    Inspired by the Korean word &quot;고요&quot;, meaning calm or serene, Trankwilo is a Zola theme that aims for simplicity and clean documentation. With Trankwilo, you can easily create beautiful and practical documentation pages.
+                </p>
+                
+                    <div class="flex justify-center gap-6 flex-wrap">
                         
                             <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/introduction"
-                               class="btn btn-lg transition-transform transform hover:scale-105
-                                      btn-primary">
-                                Get Started
+                               class="group relative px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105
+                                      
+                                        hero-cta-primary
+                                      ">
+                                <span class="relative z-10">Get Started</span>
+                                
+                                <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-500 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                
                             </a>
                         
-                            <a href="https://github.com/hahwul/goyo"
-                               class="btn btn-lg transition-transform transform hover:scale-105
-                                      btn-ghost text-white">
-                                View on GitHub
+                            <a href="https://codeberg.org/salif/trankwilo"
+                               class="group relative px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105
+                                      
+                                        hero-cta-secondary
+                                      ">
+                                <span class="relative z-10">View on Codeberg</span>
+                                
                             </a>
                         
                     </div>
@@ -234,67 +291,108 @@
 
     
     
-        <div class="bg-base-200 py-20">
-            <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="py-32 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-500/5 to-transparent"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-5xl font-black mb-6">
+                        <span class="hero-title">
+                            Essential Features
+                        </span>
+                    </h2>
+                    <p class="text-xl hero-description max-w-2xl mx-auto">
+                        Clean, minimal, and focused on content
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-book text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-book text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">Documentation Friendly</h3>
-                                <p class="text-base text-base-content/70">Provides a clean writing experience for documentation.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">Documentation Friendly</h3>
+                                <p class="feature-description leading-relaxed">Provides a clean writing experience for documentation.</p>
                             </div>
                         </div>
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-minimize text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-minimize text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">Simple Design</h3>
-                                <p class="text-base text-base-content/70">A theme that pursues minimalism.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">Simple Design</h3>
+                                <p class="feature-description leading-relaxed">A theme that pursues minimalism.</p>
                             </div>
                         </div>
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-bolt text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-palette text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">Fast Speed</h3>
-                                <p class="text-base text-base-content/70">Fast, because we don&#x27;t like slow things.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">Customization and Elegant Landing Page</h3>
+                                <p class="feature-description leading-relaxed">Highly customizable with a beautiful landing page.</p>
                             </div>
                         </div>
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-magnifying-glass-chart text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-magnifying-glass-chart text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">SEO Optimized</h3>
-                                <p class="text-base text-base-content/70">Provides a structure optimized for search engines.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">SEO Optimized</h3>
+                                <p class="feature-description leading-relaxed">Provides a structure optimized for search engines.</p>
                             </div>
                         </div>
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-code text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-code text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">Various Shortcodes</h3>
-                                <p class="text-base text-base-content/70">Offers a variety of useful shortcodes.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">Various Shortcodes</h3>
+                                <p class="feature-description leading-relaxed">Offers a variety of useful shortcodes.</p>
                             </div>
                         </div>
                     
-                        <div class="card bg-base-100 border border-transparent shadow-lg rounded-2xl transition-all duration-300 hover:shadow-2xl hover:border-primary">
-                            <div class="card-body flex flex-col items-center text-center p-8">
+                        <div class="group relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative feature-card rounded-xl p-8 h-full transition-all duration-300 group-hover:scale-105">
                                 
-                                    <i class="fa-solid fa-circle-half-stroke text-4xl mb-4 text-primary"></i>
+                                    <div class="mb-6">
+                                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-lg feature-icon-bg">
+                                            <i class="fa-solid fa-circle-half-stroke text-2xl feature-icon"></i>
+                                        </div>
+                                    </div>
                                 
-                                <h3 class="card-title text-xl font-bold mb-2">Dark &amp; Light Mode</h3>
-                                <p class="text-base text-base-content/70">Supports both dark and light modes.</p>
+                                <h3 class="text-2xl font-bold mb-4 feature-title">Dark &amp; Light Mode</h3>
+                                <p class="feature-description leading-relaxed">Supports both dark and light modes.</p>
                             </div>
                         </div>
                     
@@ -305,84 +403,24 @@
 
     
     
-        <div class="py-20 bg-base-100">
+        <div class="py-24 relative">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-12 text-base-content/90">Tech Stack</h2>
-                <div class="flex justify-center items-center gap-12 flex-wrap">
+                <h2 class="text-3xl font-bold mb-16 text-gray-300">Tech Stack</h2>
+                <div class="flex justify-center items-center gap-16 flex-wrap">
                     
-                        <img src="resources/zola.svg" alt="Zola" class="h-16 md:h-18 w-auto grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" />
-                    
-                        <img src="resources/tailwindcss.svg" alt="Tailwindcss" class="h-16 md:h-18 w-auto grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" />
-                    
-                        <img src="resources/daisyui.svg" alt="DaisyUI" class="h-16 md:h-18 w-auto grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100" />
-                    
-                </div>
-            </div>
-        </div>
-    
-
-    
-    
-        <div class="bg-base-200 py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12 text-base-content/90">What Our Users Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                        <div class="card bg-base-100 border border-gray-500/15 shadow-lg rounded-2xl transform transition-transform hover:-translate-y-2">
-                            <div class="card-body">
-                                <p class="text-base-content/80 mb-6 font-serif italic">"Without extra tools, it includes practical features like search, multilingual support, and comments out of the box"</p>
-                                <div class="flex items-center">
-                                    
-                                        <div class="avatar mr-4">
-                                            <div class="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                <img src="resources/ksg.jpg" />
-                                            </div>
-                                        </div>
-                                    
-                                    <div>
-                                        <p class="font-bold text-base-content">KSG</p>
-                                        <p class="text-sm text-base-content/60">Security Developer</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="group">
+                            <img src="resources/zola.svg" alt="Zola"
+                                 class="h-12 md:h-16 w-auto grayscale opacity-40 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110" />
                         </div>
                     
-                        <div class="card bg-base-100 border border-gray-500/15 shadow-lg rounded-2xl transform transition-transform hover:-translate-y-2">
-                            <div class="card-body">
-                                <p class="text-base-content/80 mb-6 font-serif italic">"It&#x27;s so simple and fast, yet I can apply an incredibly beautiful theme, which I absolutely love! I&#x27;m ready to embark on a journey to find the calm in my heart with this theme!"</p>
-                                <div class="flex items-center">
-                                    
-                                        <div class="avatar mr-4">
-                                            <div class="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                <img src="resources/lina.jpg" />
-                                            </div>
-                                        </div>
-                                    
-                                    <div>
-                                        <p class="font-bold text-base-content">Lina</p>
-                                        <p class="text-sm text-base-content/60">Security Engineer</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="group">
+                            <img src="resources/tailwindcss.svg" alt="Tailwindcss"
+                                 class="h-12 md:h-16 w-auto grayscale opacity-40 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110" />
                         </div>
                     
-                        <div class="card bg-base-100 border border-gray-500/15 shadow-lg rounded-2xl transform transition-transform hover:-translate-y-2">
-                            <div class="card-body">
-                                <p class="text-base-content/80 mb-6 font-serif italic">"The theme is clean and the settings are intuitive, so even first-time users can easily use it!"</p>
-                                <div class="flex items-center">
-                                    
-                                        <div class="avatar mr-4">
-                                            <div class="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                <img src="resources/bori.png" />
-                                            </div>
-                                        </div>
-                                    
-                                    <div>
-                                        <p class="font-bold text-base-content">Bori Bae</p>
-                                        <p class="text-sm text-base-content/60">Security Engineer</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="group">
+                            <img src="resources/daisyui.svg" alt="DaisyUI"
+                                 class="h-12 md:h-16 w-auto grayscale opacity-40 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110" />
                         </div>
                     
                 </div>
@@ -392,14 +430,185 @@
 
     
     
-        <div class="bg-base-100 py-20">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4 text-base-content/90">Contributing</h2>
-                <p class="max-w-2xl mx-auto text-lg text-base-content/70 mb-8">Goyo is an open-source project made with ❤️. If you want to contribute to this project, please see CONTRIBUTING.md and submit a pull request with your cool content!</p>
+        <div class="py-32 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-500/3 to-transparent"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl font-black mb-4">
+                        <span class="hero-title">
+                            What Our Users Say
+                        </span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+                    
+                        <div class="group relative flex">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative testimonial-card rounded-xl p-8 flex flex-col w-full transition-all duration-300 group-hover:scale-105">
+                                <div class="flex items-start mb-6">
+                                    <div class="flex testimonial-stars mb-4">
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                    </div>
+                                </div>
+                                <p class="testimonial-quote mb-8 text-lg italic leading-relaxed flex-grow">"Without extra tools, it includes practical features like search, multilingual support, and comments out of the box"</p>
+                                <div class="flex items-center mt-auto">
+                                    
+                                        <div class="mr-4">
+                                            <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
+                                                <img src="resources/ksg.jpg" class="w-full h-full rounded-full object-cover" />
+                                            </div>
+                                        </div>
+                                    
+                                    <div>
+                                        <p class="font-bold testimonial-author text-lg">KSG</p>
+                                        <p class="testimonial-role">Security Developer &#x2F; OWASP Noir</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="group relative flex">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative testimonial-card rounded-xl p-8 flex flex-col w-full transition-all duration-300 group-hover:scale-105">
+                                <div class="flex items-start mb-6">
+                                    <div class="flex testimonial-stars mb-4">
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                    </div>
+                                </div>
+                                <p class="testimonial-quote mb-8 text-lg italic leading-relaxed flex-grow">"It&#x27;s so simple and fast, yet I can apply an incredibly beautiful theme, which I absolutely love! I&#x27;m ready to embark on a journey to find the calm in my heart with this theme!"</p>
+                                <div class="flex items-center mt-auto">
+                                    
+                                        <div class="mr-4">
+                                            <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
+                                                <img src="resources/lina.jpg" class="w-full h-full rounded-full object-cover" />
+                                            </div>
+                                        </div>
+                                    
+                                    <div>
+                                        <p class="font-bold testimonial-author text-lg">Lina</p>
+                                        <p class="testimonial-role">Security Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="group relative flex">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-500/5 to-gray-500/5 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                            <div class="relative testimonial-card rounded-xl p-8 flex flex-col w-full transition-all duration-300 group-hover:scale-105">
+                                <div class="flex items-start mb-6">
+                                    <div class="flex testimonial-stars mb-4">
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                            </svg>
+                                        
+                                    </div>
+                                </div>
+                                <p class="testimonial-quote mb-8 text-lg italic leading-relaxed flex-grow">"The theme is clean and the settings are intuitive, so even first-time users can easily use it!"</p>
+                                <div class="flex items-center mt-auto">
+                                    
+                                        <div class="mr-4">
+                                            <div class="w-14 h-14 rounded-full testimonial-avatar-border p-0.5">
+                                                <img src="resources/bori.png" class="w-full h-full rounded-full object-cover" />
+                                            </div>
+                                        </div>
+                                    
+                                    <div>
+                                        <p class="font-bold testimonial-author text-lg">Bori Bae</p>
+                                        <p class="testimonial-role">Security Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+    
+    
+        <div class="py-32 relative overflow-hidden">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-800/20 via-gray-800/20 to-slate-700/20"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
+                    <div class="w-96 h-96 bg-gradient-to-r from-slate-500/20 to-gray-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+                </div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h2 class="text-5xl md:text-6xl font-black mb-8">
+                    <span class="hero-title">
+                        Contributing
+                    </span>
+                </h2>
+                <p class="max-w-3xl mx-auto text-xl hero-description mb-12 leading-relaxed">
+                    Trankwilo is an open-source project made with ❤️. If you want to contribute to this project, please see CONTRIBUTING.md and submit a pull request with your cool content!
+                </p>
                 
                 
-                    <a href="https://github.com/hahwul/goyo/blob/main/CONTRIBUTING.md" class="btn btn-primary btn-lg transition-transform transform hover:scale-105">
-                        View Contributing Guide
+                    <a href="https://codeberg.org/salif/trankwilo/src/branch/trankwilo/CONTRIBUTING.md"
+                       class="group relative inline-flex items-center px-12 py-4 text-xl font-bold text-slate-200 bg-gradient-to-r from-slate-600 to-gray-700 rounded-xl shadow-2xl shadow-slate-500/25 transition-all duration-300 transform hover:scale-105 hover:shadow-slate-500/40">
+                        <span class="relative z-10">View Contributing Guide</span>
+                        <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-slate-500 to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <svg class="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
                     </a>
                 
             </div>
@@ -411,14 +620,16 @@
 
 
 
-                    <div class="flex justify-between mt-8">
-                        <div class="prev-link">
-                            
+                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="prev-nav-item">
+                                
+                            </div>
+                            <div class="next-nav-item">
+                                
+                            </div>
                         </div>
-                        <div class="next-link">
-                            
-                        </div>
-                    </div>
+                    </nav>
                 </main>
 
                 
@@ -430,21 +641,24 @@
             </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > night
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > trankwilo-dark
+              // Expose theme config for global use (e.g., trankwilo.js)
               window.defaultColorset = "dark";
-              window.themeMap = { "dark": "night", "light": "lofi" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "night";
-            </script>
-            <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js" defer></script>
-            <script>
+              window.defaultBrightness = "normal";
+              window.themeMap = { "dark": "trankwilo-dark", "light": "trankwilo-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "trankwilo-dark";
+
               document.addEventListener('DOMContentLoaded', async () => {
-                var currentTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                // Theme mapping - maps user-friendly names to actual DaisyUI theme names
+                var themeMapping = { "trankwilo-dark": "night", "trankwilo-light": "lofi" };
+                var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
                 var mermaidTheme = "dark";
-                if(currentTheme == "lofi") {
+                if(currentUserTheme == "trankwilo-light") {
                   mermaidTheme = "light";
                 }
-                mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+              mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
                 const mermaidElements = document.querySelectorAll('.mermaid');
 
                 if (mermaidElements.length > 0) {
@@ -554,7 +768,11 @@
                                                 
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/mermaid">Mermaid Chart</a></li>
                                                 
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/math">Math</a></li>
+                                                
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/pretty-link">Pretty Link</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/carousel">Carousel</a></li>
                                                 
                                                 
                                             </ul>
@@ -596,7 +814,7 @@
 <footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
     <aside>
         <p>
-            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>
+            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://codeberg.org/salif/trankwilo'>Trankwilo</a>
         </p>
     </aside>
 </footer>
@@ -612,7 +830,7 @@
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/fuse.min.js"></script>
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/search_index.en.js"></script>
         
-        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/goyo.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/trankwilo.js"></script>
     
 </body>
 </html>

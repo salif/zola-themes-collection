@@ -385,18 +385,19 @@ theme = "project-portfolio"
 
 [[project]]
 theme = "trankwilo"
-name = "Goyo"
+name = "Trankwilo"
 desc = "A simplicity and clean documentation theme"
 tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
 ### Info{#info-trankwilo}
-- **Author**: [hahwul](https://www.hahwul.com)
+- **Author**: [Salif Mehmed](https://salif.eu)
 - **License**: MIT
-- **Homepage**: <https://github.com/hahwul/goyo>
-- **Main Live Preview**: <https://goyo.hahwul.com>
+- **Homepage**: <https://codeberg.org/salif/trankwilo>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/trankwilo/>
 - **Min Zola version**: 0.17.0
+- **Original**: <https://github.com/hahwul/goyo>
 
 ### Installation{#install-trankwilo}
 Some themes require additional configuration before they can work properly.
@@ -424,7 +425,7 @@ theme = "trankwilo"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Dark mode screenshot of Goyo Zola theme demo website"
+  alt = "Dark mode screenshot of Trankwilo Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
@@ -625,7 +626,7 @@ details = """
 - **Author**: [Alan Pearce](https://alanpearce.eu)
 - **License**: MIT
 - **Homepage**: <https://codeberg.org/alanpearce/zola-bearblog>
-- **Main Live Preview**: <https://zola-bearblog.vercel.app/>
+- **Main Live Preview**: <https://zola-bearblog.alanpearce.eu/>
 - **Min Zola version**: 0.4.0
 - **Original**: <https://github.com/janraasch/hugo-bearblog/>
 
@@ -2074,6 +2075,64 @@ theme = "zola-minimal"
   js = "document.getElementById('info-zola-minimal').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "kodama-theme"
+name = "kodama"
+desc = "Theme insipired by wowchemy academic."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-kodama-theme}
+- **Author**: [Adrien Faure](https://adrien-faure.fr)
+- **License**: MIT
+- **Homepage**: <https://github.com/adfaure/kodama-theme>
+- **Main Live Preview**: <https://adfaure.github.io/kodama-theme/>
+- **Min Zola version**: 0.15
+- **Original**: <https://github.com/wowchemy/wowchemy-hugo-themes>
+
+### Installation{#install-kodama-theme}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/adfaure/kodama-theme.git themes/kodama-theme
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/adfaure/kodama-theme.git themes/kodama-theme
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "kodama-theme"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-kodama-theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of kodama Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/kodama-theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/adfaure/kodama-theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-kodama-theme"
+  js = "document.getElementById('info-kodama-theme').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "noobping"
 name = "noobping"
 desc = "A minimalistic theme for Zola static site generator. It uses the file names as titles and the folder for the menu structure. The theme is designed to be simple and easy to use, with a focus on content."
@@ -3426,6 +3485,63 @@ theme = "coast"
   js = "document.getElementById('info-coast').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "hayflow"
+name = "HayFlow"
+desc = "HayFlow is a minimal and completely modular Zola theme for anyone wishing to have their own landing page."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-hayflow}
+- **Author**: [Cyril Marpaud](https://cyril-marpaud.gitlab.io)
+- **License**: CC-BY-SA 4.0
+- **Homepage**: <https://gitlab.com/cyril-marpaud/hayflow>
+- **Main Live Preview**: <https://cyril-marpaud.gitlab.io>
+- **Min Zola version**: 0.4.0
+
+### Installation{#install-hayflow}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://gitlab.com/cyril-marpaud/hayflow.git themes/hayflow
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://gitlab.com/cyril-marpaud/hayflow.git themes/hayflow
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "hayflow"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-hayflow.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of HayFlow Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/hayflow/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://gitlab.com/cyril-marpaud/hayflow"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-hayflow"
+  js = "document.getElementById('info-hayflow').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "hallo"
 name = "hallo"
 desc = "A single-page theme to introduce yourself."
@@ -3539,3 +3655,60 @@ theme = "persona"
   newtab = false
   url = "#info-persona"
   js = "document.getElementById('info-persona').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "OnePageAPI"
+name = "OnePageAPI"
+desc = "A template for simple single page API introduction"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-OnePageAPI}
+- **Author**: [Vishal Rashmika](https://vishalrashmika.com)
+- **License**: GPL-3.0
+- **Homepage**: <https://github.com/VishalRashmika/OnePageAPI>
+- **Main Live Preview**: <https://vishalrashmika.github.io/OnePageAPI>
+- **Min Zola version**: 0.4.0
+
+### Installation{#install-OnePageAPI}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/VishalRashmika/OnePageAPI.git themes/OnePageAPI
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/VishalRashmika/OnePageAPI.git themes/OnePageAPI
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "OnePageAPI"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-OnePageAPI.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of OnePageAPI Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/OnePageAPI/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/VishalRashmika/OnePageAPI"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-OnePageAPI"
+  js = "document.getElementById('info-OnePageAPI').parentElement.setAttribute('open', true); this.style.display='none';"

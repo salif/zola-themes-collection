@@ -211,10 +211,40 @@
     <!-- Body Start inject -->
     
 
-    <main
-      class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg relative mx-auto min-h-[calc(100vh-9rem)] max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
-    >
+    <div class="flex">
+      <div class="order-1 hidden w-[calc((100%-var(--container-3xl))/2)] lg:block"></div>
+      <aside
+        class="sticky top-0 order-3 mt-48 hidden h-min w-[calc((100%-var(--container-3xl))/2)] lg:block"
+      >
+        
+<nav
+  class="prose prose-neutral dark:prose-invert prose-a:block prose-a:truncate prose-a:font-normal prose-a:secondary-link max-h-lvh overflow-y-auto px-2 pt-18 pb-4"
+>
+  <b class="ml-1.5">Table of Contents</b>
+  <ul>
+    
+    <li>
+      <a href="#vagus-elidunt">Vagus elidunt</a>
       
+      <ul>
+        
+        <li>
+          <a href="#mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat</a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+  </ul>
+</nav>
+
+
+      </aside>
+      <main
+        class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg order-2 mx-auto min-h-[calc(100vh-9rem)] w-full max-w-3xl px-4 pt-24 pb-16 break-words lg:pt-32"
+      >
+        
 <article>
   <!-- Page Start inject -->
   
@@ -243,36 +273,30 @@
   
 
   <!-- TOC -->
-  <!---->
-<div class="block-bg mb-12 flex rounded-lg p-2 text-lg">
+  
+<nav class="block-bg prose-a:secondary-link mb-12 flex rounded-lg p-2 text-lg">
   <details>
     <summary class="cursor-pointer py-1 pl-4">
-      <span>Table of Contents</span>
+      <span class="ml-2">Table of Contents</span>
     </summary>
-    <div class="px-2">
-      <ul>
+    <ul class="mx-2">
+      
+      <li>
+        <a href="#vagus-elidunt">Vagus elidunt</a>
         
-        <li>
-          <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/kita/placeholder-4/#vagus-elidunt"
-            >Vagus elidunt</a
-          >
+        <ul>
           
-          <ul>
-            
-            <li>
-              <a class="no-underline hover:underline" href="https://salif.github.io/zola-themes-collection/demo/kita/placeholder-4/#mane-refeci-capiebant-unda-mulcebat"
-                >Mane refeci capiebant unda mulcebat</a
-              >
-            </li>
-            
-          </ul>
+          <li>
+            <a href="#mane-refeci-capiebant-unda-mulcebat">Mane refeci capiebant unda mulcebat</a>
+          </li>
           
-        </li>
+        </ul>
         
-      </ul>
-    </div>
+      </li>
+      
+    </ul>
   </details>
-</div>
+</nav>
 
 <!---->
 
@@ -360,7 +384,8 @@
   
 </article>
 
-    </main>
+      </main>
+    </div>
 
     <footer class="mx-auto flex max-w-3xl flex-wrap items-center px-8 py-4 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">

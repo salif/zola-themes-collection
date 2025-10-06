@@ -60,6 +60,11 @@
 - [planet](https://github.com/higuoxing/planet): 6 commits: `config.toml not found`
 - [Camilla](https://codeberg.org/PanSi21/Camilla): 4 commits: `error parsing templates`
 - [silo](https://github.com/joewe/silo): 21 commits: `unknown field generate_feed`
+- [float](https://gitlab.com/float-theme/float): 401 commits: `unknown field highlight_code`
+- [gmb-deepthought](https://gitlab.com/gmb/gmb.dev-deepthought): 160 commits: `unknown field generate_feed`
+- [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 28 commits: `can't find stylesheet to import`
+- [theme-rumorosa](https://gitlab.com/e5716/blog/theme-rumorosa): 26 commits: `config.toml not found`
+- [simplepod](https://github.com/cbrake/simplepod): 18 commits: `config.toml not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -99,6 +104,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-theme-edge](https://github.com/sesav/zola-theme-edge): 2 commits
 - [zola-blog-theme](https://codeberg.org/ebn/zola-blog-theme): 20 commits
 - [goyo](https://github.com/hahwul/goyo): 263 commits
+- [misumasu](https://gitlab.com/misumasu/zola-theme-misumasu): 8 commits
 
 ### No license that allows me to host a live demo
 

@@ -23,18 +23,18 @@
 
     
         
-            <meta name="description" content="Learn how to configure Goyo." />
+            <meta name="description" content="Learn how to configure Trankwilo." />
         
     
 
-    <title>Configuration | Goyo</title>
+    <title>Configuration | Trankwilo</title>
 
     
     
 
       <!-- SEO: Open Graph / Twitter Card -->
-      <meta property="og:title" content="Configuration | Goyo" />
-      <meta property="og:description" content="Learn how to configure Goyo." />
+      <meta property="og:title" content="Configuration | Trankwilo" />
+      <meta property="og:description" content="Learn how to configure Trankwilo." />
       <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/" />
       <meta property="og:type" content="website" />
       
@@ -43,7 +43,7 @@
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Configuration" />
-      <meta name="twitter:description" content="Learn how to configure Goyo." />
+      <meta name="twitter:description" content="Learn how to configure Trankwilo." />
       
       <meta name="twitter:site" content="@hahwul" />
       
@@ -57,7 +57,10 @@
       <!-- CSS -->
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/main.css">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/css/katex.min.css">
 
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/katex.min.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_code.js"></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/copy_heading_link.js"></script>
 
@@ -69,14 +72,39 @@
 
 <!-- Search Modal -->
 <input type="checkbox" id="search-modal" class="modal-toggle" />
-<div class="modal modal-top sm:modal-middle">
-    <div class="modal-box relative">
-        <label for="search-modal" class="btn btn-sm btn-ghost absolute right-2 top-2">✕</label>
-        <div class="search-container py-4 h-96">
-            <input id="search" type="search" placeholder="Search.." class="input input-bordered w-full bg-transparent focus:outline-none">
-            <div class="search-results overflow-y-auto h-full no-scrollbar">
-                <div class="search-results__header my-2 text-xs"></div>
-                <ul class="search-results__items menu p-2"></ul>
+<div class="modal modal-middle">
+    <div class="modal-box relative max-w-2xl p-0 bg-base-100 shadow-2xl">
+        <label for="search-modal" class="btn btn-sm btn-circle btn-ghost absolute right-4 top-4 z-10">✕</label>
+        <div class="search-container">
+            <!-- Search Input Container -->
+            <div class="search-input-container px-6 pt-6 pb-4 border-b border-base-300/30">
+                <div class="relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search-icon absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-base-content/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input id="search" type="search" placeholder="Search documentation..." class="search-input w-full pl-12 pr-4 py-3 text-base bg-transparent border-0 focus:outline-none focus:ring-0 text-base-content placeholder:text-base-content/40">
+                </div>
+            </div>
+            <!-- Search Results Container -->
+            <div class="search-results-container px-2 py-2 max-h-96 overflow-y-auto">
+                <div class="search-results__header px-4 py-2 text-xs text-base-content/60"></div>
+                <ul class="search-results__items space-y-1"></ul>
+            </div>
+            <!-- Search Footer -->
+            <div class="search-footer px-6 py-3 border-t border-base-300/30 flex items-center justify-end gap-4 text-xs text-base-content/50">
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↑</kbd>
+                    <kbd class="kbd kbd-xs">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">↵</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <kbd class="kbd kbd-xs">esc</kbd>
+                    <span>to close</span>
+                </div>
             </div>
         </div>
     </div>
@@ -97,15 +125,17 @@
     </div>
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl">
+        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/goyo.png" alt="Goyo" class="h-18 w-auto" />
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.png" alt="Trankwilo" class="h-18 w-auto" />
             
         </a>
     </div>
     <!-- Desktop Menu -->
     <div class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal px-1 items-center">
+            
+            
             
                 
                     
@@ -119,9 +149,9 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://github.com/hahwul/goyo">
+                            <a class="btn btn-ghost hover:no-underline" href="https://codeberg.org/salif/trankwilo">
                                 <i class="fa-brands fa-github"></i>
-                                GitHub
+                                Source
                             </a>
                         </li>
                     
@@ -167,13 +197,13 @@
                             <path d="M19.1 18h-6.2"></path>
                         </svg>
                     </div>
-                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg">
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 border border-gray-500/15 rounded-box z-1 p-2 shadow-lg min-w-max whitespace-nowrap">
                         
                             
                                 
                                 
                                 
-                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/get_started/configuration/">ko</a></li>
+                                    <li><a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/get_started/configuration/">한국어</a></li>
                                 
                             
                             
@@ -206,9 +236,9 @@
                     
     <div class="mb-12 pb-4 border-b border-gray-500/15">
         <h1>Configuration</h1>
-        <p class="text-gray-500">Learn how to configure Goyo.</p>
+        <p class="text-gray-500">Learn how to configure Trankwilo.</p>
     </div>
-    <p>Now let's look at the settings for the Goyo theme. It provides various settings to customize the theme. You can use them in <code>config.toml</code>.</p>
+    <p>Now let's look at the settings for the Trankwilo theme. It provides various settings to customize the theme. You can use them in <code>config.toml</code>.</p>
 <h2 id="logo">Logo</h2>
 <p><code>logo_text</code> / <code>logo_image_path</code> / <code>logo_image_padding</code></p>
 <ul>
@@ -217,8 +247,8 @@
 <li><code>logo_image_padding</code>: Padding applied to the logo image (optional, e.g. <code>"5px"</code>).</li>
 </ul>
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
-</span><span style="color:#73d0ff;">logo_text </span><span>= </span><span style="color:#bae67e;">&quot;Goyo&quot;
-</span><span style="color:#73d0ff;">logo_image_path </span><span>= </span><span style="color:#bae67e;">&quot;images/goyo.png&quot;
+</span><span style="color:#73d0ff;">logo_text </span><span>= </span><span style="color:#bae67e;">&quot;Trankwilo&quot;
+</span><span style="color:#73d0ff;">logo_image_path </span><span>= </span><span style="color:#bae67e;">&quot;images/trankwilo.png&quot;
 </span><span style="color:#73d0ff;">logo_image_padding </span><span>= </span><span style="color:#bae67e;">&quot;5px&quot;
 </span></code></pre>
 <h2 id="footer">Footer</h2>
@@ -227,7 +257,7 @@
 <li><code>footer_html</code>: HTML code displayed in the footer.</li>
 </ul>
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
-</span><span style="color:#73d0ff;">footer_html </span><span>= </span><span style="color:#bae67e;">&quot;Powered by &lt;a href=&#39;https://www.getzola.org&#39;&gt;Zola&lt;/a&gt; and &lt;a href=&#39;https://github.com/hahwul/goyo&#39;&gt;Goyo&lt;/a&gt;&quot;
+</span><span style="color:#73d0ff;">footer_html </span><span>= </span><span style="color:#bae67e;">&quot;Powered by &lt;a href=&#39;https://www.getzola.org&#39;&gt;Zola&lt;/a&gt; and &lt;a href=&#39;https://codeberg.org/salif/trankwilo&#39;&gt;Trankwilo&lt;/a&gt;&quot;
 </span></code></pre>
 <h2 id="thumbnail">Thumbnail</h2>
 <p><code>default_thumbnail</code></p>
@@ -255,6 +285,56 @@
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
 </span><span style="color:#73d0ff;">default_colorset </span><span>= </span><span style="color:#bae67e;">&quot;dark&quot;
 </span></code></pre>
+<figure class="diff aspect-16/9" tabindex="0">
+  <div class="diff-item-1" role="img" tabindex="0">
+    <img alt="Dark and Light" src="images&#x2F;dark.png" />
+  </div>
+  <div class="diff-item-2" role="img">
+    <img alt="Dark and Light" src="images&#x2F;light.png" />
+  </div>
+  <div class="diff-resizer"></div>
+</figure>
+<h2 id="brightness">Brightness</h2>
+<p><code>brightness</code></p>
+<ul>
+<li><code>brightness</code>: Controls the overall brightness of the theme colors. Options are:
+<ul>
+<li><code>"darker"</code>: Makes colors darker - dark theme becomes completely black, light theme becomes darker</li>
+<li><code>"normal"</code>: Default brightness (default value)</li>
+<li><code>"lighter"</code>: Makes colors lighter - both themes become lighter</li>
+</ul>
+</li>
+</ul>
+<pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
+</span><span style="color:#73d0ff;">brightness </span><span>= </span><span style="color:#bae67e;">&quot;normal&quot;  </span><span style="font-style:italic;color:#5c6773;"># Options: &quot;darker&quot;, &quot;normal&quot;, &quot;lighter&quot;
+</span></code></pre>
+<div class="carousel w-full">
+  
+  <div id="slide1" class="carousel-item relative w-full">
+    <img src="images&#x2F;darker.png" class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" class="btn btn-circle">❮</a>
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  
+  <div id="slide2" class="carousel-item relative w-full">
+    <img src="images&#x2F;normal.png" class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" class="btn btn-circle">❮</a>
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  
+  <div id="slide3" class="carousel-item relative w-full">
+    <img src="images&#x2F;lighter.png" class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-circle">❮</a>
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  
+</div>
 <h2 id="google-tag">Google Tag</h2>
 <p><code>gtag</code></p>
 <ul>
@@ -272,18 +352,47 @@
 </span><span style="color:#73d0ff;">sidebar_expand_depth </span><span>= </span><span style="color:#ffcc66;">2
 </span></code></pre>
 <h2 id="navigations">Navigations</h2>
-<p><code>nav</code></p>
+<p><code>nav</code> / <code>nav_{lang}</code></p>
 <ul>
 <li><code>nav</code>: Top navigation menu. name and icon fields is optional.</li>
+<li><code>nav_{lang}</code>: Language-specific navigation menu (e.g., <code>nav_ko</code> for Korean). If defined, it will be used instead of the default <code>nav</code> for that language.</li>
 </ul>
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
+</span><span style="font-style:italic;color:#5c6773;"># Default navigation (used for English and as fallback)
 </span><span style="color:#73d0ff;">nav </span><span>= [
-</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Documents&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;/introduction&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-book&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
-</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;GitHub&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://github.com/hahwul/goyo&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-brands fa-github&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Documents&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;$BASE_URL/introduction&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-book&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Source&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://codeberg.org/salif/trankwilo&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-brands fa-github&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
 </span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Links&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;dropdown&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-link&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">members </span><span>= [
 </span><span>        { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Creator Blog&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://www.hahwul.com&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-fire-flame-curved&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
 </span><span>    ] }</span><span style="color:#ccc9c2cc;">,
 </span><span>]
+</span><span>
+</span><span style="font-style:italic;color:#5c6773;"># Korean navigation (optional)
+</span><span style="color:#73d0ff;">nav_ko </span><span>= [
+</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;문서&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;$BASE_URL/introduction&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-book&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;Source&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://codeberg.org/salif/trankwilo&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-brands fa-github&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;링크&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;dropdown&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-link&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">members </span><span>= [
+</span><span>        { </span><span style="color:#73d0ff;">name </span><span>= </span><span style="color:#bae67e;">&quot;제작자 블로그&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">url </span><span>= </span><span style="color:#bae67e;">&quot;https://www.hahwul.com&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">type </span><span>= </span><span style="color:#bae67e;">&quot;url&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">icon </span><span>= </span><span style="color:#bae67e;">&quot;fa-solid fa-fire-flame-curved&quot; </span><span>}</span><span style="color:#ccc9c2cc;">,
+</span><span>    ] }</span><span style="color:#ccc9c2cc;">,
+</span><span>]
+</span></code></pre>
+<h2 id="language-aliases">Language Aliases</h2>
+<p><code>lang_aliases</code></p>
+<ul>
+<li><code>lang_aliases</code>: Custom display names for languages in the language selector dropdown. If not defined, the language code will be displayed. This allows you to show user-friendly names like "English" or "한국어" instead of just "en" or "ko".</li>
+</ul>
+<pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
+</span><span style="font-style:italic;color:#5c6773;"># Language display names for the language selector
+</span><span style="color:#73d0ff;">lang_aliases </span><span>= { </span><span style="color:#73d0ff;">en </span><span>= </span><span style="color:#bae67e;">&quot;English&quot;</span><span style="color:#ccc9c2cc;">, </span><span style="color:#73d0ff;">ko </span><span>= </span><span style="color:#bae67e;">&quot;한국어&quot; </span><span>}
+</span></code></pre>
+<p>You can add as many languages as you need:</p>
+<pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span>]
+</span><span style="color:#73d0ff;">lang_aliases </span><span>= {
+</span><span style="color:#ff3333;">    en = &quot;English&quot;,
+</span><span>    </span><span style="color:#73d0ff;">ko </span><span>= </span><span style="color:#bae67e;">&quot;한국어&quot;</span><span style="color:#ff3333;">,
+</span><span>    </span><span style="color:#73d0ff;">ja </span><span>= </span><span style="color:#bae67e;">&quot;日本語&quot;</span><span style="color:#ff3333;">,
+</span><span>    </span><span style="color:#73d0ff;">id </span><span>= </span><span style="color:#bae67e;">&quot;Bahasa Indonesia&quot;
+</span><span style="color:#ff3333;">}
 </span></code></pre>
 <h2 id="disable-theme-toggle">Disable Theme Toggle</h2>
 <p><code>disable_theme_toggle</code></p>
@@ -303,10 +412,10 @@
 </span></code></pre>
 <figure class="diff aspect-16/9" tabindex="0">
   <div class="diff-item-1" role="img" tabindex="0">
-    <img alt="goyo" src="&#x2F;images&#x2F;side-home.jpg" />
+    <img alt="trankwilo" src="&#x2F;images&#x2F;side-home.jpg" />
   </div>
   <div class="diff-item-2" role="img">
-    <img alt="goyo" src="&#x2F;images&#x2F;wide-home.jpg" />
+    <img alt="trankwilo" src="&#x2F;images&#x2F;wide-home.jpg" />
   </div>
   <div class="diff-resizer"></div>
 </figure>
@@ -318,7 +427,7 @@
 <pre data-lang="toml" style="background-color:#212733;color:#ccc9c2;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[</span><span style="color:#73d0ff;">extra</span><span style="color:#ccc9c2cc;">.</span><span style="color:#73d0ff;">comments</span><span>]
 </span><span style="color:#73d0ff;">enabled </span><span>= </span><span style="color:#ffcc66;">true
 </span><span style="color:#73d0ff;">system </span><span>= </span><span style="color:#bae67e;">&quot;giscus&quot;
-</span><span style="color:#73d0ff;">repo </span><span>= </span><span style="color:#bae67e;">&quot;hahwul/goyo&quot;
+</span><span style="color:#73d0ff;">repo </span><span>= </span><span style="color:#bae67e;">&quot;salif/trankwilo&quot;
 </span><span style="color:#73d0ff;">repo_id </span><span>= </span><span style="color:#bae67e;">&quot;R_kgDOPHnqwg&quot;
 </span><span style="color:#73d0ff;">category </span><span>= </span><span style="color:#bae67e;">&quot;General&quot;
 </span><span style="color:#73d0ff;">category_id </span><span>= </span><span style="color:#bae67e;">&quot;DIC_kwDOPHnqws4CspmC&quot;
@@ -337,17 +446,28 @@
 
 
 
-                    <div class="flex justify-between mt-8">
-                        <div class="prev-link">
-                            
+                    <nav class="mt-12 pt-8 border-t border-gray-500/15">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="prev-nav-item">
+                                
     
         
-        <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/">‹ Get Started</a>
+        <a class="nav-button nav-button-prev group" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/">
+            <div class="nav-button-content">
+                <div class="nav-button-direction">
+                    <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="nav-button-label">Back to</span>
+                </div>
+                <div class="nav-button-title">Get Started</div>
+            </div>
+        </a>
     
 
-                        </div>
-                        <div class="next-link">
-                            
+                            </div>
+                            <div class="next-nav-item">
+                                
     
         
         
@@ -376,7 +496,17 @@
         
             
             
-                <a class="btn bg-base-100 border border-gray-500/15 shadow-lg rounded-xl transition-transform hover:scale-105 hover:shadow-2xl" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/">Writing ›</a>
+                <a class="nav-button nav-button-next group" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/">
+                    <div class="nav-button-content">
+                        <div class="nav-button-direction">
+                            <span class="nav-button-label">Next</span>
+                            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                        <div class="nav-button-title">Writing</div>
+                    </div>
+                </a>
                 
             
             
@@ -397,8 +527,9 @@
         
     
 
+                            </div>
                         </div>
-                    </div>
+                    </nav>
                 </main>
 
                 
@@ -441,6 +572,12 @@
             
                 <li>
                     
+                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/configuration/#brightness" class="toc-link">Brightness</a>
+                    
+                </li>
+            
+                <li>
+                    
                     <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/configuration/#google-tag" class="toc-link">Google Tag</a>
                     
                 </li>
@@ -454,6 +591,12 @@
                 <li>
                     
                     <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/configuration/#navigations" class="toc-link">Navigations</a>
+                    
+                </li>
+            
+                <li>
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/get_started/configuration/#language-aliases" class="toc-link">Language Aliases</a>
                     
                 </li>
             
@@ -485,21 +628,24 @@
             </div>
 
             <script>
-              // Determine theme: localStorage > extra.default_colorset > night
-              // Expose theme config for global use (e.g., goyo.js)
+              // Determine theme: localStorage > extra.default_colorset > trankwilo-dark
+              // Expose theme config for global use (e.g., trankwilo.js)
               window.defaultColorset = "dark";
-              window.themeMap = { "dark": "night", "light": "lofi" };
-              window.fallbackTheme = window.themeMap[window.defaultColorset] || "night";
-            </script>
-            <script src="https://salif.github.io/zola-themes-collection/demo/trankwilo/js/mermaid.min.js" defer></script>
-            <script>
+              window.defaultBrightness = "normal";
+              window.themeMap = { "dark": "trankwilo-dark", "light": "trankwilo-light" };
+              window.fallbackTheme = window.themeMap[window.defaultColorset] || "trankwilo-dark";
+
               document.addEventListener('DOMContentLoaded', async () => {
-                var currentTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                // Theme mapping - maps user-friendly names to actual DaisyUI theme names
+                var themeMapping = { "trankwilo-dark": "night", "trankwilo-light": "lofi" };
+                var currentUserTheme = localStorage.getItem('theme') || window.fallbackTheme;
+                var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
+
                 var mermaidTheme = "dark";
-                if(currentTheme == "lofi") {
+                if(currentUserTheme == "trankwilo-light") {
                   mermaidTheme = "light";
                 }
-                mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+              mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
                 const mermaidElements = document.querySelectorAll('.mermaid');
 
                 if (mermaidElements.length > 0) {
@@ -609,7 +755,11 @@
                                                 
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/mermaid">Mermaid Chart</a></li>
                                                 
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/math">Math</a></li>
+                                                
                                                     <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/pretty-link">Pretty Link</a></li>
+                                                
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/writing/shortcodes/carousel">Carousel</a></li>
                                                 
                                                 
                                             </ul>
@@ -651,7 +801,7 @@
 <footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
     <aside>
         <p>
-            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://github.com/hahwul/goyo'>Goyo</a>
+            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://codeberg.org/salif/trankwilo'>Trankwilo</a>
         </p>
     </aside>
 </footer>
@@ -667,7 +817,7 @@
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/fuse.min.js"></script>
         <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/search_index.en.js"></script>
         
-        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/goyo.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/trankwilo/trankwilo.js"></script>
     
 </body>
 </html>

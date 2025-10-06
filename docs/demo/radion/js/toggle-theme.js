@@ -54,12 +54,27 @@ function setTheme(mode) {
     document.body.classList.add("light");
   }
 
-  // Change Gisus theme
+  // Change Giscus theme
   var iframe = document.querySelector(".giscus-frame");
   if (iframe) {
     var url = new URL(iframe.src);
     url.searchParams.set("theme", mode);
     iframe.src = url.toString();
+  } else {
+    // If iframe doesn't exist yet, set it via message when it loads
+    window.addEventListener("message", function setInitialGiscusTheme(event) {
+      if (event.origin !== "https://giscus.app") return;
+      if (event.data.giscus) {
+        iframe = document.querySelector(".giscus-frame");
+        if (iframe) {
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: mode } } },
+            "https://giscus.app",
+          );
+          window.removeEventListener("message", setInitialGiscusTheme);
+        }
+      }
+    });
   }
 
   updateThemeIcons(mode);
@@ -77,6 +92,8 @@ function toggleTheme() {
 
 /**
  * Updates the visibility of the sun and moon icons based on the theme.
+ *
+ * @param {string} mode - The theme mode to set ("light" or "dark").
  */
 function updateThemeIcons(mode) {
   const sunIcon = document.getElementById("sun-icon");
