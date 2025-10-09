@@ -84,6 +84,9 @@ function buildTheme(themePath, themeName, baseURL) {
 	if (fs.existsSync(path.join(themePath, "theme.toml")) && fs.existsSync(path.join(themePath, "themes"))) {
 		warnings.push(`themes dir found! themes/${themeName}`)
 	}
+	if (fs.existsSync(path.join(themePath, "public"))) {
+		warnings.push(`public dir found! themes/${themeName}`)
+	}
 
 	let configFile
 	if (fs.existsSync(path.join(themePath, "config.toml"))) {

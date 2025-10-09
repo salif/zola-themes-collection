@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* overwrite common classless css layout */
+
+body {
+  display: initial !important;
+}
+
+/* tweaks for marisa theme */
+
+:root,
+:host {
+  --marisa-font-stack: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --marisa-sidebar-font-size: 0.75rem;
+  --marisa-status-font-size: 1.2rem;
+
+  --marisa-article-metadata-font-size: 0.85rem;
+
+  --marisa-article-metadata-color: var(--pico-muted-color, #888);
+
+  --marisa-image-border-width: 0.15rem;
+  --marisa-image-border-color: var(--pico-secondary-background, #7a7a7a);
+  --marisa-image-border-radius: var(--pico-border-radius, 0.25rem);
+  --marisa-image-border-color-hover: var(--pico-primary-background, #adadad);
+
+  --marisa-negative-spacing: var(--pico-spacing, 0);
+
+  --marisa-muted-border-color: var(--pico-muted-border-color, rgb(231, 234, 239.5));
+}
+
+/* font */
+
+:is(:root, :host, h1, h2, h3, h4, h5, h6, p) {
+  font-family: var(--marisa-font-stack);
+}
+
+.sidebar nav ul li a {
+  font-size: var(--marisa-sidebar-font-size);
+}
+
+.content .status {
+  font-size: var(--marisa-status-font-size);
+  font-style: italic;
+}
+
+.content header hgroup nav ul {
+  font-size: var(--marisa-article-metadata-font-size);
+  color: var(--marisa-article-metadata-color);
+}
+
+/* toc */
+
+.content .toc nav {
+  display: block;
+}
+
+.content .toc nav ul {
+  display: block;
+}
+
+.content .toc nav ul li {
+  display: list-item;
+  padding: 0;
+}
+
+.content .toc nav ul li a {
+  display: inline;
+}
+
+.content .toc nav ul {
+  margin-block-end: 16px;
+  margin-block-start: 16px;
+  padding-inline-start: 40px;
+}
+
+.content .toc nav ul ul {
+  margin-block-start: 0;
+}
+
+/* content */
+
+.content .body {
+  margin-right: calc(var(--marisa-negative-spacing) * -1);
+  margin-left: calc(var(--marisa-negative-spacing) * -1);
+}
+
+.content .body img,
+.content .body video {
+  border: var(--marisa-image-border-width) solid var(--marisa-image-border-color);
+  border-radius: var(--marisa-image-border-radius);
+}
+
+.content .body a img:hover,
+.content .body video:hover {
+  border-color: var(--marisa-image-border-color-hover);
+}
+
+.content .anchor {
+  text-decoration: none;
+}
+
+.content .body img,
+.content .preview img {
+  width: 100%;
+  height: auto;
+}
+
+.content .body ul ul,
+.content .body ol ol,
+.content .body ul ol,
+.content .body ol ul {
+  margin-block-start: 0.5rem;
+}
+
+.content .footnotes {
+  margin: var(--marisa-spacing) 0;
+  border-top: 1px solid var(--marisa-muted-border-color);
+  color: inherit;
+}
+
+/* modal animation */
+
+:where(.modal-is-opening, .modal-is-closing) dialog,
+:where(.modal-is-opening, .modal-is-closing) dialog > article {
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+:where(.modal-is-opening, .modal-is-closing) dialog {
+  animation-duration: 0.8s;
+  animation-name: modal-overlay;
+}
+:where(.modal-is-opening, .modal-is-closing) dialog > article {
+  animation-delay: 0.2s;
+  animation-name: modal;
+}
+
+.modal-is-closing dialog,
+.modal-is-closing dialog > article {
+  animation-delay: 0s;
+  animation-direction: reverse;
+}
+
+@keyframes modal-overlay {
+  from {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: transparent;
+  }
+}
+@keyframes modal {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *:not([aria-busy=true]),
+  :not([aria-busy=true])::before,
+  :not([aria-busy=true])::after {
+    background-attachment: initial !important;
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
+/* fix holiday.css */
+
+.content footer ul li > *::after {
+  content: unset;
+}
+
+.content footer nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sidebar hr,
+.toc hr {
+  border-width: 0;
+}
+

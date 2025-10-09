@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+/* classes and variables taken from picocss, for basic layout */
+
+:root,
+:host {
+  --marisa-spacing: var(--pico-spacing, 1rem);
+
+  --marisa-transition: 0.2s ease-in-out;
+
+  --marisa-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+
+  --marisa-loading-icon: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='rgb(136, 145, 164)' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+/* grid system */
+
+.grid {
+  grid-column-gap: var(--marisa-spacing);
+  grid-row-gap: var(--marisa-spacing);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+  }
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+/* search dialog */
+
+dialog {
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  min-width: 100%;
+  height: inherit;
+  min-height: 100%;
+  padding: 0;
+  border: 0;
+}
+
+dialog > article {
+  width: 100%;
+  max-height: calc(100vh - var(--marisa-spacing) * 2);
+  margin: var(--marisa-spacing);
+  overflow: auto;
+}
+
+dialog > article > header > * {
+  margin-bottom: 0;
+}
+
+dialog > article > footer {
+  text-align: right;
+}
+
+dialog > article > footer button,
+dialog > article > footer [role=button] {
+  margin-bottom: 0;
+}
+
+dialog > article > footer button:not(:first-of-type),
+dialog > article > footer [role=button]:not(:first-of-type) {
+  margin-left: calc(var(--marisa-spacing) * 0.5);
+}
+
+dialog:not([open]), dialog[open=false] {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  dialog > article {
+    max-width: 510px;
+  }
+}
+
+@media (min-width: 768px) {
+  dialog > article {
+    max-width: 700px;
+  }
+}
+
+/* dialog close button */
+
+dialog > article > header .close {
+  margin: 0;
+  margin-left: var(--marisa-spacing);
+  padding: 0;
+  float: right;
+}
+
+dialog > article .close {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin-top: calc(var(--marisa-spacing) * -1);
+  margin-bottom: var(--marisa-spacing);
+  margin-left: auto;
+  border: none;
+  background-image: var(--marisa-icon-close);
+  background-position: center;
+  background-size: auto 1rem;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 0.5;
+  transition: opacity var(--marisa-transition);
+}
+
+dialog > article .close:is([aria-current]:not([aria-current=false]), :hover, :active, :focus) {
+  opacity: 1;
+}
+
+/* dialog modal animation */
+
+.modal-is-open {
+  padding-right: 0;
+  overflow: hidden;
+  pointer-events: none;
+  touch-action: none;
+}
+.modal-is-open dialog {
+  pointer-events: auto;
+  touch-action: auto;
+}
+
+/* marisa theme layout */
+
+:root,
+:host {
+  --marisa-anchor-offset: 2rem;
+
+  --marisa-logo-max-width: 8rem;
+  --marisa-logo-margin: 0;
+
+  --marisa-sidebar-padding: 3rem 1rem;
+  --marisa-sidebar-button-padding: 0.2rem;
+
+  --marisa-article-padding: 2rem;
+  --marisa-article-metadata-padding: 0.5rem;
+  --marisa-article-metadata-divider: "·";
+  --marisa-article-toc-padding: 1rem;
+
+  --marisa-avatar-max-width: 2rem;
+}
+
+/* anchor position */
+
+html {
+  scroll-padding-top: var(--marisa-anchor-offset);
+  scroll-behavior: smooth;
+}
+
+/* pico nav list */
+
+.sidebar nav,
+.content header nav,
+.content footer nav {
+  display: flex;
+}
+
+.sidebar nav ul,
+.content header nav ul,
+.content footer nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content footer nav {
+  justify-content: space-between;
+}
+
+/* sidebar content */
+
+.sidebar {
+  text-align: center;
+}
+
+.sidebar .logo {
+  max-width: var(--marisa-logo-max-width);
+  margin: var(--marisa-logo-margin);
+}
+
+.sidebar nav {
+  justify-content: center;
+}
+
+.sidebar nav ul {
+  flex-flow: wrap;
+}
+
+.sidebar nav ul li {
+  padding: var(--marisa-sidebar-button-padding);
+}
+
+.sidebar input[aria-busy=true] {
+  background-image: var(--marisa-loading-icon);
+  pointer-events: none;
+}
+
+/* main content */
+
+.content header,
+.content footer,
+.content section {
+  padding: var(--marisa-article-padding);
+}
+
+.content .toc {
+  padding: var(--marisa-article-toc-padding);
+}
+
+.content header hgroup {
+  margin-bottom: 0;
+}
+
+.content header hgroup nav {
+  display: inline-block;
+}
+
+.content header hgroup nav ul {
+  flex-flow: wrap;
+}
+
+.content header hgroup nav ul li {
+  padding: var(--marisa-article-metadata-padding);
+}
+
+.content header hgroup nav ul li:not(:last-child)::after {
+  display: inline-block;
+  position: absolute;
+  width: calc(var(--marisa-article-metadata-padding) * 2);
+  content: var(--marisa-article-metadata-divider);
+  text-align: center;
+}
+
+.content .body img,
+.content .body video {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.content .body code {
+  max-width: 100%;
+}
+
+.content .body pre {
+  overflow: scroll;
+}
+
+.content .body table {
+  max-width: 100%;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.content .grid {
+  grid-template-columns: 1fr;
+}
+
+.content .social {
+  text-align: center;
+}
+
+.content .interaction {
+  padding: 0;
+}
+
+.content .interaction img {
+  max-width: var(--marisa-avatar-max-width);
+  padding: calc(var(--marisa-avatar-max-width) * 0.1);
+}
+
+/* responsive layout */
+
+@media (min-width: 1024px) {
+  :root,
+  :host {
+    --marisa-sidebar-width: 18rem;
+    --marisa-content-width: 34rem;
+    --marisa-content-padding: 3rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    width: var(--marisa-sidebar-width);
+    padding: var(--marisa-sidebar-padding);
+  }
+
+  .content {
+    margin-left: var(--marisa-sidebar-width);
+    width: var(--marisa-content-width);
+    padding-top: var(--marisa-content-padding);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root,
+  :host {
+    --marisa-anchor-offset: 2rem;
+    --marisa-toc-width: 12rem;
+    --marisa-content-width: 34rem;
+  }
+
+  .content .toc {
+    position: fixed;
+    top: calc(var(--marisa-anchor-offset) * 3);
+    bottom: 0;
+    left: calc(var(--marisa-sidebar-width) + var(--marisa-content-width));
+    right: 0;
+    z-index: 1;
+    max-width: var(--marisa-toc-width);
+    padding: 1rem;
+    background-color: unset;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root,
+  :host {
+    --marisa-toc-width: 15rem;
+    --marisa-content-width: 40rem;
+  }
+
+  .content.wide {
+    width: calc(var(--marisa-content-width) + var(--marisa-toc-width));
+  }
+
+  .content .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

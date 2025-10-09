@@ -744,22 +744,21 @@ theme = "serene"
   js = "document.getElementById('info-serene').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "mabuya"
-name = "Mabuya"
-desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+theme = "marisa-theme"
+name = "marisa-theme"
+desc = "A non-opinionated theme with convenient features for personal sites and small indie teams."
 tags = [ ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
-### Info{#info-mabuya}
-- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
+### Info{#info-marisa-theme}
+- **Author**: [David Frank](https://marisa.club)
 - **License**: MIT
-- **Homepage**: <https://github.com/semanticdata/mabuya>
-- **Main Live Preview**: <https://mabuya.vercel.app/>
-- **Min Zola version**: 0.18.0
-- **Original**: <https://github.com/chesterhow/tale>
+- **Homepage**: <https://codeberg.org/bitinn/marisa-theme>
+- **Main Live Preview**: <https://theme.marisa.club>
+- **Min Zola version**: 0.21.0
 
-### Installation{#install-mabuya}
+### Installation{#install-marisa-theme}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -767,46 +766,46 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
+git submodule add https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/semanticdata/mabuya.git themes/mabuya
+git clone https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "mabuya"
+theme = "marisa-theme"
 ```
 
 </details>"""
 
   [[project.screenshots]]
-  src = "./screenshots/light-mabuya.webp"
+  src = "./screenshots/light-marisa-theme.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Light mode screenshot of Mabuya Zola theme demo website"
+  alt = "Light mode screenshot of marisa-theme Zola theme demo website"
 
   [[project.screenshots]]
-  src = "./screenshots/dark-mabuya.webp"
+  src = "./screenshots/dark-marisa-theme.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Dark mode screenshot of Mabuya Zola theme demo website"
+  alt = "Dark mode screenshot of marisa-theme Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
-  url = "./demo/mabuya/"
+  url = "./demo/marisa-theme/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/semanticdata/mabuya"
+  url = "https://codeberg.org/bitinn/marisa-theme"
 
   [[project.links]]
   name = "Info"
   newtab = false
-  url = "#info-mabuya"
-  js = "document.getElementById('info-mabuya').parentElement.setAttribute('open', true); this.style.display='none';"
+  url = "#info-marisa-theme"
+  js = "document.getElementById('info-marisa-theme').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "rilling_dev"
@@ -871,6 +870,71 @@ theme = "rilling_dev"
   newtab = false
   url = "#info-rilling_dev"
   js = "document.getElementById('info-rilling_dev').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "mabuya"
+name = "Mabuya"
+desc = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-mabuya}
+- **Author**: [Miguel Pimentel](https://github.com/semanticdata)
+- **License**: MIT
+- **Homepage**: <https://github.com/semanticdata/mabuya>
+- **Main Live Preview**: <https://mabuya.vercel.app/>
+- **Min Zola version**: 0.18.0
+- **Original**: <https://github.com/chesterhow/tale>
+
+### Installation{#install-mabuya}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/semanticdata/mabuya.git themes/mabuya
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "mabuya"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-mabuya.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Mabuya Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-mabuya.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Mabuya Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/mabuya/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/semanticdata/mabuya"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-mabuya"
+  js = "document.getElementById('info-mabuya').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "abridge"
@@ -1352,20 +1416,21 @@ theme = "vonge"
   js = "document.getElementById('info-vonge').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "devnzt"
-name = "devnzt"
-desc = "A simple zola theme for personal use."
+theme = "olivine"
+name = "Olivine"
+desc = "A Zola theme for a personal knowledge base"
 tags = [ ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
-### Info{#info-devnzt}
-- **Author**: [devendrn](https://devendrn.github.io/)
+### Info{#info-olivine}
+- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
 - **License**: MIT
-- **Homepage**: <https://github.com/devendrn/devnzt/>
-- **Min Zola version**: 0.18.0
+- **Homepage**: <https://github.com/dongryul-kim/olivine>
+- **Main Live Preview**: <https://dongryul-kim.github.io/olivine/>
+- **Min Zola version**: 0.20.0
 
-### Installation{#install-devnzt}
+### Installation{#install-olivine}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1373,46 +1438,46 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/devendrn/devnzt.git themes/devnzt
+git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/devendrn/devnzt.git themes/devnzt
+git clone https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "devnzt"
+theme = "olivine"
 ```
 
 </details>"""
 
   [[project.screenshots]]
-  src = "./screenshots/light-devnzt.webp"
+  src = "./screenshots/light-olivine.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Light mode screenshot of devnzt Zola theme demo website"
+  alt = "Light mode screenshot of Olivine Zola theme demo website"
 
   [[project.screenshots]]
-  src = "./screenshots/dark-devnzt.webp"
+  src = "./screenshots/dark-olivine.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Dark mode screenshot of devnzt Zola theme demo website"
+  alt = "Dark mode screenshot of Olivine Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
-  url = "./demo/devnzt/"
+  url = "./demo/olivine/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/devendrn/devnzt"
+  url = "https://github.com/dongryul-kim/olivine"
 
   [[project.links]]
   name = "Info"
   newtab = false
-  url = "#info-devnzt"
-  js = "document.getElementById('info-devnzt').parentElement.setAttribute('open', true); this.style.display='none';"
+  url = "#info-olivine"
+  js = "document.getElementById('info-olivine').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "academic-paper"
@@ -1543,21 +1608,20 @@ theme = "academic-workshop"
   js = "document.getElementById('info-academic-workshop').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "olivine"
-name = "Olivine"
-desc = "A Zola theme for a personal knowledge base"
+theme = "devnzt"
+name = "devnzt"
+desc = "A simple zola theme for personal use."
 tags = [ ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
-### Info{#info-olivine}
-- **Author**: [Dongryul Kim](https://web.stanford.edu/~dkim04/)
+### Info{#info-devnzt}
+- **Author**: [devendrn](https://devendrn.github.io/)
 - **License**: MIT
-- **Homepage**: <https://github.com/dongryul-kim/olivine>
-- **Main Live Preview**: <https://dongryul-kim.github.io/olivine/>
-- **Min Zola version**: 0.20.0
+- **Homepage**: <https://github.com/devendrn/devnzt/>
+- **Min Zola version**: 0.18.0
 
-### Installation{#install-olivine}
+### Installation{#install-devnzt}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -1565,46 +1629,46 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
+git submodule add https://github.com/devendrn/devnzt.git themes/devnzt
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/dongryul-kim/olivine.git themes/olivine
+git clone https://github.com/devendrn/devnzt.git themes/devnzt
 ```
 2. Enable the theme in your `config.toml`
 ```toml
-theme = "olivine"
+theme = "devnzt"
 ```
 
 </details>"""
 
   [[project.screenshots]]
-  src = "./screenshots/light-olivine.webp"
+  src = "./screenshots/light-devnzt.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Light mode screenshot of Olivine Zola theme demo website"
+  alt = "Light mode screenshot of devnzt Zola theme demo website"
 
   [[project.screenshots]]
-  src = "./screenshots/dark-olivine.webp"
+  src = "./screenshots/dark-devnzt.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Dark mode screenshot of Olivine Zola theme demo website"
+  alt = "Dark mode screenshot of devnzt Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
-  url = "./demo/olivine/"
+  url = "./demo/devnzt/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/dongryul-kim/olivine"
+  url = "https://github.com/devendrn/devnzt"
 
   [[project.links]]
   name = "Info"
   newtab = false
-  url = "#info-olivine"
-  js = "document.getElementById('info-olivine').parentElement.setAttribute('open', true); this.style.display='none';"
+  url = "#info-devnzt"
+  js = "document.getElementById('info-devnzt').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "landing-grid"

@@ -80,7 +80,7 @@ screenshot-changed mode:
     const themes = await execaSync`git diff --cached --name-only`
     themes.stdout.split("\n").filter(e=>e.startsWith("themes/")).forEach(e=>{
         const theme = e.substr("themes/".length)
-        execaSync({verbose: 'full'})("{{just_executable()}}", ["screenshot", theme, "{{mode}}"])
+        execaSync({verbose: 'full'})("{{just_executable()}}", ["browser=brave", "screenshot", theme, "{{mode}}"])
     })
 
 [group("screenshot")]

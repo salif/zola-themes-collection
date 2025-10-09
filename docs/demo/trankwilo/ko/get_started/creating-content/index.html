@@ -11,13 +11,14 @@
 
     <style>
         @font-face {
-            font-family: "Pretendard-Regular";
-            src: url('https://salif.github.io/zola-themes-collection/demo/trankwilo/fonts/Pretendard-Regular.woff') format("woff");
-            font-weight: 400;
-            font-style: normal;
+          font-family: "Pretendard Std Variable";
+          src: url("https://salif.github.io/zola-themes-collection/demo/trankwilo/fonts/PretendardStdVariable.woff2") format("woff2-variations");
+          font-weight: 45 920;
+          font-style: normal;
+          /* font-display: swap; */
         }
         body {
-            font-family: "Pretendard-Regular", sans-serif;
+            font-family: "Pretendard Std Variable", "Pretendard-Regular", sans-serif;
         }
     </style>
 
@@ -38,20 +39,20 @@
       <meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/" />
       <meta property="og:type" content="website" />
       
-      <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/default_thumbnail.jpg" />
+      <meta property="og:image" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/default_thumbnail.webp" />
       
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="콘텐츠 생성하기" />
       <meta name="twitter:description" content="Trankwilo로 페이지를 만드는 방법을 알아보세요." />
       
-      <meta name="twitter:site" content="@hahwul" />
+      <meta name="twitter:site" content="@username" />
       
       
-      <meta name="twitter:creator" content="@hahwul" />
+      <meta name="twitter:creator" content="@username" />
       
       
-      <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/default_thumbnail.jpg" />
+      <meta name="twitter:image" content="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/default_thumbnail.webp" />
       
 
       <!-- CSS -->
@@ -125,9 +126,9 @@
     </div>
     <!-- Logo -->
     <div class="flex-1">
-        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
+        <a href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/" class="btn btn-ghost hover:animate-pulse hover:bg-transparent hover:border-transparent normal-case text-xl" style="background: linear-gradient(135deg, #9ca3af, #6b7280); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: bold; font-size: 1.5rem;">
             
-                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.png" alt="Trankwilo" class="h-18 w-auto" />
+                <img src="https://salif.github.io/zola-themes-collection/demo/trankwilo/images/trankwilo.webp" alt="Trankwilo" class="h-18 w-auto" />
             
         </a>
     </div>
@@ -145,7 +146,7 @@
                 
                     
                         <li>
-                            <a class="btn btn-ghost hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/introduction">
+                            <a class="btn btn-ghost hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko/introduction/">
                                 <i class="fa-solid fa-book"></i>
                                 문서
                             </a>
@@ -155,8 +156,8 @@
                     
                         <li>
                             <a class="btn btn-ghost hover:no-underline" href="https://codeberg.org/salif/trankwilo">
-                                <i class="fa-brands fa-github"></i>
-                                Source
+                                <i class="fa-brands fa-git-alt"></i>
+                                소스
                             </a>
                         </li>
                     
@@ -256,7 +257,7 @@
 </span><span style="color:#bae67e;">[extra]
 </span><span style="color:#bae67e;">+++&#39; </span><span style="color:#f29e74;">&gt;</span><span> ./content/hello_world/index.md
 </span></code></pre>
-<p><a href="http://localhost:1111/hello-world">http://localhost:1111/hello-world</a></p>
+<p><a href="http://127.0.0.1:1111/hello-world">http://127.0.0.1:1111/hello-world</a></p>
 <h2 id="section">Section</h2>
 <p>이번에는 섹션을 만들어봅니다. 세션은 여러 페이지를 담고 있는 페이지입니다. list 하위에 first, second 란 페이지를 만들어봅니다.</p>
 <pre data-lang="bash" style="background-color:#212733;color:#ccc9c2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffd580;">mkdir</span><span> ./content/list
@@ -289,6 +290,17 @@
 </span></code></pre>
 <p>이런 형태로 구조화된 문서를 만들어갈 수 있습니다.</p>
 
+
+    
+    <div class="mt-8 pt-6 border-t border-gray-500/15">
+        <a href="https:&#x2F;&#x2F;codeberg.org&#x2F;salif&#x2F;trankwilo&#x2F;_edit&#x2F;trankwilo/content/get_started&#x2F;creating_content&#x2F;index.ko.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-base-content/60 hover:text-base-content transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+            </svg>
+            <span>Edit this page</span>
+        </a>
+    </div>
+    
 
 
                     
@@ -428,29 +440,29 @@
         
             
             <li>
-                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//resources"></a>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//resources/"></a>
             </li>
         
             
             <li>
-                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//introduction">Introduction</a>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//introduction/">Introduction</a>
             </li>
         
             
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started">Get Started</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/">Get Started</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/installation">Installation</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/installation/">Installation</a></li>
                             
-                                <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/creating-content">Creating a Content</a></li>
+                                <li class="rounded bg-gray-500/15"><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/creating-content/">Creating a Content</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/creating-landing">Creating a Landing Page</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/creating-landing/">Creating a Landing Page</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/configuration">Configuration</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//get_started/configuration/">Configuration</a></li>
                             
                             
                         </ul>
@@ -462,42 +474,42 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing">Writing</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/">Writing</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/markdown-syntax">Markdown Syntax</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/markdown-syntax/">Markdown Syntax</a></li>
                             
                             
                                 
                                 <li>
                                     
                                         <details >
-                                            <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes">Shortcodes</a></summary>
+                                            <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/">Shortcodes</a></summary>
                                             <ul>
                                                 
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/alert">Alert</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/alert/">Alert</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/asciinema">Asciinema</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/asciinema/">Asciinema</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/browser">Browser</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/browser/">Browser</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/collapse">Collapse</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/collapse/">Collapse</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/youtube">YouTube</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/youtube/">YouTube</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/badge">Badge</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/badge/">Badge</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/image-diff">Image Diff</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/image-diff/">Image Diff</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/mermaid">Mermaid Chart</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/mermaid/">Mermaid Chart</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/math">Math</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/math/">Math</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/pretty-link">Pretty Link</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/pretty-link/">Pretty Link</a></li>
                                                 
-                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/carousel">Carousel</a></li>
+                                                    <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//writing/shortcodes/carousel/">Carousel</a></li>
                                                 
                                                 
                                             </ul>
@@ -514,13 +526,13 @@
             <li>
                 
                     <details open>
-                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments">Deployments</a></summary>
+                        <summary ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments/">Deployments</a></summary>
                         <ul>
                             
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments/github-pages">Github</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments/github-pages/">Github</a></li>
                             
-                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments/other">Other</a></li>
+                                <li ><a class="hover:no-underline" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//deployments/other/">Other</a></li>
                             
                             
                         </ul>
@@ -530,7 +542,7 @@
         
             
             <li>
-                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//references">References</a>
+                <a  href="https://salif.github.io/zola-themes-collection/demo/trankwilo/ko//references/">References</a>
             </li>
         
     </ul>
@@ -539,7 +551,8 @@
 <footer class="footer text-xs pt-4 px-4 text-base-content border-t border-gray-500/15">
     <aside>
         <p>
-            Powered by <a href='https://www.getzola.org'>Zola</a> and <a href='https://codeberg.org/salif/trankwilo'>Trankwilo</a>
+            Powered by <a href="https://www.getzola.org">Zola</a> and <a href="https://codeberg.org/salif/trankwilo">Trankwilo</a>
+
         </p>
     </aside>
 </footer>
