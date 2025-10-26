@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"
+
+    
+    color-scheme="auto"
+    
+      flavor="deep-headers"
+    
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foldable Content - Pechersk Theme Blog</title>
+
+    
+    <meta name="description" content="How to use collapsible sections.">
+    
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Foldable Content">
+    <meta property="og:description" content="How to use collapsible sections.">
+    <meta property="og:url" content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola-pechersk&#x2F;blog&#x2F;foldable-examples&#x2F;">
+    
+    <meta property="og:image" content="&#x2F;favicon.ico">
+    
+    <meta property="og:site_name" content="Pechersk Theme Blog">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Foldable Content">
+    <meta name="twitter:description" content="How to use collapsible sections.">
+    
+    <meta name="twitter:image" content="&#x2F;favicon.ico">
+    
+    
+    <meta name="twitter:site" content="&lt;your_twitter_username&gt;">
+    <meta name="twitter:creator" content="&lt;your_twitter_username&gt;">
+    
+
+    
+        
+            <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/favicon.ico">
+        
+    
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/style.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/override.css">
+
+    
+    
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;" class="nav-link">Home</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;blog&#x2F;" class="nav-link">Blog</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;about&#x2F;" class="nav-link">About</a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+
+        <main>
+            <article>
+                
+<h2 class="post-title">Foldable Content</h2>
+
+<p class="post-date">
+    January 13, 2025  ·
+    <a
+        href="https://github.com/ctrlok&#x2F;zola-pechersk/tree/main/content/blog&#x2F;foldable-examples.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Edit this page on GitHub</a
+    >
+    
+</p>
+ <h1 id="foldable-content">Foldable Content</h1>
+<h2 id="syntax">Syntax</h2>
+<pre class="z-code"><code><span class="z-text z-plain">{% folded(title=&quot;Click to expand&quot;) %}
+</span><span class="z-text z-plain">Your content here.
+</span><span class="z-text z-plain">{% end %}
+</span><span class="z-text z-plain">
+</span></code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="basic">Basic</h3>
+<pre class="z-code"><code><span class="z-text z-plain">{% folded(title=&quot;About&quot;) %}
+</span><span class="z-text z-plain">Pechersk is a minimalist Zola theme.
+</span><span class="z-text z-plain">{% end %}
+</span><span class="z-text z-plain">
+</span></code></pre>
+<div class="folded">
+    <div class="folded-header" onclick="this.parentNode.classList.toggle('active')">
+        About
+        <span class="folded-arrow">&#9662;</span>
+    </div>
+    <div class="folded-content"><p>Pechersk is a minimalist Zola theme.</p>
+</div>
+</div>
+
+<h3 id="with-code">With Code</h3>
+<pre class="z-code"><code><span class="z-text z-plain">{% folded(title=&quot;Config&quot;) %}
+</span><span class="z-text z-plain">Add to `config.toml`:
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">```toml
+</span><span class="z-text z-plain">color_scheme = &quot;auto&quot;
+</span></code></pre>
+<p>{% end %}</p>
+<pre class="z-code"><code><span class="z-text z-plain">
+</span><span class="z-text z-plain">&lt;div class=&quot;folded&quot;&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-header&quot; onclick=&quot;this.parentNode.classList.toggle(&#39;active&#39;)&quot;&gt;
+</span><span class="z-text z-plain">        Config
+</span><span class="z-text z-plain">        &lt;span class=&quot;folded-arrow&quot;&gt;&amp;#9662;&lt;/span&gt;
+</span><span class="z-text z-plain">    &lt;/div&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-content&quot;&gt;&lt;p&gt;Add to &lt;code&gt;config.toml&lt;/code&gt;:&lt;/p&gt;
+</span><span class="z-text z-plain">&lt;pre data-lang=&quot;toml&quot; class=&quot;language-toml z-code&quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;z-source z-toml&quot;&gt;&lt;span class=&quot;z-meta z-tag z-key z-toml&quot;&gt;&lt;span class=&quot;z-entity z-name z-tag z-toml&quot;&gt;color_scheme&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;z-punctuation z-definition z-key-value z-toml&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;z-string z-quoted z-double z-basic z-toml&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-toml&quot;&gt;&amp;quot;&lt;/span&gt;auto&lt;span class=&quot;z-punctuation z-definition z-string z-end z-toml&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;
+</span><span class="z-text z-plain">&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</span><span class="z-text z-plain">&lt;/div&gt;
+</span><span class="z-text z-plain">&lt;/div&gt;
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">### Nested
+</span><span class="z-text z-plain">
+</span></code></pre>
+<p>{% folded(title="Main") %}
+Main section content.</p>
+<p>{%/* folded(title="Sub") <em>/%}
+Nested content here.
+{%/</em> end */%}
+{% end %}</p>
+<pre class="z-code"><code><span class="z-text z-plain">
+</span><span class="z-text z-plain">&lt;div class=&quot;folded&quot;&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-header&quot; onclick=&quot;this.parentNode.classList.toggle(&#39;active&#39;)&quot;&gt;
+</span><span class="z-text z-plain">        Main
+</span><span class="z-text z-plain">        &lt;span class=&quot;folded-arrow&quot;&gt;&amp;#9662;&lt;/span&gt;
+</span><span class="z-text z-plain">    &lt;/div&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-content&quot;&gt;&lt;p&gt;Main section content.&lt;/p&gt;
+</span><span class="z-text z-plain">&lt;div class=&quot;folded&quot;&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-header&quot; onclick=&quot;this.parentNode.classList.toggle(&#39;active&#39;)&quot;&gt;
+</span><span class="z-text z-plain">        Sub
+</span><span class="z-text z-plain">        &lt;span class=&quot;folded-arrow&quot;&gt;&amp;#9662;&lt;/span&gt;
+</span><span class="z-text z-plain">    &lt;/div&gt;
+</span><span class="z-text z-plain">    &lt;div class=&quot;folded-content&quot;&gt;&lt;p&gt;Nested content here.&lt;/p&gt;
+</span><span class="z-text z-plain">&lt;/div&gt;
+</span><span class="z-text z-plain">&lt;/div&gt;&lt;/div&gt;
+</span><span class="z-text z-plain">&lt;/div&gt;
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">That&#39;s it!
+</span></code></pre>
+ 
+            </article>
+        </main>
+
+        <footer>
+            <p>
+    &copy; 2025 Pechersk Theme Blog. All rights
+    reserved.
+</p>
+
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/footnotes.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/main.js"></script>
+
+</body>
+</html>

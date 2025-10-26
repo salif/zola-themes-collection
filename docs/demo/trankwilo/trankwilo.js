@@ -1,3 +1,30 @@
+"use strict";
+var themeMapping = {
+  "trankwilo-dark": "night",
+  "trankwilo-light": "lofi"
+};
+
+// Reverse mapping for checking current theme
+var reverseThemeMapping = {
+  "night": "trankwilo-dark",
+  "lofi": "trankwilo-light"
+};
+
+var currentUserTheme = "trankwilo-dark";
+var defaultBrightness = "normal";
+
+var options = {
+  keys: [
+    { name: "title", weight: 2 },
+    { name: "body", weight: 1 },
+    { name: "tags", weight: 1 },
+  ],
+  includeScore: true,
+  ignoreLocation: true,
+  threshold: 0.4, // Adjust as needed for search sensitivity
+};
+var fuse;
+
 function debounce(func, wait) {
   var timeout;
 
@@ -142,9 +169,9 @@ function formatSearchResultItem(item, terms) {
   return li;
 }
 
-function initSearch() {
-  var $searchInput = document.getElementById("search");
+function initSearch($searchInput) {
   if (!$searchInput) {
+    console.error("searchInput");
     return;
   }
 
@@ -155,20 +182,7 @@ function initSearch() {
   var $searchResultsItems = document.querySelector(".search-results__items");
   var MAX_ITEMS = 10;
   var selectedIndex = -1;
-
-  var options = {
-    keys: [
-      { name: "title", weight: 2 },
-      { name: "body", weight: 1 },
-      { name: "tags", weight: 1 },
-    ],
-    includeScore: true,
-    ignoreLocation: true,
-    threshold: 0.4, // Adjust as needed for search sensitivity
-  };
   var currentTerm = "";
-  var documents = Object.values(window.searchIndex.documentStore.docs);
-  var fuse = new Fuse(documents, options);
 
   function updateSelectedResult() {
     var items = $searchResultsItems.querySelectorAll(".search-result-item");
@@ -290,45 +304,33 @@ function initSearch() {
   });
 }
 
-function initTheme() {
-  var themeController = document.querySelector(".theme-controller");
-  if (!themeController) {
-    return;
-  }
+function initTheme(config) {
+  defaultBrightness = config.defaultBrightness
 
-  // Theme mapping - maps user-friendly names to actual DaisyUI theme names
-  var themeMapping = {
-    "trankwilo-dark": "night",
-    "trankwilo-light": "lofi",
-  };
-
-  // Reverse mapping for checking current theme
-  var reverseThemeMapping = {
-    night: "trankwilo-dark",
-    lofi: "trankwilo-light",
-  };
-
-  var fallbackTheme =
-    window && window.fallbackTheme ? window.fallbackTheme : "trankwilo-dark";
-  var currentUserTheme = localStorage.getItem("theme") || fallbackTheme;
-  
-  // Get brightness from config
-  var defaultBrightness =
-    window && window.defaultBrightness ? window.defaultBrightness : "normal";
+  currentUserTheme = localStorage.getItem("theme") || (
+    window.matchMedia("(prefers-color-scheme: dark)").matches ?
+      "trankwilo-dark" : "trankwilo-light");
 
   // Map user theme to actual DaisyUI theme
   var actualTheme = themeMapping[currentUserTheme] || currentUserTheme;
   document.documentElement.setAttribute("data-theme", actualTheme);
-  
+
   // Set brightness attribute
   document.documentElement.setAttribute("data-brightness", defaultBrightness);
+}
+
+function initThemeController(themeController) {
+  if (!themeController) {
+    console.error("themeController");
+    return;
+  }
 
   // Set checkbox state based on current theme
   themeController.checked = currentUserTheme === "trankwilo-dark";
 
   themeController.addEventListener("change", function (e) {
     var userTheme = e.target.checked ? "trankwilo-dark" : "trankwilo-light";
-    var actualTheme = themeMapping[userTheme];
+    var actualTheme = themeMapping[userTheme] || userTheme;
 
     document.documentElement.setAttribute("data-theme", actualTheme);
     localStorage.setItem("theme", userTheme); // Store user-friendly name
@@ -430,12 +432,32 @@ function initMath() {
   });
 }
 
-initTheme();
+function initMermaid() {
+  if (!window.mermaid) {
+    console.error("mermaid");
+    return;
+  }
+  var mermaidTheme = "dark";
+  if (currentUserTheme == "trankwilo-light") {
+    mermaidTheme = "light";
+  }
+  mermaid.initialize({ startOnLoad: false, theme: mermaidTheme });
+  const mermaidElements = document.querySelectorAll('.mermaid');
+  if (mermaidElements.length > 0) {
+    (async function () {
+      await mermaid.run({
+        nodes: mermaidElements
+      });
+    })()
+  }
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  initSearch();
-  initToc();
+function loadedTheme() {
+  if (!!window.Fuse && !!window.searchIndex) {
+    fuse = new window.Fuse(Object.values(window.searchIndex.documentStore.docs), options);
+  }
   initMath();
+  initMermaid();
 
   document.addEventListener("keydown", function (event) {
     if ((event.metaKey || event.ctrlKey) && event.key === "k") {
@@ -447,4 +469,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-});
+}

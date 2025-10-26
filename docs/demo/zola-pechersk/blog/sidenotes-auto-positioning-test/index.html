@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"
+
+    
+    color-scheme="auto"
+    
+      flavor="deep-headers"
+    
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Side Sidenotes Positioning Test - Pechersk Theme Blog</title>
+
+    
+    <meta name="description" content="Testing the intelligent auto-positioning system for sidenotes that alternates sides and responds to explicit positioning hints.">
+    
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Auto-Side Sidenotes Positioning Test">
+    <meta property="og:description" content="Testing the intelligent auto-positioning system for sidenotes that alternates sides and responds to explicit positioning hints.">
+    <meta property="og:url" content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola-pechersk&#x2F;blog&#x2F;sidenotes-auto-positioning-test&#x2F;">
+    
+    <meta property="og:image" content="&#x2F;favicon.ico">
+    
+    <meta property="og:site_name" content="Pechersk Theme Blog">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Auto-Side Sidenotes Positioning Test">
+    <meta name="twitter:description" content="Testing the intelligent auto-positioning system for sidenotes that alternates sides and responds to explicit positioning hints.">
+    
+    <meta name="twitter:image" content="&#x2F;favicon.ico">
+    
+    
+    <meta name="twitter:site" content="&lt;your_twitter_username&gt;">
+    <meta name="twitter:creator" content="&lt;your_twitter_username&gt;">
+    
+
+    
+        
+            <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/favicon.ico">
+        
+    
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/style.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/override.css">
+
+    
+    
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;" class="nav-link">Home</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;blog&#x2F;" class="nav-link">Blog</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;about&#x2F;" class="nav-link">About</a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+
+        <main>
+            <article>
+                
+<h2 class="post-title">Auto-Side Sidenotes Positioning Test</h2>
+
+<p class="post-date">
+    January 13, 2025  ·
+    <a
+        href="https://github.com/ctrlok&#x2F;zola-pechersk/tree/main/content/blog&#x2F;sidenotes-auto-positioning-test.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Edit this page on GitHub</a
+    >
+    
+</p>
+ <h1 id="auto-side-sidenotes-positioning-system">Auto-Side Sidenotes Positioning System</h1>
+<p>This post demonstrates the <strong>intelligent auto-positioning system</strong> for sidenotes in the Pechersk theme. The system automatically determines the optimal side (left or right) for each sidenote based on explicit user preferences and smart alternating logic.</p>
+<h2 id="how-auto-side-positioning-works">How Auto-Side Positioning Works</h2>
+<h3 id="basic-auto-alternating-behavior">Basic Auto-Alternating Behavior</h3>
+<p>When no explicit side is specified, sidenotes automatically alternate between left and right sides for balanced visual distribution.</p>
+<p>This paragraph has an auto-positioned sidenote<sup class="footnote-reference"><a href="#auto1">1</a></sup>. Since it's the first auto sidenote, it will default to the right side.</p>
+<p>This paragraph has another auto-positioned sidenote<sup class="footnote-reference"><a href="#auto2">2</a></sup>. This one should appear on the left side, alternating from the previous right-side placement.</p>
+<p>Here's a third auto-positioned sidenote<sup class="footnote-reference"><a href="#auto3">3</a></sup> which should return to the right side, continuing the alternating pattern.</p>
+<h3 id="explicit-positioning-override">Explicit Positioning Override</h3>
+<p>Users can explicitly specify sidenote positioning using special naming conventions:</p>
+<p>This sidenote is explicitly positioned on the left<sup class="footnote-reference"><a href="#left1">4</a></sup> using the <code>left</code> keyword in the footnote reference.</p>
+<p>This sidenote is explicitly positioned on the right<sup class="footnote-reference"><a href="#right1">5</a></sup> using the <code>right</code> keyword in the footnote reference.</p>
+<h3 id="smart-context-aware-positioning">Smart Context-Aware Positioning</h3>
+<p>After an explicit positioning, the next auto sidenote intelligently chooses the opposite side:</p>
+<p>We just had an explicit right sidenote above. This auto sidenote<sup class="footnote-reference"><a href="#auto4">6</a></sup> should automatically position itself on the left side to maintain balance.</p>
+<p>Another auto sidenote<sup class="footnote-reference"><a href="#auto5">7</a></sup> should now alternate back to the right side.</p>
+<h3 id="mixed-explicit-and-auto-positioning">Mixed Explicit and Auto Positioning</h3>
+<p>Let's test a complex scenario with mixed positioning:</p>
+<p>Start with an explicit left sidenote<sup class="footnote-reference"><a href="#left2">8</a></sup>. The system remembers this explicit choice.</p>
+<p>Next auto sidenote<sup class="footnote-reference"><a href="#auto6">9</a></sup> should go to the right side (opposite of the explicit left).</p>
+<p>Another explicit left sidenote<sup class="footnote-reference"><a href="#left3">10</a></sup> forces left positioning again.</p>
+<p>Following auto sidenote<sup class="footnote-reference"><a href="#auto7">11</a></sup> should choose right side (opposite of explicit left).</p>
+<p>Final auto sidenote<sup class="footnote-reference"><a href="#auto8">12</a></sup> should continue the alternating pattern on the left.</p>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<p>The auto-side system tracks:</p>
+<ol>
+<li><strong>Last auto-assigned side</strong> - for basic alternating</li>
+<li><strong>Side history</strong> - to detect explicit positioning patterns</li>
+<li><strong>Explicit vs auto detection</strong> - using footnote ID parsing</li>
+</ol>
+<h3 id="algorithm-logic">Algorithm Logic</h3>
+<pre data-lang="javascript" class="language-javascript z-code"><code class="language-javascript" data-lang="javascript"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Simplified algorithm</span>
+</span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-storage z-type z-function z-ts">function</span> <span class="z-meta z-definition z-function z-ts"><span class="z-entity z-name z-function z-ts">determineOptimalSide</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-variable z-parameter z-ts">footnoteId</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">footnoteId</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">includes</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">footnoteId</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">includes</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts"><span class="z-punctuation z-whitespace z-comment z-leading z-ts">  </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Auto-side: opposite of last explicit, or alternate</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">calculateAutoSide</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+</span></code></pre>
+<h2 id="expected-visual-results">Expected Visual Results</h2>
+<p>When viewing this post on <strong>desktop</strong> (1024px+), you should see:</p>
+<ul>
+<li><strong>Right side</strong>: <code>auto1</code>, <code>auto3</code>, <code>right1</code>, <code>auto5</code>, <code>auto6</code>, <code>auto7</code></li>
+<li><strong>Left side</strong>: <code>auto2</code>, <code>left1</code>, <code>auto4</code>, <code>left2</code>, <code>left3</code>, <code>auto8</code></li>
+</ul>
+<p>On <strong>tablet</strong> (768px-1023px), all sidenotes appear on the right side regardless of logic.</p>
+<p>On <strong>mobile</strong> (767px-), all sidenotes appear inline below their reference paragraphs.</p>
+<h2 id="performance-notes">Performance Notes</h2>
+<p>The auto-side system is <strong>lightweight</strong>:</p>
+<ul>
+<li>No expensive calculations or DOM measurements</li>
+<li>Simple string parsing and state tracking</li>
+<li>Maintains the same responsive performance as before</li>
+</ul>
+<p>This intelligent positioning creates a more balanced and visually appealing reading experience while respecting user intent when explicit positioning is specified.</p>
+<div class="footnote-definition" id="auto1"><sup class="footnote-definition-label">1</sup>
+<p>This is the first auto-positioned sidenote. It should appear on the right side by default.</p>
+</div>
+<div class="footnote-definition" id="auto2"><sup class="footnote-definition-label">2</sup>
+<p>This is the second auto-positioned sidenote. It should automatically alternate to the left side.</p>
+</div>
+<div class="footnote-definition" id="auto3"><sup class="footnote-definition-label">3</sup>
+<p>This is the third auto-positioned sidenote, returning to the right side in the alternating pattern.</p>
+</div>
+<div class="footnote-definition" id="left1"><sup class="footnote-definition-label">4</sup>
+<p>This sidenote is explicitly positioned on the left side using the <code>left</code> keyword in its reference ID.</p>
+</div>
+<div class="footnote-definition" id="right1"><sup class="footnote-definition-label">5</sup>
+<p>This sidenote is explicitly positioned on the right side using the <code>right</code> keyword in its reference ID.</p>
+</div>
+<div class="footnote-definition" id="auto4"><sup class="footnote-definition-label">6</sup>
+<p>After the explicit right sidenote above, this auto sidenote should intelligently choose the left side for balance.</p>
+</div>
+<div class="footnote-definition" id="auto5"><sup class="footnote-definition-label">7</sup>
+<p>This auto sidenote should alternate back to the right side from the previous auto-left.</p>
+</div>
+<div class="footnote-definition" id="left2"><sup class="footnote-definition-label">8</sup>
+<p>Another explicit left sidenote to test the system's response to multiple explicit positioning.</p>
+</div>
+<div class="footnote-definition" id="auto6"><sup class="footnote-definition-label">9</sup>
+<p>Following an explicit left, this auto sidenote should choose the right side.</p>
+</div>
+<div class="footnote-definition" id="left3"><sup class="footnote-definition-label">10</sup>
+<p>A third explicit left sidenote to create a pattern.</p>
+</div>
+<div class="footnote-definition" id="auto7"><sup class="footnote-definition-label">11</sup>
+<p>After another explicit left, this should auto-position to the right side.</p>
+</div>
+<div class="footnote-definition" id="auto8"><sup class="footnote-definition-label">12</sup>
+<p>Final auto sidenote should continue the alternating pattern, going to the left side.</p>
+</div>
+ 
+            </article>
+        </main>
+
+        <footer>
+            <p>
+    &copy; 2025 Pechersk Theme Blog. All rights
+    reserved.
+</p>
+
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/footnotes.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/main.js"></script>
+
+</body>
+</html>

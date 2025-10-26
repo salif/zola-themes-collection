@@ -3,14 +3,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!repoElements.length) return;
 
   const getCache = (key) => {
-    const data = localStorage.getItem(key);
-    const time = localStorage.getItem(`${key}-time`);
-    return data && time && (Date.now() - +time) < 86400000 ? JSON.parse(data) : null;
+    try {
+      const data = localStorage.getItem(key);
+      const time = localStorage.getItem(`${key}-time`);
+      return data && time && (Date.now() - +time) < 86400000 ? JSON.parse(data) : null;
+    } catch {
+      return null;
+    }
   };
 
   const setCache = (key, data) => {
-    localStorage.setItem(key, JSON.stringify(data));
-    localStorage.setItem(`${key}-time`, Date.now());
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+      localStorage.setItem(`${key}-time`, Date.now());
+    } catch {
+      // Silently fail if localStorage is not available
+    }
   };
 
   const fetchRepoData = async (owner, repo) => {
@@ -40,19 +48,33 @@ document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([...repoElements].map(async (element) => {
     const { owner, repo } = element.dataset;
     const cacheKey = `github-${owner}-${repo}`;
-    
+
     try {
       let data = getCache(cacheKey);
-      
+
       if (!data) {
         data = await fetchRepoData(owner, repo);
         setCache(cacheKey, data);
       }
-      
+
       updateElement(element, data);
     } catch (error) {
       console.error(`Error fetching ${owner}/${repo}:`, error);
       element.querySelector('.repo-stats').innerHTML = '<span>Failed to load</span>';
     }
   }));
+
+  // Make entire card clickable
+  repoElements.forEach(element => {
+    const link = element.querySelector('.repo-link');
+    if (link) {
+      element.addEventListener('click', (e) => {
+        // Don't trigger if clicking directly on the link (to preserve normal link behavior)
+        if (e.target.closest('.repo-link')) return;
+
+        // Open link in new tab, matching the original link behavior
+        window.open(link.href, '_blank', 'noopener');
+      });
+    }
+  });
 });

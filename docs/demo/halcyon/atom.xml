@@ -56,9 +56,12 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;github-repos&quot;&gt;Github Repos&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#github-repos&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lastly the only other shortcode I&#x27;ve implimented is github repos:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Rust:&lt;&#x2F;strong&gt;
-&lt;div class=&quot;doublespace&quot; data-owner=&quot;rust-lang&quot; data-repo=&quot;rust&quot;&gt;
+&lt;div class=&quot;repo-container&quot; data-owner=&quot;rust-lang&quot; data-repo=&quot;rust&quot;&gt;
   &lt;div class=&quot;repo-header&quot;&gt;
-    &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;repo-link&quot;&gt;
+      &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;currentColor&quot; class=&quot;github-logo&quot;&gt;
+        &lt;path d=&quot;M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z&quot;&#x2F;&gt;
+      &lt;&#x2F;svg&gt;
       rust-lang&#x2F;rust
     &lt;&#x2F;a&gt;
     &lt;div class=&quot;repo-stats small secondary&quot;&gt;
@@ -104,12 +107,12 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/halcyon/posts/markdown/">&lt;p&gt;This post is a markdown example.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is &lt;a href=&quot;http:&#x2F;&#x2F;example.com&quot;&gt;a link&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Some &lt;em&gt;italic text&lt;&#x2F;em&gt; and &lt;strong&gt;bold text&lt;&#x2F;strong&gt; and &lt;del&gt;strikethrough text&lt;&#x2F;del&gt; and &lt;code&gt;inline code&lt;&#x2F;code&gt;. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Here is a code block
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;span&gt;    println!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
-&lt;&#x2F;span&gt;&lt;span&gt;}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre data-linenos data-lang=&quot;rust&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Here is a code block
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    println!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Unordered list: &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;An unordered,&lt;&#x2F;li&gt;
@@ -137,6 +140,10 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Hello world!&lt;&#x2F;th&gt;&lt;th&gt;This is a table.&lt;&#x2F;th&gt;&lt;th&gt;Tables are also supported.&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;They even&lt;&#x2F;td&gt;&lt;td&gt;have alternating&lt;&#x2F;td&gt;&lt;td&gt;row colors!&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;Let me add&lt;&#x2F;td&gt;&lt;td&gt;another row so&lt;&#x2F;td&gt;&lt;td&gt;it&#x27;s easier to see.&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Row number&lt;&#x2F;td&gt;&lt;td&gt;four to test&lt;&#x2F;td&gt;&lt;td&gt;the alternating pattern&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;And here&#x27;s&lt;&#x2F;td&gt;&lt;td&gt;row number five&lt;&#x2F;td&gt;&lt;td&gt;for better testing&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Even more&lt;&#x2F;td&gt;&lt;td&gt;data in row six&lt;&#x2F;td&gt;&lt;td&gt;to see the full pattern&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Final row&lt;&#x2F;td&gt;&lt;td&gt;number seven&lt;&#x2F;td&gt;&lt;td&gt;completes the example&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
 &lt;section class=&quot;footnotes&quot;&gt;
 &lt;ol class=&quot;footnotes-list&quot;&gt;

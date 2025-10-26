@@ -49,6 +49,13 @@ your posts more exciting." />
     />
     <meta name="twitter:title" content="Shortcodes Demos" />
 
+    <!-- Additional Fediverse Tags -->
+    
+    <meta name="fediverse:creator" content="@username@my.instance.example.com" />
+     
+    <link rel="me" href="https:&#x2F;&#x2F;my.instance.example.com&#x2F;@username" />
+    
+
     <!-- Cover images -->
     
     
@@ -282,6 +289,19 @@ body {
           class="social-icon"
         />
       </a>
+       
+      <a
+        href="https:&#x2F;&#x2F;my.instance.example.com&#x2F;@username"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/mastodon.svg"
+          id="mastodon-icon"
+          alt="Mastodon"
+          class="social-icon"
+        />
+      </a>
       
     </aside>
   </section>
@@ -320,12 +340,43 @@ body {
 your posts more exciting.</p>
 
             
+              <details class="toc-container">
+  <summary class="toc-title">Table of Contents</summary>
+  <ul class="toc-list">
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/radion/shortcodes-demo/#gif-support">GIF-Support</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/radion/shortcodes-demo/#fancy-notes">Fancy Notes</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/radion/shortcodes-demo/#youtube-video-embedding">YouTube Video Embedding</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/radion/shortcodes-demo/#audio-file-embedding">Audio File Embedding</a>
+      
+    </li>
+    
+    <li>
+      <a href="https://salif.github.io/zola-themes-collection/demo/radion/shortcodes-demo/#responsive-images">Responsive Images</a>
+      
+    </li>
+    
+  </ul>
+</details>
+
+            
 
             <!-- Render the rest of the content after removing the summary portion -->
             
-<span id="continue-reading"></span>
-<p>Here are some examples:</p>
-<h2 id="gif-support"><a class="zola-anchor" href="#gif-support" aria-label="Anchor link for: gif-support">GIF-Support</a></h2>
+<span id="continue-reading"></span><h2 id="gif-support"><a class="zola-anchor" href="#gif-support" aria-label="Anchor link for: gif-support">GIF-Support</a></h2>
 <p>Level up your posts with GIFs!</p>
 <p>$$
 \texttt{{{ gif(sources=["path/to/file"], width=[1-100], caption=[""]) }}}
@@ -362,25 +413,73 @@ $$</p>
   </details>
 </article>
 <h2 id="youtube-video-embedding"><a class="zola-anchor" href="#youtube-video-embedding" aria-label="Anchor link for: youtube-video-embedding">YouTube Video Embedding</a></h2>
-<p>$$
-\texttt{{{ youtube(id="youtube-id", width=[1-100], [playlist="playlist id"]) }}}
-$$</p>
-<p>Standalone video:</p>
+<p>Usage:</p>
+<pre>
+{{ youtube(
+    id="youtube-id",
+    width=[1-100],
+    playlist=["playlist id"],
+    autoplay=[{true, false}],
+    start_time_s=[seconds]
+    captions=[{true, false}],
+  )
+}}
+</pre>
+<p><strong>Example</strong>: Standalone video</p>
+
+
+
+
+
+
+
+
+
+
+
 <div class="responsive-iframe"
   style="width: 100%; max-width: 80%; margin: 0 auto; text-align: center;">
-  <iframe src="https://www.youtube.com/embed/ym3y13nA3ew"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  <iframe
+    src="https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;ym3y13nA3ew"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
   </iframe>
 </div>
 <p>$$
 \texttt{{{ youtube(id="ym3y13nA3ew", width=80) }}}
 $$</p>
 <br>
-<p>Video from a playlist:</p>
+<p><strong>Example</strong>: Video from a playlist with captions</p>
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+  
+
+
 <div class="responsive-iframe"
   style="width: 100%; max-width: 80%; margin: 0 auto; text-align: center;">
-  <iframe src="https://www.youtube.com/embed/LnzuMJLZRdU?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH"
-    webkitallowfullscreen mozallowfullscreen allowfullscreen>
+  <iframe
+    src="https:&#x2F;&#x2F;www.youtube.com&#x2F;embed&#x2F;LnzuMJLZRdU?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH&amp;cc_load_policy=1"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
   </iframe>
 </div>
 <p>$$

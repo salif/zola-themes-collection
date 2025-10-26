@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"
+
+    
+    color-scheme="auto"
+    
+      flavor="deep-headers"
+    
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wide Layout Demonstration - Pechersk Theme Blog</title>
+
+    
+    <meta name="description" content="Showcasing the enhanced wide layout system that utilizes sidenote spaces for full-width content on desktop and tablet views.">
+    
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Wide Layout Demonstration">
+    <meta property="og:description" content="Showcasing the enhanced wide layout system that utilizes sidenote spaces for full-width content on desktop and tablet views.">
+    <meta property="og:url" content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola-pechersk&#x2F;blog&#x2F;wide-layout-demo&#x2F;">
+    
+    <meta property="og:image" content="&#x2F;favicon.ico">
+    
+    <meta property="og:site_name" content="Pechersk Theme Blog">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wide Layout Demonstration">
+    <meta name="twitter:description" content="Showcasing the enhanced wide layout system that utilizes sidenote spaces for full-width content on desktop and tablet views.">
+    
+    <meta name="twitter:image" content="&#x2F;favicon.ico">
+    
+    
+    <meta name="twitter:site" content="&lt;your_twitter_username&gt;">
+    <meta name="twitter:creator" content="&lt;your_twitter_username&gt;">
+    
+
+    
+        
+            <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/favicon.ico">
+        
+    
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/style.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/override.css">
+
+    
+    
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;" class="nav-link">Home</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;blog&#x2F;" class="nav-link">Blog</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;about&#x2F;" class="nav-link">About</a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+
+        <main>
+            <article>
+                
+<h2 class="post-title">Wide Layout Demonstration</h2>
+
+<p class="post-date">
+    January 13, 2025  ·
+    <a
+        href="https://github.com/ctrlok&#x2F;zola-pechersk/tree/main/content/blog&#x2F;wide-layout-demo.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Edit this page on GitHub</a
+    >
+    
+</p>
+ <h1 id="wide-layout-system-demo">Wide Layout System Demo</h1>
+<p>This post demonstrates the <strong>enhanced wide layout system</strong> that intelligently uses the sidenote spaces for full-width content on desktop and tablet views, while providing optimal mobile experience.</p>
+<h2 id="how-wide-layout-works">How Wide Layout Works</h2>
+<p>The wide layout system adapts to different screen sizes:</p>
+<ul>
+<li><strong>Desktop (1024px+)</strong>: Spans across sidenote areas + content area for maximum width</li>
+<li><strong>Tablet (768px-1023px)</strong>: Uses most of the screen width with proper margins</li>
+<li><strong>Mobile (767px-)</strong>: Edge-to-edge layout with minimal padding</li>
+</ul>
+<h2 id="wide-images">Wide Images</h2>
+<p>Here's a regular image in normal content width:</p>
+<p><img src="https://picsum.photos/800/400" alt="Regular Image" loading="lazy" decoding="async" /></p>
+<p>Now the same image in wide layout - notice how it utilizes the full available space including sidenote areas<sup class="footnote-reference"><a href="#wide-image">1</a></sup>.</p>
+<div class="wide">
+    <img src="https://picsum.photos/1200/600" alt="Wide Image" loading="lazy" decoding="async" />
+</div>
+<div class="footnote-definition" id="wide-image"><sup class="footnote-definition-label">1</sup>
+<p>This wide image demonstrates how the layout system utilizes both sidenote areas on desktop, creating a more immersive visual experience for photography and diagrams.</p>
+</div>
+<h2 id="">Wide Tables</h2>
+<p>Regular table:</p>
+<table><thead><tr><th>Feature</th><th>Desktop</th><th>Tablet</th><th>Mobile</th></tr></thead><tbody>
+<tr><td>Layout</td><td>Grid-based</td><td>Block flow</td><td>Block flow</td></tr>
+<tr><td>Sidenotes</td><td>Left/Right</td><td>Right only</td><td>Inline</td></tr>
+<tr><td>Width</td><td>Content width</td><td>90%</td><td>100%</td></tr>
+</tbody></table>
+<p>Wide table with more columns and data<sup class="footnote-reference"><a href="#left-table">2</a></sup>:</p>
+<div class="wide">
+    <table><thead><tr><th>Component</th><th>Desktop Width</th><th>Tablet Width</th><th>Mobile Width</th><th>Breakpoint</th><th>Grid Columns</th><th>Sidenote Behavior</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Article</td><td>var(--content-width)</td><td>90%</td><td>100%</td><td>Always</td><td>content</td><td>Normal flow</td><td>Main content area</td></tr>
+<tr><td>Sidenotes</td><td>var(--sidenote-width)</td><td>Right only</td><td>Inline</td><td>1024px+</td><td>sidenote-left/right</td><td>Absolute positioned</td><td>Floating beside content</td></tr>
+<tr><td>Wide Content</td><td>Full grid width</td><td>Edge margins</td><td>Full viewport</td><td>All</td><td>1 / -1</td><td>Ignored</td><td>Spans all available space</td></tr>
+<tr><td>Header</td><td>Container width</td><td>Container width</td><td>Container width</td><td>Always</td><td>N/A</td><td>N/A</td><td>Navigation and branding</td></tr>
+<tr><td>Footer</td><td>Container width</td><td>Container width</td><td>Container width</td><td>Always</td><td>N/A</td><td>N/A</td><td>Site information</td></tr>
+</tbody></table>
+
+</div>
+<div class="footnote-definition" id="left-table"><sup class="footnote-definition-label">2</sup>
+<p>This technical comparison table shows how different components behave across breakpoints. Notice how wide content ignores sidenote positioning and spans the full available width.</p>
+</div>
+<h2 id="-1">Wide Code Blocks</h2>
+<p>Regular code block:</p>
+<pre data-lang="javascript" class="language-javascript z-code"><code class="language-javascript" data-lang="javascript"><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-storage z-type z-function z-ts">function</span> <span class="z-meta z-definition z-function z-ts"><span class="z-entity z-name z-function z-ts">regularExample</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">message</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>This is normal content width<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts">  <span class="z-meta z-function-call z-ts"><span class="z-support z-class z-console z-ts">console</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-console z-ts">log</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">message</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+</span></code></pre>
+<p>Wide code block for complex examples<sup class="footnote-reference"><a href="#right-code">3</a></sup>:</p>
+<div class="wide">
+    <pre data-lang="javascript" class="language-javascript z-code"><code class="language-javascript" data-lang="javascript"><span class="z-source z-ts"><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> Enhanced Sidenotes System - Full Implementation Example</span>
+</span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-storage z-type z-class z-ts">class</span> <span class="z-entity z-name z-type z-class z-ts">SidenotesManager</span> <span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts">  <span class="z-storage z-type z-ts">constructor</span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">breakpoints</span> <span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-objectliteral z-ts"> <span class="z-punctuation z-definition z-block z-ts">{</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">mobile</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-constant z-numeric z-decimal z-ts">768</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">tablet</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-constant z-numeric z-decimal z-ts">1024</span> </span><span class="z-punctuation z-definition z-block z-ts">}</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">state</span> <span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-objectliteral z-ts"> <span class="z-punctuation z-definition z-block z-ts">{</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">currentLayout</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-meta z-function-call z-ts"><span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">getCurrentLayout</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">processedSidenotes</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-new z-expr z-ts"><span class="z-keyword z-operator z-new z-ts">new</span> <span class="z-entity z-name z-type z-ts">Set</span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span></span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">lastSide</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-constant z-language z-null z-ts">null</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts">lastWasExplicit</span></span><span class="z-meta z-object z-member z-ts"><span class="z-meta z-object-literal z-key z-ts"><span class="z-punctuation z-separator z-key-value z-ts">:</span></span> <span class="z-constant z-language z-boolean z-false z-ts">false</span> </span><span class="z-punctuation z-definition z-block z-ts">}</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-meta z-function-call z-ts"><span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">init</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">  <span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts">  
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts">  <span class="z-meta z-definition z-method z-ts"><span class="z-entity z-name z-function z-ts">determineOptimalSide</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-variable z-parameter z-ts">footnoteId</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">hasExplicitLeft</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">footnoteId</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">includes</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">hasExplicitRight</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">footnoteId</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">includes</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">hasExplicitLeft</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span> <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastWasExplicit</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-constant z-language z-boolean z-true z-ts">true</span><span class="z-punctuation z-terminator z-statement z-ts">;</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span> <span class="z-punctuation z-definition z-block z-ts">}</span></span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">hasExplicitRight</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span> <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastWasExplicit</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-constant z-language z-boolean z-true z-ts">true</span><span class="z-punctuation z-terminator z-statement z-ts">;</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span> <span class="z-punctuation z-definition z-block z-ts">}</span></span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">chosenSide</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">calculateAutoSide</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastWasExplicit</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-constant z-language z-boolean z-false z-ts">false</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastSide</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-variable z-other z-readwrite z-ts">chosenSide</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-variable z-other z-readwrite z-ts">chosenSide</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">  <span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts">  
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts">  <span class="z-meta z-definition z-method z-ts"><span class="z-entity z-name z-function z-ts">calculateAutoSide</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastSide</span> <span class="z-keyword z-operator z-comparison z-ts">===</span> <span class="z-constant z-language z-null z-ts">null</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastWasExplicit</span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastSide</span> <span class="z-keyword z-operator z-comparison z-ts">===</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span> <span class="z-keyword z-operator z-ternary z-ts">?</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span> <span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">    <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-variable z-language z-this z-ts">this</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-object z-property z-ts">state</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lastSide</span> <span class="z-keyword z-operator z-comparison z-ts">===</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span> <span class="z-keyword z-operator z-ternary z-ts">?</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>right<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span> <span class="z-keyword z-operator z-ternary z-ts">:</span> <span class="z-string z-quoted z-single z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&#39;</span>left<span class="z-punctuation z-definition z-string z-end z-ts">&#39;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></span></span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-meta z-method z-declaration z-ts"><span class="z-meta z-block z-ts">  <span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+</span></span><span class="z-source z-ts"><span class="z-meta z-class z-ts"><span class="z-punctuation z-definition z-block z-ts">}</span></span>
+</span></code></pre>
+
+</div>
+<div class="footnote-definition" id="right-code"><sup class="footnote-definition-label">3</sup>
+<p>Wide code blocks are perfect for complex examples that would otherwise require horizontal scrolling. The extra width allows for better code readability and longer variable names.</p>
+</div>
+<h2 id="-2">Mixed Wide Content</h2>
+<div class="wide">
+    The wide layout system is perfect for:</p>
+<h3 id="large-datasets">Large Datasets</h3>
+<p>When you need to display complex data that benefits from maximum horizontal space.</p>
+<h3 id="code-examples">Code Examples</h3>
+<p>Complex code samples that would otherwise require horizontal scrolling.</p>
+<h3 id="images-and-media">Images and Media</h3>
+<p>Photography, diagrams, charts, and other visual content that looks better at full width.</p>
+<h3 id="comparison-tables">Comparison Tables</h3>
+<p>Side-by-side comparisons that need more columns than regular content width allows.</p>
+<p><img src="https://picsum.photos/1400/500" alt="Wide Layout Diagram" loading="lazy" decoding="async" /></p>
+<p><strong>Technical Implementation:</strong></p>
+<ul>
+<li>Uses CSS Grid <code>grid-column: 1 / -1</code> to span all columns</li>
+<li>Responsive margins and padding for each breakpoint</li>
+<li>Automatic content optimization (font sizes, spacing)</li>
+<li>Maintains theme consistency and accessibility</li>
+</ul>
+
+</div><h2 id="-3">Implementation Usage</h2>
+<p>To use the wide layout in your Markdown content:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">Regular content here...
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">div</span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">wide</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown">    Your wide content goes here - images, tables, code blocks, etc.
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">div</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">Back to regular content...
+</span></span></code></pre>
+<h2 id="-4">Responsive Behavior Summary</h2>
+<h3 id="-5">Desktop (1024px+)</h3>
+<ul>
+<li><strong>Layout</strong>: CSS Grid with sidenote areas</li>
+<li><strong>Wide elements</strong>: Span full grid width (sidenotes + content)</li>
+<li><strong>Effective width</strong>: ~1200px+ depending on screen size</li>
+</ul>
+<h3 id="-6">Tablet (768px-1023px)</h3>
+<ul>
+<li><strong>Layout</strong>: Block flow (no grid)</li>
+<li><strong>Wide elements</strong>: Use most screen width with margins</li>
+<li><strong>Font optimization</strong>: Smaller table fonts for better fit</li>
+</ul>
+<h3 id="-7">Mobile (767px-)</h3>
+<ul>
+<li><strong>Layout</strong>: Block flow</li>
+<li><strong>Wide elements</strong>: Edge-to-edge with minimal padding</li>
+<li><strong>Optimization</strong>: Touch-friendly scrolling, minimal fonts</li>
+</ul>
+<p>The wide layout system maintains the clean, minimal aesthetic of the Pechersk theme while providing maximum usability for content that benefits from extra horizontal space.</p>
+ 
+            </article>
+        </main>
+
+        <footer>
+            <p>
+    &copy; 2025 Pechersk Theme Blog. All rights
+    reserved.
+</p>
+
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/footnotes.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/main.js"></script>
+
+</body>
+</html>

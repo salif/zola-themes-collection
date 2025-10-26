@@ -41,14 +41,67 @@ If you have the chance, you should definitely visit this island to experience li
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/css/zh-font-family.css">
     <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/code-copy/code-copy.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/audio-webvtt/audio-webvtt.css">
     
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MM9Z6T9SKE"></script>
+  <script data-jiufen-ga="G-MM9Z6T9SKE" data-anonymize="false" data-consent="true">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
 
+    (function(){
+      var scriptEl = document.currentScript;
+      var id = scriptEl.getAttribute('data-jiufen-ga');
+      var anonymize = scriptEl.getAttribute('data-anonymize') === 'true';
+      var consentEnabled = scriptEl.getAttribute('data-consent') === 'true';
+
+      // Default Consent Mode settings
+      if (consentEnabled) {
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'functionality_storage': 'granted',
+          'security_storage': 'granted'
+        });
+        // Check stored choice
+        var stored = (function(){ try { return localStorage.getItem('jiufen_ga_consent'); } catch(e){ return null; } })();
+        if (stored === 'granted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+          });
+          gtag('js', new Date());
+          if (anonymize) { gtag('config', id, { 'anonymize_ip': true }); }
+          else { gtag('config', id); }
+        }
+        // If no consent yet or denied, we do not configure GA until user accepts
+      } else {
+        // No consent feature: normal GA initialization
+        gtag('js', new Date());
+        if (anonymize) { gtag('config', id, { 'anonymize_ip': true }); }
+        else { gtag('config', id); }
+      }
+    })();
+  </script>
+
+
+  <style>
+    .jiufen-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1400px;margin:0 auto}
+    .jiufen-footer__left{text-align:left}
+    .jiufen-footer__right{display:flex;align-items:center;justify-content:flex-end}
+    .jiufen-footer__copy{margin:0}
+    @media (max-width: 768px){
+      .jiufen-footer{flex-direction:column;align-items:flex-start;gap:12px}
+      .jiufen-footer__right{width:100%}
+    }
+  </style>
 </head>
 <body class="w3-light-grey">
-
-
-
 
 
     <nav role="navigation" aria-label="Main">
@@ -199,19 +252,120 @@ If you have the chance, you should definitely visit this island to experience li
         </div>
     </div>
 </main>
-<footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top w3-center">
-    <p>
+<footer class="w3-container w3-dark-grey w3-padding-16 w3-margin-top">
+  <div class="jiufen-footer">
+    <div class="jiufen-footer__left">
+      <p class="jiufen-footer__copy">
         Copyright © 2025 Jiufen All rights reserved.<br/>
         Powered by
         <a href="https://www.getzola.org/" target="_blank" rel="noopener noreferrer">Zola</a>,
         <a href="https://www.w3schools.com/w3css/" target="_blank" rel="noopener noreferrer">W3.CSS</a>,
         <a href="https://github.com/4yuinfo/zola-theme_jiufen" target="_blank" rel="noopener noreferrer">JiuFen</a>.
+      </p>
+    </div>
+    <div class="jiufen-footer__right">
+      
+
+<div id="jiufen-consent" class="jiufen-consent" role="region" aria-live="polite" aria-label="Analytics consent">
+  <div class="jiufen-consent__inner">
+    <p class="jiufen-consent__text">
+      This website uses cookies for statistics and to improve your experience. Do you agree to our use of Google Analytics?
     </p>
+    <div class="jiufen-consent__actions">
+      <button type="button"
+              class="jiufen-consent__btn jiufen-consent__switch"
+              role="switch"
+              aria-checked="false"
+              data-state="denied"
+              data-label-granted="Agree"
+              data-label-denied="DisAgree"
+              aria-label="DisAgree">
+        <span class="jiufen-consent__switch-icon" aria-hidden="true">Ｘ</span>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+  /* Footer-integrated consent UI */
+  .jiufen-consent{color:#fff}
+  .jiufen-consent__inner{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+  .jiufen-consent__text{margin:0;min-width:220px;opacity:.9;font-size:.95rem}
+  .jiufen-consent__actions{display:flex;gap:10px}
+  /* Apple-like pill button (single toggle) */
+  .jiufen-consent__btn{appearance:none;-webkit-appearance:none;border-radius:9999px;padding:8px 16px;font-weight:600;border:1px solid #3a3a3c;background:#2c2c2e;color:#f5f5f7;box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 1px 2px rgba(0,0,0,.2);cursor:pointer;transition:background-color .2s ease,transform .02s}
+  .jiufen-consent__switch{min-width:56px;text-align:center}
+  .jiufen-consent__switch.is-on{background:#0a84ff;border-color:#0a84ff;color:#fff}
+  .jiufen-consent__btn:hover{filter:brightness(1.05)}
+  .jiufen-consent__btn:active{transform:translateY(1px)}
+  .jiufen-consent__btn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .jiufen-consent__switch-icon{display:inline-block;min-width:1em}
+</style>
+<script data-ga-id="G-MM9Z6T9SKE" data-anonymize="false">
+(function(){
+  var root = document.getElementById('jiufen-consent');
+  if (!root) return;
+  var scriptEl = document.currentScript;
+  var id = scriptEl ? scriptEl.getAttribute('data-ga-id') : null;
+  var anonymize = scriptEl ? scriptEl.getAttribute('data-anonymize') === 'true' : false;
+
+  var toggle = root.querySelector('.jiufen-consent__switch');
+  if (!toggle) return;
+
+  var stored = null;
+  try { stored = localStorage.getItem('jiufen_ga_consent'); } catch(e) {}
+  var state = (stored === 'granted') ? 'granted' : 'denied';
+
+  function render(){
+    toggle.setAttribute('data-state', state);
+    toggle.setAttribute('aria-checked', state === 'granted' ? 'true' : 'false');
+    toggle.classList.toggle('is-on', state === 'granted');
+    var icon = toggle.querySelector('.jiufen-consent__switch-icon');
+    if (icon) { icon.textContent = state === 'granted' ? 'Ｏ' : 'Ｘ'; }
+    var labelGranted = toggle.getAttribute('data-label-granted') || '同意';
+    var labelDenied = toggle.getAttribute('data-label-denied') || '不同意';
+    toggle.setAttribute('aria-label', state === 'granted' ? labelGranted : labelDenied);
+  }
+
+  render();
+
+  toggle.addEventListener('click', function(){
+    state = (state === 'granted') ? 'denied' : 'granted';
+    try { localStorage.setItem('jiufen_ga_consent', state); } catch(e) {}
+    if (typeof gtag === 'function') {
+      if (state === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'analytics_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+        if (id) {
+          gtag('js', new Date());
+          if (anonymize) { gtag('config', id, { 'anonymize_ip': true }); } else { gtag('config', id); }
+        }
+      } else {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        });
+      }
+    }
+    render();
+  });
+})();
+</script>
+
+
+    </div>
+  </div>
 </footer>
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.6.0/+esm'
 </script>
 <script src="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/js/navigation.js" defer></script>
 <script src="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/code-copy/code-copy.js" defer></script>
+<script src="https://salif.github.io/zola-themes-collection/demo/jiufen/jiufen/audio-webvtt/audio-webvtt.js"></script>
 </body>
 </html>

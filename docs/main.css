@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.14 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -212,6 +212,9 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
   }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
@@ -658,6 +661,9 @@
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
+  .mt-3\.5 {
+    margin-top: calc(var(--spacing) * 3.5);
+  }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
@@ -690,6 +696,9 @@
   }
   .ml-0 {
     margin-left: calc(var(--spacing) * 0);
+  }
+  .ml-0\.5 {
+    margin-left: calc(var(--spacing) * 0.5);
   }
   .ml-1\.5 {
     margin-left: calc(var(--spacing) * 1.5);
@@ -838,6 +847,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .overflow-y-scroll {
     overflow-y: scroll;
   }
@@ -957,17 +969,23 @@
       background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
-  .\[background-image\:var\(--icon-home\)\] {
-    background-image: var(--icon-home);
+  .\[background-image\:var\(--icons-btn-dark\,url\(icons\/btn-dark\.svg\)\)\] {
+    background-image: var(--icons-btn-dark,url(icons/btn-dark.svg));
   }
-  .\[background-image\:var\(--icon-search\)\] {
-    background-image: var(--icon-search);
+  .\[background-image\:var\(--icons-btn-light\,url\(icons\/btn-light\.svg\)\)\] {
+    background-image: var(--icons-btn-light,url(icons/btn-light.svg));
   }
-  .\[background-image\:var\(--icon-theme-dark\)\] {
-    background-image: var(--icon-theme-dark);
+  .\[background-image\:var\(--icons-btn-reset\,url\(icons\/btn-reset\.svg\)\)\] {
+    background-image: var(--icons-btn-reset,url(icons/btn-reset.svg));
   }
-  .\[background-image\:var\(--icon-translations\)\] {
-    background-image: var(--icon-translations);
+  .\[background-image\:var\(--icons-btn-trans\,url\(icons\/btn-trans\.svg\)\)\] {
+    background-image: var(--icons-btn-trans,url(icons/btn-trans.svg));
+  }
+  .\[background-image\:var\(--icons-home\,url\(icons\/home\.svg\)\)\] {
+    background-image: var(--icons-home,url(icons/home.svg));
+  }
+  .\[background-image\:var\(--icons-search\,url\(icons\/search\.svg\)\)\] {
+    background-image: var(--icons-search,url(icons/search.svg));
   }
   .bg-cover {
     background-size: cover;
@@ -996,9 +1014,6 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -1017,8 +1032,11 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
-  .ps-\[0px\] {
-    padding-inline-start: 0px;
+  .ps-0\.5 {
+    padding-inline-start: calc(var(--spacing) * 0.5);
+  }
+  .ps-8 {
+    padding-inline-start: calc(var(--spacing) * 8);
   }
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
@@ -1043,6 +1061,9 @@
   }
   .pl-3 {
     padding-left: calc(var(--spacing) * 3);
+  }
+  .pl-3\.5 {
+    padding-left: calc(var(--spacing) * 3.5);
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
@@ -1104,7 +1125,7 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .break-words {
+  .wrap-break-word {
     overflow-wrap: break-word;
   }
   .primary-link {
@@ -1378,9 +1399,9 @@
       }
     }
   }
-  .dark\:\[background-image\:var\(--icon-theme-light\)\] {
+  .dark\:\[background-image\:var\(--icons-btn-light\,url\(icons\/btn-light\.svg\)\)\] {
     &:where(.dark, .dark *) {
-      background-image: var(--icon-theme-light);
+      background-image: var(--icons-btn-light,url(icons/btn-light.svg));
     }
   }
   .dark\:text-black {
@@ -1547,6 +1568,10 @@ a {
 }
 sup a {
   text-underline-offset: 1px;
+}
+.giscus-frame {
+  --color-scheme: inherit;
+  color-scheme: var(--color-scheme) !important;
 }
 .header {
   background-color: var(--header);

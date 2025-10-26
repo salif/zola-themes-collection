@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"
+
+    
+    color-scheme="auto"
+    
+      flavor="deep-headers"
+    
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headers Guide - Pechersk Theme Blog</title>
+
+    
+    <meta name="description" content="Quick guide to using headers in the Pechersk theme">
+    
+
+    <!-- Open Graph metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Headers Guide">
+    <meta property="og:description" content="Quick guide to using headers in the Pechersk theme">
+    <meta property="og:url" content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola-pechersk&#x2F;blog&#x2F;headers-guide&#x2F;">
+    
+    <meta property="og:image" content="&#x2F;favicon.ico">
+    
+    <meta property="og:site_name" content="Pechersk Theme Blog">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Headers Guide">
+    <meta name="twitter:description" content="Quick guide to using headers in the Pechersk theme">
+    
+    <meta name="twitter:image" content="&#x2F;favicon.ico">
+    
+    
+    <meta name="twitter:site" content="&lt;your_twitter_username&gt;">
+    <meta name="twitter:creator" content="&lt;your_twitter_username&gt;">
+    
+
+    
+        
+            <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/favicon.ico">
+        
+    
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/style.css">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/override.css">
+
+    
+    
+
+</head>
+<body>
+    
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;" class="nav-link">Home</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;blog&#x2F;" class="nav-link">Blog</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a href="&#x2F;about&#x2F;" class="nav-link">About</a>
+                            </li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+
+        <main>
+            <article>
+                
+<h2 class="post-title">Headers Guide</h2>
+
+<p class="post-date">
+    January 20, 2025 • Updated:
+    October 19, 2025  ·
+    <a
+        href="https://github.com/ctrlok&#x2F;zola-pechersk/tree/main/content/blog&#x2F;headers-guide.md"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Edit this page on GitHub</a
+    >
+    
+</p>
+ <p>The Pechersk theme provides a semantic header system with progressive sizing and optional styling.</p>
+<h2 id="header-sizes">Header Sizes</h2>
+<p>Headers follow a clear visual hierarchy using Open Props fluid variables:</p>
+<h1 id="h1-main-titles-fluid-5">h1 - Main Titles (fluid-5)</h1>
+<h2 id="h2-section-headers-fluid-4">h2 - Section Headers (fluid-4)</h2>
+<h3 id="h3-subsections-fluid-3">h3 - Subsections (fluid-3)</h3>
+<h4 id="h4-minor-headers-fluid-2">h4 - Minor Headers (fluid-2)</h4>
+<h5 id="h5-details-fluid-1">h5 - Details (fluid-1)</h5>
+<h6 id="h6-smallest-fluid-0">h6 - Smallest (fluid-0)</h6>
+<h2 id="optional-styling">Optional Styling</h2>
+<h3 id="clean-headers-default">Clean Headers (Default)</h3>
+<p>All headers are clean by default - no borders or underlines.</p>
+<h3 id="underscore-headers" class="underscore">Underscore Headers</h3>
+<p>Add <code>.underscore</code> class for simple gradient underlines:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-1 z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">#</span> </span><span class="z-markup z-heading z-1 z-markdown"><span class="z-entity z-name z-section z-markdown">Title with Underscore {.underscore}</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span></code></pre>
+<h2 id="examples">Examples</h2>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-1 z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">#</span> </span><span class="z-markup z-heading z-1 z-markdown"><span class="z-entity z-name z-section z-markdown">Main Page Title {.underscore}</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-2 z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">##</span> </span><span class="z-markup z-heading z-2 z-markdown"><span class="z-entity z-name z-section z-markdown">Section Header</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">###</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">Clean Subsection</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">####</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">Minor Header {.underscore}</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">#####</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">Detail Header</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-block-level z-markdown"><span class="z-markup z-heading z-markdown"><span class="z-punctuation z-definition z-heading z-begin z-markdown">######</span> </span><span class="z-markup z-heading z-markdown"><span class="z-entity z-name z-section z-markdown">Smallest Header</span><span class="z-meta z-whitespace z-newline z-markdown">
+</span></span></span></span></code></pre>
+<p>The styling respects your theme's flavor system - gradient colors adapt automatically to your chosen theme variant.</p>
+ 
+            </article>
+        </main>
+
+        <footer>
+            <p>
+    &copy; 2025 Pechersk Theme Blog. All rights
+    reserved.
+</p>
+
+        </footer>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/footnotes.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/zola-pechersk/js/main.js"></script>
+
+</body>
+</html>

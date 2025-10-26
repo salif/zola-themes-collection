@@ -65,6 +65,7 @@
 - [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 28 commits: `can't find stylesheet to import`
 - [theme-rumorosa](https://gitlab.com/e5716/blog/theme-rumorosa): 26 commits: `config.toml not found`
 - [simplepod](https://github.com/cbrake/simplepod): 18 commits: `config.toml not found`
+- [anemonev](https://github.com/evnoj/anemonev): 117 commits: `variable not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -105,6 +106,9 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-blog-theme](https://codeberg.org/ebn/zola-blog-theme): 20 commits
 - [goyo](https://github.com/hahwul/goyo): 263 commits
 - [misumasu](https://gitlab.com/misumasu/zola-theme-misumasu): 8 commits
+- [zola-dash](https://github.com/bitbrain/zola-dash): 84 commits
+- [kirifuji-zola](https://codeberg.org/yukari/kirifuji-zola): 3 commits
+- [zola-no-style-please](https://git.sr.ht/~gumxcc/zola-no-style-please): 28 commits
 
 ### No license that allows me to host a live demo
 
@@ -123,3 +127,4 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [boring](https://github.com/clflushopt/boring): 70 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
 - [ametrine](https://codeberg.org/daudix/ametrine): 274 commits
+- [zola-bearblog-sysrq](https://github.com/sysrqmagician/zola-bearblog-sysrq): 128 commits

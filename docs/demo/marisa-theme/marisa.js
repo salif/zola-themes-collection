@@ -110,7 +110,8 @@ async function initWebmentionData() {
         return;
     }
 
-    var social = document.getElementById("wm-data");
+    var webmention_container = document.getElementById("wm-interaction");
+    var social = document.getElementById("wm-on");
     if (!social || !social.dataset.user) {
         return;
     }
@@ -122,7 +123,6 @@ async function initWebmentionData() {
     var like_users_target = document.getElementById("wm-like-users");
     var share_users_target = document.getElementById("wm-share-users");
     var reply_users_target = document.getElementById("wm-reply-users");
-    var webmention_container = document.getElementById("wm-interaction");
     if (!social_link_target || !like_count_target || !share_count_target || !reply_count_target) {
         return;
     }
@@ -132,15 +132,13 @@ async function initWebmentionData() {
     var data = await response.json();
 
     if (!data || data.children.length == 0) {
+        social_link_target.remove();
         webmention_container.remove();
         return;
     }
 
     var social_link_author = social.dataset.user.toLowerCase();
     var social_link = "";
-    // var like_count = 0;
-    // var share_count = 0;
-    // var reply_count = 0;
     var other_count = 0;
     var like_authors = [];
     var share_authors = [];
@@ -157,30 +155,27 @@ async function initWebmentionData() {
         }
 
         if (wm_type == "in-reply-to") {
-            // reply_count++;
             reply_authors.push({
                 author: child["author"]["name"],
                 avatar: child["author"]["photo"],
-                url: child["url"],
-                action: "reply",
+                url: child["wm-source"],
+                action: "💬",
             });
 
         } else if (wm_type == "repost-of") {
-            // share_count++;
             share_authors.push({
                 author: child["author"]["name"],
                 avatar: child["author"]["photo"],
-                url: child["url"],
-                action: "share",
+                url: child["author"]["url"],
+                action: "📮",
             });
 
         } else if (wm_type == "like-of") {
-            // like_count++;
             like_authors.push({
                 author: child["author"]["name"],
                 avatar: child["author"]["photo"],
                 url: child["author"]["url"],
-                action: "like",
+                action: "⭐️",
             });
 
         } else if (wm_type == "mention-of") {
@@ -194,6 +189,8 @@ async function initWebmentionData() {
 
     if (social_link) {
         social_link_target.href = social_link;
+    } else {
+        social_link_target.remove();
     }
 
     like_count_target.textContent = like_authors.length;
@@ -209,7 +206,7 @@ async function initWebmentionData() {
         avatar.decoding = "async";
         avatar.loading = "lazy";
         link.href = user.url;
-        link.dataset.tooltip = user.action + ": " + user.author;
+        link.dataset.tooltip = user.action + " " + user.author;
 
         link.appendChild(avatar);
         like_users_target.appendChild(link);
@@ -228,7 +225,7 @@ async function initWebmentionData() {
         avatar.decoding = "async";
         avatar.loading = "lazy";
         link.href = user.url;
-        link.dataset.tooltip = user.action + ": " + user.author;
+        link.dataset.tooltip = user.action + " " + user.author;
 
         link.appendChild(avatar);
         share_users_target.appendChild(link);
@@ -247,7 +244,7 @@ async function initWebmentionData() {
         avatar.decoding = "async";
         avatar.loading = "lazy";
         link.href = user.url;
-        link.dataset.tooltip = user.action + ": " + user.author;
+        link.dataset.tooltip = user.action + " " + user.author;
 
         link.appendChild(avatar);
         reply_users_target.appendChild(link);

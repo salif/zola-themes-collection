@@ -19,11 +19,11 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=e5f9dea6af2451fd4951" />
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/icons.css?h=0e5f84b7441420713dd4" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=a74dd0c65eed2d85f55f" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f6f8fa; --header: #f6f8fa;} :root.dark{--bg: #1d212c; --header: #1d212c;}</style>
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
-  <script src="https://salif.github.io/zola-themes-collection/js/linkita.min.js?h=ef31ef53cc07abf6aca6"></script>
+  <script src="https://salif.github.io/zola-themes-collection/js/zola-theme.min.js?h=26975b146d48e6ff41af"></script>
   <!-- Begin Head End inject -->
   
   <!-- End Head End inject -->
@@ -31,22 +31,24 @@
 
 <body class="text-black duration-100 ease-out dark:text-white">
   <!-- Header -->
-<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full header-icons">
+<header class="header fixed top-0 z-40 mx-auto min-h-13 w-full">
   <div class="mx-auto w-full max-w-4xl p-2.5 lg:flex lg:justify-between">
     <div class="flex justify-between">
-      <div class="flex items-center min-h-8">
-        <a title="Go to home page" accesskey="!"
-          href="https://salif.github.io/zola-themes-collection/" class="text-2xl font-semibold">Zola Themes</a>
-        <button type="button" title="Switch color scheme" accesskey="$"
-          onclick="window.linkita.toggleDarkMode();" ondblclick="window.linkita.resetDarkMode();"
+      <div class="flex items-center min-h-8 overflow-hidden">
+        <a title="Go to home page [Alt + !]" accesskey="!"
+          href="https://salif.github.io/zola-themes-collection/"
+          class="text-2xl font-semibold truncate">Zola Themes</a>
+        <button type="button" title="Switch color scheme [Alt + $]" accesskey="$"
+          onclick="window.zolaTheme.color.toggle();"
           class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
-          bg-center bg-no-repeat bg-cover [background-image:var(--icon-theme-dark)] dark:[background-image:var(--icon-theme-light)] dark:invert"
+            bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
+            dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
         ></button>
       </div>
-      <div title="Menu" role="button" accesskey="+" tabindex="0"
-        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
-        onclick="window.linkita.toggleHeaderMenu();"
-        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.linkita.toggleHeaderMenu() : true;"
+      <div title="Toggle menu [Alt + `+`]" role="button" accesskey="+" tabindex="0"
+        class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer select-none flex-col items-center justify-center gap-2.5 lg:hidden"
+        onclick="window.zolaTheme.menu.toggleHeader();"
+        onkeydown="(event.keyCode == 13 || event.keyCode == 32) ? event.preventDefault() || window.zolaTheme.menu.toggleHeader() : true;"
       ></div>
     </div>
     <nav class="flex w-full items-center lg:w-auto">
@@ -70,7 +72,7 @@
   
   <!-- End Body Start inject -->
   <main class="prose prose-neutral dark:prose-invert prose-pre:rounded-lg prose-img:rounded-lg
-    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 break-words">
+    relative mx-auto min-h-[calc(100vh-4rem)] max-w-3xl px-4 pt-28 lg:pt-32 pb-12 wrap-break-word">
     
 <script>
   const p = window.location.pathname;
@@ -102,10 +104,7 @@
 
   
   <!-- GoatCounter -->
-  <script>window.linkita.initGoatCounterAnalytics({
-    src: "https://salif.github.io/zola-themes-collection/js/gc.min.js?h=3df8de3015e302c56efa",
-    endpoint: "https://sgi.goatcounter.com/count"
-  });</script>
+  <script>window.zolaTheme.analytics.initGoatCounter({ src: "https://salif.github.io/zola-themes-collection/js/gc.min.js?h=3df8de3015e302c56efa", endpoint: "https://sgi.goatcounter.com/count" });</script>
 
   <!-- Begin Body End inject -->
   

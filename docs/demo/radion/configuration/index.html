@@ -46,6 +46,13 @@
     />
     <meta name="twitter:title" content="Configuration Options" />
 
+    <!-- Additional Fediverse Tags -->
+    
+    <meta name="fediverse:creator" content="@username@my.instance.example.com" />
+     
+    <link rel="me" href="https:&#x2F;&#x2F;my.instance.example.com&#x2F;@username" />
+    
+
     <!-- Cover images -->
     
     
@@ -272,6 +279,19 @@ body {
           class="social-icon"
         />
       </a>
+       
+      <a
+        href="https:&#x2F;&#x2F;my.instance.example.com&#x2F;@username"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://salif.github.io/zola-themes-collection/demo/radion/icons/mastodon.svg"
+          id="mastodon-icon"
+          alt="Mastodon"
+          class="social-icon"
+        />
+      </a>
       
     </aside>
   </section>
@@ -353,6 +373,10 @@ body {
          
         <li>
           <a href="https://salif.github.io/zola-themes-collection/demo/radion/configuration/#github">GitHub</a>
+        </li>
+         
+        <li>
+          <a href="https://salif.github.io/zola-themes-collection/demo/radion/configuration/#fediverse-and-mastodon">Fediverse and Mastodon</a>
         </li>
          
         <li>
@@ -557,6 +581,19 @@ disable favicons, set the following in your <code>config.toml</code>:</p>
 <code>config.toml</code>:</p>
 <pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[extra]
 </span><span style="color:#eb6772;">github </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;https://github.com/your-github-link&quot;
+</span></code></pre>
+<h3 id="fediverse-and-mastodon"><a class="zola-anchor" href="#fediverse-and-mastodon" aria-label="Anchor link for: fediverse-and-mastodon">Fediverse and Mastodon</a></h3>
+<p>In your <code>config.toml</code> you can set options related to the Fediverse and
+explicitly Mastodon.</p>
+<p>To enable author attribution, set the <code>extra.fediverse.creator</code> option to your
+account address. To enable website verification, set the
+<code>extra.fediverse.rel_me</code> option to a link to your profile.</p>
+<p>Set the <code>extra.mastodon</code> field to a link to your Mastodon account
+to show a Mastodon logo with this link.</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#6c7079;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#abb2bf;">[extra]
+</span><span style="color:#eb6772;">fediverse</span><span style="color:#abb2bf;">.</span><span style="color:#eb6772;">creator </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;@username@my.instance.example.com&quot;
+</span><span style="color:#eb6772;">fediverse</span><span style="color:#abb2bf;">.</span><span style="color:#eb6772;">rel_me </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;https://my.instance.example.com/@username&quot;
+</span><span style="color:#eb6772;">mastodon </span><span style="color:#abb2bf;">= </span><span style="color:#9acc76;">&quot;https://my.instance.example.com/@username&quot;
 </span></code></pre>
 <h3 id="code-snippets"><a class="zola-anchor" href="#code-snippets" aria-label="Anchor link for: code-snippets">Code Snippets</a></h3>
 <h4 id="syntax-highlighting"><a class="zola-anchor" href="#syntax-highlighting" aria-label="Anchor link for: syntax-highlighting">Syntax Highlighting:</a></h4>

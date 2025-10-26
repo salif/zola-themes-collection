@@ -12,7 +12,7 @@ body {
 :host {
   --marisa-font-stack: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "Source Han Serif CN", STSong, "AR PL New Sung", "AR PL SungtiL GB", NSimSun, SimSun, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --marisa-sidebar-font-size: 0.75rem;
+  --marisa-sidebar-font-size: 1rem; /* fix for holiday.css */
   --marisa-status-font-size: 1.2rem;
 
   --marisa-article-metadata-font-size: 0.85rem;
@@ -184,5 +184,13 @@ body {
 .sidebar hr,
 .toc hr {
   border-width: 0;
+}
+
+.sidebar nav,
+.content nav {
+  position: static;
+  width: auto;
+  background-image: none;
+  padding-top: 0;
 }
 

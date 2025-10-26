@@ -2,7 +2,6 @@
 <html lang="en" dir="i18n_dir">
 
 <head>
-  
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -54,23 +53,54 @@
         }
     </style>
     
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(30, 32, 48);           /* macchiato-mantle */
+                --entry: rgb(36, 39, 58);           /* macchiato-base  */
+                --primary: rgb(202, 211, 245);      /* macchiato-text */
+                --secondary: rgb(184,192, 224);     /* macchiato-subtext1 */
+                --tertiary: rgb(54, 58, 79);        /* macchiato-surface0 */
+                --content: rgb(165, 173, 203);      /* macchiato-subtext0 */
+                --hljs-bg: rgb(24, 25, 38);         /* macchiato-crust */
+                --code-bg: rgb(24, 25, 38);         /* macchiato-crust */
+                --border: rgb(30, 32, 48);          /* macchiato-mantle */
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+    
 </noscript>
 
-
-  
 </head>
 
 <body
-class="list "
-id="top">
-
+class="list" id="top">
   
-<script>
-  if (localStorage.getItem("pref-theme") === "dark") {
-    document.body.classList.add("dark");
-  }
-</script>
-
+  <script>
+    const preft = localStorage.getItem("pref-theme");
+    if (preft === "dark") {
+      document.body.classList.add("dark");
+    } else if (preft === "light") {
+      document.body.classList.remove("dark");
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  </script>
 <header class="header">
   <nav class="nav">
     <div class="logo">

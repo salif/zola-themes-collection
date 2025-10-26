@@ -159,6 +159,9 @@ function readThemeInfo(theme, TOML) {
 	themeInfo.authorName = themeToml.author?.name
 	themeInfo.authorHomepage = themeToml.author?.homepage
 	themeInfo.originalRepo = themeToml.original?.repo
+	if (themeInfo.authorHomepage && !themeInfo.authorHomepage.includes("://")) {
+		themeInfo.authorHomepage = "https://" + themeInfo.authorHomepage
+	}
 	const themeDetails = `<details style='display: inline-block;'><summary class='not-prose' ` +
 		`style='list-style-type: none; display: none;'></summary>
 

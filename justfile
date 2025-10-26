@@ -140,6 +140,7 @@ submodule-add url name: && (demo-checkbuild "themes/" + name)
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
     git config -f .gitmodules submodule.'themes/{{ name }}'.ignore dirty
     git config -f .gitmodules submodule.'themes/{{ name }}'.color both
+    git add .gitmodules
 
 [group("help")]
 submodule-update-all:
