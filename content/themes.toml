@@ -384,64 +384,6 @@ theme = "project-portfolio"
   js = "document.getElementById('info-project-portfolio').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "trankwilo"
-name = "Trankwilo"
-desc = "A simplicity and clean documentation theme"
-tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-trankwilo}
-- **Author**: [Salif Mehmed](https://salif.eu)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/salif/trankwilo>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/trankwilo/>
-- **Min Zola version**: 0.17.0
-- **Original**: <https://github.com/hahwul/goyo>
-
-### Installation{#install-trankwilo}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "trankwilo"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-trankwilo.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of Trankwilo Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/trankwilo/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/salif/trankwilo"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-trankwilo"
-  js = "document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
 theme = "terminus"
 name = "terminus"
 desc = "A dark duotone retro theme for Zola"
@@ -1171,6 +1113,13 @@ theme = "cela"
   height = "765"
   alt = "Light mode screenshot of cela Zola theme demo website"
 
+  [[project.screenshots]]
+  src = "./screenshots/dark-cela.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of cela Zola theme demo website"
+
   [[project.links]]
   name = "Live Preview"
   url = "./demo/cela/"
@@ -1184,6 +1133,71 @@ theme = "cela"
   newtab = false
   url = "#info-cela"
   js = "document.getElementById('info-cela').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "trankwilo"
+name = "Trankwilo"
+desc = "A simplicity and clean documentation theme"
+tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-trankwilo}
+- **Author**: [Salif Mehmed](https://salif.eu)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/salif/trankwilo>
+- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/trankwilo/>
+- **Min Zola version**: 0.17.0
+- **Original**: <https://github.com/hahwul/goyo>
+
+### Installation{#install-trankwilo}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "trankwilo"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-trankwilo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Trankwilo Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-trankwilo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Trankwilo Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/trankwilo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/salif/trankwilo"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-trankwilo"
+  js = "document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "tukan"
@@ -2324,69 +2338,6 @@ theme = "hook"
   js = "document.getElementById('info-hook').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "halcyon"
-name = "halcyon"
-desc = "Clean and simple personal site/blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-halcyon}
-- **Author**: [M0ddr](https://github.com/m0ddr)
-- **License**: MIT
-- **Homepage**: <https://github.com/m0ddr/halcyon>
-- **Min Zola version**: 0.1.0
-
-### Installation{#install-halcyon}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/m0ddr/halcyon.git themes/halcyon
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/m0ddr/halcyon.git themes/halcyon
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "halcyon"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-halcyon.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of halcyon Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-halcyon.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of halcyon Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/halcyon/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/m0ddr/halcyon"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-halcyon"
-  js = "document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
 theme = "ski"
 name = "ski"
 desc = "A minimalist Zola theme inspired by Swiss design principles."
@@ -2514,6 +2465,69 @@ theme = "Seje2"
   newtab = false
   url = "#info-Seje2"
   js = "document.getElementById('info-Seje2').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "halcyon"
+name = "halcyon"
+desc = "Clean and simple personal site/blog theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-halcyon}
+- **Author**: [M0ddr](https://github.com/m0ddr)
+- **License**: MIT
+- **Homepage**: <https://github.com/m0ddr/halcyon>
+- **Min Zola version**: 0.1.0
+
+### Installation{#install-halcyon}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/m0ddr/halcyon.git themes/halcyon
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/m0ddr/halcyon.git themes/halcyon
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "halcyon"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-halcyon.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of halcyon Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-halcyon.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of halcyon Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/halcyon/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/m0ddr/halcyon"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-halcyon"
+  js = "document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "parchment"
@@ -3255,7 +3269,7 @@ theme = "pico"
 theme = "photography"
 name = "photography theme"
 desc = "a theme for a photography portfolio"
-tags = [ "Blog" ]
+tags = [ "Blog", "portfolio", "photography", "SEO" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
@@ -3776,3 +3790,67 @@ theme = "OnePageAPI"
   newtab = false
   url = "#info-OnePageAPI"
   js = "document.getElementById('info-OnePageAPI').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "zola-pechersk"
+name = "pechersk"
+desc = "Modern blog scheme with sidenotes"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zola-pechersk}
+- **Author**: [Seva Poliakov](https://seva.rocks)
+- **License**: MIT
+- **Homepage**: <https://github.com/ctrlok/pechersk>
+- **Main Live Preview**: <https://dvps.blog>
+- **Min Zola version**: 0.0.1
+
+### Installation{#install-zola-pechersk}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/ctrlok/zola-pechersk.git themes/zola-pechersk
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/ctrlok/zola-pechersk.git themes/zola-pechersk
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zola-pechersk"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-pechersk.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of pechersk Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zola-pechersk.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of pechersk Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola-pechersk/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/ctrlok/zola-pechersk"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zola-pechersk"
+  js = "document.getElementById('info-zola-pechersk').parentElement.setAttribute('open', true); this.style.display='none';"
