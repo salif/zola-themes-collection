@@ -3854,3 +3854,68 @@ theme = "zola-pechersk"
   newtab = false
   url = "#info-zola-pechersk"
   js = "document.getElementById('info-zola-pechersk').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "zola-fodoks-theme"
+name = "adidoks"
+desc = "AdiDoks is a Zola theme helping you build modern documentation."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zola-fodoks-theme}
+- **Author**: [Aaran Xu](https://github.com/aaranxu)
+- **License**: MIT
+- **Homepage**: <https://github.com/aaranxu/adidoks>
+- **Main Live Preview**: <https://adidoks.netlify.app/>
+- **Min Zola version**: 0.15.0
+- **Original**: <https://github.com/h-enk/doks>
+
+### Installation{#install-zola-fodoks-theme}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/PartialShawn/zola-fodoks-theme.git themes/zola-fodoks-theme
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/PartialShawn/zola-fodoks-theme.git themes/zola-fodoks-theme
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zola-fodoks-theme"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-fodoks-theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of adidoks Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zola-fodoks-theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of adidoks Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola-fodoks-theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/PartialShawn/zola-fodoks-theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zola-fodoks-theme"
+  js = "document.getElementById('info-zola-fodoks-theme').parentElement.setAttribute('open', true); this.style.display='none';"

@@ -1,4 +1,4 @@
-{% import "macros/url.html" as m_url %}
+{% import "macros/link.html" as _link %}
 {%- if url is defined %}
   {%- set projects = load_data(url=url, format=format) %}
 {%- elif path is starting_with("/") %}
@@ -45,7 +45,7 @@
         href="{{ link.url | escape_xml | safe }}"
         onclick="{{ link.js | safe }}"
         {%- else %}
-        href="{{ m_url::get(url=link.url) }}"
+        href="{{ _link::get(url=link.url) }}"
         {%- endif %}
         {%- if link.newtab | default(value=true) %}
         target="_blank"{% endif %}

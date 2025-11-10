@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (navigator.clipboard) {
 			// Code block header title
 			let title = document.createElement("span");
-			let lang = block.getAttribute("data-lang");
+			let lang = block.getAttribute("data-name") || block.getAttribute("data-lang");
 			title.innerHTML = lang;
 
 			// Copy button icon

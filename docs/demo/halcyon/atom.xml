@@ -30,11 +30,11 @@
 &lt;p&gt;&lt;strong&gt;Block math:&lt;&#x2F;strong&gt;
 $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
 &lt;p&gt;If you wanted to use maths you need to ensure it&#x27;s enabled when writing the post:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;maths = true
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;maths = true
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will call the KaTex auto-render extension CDN and math contained in the following tags will be rendered accordingly:&lt;&#x2F;p&gt;
-&lt;pre style=&quot;background-color:#151515;color:#e8e8d3;&quot;&gt;&lt;code&gt;&lt;span&gt;$math$ for inline math
+&lt;pre style=&quot;background-color:#282828;color:#fdf4c1aa;&quot;&gt;&lt;code&gt;&lt;span&gt;$math$ for inline math
 &lt;&#x2F;span&gt;&lt;span&gt;$$math$$ for display math
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;images&quot;&gt;Images&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#images&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
@@ -51,7 +51,7 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
 	allowfullscreen&gt;
 &lt;&#x2F;iframe&gt;
 &lt;p&gt;Usage:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{ youtube(id=&amp;quot;6BBgKWJRx1o&amp;quot;) } # This would be double curly brackets
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{ youtube(id=&amp;quot;6BBgKWJRx1o&amp;quot;) } # This would be double curly brackets
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;github-repos&quot;&gt;Github Repos&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#github-repos&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lastly the only other shortcode I&#x27;ve implimented is github repos:&lt;&#x2F;p&gt;
@@ -83,7 +83,7 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
   &lt;div class=&quot;repo-tags small accent&quot;&gt;&lt;&#x2F;div&gt;
 &lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Usage:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{gh_repo(owner=&amp;quot;rust-lang&amp;quot;, repo=&amp;quot;rust&amp;quot;)} # This would be double curly brackets
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{gh_repo(owner=&amp;quot;rust-lang&amp;quot;, repo=&amp;quot;rust&amp;quot;)} # This would be double curly brackets
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 </content>
         
@@ -107,10 +107,10 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/halcyon/posts/markdown/">&lt;p&gt;This post is a markdown example.&lt;&#x2F;p&gt;
 &lt;p&gt;Here is &lt;a href=&quot;http:&#x2F;&#x2F;example.com&quot;&gt;a link&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;Some &lt;em&gt;italic text&lt;&#x2F;em&gt; and &lt;strong&gt;bold text&lt;&#x2F;strong&gt; and &lt;del&gt;strikethrough text&lt;&#x2F;del&gt; and &lt;code&gt;inline code&lt;&#x2F;code&gt;. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
-&lt;pre data-linenos data-lang=&quot;rust&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#888888;&quot;&gt;&#x2F;&#x2F; Here is a code block
+&lt;pre data-linenos data-lang=&quot;rust&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;1&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; Here is a code block
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#8fbfdc;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fad07a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
-&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    println!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Hello world!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;&#x2F;td&gt;&lt;td&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;Hello world!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;5&lt;&#x2F;td&gt;&lt;td&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Unordered list: &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;

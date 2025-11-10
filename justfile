@@ -132,7 +132,7 @@ submodule-remove path: && screenshots-to-fix
     git rm -f '{{ path }}'
 
 [group("help")]
-submodule-add url name: && (demo-checkbuild "themes/" + name)
+submodule-add url name:
     @if ! [[ "{{ name }}" =~ ^[A-Za-z0-9._-]+$ ]]; then \
         printf "Name not allowed!\n"; exit 1; fi;
     @git diff --quiet .gitmodules
@@ -140,6 +140,7 @@ submodule-add url name: && (demo-checkbuild "themes/" + name)
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
     git config -f .gitmodules submodule.'themes/{{ name }}'.ignore dirty
     git config -f .gitmodules submodule.'themes/{{ name }}'.color both
+    {{ this }} demo-checkbuild 'themes/{{ name }}'
     git add .gitmodules
 
 [group("help")]
