@@ -66,6 +66,7 @@
 - [theme-rumorosa](https://gitlab.com/e5716/blog/theme-rumorosa): 26 commits: `config.toml not found`
 - [simplepod](https://github.com/cbrake/simplepod): 18 commits: `config.toml not found`
 - [anemonev](https://github.com/evnoj/anemonev): 117 commits: `variable not found`
+- [no-style-please](https://github.com/iGxnon/no-style-please): 47 commits: `unknown field generate_feed`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -96,7 +97,6 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [ennui](https://codeberg.org/leana8959/ennui): 41 commits
 - [doc_zola_theme](https://github.com/ProPixelizer/doc_zola_theme): 62 commits
 - [simple_zola](https://codeberg.org/murtezayesil/simple_zola): 5 commits
-- [no-style-please](https://github.com/atgumx/no-style-please): 26 commits
 - [basic-infosite](https://codeberg.org/lukaskluge/basic-infosite): 118 commits
 - [carbon](https://github.com/nik-rev/carbon): 294 commits
 - [leobrutalist_theme](https://github.com/leonardoCorti/leobrutalist_theme): 5 commits
@@ -109,6 +109,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-dash](https://github.com/bitbrain/zola-dash): 84 commits
 - [kirifuji-zola](https://codeberg.org/yukari/kirifuji-zola): 3 commits
 - [zola-no-style-please](https://git.sr.ht/~gumxcc/zola-no-style-please): 28 commits
+- [zokipedia](https://github.com/hahwul/zokipedia): 78 commits
 
 ### No license that allows me to host a live demo
 
