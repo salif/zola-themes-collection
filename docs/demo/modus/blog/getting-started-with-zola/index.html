@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+
+  <title>Getting Started with Zola - Modus Theme for Zola</title>
+  
+    <meta name="description" content="A beginner&#x27;s guide to getting started with Zola, the fast static site generator" />
+  
+
+
+
+<link rel="canonical" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;modus&#x2F;blog&#x2F;getting-started-with-zola&#x2F;">
+
+
+<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/modus/css/dist/main.css">
+
+<!-- Modus Chroma syntax highlighting -->
+<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/modus/css/dist/operandi-chroma-style.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/modus/css/dist/vivendi-chroma-style.css" media="(prefers-color-scheme: dark)">
+
+
+  <link rel="alternate" type="application/rss+xml" title="Modus Theme for Zola" href="https://salif.github.io/zola-themes-collection/demo/modus/rss.xml">
+
+
+  </head>
+  <body>
+    <header class="bg-operandi-white-dim dark:bg-vivendi-black-dim">
+      <div class="mx-auto max-w-4xl px-4 py-2">
+        <div class="flex justify-between items-center">
+  <a href="https://salif.github.io/zola-themes-collection/demo/modus"
+     class="no-underline text-current hover:bg-transparent">
+    Modus Theme for Zola
+  </a>
+
+  
+  <nav>
+    <ul class="flex space-x-4">
+      
+        <li>
+          <a href="https://salif.github.io/zola-themes-collection/demo/modus/blog"
+             class="no-underline text-current hover:bg-transparent">
+            Blog
+          </a>
+        </li>
+      
+        <li>
+          <a href="https://salif.github.io/zola-themes-collection/demo/modus/about"
+             class="no-underline text-current hover:bg-transparent">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+  
+</div>
+
+      </div>
+    </header>
+
+    <main class="my-10">
+      <div class="mx-auto max-w-4xl px-4">
+        
+<article>
+  <header class="my-4">
+    <h1>Getting Started with Zola</h1>
+  </header>
+
+  
+
+  <div>
+    <p>Zola is a fast static site generator written in Rust. It's designed to be easy to use while remaining powerful and flexible.</p>
+<h2 id="why-zola">Why Zola?</h2>
+<p>There are several reasons why you might choose Zola for your next project:</p>
+<ul>
+<li><strong>Speed</strong>: Built in Rust, Zola is incredibly fast</li>
+<li><strong>Single Binary</strong>: No dependencies to install, just download and run</li>
+<li><strong>Built-in Features</strong>: Syntax highlighting, Sass compilation, and more</li>
+<li><strong>Simple</strong>: Easy to learn and use, with great documentation</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="macos">macOS</h3>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">brew</span></span><span class="z-meta z-function-call z-arguments z-shell"> install zola</span>
+</span></code></pre>
+<h3 id="linux">Linux</h3>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> Arch Linux</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">pacman</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>S</span> zola</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> Ubuntu/Debian (via Snap)</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">snap</span></span><span class="z-meta z-function-call z-arguments z-shell"> install zola<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>edge</span></span>
+</span></code></pre>
+<h3 id="windows">Windows</h3>
+<pre data-lang="powershell" class="language-powershell z-code"><code class="language-powershell" data-lang="powershell"><span class="z-source z-powershell"><span class="z-comment z-line z-powershell"><span class="z-punctuation z-definition z-comment z-powershell">#</span> Using Scoop<span class="z-punctuation z-definition z-comment z-powershell">
+</span></span></span><span class="z-source z-powershell">scoop install zola
+</span><span class="z-source z-powershell">
+</span><span class="z-source z-powershell"><span class="z-comment z-line z-powershell"><span class="z-punctuation z-definition z-comment z-powershell">#</span> Using Chocolatey<span class="z-punctuation z-definition z-comment z-powershell">
+</span></span></span><span class="z-source z-powershell">choco install zola
+</span></code></pre>
+<h2 id="creating-your-first-site">Creating Your First Site</h2>
+<p>Once Zola is installed, creating a new site is straightforward:</p>
+<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> Create a new site</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zola</span></span><span class="z-meta z-function-call z-arguments z-shell"> init my-site</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> Navigate to the directory</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-support z-function z-cd z-shell">cd</span></span><span class="z-meta z-function-call z-arguments z-shell"> my-site</span>
+</span><span class="z-source z-shell z-bash">
+</span><span class="z-source z-shell z-bash"><span class="z-comment z-line z-number-sign z-shell"><span class="z-punctuation z-definition z-comment z-begin z-shell">#</span></span><span class="z-comment z-line z-number-sign z-shell"> Start the development server</span><span class="z-comment z-line z-number-sign z-shell">
+</span></span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">zola</span></span><span class="z-meta z-function-call z-arguments z-shell"> serve</span>
+</span></code></pre>
+<p>Your site will be available at <code>http://127.0.0.1:1111</code>.</p>
+<h2 id="basic-project-structure">Basic Project Structure</h2>
+<p>A Zola project has a simple, intuitive structure:</p>
+<pre class="z-code"><code><span class="z-text z-plain">my-site/
+</span><span class="z-text z-plain">├── config.toml      # Site configuration
+</span><span class="z-text z-plain">├── content/         # Your content (markdown files)
+</span><span class="z-text z-plain">├── templates/       # HTML templates
+</span><span class="z-text z-plain">├── static/          # Static files (CSS, images, etc.)
+</span><span class="z-text z-plain">└── sass/           # Sass/SCSS files
+</span></code></pre>
+<h2 id="writing-content">Writing Content</h2>
+<p>Create a new blog post by adding a Markdown file to the <code>content</code> directory:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">title = &quot;My First Post&quot;
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">date = 2025-01-12
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">This is my first post with Zola!
+</span></span></code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Read the <a href="https://www.getzola.org/documentation/">official documentation</a></li>
+<li>Explore available <a href="https://www.getzola.org/themes/">themes</a></li>
+<li>Join the <a href="https://zola.discourse.group/">community</a></li>
+</ul>
+<p>Happy site building! 🚀</p>
+
+  </div>
+
+  
+    <p class="my-10 text-sm italic">
+      <span>Written on</span>
+      <time class="font-semibold" datetime="2025-01-12">
+        Jan 12, 2025
+      </time>
+      
+    </p>
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="mx-auto max-w-4xl p-4">
+        <div class="border-t border-operandi-gray dark:border-vivendi-gray py-2 text-sm text-operandi-black-dim dark:text-vivendi-white-dim">
+  
+    &copy; 2025
+  
+</div>
+
+      </div>
+    </footer>
+  </body>
+</html>

@@ -73,8 +73,6 @@ headings, lists, and more." />
       content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
     />
 
-
-
     <!-- Favicons -->
     
     <link
@@ -119,6 +117,18 @@ headings, lists, and more." />
       <link
         rel="stylesheet"
         href="https://salif.github.io/zola-themes-collection/demo/radion/site.css"
+      />
+    
+
+    <!-- Syntax highlighting theming -->
+    
+      <link
+         rel="stylesheet" type="text/css"
+         href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/syntax/syntax-theme-dark.css"
+      />
+      <link
+         rel="stylesheet" type="text/css"
+         href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/syntax/syntax-theme-light.css"
       />
     
 
@@ -250,7 +260,7 @@ body {
         <img
           src="https://salif.github.io/zola-themes-collection/demo/radion/icons/sun.svg"
           id="sun-icon"
-          style="filter: invert(1)"
+          class="invert-icon"
           alt="Light mode"
         />
         <img
@@ -546,11 +556,11 @@ to create a nested structure.</p>
 </li>
 </ul>
 <h2 id="code-blocks"><a class="zola-anchor" href="#code-blocks" aria-label="Anchor link for: code-blocks">Code Blocks</a></h2>
-<pre data-lang="rust" style="background-color:#2b303b;color:#6c7079;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#cd74e8;">fn </span><span style="color:#5cb3fa;">main</span><span style="color:#abb2bf;">() {
-</span><span style="color:#abb2bf;">    println!(</span><span style="color:#9acc76;">&quot;Hello, world!&quot;</span><span style="color:#abb2bf;">);
-</span><span style="color:#abb2bf;">}
+<pre data-lang="rust" class="language-rust z-code"><code class="language-rust" data-lang="rust"><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-function z-rust"><span class="z-storage z-type z-function z-rust">fn</span> </span><span class="z-entity z-name z-function z-rust">main</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-begin z-rust">(</span></span><span class="z-meta z-function z-rust"><span class="z-meta z-function z-parameters z-rust"><span class="z-punctuation z-section z-parameters z-end z-rust">)</span></span></span></span><span class="z-meta z-function z-rust"> </span><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span>
+</span></span></span><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust">    <span class="z-support z-macro z-rust">println!</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span></span><span class="z-meta z-group z-rust"><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>Hello, world!<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span><span class="z-punctuation z-terminator z-rust">;</span>
+</span></span></span><span class="z-source z-rust"><span class="z-meta z-function z-rust"><span class="z-meta z-block z-rust"></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span>
 </span></code></pre>
-<pre style="background-color:#2b303b;color:#6c7079;"><code><span style="color:#abb2bf;">Some text block
+<pre class="z-code"><code><span class="z-text z-plain">Some text block
 </span></code></pre>
 <h2 id="inline-code"><a class="zola-anchor" href="#inline-code" aria-label="Anchor link for: inline-code">Inline Code</a></h2>
 <p>This is an example of <code>inline code</code>. You can use backticks to highlight code
@@ -578,7 +588,7 @@ occaecat voluptate</p>
 <p>Here's one with multiple paragraphs and code. This is the first paragraph
 of the footnote.</p>
 <p>Indent paragraphs to include them in the footnote.</p>
-<pre data-lang="python" style="background-color:#2b303b;color:#6c7079;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#5ebfcc;">print</span><span style="color:#abb2bf;">(</span><span style="color:#9acc76;">&quot;Hello word&quot;</span><span style="color:#abb2bf;">)
+<pre data-lang="python" class="language-python z-code"><code class="language-python" data-lang="python"><span class="z-source z-python"><span class="z-meta z-function-call z-python"><span class="z-meta z-qualified-name z-python"><span class="z-variable z-function z-python"><span class="z-support z-function z-builtin z-python">print</span></span></span></span><span class="z-meta z-function-call z-arguments z-python"><span class="z-punctuation z-section z-arguments z-begin z-python">(</span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-python"><span class="z-string z-quoted z-double z-python">Hello word<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span><span class="z-punctuation z-section z-arguments z-end z-python">)</span></span>
 </span></code></pre>
 <p>Add as many paragraphs as you like.</p>
 </div>

@@ -821,13 +821,13 @@ img.in-text {
   align-items: center;
   margin: 20px 0;
 }
-.tool-section .tool-label{
+.tool-section .tool-label {
   margin: 0 0px;
   flex: 1;
   text-align: center;
   margin-right: 20px;
 }
-.tool-section .tool-inputs{
+.tool-section .tool-inputs {
   flex: 4;
   text-align: left;
   display: flex;
@@ -852,8 +852,8 @@ input {
   border: 1px solid var(--tertiary);
   border-radius: var(--radius);
 }
-/* 遮罩层重命名为 searchbox */
-#searchbox {
+/* Rename overlay to search-toggle-box */
+#search-toggle-box {
   position: fixed;
   top: 0;
   left: 0;
@@ -866,13 +866,13 @@ input {
   z-index: 1000;
 }
 
-#searchbox.hidden {
+#search-toggle-box.hidden {
   display: none;
 }
 
-/* 搜索框 */
-.search-modal {
-  background: var(--code-bg);
+/* The actual search div above search-toggle-box */
+.search-toggle-modal {
+  background: var(--entry);
   padding: 20px;
   border-radius: 8px;
   width: 80%;
@@ -880,8 +880,7 @@ input {
   text-align: center;
 }
 
-/* 使用已有样式 */
-#searchbox input {
+#search-toggle-box input {
   padding: 4px 10px;
   width: 100%;
   color: var(--primary);
@@ -890,11 +889,11 @@ input {
   border-radius: var(--radius);
 }
 
-#searchbox input:focus {
+#search-toggle-box input:focus {
   border-color: var(--secondary);
 }
 
-.search-modal button {
+.search-toggle-modal button {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: var(--border);
@@ -905,40 +904,28 @@ input {
   transition: 0.1s;
 }
 
-.search-modal button:hover {
+.search-toggle-modal button:hover {
   transform: scale(0.9);
 }
-#searchbox input:focus {
-  border-color: var(--secondary);
-}
-#searchResults li {
-  list-style: none;
-  border-radius: var(--radius);
-  padding: 10px;
+
+.search-results {
   margin: 10px 0;
+}
+.search-entry {
   position: relative;
-  font-weight: 500;
-}
-#searchResults {
-  margin: 10px 0;
-  width: 100%;
-}
-#searchResults li:active {
+  margin-bottom: var(--gap);
+  padding: var(--gap);
+  background: var(--entry);
+  border-radius: var(--radius);
   transition: transform 0.1s;
-  transform: scale(0.98);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-#searchResults a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  outline: none;
+
+.search-entry .post-entry {
+  background: var(--code-bg);
 }
-#searchResults .focus {
-  transform: scale(0.98);
-  border: 2px solid var(--tertiary);
-}
+
 .terms-tags li {
   display: inline-block;
   margin: 10px;

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMZola Theme Demo</title>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/style.css">
+    <style>
+        :root {
+            --theme-color: #ff2d55;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/js/background.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/js/theme-toggle.js"></script>
+</head>
+<body>
+    <div id="bg-canvas-container" 
+         data-colors='["#5dc1dd","#e9b32b","#e32c84","#2196f3"]'
+         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -10; overflow: hidden;">
+    </div>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="card menu-card">
+                <div class="menu-section">
+                    <div class="search-bar">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <span>搜索</span>
+                    </div>
+                    
+                    <nav class="main-nav">
+                        <ul>
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/" class="">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                    首页
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-section">
+                    <h3 class="section-title">分类</h3>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/blog/" class="active">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                    博客
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/music/" class="">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                                    音乐
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="menu-section">
+                    <h3 class="section-title">Library</h3>
+                    <nav class="sub-nav">
+                        <ul>
+                            <li>
+                                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;am-zola-theme&#x2F;/tags">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                                    标签
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    最近
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="sidebar-footer">
+                    <button id="theme-toggle" class="theme-toggle-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <span class="theme-text" 
+                              data-dark="深色模式"
+                              data-light="浅色模式">深色模式</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+<article class="post">
+    <header class="post-header card">
+        
+        
+        <div class="header-content">
+            <h1 class="post-title">Markdown Syntax Guide</h1>
+            <div class="post-meta">
+                
+                <time datetime="2023-10-27">2023 年 10 月 27 日
+</time>
+                
+                <span class="tags">
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/tags/markdown/">#markdown</a>
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/tags/test/">#test</a>
+                    
+                </span>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="post-content card">
+        <h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h2 id="typography">Typography</h2>
+<p><strong>Bold text</strong>
+<em>Italic text</em>
+<strong><em>Bold and Italic</em></strong>
+<del>Strikethrough</del></p>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered">Unordered</h3>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Subitem 2.1</li>
+<li>Subitem 2.2</li>
+</ul>
+</li>
+</ul>
+<h3 id="ordered">Ordered</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h2 id="links-and-images">Links and Images</h2>
+<p><a href="https://google.com">Link to Google</a></p>
+<p><img src="https://salif.github.io/zola-themes-collection/demo/am-zola-theme/blog/test-post/@/Inabakumori_-_Watashi_wa_Ame.webp" alt="Placeholder Image" /></p>
+<h2 id="blockquote">Blockquote</h2>
+<blockquote>
+<p>This is a blockquote.</p>
+<p>It can span multiple lines.</p>
+</blockquote>
+<h2 id="code">Code</h2>
+<p>Inline <code>code</code> looks like this.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    println!(&quot;</span><span style="color:#a3be8c;">Hello, world!</span><span>&quot;);
+</span><span>}
+</span></code></pre>
+<pre data-lang="css" style="background-color:#2b303b;color:#c0c5ce;" class="language-css "><code class="language-css" data-lang="css"><span style="color:#bf616a;">body </span><span>{
+</span><span>  color: red;
+</span><span>}
+</span></code></pre>
+<h2 id="tables">Tables</h2>
+<p>| Header 1 | Header 2 |
+|Data 1|Data 2|
+|Data 3|Data 4|</p>
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<hr />
+<p>End of test.</p>
+
+    </div>
+</article>
+
+        </main>
+    </div>
+</body>
+</html>

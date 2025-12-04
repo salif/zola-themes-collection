@@ -6,10 +6,38 @@
     <meta name="description" content="A simple blog for me to write my thoughts">
     <title>Halcyon | Test Post</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=2e5c279f8844833f6a69">
+    <link rel="preload" href="/fonts/woff2/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c"></noscript>
+    <script>
+const cls = document.documentElement.classList;
+const sessionTheme = sessionStorage.getItem("theme");
+
+const setDark = () => {
+  cls.add("dark-mode");
+  cls.remove("light-mode");
+  sessionStorage.setItem("theme", "dark");
+};
+
+const setLight = () => {
+  cls.add("light-mode");
+  cls.remove("dark-mode");
+  sessionStorage.setItem("theme", "light");
+};
+
+if (sessionTheme === "dark") {
+  setDark();
+} else if (sessionTheme === "light") {
+  setLight();
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  setDark();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("dark-mode-on").addEventListener("click", setDark);
+  document.getElementById("dark-mode-off").addEventListener("click", setLight);
+});
+    </script>
     
     
         
@@ -29,7 +57,29 @@
 <body>
     
 <header class="doublespace footnote-definition">
-    <a href="javascript:history.go(-1)">&LeftArrow; Back</a>
+    <nav class="breadcrumbs">
+        <a href="/">Home</a>
+        
+            
+                
+                    
+                        
+                        
+                    
+                
+                    
+                        
+                        
+                            <span class="breadcrumb-separator">/</span>
+                            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;posts&#x2F;">Posts</a>
+                        
+                    
+                
+            
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Test Post</span>
+        
+    </nav>
 </header>
 
 
@@ -94,23 +144,20 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$</p>
 </span></code></pre>
 <h2 id="images">Images<a class="anchor" aria-hidden="true" href="#images">#</a></h2>
 <p>Images should be pretty self explainitory, for personal preference I've set images to center themselves subject to size on the page</p>
-<p><img src="https://salif.github.io/zola-themes-collection/demo/halcyon/posts/test/images/1.jpg" alt="image" /></p>
-<h2 id="youtube-shortcode">Youtube shortcode<a class="anchor" aria-hidden="true" href="#youtube-shortcode">#</a></h2>
-<p>I've also added a youtube shorcode. It's set up with a few handy defaults and takes a video ID.</p>
-<iframe
-	class="video"
-	src="https://www.youtube-nocookie.com/embed/6BBgKWJRx1o"
-	title="YouTube video"
-	frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	allowfullscreen>
-</iframe>
+<figure>
+    <img src="images&#x2F;1.jpg" alt="Example image" />
+    
+    <figcaption>Example caption demonstrating figure captions</figcaption>
+    
+</figure>
 <p>Usage:</p>
-<pre data-lang="markdown" style="background-color:#282828;color:#fdf4c1aa;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{ youtube(id=&quot;6BBgKWJRx1o&quot;) } # This would be double curly brackets
+<pre data-lang="markdown" style="background-color:#282828;color:#fdf4c1aa;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{figure(src=&quot;images/example.jpg&quot;, alt=&quot;Description&quot;, caption=&quot;Example caption&quot;)} # With caption (double curly brackets)
+</span><span>{figure(src=&quot;images/example.jpg&quot;, alt=&quot;Description&quot;)} # Without caption (double curly brackets)
 </span></code></pre>
 <h2 id="github-repos">Github Repos<a class="anchor" aria-hidden="true" href="#github-repos">#</a></h2>
 <p>Lastly the only other shortcode I've implimented is github repos:</p>
 <p><strong>Rust:</strong>
+<link rel="preconnect" href="https://api.github.com" crossorigin>
 <div class="repo-container" data-owner="rust-lang" data-repo="rust">
   <div class="repo-header">
     <a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener" class="repo-link">
@@ -155,8 +202,7 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$</p>
             </svg>
         </button>
     </div>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=35126ddac5ff1be1752c"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/theme.js?h=7d54d09f9d907d8fac68"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=7cc20b786ad2b7bd0b38" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda" defer></script>
     </body>
 </html>

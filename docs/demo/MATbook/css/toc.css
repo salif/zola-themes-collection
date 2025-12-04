@@ -1,0 +1,658 @@
+/* ========================================= */
+/* NOTE: I: PAGE/BARS/ICONS LAYOUT 
+*/
+/*========================================= */
+
+/* NOTE: leftside bar (aka menu): both light mode and dark mode are configured in II: THEME SETUP
+*/
+/* =========================================
+   0. TOPBAR/HEADER LAYOUT
+   ========================================= */
+.page__header {
+	/* Comment the following 3 lines if you do not want sticky */
+    position: sticky; 
+    top: 0;
+    z-index: 90; /* Sit above content,below the Sidebars (95/100) */
+
+    /* Light grey Background & Dark Grey Divider Line */
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    
+    /* Layout Logic */
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+    /* Spacing */
+    height: 50px; /* Force a consistent height */
+    padding: 0 25px; /* Add a little space on the left/right edges */
+    box-sizing: border-box;
+}
+	/* Comment the following 4 lines if you do not want sticky */
+[data-theme="dark"] .page__header {
+    /* Ensures the header stays opaque dark grey when scrolling */
+    background-color: var(--bar-bg) !important;
+    border-bottom: 1px solid var(--bar-border);
+}
+
+/* Ensure the Left side (Home / Title) stay in a row */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Ensure the Right side (Icons) stays aligned */
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+/* =========================================
+   1. MAIN LAYOUT & SPACING
+   ========================================= */
+
+/* The container for content + sidebar */
+.page-layout {
+    position: relative;
+    width: 100%;
+}
+
+/* The actual text content area */
+.main-content {
+    width: 100%;
+    padding: 1rem 2rem; 
+    box-sizing: border-box;
+    transition: margin-right 0.3s ease; 
+}
+
+
+/* =========================================
+   2. THE RIGHT SIDEBAR (TOC of current page)
+   ========================================= */
+
+.toc-sidebar {
+    position: fixed;
+    top: 50px; /* Match this to page__header height in section 0 */
+    right: 0;
+    bottom: 0; 
+    
+    width: 250px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    overflow-y: auto; 
+    z-index: 95;
+
+    /* DEFAULT STATE (For Mobile AND Desktop): Hidden off-screen */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Formatting the list inside the TOC */
+.toc-content {
+    padding: 1rem;
+    font-size: 0.9em;
+}
+.toc-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+.toc-content ul li {
+    margin-bottom: 0.5em;
+}
+.toc-content ul ul {
+    padding-left: 1.5em; 
+}
+
+
+/* =========================================
+   3. THE TOC TOGGLE ICON (Global)
+   ========================================= */
+
+.toc-icon {
+    cursor: pointer;
+    
+    font-size: 2.3rem;
+    color: #333;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Clickable Area */
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.toc-icon:hover {
+   color: #ff69b4; /* Hot Pink text */
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Pink Glow */
+    transform: scale(1.1);
+}
+/* title setup */
+.title-name {
+    text-decoration: none;      /* Remove the underline */
+    color: inherit !important;  /* Force it to use the Header Text color (Black/White), NOT Blue */
+    /* font-weight: bold;           */
+    cursor: pointer;
+    font-size: 1.2rem;          /* Ensure size is consistent */
+}
+
+/* Optional: Slight fade on hover so users know it's clickable */
+.title-name:hover {
+    opacity: 0.7;
+}
+/* =========================================
+   4. DESKTOP BEHAVIOR (Large Screens)
+   ========================================= */
+
+@media screen and (min-width: 1100px) {
+    
+    /* When the sidebar is visible, push the content to the left */
+    .toc-sidebar.visible ~ .page-layout .main-content {
+        margin-right: 250px; 
+        max-width: calc(100% - 250px);
+    }
+}
+
+
+/* =========================================
+   5. SHARED BEHAVIOR (Mobile & Desktop)
+   ========================================= */
+
+.toc-sidebar.visible {
+    transform: translateX(0);
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1); 
+}
+/* =========================================
+   6. THEME TOGGLE ICON)
+   ========================================= */
+.theme-icon {
+    cursor: pointer;
+    font-size: 2.3rem; /* Match toc-icon font-size */
+    color: #333;       /* Default (Light Mode) color */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    margin-right: 5px; /* Spacing between Moon and TOC icon */
+    transition: all 0.3s ease;
+}
+
+.theme-icon:hover {
+    color: #007bff;
+    text-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    transform: scale(1.1);
+}
+/* =========================================
+   7. SEARCH ICON
+   ========================================= */
+
+.search-icon {
+    cursor: pointer;
+    
+    /* Size & Spacing */
+    font-size: 1.5rem;   /* Same size as your other icons */
+    padding: 0 10px;     /* Give it some breathing room */
+    margin-left: 5px;    /* Separate it slightly from the text */
+    color: #333;
+    
+    /* Alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.search-icon:hover {
+    color: #007bff; /* Blue hover */
+}
+/*========================================= */
+/* NOTE: II: THEME SETUP
+*/
+/*========================================= */
+
+/* =========================================
+   1. GLOBAL THEME VARIABLES
+   ========================================= */
+
+:root {
+    /* LIGHT MODE (Default) */
+    --bg-color: #ffffff;      /* Main Page Background */
+    --text-color: #333333;    /* Main Text Color */
+    
+    --bar-bg: #f9f9f9;        /* Sidebars & Header Background */
+    --bar-border: #dddddd;    /* Border lines */
+    --icon-color: #333333;    /* Icons */
+}
+
+[data-theme="dark"] {
+    /* DARK MODE */
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    
+    --bar-bg: #222222;
+    --bar-border: #444444;
+    --icon-color: #ffffff;
+}
+
+
+/* =========================================
+   2. APPLY VARIABLES GLOBALLY
+   ========================================= */
+
+/* 2.1. Main Page Body */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 2.2  Bars */
+.page__header, 
+.menu, 
+.toc-sidebar {
+    background-color: var(--bar-bg) !important;
+    border-color: var(--bar-border) !important;
+    color: var(--text-color);
+}
+
+/* 2.3. Content Area */
+.page, .main-content {
+    background-color: transparent !important; 
+    color: inherit !important;
+}
+/* =========================================
+   3. ICONS
+   ========================================= */
+/* 3.1 toc-icon */
+[data-theme="dark"] .toc-icon{
+   color: var(--icon-color) !important;     /* Turn icon white */
+   background-color: transparent !important; /* REMOVE the white box background */
+}
+[data-theme="dark"] .toc-icon:hover {
+    color: #ffb6c1 !important; /* Lighter Pink for contrast */
+    text-shadow: 0 0 15px rgba(255, 182, 193, 0.8); /* Light Pink Glow */
+}/* 3.2 theme-icon */
+[data-theme="dark"] .theme-icon {
+    color: var(--icon-color) !important;
+    background-color: transparent !important; 
+}
+ /* Specific Glow for Dark Mode (Sun) */
+[data-theme="dark"] .theme-icon:hover {
+    color: #ffd700 !important; /* gold Text */
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Golden glow */
+}
+/* 3.3 search-icon */
+[data-theme="dark"] .search-icon {
+    color: #ffffff !important; /* Pure White in Dark Mode */
+}
+[data-theme="dark"] .search-icon:hover {
+    color: #66b3ff !important; /* light blue hover */
+    text-shadow: 0 0 15px rgba(173, 216, 230, 1.0); /* Light blue glow */
+
+}
+/* =========================================
+   4. LEFT BAR (Knot Image - Always Blue)
+   ========================================= */
+/* 4.1 icon (light mode & dark mode) */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding-right: 15px; 
+}
+.menu-icon img {
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease;
+    
+    /* Light Mode Color: */
+    /* Filter the red knot to blue*/
+    filter: invert(33%) sepia(93%) saturate(1476%) hue-rotate(203deg) brightness(103%) contrast(101%);
+}
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+.menu-icon:hover img {
+    /* Add blue glow */
+    drop-shadow(0 0 5px rgba(0, 123, 255, 0.8));
+}
+/* --- DARK MODE SETTINGS --- */
+[data-theme="dark"] .menu-icon img {
+    filter: invert(72%) sepia(23%) saturate(6361%) hue-rotate(190deg) brightness(102%) contrast(103%);
+}
+[data-theme="dark"] .menu-icon:hover img {
+    drop-shadow(0 0 5px rgba(102, 179, 255, 0.8));
+}
+
+/* 4.2 menu links in leftside bar */
+[data-theme="dark"] .menu a {
+    color: var(--text-color) !important; 
+    text-decoration: none;
+}
+[data-theme="dark"] .menu a:hover {
+    color: #ffffff !important;
+}
+[data-theme="dark"] .menu li.active > a {
+    color: #66b3ff !important; 
+    font-weight: bold;         
+}
+/* /* ========================================= */
+/*    4.1,4.2 old version: 3 horizontal lines)*/
+/*    ========================================= */ */
+/**/
+/* /* change the BACKGROUND of the lines */ */
+/* [data-theme="dark"] .menu-icon span { */
+/*     background-color: var(--icon-color) !important; */
+/* } */
+/* /* Force sidebar links to use the light text color instead of dark blue */ */
+/* [data-theme="dark"] .menu a { */
+/*     color: var(--text-color) !important;  */
+/*     text-decoration: none; */
+/* } */
+/* /*  Make them bright white when hovered */ */
+/* [data-theme="dark"] .menu a:hover { */
+/*     color: #ffffff !important; */
+/* } */
+/* /* Target the link inside the 'active' list item */ */
+/* [data-theme="dark"] .menu li.active > a { */
+/*     color: #66b3ff !important; /* Light Blue (Matches your dark mode links) */ */
+/*     font-weight: bold;         /* Optional: makes it pop a bit more */ */
+/* } */
+/**/
+/* /* make it Light Blue when Hover over any link */ */
+/* [data-theme="dark"] .menu a:hover { */
+/*     color: #66b3ff !important; */
+/* } */
+
+/* =========================================
+   4. LINKS
+   ========================================= */
+/* Standard links in the main text */
+a {
+    color: #007bff; 
+}
+/* Lighter blue for links in dark mode (so they are readable) */
+
+/* manually specify the color of home link */
+[data-theme="dark"] a {
+    color: #66b3ff; 
+}
+[data-theme="dark"] .home-link {
+    /* OPTION 1: Light Green  */
+    color: #90ee90 !important; 
+    
+    /* OPTION 2: Light Pink */
+    /* color: #ffb6c1 !important; */
+    
+    /* OPTION 3: Cyan/Aqua */
+    /* color: #00ffff !important; */
+
+    font-weight: bold; /* Make it slightly bolder to stand out */
+    text-decoration: none;
+}
+
+/* glow effect when hovering in dark mode */
+[data-theme="dark"] .home-link:hover {
+    text-shadow: 0 0 5px rgba(144, 238, 144, 0.6); /* Green Glow */
+    /* text-shadow: 0 0 5px rgba(255, 182, 193, 0.6);    Pink Glow */
+}
+
+/* =========================================
+   5. HEADINGS & LISTS
+   ========================================= */
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] li {
+    color: var(--text-color);
+}
+
+/* =========================================
+   6. CODE BLOCKS (Invert Method)
+   ========================================= */
+/* 6.1 Code blocks */
+[data-theme="dark"] pre {
+    filter: invert(0.9) hue-rotate(180deg);
+    
+    background-color: #fff !important; /* Keep base white so it inverts to black */
+    border: 1px solid #ddd;
+}
+
+/* 6.2 Inline code separately */
+[data-theme="dark"] :not(pre) > code {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+
+/* ========================================= */
+/* NOTE: III: other windows
+*/
+/* ========================================= */
+
+/* =========================================
+   1. HELP WINDOW (TOGGLED BY KEYBINDING '/') 
+========================================= */
+
+.help-modal {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(2px); /* Blur background slightly */
+    z-index: 2000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-content {
+    background: var(--bg-color, #fff); 
+    color: var(--text-color, #333);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    border: 1px solid var(--bar-border, #ddd);
+    
+    /* Limit width so it doesn't span the whole screen on huge monitors */
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.help-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bar-border, #eee);
+    font-size: 1.5rem;
+}
+
+/* --- THE GRID LAYOUT --- */
+.help-grid {
+    display: grid;
+    /* Create 3 columns that are at least 200px wide */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px; /* Space between columns */
+}
+
+/* Category Headers */
+.help-group h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #007bff; /* Blue headers */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .help-group h4 {
+    color: #66b3ff;
+}
+
+/* List Items */
+.help-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-group li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes text to right, key to left */
+    font-size: 0.95rem;
+    border-bottom: 1px dashed var(--bar-border, #eee); /* subtle guide line */
+    padding-bottom: 4px;
+}
+
+/* The Keys */
+.key {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    font-weight: bold;
+    min-width: 24px;
+    text-align: center;
+    box-shadow: 0 2px 0 #ccc; /* 3D key effect */
+}
+
+[data-theme="dark"] .key {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+    box-shadow: 0 2px 0 #555;
+}
+/* Old Version: One-columns  */
+/* .help-modal { */
+/*     position: fixed; */
+/*     top: 0; left: 0;  */
+/*     width: 100%; height: 100%; */
+/*     background: rgba(0,0,0,0.5); /* Dimmed background overlay */ */
+/*     z-index: 2000; /* Ensure it sits on top of everything */ */
+/**/
+/*     /* Center the box */ */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/* } */
+/**/
+/* .help-content { */
+/*     background: var(--bg-color, white);  */
+/*     color: var(--text-color, black); */
+/*     padding: 30px; */
+/*     border-radius: 8px; */
+/*     box-shadow: 0 4px 15px rgba(0,0,0,0.3); */
+/*     border: 1px solid var(--bar-border, #ddd); */
+/*     min-width: 300px; */
+/* } */
+/**/
+/* .help-content h3 { */
+/*     margin-top: 0; */
+/*     border-bottom: 1px solid #ddd; */
+/*     padding-bottom: 10px; */
+/* } */
+/**/
+/* .help-content ul { */
+/*     list-style: none; */
+/*     padding: 0; */
+/* } */
+/**/
+/* .help-content li { */
+/*     margin: 10px 0; */
+/*     display: flex; */
+/*     align-items: center; */
+/*     justify-content: space-between; */
+/* } */
+/**/
+/* .key { */
+/*     display: inline-block; */
+/*     background: #eee; */
+/*     color: #333; */
+/*     padding: 2px 8px; */
+/*     border-radius: 4px; */
+/*     border: 1px solid #ccc; */
+/*     font-family: monospace; */
+/*     font-weight: bold; */
+/*     min-width: 20px; */
+/*     text-align: center; */
+/*     margin-right: 5px; */
+/* } */
+
+/* /* Dark Mode Tweaks for Keys */ */
+/* [data-theme="dark"] .key { */
+/*     background: #333; */
+/*     color: #eee; */
+/*     border-color: #555; */
+/* } */
+/* =========================================
+   2. HEADER TOGGLE STATE
+   ========================================= */
+
+/* When header is hidden, move the right sidebar up to fill the gap. */
+body.header-hidden .menu {
+    top: 0 !important;
+    height: 100vh;
+}
+body.header-hidden .toc-sidebar {
+    top: 0 !important;
+    height: 100vh;
+}
+/* =========================================
+   3. COLLAPSE MODE (Toggle 'c')
+   ========================================= */
+/* 1. Hide sub-menus of inactive chapters... */
+body.collapse-mode .menu li > ul {
+    display: none;
+}
+
+/* 2. ...BUT show them if the chapter is Active OR contains the Active page */
+body.collapse-mode .menu li.active > ul,
+body.collapse-mode .menu li.active-parent > ul {
+    display: block;
+}
+/* =========================================
+   4. TOC COLLAPSE MODE (Toggle 'v')
+   ========================================= */
+
+/* 1. Hide sub-levels (ul inside li) by default when 'v' is active */
+html.toc-collapse-mode .toc-sidebar li > ul {
+    display: none;
+}
+
+/* 2. Show sub-levels ONLY if the parent is active (Current Section) */
+/* The 'active' class is added by toc.js (ScrollSpy) */
+html.toc-collapse-mode .toc-sidebar li.active > ul {
+    display: block;
+}
+
+/* 3. Style Active Links in TOC (Visual Feedback) */
+.toc-sidebar li.active > a {
+    color: #007bff; 
+    font-weight: bold;
+}
+[data-theme="dark"] .toc-sidebar li.active > a {
+    color: #66b3ff;
+}

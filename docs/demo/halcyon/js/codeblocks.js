@@ -15,7 +15,7 @@ const init = () => {
     header.className = 'code-header';
 
     const languageLabel = language ? `<span class="code-language">${language}</span>` : '';
-    header.innerHTML = `${languageLabel}<button class="copy-btn"><svg class="clipboard-icon" viewBox="0 0 24 24"><path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><svg class="check-icon" viewBox="0 0 24 24" style="display:none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></button>`;
+    header.innerHTML = `${languageLabel}<button class="copy-btn" aria-label="Copy code to clipboard"><svg class="clipboard-icon" viewBox="0 0 24 24"><path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg><svg class="check-icon" viewBox="0 0 24 24" style="display:none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></button>`;
 
     container.appendChild(header);
     container.appendChild(pre);

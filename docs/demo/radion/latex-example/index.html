@@ -69,8 +69,6 @@ This page is about using the LaTeX shortcodes provided by radion." />
       content="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
     />
 
-
-
     <!-- Favicons -->
     
     <link
@@ -115,6 +113,18 @@ This page is about using the LaTeX shortcodes provided by radion." />
       <link
         rel="stylesheet"
         href="https://salif.github.io/zola-themes-collection/demo/radion/site.css"
+      />
+    
+
+    <!-- Syntax highlighting theming -->
+    
+      <link
+         rel="stylesheet" type="text/css"
+         href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/syntax/syntax-theme-dark.css"
+      />
+      <link
+         rel="stylesheet" type="text/css"
+         href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;radion&#x2F;/syntax/syntax-theme-light.css"
       />
     
 
@@ -246,7 +256,7 @@ body {
         <img
           src="https://salif.github.io/zola-themes-collection/demo/radion/icons/sun.svg"
           id="sun-icon"
-          style="filter: invert(1)"
+          class="invert-icon"
           alt="Light mode"
         />
         <img
@@ -439,9 +449,9 @@ $$</p>
 <p>To disambiguate the use of the dollar sign, you can use the backslash
 character to escape it: <code>\\$</code>.</p>
 <p>Example:</p>
-<pre data-lang="text" style="background-color:#2b303b;color:#6c7079;" class="language-text "><code class="language-text" data-lang="text"><span style="color:#abb2bf;">&gt; To write the dollar sign, use \\$ in your text. That way, if there is another
-</span><span style="color:#abb2bf;">&gt; dollar sign in your text like this \\$, it will not be confused with the start of a math
-</span><span style="color:#abb2bf;">&gt; environment.
+<pre data-lang="text" class="language-text z-code"><code class="language-text" data-lang="text"><span class="z-text z-plain">&gt; To write the dollar sign, use \\$ in your text. That way, if there is another
+</span><span class="z-text z-plain">&gt; dollar sign in your text like this \\$, it will not be confused with the start of a math
+</span><span class="z-text z-plain">&gt; environment.
 </span></code></pre>
 <p>This will render as:</p>
 <blockquote>

@@ -6,10 +6,38 @@
     <meta name="description" content="A simple blog for me to write my thoughts">
     <title>Halcyon</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=2e5c279f8844833f6a69">
+    <link rel="preload" href="/fonts/woff2/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c"></noscript>
+    <script>
+const cls = document.documentElement.classList;
+const sessionTheme = sessionStorage.getItem("theme");
+
+const setDark = () => {
+  cls.add("dark-mode");
+  cls.remove("light-mode");
+  sessionStorage.setItem("theme", "dark");
+};
+
+const setLight = () => {
+  cls.add("light-mode");
+  cls.remove("dark-mode");
+  sessionStorage.setItem("theme", "light");
+};
+
+if (sessionTheme === "dark") {
+  setDark();
+} else if (sessionTheme === "light") {
+  setLight();
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  setDark();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("dark-mode-on").addEventListener("click", setDark);
+  document.getElementById("dark-mode-off").addEventListener("click", setLight);
+});
+    </script>
     
     
         
@@ -47,12 +75,12 @@
         
         <nav class="header-links">
             
-            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;posts&#x2F;">posts</a>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;posts&#x2F;">Posts</a>
             
-            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;projects&#x2F;">projects</a>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;projects&#x2F;">Projects</a>
             
             
-            <a href="https:&#x2F;&#x2F;github.com">github</a>
+            <a href="https:&#x2F;&#x2F;github.com">Github</a>
             
         </nav>
         
@@ -81,8 +109,7 @@
             </svg>
         </button>
     </div>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=35126ddac5ff1be1752c"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/theme.js?h=7d54d09f9d907d8fac68"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=7cc20b786ad2b7bd0b38" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda" defer></script>
     </body>
 </html>

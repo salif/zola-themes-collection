@@ -20,40 +20,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const searchBox = document.getElementById("searchbox");
-  const searchModal = document.querySelector("#searchbox .search-modal");
-  const searchInput = document.getElementById("searchInput");
-  const searchButton = document.getElementById("searchButton");
-  const searchLink = document.querySelector('a[title="Search"]');
+  const searchToggleBox = document.getElementById("search-toggle-box");
+  const searchToggleModal = document.querySelector("#search-toggle-box .search-toggle-modal");
+  const searchToggleInput = document.getElementById("search-toggle-input");
+  const searchToggleButton = document.getElementById("search-toggle-button");
+  const searchToggleLink = document.querySelector('[data-search-toggle="true"]');
 
-  searchLink.addEventListener("click", function (event) {
+  if (!searchToggleBox || !searchToggleModal || !searchToggleInput || !searchToggleButton || !searchToggleLink) {
+    return; // Search toggle UI not present.
+  }
+
+  searchToggleLink.addEventListener("click", function (event) {
     event.preventDefault();
-    searchBox.classList.remove("hidden");
-    searchInput.focus(); // focus on input
+    searchToggleBox.classList.remove("hidden");
+    searchToggleInput.focus();
   });
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      searchBox.classList.add("hidden");
+      searchToggleBox.classList.add("hidden");
     }
   });
 
   document.addEventListener("click", function (event) {
     // check if click inside the search panel
     const isClickInside =
-      searchModal.contains(event.target) || searchLink.contains(event.target);
+      searchToggleModal.contains(event.target) || searchToggleLink.contains(event.target);
     if (!isClickInside) {
-      searchBox.classList.add("hidden");
+      searchToggleBox.classList.add("hidden");
     }
   });
 
   // TODO search function
-  searchButton.addEventListener("click", function () {
-    const searchTerm = searchInput.value.trim();
+  searchToggleButton.addEventListener("click", function () {
+    const searchTerm = searchToggleInput.value.trim();
 
     if (searchTerm) {
       // TODO jump to search page?
-      const searchUrl = `/search.html?q=${encodeURIComponent(searchTerm)}`;
+      const searchUrl = `/search/?q=${encodeURIComponent(searchTerm)}`;
       window.location.href = searchUrl;
     } else {
       alert("Please enter a search term.");

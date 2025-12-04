@@ -1,0 +1,110 @@
+/* NOTE: configure theorem enviroment, tikzcd format. */
+/**/
+:root {
+    /* Default (Light Mode) */
+    --admonish-bg: #f0f0f0;
+    --admonish-border: #f0f0f0;
+    --admonish-text: #333333;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Overrides */
+    --admonish-bg: #222222;       
+    --admonish-border: #444444;   
+    --admonish-text: #e0e0e0;     
+}
+
+/* --- APPLY VARIABLES --- */
+.MATbook-admonish {
+    margin: 1em 0;
+    padding: 0 1em;
+    background-color: var(--admonish-bg);
+    border: 1px solid var(--admonish-border);
+    color: var(--admonish-text); 
+    border-radius: 1em;
+}
+
+[data-theme="dark"] .theorem-block,
+[data-theme="dark"] .lemma-block {
+    background-color: #1a2e22; 
+    border-left-color: #008844; 
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .proof-block {
+    background-color: #1a222e; 
+    border-left-color: #004488; 
+    color: #e0e0e0;
+}
+
+.theorem-block {
+    border-left: 4px solid #0c6;
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.lemma-block {
+    border-left: 4px solid #0c6;
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.remark-block {
+    border-left: 4px solid #999; 
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #f5f5f5;
+}
+
+.example-block {
+    border-left: 4px solid #f90; 
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #fffbf3;
+}
+
+.warning-block {
+    border-left: 4px solid #f00; 
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #ffe6e6;
+}
+
+.proof-block {
+    border-left: 4px solid #00f; 
+    padding-left: 10px;
+    margin: 20px 0;
+    background-color: #e6f7ff;
+}
+
+
+.goelems {
+  background-color: #ffd700; 
+  color: #000;
+  font-family: monospace;
+  font-weight: bold;
+  padding: 2px 4px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 12px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+/* =========================================
+   DIAGRAMS IN DARK MODE
+   ========================================= */
+/* Target ANY svg inside the main content area */
+[data-theme="dark"] .main-content svg {
+    filter: invert(1) hue-rotate(180deg);
+}
+/* Only inverts images with specific classes to avoid ruining photos */
+[data-theme="dark"] img.invert-dark, 
+[data-theme="dark"] img[src$=".svg"] {
+    filter: invert(1) hue-rotate(180deg);
+}
+/* Ensures standard MathJax equations turn white */
+[data-theme="dark"] .MathJax {
+    color: inherit !important;
+    fill: currentColor !important;
+}

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="https://salif.github.io/zola-themes-collection/demo/MATbook/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://salif.github.io/zola-themes-collection/demo/MATbook/favicon-32x32.png">
+    
+      <meta name="description" content="Personal Notes" />
+    
+
+      <title>Shurui&#x27;s Notes</title>
+
+      
+      
+
+      
+      <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/MATbook/book.css">
+      
+
+      
+      
+   
+    <script>
+    MathJax = {
+      packages: {'[+]': ['ams','cancel','amscd']},
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+    </script>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/MATbook/dist/tikzjax/fonts.css">
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/dist/tikzjax/tikzjax.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" id="MathJax-script" async></script>
+    
+    <!-- <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/MATbook/css/toc.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script>
+        (function() {
+            // 1. Dark/Light Theme Check
+            var savedTheme = localStorage.getItem("theme");
+            var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            if (savedTheme === "dark" || (!savedTheme && systemDark)) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            }
+
+            // 2. Collapse Check (Anti-Flash)
+            var savedCollapse = localStorage.getItem("collapse-sidebar");
+            if (savedCollapse === 'true') {
+                document.documentElement.classList.add('collapse-mode');
+            }
+        })();
+    </script>
+
+</head>
+
+    <body>
+    <div class="menu">
+    
+    
+    <nav role="navigation">
+        <ul>
+            
+            
+            
+            
+                
+                
+                
+                
+                
+                
+                    
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <li class="active">
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/">
+                        
+                        documentation
+                    </a>
+                
+                    
+                    
+                        <ul>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/readme/">
+                                            
+                                                <strong>1.</strong>
+                                            
+                                            MATbook
+                                        </a>
+                                    </li>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/section-1-2/">
+                                            
+                                                <strong>2.</strong>
+                                            
+                                            section 1.2
+                                        </a>
+                                    </li>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/section-1-3/">
+                                            
+                                                <strong>3.</strong>
+                                            
+                                            section 1.3
+                                        </a>
+                                    </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <li >
+                    
+                    <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/chapter 2/">
+                        
+                        chapter 2
+                    </a>
+                
+                    
+                    
+                        <ul>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/chapter 2/section-2-1/">
+                                            
+                                                <strong>1.</strong>
+                                            
+                                            section 2.1
+                                        </a>
+                                    </li>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/chapter 2/2025-11-30/">
+                                            
+                                                <strong>2.</strong>
+                                            
+                                            section 2.2
+                                        </a>
+                                    </li>
+                            
+                                    <li >
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/MATbook/chapter 2/section-2-3/">
+                                            
+                                                <strong>3.</strong>
+                                            
+                                            section 2.3
+                                        </a>
+                                    </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+            
+
+        </ul>
+    </nav>
+    
+    
+</div>
+
+    
+    <div class="page">
+        <div class="page__header">
+    <div class="header-left">
+        <div class="menu-icon">
+    		<img src="https://salif.github.io/zola-themes-collection/demo/MATbook/icons/knot.png" alt="Menu" />
+	</div>
+	
+            <a href="https:&#x2F;&#x2F;shurui.people.stanford.edu&#x2F;" class="home-link">Home</a>
+            <span class="separator">/</span>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;MATbook&#x2F;" class="title-name">
+        	Shurui&#x27;s Notes
+    	    </a>
+            <span class="separator">/</span>
+	    <div class="search-icon">
+   			 <i class="fa-solid fa-magnifying-glass"></i>
+	    </div>
+        
+    </div>
+    <div class="header-right">
+	<div id="theme-toggle" class="theme-icon" title="Toggle Dark Mode">
+        	<i class="fa-solid fa-moon"></i>
+        </div>
+	
+    </div>
+</div>
+ 
+            
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                
+                <div class="book-content">
+                    
+    <h1>documentation</h1>
+    <p>This is README of MATbook!</p>
+<p>A <a rel="noopener" target="_blank" href="https://github.com/getzola/zola">Zola</a> theme for personal notebooks or chapter books. Based on  <a rel="noopener" target="_blank" href="https://www.vincentprouillet.com/">Vincent Prouillet</a>’s <a rel="noopener" target="_blank" href="https://github.com/getzola/book">Book</a>, inspired by <a rel="noopener" target="_blank" href="https://web.stanford.edu/~dkim04/">Dongryul Kim</a>’s <a rel="noopener" target="_blank" href="https://github.com/dongryul-kim/olivine">Olivine</a>.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#features">Features</a></p>
+</li>
+<li>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#contents">Contents</a></p>
+</li>
+<li>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#installation">Installation</a></p>
+</li>
+<li>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#configurations">Configurations</a></p>
+<ul>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#enable-the-theme">Enable the theme</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#numbered-chapters">Numbered chapters</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#current-section-pages-only">Current section pages only</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#math">Math</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#paths">Paths</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#example-toml">Example toml</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#usage">Usage</a></p>
+<ul>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#file-structure">File structure</a></li>
+<li><a href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/#hotkeys">Hotkeys</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li>Idle inside Matrix (MATbook is short for Matrix Book)</li>
+<li>Searching</li>
+<li>Light/dark mode</li>
+<li>Book structure (table of chapters and sections in left sidebar, table of contents of current section in right sidebar)</li>
+<li>Keyboard shortcuts</li>
+<li>Backlinks</li>
+<li>Mathjax, Tikzjax, and basic theorem enviroments included for mathematics and commutative diagrams.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Please follow the Zola documentation on <a rel="noopener" target="_blank" href="https://www.getzola.org/documentation/themes/installing-and-using-themes/">installing and using themes</a> to install.</p>
+<h2 id="configurations">Configurations</h2>
+<h3 id="enable-the-theme">Enable the theme</h3>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">theme</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>MATbook<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">build_search_index</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span></code></pre>
+<h3 id="numbered-chapters">Numbered chapters</h3>
+<p>By default, the <code>MATbook</code> theme will number the chapters and pages in the left menu.
+You can disable that by setting the <code>book_number_chapters</code> in <code>extra.booktheme</code>:</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">book_number_chapters</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">false</span>
+</span></code></pre>
+<h3 id="current-section-pages-only">Current section pages only</h3>
+<p>By default, the <code>MATbook</code> theme will list all the pages in the current section.
+You can disable that by setting the <code>book_only_current_section_pages</code> in <code>extra.booktheme</code>:</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">book_only_current_section_pages</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">false</span>
+</span></code></pre>
+<p>NOTE: you need to disabe this if you want to use hotkey <code>v</code> to toggle it.</p>
+<h3 id="math">Math</h3>
+<p>Enable mathjax and tikzjax in <code>extra</code> if you need mathematics and tikzcd diagrams in your book.</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tikzjax</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">mathjax</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span></code></pre>
+<h3 id="paths">Paths</h3>
+<p>You need to set up two paths:</p>
+<p>First, in <code>[extra]</code>, you need to make sure that <code>upload_prefix</code> is the path to the directory where you put all images.</p>
+<p>For example, if you put all your images in folder <code>/static/upload</code>, then you should set</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">upload_prefix</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>/upload<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span></code></pre>
+<p>Second, Home link in <code>[extra.booktheme]</code>:</p>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">home_url</span></span><span class="z-punctuation z-definition z-key-value z-toml">=</span><span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>https://shurui.people.stanford.edu/<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span></code></pre>
+<p>It may be link to your homepage, or a guide/TOC page which collects links to all your books (in this way you can organize multiple books with this theme).</p>
+<h3 id="example-toml">Example toml</h3>
+<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">title</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>Shurui Liu&#39;s Coding Notes<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">description</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>Personal Notes<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">base_url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>https://web.stanford.edu/~srliu/Notes<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">theme</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>MATbook<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml">
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">compile_sass</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">taxonomies</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span>
+</span><span class="z-source z-toml">  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>tags<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">paginate_by</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-numeric z-integer z-toml">10</span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">rss</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span>
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">build_search_index</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml">
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">markdown</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">highlight_code</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">highlight_theme</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>css<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">external_links_target_blank</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">smart_punctuation</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml">
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">extra</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">upload_prefix</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>https://web.stanford.edu/~srliu/Notes/upload<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tikzjax</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">mathjax</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml">
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-begin z-toml">[</span><span class="z-meta z-tag z-table z-toml"><span class="z-entity z-name z-table z-toml">extra</span><span class="z-punctuation z-separator z-table z-toml">.</span><span class="z-entity z-name z-table z-toml">booktheme</span></span><span class="z-punctuation z-definition z-table z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">book_number_chapters</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">true</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">book_only_current_section_pages</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-constant z-language z-toml">false</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">home_url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>https://shurui.sites.stanford.edu/<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span></code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="file-structure">File structure</h3>
+<p>All content should be put in <code>/content</code> folder as general Zola projects. Each chapter should be a folder inside <code>/content</code>, which contains its sections (markdown files). Here is an example of the file structure:</p>
+<pre data-lang="markdown" class="language-markdown z-code"><code class="language-markdown" data-lang="markdown"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">.
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">├── chapter1
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">│   ├── <span class="z-markup z-italic z-markdown"><span class="z-punctuation z-definition z-italic z-begin z-markdown">_</span>index.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   ├── section1.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   └── section2.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">├── chapter2
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   ├── _index.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   └── section1.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">├── chapter3
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   ├── _index.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   ├── section1.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   ├── section2.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">│   └── section3.md
+</span></span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown"><span class="z-markup z-italic z-markdown">└── _index.md
+</span></span></span></code></pre>
+<p>In <code>/content</code> folder, there should be one <code>_index.md</code>, which contains title and welcome/preface infomation of the book. In its front matter, you should set <code>sort_by = "weight" </code> to manually control the order of chapters (or you can use sort by slug or date for your notebook).</p>
+<p>Each chapter(folder) must have an <code>_index.md</code> file. It should sets its <code>weight</code> front-matter variable to its chapter number, and set <code>sort_by = "weight"</code> in its front matter.</p>
+<p>Then in each chapter(folder), each section should be a <code>page</code> and should have its <code>weight</code> variable set to its section
+number.</p>
+<p>If you don’t want welcome/preface page of the book or of a chapter, you can use <code>redirect_to</code> front-matter variable in the corresponding <code>_index.md</code>.</p>
+<p>You can write a shell scripts to automate creating new chapters or new notes. For example, you can consult my <code>zshconfig</code> project on my <a rel="noopener" target="_blank" href="https://github.com/srliu3264">github</a> (If you can not see it, probably it is bacasue I currently make it private. You can email me for access.)</p>
+<h3 id="hotkeys">Hotkeys</h3>
+<p>In a browser, you can always type <code>?</code> to toggle the help page, reminding you of hotkeys.</p>
+<p>The rule is inspired by Vim, Zathura, and <a rel="noopener" target="_blank" href="https://github.com/dongryul-kim/olivine">Olivine</a>.</p>
+<p>The list of hotkeys may keep expanding, so I will not list all here. You can use <code>?</code> the help page, or see <code>hotkeys.js</code> manually to check existing functions.</p>
+<p>The hotkey <code>i</code> will allow you to idle inside MATRIX (inspired by <a rel="noopener" target="_blank" href="https://github.com/abishekvashok/cmatrix">cmatrix</a>), and since MAT is both initials for matrix and math, I lazily named this project after it.</p>
+
+
+                </div> <div class="prev-link">
+                    
+    
+    
+    
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+
+                </div>
+
+                <div class="next-link">
+                    
+    
+        
+        <a class="next" href="https://salif.github.io/zola-themes-collection/demo/MATbook/documentation/readme/">></a>
+    
+
+                </div>
+                
+            </div> </div> 
+        
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/MATbook/elasticlunr.min.js"></script>
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/MATbook/search_index.en.js"></script>
+        
+        <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/MATbook/book.js"></script>
+    
+    
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/js/toc.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/js/theme.js"></script>
+    
+    <script>
+        window.site_base_url = "https://salif.github.io/zola-themes-collection/demo/MATbook/";
+    </script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/js/hotkeys.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/js/matrix.js"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/MATbook/js/aquarium.js"></script>
+    
+    <div id="help-window" class="help-modal" style="display: none;">
+    <div class="help-content">
+        <h3 class="help-title">Keyboard Shortcuts</h3>
+        
+        <div class="help-grid">
+            
+            <div class="help-group">
+                <h4>Vim Navigation</h4>
+                <ul>
+                    <li><span class="key">h</span> <span>Previous Page</span></li>
+                    <li><span class="key">l</span> <span>Next Page</span></li>
+                    <li><span class="key">j</span> <span>Scroll Down</span></li>
+                    <li><span class="key">k</span> <span>Scroll Up</span></li>
+                    <li><span class="key">u</span> <span>Up to Chapter</span></li>
+                    <li><span class="key">d</span> <span>Next Chapter</span></li>
+                    <li><span class="key">g</span> <span>Jump to Top</span></li>
+                    <li><span class="key">G</span> <span>Jump to Bottom</span></li>
+		    <li><span class="key">o</span> <span>Jump Back</span></li>
+                </ul>
+            </div>
+
+            <div class="help-group">
+                <h4>Utilities</h4>
+                <ul>
+                    <li><span class="key">/</span> <span>Focus Search</span></li>
+                    <li><span class="key">f</span> <span>Open/Close Link Options</span></li>
+                    <li><span class="key">r</span> <span>Reload</span></li>
+                    <li><span class="key">H</span> <span>History Back</span></li>
+                    <li><span class="key">L</span> <span>History Fwd</span></li>
+                    <li><span class="key">?</span> <span>Open/Close Help</span></li>
+                    <li><span class="key">Esc</span> <span>Focus Document</span></li>
+		    <li><span class="key">s</span> <span>Toggle ScrollSpy</span></li>
+		    <li><span class="key">a</span> <span>Fishing (goof around)</span></li>
+		    <li><span class="key">i</span> <span>Idle Inside Matrix</span></li>
+                </ul>
+            </div>
+
+            <div class="help-group">
+                <h4>Left Bar</h4>
+                <ul>
+                    <li><span class="key">[</span> <span>Toggle Visible</span></li>
+                    <li><span class="key">c</span> <span>Toggle Collapse</span></li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Right Bar</h4>
+                <ul>
+                    <li><span class="key">]</span> <span>Toggle Visible</span></li>
+		    <li><span class="key">v</span> <span>Toggle Collapse</span></li>
+                    <li><span class="key">J</span> <span>Scroll Down</span></li>
+                    <li><span class="key">K</span> <span>Scroll Up</span></li>
+                </ul>
+
+                <h4 style="margin-top: 15px;">Appearance</h4>
+                <ul>
+                    <li><span class="key">t</span> <span>Toggle Theme</span></li>
+                    <li><span class="key">\</span> <span>Toggle Header</span></li>
+		    <li><span class="key">F</span> <span>Toggle Full Screen</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- NOTE: Old version: 1-column -->
+
+<!-- <div id="help-window" class="help-modal" style="display: none;"> -->
+<!--     <div class="help-content"> -->
+<!--         <h3>Keyboard Shortcuts</h3> -->
+<!--         <ul> -->
+<!--             <li><span class="key">h</span> <span>Previous Page</span></li> -->
+<!--             <li><span class="key">l</span> <span>Next Page</span></li> -->
+<!--             <li><span class="key">u</span> <span>Up to Parent Chapter</span></li> -->
+<!--             <li><span class="key">d</span> <span>Jump to Next Chapter</span></li> -->
+<!---->
+<!--             <li><span class="key">H</span> <span>History Back</span></li> -->
+<!--             <li><span class="key">L</span> <span>History Forward</span></li> -->
+<!---->
+<!--             <li><span class="key">j</span> <span>Scroll Down</span></li> -->
+<!--             <li><span class="key">k</span> <span>Scroll Up</span></li> -->
+<!-- 	    <li><span class="key">J</span> <span>Scroll TOC Down</span></li> -->
+<!--             <li><span class="key">K</span> <span>Scroll TOC Up</span></li> -->
+<!--             <li><span class="key">g</span> <span>Scroll to Top</span></li> -->
+<!--             <li><span class="key">G</span> <span>Scroll to Bottom</span></li> -->
+<!---->
+<!--             <li><span class="key">t</span> <span>Toggle Theme</span></li> -->
+<!--             <li><span class="key">c</span> <span>Toggle Collapse of Left Sidebar</span></li> -->
+<!--             <li><span class="key">[</span> <span>Toggle Left Bar</span></li> -->
+<!--             <li><span class="key">]</span> <span>Toggle Right Bar</span></li> -->
+<!--             <li><span class="key">\</span> <span>Toggle Header</span></li> -->
+<!---->
+<!--             <li><span class="key">/</span> <span>Focus Search</span></li> -->
+<!--             <li><span class="key">f</span> <span>Follow Link</span></li> -->
+<!--             <li><span class="key">r</span> <span>Reload Page</span></li> -->
+<!---->
+<!--             <li><span class="key">?</span> <span>Open/Close this Help</span></li> -->
+<!--             <li><span class="key">Esc</span> <span>Focus Document</span></li> -->
+<!-- 	    <li><span class="key">v</span> <span>Toggle Right Collapse</span></li> -->
+<!--             <li><span class="key">s</span> <span>Toggle Scroll Spy</span></li> -->
+<!--         </ul> -->
+<!--     </div> -->
+<!-- </div> -->
+
+    
+    </body>
+</html>

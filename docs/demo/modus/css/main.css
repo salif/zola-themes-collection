@@ -1,0 +1,323 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+
+  /* Operandi (Light) Theme Colors */
+  --color-operandi-white: #ffffff;
+  --color-operandi-white-dim: #f0f0f0;
+
+  --color-operandi-black: #000000;
+  --color-operandi-black-dim: #595959;
+  --color-operandi-black-alt: #193668;
+
+  --color-operandi-red: #a60000;
+  --color-operandi-red-warmer: #972500;
+  --color-operandi-red-cooler: #a0132f;
+  --color-operandi-red-faint: #7f0000;
+  --color-operandi-red-intense: #d00000;
+
+  --color-operandi-green: #006800;
+  --color-operandi-green-warmer: #316500;
+  --color-operandi-green-cooler: #00663f;
+  --color-operandi-green-faint: #2a5045;
+  --color-operandi-green-intense: #008900;
+
+  --color-operandi-yellow: #6f5500;
+  --color-operandi-yellow-warmer: #884900;
+  --color-operandi-yellow-cooler: #7a4f2f;
+  --color-operandi-yellow-faint: #624416;
+  --color-operandi-yellow-intense: #808000;
+
+  --color-operandi-blue: #0031a9;
+  --color-operandi-blue-warmer: #354fcf;
+  --color-operandi-blue-cooler: #0000b0;
+  --color-operandi-blue-faint: #003497;
+  --color-operandi-blue-intense: #0000ff;
+
+  --color-operandi-magenta: #721045;
+  --color-operandi-magenta-warmer: #8f0075;
+  --color-operandi-magenta-cooler: #531ab6;
+  --color-operandi-magenta-faint: #7c318f;
+  --color-operandi-magenta-intense: #dd22dd;
+
+  --color-operandi-cyan: #005e8b;
+  --color-operandi-cyan-warmer: #3f578f;
+  --color-operandi-cyan-cooler: #005f5f;
+  --color-operandi-cyan-faint: #005077;
+  --color-operandi-cyan-intense: #008899;
+
+  /* Operandi Special Colors */
+  --color-operandi-rust: #8a290f;
+  --color-operandi-gold: #80601f;
+  --color-operandi-olive: #56692d;
+  --color-operandi-slate: #2f3f83;
+  --color-operandi-indigo: #4a3a8a;
+  --color-operandi-maroon: #731c52;
+  --color-operandi-pink: #7b435c;
+  --color-operandi-gray: #e0e0e0;
+
+  /* Operandi Background Intense Colors */
+  --color-operandi-intense-red: #ff8f88;
+  --color-operandi-intense-green: #8adf80;
+  --color-operandi-intense-yellow: #f3d000;
+  --color-operandi-intense-blue: #bfc9ff;
+  --color-operandi-intense-magenta: #dfa0f0;
+  --color-operandi-intense-cyan: #a4d5f9;
+
+  /* Operandi Background Subtle Colors */
+  --color-operandi-subtle-red: #ffcfbf;
+  --color-operandi-subtle-green: #b3fabf;
+  --color-operandi-subtle-yellow: #fff576;
+  --color-operandi-subtle-blue: #ccdfff;
+  --color-operandi-subtle-magenta: #ffddff;
+  --color-operandi-subtle-cyan: #bfefff;
+
+  /* Operandi Background Nuanced Colors */
+  --color-operandi-nuanced-red: #fff1f0;
+  --color-operandi-nuanced-green: #ecf7ed;
+  --color-operandi-nuanced-yellow: #fff3da;
+  --color-operandi-nuanced-blue: #f3f3ff;
+  --color-operandi-nuanced-magenta: #fdf0ff;
+  --color-operandi-nuanced-cyan: #ebf6fa;
+
+  /* Vivendi (Dark) Theme Colors */
+  --color-vivendi-white: #ffffff;
+  --color-vivendi-white-dim: #989898;
+  --color-vivendi-white-alt: #c6daff;
+
+  --color-vivendi-black: #000000;
+  --color-vivendi-black-dim: #1e1e1e;
+
+  --color-vivendi-red: #ff5f59;
+  --color-vivendi-red-warmer: #ff6b55;
+  --color-vivendi-red-cooler: #ff7f9f;
+  --color-vivendi-red-faint: #ff9580;
+  --color-vivendi-red-intense: #ff5f5f;
+
+  --color-vivendi-green: #44bc44;
+  --color-vivendi-green-warmer: #70b900;
+  --color-vivendi-green-cooler: #00c06f;
+  --color-vivendi-green-faint: #88ca9f;
+  --color-vivendi-green-intense: #44df44;
+
+  --color-vivendi-yellow: #d0bc00;
+  --color-vivendi-yellow-warmer: #fec43f;
+  --color-vivendi-yellow-cooler: #dfaf7a;
+  --color-vivendi-yellow-faint: #d2b580;
+  --color-vivendi-yellow-intense: #efef00;
+
+  --color-vivendi-blue: #2fafff;
+  --color-vivendi-blue-warmer: #79a8ff;
+  --color-vivendi-blue-cooler: #00bcff;
+  --color-vivendi-blue-faint: #82b0ec;
+  --color-vivendi-blue-intense: #338fff;
+
+  --color-vivendi-magenta: #feacd0;
+  --color-vivendi-magenta-warmer: #f78fe7;
+  --color-vivendi-magenta-cooler: #b6a0ff;
+  --color-vivendi-magenta-faint: #caa6df;
+  --color-vivendi-magenta-intense: #ff66ff;
+
+  --color-vivendi-cyan: #00d3d0;
+  --color-vivendi-cyan-warmer: #4ae2f0;
+  --color-vivendi-cyan-cooler: #6ae4b9;
+  --color-vivendi-cyan-faint: #9ac8e0;
+  --color-vivendi-cyan-intense: #00eff0;
+
+  /* Vivendi Special Colors */
+  --color-vivendi-rust: #db7b5f;
+  --color-vivendi-gold: #c0965b;
+  --color-vivendi-olive: #9cbd6f;
+  --color-vivendi-slate: #76afbf;
+  --color-vivendi-indigo: #9099d9;
+  --color-vivendi-maroon: #cf7fa7;
+  --color-vivendi-pink: #d09dc0;
+  --color-vivendi-gray: #303030;
+
+  /* Vivendi Background Intense Colors */
+  --color-vivendi-intense-red: #9d1f1f;
+  --color-vivendi-intense-green: #2f822f;
+  --color-vivendi-intense-yellow: #7a6100;
+  --color-vivendi-intense-blue: #1640b0;
+  --color-vivendi-intense-magenta: #7030af;
+  --color-vivendi-intense-cyan: #2266ae;
+
+  /* Vivendi Background Subtle Colors */
+  --color-vivendi-subtle-red: #620f2a;
+  --color-vivendi-subtle-green: #00422a;
+  --color-vivendi-subtle-yellow: #4a4000;
+  --color-vivendi-subtle-blue: #242679;
+  --color-vivendi-subtle-magenta: #552f5f;
+  --color-vivendi-subtle-cyan: #004065;
+
+  /* Vivendi Background Nuanced Colors */
+  --color-vivendi-nuanced-red: #2c0614;
+  --color-vivendi-nuanced-green: #001904;
+  --color-vivendi-nuanced-yellow: #221000;
+  --color-vivendi-nuanced-blue: #0f0e39;
+  --color-vivendi-nuanced-magenta: #230631;
+  --color-vivendi-nuanced-cyan: #041529;
+}
+
+@layer base {
+  body {
+    @apply text-base md:text-lg font-serif
+           text-operandi-black dark:text-vivendi-white
+           bg-operandi-white dark:bg-vivendi-black;
+  }
+
+  a {
+    @apply underline transition-colors
+           text-operandi-blue-warmer dark:text-vivendi-blue-warmer
+           hover:bg-operandi-intense-blue dark:hover:bg-vivendi-intense-blue;
+  }
+
+  a[target="_blank"] {
+    @apply after:content-['↗'] after:text-sm;
+  }
+
+  h1 {
+    @apply text-3xl md:text-5xl text-balance font-medium
+           text-operandi-black dark:text-vivendi-white;
+  }
+
+  h2,
+  h3,
+  h4 {
+    @apply mt-10 mb-4 text-2xl md:text-4xl font-medium;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  article {
+    blockquote {
+      @apply my-6 py-2 pl-6
+             border-l-8 border-solid
+             border-operandi-blue-warmer dark:border-vivendi-blue-warmer
+             bg-operandi-nuanced-blue dark:bg-vivendi-nuanced-blue;
+    }
+
+    code {
+      @apply text-sm text-operandi-magenta-warmer dark:text-vivendi-magenta-warmer;
+    }
+
+    figure {
+      @apply flex justify-center items-center;
+    }
+
+    h2 {
+      @apply text-operandi-yellow-faint dark:text-vivendi-yellow-faint;
+    }
+
+    h3 {
+      @apply text-operandi-blue-faint dark:text-vivendi-blue-faint;
+    }
+
+    h4 {
+      @apply text-operandi-magenta dark:text-vivendi-magenta;
+    }
+
+    h2,
+    h3,
+    h4 {
+      @apply flex items-center;
+
+      .headline-hash {
+        @apply hidden rounded-lg p-1
+               border border-operandi-gray dark:border-vivendi-gray;
+      }
+
+      &:hover .headline-hash {
+        @apply block;
+      }
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ul,
+    ol {
+      @apply mx-6 my-4;
+    }
+
+    li > ul,
+    li > ol {
+      @apply mt-0;
+    }
+
+    p:has(+ ul),
+    p:has(+ ol) {
+      @apply mb-1;
+    }
+
+    p + ul,
+    p + ol {
+      @apply mt-0;
+    }
+
+    .chroma {
+      @apply my-4 p-4 overflow-x-auto rounded-lg;
+    }
+
+    #TableOfContents {
+      ul {
+        @apply my-1;
+      }
+    }
+
+    .footnotes {
+      @apply mt-10;
+    }
+
+    table {
+      @apply w-full text-sm;
+
+      thead {
+        @apply border-b border-operandi-gray dark:border-vivendi-gray;
+      }
+
+      th {
+        @apply py-2 px-4 text-left font-bold
+               text-operandi-black dark:text-vivendi-white;
+      }
+
+      th:not(:first-child):not(:last-child) {
+        @apply hidden sm:table-cell;
+      }
+
+      th:last-child {
+        @apply text-right;
+      }
+
+      td {
+        @apply py-2 px-4 text-operandi-black dark:text-vivendi-white;
+      }
+
+      td:not(:first-child):not(:last-child) {
+        @apply hidden sm:table-cell;
+      }
+
+      td:last-child {
+        @apply text-right;
+      }
+
+      tbody tr {
+        @apply border-b transition-colors
+               border-operandi-gray dark:border-vivendi-gray
+               hover:bg-operandi-nuanced-cyan dark:hover:bg-vivendi-nuanced-cyan;
+      }
+
+      tbody tr:last-child {
+        @apply border-0;
+      }
+    }
+  }
+}

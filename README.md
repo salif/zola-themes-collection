@@ -49,12 +49,11 @@
 - [zola.386](https://github.com/lopes/zola.386): 26 commits: `unknown field highlight_code`
 - [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
 - [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
-- [lightspeed](https://github.com/carpetscheme/lightspeed): 37 commits: `style.css doesn't exist`
+- [lightspeed](https://github.com/carpetscheme/lightspeed): 42 commits: `style.css doesn't exist`
 - [zolanote](https://github.com/ghventix/zolanote): 1 commit: `can't find stylesheet to import`
 - [lookr](https://github.com/m0ddr/lookr): 12 commits: `base.css doesn't exist`
 - [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
 - [mintec-zola-theme](https://github.com/Coffeeri/mintec-zola-theme): 9 commits: `config.toml not found`
-- [hayakuchi](https://github.com/deepcodesoln/hayakuchi): 10 commits: `Section 'blog/_index.md' not found`
 - [zola-theme-brief](https://github.com/w4ngzhen/zola-theme-brief): 2 commits: `config.toml not found`
 - [zola-blog-awesome](https://github.com/andwati/zola-blog-awesome): 4 commits: `error parsing templates`
 - [planet](https://github.com/higuoxing/planet): 6 commits: `config.toml not found`
@@ -67,6 +66,8 @@
 - [simplepod](https://github.com/cbrake/simplepod): 18 commits: `config.toml not found`
 - [anemonev](https://github.com/evnoj/anemonev): 117 commits: `variable not found`
 - [no-style-please](https://github.com/iGxnon/no-style-please): 47 commits: `unknown field generate_feed`
+- [zeroada](https://github.com/adaschevici/zeroada): 52 commits: `unknown field 'weight'`
+- [zola-theme-monochrome](https://github.com/wjianbo/zola-theme-monochrome): 20 commits: `variable not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -127,5 +128,5 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-theme-papermod](https://github.com/cydave/zola-theme-papermod): 45 commits
 - [boring](https://github.com/clflushopt/boring): 70 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
-- [ametrine](https://codeberg.org/daudix/ametrine): 274 commits
+- [ametrine](https://codeberg.org/Votilution/ametrine): 274 commits
 - [zola-bearblog-sysrq](https://github.com/sysrqmagician/zola-bearblog-sysrq): 128 commits

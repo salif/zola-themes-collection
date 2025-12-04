@@ -1,0 +1,433 @@
+/*
+ * theme "One Dark Pro"
+ */
+
+/* Editor Background & Default Foreground */
+.z-code {
+  color: #abb2bf;
+  background-color: #282c34;
+}
+
+/* Comments */
+.z-comment, .z-meta.z-documentation {
+  color: #7f848e;
+  font-style: italic;
+}
+
+/* Strings */
+.z-string {
+  color: #98c379;
+}
+
+/* Regex */
+.z-string.z-regexp {
+  color: #56b6c2;
+}
+
+/* Escaped Characters */
+.z-constant.z-character.z-escape {
+  color: #56b6c2;
+}
+
+/* Numbers / Boolean / Constants */
+.z-constant.z-numeric {
+  color: #d19a66;
+}
+
+/* Variables */
+.z-variable {
+  color: #e06c75;
+}
+
+/* Function Calls / Definitions */
+.z-variable.z-function {
+  color: #61afef;
+}
+
+/* Language Variables (this, self, etc.) */
+.z-variable.z-language {
+  color: #e5c07b;
+}
+
+/* Keywords (if, else, return, etc.) */
+.z-keyword {
+  color: #c678dd;
+}
+
+/* Import Keywords (specific to One Dark Pro tweaks) */
+.z-meta.z-import .z-keyword,
+.z-keyword.z-control.z-import,
+.z-keyword.z-control.z-import.z-from,
+.z-keyword.z-other.z-import,
+.z-keyword.z-control.z-at-rule.z-include,
+.z-keyword.z-control.z-at-rule.z-import {
+  color: #61afef; /* Often blue in One Dark Pro for imports, sometimes purple */
+}
+
+/* Operators (==, =, +, -) */
+.z-keyword.z-operator.z-comparison,
+.z-keyword.z-operator.z-assignment,
+.z-keyword.z-operator.z-arithmetic {
+  color: #56b6c2;
+}
+
+/* Storage (const, var, let, class keywords) */
+.z-storage {
+  color: #c678dd;
+}
+
+/* Storage Modifiers (public, private, static) */
+.z-storage.z-modifier {
+  color: #c678dd;
+}
+
+/* Class Names */
+.z-keyword.z-control.z-class,
+.z-entity.z-name,
+.z-entity.z-name.z-class,
+.z-entity.z-name.z-type.z-class {
+  color: #e5c07b;
+}
+
+/* Inherited Classes */
+.z-entity.z-other.z-inherited-class {
+  color: #e5c07b;
+}
+
+/* HTML/XML Attributes */
+.z-entity.z-other.z-attribute-name {
+  color: #d19a66;
+}
+
+/* Library/Support Types */
+.z-support, .z-support.z-type, .z-support.z-class {
+  color: #e5c07b;
+}
+
+/* Function Names */
+.z-entity.z-name.z-function {
+  color: #61afef;
+}
+
+/* Variable Definitions */
+.z-punctuation.z-definition.z-variable {
+  color: #e06c75;
+}
+
+/* Constants (UPPER_CASE, null, true/false) */
+.z-constant, .z-constant.z-language, .z-meta.z-preprocessor {
+  color: #d19a66;
+}
+
+/* Markdown Sections/Headings */
+.z-entity.z-name.z-section {
+  color: #e06c75;
+}
+
+/* Constructors / New */
+.z-support.z-function.z-construct, .z-keyword.z-other.z-new {
+  color: #c678dd;
+}
+
+/* Characters */
+.z-constant.z-character, .z-constant.z-other {
+  color: #d19a66;
+}
+
+/* HTML Tags */
+.z-entity.z-name.z-tag {
+  color: #e06c75;
+}
+
+/* HTML Tag Punctuation (< > /) */
+.z-punctuation.z-definition.z-tag.z-html,
+.z-punctuation.z-definition.z-tag.z-begin,
+.z-punctuation.z-definition.z-tag.z-end {
+  color: #abb2bf;
+}
+
+/* Library Functions */
+.z-support.z-function {
+  color: #56b6c2;
+}
+
+/* Punctuation / Separators */
+.z-punctuation.z-separator.z-continuation {
+  color: #abb2bf;
+}
+
+/* Storage Types (int, bool, void) */
+.z-storage.z-type {
+  color: #e5c07b;
+}
+
+/* Exceptions */
+.z-support.z-type.z-exception {
+  color: #e5c07b;
+}
+
+/* Special Methods */
+.z-keyword.z-other.z-special-method {
+  color: #61afef;
+}
+
+/* Invalid / Illegal */
+.z-invalid {
+  color: #ffffff;
+  background-color: #e06c75;
+}
+
+/* Quotes */
+.z-string.z-quoted.z-double, .z-string.z-quoted.z-single {
+  color: #98c379;
+}
+
+/* String Delimiters (" ') */
+.z-punctuation.z-definition.z-string {
+  color: #98c379;
+}
+
+/* Braces / Brackets */
+.z-meta.z-brace.z-square,
+.z-punctuation.z-section.z-brackets,
+.z-meta.z-brace.z-round,
+.z-meta.z-brace.z-curly,
+.z-punctuation.z-section,
+.z-punctuation.z-section.z-block,
+.z-punctuation.z-definition.z-parameters,
+.z-punctuation.z-section.z-group {
+  color: #abb2bf;
+}
+
+/* CSS Colors */
+.z-support.z-constant.z-color,
+.z-invalid.z-deprecated.z-color.z-w3c-non-standard-color-name.z-scss {
+  color: #d19a66;
+}
+
+/* CSS Selectors */
+.z-meta.z-selector.z-css {
+  color: #e06c75;
+}
+
+/* CSS Tags/Properties */
+.z-entity.z-name.z-tag.z-css,
+.z-entity.z-name.z-tag.z-scss,
+.z-source.z-less .z-keyword.z-control.z-html.z-elements,
+.z-source.z-sass .z-keyword.z-control.z-untitled {
+  color: #e06c75;
+}
+
+/* CSS Attribute Names (Classes/IDs) */
+.z-entity.z-other.z-attribute-name.z-class {
+  color: #d19a66;
+}
+.z-entity.z-other.z-attribute-name.z-id {
+  color: #61afef;
+}
+.z-entity.z-other.z-attribute-name.z-pseudo-element,
+.z-entity.z-other.z-attribute-name.z-tag.z-pseudo-element,
+.z-entity.z-other.z-attribute-name.z-pseudo-class,
+.z-entity.z-other.z-attribute-name.z-tag.z-pseudo-class {
+  color: #56b6c2;
+}
+
+/* HTML Specifics */
+.z-text.z-html.z-basic .z-meta.z-tag.z-other.z-html,
+.z-text.z-html.z-basic .z-meta.z-tag.z-any.z-html,
+.z-text.z-html.z-basic .z-meta.z-tag.z-block.z-any,
+.z-text.z-html.z-basic .z-meta.z-tag.z-inline.z-any,
+.z-text.z-html.z-basic .z-meta.z-tag.z-structure.z-any.z-html,
+.z-text.z-html.z-basic .z-source.z-js.z-embedded.z-html,
+.z-punctuation.z-separator.z-key-value.z-html {
+  color: #abb2bf;
+}
+
+.z-text.z-html.z-basic .z-entity.z-other.z-attribute-name.z-html,
+.z-meta.z-tag.z-xml .z-entity.z-other.z-attribute-name {
+  color: #d19a66;
+}
+
+/* Ruby Specifics */
+.z-keyword.z-other.z-special-method.z-ruby {
+  color: #61afef;
+}
+.z-variable.z-other.z-constant.z-ruby {
+  color: #e5c07b;
+}
+.z-constant.z-other.z-symbol.z-ruby {
+  color: #56b6c2;
+}
+
+/* PHP Specifics */
+.z-meta.z-array .z-support.z-function.z-construct.z-php {
+  color: #c678dd;
+}
+
+/* C Preprocessor */
+.z-entity.z-name.z-function.z-preprocessor.z-c,
+.z-meta.z-preprocessor.z-c.z-include,
+.z-meta.z-preprocessor.z-macro.z-c {
+  color: #c678dd;
+}
+
+.z-meta.z-preprocessor.z-c.z-include .z-string.z-quoted.z-other.z-lt-gt.z-include.z-c,
+.z-meta.z-preprocessor.z-c.z-include .z-punctuation.z-definition.z-string.z-begin.z-c,
+.z-meta.z-preprocessor.z-c.z-include .z-punctuation.z-definition.z-string.z-end.z-c {
+  color: #98c379;
+}
+
+/* Git Diff */
+.z-other.z-package.z-exclude, .z-other.z-remove {
+  color: #e06c75;
+}
+.z-other.z-add {
+  color: #98c379;
+}
+
+/* LaTeX / TeX */
+.z-punctuation.z-section.z-group.z-tex,
+.z-punctuation.z-definition.z-arguments.z-begin.z-latex,
+.z-punctuation.z-definition.z-arguments.z-end.z-latex,
+.z-punctuation.z-definition.z-arguments.z-latex {
+  color: #abb2bf;
+}
+.z-meta.z-group.z-braces.z-tex {
+  color: #abb2bf;
+}
+.z-string.z-other.z-math.z-tex {
+  color: #e5c07b;
+}
+.z-variable.z-parameter.z-function.z-latex {
+  color: #d19a66;
+}
+.z-punctuation.z-definition.z-constant.z-math.z-tex {
+  color: #c678dd;
+}
+.z-text.z-tex.z-latex .z-constant.z-other.z-math.z-tex,
+.z-constant.z-other.z-general.z-math.z-tex,
+.z-constant.z-other.z-general.z-math.z-tex,
+.z-constant.z-character.z-math.z-tex {
+  color: #e5c07b;
+}
+.z-punctuation.z-definition.z-string.z-begin.z-tex,
+.z-punctuation.z-definition.z-string.z-end.z-tex {
+  color: #98c379;
+}
+.z-keyword.z-control.z-label.z-latex {
+  color: #61afef;
+}
+.z-variable.z-parameter.z-definition.z-label.z-latex {
+  color: #e06c75;
+}
+.z-support.z-function.z-be.z-latex {
+  color: #61afef;
+}
+.z-support.z-function.z-section.z-latex {
+  color: #e06c75;
+}
+.z-support.z-function.z-general.z-tex {
+  color: #56b6c2;
+}
+.z-keyword.z-control.z-ref.z-latex {
+  color: #61afef;
+}
+
+/* Python Types */
+.z-storage.z-type.z-class.z-python,
+.z-storage.z-type.z-function.z-python,
+.z-storage.z-modifier.z-global.z-python {
+  color: #c678dd;
+}
+
+/* Python Exceptions */
+.z-support.z-type.z-exception.z-python {
+  color: #e5c07b;
+}
+
+/* Shell / Bash */
+.z-meta.z-scope.z-for-in-loop.z-shell, .z-variable.z-other.z-loop.z-shell {
+  color: #e06c75;
+}
+.z-meta.z-scope.z-case-block.z-shell, .z-meta.z-scope.z-case-body.z-shell {
+  color: #abb2bf;
+}
+.z-punctuation.z-definition.z-logical-expression.z-shell {
+  color: #c678dd;
+}
+
+/* C++ */
+.z-storage.z-modifier.z-c++ {
+  color: #c678dd;
+}
+
+/* Perl */
+.z-support.z-function.z-perl {
+  color: #56b6c2;
+}
+
+/* Diff / Patch */
+.z-meta.z-diff, .z-meta.z-diff.z-header {
+  color: #7f848e;
+}
+.z-meta.z-diff.z-range {
+  color: #61afef;
+}
+.z-markup.z-deleted {
+  color: #e06c75;
+}
+.z-markup.z-changed {
+  color: #e5c07b;
+}
+.z-markup.z-inserted {
+  color: #98c379;
+}
+.z-markup.z-warning {
+  color: #d19a66;
+}
+.z-markup.z-error {
+  color: #e06c75;
+}
+
+/* Markdown Formatting */
+.z-markup.z-heading, .z-punctuation.z-definition.z-heading.z-markdown {
+  color: #e06c75;
+  font-weight: bold;
+}
+.z-markup.z-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+.z-markup.z-italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.z-markup.z-bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.z-markup.z-underline.z-link.z-markdown,
+.z-meta.z-link.z-reference .z-constant.z-other.z-reference.z-link.z-markdown {
+  color: #98c379;
+}
+.z-constant.z-other.z-reference.z-link.z-markdown {
+  color: #61afef;
+}
+.z-meta.z-paragraph.z-markdown .z-meta.z-dummy.z-line-break {
+  background-color: #282c34;
+}
+
+/* Find in Files */
+.z-entity.z-name.z-filename.z-find-in-files {
+  color: #98c379;
+}
+.z-constant.z-numeric.z-line-number.z-find-in-files {
+  color: #7f848e;
+}
+
+/* JS/TS Read/Write */
+.z-variable.z-other.z-readwrite.z-js,
+.z-variable.z-other.z-object.z-js,
+.z-variable.z-other.z-constant.z-js {
+  color: #e06c75;
+}

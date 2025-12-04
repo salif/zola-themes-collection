@@ -4,12 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A simple blog for me to write my thoughts">
-    <title>Halcyon | projects</title>
+    <title>Halcyon | Projects</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=2e5c279f8844833f6a69">
+    <link rel="preload" href="/fonts/woff2/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c"></noscript>
+    <script>
+const cls = document.documentElement.classList;
+const sessionTheme = sessionStorage.getItem("theme");
+
+const setDark = () => {
+  cls.add("dark-mode");
+  cls.remove("light-mode");
+  sessionStorage.setItem("theme", "dark");
+};
+
+const setLight = () => {
+  cls.add("light-mode");
+  cls.remove("dark-mode");
+  sessionStorage.setItem("theme", "light");
+};
+
+if (sessionTheme === "dark") {
+  setDark();
+} else if (sessionTheme === "light") {
+  setLight();
+} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  setDark();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("dark-mode-on").addEventListener("click", setDark);
+  document.getElementById("dark-mode-off").addEventListener("click", setLight);
+});
+    </script>
     
     
         
@@ -29,7 +57,21 @@
 <body>
     
 <header class="doublespace footnote-definition">
-    <a href="javascript:history.go(-1)">&LeftArrow; Back</a>
+    <nav class="breadcrumbs">
+        <a href="/">Home</a>
+        
+            
+                
+                    
+                        
+                        
+                    
+                
+            
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Projects</span>
+        
+    </nav>
 </header>
 
 
@@ -38,10 +80,11 @@
     
 <main>
     <div class="doublespace">
-    <h1>projects</h1>
+    <h1>Projects</h1>
     
     <p>Here is an example of the <code>gh_repo</code> shorcodes in action</p>
-<p><div class="repo-container" data-owner="microsoft" data-repo="vscode">
+<p><link rel="preconnect" href="https://api.github.com" crossorigin>
+<div class="repo-container" data-owner="microsoft" data-repo="vscode">
   <div class="repo-header">
     <a href="https://github.com/microsoft/vscode" target="_blank" rel="noopener" class="repo-link">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="github-logo">
@@ -67,6 +110,7 @@
   <div class="repo-description small secondary"></div>
   <div class="repo-tags small accent"></div>
 </div>
+<link rel="preconnect" href="https://api.github.com" crossorigin>
 <div class="repo-container" data-owner="rust-lang" data-repo="rust">
   <div class="repo-header">
     <a href="https://github.com/rust-lang/rust" target="_blank" rel="noopener" class="repo-link">
@@ -108,8 +152,7 @@
             </svg>
         </button>
     </div>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=35126ddac5ff1be1752c"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/theme.js?h=7d54d09f9d907d8fac68"></script>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda"></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=7cc20b786ad2b7bd0b38" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda" defer></script>
     </body>
 </html>

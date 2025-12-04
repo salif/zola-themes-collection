@@ -39,23 +39,20 @@ $$f(a,b,c) = (a^2+b^2+c^2)^3$$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;images&quot;&gt;Images&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#images&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Images should be pretty self explainitory, for personal preference I&#x27;ve set images to center themselves subject to size on the page&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;halcyon&#x2F;posts&#x2F;test&#x2F;images&#x2F;1.jpg&quot; alt=&quot;image&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;youtube-shortcode&quot;&gt;Youtube shortcode&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#youtube-shortcode&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;I&#x27;ve also added a youtube shorcode. It&#x27;s set up with a few handy defaults and takes a video ID.&lt;&#x2F;p&gt;
-&lt;iframe
-	class=&quot;video&quot;
-	src=&quot;https:&#x2F;&#x2F;www.youtube-nocookie.com&#x2F;embed&#x2F;6BBgKWJRx1o&quot;
-	title=&quot;YouTube video&quot;
-	frameborder=&quot;0&quot;
-	allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;
-	allowfullscreen&gt;
-&lt;&#x2F;iframe&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;images&amp;#x2F;1.jpg&quot; alt=&quot;Example image&quot; &#x2F;&gt;
+    
+    &lt;figcaption&gt;Example caption demonstrating figure captions&lt;&#x2F;figcaption&gt;
+    
+&lt;&#x2F;figure&gt;
 &lt;p&gt;Usage:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{ youtube(id=&amp;quot;6BBgKWJRx1o&amp;quot;) } # This would be double curly brackets
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{figure(src=&amp;quot;images&#x2F;example.jpg&amp;quot;, alt=&amp;quot;Description&amp;quot;, caption=&amp;quot;Example caption&amp;quot;)} # With caption (double curly brackets)
+&lt;&#x2F;span&gt;&lt;span&gt;{figure(src=&amp;quot;images&#x2F;example.jpg&amp;quot;, alt=&amp;quot;Description&amp;quot;)} # Without caption (double curly brackets)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;github-repos&quot;&gt;Github Repos&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; href=&quot;#github-repos&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lastly the only other shortcode I&#x27;ve implimented is github repos:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;strong&gt;Rust:&lt;&#x2F;strong&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https:&#x2F;&#x2F;api.github.com&quot; crossorigin&gt;
 &lt;div class=&quot;repo-container&quot; data-owner=&quot;rust-lang&quot; data-repo=&quot;rust&quot;&gt;
   &lt;div class=&quot;repo-header&quot;&gt;
     &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;repo-link&quot;&gt;
