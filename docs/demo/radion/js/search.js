@@ -146,18 +146,46 @@ function makeTeaser(body, terms) {
 }
 
 /**
- * Formats a search result item into HTML.
+ * Escapes HTML special characters to prevent XSS attacks.
+ * Only used for sanitizing user input (search terms).
+ * @param {string} unsafe - The unsafe string to escape.
+ * @return {string} - The escaped string safe for HTML rendering.
+ */
+function escapeHtml(unsafe) {
+  if (typeof unsafe !== "string") return "";
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;")
+    .replace(/\//g, "&#x2F;");
+}
+
+/**
+ * Formats a search result item into a DOM element.
  * @param {Object} item - The search result item containing a reference and document.
- * @param {Array<string>} terms - The search terms used for highlighting.
- * @return {string} - The formatted HTML string for the search result item.
+ * @param {Array<string>} terms - The search terms used for highlighting (sanitized).
+ * @return {HTMLElement} - The formatted article element for the search result.
  */
 function formatSearchResultItem(item, terms) {
-  return (
-    '<article class="search-results__item">' +
-    `<a href="${item.ref}">${item.doc.title}</a>` +
-    `<section>${makeTeaser(item.doc.body, terms)}</section>` +
-    "</article>"
-  );
+  // Create article element
+  const article = document.createElement("article");
+  article.className = "search-results__item";
+
+  // Create link with title
+  const link = document.createElement("a");
+  link.href = item.ref;
+  link.textContent = item.doc.title;
+
+  // Create section with teaser (makeTeaser returns HTML string with <b> tags)
+  const section = document.createElement("section");
+  section.innerHTML = makeTeaser(item.doc.body, terms);
+
+  article.appendChild(link);
+  article.appendChild(section);
+
+  return article;
 }
 
 /**
@@ -166,9 +194,17 @@ function formatSearchResultItem(item, terms) {
  */
 function initSearch() {
   var $searchInput = document.getElementById("search");
+  var $searchModalInput = document.getElementById("search-modal");
   var $searchResults = document.querySelector(".search-results");
   var $searchResultsItems = document.querySelector(".search-results__items");
+  var $searchResultsCount = document.getElementById("search-results-count");
+  var $searchBackdrop = document.querySelector(".search-backdrop");
+  var $slashIcon = document.getElementById("slash-icon");
   var MAX_ITEMS = 10;
+
+  if (!$searchInput || !$searchModalInput) {
+    return;
+  }
 
   var options = {
     bool: "AND",
@@ -179,6 +215,88 @@ function initSearch() {
   };
   var currentTerm = "";
   var index;
+  var selectedIndex = -1;
+  var scrollPosition = 0;
+
+  // Helper functions to show/hide the search modal
+  function showSearchModal() {
+    // Save current scroll position
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Calculate scrollbar width to prevent layout shift
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.classList.add("modal-open");
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+    $searchResults.classList.add("active");
+    $searchBackdrop.classList.add("active");
+
+    // Reset selection
+    selectedIndex = -1;
+
+    // Focus the modal input
+    setTimeout(() => $searchModalInput.focus(), 100);
+  }
+
+  function hideSearchModal() {
+    $searchResults.classList.remove("active");
+    $searchBackdrop.classList.remove("active");
+    document.body.classList.remove("modal-open");
+    document.body.style.top = "";
+    document.body.style.paddingRight = "";
+
+    // Restore scroll position
+    window.scrollTo(0, scrollPosition);
+
+    // Clear both inputs and results
+    $searchInput.value = "";
+    $searchModalInput.value = "";
+    $searchResultsItems.innerHTML = "";
+    $searchResultsCount.classList.remove("visible");
+    $searchResultsCount.innerHTML = "";
+    selectedIndex = -1;
+  }
+
+  // Function to update results count display
+  function updateResultsCount(count, query) {
+    if (!$searchResultsCount) return;
+
+    if (count > 0 && query) {
+      const resultText = count === 1 ? "result" : "results";
+      $searchResultsCount.innerHTML = `${count} ${resultText} for "<strong>${escapeHtml(query)}</strong>"`;
+      $searchResultsCount.classList.add("visible");
+    } else {
+      $searchResultsCount.classList.remove("visible");
+      $searchResultsCount.innerHTML = "";
+    }
+  }
+
+  // Function to update selected item
+  function updateSelection(newIndex) {
+    const items = $searchResultsItems.querySelectorAll(".search-results__item");
+    if (items.length === 0) return;
+
+    // Remove previous selection
+    items.forEach((item) => item.classList.remove("selected"));
+
+    // Clamp index
+    if (newIndex < 0) newIndex = 0;
+    if (newIndex >= items.length) newIndex = items.length - 1;
+
+    selectedIndex = newIndex;
+
+    // Add selection to new item
+    if (items[selectedIndex]) {
+      items[selectedIndex].classList.add("selected");
+      items[selectedIndex].scrollIntoView({
+        block: "nearest",
+        behavior: "smooth",
+      });
+    }
+  }
 
   const initIndex = function () {
     if (index === undefined) {
@@ -222,73 +340,160 @@ function initSearch() {
     return index;
   };
 
-  $searchInput.addEventListener(
-    "keyup",
+  // Function to toggle slash icon visibility
+  function updateSlashIconVisibility() {
+    if ($slashIcon) {
+      // Hide if field is focused OR has text, show only when unfocused AND empty
+      if (
+        document.activeElement === $searchInput ||
+        $searchInput.value.trim() !== ""
+      ) {
+        $slashIcon.classList.add("hidden");
+      } else {
+        $slashIcon.classList.remove("hidden");
+      }
+    }
+  }
+
+  // Update slash icon visibility on input
+  $searchInput.addEventListener("input", updateSlashIconVisibility);
+
+  // Hide slash icon when search field is focused
+  $searchInput.addEventListener("focus", function () {
+    updateSlashIconVisibility();
+    // Open modal when navbar search is focused
+    showSearchModal();
+  });
+
+  // Show slash icon when search field loses focus (if empty)
+  $searchInput.addEventListener("blur", updateSlashIconVisibility);
+
+  // When typing in navbar search, open modal and sync to modal input
+  $searchInput.addEventListener("input", function () {
+    if ($searchInput.value.length > 0) {
+      showSearchModal();
+      $searchModalInput.value = $searchInput.value;
+      // Trigger search on modal input
+      $searchModalInput.dispatchEvent(new Event("input"));
+    }
+  });
+
+  // Main search functionality on modal input
+  $searchModalInput.addEventListener(
+    "input",
     debounce(async function () {
-      var term = $searchInput.value.trim();
+      var term = $searchModalInput.value.trim();
       if (term === currentTerm) {
         return;
       }
-      $searchResults.style.display = term === "" ? "none" : "block";
+
       $searchResultsItems.innerHTML = "";
       currentTerm = term;
+      selectedIndex = -1; // Reset selection on new search
+
       if (term === "") {
+        // Show empty state but keep modal open
+        updateResultsCount(0, "");
         return;
       }
 
       var results = (await initIndex()).search(term, options);
       if (results.length === 0) {
         // show "No results found"
-        $searchResults.style.display = "block";
-        $searchResultsItems.innerHTML = `
-          <li class="search-results__item search-results__no-results">
-            No results found...
-          </li>
-        `;
+        const noResultsItem = document.createElement("li");
+        noResultsItem.className =
+          "search-results__item search-results__no-results";
+        noResultsItem.textContent = "No results found...";
+        $searchResultsItems.appendChild(noResultsItem);
+        updateResultsCount(0, "");
         return;
       }
 
+      // Update results count with total results (not just displayed items)
+      updateResultsCount(results.length, term);
+
+      // Sanitize user input (search terms) before using
+      const sanitizedTerms = term.split(" ").map((t) => escapeHtml(t));
+
       for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
         var item = document.createElement("li");
-        item.innerHTML = formatSearchResultItem(results[i], term.split(" "));
+        item.appendChild(formatSearchResultItem(results[i], sanitizedTerms));
+
+        // Add click handler for each item
+        item.addEventListener("click", function () {
+          const link = this.querySelector("a");
+          if (link) {
+            window.location.href = link.href;
+          }
+        });
+
+        // Add hover handler to update selection
+        item.addEventListener("mouseenter", function () {
+          const items = Array.from(
+            $searchResultsItems.querySelectorAll(".search-results__item"),
+          );
+          const index = items.indexOf(this);
+          if (index >= 0) {
+            updateSelection(index);
+          }
+        });
+
         $searchResultsItems.appendChild(item);
       }
+
+      // Auto-select first item after results load
+      setTimeout(() => updateSelection(0), 50);
     }, 150),
   );
 
-  // exit search on ESC key and move cursor out of search results
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      $searchResults.style.display = "none";
-      // clear search query to go back to placeholder
-      $searchInput.value = "";
-      $searchInput.blur();
+  // Handle arrow key navigation and Enter key
+  $searchModalInput.addEventListener("keydown", function (e) {
+    const items = $searchResultsItems.querySelectorAll(".search-results__item");
+    if (items.length === 0) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      updateSelection(selectedIndex + 1);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      updateSelection(selectedIndex - 1);
+    } else if (e.key === "Enter" && selectedIndex >= 0) {
+      e.preventDefault();
+      const link = items[selectedIndex].querySelector("a");
+      if (link) {
+        window.location.href = link.href;
+      }
     }
   });
 
-  // event listener for `/` to move cursor to search input
+  // exit search on ESC key
   document.addEventListener("keydown", function (e) {
-    if (e.key === "/") {
+    if (e.key === "Escape" && document.body.classList.contains("modal-open")) {
+      hideSearchModal();
+      $searchInput.blur();
+      // Show slash icon again since input is now empty
+      updateSlashIconVisibility();
+    }
+  });
+
+  // event listener for `/` to open search modal
+  document.addEventListener("keydown", function (e) {
+    // Only open modal if we're not already typing in an input
+    if (
+      e.key === "/" &&
+      document.activeElement.tagName !== "INPUT" &&
+      document.activeElement.tagName !== "TEXTAREA"
+    ) {
       // don't have input be `/`
       e.preventDefault();
-      $searchInput.focus();
+      showSearchModal();
     }
   });
 
-  // on enter event immediately display results
-  $searchInput.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      $searchResults.style.display = "block";
-    }
-  });
-
-  window.addEventListener("click", function (e) {
-    if (
-      $searchResults.style.display == "block" &&
-      !$searchResults.contains(e.target)
-    ) {
-      $searchResults.style.display = "none";
-    }
+  // Close modal when clicking on backdrop
+  $searchBackdrop.addEventListener("click", function () {
+    hideSearchModal();
+    updateSlashIconVisibility();
   });
 }
 

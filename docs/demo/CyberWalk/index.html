@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CYBERWALK</title>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/CyberWalk/style.css">
+</head>
+<body>
+
+    <nav class="main-menu">
+        <button class="walkthrough-btn" onclick="startWalkthrough(1)">Slow Walk</button>
+        <button class="walkthrough-btn" onclick="startWalkthrough(2)">Fast Scan</button>
+        <button class="walkthrough-btn" onclick="location.href='/'">Root /</button>
+    </nav>
+
+    <div class="container">
+        
+<h1 class="site-title">&lt; CYBERWALK /&gt;</h1>
+
+<div class="intro-console">
+    <div class="terminal-boot-sequence">
+    <p>> KERNEL_INIT.................... [OK]
+    > MOUNTING_FILE_SYSTEM........... [OK]
+    > LOADING_NEURAL_NETWORKS........ [OK]
+    > ACCESSING_ARCHIVES............. [FILES]_ WAITING FOR INPUT...</p>
+</div>
+</div>
+
+<div class="blog-grid">
+    
+    
+    <article class="blog-card">
+        <div class="card-header">
+            <div class="date">2023-11-02</div>
+            <h2>Optimizing Inference: The Rise of vLLM</h2>
+            <p>Python is too slow for token generation. How Paged…</p>
+        </div>
+
+        <div class="card-actions">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;vllm-inference-optimization-copy&#x2F;">[ OPEN ]</a>
+            <button class="quick-view-btn">[ QUICK VIEW ]</button>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <h1>Optimizing Inference: The Rise of vLLM</h1>
+            <p>In the world of Large Language Models, <strong>throughput</strong> is money. The bottleneck in serving LLMs is rarely compute; it is memory bandwidth.</p>
+<h2 id="the-memory-fragmentation-problem">The Memory Fragmentation Problem</h2>
+<p>Standard attention mechanisms require contiguous memory blocks for Key-Value (KV) caches. As sequences grow, memory fragmentation occurs, leading to wasted VRAM (Video RAM). If you have 20% wasted VRAM, that's 20% fewer requests you can batch concurrently.</p>
+<h2 id="enter-pagedattention-vllm">Enter PagedAttention (vLLM)</h2>
+<p>Inspired by OS virtual memory pagination, vLLM allows the KV cache to be split into non-contiguous blocks. This allows for near-zero memory waste.</p>
+<h3 id="implementation-benchmark">Implementation Benchmark</h3>
+<p>Deploying a Llama-3-8B model using standard HuggingFace pipelines vs vLLM shows drastic differences.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Standard HuggingFace Pipeline (Slow)
+</span><span style="color:#b48ead;">from </span><span>transformers </span><span style="color:#b48ead;">import </span><span>pipeline
+</span><span>pipe = </span><span style="color:#bf616a;">pipeline</span><span>(&quot;</span><span style="color:#a3be8c;">text-generation</span><span>&quot;, </span><span style="color:#bf616a;">model</span><span>=&quot;</span><span style="color:#a3be8c;">meta-llama/Llama-3-8b</span><span>&quot;)
+</span><span style="color:#65737e;"># ~ 30 tokens/sec on A100
+</span><span>
+</span><span style="color:#65737e;"># vLLM Engine (Fast)
+</span><span style="color:#b48ead;">from </span><span>vllm </span><span style="color:#b48ead;">import </span><span style="color:#bf616a;">LLM</span><span>, SamplingParams
+</span><span>llm = </span><span style="color:#bf616a;">LLM</span><span>(</span><span style="color:#bf616a;">model</span><span>=&quot;</span><span style="color:#a3be8c;">meta-llama/Llama-3-8b</span><span>&quot;)
+</span><span style="color:#65737e;"># ~ 85 tokens/sec on A100 (due to better batching)
+</span><span>Continuous Batching
+</span><span>Traditional batching waits </span><span style="color:#b48ead;">for </span><span style="color:#96b5b4;">all </span><span>requests </span><span style="color:#b48ead;">in </span><span>a batch to finish before sending the response. If one request asks </span><span style="background-color:#bf616a;color:#2b303b;">for</span><span> </span><span style="color:#d08770;">500 </span><span>tokens and another </span><span style="color:#b48ead;">for</span><span> 5 tokens, the short request </span><span style="background-color:#bf616a;color:#2b303b;">is</span><span> blocked by the long one.
+</span><span>
+</span><span>vLLM implements Continuous </span><span style="color:#bf616a;">Batching </span><span>(iteration-level scheduling). As soon </span><span style="background-color:#bf616a;color:#2b303b;">as</span><span> a sequence finishes, a new one is inserted into the batch immediately.
+</span><span>
+</span><span>The Infrastructure Stack
+</span><span>For a production-grade Python </span><span style="color:#bf616a;">AI </span><span>backend in </span><span style="color:#d08770;">2025</span><span>, the standard stack is becoming:
+</span><span>
+</span><span>FastAPI </span><span style="color:#b48ead;">for </span><span>the web layer.
+</span><span>
+</span><span>vLLM or </span><span style="color:#bf616a;">TGI </span><span>(Text Generation Inference) </span><span style="color:#b48ead;">for </span><span>the engine.
+</span><span>
+</span><span>Prometheus </span><span style="color:#b48ead;">for </span><span>monitoring token/sec latency.
+</span><span>
+</span><span>Stop serving models </span><span style="color:#b48ead;">with </span><span>raw torch.</span></code></pre>
+
+            <br>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;vllm-inference-optimization-copy&#x2F;" style="font-size: 2rem;">[ GO TO PERMALINK ]</a>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="card-header">
+            <div class="date">2023-11-02</div>
+            <h2>Optimizing Inference: The Rise of vLLM</h2>
+            <p>Python is too slow for token generation. How Paged…</p>
+        </div>
+
+        <div class="card-actions">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;vllm-inference-optimization&#x2F;">[ OPEN ]</a>
+            <button class="quick-view-btn">[ QUICK VIEW ]</button>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <h1>Optimizing Inference: The Rise of vLLM</h1>
+            <p>In the world of Large Language Models, <strong>throughput</strong> is money. The bottleneck in serving LLMs is rarely compute; it is memory bandwidth.</p>
+<h2 id="the-memory-fragmentation-problem">The Memory Fragmentation Problem</h2>
+<p>Standard attention mechanisms require contiguous memory blocks for Key-Value (KV) caches. As sequences grow, memory fragmentation occurs, leading to wasted VRAM (Video RAM). If you have 20% wasted VRAM, that's 20% fewer requests you can batch concurrently.</p>
+<h2 id="enter-pagedattention-vllm">Enter PagedAttention (vLLM)</h2>
+<p>Inspired by OS virtual memory pagination, vLLM allows the KV cache to be split into non-contiguous blocks. This allows for near-zero memory waste.</p>
+<h3 id="implementation-benchmark">Implementation Benchmark</h3>
+<p>Deploying a Llama-3-8B model using standard HuggingFace pipelines vs vLLM shows drastic differences.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#65737e;"># Standard HuggingFace Pipeline (Slow)
+</span><span style="color:#b48ead;">from </span><span>transformers </span><span style="color:#b48ead;">import </span><span>pipeline
+</span><span>pipe = </span><span style="color:#bf616a;">pipeline</span><span>(&quot;</span><span style="color:#a3be8c;">text-generation</span><span>&quot;, </span><span style="color:#bf616a;">model</span><span>=&quot;</span><span style="color:#a3be8c;">meta-llama/Llama-3-8b</span><span>&quot;)
+</span><span style="color:#65737e;"># ~ 30 tokens/sec on A100
+</span><span>
+</span><span style="color:#65737e;"># vLLM Engine (Fast)
+</span><span style="color:#b48ead;">from </span><span>vllm </span><span style="color:#b48ead;">import </span><span style="color:#bf616a;">LLM</span><span>, SamplingParams
+</span><span>llm = </span><span style="color:#bf616a;">LLM</span><span>(</span><span style="color:#bf616a;">model</span><span>=&quot;</span><span style="color:#a3be8c;">meta-llama/Llama-3-8b</span><span>&quot;)
+</span><span style="color:#65737e;"># ~ 85 tokens/sec on A100 (due to better batching)
+</span><span>Continuous Batching
+</span><span>Traditional batching waits </span><span style="color:#b48ead;">for </span><span style="color:#96b5b4;">all </span><span>requests </span><span style="color:#b48ead;">in </span><span>a batch to finish before sending the response. If one request asks </span><span style="background-color:#bf616a;color:#2b303b;">for</span><span> </span><span style="color:#d08770;">500 </span><span>tokens and another </span><span style="color:#b48ead;">for</span><span> 5 tokens, the short request </span><span style="background-color:#bf616a;color:#2b303b;">is</span><span> blocked by the long one.
+</span><span>
+</span><span>vLLM implements Continuous </span><span style="color:#bf616a;">Batching </span><span>(iteration-level scheduling). As soon </span><span style="background-color:#bf616a;color:#2b303b;">as</span><span> a sequence finishes, a new one is inserted into the batch immediately.
+</span><span>
+</span><span>The Infrastructure Stack
+</span><span>For a production-grade Python </span><span style="color:#bf616a;">AI </span><span>backend in </span><span style="color:#d08770;">2025</span><span>, the standard stack is becoming:
+</span><span>
+</span><span>FastAPI </span><span style="color:#b48ead;">for </span><span>the web layer.
+</span><span>
+</span><span>vLLM or </span><span style="color:#bf616a;">TGI </span><span>(Text Generation Inference) </span><span style="color:#b48ead;">for </span><span>the engine.
+</span><span>
+</span><span>Prometheus </span><span style="color:#b48ead;">for </span><span>monitoring token/sec latency.
+</span><span>
+</span><span>Stop serving models </span><span style="color:#b48ead;">with </span><span>raw torch.</span></code></pre>
+
+            <br>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;vllm-inference-optimization&#x2F;" style="font-size: 2rem;">[ GO TO PERMALINK ]</a>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="card-header">
+            <div class="date">2023-10-25</div>
+            <h2>Productionizing RAG: Beyond the Naive Loop</h2>
+            <p>Naive RAG is easy. Production RAG requires query r…</p>
+        </div>
+
+        <div class="card-actions">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;rag-orchestration-langchain&#x2F;">[ OPEN ]</a>
+            <button class="quick-view-btn">[ QUICK VIEW ]</button>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <h1>Productionizing RAG: Beyond the Naive Loop</h1>
+            <p>Retrieval Augmented Generation (RAG) has moved past the "Hello World" phase of dumping PDFs into a vector database. The industry is now grappling with <strong>Context Window Pollution</strong> and <strong>Retrieval Latency</strong>.</p>
+<h2 id="the-architecture-of-advanced-rag">The Architecture of Advanced RAG</h2>
+<p>We are seeing a shift from linear chains to <strong>Agentic Graphs</strong>. Instead of <code>Retrieve -&gt; Generate</code>, we now have <code>Route -&gt; Retrieve -&gt; Grade -&gt; Generate</code>.</p>
+<h3 id="1-query-routing">1. Query Routing</h3>
+<p>Not every query needs a vector search. Some are summarization tasks; others are factual lookups. A router decides the path.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">from </span><span>typing </span><span style="color:#b48ead;">import </span><span>Literal
+</span><span style="color:#b48ead;">from </span><span>langchain_core.pydantic_v1 </span><span style="color:#b48ead;">import </span><span>BaseModel
+</span><span>
+</span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">RouteQuery</span><span style="color:#eff1f5;">(</span><span style="color:#a3be8c;">BaseModel</span><span style="color:#eff1f5;">):
+</span><span>    </span><span style="color:#65737e;">&quot;&quot;&quot;Route a user query to the most relevant datasource.&quot;&quot;&quot;
+</span><span>    datasource: Literal[&quot;</span><span style="color:#a3be8c;">vectorstore</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">web_search</span><span>&quot;]
+</span><span>
+</span><span>llm = </span><span style="color:#bf616a;">ChatOpenAI</span><span>(</span><span style="color:#bf616a;">model</span><span>=&quot;</span><span style="color:#a3be8c;">gpt-4</span><span>&quot;, </span><span style="color:#bf616a;">temperature</span><span>=</span><span style="color:#d08770;">0</span><span>)
+</span><span>structured_llm_router = llm.</span><span style="color:#bf616a;">with_structured_output</span><span>(RouteQuery)
+</span><span>
+</span><span style="color:#65737e;"># The LLM acts as a classifier before doing any heavy lifting
+</span><span>result = structured_llm_router.</span><span style="color:#bf616a;">invoke</span><span>(&quot;</span><span style="color:#a3be8c;">How do I configure a Zola theme?</span><span>&quot;)
+</span><span style="color:#96b5b4;">print</span><span>(result.datasource) </span><span style="color:#65737e;"># &#39;vectorstore&#39;
+</span><span style="color:#d08770;">2. </span><span>Re-</span><span style="color:#bf616a;">ranking </span><span>(The Secret Sauce)
+</span><span>Vector </span><span style="color:#bf616a;">similarity </span><span>(Cosine/Euclidean) is often structurally correct but semantically vague. Introducing a Cross-Encoder re-ranker step after retrieval but before </span><span style="color:#bf616a;">LLM </span><span>context injection typically boosts accuracy by </span><span style="color:#d08770;">15</span><span>-</span><span style="color:#d08770;">20</span><span>%.
+</span><span>
+</span><span>Performance Note: Re-ranking is computationally expensive. Use it on the top </span><span style="color:#d08770;">10</span><span>-</span><span style="color:#d08770;">20 </span><span>retrieved chunks, not the whole dataset.
+</span><span>
+</span><span>The Shift to Graph-Based Flows
+</span><span>Libraries like LangGraph represent state </span><span style="background-color:#bf616a;color:#2b303b;">as</span><span> a graph edge. This allows loops—essential </span><span style="color:#b48ead;">for</span><span> &quot;Agentic </span><span style="color:#bf616a;">RAG</span><span>&quot; where the model can decide the retrieved context </span><span style="background-color:#bf616a;color:#2b303b;">is</span><span> insufficient </span><span style="background-color:#bf616a;color:#2b303b;">and</span><span> re-write its own search query to </span><span style="background-color:#bf616a;color:#2b303b;">try</span><span> again.
+</span><span>
+</span><span>The Python </span><span style="color:#bf616a;">AI </span><span>landscape is moving away </span><span style="color:#b48ead;">from </span><span>&quot;</span><span style="color:#a3be8c;">Scripting</span><span>&quot; LLMs to &quot;</span><span style="color:#a3be8c;">Architecting</span><span>&quot; cognitive flows.</span></code></pre>
+
+            <br>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;rag-orchestration-langchain&#x2F;" style="font-size: 2rem;">[ GO TO PERMALINK ]</a>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="card-header">
+            <div class="date">2023-10-12</div>
+            <h2>Tensor Wars: PyTorch 2.0 vs JAX</h2>
+            <p>An analysis of the dynamic computation graph vs. X…</p>
+        </div>
+
+        <div class="card-actions">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;python-vs-jax-2025-copy&#x2F;">[ OPEN ]</a>
+            <button class="quick-view-btn">[ QUICK VIEW ]</button>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <h1>Tensor Wars: PyTorch 2.0 vs JAX</h1>
+            <h1 id="the-tensor-wars">The Tensor Wars</h1>
+<p>In the current Python AI landscape, the dichotomy between eager execution and compilation is becoming the defining architectural choice for ML Engineers. While PyTorch has long held the crown for researcher ergonomics, JAX (driven by Google) has forced a paradigm shift towards functional purity and XLA (Accelerated Linear Algebra) optimization.</p>
+<h2 id="the-state-of-pytorch-2-0">The State of PyTorch 2.0</h2>
+<p>PyTorch 2.0 was a direct response to the compilation efficiency of JAX. With <code>torch.compile</code>, PyTorch attempts to eat the cake and have it too: maintain the Pythonic flexibility while compiling the backend graph for speed.</p>
+<h3 id="the-code-reality">The Code Reality</h3>
+<p>In classic PyTorch, you might write a training loop that suffers from Python interpreter overhead. In 2.0, the optimization is a single decorator away:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>torch
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">train</span><span>(</span><span style="color:#bf616a;">model</span><span>, </span><span style="color:#bf616a;">data</span><span>):
+</span><span>    </span><span style="color:#65737e;"># Standard PyTorch code
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">model</span><span>(data)
+</span><span>
+</span><span style="color:#65737e;"># The magic line
+</span><span>opt_model = torch.</span><span style="color:#bf616a;">compile</span><span>(model)
+</span></code></pre>
+<p>However, the "graph break" problem remains. If your Python code contains dynamic control flow that the compiler cannot capture, it falls back to eager mode, negating performance gains.</p>
+<p>The JAX Functional Paradigm
+JAX is not a deep learning library; it is an autograd and XLA compiler. This distinction is crucial. It forces you to write pure functions—no side effects, no global state mutations.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>jax.numpy </span><span style="color:#b48ead;">as </span><span>jnp
+</span><span style="color:#b48ead;">from </span><span>jax </span><span style="color:#b48ead;">import </span><span>grad, jit
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">predict</span><span>(</span><span style="color:#bf616a;">params</span><span>, </span><span style="color:#bf616a;">inputs</span><span>):
+</span><span>    </span><span style="color:#b48ead;">return </span><span>jnp.</span><span style="color:#bf616a;">dot</span><span>(inputs, params)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">loss</span><span>(</span><span style="color:#bf616a;">params</span><span>, </span><span style="color:#bf616a;">inputs</span><span>, </span><span style="color:#bf616a;">targets</span><span>):
+</span><span>    preds = </span><span style="color:#bf616a;">predict</span><span>(params, inputs)
+</span><span>    </span><span style="color:#b48ead;">return </span><span>jnp.</span><span style="color:#bf616a;">sum</span><span>((preds - targets)**</span><span style="color:#d08770;">2</span><span>)
+</span><span>
+</span><span style="color:#65737e;"># Just-In-Time compilation
+</span><span>fast_loss = </span><span style="color:#bf616a;">jit</span><span>(loss)
+</span></code></pre>
+<h2 id="verdict">Verdict</h2>
+<p>Choose PyTorch if you need legacy support, rich ecosystem libraries (HuggingFace integration is first-class), and debugging ease.</p>
+<p>Choose JAX if you are doing heavy scientific computing, require massive parallelization (pmap), or are building custom transformer architectures from scratch on TPUs.</p>
+
+            <br>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;python-vs-jax-2025-copy&#x2F;" style="font-size: 2rem;">[ GO TO PERMALINK ]</a>
+        </div>
+    </article>
+    
+    <article class="blog-card">
+        <div class="card-header">
+            <div class="date">2023-10-12</div>
+            <h2>Tensor Wars: PyTorch 2.0 vs JAX</h2>
+            <p>An analysis of the dynamic computation graph vs. X…</p>
+        </div>
+
+        <div class="card-actions">
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;python-vs-jax-2025&#x2F;">[ OPEN ]</a>
+            <button class="quick-view-btn">[ QUICK VIEW ]</button>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <h1>Tensor Wars: PyTorch 2.0 vs JAX</h1>
+            <h1 id="the-tensor-wars">The Tensor Wars</h1>
+<p>In the current Python AI landscape, the dichotomy between eager execution and compilation is becoming the defining architectural choice for ML Engineers. While PyTorch has long held the crown for researcher ergonomics, JAX (driven by Google) has forced a paradigm shift towards functional purity and XLA (Accelerated Linear Algebra) optimization.</p>
+<h2 id="the-state-of-pytorch-2-0">The State of PyTorch 2.0</h2>
+<p>PyTorch 2.0 was a direct response to the compilation efficiency of JAX. With <code>torch.compile</code>, PyTorch attempts to eat the cake and have it too: maintain the Pythonic flexibility while compiling the backend graph for speed.</p>
+<h3 id="the-code-reality">The Code Reality</h3>
+<p>In classic PyTorch, you might write a training loop that suffers from Python interpreter overhead. In 2.0, the optimization is a single decorator away:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>torch
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">train</span><span>(</span><span style="color:#bf616a;">model</span><span>, </span><span style="color:#bf616a;">data</span><span>):
+</span><span>    </span><span style="color:#65737e;"># Standard PyTorch code
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">model</span><span>(data)
+</span><span>
+</span><span style="color:#65737e;"># The magic line
+</span><span>opt_model = torch.</span><span style="color:#bf616a;">compile</span><span>(model)
+</span></code></pre>
+<p>However, the "graph break" problem remains. If your Python code contains dynamic control flow that the compiler cannot capture, it falls back to eager mode, negating performance gains.</p>
+<p>The JAX Functional Paradigm
+JAX is not a deep learning library; it is an autograd and XLA compiler. This distinction is crucial. It forces you to write pure functions—no side effects, no global state mutations.</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>jax.numpy </span><span style="color:#b48ead;">as </span><span>jnp
+</span><span style="color:#b48ead;">from </span><span>jax </span><span style="color:#b48ead;">import </span><span>grad, jit
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">predict</span><span>(</span><span style="color:#bf616a;">params</span><span>, </span><span style="color:#bf616a;">inputs</span><span>):
+</span><span>    </span><span style="color:#b48ead;">return </span><span>jnp.</span><span style="color:#bf616a;">dot</span><span>(inputs, params)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">loss</span><span>(</span><span style="color:#bf616a;">params</span><span>, </span><span style="color:#bf616a;">inputs</span><span>, </span><span style="color:#bf616a;">targets</span><span>):
+</span><span>    preds = </span><span style="color:#bf616a;">predict</span><span>(params, inputs)
+</span><span>    </span><span style="color:#b48ead;">return </span><span>jnp.</span><span style="color:#bf616a;">sum</span><span>((preds - targets)**</span><span style="color:#d08770;">2</span><span>)
+</span><span>
+</span><span style="color:#65737e;"># Just-In-Time compilation
+</span><span>fast_loss = </span><span style="color:#bf616a;">jit</span><span>(loss)
+</span></code></pre>
+<h2 id="verdict">Verdict</h2>
+<p>Choose PyTorch if you need legacy support, rich ecosystem libraries (HuggingFace integration is first-class), and debugging ease.</p>
+<p>Choose JAX if you are doing heavy scientific computing, require massive parallelization (pmap), or are building custom transformer architectures from scratch on TPUs.</p>
+
+            <br>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;python-vs-jax-2025&#x2F;" style="font-size: 2rem;">[ GO TO PERMALINK ]</a>
+        </div>
+    </article>
+    
+</div>
+
+<h2 class="fs-section-title">/usr/local/categories</h2>
+
+<div class="category-grid">
+    
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;bin-conf&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>BIN&#x2F;CONF</h3>
+            <span class="file-count">[ 1 FILES ]</span>
+        </div>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;bin-ref&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>BIN&#x2F;REF</h3>
+            <span class="file-count">[ 1 FILES ]</span>
+        </div>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;dev-bin&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>DEV&#x2F;BIN</h3>
+            <span class="file-count">[ 2 FILES ]</span>
+        </div>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;dev-ref&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>DEV&#x2F;REF</h3>
+            <span class="file-count">[ 1 FILES ]</span>
+        </div>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;etc-conf&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>ETC&#x2F;CONF</h3>
+            <span class="file-count">[ 1 FILES ]</span>
+        </div>
+    </a>
+    
+    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;CyberWalk&#x2F;categories&#x2F;sys-admin&#x2F;" class="category-card glow-box">
+        <div class="terminal-icon">
+            <span>&gt;_</span>
+        </div>
+        <div class="cat-details">
+            <h3>SYS&#x2F;ADMIN</h3>
+            <span class="file-count">[ 2 FILES ]</span>
+        </div>
+    </a>
+    
+</div>
+
+    </div>
+
+    <div id="modal-overlay"></div>
+    <div id="qv-modal">
+        <span class="close-btn">&times;</span>
+        <div id="qv-content"></div>
+    </div>
+
+    <script src="https://salif.github.io/zola-themes-collection/demo/CyberWalk/js/script.js"></script>
+</body>
+</html>

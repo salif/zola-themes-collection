@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             void main() {
                 vec2 uv = vUv;
-                float time = uTime * 0.5;
+                float time = uTime * 1.1;
                 vec2 movement = vec2(
                     sin(uv.x * 6.0 + time) * 0.2 + sin(uv.y * 8.0 + time * 0.5) * 0.1,
                     cos(uv.y * 6.0 + time) * 0.2 + cos(uv.x * 10.0 + time * 0.5) * 0.1

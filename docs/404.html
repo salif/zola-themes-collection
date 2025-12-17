@@ -19,7 +19,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=a74dd0c65eed2d85f55f" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/main.min.css?h=80ece4d015818ae93fff" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f6f8fa; --header: #f6f8fa;} :root.dark{--bg: #1d212c; --header: #1d212c;}</style>
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
@@ -38,12 +38,32 @@
         <a title="Go to home page [Alt + !]" accesskey="!"
           href="https://salif.github.io/zola-themes-collection/"
           class="text-2xl font-semibold truncate">Zola Themes</a>
-        <button type="button" title="Switch color scheme [Alt + $]" accesskey="$"
-          onclick="window.zolaTheme.color.toggle();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
-            bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
-            dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
-        ></button>
+        <details name="header_button">
+          <summary
+            title="Switch color scheme [Alt + $]" accesskey="$"
+            class="select-none ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+              bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
+              dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
+          ></summary>
+          <div class="absolute header mt-3.5">
+            <button
+              type="button" title="Switch to light mode"
+              onclick="window.zolaTheme.color.select({ mode: 'light', par: this.parentElement.parentElement });"
+              class="m-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
+            ></button><button
+              type="button" title="Switch to dark mode"
+              onclick="window.zolaTheme.color.select({ mode: 'dark', par: this.parentElement.parentElement });"
+              class="my-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))] dark:invert"
+            ></button><button
+              type="button" title="Reset color scheme"
+              onclick="window.zolaTheme.color.select({ mode: 'reset', par: this.parentElement.parentElement });"
+              class="m-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-reset,url(icons/btn-reset.svg))] dark:invert"
+            ></button>
+          </div>
+        </details>
       </div>
       <div title="Toggle menu [Alt + `+`]" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer select-none flex-col items-center justify-center gap-2.5 lg:hidden"

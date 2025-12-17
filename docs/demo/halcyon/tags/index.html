@@ -6,37 +6,9 @@
     <meta name="description" content="A simple blog for me to write my thoughts">
     <title>Halcyon | Tags</title>
     
-    <link rel="preload" href="/fonts/woff2/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=1299d68e9cf91ea48c3c"></noscript>
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/halcyon/style.css?h=5d39dcc09ef539c4a0a7">
     <script>
-const cls = document.documentElement.classList;
-const sessionTheme = sessionStorage.getItem("theme");
-
-const setDark = () => {
-  cls.add("dark-mode");
-  cls.remove("light-mode");
-  sessionStorage.setItem("theme", "dark");
-};
-
-const setLight = () => {
-  cls.add("light-mode");
-  cls.remove("dark-mode");
-  sessionStorage.setItem("theme", "light");
-};
-
-if (sessionTheme === "dark") {
-  setDark();
-} else if (sessionTheme === "light") {
-  setLight();
-} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  setDark();
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("dark-mode-on").addEventListener("click", setDark);
-  document.getElementById("dark-mode-off").addEventListener("click", setLight);
-});
+(()=>{const c=document.documentElement.classList,t=sessionStorage.getItem("theme"),s=(m,o)=>{c.add(m);c.remove(o);sessionStorage.setItem("theme",m.replace("-mode",""))};t==="dark"?s("dark-mode","light-mode"):t==="light"?s("light-mode","dark-mode"):window.matchMedia("(prefers-color-scheme: dark)").matches&&s("dark-mode","light-mode");document.addEventListener("DOMContentLoaded",()=>{document.getElementById("dark-mode-on").addEventListener("click",()=>s("dark-mode","light-mode"));document.getElementById("dark-mode-off").addEventListener("click",()=>s("light-mode","dark-mode"))})})();
     </script>
     
     
@@ -109,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </svg>
         </button>
     </div>
-    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=7cc20b786ad2b7bd0b38" defer></script>
+    <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/codeblocks.js?h=0fcb7b07952ce7240fd5" defer></script>
     <script src="https://salif.github.io/zola-themes-collection/demo/halcyon/js/github.js?h=107a7b38af617cc74eda" defer></script>
     </body>
 </html>

@@ -22,7 +22,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="main.min.css?h=a74dd0c65eed2d85f55f" />
+  <link rel="stylesheet" href="main.min.css?h=80ece4d015818ae93fff" />
   <link rel="stylesheet" href="icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f6f8fa; --header: #f6f8fa;} :root.dark{--bg: #1d212c; --header: #1d212c;}</style>
   <meta name="theme-color" data-light="#f6f8fa" data-dark="#1d212c" content="#f6f8fa" />
@@ -41,12 +41,32 @@
         <a title="Go to home page [Alt + !]" accesskey="!"
           href=""
           class="text-2xl font-semibold truncate">Zola Themes</a>
-        <button type="button" title="Switch color scheme [Alt + $]" accesskey="$"
-          onclick="window.zolaTheme.color.toggle();"
-          class="btn-dark ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
-            bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
-            dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
-        ></button>
+        <details name="header_button">
+          <summary
+            title="Switch color scheme [Alt + $]" accesskey="$"
+            class="select-none ml-4 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+              bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))]
+              dark:[background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
+          ></summary>
+          <div class="absolute header mt-3.5">
+            <button
+              type="button" title="Switch to light mode"
+              onclick="window.zolaTheme.color.select({ mode: 'light', par: this.parentElement.parentElement });"
+              class="m-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-light,url(icons/btn-light.svg))] dark:invert"
+            ></button><button
+              type="button" title="Switch to dark mode"
+              onclick="window.zolaTheme.color.select({ mode: 'dark', par: this.parentElement.parentElement });"
+              class="my-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-dark,url(icons/btn-dark.svg))] dark:invert"
+            ></button><button
+              type="button" title="Reset color scheme"
+              onclick="window.zolaTheme.color.select({ mode: 'reset', par: this.parentElement.parentElement });"
+              class="m-2 h-6 w-6 shrink-0 cursor-pointer text-[0px]
+                bg-center bg-no-repeat bg-cover [background-image:var(--icons-btn-reset,url(icons/btn-reset.svg))] dark:invert"
+            ></button>
+          </div>
+        </details>
       </div>
       <div title="Toggle menu [Alt + `+`]" role="button" accesskey="+" tabindex="0"
         class="btn-menu relative z-50 flex h-8 w-8 shrink-0 cursor-pointer select-none flex-col items-center justify-center gap-2.5 lg:hidden"
@@ -551,203 +571,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-terminus">terminus</h2>
-  <div class="not-prose">
-      <img src="./screenshots/dark-terminus.webp"
-        alt="Dark mode screenshot of terminus Zola theme demo website"
-        width="1360" height="765" />
-    <p>A dark duotone retro theme for Zola</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-terminus">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://eyalkalderon.com">Eyal Kalderon</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/ebkalderon/terminus">https://github.com/ebkalderon/terminus</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://ebkalderon.github.io/terminus/">https://ebkalderon.github.io/terminus/</a></li>
-<li><strong>Min Zola version</strong>: 0.20.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
-</ul>
-<h3 id="install-terminus">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/ebkalderon/terminus.git themes/terminus
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/ebkalderon/terminus.git themes/terminus
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">terminus</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#dark</span>
-      <span>#blog</span>
-      <span>#minimal</span>
-      <span>#personal</span>
-      <span>#responsive</span>
-      <span>#seo</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="./demo/terminus/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/ebkalderon/terminus"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#info-terminus"
-        onclick="document.getElementById('info-terminus').parentElement.setAttribute('open', true); this.style.display='none';"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-hacker">zola-hacker</h2>
-  <div class="not-prose">
-      <img src="./screenshots/dark-hacker.webp"
-        alt="Dark mode screenshot of zola-hacker Zola theme demo website"
-        width="1360" height="765" />
-    <p>Hacker is a theme for Zola</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-hacker">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/en9inerd">Vladimir Loskutov</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/en9inerd/zola-hacker">https://github.com/en9inerd/zola-hacker</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-hacker.enginerd.io/">https://zola-hacker.enginerd.io/</a></li>
-<li><strong>Min Zola version</strong>: 0.19.1</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/pages-themes/hacker">https://github.com/pages-themes/hacker</a></li>
-</ul>
-<h3 id="install-hacker">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/en9inerd/zola-hacker.git themes/hacker
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">hacker</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="./demo/hacker/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/en9inerd/zola-hacker"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#info-hacker"
-        onclick="document.getElementById('info-hacker').parentElement.setAttribute('open', true); this.style.display='none';"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-radion">radion</h2>
-  <div class="not-prose">
-      <img src="./screenshots/dark-radion.webp"
-        alt="Dark mode screenshot of radion Zola theme demo website"
-        width="1360" height="765" />
-    <p>A sleek, modern blog theme.</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-radion">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com">Micah Kepe</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/micahkepe/radion">https://github.com/micahkepe/radion</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com/radion/">https://micahkepe.com/radion/</a></li>
-<li><strong>Min Zola version</strong>: 0.20.0</li>
-</ul>
-<h3 id="install-radion">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/micahkepe/radion.git themes/radion
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/micahkepe/radion.git themes/radion
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">radion</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#SEO</span>
-      <span>#search</span>
-      <span>#accessible</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="./demo/radion/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/micahkepe/radion"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#info-radion"
-        onclick="document.getElementById('info-radion').parentElement.setAttribute('open', true); this.style.display='none';"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-MATbook">MATbook</h2>
   <div class="not-prose">
       <img src="./screenshots/light-MATbook.webp"
@@ -878,27 +701,24 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-zola-bearblog">Bear</h2>
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-terminus">terminus</h2>
   <div class="not-prose">
-      <img src="./screenshots/light-zola-bearblog.webp"
-        alt="Light mode screenshot of Bear Zola theme demo website"
+      <img src="./screenshots/dark-terminus.webp"
+        alt="Dark mode screenshot of terminus Zola theme demo website"
         width="1360" height="765" />
-      <img src="./screenshots/dark-zola-bearblog.webp"
-        alt="Dark mode screenshot of Bear Zola theme demo website"
-        width="1360" height="765" />
-    <p>Bear blog theme</p>
+    <p>A dark duotone retro theme for Zola</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-zola-bearblog">Info</h3>
+<h3 id="info-terminus">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://alanpearce.eu">Alan Pearce</a></li>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://eyalkalderon.com">Eyal Kalderon</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-bearblog.alanpearce.eu/">https://zola-bearblog.alanpearce.eu/</a></li>
-<li><strong>Min Zola version</strong>: 0.4.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/janraasch/hugo-bearblog/">https://github.com/janraasch/hugo-bearblog/</a></li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/ebkalderon/terminus">https://github.com/ebkalderon/terminus</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://ebkalderon.github.io/terminus/">https://ebkalderon.github.io/terminus/</a></li>
+<li><strong>Min Zola version</strong>: 0.20.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/panr/hugo-theme-terminal">https://github.com/panr/hugo-theme-terminal</a></li>
 </ul>
-<h3 id="install-zola-bearblog">Installation</h3>
+<h3 id="install-terminus">Installation</h3>
 <p>Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
 <ol start="0">
@@ -908,62 +728,65 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <ul>
 <li>Option A: Add the theme as a git submodule:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/ebkalderon/terminus.git themes/terminus
 </span></code></pre>
 <ul>
 <li>Option B: Clone the theme into your themes directory:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/ebkalderon/terminus.git themes/terminus
 </span></code></pre>
 <ol start="2">
 <li>Enable the theme in your <code>config.toml</code></li>
 </ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">zola-bearblog</span><span style="color:#556633;">&quot;
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">terminus</span><span style="color:#556633;">&quot;
 </span></code></pre>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#dark</span>
+      <span>#blog</span>
+      <span>#minimal</span>
+      <span>#personal</span>
+      <span>#responsive</span>
+      <span>#seo</span>
     </div>
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="./demo/zola-bearblog/"
+        href="./demo/terminus/"
         target="_blank"
       >Live Preview</a>
       <a
         class="underline"
-        href="https://codeberg.org/alanpearce/zola-bearblog"
+        href="https://github.com/ebkalderon/terminus"
         target="_blank"
       >Repository</a>
       <a
         class="underline"
-        href="#info-zola-bearblog"
-        onclick="document.getElementById('info-zola-bearblog').parentElement.setAttribute('open', true); this.style.display='none';"
+        href="#info-terminus"
+        onclick="document.getElementById('info-terminus').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-serene">serene</h2>
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-radion">radion</h2>
   <div class="not-prose">
-      <img src="./screenshots/light-serene.webp"
-        alt="Light mode screenshot of serene Zola theme demo website"
+      <img src="./screenshots/dark-radion.webp"
+        alt="Dark mode screenshot of radion Zola theme demo website"
         width="1360" height="765" />
-      <img src="./screenshots/dark-serene.webp"
-        alt="Dark mode screenshot of serene Zola theme demo website"
-        width="1360" height="765" />
-    <p>A spiffy blog theme for zola</p>
+    <p>A sleek, modern blog theme.</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-serene">Info</h3>
+<h3 id="info-radion">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/isunjn">isunjn</a></li>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com">Micah Kepe</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/isunjn/serene">https://github.com/isunjn/serene</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://serene-demo.pages.dev">https://serene-demo.pages.dev</a></li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/micahkepe/radion">https://github.com/micahkepe/radion</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://micahkepe.com/radion/">https://micahkepe.com/radion/</a></li>
 <li><strong>Min Zola version</strong>: 0.20.0</li>
 </ul>
-<h3 id="install-serene">Installation</h3>
+<h3 id="install-radion">Installation</h3>
 <p>Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
 <ol start="0">
@@ -973,61 +796,63 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <ul>
 <li>Option A: Add the theme as a git submodule:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/isunjn/serene.git themes/serene
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/micahkepe/radion.git themes/radion
 </span></code></pre>
 <ul>
 <li>Option B: Clone the theme into your themes directory:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/isunjn/serene.git themes/serene
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/micahkepe/radion.git themes/radion
 </span></code></pre>
 <ol start="2">
 <li>Enable the theme in your <code>config.toml</code></li>
 </ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">serene</span><span style="color:#556633;">&quot;
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">radion</span><span style="color:#556633;">&quot;
 </span></code></pre>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
     <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#SEO</span>
+      <span>#search</span>
+      <span>#accessible</span>
     </div>
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="./demo/serene/"
+        href="./demo/radion/"
         target="_blank"
       >Live Preview</a>
       <a
         class="underline"
-        href="https://github.com/isunjn/serene"
+        href="https://github.com/micahkepe/radion"
         target="_blank"
       >Repository</a>
       <a
         class="underline"
-        href="#info-serene"
-        onclick="document.getElementById('info-serene').parentElement.setAttribute('open', true); this.style.display='none';"
+        href="#info-radion"
+        onclick="document.getElementById('info-radion').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-halcyon">halcyon</h2>
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-hacker">zola-hacker</h2>
   <div class="not-prose">
-      <img src="./screenshots/light-halcyon.webp"
-        alt="Light mode screenshot of halcyon Zola theme demo website"
+      <img src="./screenshots/dark-hacker.webp"
+        alt="Dark mode screenshot of zola-hacker Zola theme demo website"
         width="1360" height="765" />
-      <img src="./screenshots/dark-halcyon.webp"
-        alt="Dark mode screenshot of halcyon Zola theme demo website"
-        width="1360" height="765" />
-    <p>Clean and simple personal site&#x2F;blog theme</p>
+    <p>Hacker is a theme for Zola</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-halcyon">Info</h3>
+<h3 id="info-hacker">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/m0ddr">M0ddr</a></li>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/en9inerd">Vladimir Loskutov</a></li>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/m0ddr/halcyon">https://github.com/m0ddr/halcyon</a></li>
-<li><strong>Min Zola version</strong>: 0.1.0</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/en9inerd/zola-hacker">https://github.com/en9inerd/zola-hacker</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-hacker.enginerd.io/">https://zola-hacker.enginerd.io/</a></li>
+<li><strong>Min Zola version</strong>: 0.19.1</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/pages-themes/hacker">https://github.com/pages-themes/hacker</a></li>
 </ul>
-<h3 id="install-halcyon">Installation</h3>
+<h3 id="install-hacker">Installation</h3>
 <p>Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
 <ol start="0">
@@ -1037,17 +862,17 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 <ul>
 <li>Option A: Add the theme as a git submodule:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/m0ddr/halcyon.git themes/halcyon
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
 </span></code></pre>
 <ul>
 <li>Option B: Clone the theme into your themes directory:</li>
 </ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/m0ddr/halcyon.git themes/halcyon
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/en9inerd/zola-hacker.git themes/hacker
 </span></code></pre>
 <ol start="2">
 <li>Enable the theme in your <code>config.toml</code></li>
 </ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">halcyon</span><span style="color:#556633;">&quot;
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">hacker</span><span style="color:#556633;">&quot;
 </span></code></pre>
 </details>
   <div class="not-prose my-2 flex flex-wrap items-center justify-between">
@@ -1056,18 +881,147 @@ Be sure to follow the instructions found on your chosen theme's documentation to
     <div class="flex flex-wrap gap-x-2">
       <a
         class="underline"
-        href="./demo/halcyon/"
+        href="./demo/hacker/"
         target="_blank"
       >Live Preview</a>
       <a
         class="underline"
-        href="https://github.com/m0ddr/halcyon"
+        href="https://github.com/en9inerd/zola-hacker"
         target="_blank"
       >Repository</a>
       <a
         class="underline"
-        href="#info-halcyon"
-        onclick="document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
+        href="#info-hacker"
+        onclick="document.getElementById('info-hacker').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-CyberWalk">CyberWalk</h2>
+  <div class="not-prose">
+      <img src="./screenshots/dark-CyberWalk.webp"
+        alt="Dark mode screenshot of CyberWalk Zola theme demo website"
+        width="1360" height="765" />
+    <p>A dark, glowing, cyberpunk-themed Zola theme for developers and technical writers.</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-CyberWalk">Info</h3>
+<ul>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/plantacerium/zola-theme-cyber-walk">https://github.com/plantacerium/zola-theme-cyber-walk</a></li>
+</ul>
+<h3 id="install-CyberWalk">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/plantacerium/zola-theme-cyber-walk.git themes/CyberWalk
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/plantacerium/zola-theme-cyber-walk.git themes/CyberWalk
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">CyberWalk</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#blog</span>
+      <span>#cyberpunk</span>
+      <span>#dark</span>
+      <span>#terminal</span>
+      <span>#portfolio</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/CyberWalk/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/plantacerium/zola-theme-cyber-walk"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-CyberWalk"
+        onclick="document.getElementById('info-CyberWalk').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-zap">Zap</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-zap.webp"
+        alt="Light mode screenshot of Zap Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-zap.webp"
+        alt="Dark mode screenshot of Zap Zola theme demo website"
+        width="1360" height="765" />
+    <p>A fast, ultra-minimal Zola theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-zap">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://www.jimmyff.co.uk">jimmyff</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/jimmyff/zola-zap">https://github.com/jimmyff/zola-zap</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://www.jimmyff.co.uk/zola-zap/">https://www.jimmyff.co.uk/zola-zap/</a></li>
+<li><strong>Min Zola version</strong>: 0.17.0</li>
+</ul>
+<h3 id="install-zap">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/jimmyff/zola-zap.git themes/zap
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/jimmyff/zola-zap.git themes/zap
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">zap</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/zap/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/jimmyff/zola-zap"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-zap"
+        onclick="document.getElementById('info-zap').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>
@@ -1334,6 +1288,201 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-zola-bearblog">Bear</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-zola-bearblog.webp"
+        alt="Light mode screenshot of Bear Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-zola-bearblog.webp"
+        alt="Dark mode screenshot of Bear Zola theme demo website"
+        width="1360" height="765" />
+    <p>Bear blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-zola-bearblog">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://alanpearce.eu">Alan Pearce</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/alanpearce/zola-bearblog">https://codeberg.org/alanpearce/zola-bearblog</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://zola-bearblog.alanpearce.eu/">https://zola-bearblog.alanpearce.eu/</a></li>
+<li><strong>Min Zola version</strong>: 0.4.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/janraasch/hugo-bearblog/">https://github.com/janraasch/hugo-bearblog/</a></li>
+</ul>
+<h3 id="install-zola-bearblog">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">zola-bearblog</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/zola-bearblog/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/alanpearce/zola-bearblog"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-zola-bearblog"
+        onclick="document.getElementById('info-zola-bearblog').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-serene">serene</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-serene.webp"
+        alt="Light mode screenshot of serene Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-serene.webp"
+        alt="Dark mode screenshot of serene Zola theme demo website"
+        width="1360" height="765" />
+    <p>A spiffy blog theme for zola</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-serene">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/isunjn">isunjn</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/isunjn/serene">https://github.com/isunjn/serene</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://serene-demo.pages.dev">https://serene-demo.pages.dev</a></li>
+<li><strong>Min Zola version</strong>: 0.20.0</li>
+</ul>
+<h3 id="install-serene">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/isunjn/serene.git themes/serene
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/isunjn/serene.git themes/serene
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">serene</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/serene/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/isunjn/serene"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-serene"
+        onclick="document.getElementById('info-serene').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-halcyon">halcyon</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-halcyon.webp"
+        alt="Light mode screenshot of halcyon Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-halcyon.webp"
+        alt="Dark mode screenshot of halcyon Zola theme demo website"
+        width="1360" height="765" />
+    <p>Clean and simple personal site&#x2F;blog theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-halcyon">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://github.com/m0ddr">M0ddr</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/m0ddr/halcyon">https://github.com/m0ddr/halcyon</a></li>
+<li><strong>Min Zola version</strong>: 0.1.0</li>
+</ul>
+<h3 id="install-halcyon">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/m0ddr/halcyon.git themes/halcyon
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/m0ddr/halcyon.git themes/halcyon
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">halcyon</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/halcyon/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/m0ddr/halcyon"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-halcyon"
+        onclick="document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-kita">Kita</h2>
   <div class="not-prose">
       <img src="./screenshots/light-kita.webp"
@@ -1533,76 +1682,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-cela"
         onclick="document.getElementById('info-cela').parentElement.setAttribute('open', true); this.style.display='none';"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-trankwilo">Trankwilo</h2>
-  <div class="not-prose">
-      <img src="./screenshots/light-trankwilo.webp"
-        alt="Light mode screenshot of Trankwilo Zola theme demo website"
-        width="1360" height="765" />
-      <img src="./screenshots/dark-trankwilo.webp"
-        alt="Dark mode screenshot of Trankwilo Zola theme demo website"
-        width="1360" height="765" />
-    <p>A simplicity and clean documentation theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-trankwilo">Info</h3>
-<ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://salif.eu">Salif Mehmed</a></li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/salif/trankwilo">https://codeberg.org/salif/trankwilo</a></li>
-<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/">https://salif.github.io/zola-themes-collection/demo/trankwilo/</a></li>
-<li><strong>Min Zola version</strong>: 0.17.0</li>
-<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/hahwul/goyo">https://github.com/hahwul/goyo</a></li>
-</ul>
-<h3 id="install-trankwilo">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">trankwilo</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#documentation</span>
-      <span>#Multilingual</span>
-      <span>#Responsive</span>
-      <span>#minimal</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="./demo/trankwilo/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://codeberg.org/salif/trankwilo"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#info-trankwilo"
-        onclick="document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>
@@ -2127,13 +2206,13 @@ Be sure to follow the instructions found on your chosen theme's documentation to
       <img src="./screenshots/dark-am-zola-theme.webp"
         alt="Dark mode screenshot of AMZola Zola theme demo website"
         width="1360" height="765" />
-    <p>A Zola theme template</p>
+    <p>A Zola theme</p>
   </div>
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 <h3 id="info-am-zola-theme">Info</h3>
 <ul>
 <li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/jel1yspot/AMZola">https://github.com/jel1yspot/AMZola</a></li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/jel1yspot/am-zola-theme">https://github.com/jel1yspot/am-zola-theme</a></li>
 </ul>
 <h3 id="install-am-zola-theme">Installation</h3>
 <p>Some themes require additional configuration before they can work properly.
@@ -3868,6 +3947,76 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-trankwilo">Trankwilo</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-trankwilo.webp"
+        alt="Light mode screenshot of Trankwilo Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-trankwilo.webp"
+        alt="Dark mode screenshot of Trankwilo Zola theme demo website"
+        width="1360" height="765" />
+    <p>A simplicity and clean documentation theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-trankwilo">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://salif.eu">Salif Mehmed</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://codeberg.org/salif/trankwilo">https://codeberg.org/salif/trankwilo</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://salif.github.io/zola-themes-collection/demo/trankwilo/">https://salif.github.io/zola-themes-collection/demo/trankwilo/</a></li>
+<li><strong>Min Zola version</strong>: 0.17.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/hahwul/goyo">https://github.com/hahwul/goyo</a></li>
+</ul>
+<h3 id="install-trankwilo">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">trankwilo</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#documentation</span>
+      <span>#Multilingual</span>
+      <span>#Responsive</span>
+      <span>#minimal</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/trankwilo/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/salif/trankwilo"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-trankwilo"
+        onclick="document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-xuan">xuan</h2>
   <div class="not-prose">
       <img src="./screenshots/light-xuan.webp"
@@ -3881,7 +4030,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 <h3 id="info-xuan">Info</h3>
 <ul>
-<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://blog.900803.xyz">jhq223</a></li>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://blog.guiio.com">jhq223</a></li>
 <li><strong>License</strong>: MIT</li>
 <li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/jhq223/xuan">https://github.com/jhq223/xuan</a></li>
 <li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://xuan-theme.jhq223.workers.dev">https://xuan-theme.jhq223.workers.dev</a></li>

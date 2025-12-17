@@ -49,7 +49,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=a74dd0c65eed2d85f55f" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -205,12 +205,9 @@ and <a href="https://github.com/nanxiaobei/hugo-paper">Hugo-Paper</a> and is mul
 <li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a>
 and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
-<li>See <a href="https://codeberg.org/salif/linkita-demo">demo source code</a>.</li>
-<li>Live preview in:
-<a href="https://salif.github.io/linkita/">English</a>,
-<a href="https://salif.github.io/linkita/bg/">Bulgarian</a>,
-<a href="https://salif.github.io/linkita/eo/">Esperanto</a>,
-<a href="https://salif.github.io/linkita/gb/">Globasa</a>.</li>
+<li>See the <a href="https://github.com/salif/linkita-start">quickstart repository</a>.</li>
+<li>See a <a href="https://salif.github.io/linkita/">live preview</a> and
+<a href="https://codeberg.org/salif/linkita-demo">its source code</a>.</li>
 </ul>
 <h2 id="features">Features</h2>
 <ul>
@@ -238,7 +235,11 @@ and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <li>Keyboard shortcuts</li>
 <li>Relative URLs support</li>
 </ul>
-<h2 id="installing">Installing</h2>
+<h2 id="installation">Installation</h2>
+<p>The fastest way to create a new site is to use the
+<a href="https://github.com/salif/linkita-start">linkita-start template</a>.
+This gives you a complete blog setup with all the essential configuration ready to go.</p>
+<h3 id="manual-installation">Manual installation</h3>
 <ol start="0">
 <li>Create a new Zola site if you haven't already:</li>
 </ol>
@@ -249,10 +250,11 @@ and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <ol>
 <li>Add the theme as a git submodule:</li>
 </ol>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add</span><span style="color:#ffb964;"> -b</span><span> linkita https://codeberg.org/salif/linkita.git themes/linkita
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add</span><span style="color:#ffb964;"> -b</span><span> v4 https://codeberg.org/salif/linkita.git themes/linkita
 </span></code></pre>
 <p>If you don't want to use git submodules, you can clone the repository instead:</p>
-<p><code>git clone https://codeberg.org/salif/linkita.git themes/linkita</code></p>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone</span><span style="color:#ffb964;"> -b</span><span> v4 https://codeberg.org/salif/linkita.git themes/linkita
+</span></code></pre>
 <ol start="2">
 <li>Enable the theme in your <code>config.toml</code> file:</li>
 </ol>
@@ -263,9 +265,10 @@ and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 <p>To update the theme, run:</p>
 <pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule update</span><span style="color:#ffb964;"> --remote</span><span> themes/linkita
 </span></code></pre>
-<p>Check the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/CHANGELOG.md">changelog</a>
-for all versions after the one you are using.
-There may be breaking changes that require manual involvement.</p>
+<p>If you use the <code>linkita</code> branch of the theme, check the
+<a href="https://codeberg.org/salif/linkita/src/branch/linkita/changelog/linkita.md">changelog/linkita.md</a> file.<br />
+Otherwise, find the changelog file for your version in the <code>changelog</code> directory.</p>
+<p>If you switch to newer version, there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
 <p>Linkita uses the following front matter variables.
 All variables are optional.
@@ -409,7 +412,7 @@ If you choose this option you should set taxonomies in each post.</p>
 <tr><td>Table of contents</td><td><kbd>Alt</kbd>+<kbd>=</kbd></td></tr>
 <tr><td>Skip to footer</td><td><kbd>Alt</kbd>+<kbd>_</kbd></td></tr>
 </tbody></table>
-<h2 id="configuring">Configuring</h2>
+<h2 id="configuration">Configuration</h2>
 <p>Copy and paste the examples into your <code>config.toml</code> file
 and comment out the variables you don't use instead of setting empty values.
 All variables are optional.</p>
@@ -832,7 +835,8 @@ Only available when <code>extra.comment</code> in the front matter or <code>extr
 </span></code></pre>
 <h2 id="contributing">Contributing</h2>
 <p>This project is under the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a>.</p>
-<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.</p>
+<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.
+The main branch is <code>linkita</code>.</p>
 <h3 id="localization">Localization</h3>
 <p>Feel free to contribute new translations or improve existing ones.</p>
 <p>To add a new language, create a file <code>LANG_CODE.json</code> in the <code>static/i18n</code> directory.
@@ -859,7 +863,7 @@ the <a href="https://codeberg.org/salif/linkita-demo">demo repository</a>.</p>
 <h2 id="sites-using-linkita">Sites using Linkita</h2>
 <ul>
 <li><a href="https://github.com/salif/zola-themes-collection">Zola Themes Collection</a></li>
-<li><a href="https://codeberg.org/salif/personal-web-page">salif.eu</a></li>
+<li><a href="https://codeberg.org/salif/personal-web-page">Salif's site</a></li>
 <li><a href="https://github.com/Rratic/rratic.github.io">Rratic's blog</a></li>
 </ul>
 <p>If your blog is using Linkita and is open source, feel free to create a pull request to add it to this list.</p>

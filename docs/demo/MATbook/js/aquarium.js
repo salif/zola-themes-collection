@@ -1,11 +1,18 @@
 // inspired by https://github.com/cmatsuoka/asciiquarium/tree/master
 // use https://www.asciiart.eu/animals/fish
 let aquariumInterval = null;
+let aquariumListeners = null;
 
 function toggleAquarium() {
     const existingCanvas = document.getElementById('aquarium-canvas');
     if (existingCanvas) {
         clearInterval(aquariumInterval);
+
+	if (aquariumListeners) {
+            window.removeEventListener('keydown', aquariumListeners.down);
+            window.removeEventListener('keyup', aquariumListeners.up);
+        }
+	
         existingCanvas.remove();
         document.body.style.overflow = '';
         return;
@@ -36,10 +43,29 @@ function toggleAquarium() {
         ctx.font = `bold ${fontSize}px monospace`;
         
         WATER_LEVEL = 150; 
+	
     }
     resize();
     window.addEventListener('resize', resize);
+    
+    const keys = { left: false, right: false, drop: false, reel: false};
+    const handleKeyDown = (e) => {
+        if (e.code === 'ArrowLeft') keys.left = true;
+        if (e.code === 'ArrowRight' ) keys.right = true;
+        if (e.code === 'Space' || e.code === 'ArrowDown' || e.key === 'j') keys.drop = true;
+	if (e.code === 'ArrowUp' || e.key === 'k') keys.reel = true;
+    };
 
+    const handleKeyUp = (e) => {
+        if (e.code === 'ArrowLeft') keys.left = false;
+        if (e.code === 'ArrowRight') keys.right = false;
+        if (e.code === 'Space' || e.code === 'ArrowDown' || e.key === 'j') keys.drop = false;
+	if (e.code === 'ArrowUp' || e.key === 'k') keys.reel = false;
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
+    aquariumListeners = { down: handleKeyDown, up: handleKeyUp };
+    // -------------------------------
     // --- ASSETS ---
     const mirrorMap = {
         '(': ')', ')': '(', '[': ']', ']': '[', '{': '}', '}': '{',
@@ -66,16 +92,16 @@ function toggleAquarium() {
         ],
         shark: {
             right: [
-	"				      __",
-	"	                             ( `\ ",
-	"	  ,                          )   `\ ",
-	"	;' `.                        (     `\ __",
-	"	 ;   `.             __..---''          `~~~~-._",
-	"	  `.   `.____...--''                       (b  `--._",
-	"	    >                     _.-'      .((      ._     )",
-	"	  .`.-`--...__         .-'     -.___.....-(|/|/|/|/'",
-	"	 ;.'         `. ...----`.___.',,,_______......---'",
-	"	 '           '-'",
+	"                              __",
+	"                             ( `\ ",
+	"  ,                          )   `\ ",
+	";' `.                        (     `\ __",
+	" ;   `.             __..---''          `~~~~-._",
+	"  `.   `.____...--''                       (b  `--._",
+	"    >                     _.-'      .((      ._     )",
+	"  .`.-`--...__         .-'     -.___.....-(|/|/|/|/'",
+	" ;.'         `. ...----`.___.',,,_______......---'",
+	" '           '-'",
             ],
             left: [
                 "                      __",
@@ -179,8 +205,8 @@ function toggleAquarium() {
     // Hook State
     let hook = {
         active: false,
-        x: 0,
-        y: -100,
+        x: width / 2,
+	y: -100,
         state: 'idle', // idle, dropping, waiting, reeling
         catch: null, // The fish caught
         lineLength: 0
@@ -232,6 +258,7 @@ function toggleAquarium() {
             yPos = Math.random() * (height - 300 - WATER_LEVEL) + WATER_LEVEL + 50;
         }
 
+	const maxWidth = Math.max(...art.map(line => line.length));
         entities.push({
             x: direction === 1 ? -400 : width + 400,
             y: yPos,
@@ -239,8 +266,8 @@ function toggleAquarium() {
             color: specialType === 'shark' ? sprites.shark.color : (type ? type.color : "#ffffff"),
             speed: (specialType === 'shark' ? 4 : (type ? type.speed : 1)) * direction,
             type: specialType || 'fish',
-            width: art[0].length * (fontSize * 0.6),
-            height: h,
+            width: maxWidth * (fontSize * 0.6),
+	    height: h,
             direction: direction
         });
     }
@@ -322,61 +349,100 @@ function toggleAquarium() {
         });
 
         // 4. Hook Logic
+        
+        // Handle Horizontal Movement
+        const moveSpeed = 8;
+        if (keys.left) hook.x -= moveSpeed;
+        if (keys.right) hook.x += moveSpeed;
+        
+        // Screen Boundaries
+        if (hook.x < 10) hook.x = 10;
+        if (hook.x > width - 20) hook.x = width - 20;
+        
+	ctx.save(); 
+        ctx.font = "30px sans-serif"; 
+        ctx.fillStyle = "#ffffff"; 
+        ctx.fillText("⛵", hook.x - 22, WATER_LEVEL + 5); 
+        ctx.restore();
+
         if (!hook.active) {
-            hookTimer++;
-            if (hookTimer > 500) { // Random drop
+            if (keys.drop) {
                 hook.active = true;
                 hook.state = 'dropping';
-                hook.x = Math.random() * (width - 200) + 100;
-                hook.y = WATER_LEVEL;
                 hook.lineLength = 0;
                 hook.catch = null;
+		const maxPossibleLines = Math.floor((height - WATER_LEVEL - 50) / 10);
+		hook.targetLength = Math.floor(Math.random() * (maxPossibleLines - 5) + 5);
             }
         } else {
             ctx.fillStyle = "#ffffff";
             // Draw Line
-            for(let i=0; i<hook.lineLength; i++) {
-                ctx.fillText("|", hook.x, WATER_LEVEL + (i * 10));
+            for(let i=1; i<hook.lineLength; i++) {
+                ctx.fillText("|", hook.x, WATER_LEVEL + (i * 10)+5);
             }
-            let hookY = WATER_LEVEL + (hook.lineLength * 10);
-            ctx.fillText("J", hook.x - 4, hookY); // The Hook
+            let hookY = WATER_LEVEL + (hook.lineLength * 10)+5;
 
-            if (hook.state === 'dropping') {
-                hook.lineLength++;
-                if (hook.lineLength > 30 || hookY > height / 2) hook.state = 'waiting';
-            } else if (hook.state === 'waiting') {
-                // Check for bite
-                if (Math.random() > 0.995) hook.state = 'reeling'; // Give up eventually
-                
-                // Check collision with fish
+	// Draw hook
+            ctx.strokeStyle = "#ffffff";
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            const alignX = hook.x + 4.5; 
+            ctx.moveTo(alignX, hookY - 8);
+            ctx.lineTo(alignX, hookY + 4);
+            ctx.arc(alignX - 3, hookY + 4, 3, 0, Math.PI, false);
+            ctx.stroke();
+
+	    if (keys.reel) {
+                hook.state = 'reeling';
+            }
+
+            if (hook.state === 'dropping' || hook.state === 'waiting') {
                 for (let i = 0; i < entities.length; i++) {
                     let e = entities[i];
-                    if (e.type === 'fish' && Math.abs(e.x - hook.x) < 30 && Math.abs(e.y - hookY) < 20) {
+                    if (e.type === 'fish' && 
+                        hook.x > e.x - 10 && 
+                        hook.x < e.x + e.width + 10 &&
+                        hookY > e.y && 
+                        hookY < e.y + e.height) {
+                            
                         hook.catch = e;
                         hook.state = 'reeling';
-                        entities.splice(i, 1); // Remove from main list
+                        entities.splice(i, 1); 
                         break;
                     }
                 }
-            } else if (hook.state === 'reeling') {
+            }
+
+            // --- STATE UPDATES ---
+            if (hook.state === 'dropping') {
+                hook.lineLength++;
+                if (hook.lineLength >= hook.targetLength || hookY > height - 50) {
+                    hook.state = 'waiting';
+                }
+            } 
+            else if (hook.state === 'waiting') {
+                if (Math.random() > 0.99) hook.state = 'reeling';
+            } 
+            else if (hook.state === 'reeling') {
                 hook.lineLength--;
                 if (hook.catch) {
-                    // Draw caught fish attached to hook
                     ctx.fillStyle = hook.catch.color;
-                    
-                    // Rotate logic for caught fish (vertical)
-                    // ASCII rotation is hard, so we just draw it normally but following the hook
                     hook.catch.art.forEach((line, idx) => {
                         ctx.fillText(line, hook.x - 10, hookY + (idx * 10));
                     });
                 }
                 if (hook.lineLength <= 0) {
                     hook.active = false;
-                    hookTimer = 0;
+		
+		// Regenerate fish in case of extinction
+		    if (hook.catch) {
+                        setTimeout(() => {
+                             spawnEntity(sprites.fish[Math.floor(Math.random() * sprites.fish.length)]);
+                        }, 1000);
+                    }
                 }
             }
         }
-
         // 5. Entities
         for (let i = entities.length - 1; i >= 0; i--) {
             let e = entities[i];
