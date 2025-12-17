@@ -26,7 +26,6 @@
 - [stardust-theme](https://github.com/UWCS/stardust-theme): 269 commits: `config.toml not found`
 - [zola-metro](https://github.com/RedstoneParadox/zola-metro): 30 commits: `unknown field generate_feed`
 - [sigmund](https://github.com/videah/sigmund): 45 commits: `unknown field generate_feed`
-- [zola-pickles](https://github.com/lukehsiao/zola-pickles): 94 commits: `failed to render youtube shortcode`
 - [archie-zola](https://github.com/XXXMrG/archie-zola): 59 commits: `unknown field path`
 - [archie-zola-modified](https://codeberg.org/akselmo/archie-zola-modified): 71 commits: `unknown field path`
 - [arsmateria-zola-theme](https://github.com/mboleary/arsmateria-zola-theme): 19 commits: `unknown field highlight_code`
@@ -50,7 +49,7 @@
 - [papaya](https://github.com/justint/papaya): 62 commits: `unknown field generate_feed`
 - [zola-solarized](https://github.com/komputerwiz/zola-solarized): 2 commits: `config.toml not found`
 - [lightspeed](https://github.com/carpetscheme/lightspeed): 42 commits: `style.css doesn't exist`
-- [zolanote](https://github.com/ghventix/zolanote): 1 commit: `can't find stylesheet to import`
+- [zolanote](https://github.com/ghventix/zolanote): 1 commits: `can't find stylesheet to import`
 - [lookr](https://github.com/m0ddr/lookr): 12 commits: `base.css doesn't exist`
 - [tlachtga](https://github.com/puppy-witch/tlachtga-theme): 9 commits: `unknown field highlight_code`
 - [mintec-zola-theme](https://github.com/Coffeeri/mintec-zola-theme): 9 commits: `config.toml not found`
@@ -68,6 +67,8 @@
 - [no-style-please](https://github.com/iGxnon/no-style-please): 47 commits: `unknown field generate_feed`
 - [zeroada](https://github.com/adaschevici/zeroada): 52 commits: `unknown field 'weight'`
 - [zola-theme-monochrome](https://github.com/wjianbo/zola-theme-monochrome): 20 commits: `variable not found`
+- [pafb-book](https://github.com/trane-project/pafb-book): 87 commits: `'load_data' failed`
+- [ametrine](https://codeberg.org/Geode/ametrine): 310 commits: `'get_env' failed`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -111,6 +112,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [kirifuji-zola](https://codeberg.org/yukari/kirifuji-zola): 3 commits
 - [zola-no-style-please](https://git.sr.ht/~gumxcc/zola-no-style-please): 28 commits
 - [zokipedia](https://github.com/hahwul/zokipedia): 78 commits
+- [zola-wassail](https://github.com/of-the-stars/zola-wassail): 7 commits
 
 ### No license that allows me to host a live demo
 
@@ -124,9 +126,12 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [bluetheme](https://github.com/bluerobotics/bluetheme): 28 commits
 - [bd](https://github.com/flabbergastedbd/bd): 20 commits
 - [eips-wg](https://github.com/bluerobotics/bluetheme): 503 commits
-- [zola-researcher](https://github.com/lukehsiao/zola-researcher): 1 commit
+- [zola-pickles](https://github.com/lukehsiao/zola-pickles): 95 commits
+- [zola-researcher](https://github.com/lukehsiao/zola-researcher): 10 commits
 - [zola-theme-papermod](https://github.com/cydave/zola-theme-papermod): 45 commits
 - [boring](https://github.com/clflushopt/boring): 70 commits
 - [kireizola](https://codeberg.org/pitbuster/kireizola): 43 commits
-- [ametrine](https://codeberg.org/Votilution/ametrine): 274 commits
 - [zola-bearblog-sysrq](https://github.com/sysrqmagician/zola-bearblog-sysrq): 128 commits
+- [zola-monoplain](https://github.com/exiguus/zola-monoplain): 131 commits
+- [gruv-terminus](https://github.com/ericreg/gruv-terminus): 101 commits
+- [doingstuff.dev](https://github.com/gamingrobot/doingstuff.dev): 206 commits
