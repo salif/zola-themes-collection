@@ -34,7 +34,6 @@
 - [zola-paper](https://github.com/schoenenberg/zola-paper): 15 commits: `unknown field highlight_code`
 - [citrus](https://github.com/tatumroaquin/citrus): 93 commits: `sun.svg doesn't exist`
 - [datum](https://github.com/davidmreed/datum): 16 commits: `config.toml not found`
-- [seagull](https://git.lacontrevoie.fr/HugoTrentesaux/seagull): 16 commits: `can't find stylesheet to import`
 - [navhive](https://github.com/idevsig/navhive): 13 commits: `failed to open file theme.toml`
 - [Neutral-Zola-Theme](https://github.com/gfauredev/Neutral-Zola-Theme): 144 commits: `tried to iterate`
 - [izy-zola](https://github.com/VV0JC13CH/izy-zola): 127 commits: `config.toml not found`
@@ -66,9 +65,9 @@
 - [anemonev](https://github.com/evnoj/anemonev): 117 commits: `variable not found`
 - [no-style-please](https://github.com/iGxnon/no-style-please): 47 commits: `unknown field generate_feed`
 - [zeroada](https://github.com/adaschevici/zeroada): 52 commits: `unknown field 'weight'`
-- [zola-theme-monochrome](https://github.com/wjianbo/zola-theme-monochrome): 20 commits: `variable not found`
 - [pafb-book](https://github.com/trane-project/pafb-book): 87 commits: `'load_data' failed`
 - [ametrine](https://codeberg.org/Geode/ametrine): 310 commits: `'get_env' failed`
+- [tanuki](https://github.com/raskell-io/tanuki): 9 commits: `config.toml not found`
 
 In addition to the usual causes, build may also fail if the theme uses `load_data` from `public` directory (my scripts use a different name) or `.git/HEAD` (not available in the submodule directory).
 
@@ -113,6 +112,7 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-no-style-please](https://git.sr.ht/~gumxcc/zola-no-style-please): 28 commits
 - [zokipedia](https://github.com/hahwul/zokipedia): 78 commits
 - [zola-wassail](https://github.com/of-the-stars/zola-wassail): 7 commits
+- [zola-theme-still](https://github.com/wjianbo/zola-theme-still): 25 commits
 
 ### No license that allows me to host a live demo
 
@@ -123,9 +123,8 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 ### Other
 
 - [juice](https://github.com/huhu/juice): 73 commits
-- [bluetheme](https://github.com/bluerobotics/bluetheme): 28 commits
+- [bluetheme](https://github.com/bluerobotics/bluetheme): 35 commits
 - [bd](https://github.com/flabbergastedbd/bd): 20 commits
-- [eips-wg](https://github.com/bluerobotics/bluetheme): 503 commits
 - [zola-pickles](https://github.com/lukehsiao/zola-pickles): 95 commits
 - [zola-researcher](https://github.com/lukehsiao/zola-researcher): 10 commits
 - [zola-theme-papermod](https://github.com/cydave/zola-theme-papermod): 45 commits
@@ -135,3 +134,4 @@ In addition to the usual causes, build may also fail if the theme uses `load_dat
 - [zola-monoplain](https://github.com/exiguus/zola-monoplain): 131 commits
 - [gruv-terminus](https://github.com/ericreg/gruv-terminus): 101 commits
 - [doingstuff.dev](https://github.com/gamingrobot/doingstuff.dev): 206 commits
+- [zola-theme-nivis](https://github.com/Resorie/zola-theme-nivis): 9 commits

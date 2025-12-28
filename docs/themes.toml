@@ -1317,6 +1317,77 @@ theme = "halcyon"
   js = "document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "austere"
+name = "austere"
+desc = "A minimal theme for Zola with a focus on writing."
+tags = [
+  "dark",
+  "blog",
+  "minimal",
+  "personal",
+  "responsive",
+  "seo",
+  "writing"
+]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-austere}
+- **Author**: [tomwrw](https://www.tomwrw.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/tomwrw/austere-theme-zola>
+- **Min Zola version**: 0.17.0
+
+### Installation{#install-austere}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/tomwrw/austere-theme-zola.git themes/austere
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/tomwrw/austere-theme-zola.git themes/austere
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "austere"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-austere.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of austere Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-austere.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of austere Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/austere/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/tomwrw/austere-theme-zola"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-austere"
+  js = "document.getElementById('info-austere').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "kita"
 name = "Kita"
 desc = "Kita is a clean, elegant and simple blog theme for Zola."
@@ -2527,6 +2598,121 @@ theme = "kodama-theme"
   js = "document.getElementById('info-kodama-theme').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "zola-sveltia-source"
+name = "Zola Sveltia Source"
+desc = "Zola Sveltia Source is a Zola SSG project that uses Sveltia as its CMS and a ported version of the default Ghost CMS theme adapted for Zola & Sveltia."
+tags = [ "Ghost", "News", "CMS" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zola-sveltia-source}
+- **Author**: [Husen](https://github.com/husenunicorn)
+- **License**: WTFPL
+- **Homepage**: <https://github.com/unicornfantasian/zola-sveltia-source>
+- **Main Live Preview**: <https://zola-sveltia-source.fantasian.workers.dev/>
+- **Min Zola version**: 0.21.0
+- **Original**: <https://github.com/TryGhost/Source>
+
+### Installation{#install-zola-sveltia-source}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/unicornfantasian/zola-sveltia-source.git themes/zola-sveltia-source
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/unicornfantasian/zola-sveltia-source.git themes/zola-sveltia-source
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zola-sveltia-source"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zola-sveltia-source.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Zola Sveltia Source Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola-sveltia-source/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/unicornfantasian/zola-sveltia-source"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zola-sveltia-source"
+  js = "document.getElementById('info-zola-sveltia-source').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "zola_easydocs_theme"
+name = "EasyDocs"
+desc = "An easy way to create docs for your project"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zola_easydocs_theme}
+- **Author**: [Roman Soldatenkov](https://codeandmedia.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/codeandmedia/zola_easydocs_theme>
+- **Main Live Preview**: <https://easydocs.codeandmedia.com>
+- **Min Zola version**: 0.21.0
+
+### Installation{#install-zola_easydocs_theme}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/codeandmedia/zola_easydocs_theme.git themes/zola_easydocs_theme
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/codeandmedia/zola_easydocs_theme.git themes/zola_easydocs_theme
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "zola_easydocs_theme"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zola_easydocs_theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of EasyDocs Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola_easydocs_theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/codeandmedia/zola_easydocs_theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zola_easydocs_theme"
+  js = "document.getElementById('info-zola_easydocs_theme').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "noobping"
 name = "noobping"
 desc = "A minimalistic theme for Zola static site generator. It uses the file names as titles and the folder for the menu structure. The theme is designed to be simple and easy to use, with a focus on content."
@@ -3639,71 +3825,6 @@ theme = "photography"
   js = "document.getElementById('info-photography').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "trankwilo"
-name = "Trankwilo"
-desc = "A simplicity and clean documentation theme"
-tags = [ "documentation", "Multilingual", "Responsive", "minimal" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-trankwilo}
-- **Author**: [Salif Mehmed](https://salif.eu)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/salif/trankwilo>
-- **Main Live Preview**: <https://salif.github.io/zola-themes-collection/demo/trankwilo/>
-- **Min Zola version**: 0.17.0
-- **Original**: <https://github.com/hahwul/goyo>
-
-### Installation{#install-trankwilo}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/salif/trankwilo.git themes/trankwilo
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/salif/trankwilo.git themes/trankwilo
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "trankwilo"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-trankwilo.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of Trankwilo Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-trankwilo.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of Trankwilo Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/trankwilo/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/salif/trankwilo"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-trankwilo"
-  js = "document.getElementById('info-trankwilo').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
 theme = "xuan"
 name = "xuan"
 desc = "Modern, pretty, and clean theme"
@@ -4134,7 +4255,7 @@ details = """
 ### Info{#info-persona}
 - **Author**: [Chang, Heng-Sheng](https://hanson-hschang.github.io/)
 - **License**: MIT
-- **Homepage**: <https://hanson-hschang.github.io/persona-zola-theme>
+- **Homepage**: <https://hanson-hschang.github.io/Persona-Zola-Theme>
 - **Min Zola version**: 0.20.0
 - **Original**: <https://bootstrapmade.com/free-html-bootstrap-template-my-resume/>
 

@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/main.css?h=4da9e10c46a4c1c50301">
+    <meta name="generator" content="Zola">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Overview </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    
+        <nav>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola_easydocs_theme&#x2F;">
+                        <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo"/>
+                    </a>
+                <div id="release"></div>
+            <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="getting-started"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="getting-started">Getting Started</label>
+
+                    <ul class="subtree">
+                        <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/">Overview</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#zola-at-a-glance">Zola at a Glance</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#first-steps-with-zola">First Steps with Zola</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#initialize-site">Initialize Site</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#home-page">Home Page</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#content-directory">Content Directory</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#templates">Templates</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/#markdown-content">Markdown Content</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="content"
+                           />
+                    <label class="tree-toggle-label"
+                           for="content">Content</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="templates"
+                           />
+                    <label class="tree-toggle-label"
+                           for="templates">Templates</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="themes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="themes">Themes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="deployment"
+                           />
+                    <label class="tree-toggle-label"
+                           for="deployment">Deployment</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <h2 id="zola-at-a-glance">Zola at a Glance</h2>
+<p>Zola is a static site generator (SSG), similar to <a href="https://gohugo.io/">Hugo</a>, <a href="https://blog.getpelican.com/">Pelican</a>, and <a href="https://jekyllrb.com/">Jekyll</a> (for a comprehensive list of SSGs, please see the <a href="https://www.staticgen.com/">StaticGen</a> site). It is written in <a href="https://www.rust-lang.org/">Rust</a> and uses the <a href="https://tera.netlify.com/">Tera</a> template engine, which is similar to <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja2</a>, <a href="https://docs.djangoproject.com/en/2.2/topics/templates/">Django templates</a>, <a href="https://shopify.github.io/liquid/">Liquid</a>, and <a href="https://twig.symfony.com/">Twig</a>. Content is written in <a href="https://commonmark.org/">CommonMark</a>, a strongly defined, highly compatible specification of <a href="https://www.markdownguide.org/">Markdown</a>.</p>
+<p>SSGs use dynamic templates to transform content into static HTML pages. Static sites are thus very fast and require no databases, making them easy to host. A comparison between static and dynamic sites, such as WordPress, Drupal, and Django, can be found <a href="https://dev.to/ashenmaster/static-vs-dynamic-sites-61f">here</a>.</p>
+<p>To get a taste of Zola, please see the quick overview below.</p>
+<h2 id="first-steps-with-zola">First Steps with Zola</h2>
+<p>Unlike some SSGs, Zola makes no assumptions regarding the structure of your site. In this overview, we'll be making a simple blog site.</p>
+<h3 id="initialize-site">Initialize Site</h3>
+<blockquote>
+<p>This overview is based on Zola 0.9.</p>
+</blockquote>
+<p>Please see the detailed <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/installation/">installation instructions for your platform</a>. With Zola installed, let's initialize our site:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola init myblog
+</span></code></pre>
+<p>You will be asked a few questions.</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>&gt; What is the URL of your site? (https://example.com):
+</span><span>&gt; Do you want to enable Sass compilation? [Y/n]:
+</span><span>&gt; Do you want to enable syntax highlighting? [y/N]:
+</span><span>&gt; Do you want to build a search index of the content? [y/N]:
+</span></code></pre>
+<p>For our blog, let's accept the default values (i.e., press Enter for each question). We now have a <code>myblog</code> directory with the following structure:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">├──</span><span> config.toml
+</span><span style="color:#bf616a;">├──</span><span> content
+</span><span style="color:#bf616a;">├──</span><span> sass
+</span><span style="color:#bf616a;">├──</span><span> static
+</span><span style="color:#bf616a;">├──</span><span> templates
+</span><span style="color:#bf616a;">└──</span><span> themes
+</span></code></pre>
+<p>Let's start the Zola development server with:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">$</span><span> zola serve
+</span><span style="color:#bf616a;">Building</span><span> site...
+</span><span style="color:#bf616a;">-</span><span>&gt; Creating 0 pages (0 orphan)</span><span style="color:#bf616a;">,</span><span> 0 sections, and processing 0 images
+</span></code></pre>
+<blockquote>
+<p>This command must be run in the base Zola directory, which contains <code>config.toml</code>.</p>
+</blockquote>
+<p>If you point your web browser to <a href="http://127.0.0.1:1111">http://127.0.0.1:1111</a>, you should see a "Welcome to Zola" message.</p>
+<h3 id="home-page">Home Page</h3>
+<p>Let's make a home page. To do this, let's first create a <code>base.html</code> file inside the <code>templates</code> directory. This step will make more sense as we move through this overview. We'll be using the CSS framework <a href="https://bulma.io/">Bulma</a>.</p>
+<pre data-lang="html" style="background-color:#eff1f5;color:#4f5b66;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!</span><span style="color:#b48ead;">DOCTYPE </span><span style="color:#d08770;">html</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">html </span><span style="color:#d08770;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">en</span><span>&quot;&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">charset</span><span>=&quot;</span><span style="color:#a3be8c;">utf-8</span><span>&quot;&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">title</span><span>&gt;MyBlog&lt;/</span><span style="color:#bf616a;">title</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">link </span><span style="color:#d08770;">rel</span><span>=&quot;</span><span style="color:#a3be8c;">stylesheet</span><span>&quot; </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css</span><span>&quot;&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">section </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">section</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">container</span><span>&quot;&gt;
+</span><span>      {% block content %} {% endblock %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">section</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>
+</span><span>&lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<p>Now, let's create an <code>index.html</code> file inside the <code>templates</code> directory.</p>
+<pre data-lang="html" style="background-color:#eff1f5;color:#4f5b66;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;&gt;
+</span><span>  This is my blog made with Zola.
+</span><span>&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>{% endblock content %}
+</span></code></pre>
+<p>This tells Zola that <code>index.html</code> extends our <code>base.html</code> file and replaces the block called "content" with the text between the <code>{% block content %}</code> and <code>{% endblock content %}</code> tags.</p>
+<h3 id="content-directory">Content Directory</h3>
+<p>Now let's add some content. We'll start by making a <code>blog</code> subdirectory in the <code>content</code> directory and creating an <code>_index.md</code> file inside it. This file tells Zola that <code>blog</code> is a <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">section</a>, which is how content is categorized in Zola.</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">├──</span><span> content
+</span><span style="color:#bf616a;">│</span><span>   └── blog
+</span><span style="color:#bf616a;">│</span><span>       └── _index.md
+</span></code></pre>
+<p>In the <code>_index.md</code> file, we'll set the following variables in <a href="https://github.com/toml-lang/toml">TOML</a> format:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>+++
+</span><span>title = &quot;List of blog posts&quot;
+</span><span>sort_by = &quot;date&quot;
+</span><span>template = &quot;blog.html&quot;
+</span><span>page_template = &quot;blog-page.html&quot;
+</span><span>+++
+</span></code></pre>
+<blockquote>
+<p>Note that although no variables are mandatory, the opening and closing <code>+++</code> are required.</p>
+</blockquote>
+<ul>
+<li><em>sort_by = "date"</em> tells Zola to use the date to order our section pages (more on pages below).</li>
+<li><em>template = "blog.html"</em> tells Zola to use <code>blog.html</code> in the <code>templates</code> directory as the template for listing the Markdown files in this section.</li>
+<li><em>page_template = "blog-page.html"</em> tells Zola to use <code>blog-page.html</code> in the <code>templates</code> directory as the template for individual Markdown files.</li>
+</ul>
+<p>For a full list of section variables, please see the <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">section</a> documentation. We will use <em>title = "List of blog posts"</em> in a template (see below).</p>
+<h3 id="templates">Templates</h3>
+<p>Let's now create some more templates. In the <code>templates</code> directory, create a <code>blog.html</code> file with the following contents:</p>
+<pre data-lang="html" style="background-color:#eff1f5;color:#4f5b66;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;&gt;
+</span><span>  {{ section.title }}
+</span><span>&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">ul</span><span>&gt;
+</span><span>  {% for page in section.pages %}
+</span><span>  &lt;</span><span style="color:#bf616a;">li</span><span>&gt;&lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.permalink | safe }}</span><span>&quot;&gt;{{ page.title }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;&lt;/</span><span style="color:#bf616a;">li</span><span>&gt;
+</span><span>  {% endfor %}
+</span><span>&lt;/</span><span style="color:#bf616a;">ul</span><span>&gt;
+</span><span>{% endblock content %}
+</span></code></pre>
+<p>As done by <code>index.html</code>, <code>blog.html</code> extends <code>base.html</code>, but this time we want to list the blog posts. The <em>title</em> we set in the <code>_index.md</code> file above is available to us as <code>{{ section.title }}</code>. In the list below the title, we loop through all the pages in our section (<code>blog</code> directory) and output the page title and URL using <code>{{ page.title }}</code> and <code>{{ page.permalink | safe }}</code>, respectively. We use the <code>| safe</code> filter because the permalink doesn't need to be HTML escaped (escaping would cause <code>/</code> to render as <code>&amp;#x2F;</code>).</p>
+<p>If you go to <a href="http://127.0.0.1:1111/blog/">http://127.0.0.1:1111/blog/</a>, you will see the section page for <code>blog</code>. The list is empty because we don't have any blog posts. Let's fix that now.</p>
+<h3 id="markdown-content">Markdown Content</h3>
+<p>In the <code>blog</code> directory, create a file called <code>first.md</code> with the following contents:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>+++
+</span><span>title = &quot;My first post&quot;
+</span><span>date = 2019-11-27
+</span><span>+++
+</span><span>
+</span><span>This is my first blog post.
+</span></code></pre>
+<p>The <em>title</em> and <em>date</em> will be available to us in the <code>blog-page.html</code> template as <code>{{ page.title }}</code> and <code>{{ page.date }}</code>, respectively. All text below the closing <code>+++</code> will be available to us as <code>{{ page.content }}</code>.</p>
+<p>We now need to make the <code>blog-page.html</code> template. In the <code>templates</code> directory, create this file with the contents:</p>
+<pre data-lang="html" style="background-color:#eff1f5;color:#4f5b66;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;&gt;
+</span><span>  {{ page.title }}
+</span><span>&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">p </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">subtitle</span><span>&quot;&gt;&lt;</span><span style="color:#bf616a;">strong</span><span>&gt;{{ page.date }}&lt;/</span><span style="color:#bf616a;">strong</span><span>&gt;&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>{{ page.content | safe }}
+</span><span>{% endblock content %}
+</span></code></pre>
+<blockquote>
+<p>Note the <code>| safe</code> filter for <code>{{ page.content }}</code>.</p>
+</blockquote>
+<p>This should start to look familiar. If you now go back to our blog list page at <a href="http://127.0.0.1:1111/blog/">http://127.0.0.1:1111/blog/</a>, you should see our lonely post. Let's add another. In the <code>content/blog</code> directory, let's create the file <code>second.md</code> with the contents:</p>
+<pre data-lang="md" style="background-color:#eff1f5;color:#4f5b66;" class="language-md "><code class="language-md" data-lang="md"><span>+++
+</span><span>title = &quot;My second post&quot;
+</span><span>date = 2019-11-28
+</span><span>+++
+</span><span>
+</span><span>This is my second blog post.
+</span></code></pre>
+<p>Back at <a href="http://127.0.0.1:1111/blog/">http://127.0.0.1:1111/blog/</a>, our second post shows up on top of the list because it's newer than the first post and we had set <em>sort_by = "date"</em> in our <code>_index.md</code> file. As a final step, let's modify our home page to link to our blog posts.</p>
+<p>The <code>index.html</code> file inside the <code>templates</code> directory should be:</p>
+<pre data-lang="html" style="background-color:#eff1f5;color:#4f5b66;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">h1 </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">title</span><span>&quot;&gt;
+</span><span>  This is my blog made with Zola.
+</span><span>&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">p</span><span>&gt;Click &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">/blog/</span><span>&quot;&gt;here&lt;/</span><span style="color:#bf616a;">a</span><span>&gt; to see my posts.&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>{% endblock content %}
+</span></code></pre>
+<p>This has been a quick overview of Zola. You can now dive into the rest of the documentation.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/search_index.en.js?h=0e42301d3417045b2151" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/js.js?h=4dc92bffd1cd35c33565" defer></script>
+
+</body>
+</html>

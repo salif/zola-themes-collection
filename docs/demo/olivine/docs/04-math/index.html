@@ -40,8 +40,8 @@ extra.olivine.mathjax = …"/>
 
 
     
-<link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/fonts.css">
-<script src="https://salif.github.io/zola-themes-collection/demo/olivine/dist/tikzjax/tikzjax.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1/dist/fonts.css">
+<script src="https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@1/dist/tikzjax.js" defer></script>
 
 
   </head>
@@ -152,11 +152,11 @@ there exists a canonical continuous bijection $\lvert \operatorname{Spd}(R, R^+)
 a <em>v-cover</em> when for every valuation ring $V$ and a map $\operatorname{Spec} V
 \to T$ there is an extension $V \subseteq W$ of valuation rings and a
 commutative diagram</p>
-<script type="text/tikz">
-\usepackage{amsmath} \usepackage{tikz-cd} \begin{document} \Large \begin{tikzcd}
+<script type="text/tikz" data-tex-packages='{"amsmath":"", "tikz-cd":""}'>
+\Large \begin{tikzcd}
 \operatorname{Spec} W \arrow{r} \arrow{d} & S \arrow[two heads]{d} \\
 \operatorname{Spec} V \arrow{r} & T.
-\end{tikzcd} \end{document}
+\end{tikzcd}
 </script>
 </div>
 <div class="olivine-admonish">

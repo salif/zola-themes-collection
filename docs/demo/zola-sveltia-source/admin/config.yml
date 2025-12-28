@@ -1,0 +1,226 @@
+backend:
+  name: github
+  repo: unicornfantasian/zola-sveltia-source
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://sveltia-cms-auth.fantasian.workers.dev
+  
+output:
+  omit_empty_optional_fields: true  
+  
+slug:
+  encoding: ascii
+  clean_accents: true  
+  
+media_folder: /static/uploads
+public_folder: /uploads  
+
+collections:
+    - name: posts
+      label: Posts
+      folder: /content/posts
+      create: true
+      delete: false
+      path: '{{slug}}/index'
+      media_folder: ''
+      public_folder: ''
+      thumbnail: '*.feature_image'
+      format: toml-frontmatter
+      fields:
+          - name: title
+            label: Title
+            widget: string
+          - name: description
+            label: Description
+            widget: text
+          - name: date
+            label: Publish Date
+            widget: datetime
+            default: '{{now}}'
+            format: 'YYYY-MM-DDTHH:mm:ss'
+            picker_utc: false
+            required: false
+            readonly: true
+          - name: updated
+            label: Updated Date
+            widget: datetime
+            default: '{{now}}'
+            format: 'YYYY-MM-DDTHH:mm:ss'
+            picker_utc: false
+            required: false
+          - name: extra
+            label: Feature Image / Image caption / Enable drop caps on posts / Featured
+            widget: object
+            fields:
+                - name: feature_image
+                  label: Feature Image
+                  widget: image
+                  choose_url: false
+                - name: feature_image_caption
+                  label: Feature image caption
+                  widget: string
+                  required: false
+                - name: enable_drop_caps_on_posts
+                  label: Enable drop caps on posts
+                  widget: boolean
+                  default: false
+                - name: featured
+                  label: Featured
+                  widget: boolean
+                  default: false
+          - name: body
+            label: content
+            widget: markdown
+            required: true
+
+    - name: pages
+      label: Pages
+      files:
+         - name: about
+           label: About Page
+           file: content/about/index.md
+           format: toml-frontmatter
+           media_folder: ''
+           public_folder: ''
+           fields:
+               - name: title
+                 label: Title
+                 widget: string
+               - name: description
+                 label: Description
+                 widget: text
+               - name: date
+                 label: Publish Date
+                 widget: datetime
+                 picker_utc: false
+                 format: YYYY-MM-DDTHH:mm:ss
+                 default: '{{now}}'
+                 readonly: true
+                 required: false
+               - name: updated
+                 label: Updated Date
+                 widget: datetime
+                 picker_utc: false
+                 format: YYYY-MM-DDTHH:mm:ss
+                 default: '{{now}}'
+                 readonly: false
+                 required: false
+               - name: extra
+                 label: Show title and feature image & feature image
+                 widget: object
+                 fields:
+                     - name: feature_image
+                       label: feature image
+                       widget: image
+                       required: false
+                       choose_url: false
+                       media_libraries:
+                           stock_assets:
+                               providers: []
+                     - name: show_title_and_feature_image
+                       label: Show title and feature image
+                       widget: boolean
+                       default: true
+               - name: body
+                 label: content
+                 widget: markdown
+                 required: true
+
+singletons:
+    - name: design
+      label: Design & branding  
+      file: settings/design.toml
+      media_folder: /static/uploads/design
+      public_folder: /uploads/design
+      editor:
+         preview: false
+      summary: Customize the style and layout of your site
+      fields:
+          - name: site_accent_color
+            label: (Brand) Accent color
+            widget: color
+            allowInput: true
+            default: '#e20a39'
+          - name: icon
+            label: (Brand) Publication icon, A square, social icon, at least 60x60px
+            widget: image
+            required: false
+            choose_url: false
+          - name: logo
+            label: (Brand) Publication logo, Appears usually in the main header of your theme
+            widget: image
+            required: false
+            choose_url: false
+          - name: title_font
+            label: (Brand) Heading font
+            widget: select
+            options:
+                - Modern sans-serif
+                - Elegant serif
+                - Consistent mono
+            default: Modern sans-serif
+            multiple: false
+            dropdown_threshold: 1
+          - name: body_font
+            label: (Brand) Body font
+            widget: select
+            options:
+                - Modern sans-serif
+                - Elegant serif
+            default: Modern sans-serif
+            multiple: false
+            dropdown_threshold: 1
+          - name: navigation_layout
+            label: (Theme Site wide) Navigation layout
+            widget: select
+            options:
+                - Logo in the middle
+                - Logo on the left
+                - Stacked
+            default: Logo in the middle
+            multiple: false
+            dropdown_threshold: 1
+          - name: site_background_color
+            label: (Theme Site wide) Site background color
+            widget: color
+            allowInput: true
+            default: '#ffffff'
+          - name: header_and_footer_color
+            label: (Theme Site wide) Header and footer color
+            widget: select
+            options:
+                - Background color
+                - Accent color
+            default: Background color
+            multiple: false
+            dropdown_threshold: 1
+          - name: header_style
+            label: (Theme Homepage) Header style
+            widget: select
+            options:
+                - Highlight
+                - Magazine
+            default: Highlight
+            multiple: false
+            dropdown_threshold: 1
+          - name: show_featured_posts
+            label: (Theme Homepage) Show featured posts
+            widget: boolean
+            default: false 
+          - name: post_feed_style
+            label: (Theme Homepage) Post feed style
+            widget: select
+            options:
+                - List
+                - Grid
+            default: List
+            multiple: false
+            dropdown_threshold: 1
+          - name: show_images_in_feed
+            label: (Theme Homepage) Show images in feed, visibility post_feed_style List
+            widget: boolean
+            default: true  
+          - name: show_publication_info_sidebar
+            label: (Theme Homepage) Show publication info sidebar
+            widget: boolean
+            default: false   
+                   

@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/main.css?h=4da9e10c46a4c1c50301">
+    <meta name="generator" content="Zola">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Creating a theme </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    
+        <nav>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola_easydocs_theme&#x2F;">
+                        <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo"/>
+                    </a>
+                <div id="release"></div>
+            <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="getting-started"
+                           />
+                    <label class="tree-toggle-label"
+                           for="getting-started">Getting Started</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="content"
+                           />
+                    <label class="tree-toggle-label"
+                           for="content">Content</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="templates"
+                           />
+                    <label class="tree-toggle-label"
+                           for="templates">Templates</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="themes"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="themes">Themes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="deployment"
+                           />
+                    <label class="tree-toggle-label"
+                           for="deployment">Deployment</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <p>Creating a theme is exactly like creating a normal site with Zola, except you
+will want to use many <a href="https://tera.netlify.com/docs#inheritance">Tera blocks</a> to
+allow users to easily modify it.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>As mentioned, a theme is just like any site; start by running <code>zola init MY_THEME_NAME</code>.</p>
+<p>The only thing needed to turn that site into a theme is to add a <code>theme.toml</code> configuration file with the
+following fields:</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">my theme name</span><span>&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;</span><span style="color:#a3be8c;">A classic blog theme</span><span>&quot;
+</span><span style="color:#bf616a;">license </span><span>= &quot;</span><span style="color:#a3be8c;">MIT</span><span>&quot;
+</span><span style="color:#bf616a;">homepage </span><span>= &quot;</span><span style="color:#a3be8c;">https://github.com/getzola/hyde</span><span>&quot;
+</span><span style="color:#a7adba;"># The minimum version of Zola required
+</span><span style="color:#bf616a;">min_version </span><span>= &quot;</span><span style="color:#a3be8c;">0.4.0</span><span>&quot;
+</span><span style="color:#a7adba;"># An optional live demo URL
+</span><span style="color:#bf616a;">demo </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># Any variable there can be overriden in the end user `config.toml`
+</span><span style="color:#a7adba;"># You don&#39;t need to prefix variables by the theme name but as this will
+</span><span style="color:#a7adba;"># be merged with user data, some kind of prefix or nesting is preferable
+</span><span style="color:#a7adba;"># Use snake_casing to be consistent with the rest of Zola
+</span><span>[extra]
+</span><span>
+</span><span style="color:#a7adba;"># The theme author info: you!
+</span><span>[author]
+</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">Vincent Prouillet</span><span>&quot;
+</span><span style="color:#bf616a;">homepage </span><span>= &quot;</span><span style="color:#a3be8c;">https://vincent.is</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># If this is porting a theme from another static site engine, provide
+</span><span style="color:#a7adba;"># the info of the original author here
+</span><span>[original]
+</span><span style="color:#bf616a;">author </span><span>=  &quot;</span><span style="color:#a3be8c;">mdo</span><span>&quot;
+</span><span style="color:#bf616a;">homepage </span><span>= &quot;</span><span style="color:#a3be8c;">http://markdotto.com/</span><span>&quot;
+</span><span style="color:#bf616a;">repo </span><span>= &quot;</span><span style="color:#a3be8c;">https://www.github.com/mdo/hyde</span><span>&quot;
+</span></code></pre>
+<p>A simple theme you can use as an example is <a href="https://github.com/Keats/hyde">Hyde</a>.</p>
+<h2 id="working-on-a-theme">Working on a theme</h2>
+<p>As a theme is just a site, you can simply use <code>zola serve</code> and make changes to your
+theme, with live reload working as expected.</p>
+<p>Make sure to commit every directory (including <code>content</code>) in order for other people
+to be able to build the theme from your repository.</p>
+<h2 id="submitting-a-theme-to-the-gallery">Submitting a theme to the gallery</h2>
+<p>If you want your theme to be featured in the <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/">themes</a> section
+of this site, the theme will require two more things:</p>
+<ul>
+<li><code>screenshot.png</code>: a screenshot of the theme in action with a max size of around 2000x1000</li>
+<li><code>README.md</code>: a thorough README explaining how to use the theme and any other information
+of importance</li>
+</ul>
+<p>The first step is to make sure that the theme meets the following three requirements:</p>
+<ul>
+<li>have a <code>screenshot.png</code> of the theme in action with a max size of around 2000x1000</li>
+<li>have a thorough <code>README.md</code> explaining how to use the theme and any other information
+of importance</li>
+<li>be of reasonably high quality</li>
+</ul>
+<p>When your theme is ready, you can submit it to the <a href="https://github.com/getzola/themes">themes repository</a>
+by following the process in the README.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/search_index.en.js?h=0e42301d3417045b2151" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/js.js?h=4dc92bffd1cd35c33565" defer></script>
+
+</body>
+</html>

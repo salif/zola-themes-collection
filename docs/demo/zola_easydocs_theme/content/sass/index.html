@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/main.css?h=4da9e10c46a4c1c50301">
+    <meta name="generator" content="Zola">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Sass </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    
+        <nav>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola_easydocs_theme&#x2F;">
+                        <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo"/>
+                    </a>
+                <div id="release"></div>
+            <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="getting-started"
+                           />
+                    <label class="tree-toggle-label"
+                           for="getting-started">Getting Started</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="content"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="content">Content</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">Section</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/">Page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/search/">Search</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/sass/">Sass</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="templates"
+                           />
+                    <label class="tree-toggle-label"
+                           for="templates">Templates</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="themes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="themes">Themes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="deployment"
+                           />
+                    <label class="tree-toggle-label"
+                           for="deployment">Deployment</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <p>Sass is a popular CSS preprocessor that adds special features (e.g., variables, nested rules) to facilitate the
+maintenance of large sets of CSS rules. If you're curious about what Sass
+is and why it might be useful for styling your static site, the following links
+may be of interest:</p>
+<ul>
+<li>The <a href="http://sass-lang.com/">official Sass website</a></li>
+<li><a href="https://alistapart.com/article/why-sass">Why Sass?</a>, by Dan Cederholm</li>
+</ul>
+<h2 id="using-sass-in-zola">Using Sass in Zola&nbsp;<a class="anchor" href="#using-sass-in-zola">&#xE732;</a></h2>
+<p>Zola processes any files with the <code>sass</code> or <code>scss</code> extension in the <code>sass</code>
+folder, and places the processed output into a <code>css</code> file with the same folder
+structure and base name into the <code>public</code> folder:</p>
+<pre data-lang="bash" style="background-color:#eff1f5;color:#4f5b66;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">.
+</span><span style="color:#bf616a;">└──</span><span> sass
+</span><span>    </span><span style="color:#bf616a;">├──</span><span> style.scss // -&gt; ./public/style.css
+</span><span>    </span><span style="color:#bf616a;">├──</span><span> indented_style.sass // -&gt; ./public/indented_style.css
+</span><span>    </span><span style="color:#bf616a;">├──</span><span> _include.scss </span><span style="color:#a7adba;"># This file won&#39;t get put into the `public` folder, but other files can @import it.
+</span><span>    </span><span style="color:#bf616a;">├──</span><span> assets
+</span><span>    </span><span style="color:#bf616a;">│</span><span>   ├── fancy.scss // -&gt; ./public/assets/fancy.css
+</span><span>    </span><span style="color:#bf616a;">│</span><span>   ├── same_name.scss // -&gt; ./public/assets/same_name.css
+</span><span>    </span><span style="color:#bf616a;">│</span><span>   ├── same_name.sass </span><span style="color:#a7adba;"># CONFLICT! This has the same base name as the file above, so Zola will return an error.
+</span><span>    </span><span style="color:#bf616a;">│</span><span>   └── _common_mixins.scss </span><span style="color:#a7adba;"># This file won&#39;t get put into the `public` folder, but other files can @import it.
+</span><span>    </span><span style="color:#bf616a;">└──</span><span> secret-side-project
+</span><span>        </span><span style="color:#bf616a;">└──</span><span> style.scss // -&gt; ./public/secret-side-project/style.css
+</span></code></pre>
+<p>Files with a leading underscore in the name are not placed into the <code>public</code>
+folder, but can still be used as <code>@import</code> dependencies. For more information, see the "Partials" section of
+<a href="https://sass-lang.com/guide">Sass Basics</a>.</p>
+<p>Files with the <code>scss</code> extension use "Sassy CSS" syntax,
+while files with the <code>sass</code> extension use the "indented" syntax: <a href="https://sass-lang.com/documentation/syntax">https://sass-lang.com/documentation/syntax</a>.
+Zola will return an error if <code>scss</code> and <code>sass</code> files with the same
+base name exist in the same folder to avoid confusion -- see the example above.</p>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/search_index.en.js?h=0e42301d3417045b2151" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/js.js?h=4dc92bffd1cd35c33565" defer></script>
+
+</body>
+</html>

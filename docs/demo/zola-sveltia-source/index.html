@@ -1,0 +1,1365 @@
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <title>Zola Sveltia Source</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="preload" as="style" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/css/screen.css?h=1465e3a0f22798c2830a">
+    <link rel="preload" as="script" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/js/source.js?h=3bceafa53269a4c05c1f">
+    
+    
+    
+<link rel="preload" as="font" type="font/woff2" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/inter-roman.woff2?h=39e72c0794c12f2dbb14" crossorigin="anonymous">
+<style>
+    @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: optional;
+        src: url(https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/inter-roman.woff2?h=39e72c0794c12f2dbb14) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+
+
+    
+        <link rel="preload" as="font" type="font/woff2" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/eb-garamond-roman.woff2?h=c8257a68a40bf9d6e6a4" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/eb-garamond-italic.woff2?h=44fc2ae5a72906911cf3" crossorigin="anonymous">
+<style>
+    @font-face {
+        font-family: "EB Garamond";
+        font-style: normal;
+        font-weight: 400 800;
+        font-display: optional;
+        src: url(https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/eb-garamond-roman.woff2?h=c8257a68a40bf9d6e6a4) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+        font-family: "EB Garamond";
+        font-style: italic;
+        font-weight: 400 800;
+        font-display: optional;
+        src: url(https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/fonts/eb-garamond-italic.woff2?h=44fc2ae5a72906911cf3) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+    
+
+
+    
+    <link rel="stylesheet" type="text/css" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/css/screen.css?h=1465e3a0f22798c2830a">
+
+    
+    <style>
+        :root {
+            --background-color: #ffffff;
+            --ghost-accent-color: #e20a39;
+        }
+        @view-transition {
+            navigation: auto;
+         }   
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast has been taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+
+        if (accentColor.length === 3) {
+            accentColor = accentColor[0] + accentColor[0] + accentColor[1] + accentColor[1] + accentColor[2] + accentColor[2];
+        }
+
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+    
+<script type="speculationrules">
+{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": {
+        "and": [{ "href_matches": "/*", "relative_to": "document" }]
+      },
+      "eagerness": "eager"
+    }
+  ]
+}
+</script>    
+
+    
+    
+
+</head>
+<body class="home-template has-sans-title has-serif-body">
+
+<div class="gh-viewport">
+    
+    <header id="gh-navigation" class="gh-navigation is-middle-logo gh-outer">
+    <div class="gh-navigation-inner gh-inner">
+
+        <div class="gh-navigation-brand">
+            <a class="gh-navigation-logo is-title" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/">
+                
+                    Zola Sveltia Source
+                
+            </a>
+            
+            <button class="gh-burger gh-icon-button" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
+            </button>
+        </div>
+
+        <nav class="gh-navigation-menu">
+            
+            
+<ul class="nav">
+    
+    <li class="nav-home">
+        
+        
+        
+        <a href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/">Home</a>
+    </li>
+    
+    <li class="nav-about">
+        
+        
+        
+        <a href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/about/">About</a>
+    </li>
+    
+</ul>
+
+            
+            
+                
+            
+        </nav>
+
+        <div class="gh-navigation-actions">
+            
+                
+            
+        </div>
+
+    </div>
+</header>
+
+
+    
+
+
+
+    
+        <section class="gh-header is-highlight gh-outer">
+
+    
+
+    <div class="gh-header-inner gh-inner">
+
+        
+        
+            <div class="gh-header-left">
+                
+                    
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/unveiling-the-crisis-of-plastic-pollution-analyzing-its-profound-impact-on-the-environment/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.7bf5a7e04c71d266.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.f1d5d7f374f8003a.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.1e08e9a914a9e8a8.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.ef1f2ad62cb90a9a.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.fa014b629774e014.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.1d1934479f51a295.webp 2000w"
+                    sizes="(max-width: 767px) calc(100vw - max(8vmin, 40px)), 640px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070618.1e08e9a914a9e8a8.webp"
+                    alt="Unveiling the Crisis of Plastic Pollution: Analyzing Its Profound Impact on the Environment"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Unveiling the Crisis of Plastic Pollution: Analyzing Its Profound Impact on the Environment</h3>
+            
+                <p class="gh-card-excerpt is-body">The world finds itself engulfed in a battle against plastic pollution, an environmental crisis that demands collective action. As plastic waste accumulates in landfills and oceans, the urgent need for solutions intensifies.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                
+            </div>
+            <div class="gh-header-middle">
+                
+                    
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/navigating-the-recent-challenges-of-post-pandemic-global-market-uncertainty/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.83b3410d072c66d2.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.bf42d0cad6b672b4.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.c5a6c743b26aacd4.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.60f384b7b6e746d6.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.739b13c2f9fdae4e.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.acb777d0c22d313d.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070626.c5a6c743b26aacd4.webp"
+                    alt="Navigating the Recent Challenges of Post-Pandemic Global Market Uncertainty"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Navigating the Recent Challenges of Post-Pandemic Global Market Uncertainty</h3>
+            
+                <p class="gh-card-excerpt is-body">Discover how the world&#x27;s economies are reshaping after the pandemic&#x27;s impact. Explore the latest trends, challenges, and opportunities in the evolving global market landscape.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                
+                    
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/biodiversity-conservation-in-fragile-ecosystems/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.fa9bd22562879678.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.4f3e6c1173b279d2.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.e6c8028dcea3a2ff.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.3ee69117f9807d67.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.ea904ca68cf1e216.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.e2f489a2fb87b1c4.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074810.e6c8028dcea3a2ff.webp"
+                    alt="Biodiversity Conservation in Fragile Ecosystems"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Biodiversity Conservation in Fragile Ecosystems</h3>
+            
+                <p class="gh-card-excerpt is-body">Amidst the backdrop of ongoing ecological shifts, conservationists labor tirelessly to safeguard the world&#x27;s biodiversity hotspots</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                
+                    
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/mental-health-awareness-in-the-workplace/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.d2fc08719504814e.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.201dab0d288a5e3c.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.5174ef933715a80e.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.f2fe4d000b385563.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.81c34e4517b5bfb8.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.3d5a2deb1c14fe17.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074808.5174ef933715a80e.webp"
+                    alt="Mental Health Awareness in the Workplace"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Mental Health Awareness in the Workplace</h3>
+            
+                <p class="gh-card-excerpt is-body">As the world acknowledges the crucial importance of mental health, workplaces are becoming microcosms of this paradigm shift.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                
+            </div>
+            <div class="gh-header-right">
+                
+                    
+    
+        <section class="gh-featured gh-outer">
+            <div class="gh-featured-inner gh-inner">
+                <h2 class="gh-featured-title">Featured</h2>
+                <div class="gh-featured-feed">
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/impact-of-social-media-on-modern-relationships/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.72d36eb92bbbbc78.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.d73decdd5bb4147c.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.b1147e1651d730cf.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.dc516a0766a8f4bd.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.bf71598034df431b.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.624f53f0a3956ee4.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.b1147e1651d730cf.webp"
+                    alt="Impact of Social Media on Modern Relationships"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Impact of Social Media on Modern Relationships</h3>
+            
+                <p class="gh-card-excerpt is-body">In the age of digital connectivity, relationships are undergoing a profound transformation.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/revival-of-vinyl-records/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.68a14513635a342b.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.68b949f6a62fd508.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.458e0c7edfdd6158.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.1a57255de12f64c6.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.a0ffed53959014b0.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.664882e283b0b3bf.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.458e0c7edfdd6158.webp"
+                    alt="Revival of Vinyl Records"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Revival of Vinyl Records</h3>
+            
+                <p class="gh-card-excerpt is-body">The nostalgic crackle of vinyl records is reverberating once more, igniting a revival that transcends generations.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/global-supply-chain-disruptions/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.206c9454b4bf370c.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.0f11453a0f39d750.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.ef4058a1f6e147ea.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.37f9e36f90e66162.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.dcbb254c7461abd4.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.e43963aa65f1a31b.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.ef4058a1f6e147ea.webp"
+                    alt="Global Supply Chain Disruptions"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Global Supply Chain Disruptions</h3>
+            
+                <p class="gh-card-excerpt is-body">As supply chains face unprecedented challenges, industries grapple with delays, shortages, and the need for innovative solutions.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/exploring-cultural-diversity-through-art/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.b5ca917d7918f428.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.c36eb8f34e409749.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.d4d6883ebb658a10.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.83e2d6a3bbcc183b.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.95c4324fe30972b0.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.e7f12439b1766f97.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.d4d6883ebb658a10.webp"
+                    alt="Exploring Cultural Diversity Through Art"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Exploring Cultural Diversity Through Art</h3>
+            
+                <p class="gh-card-excerpt is-body">Artists from around the world use their creations to celebrate cultural differences, fostering understanding and appreciation.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/cryptocurrencies-and-their-impact/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.38b68168b4ade307.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.3ce80167f4c92d80.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.72e52990dd60cceb.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.a1f77bbecd10a5be.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.56d5dab2f4cb2b6f.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.4a43f55f10f2337c.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.72e52990dd60cceb.webp"
+                    alt="Cryptocurrencies and Their Impact"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Cryptocurrencies and Their Impact</h3>
+            
+                <p class="gh-card-excerpt is-body">Dive into the world of cryptocurrencies and their transformative influence on traditional financial systems.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/rise-of-telemedicine-amidst-health-crisis/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.0ea547aa47acb358.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.a483cc4f722dc5b5.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.c04baf25c5baae0d.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.13eb523bb15857ac.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.be6241b7d5ed4b63.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.3156fb52cbcafcfb.webp 2000w"
+                    sizes="80px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.c04baf25c5baae0d.webp"
+                    alt="Rise of Telemedicine Amidst Health Crisis"
+                    
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Rise of Telemedicine Amidst Health Crisis</h3>
+            
+                <p class="gh-card-excerpt is-body">The emergence of telemedicine has been one of the most significant healthcare adaptations in response to the global health crisis.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                    
+                </div>
+            </div>
+        </section>
+    
+
+
+                
+            </div>
+        
+
+        
+        
+
+        
+
+    </div>
+
+</section>
+    
+
+
+
+
+
+
+
+
+
+
+
+<section class="gh-container is-list has-sidebar gh-outer">
+    <div class="gh-container-inner gh-inner">
+        
+        
+            <h2 class="gh-container-title">
+                Latest
+            </h2>
+        
+
+        <main class="gh-main">
+            <div class="gh-feed">
+
+                
+                
+                    
+                        
+                            
+                                
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/urban-planning-for-sustainable-cities/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.3e8fbcc3e14df31c.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.c933114074d134e5.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.81218062541201f5.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.6d278fb4c2dce0cc.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.ebe14a22b6fdab94.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.d42f4cfc2da99975.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074809.81218062541201f5.webp"
+                    alt="Urban Planning for Sustainable Cities"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Urban Planning for Sustainable Cities</h3>
+            
+                <p class="gh-card-excerpt is-body">Sustainable urban development seeks to create walkable neighborhoods, efficient public transportation, and green spaces that enhance quality of life.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/exploring-alternative-medicine-therapies/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.f4bb2fe79a5fd9af.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.779b4f14e404dc9b.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.8b266ae8d30a4c54.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.95f3c210ed470a92.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.a4af472526597765.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.f372db728883b976.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074807.8b266ae8d30a4c54.webp"
+                    alt="Exploring Alternative Medicine Therapies"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Exploring Alternative Medicine Therapies</h3>
+            
+                <p class="gh-card-excerpt is-body">In a quest for holistic well-being, individuals are increasingly turning to alternative medicine therapies rooted in ancient traditions.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/cultural-festivals-around-the-globe/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.6e6faaaf1f45b1b3.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.9ed751857fe09916.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.322067208009454f.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.71181642a8fac6bd.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.ad2fdac2db99d9bb.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.5e8a9a7475b92b80.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074805.322067208009454f.webp"
+                    alt="Cultural Festivals Around the Globe"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Cultural Festivals Around the Globe</h3>
+            
+                <p class="gh-card-excerpt is-body">Embark on a cultural journey as we highlight vibrant festivals from different corners of the world. From Diwali in India to Carnival in Brazil, these celebrations showcase the beauty of diversity and the richness of tradition.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/renewable-energy-innovations/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.44a6a1a6aaf2b6c2.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.400fa3b324eb321c.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.05af43e550f09f39.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.92c3b1e6790ea063.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.b874b0a4df5dd0bf.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.ade15d4764a59098.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074806.05af43e550f09f39.webp"
+                    alt="Renewable Energy Innovations"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Renewable Energy Innovations</h3>
+            
+                <p class="gh-card-excerpt is-body">Against the backdrop of climate change, scientists and engineers are engineering a new energy landscape.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/advances-in-gene-editing-technology/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.26e1c42336cf1f69.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.f7cf27b2c71bab0b.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.970a38e5b761e367.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.11c620a42730fd40.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.ed22a755faf4a9c1.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.7ccdd4f6b77b4dca.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074804.970a38e5b761e367.webp"
+                    alt="Advances in Gene Editing Technology"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Advances in Gene Editing Technology</h3>
+            
+                <p class="gh-card-excerpt is-body">At the forefront of scientific innovation, gene editing technology is ushering in a new era of medical possibilities.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post ">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/analyzing-the-growing-concerns-in-global-markets/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.f62f3c3394c93903.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.86f6f065399c894b.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.a74165c8388d8eb7.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.2113622b19f82363.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.4803368feaca0d88.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.5a7f27c7e6c2db4f.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070635.a74165c8388d8eb7.webp"
+                    alt="Analyzing the Growing Concerns in Global Markets"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Analyzing the Growing Concerns in Global Markets</h3>
+            
+                <p class="gh-card-excerpt is-body">Economists and investors keep a close eye on rising inflation rates, prompting discussions on monetary policies and their impacts.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/impact-of-social-media-on-modern-relationships/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.72d36eb92bbbbc78.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.d73decdd5bb4147c.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.b1147e1651d730cf.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.dc516a0766a8f4bd.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.bf71598034df431b.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.624f53f0a3956ee4.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070637.b1147e1651d730cf.webp"
+                    alt="Impact of Social Media on Modern Relationships"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Impact of Social Media on Modern Relationships</h3>
+            
+                <p class="gh-card-excerpt is-body">In the age of digital connectivity, relationships are undergoing a profound transformation.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/revival-of-vinyl-records/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.68a14513635a342b.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.68b949f6a62fd508.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.458e0c7edfdd6158.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.1a57255de12f64c6.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.a0ffed53959014b0.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.664882e283b0b3bf.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074803.458e0c7edfdd6158.webp"
+                    alt="Revival of Vinyl Records"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Revival of Vinyl Records</h3>
+            
+                <p class="gh-card-excerpt is-body">The nostalgic crackle of vinyl records is reverberating once more, igniting a revival that transcends generations.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/global-supply-chain-disruptions/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.206c9454b4bf370c.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.0f11453a0f39d750.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.ef4058a1f6e147ea.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.37f9e36f90e66162.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.dcbb254c7461abd4.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.e43963aa65f1a31b.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074802.ef4058a1f6e147ea.webp"
+                    alt="Global Supply Chain Disruptions"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Global Supply Chain Disruptions</h3>
+            
+                <p class="gh-card-excerpt is-body">As supply chains face unprecedented challenges, industries grapple with delays, shortages, and the need for innovative solutions.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/exploring-cultural-diversity-through-art/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.b5ca917d7918f428.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.c36eb8f34e409749.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.d4d6883ebb658a10.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.83e2d6a3bbcc183b.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.95c4324fe30972b0.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.e7f12439b1766f97.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000074801.d4d6883ebb658a10.webp"
+                    alt="Exploring Cultural Diversity Through Art"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Exploring Cultural Diversity Through Art</h3>
+            
+                <p class="gh-card-excerpt is-body">Artists from around the world use their creations to celebrate cultural differences, fostering understanding and appreciation.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/cryptocurrencies-and-their-impact/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.38b68168b4ade307.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.3ce80167f4c92d80.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.72e52990dd60cceb.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.a1f77bbecd10a5be.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.56d5dab2f4cb2b6f.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.4a43f55f10f2337c.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070699.72e52990dd60cceb.webp"
+                    alt="Cryptocurrencies and Their Impact"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Cryptocurrencies and Their Impact</h3>
+            
+                <p class="gh-card-excerpt is-body">Dive into the world of cryptocurrencies and their transformative influence on traditional financial systems.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                        
+
+
+
+
+
+
+
+
+
+<article class="gh-card post featured">
+    <a class="gh-card-link" href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/posts/rise-of-telemedicine-amidst-health-crisis/">
+        
+            <figure class="gh-card-image">
+                <img
+                    srcset="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.0ea547aa47acb358.webp 160w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.a483cc4f722dc5b5.webp 320w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.c04baf25c5baae0d.webp 600w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.13eb523bb15857ac.webp 960w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.be6241b7d5ed4b63.webp 1200w,
+                            https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.3156fb52cbcafcfb.webp 2000w"
+                    sizes="320px"
+                    src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/processed_images/1000070634.c04baf25c5baae0d.webp"
+                    alt="Rise of Telemedicine Amidst Health Crisis"
+                    loading="lazy"
+                >
+            </figure>
+        
+        <div class="gh-card-wrapper">
+            
+            <h3 class="gh-card-title is-title">Rise of Telemedicine Amidst Health Crisis</h3>
+            
+                <p class="gh-card-excerpt is-body">The emergence of telemedicine has been one of the most significant healthcare adaptations in response to the global health crisis.</p>
+            
+            
+            <footer class="gh-card-meta">
+                <!--
+             -->
+                
+                    <time class="gh-card-date" datetime="2025-12-26">December 26, 2025</time>
+                <!--
+         --></footer>
+        </div>
+    </a>
+</article>
+
+                                    
+                                
+                            
+                        
+                    
+                
+
+                
+                
+
+                
+
+            </div>
+
+            
+                <div class="gh-more is-title">
+                    <a href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source//posts/">See all <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></a>
+                </div>
+                
+        </main>
+
+        
+            <aside class="gh-sidebar">
+                <div class="gh-sidebar-inner">
+                    <section class="gh-about">
+                        
+                        <h3 class="gh-about-title is-title">Zola Sveltia Source</h3>
+                        
+                            <p class="gh-about-description is-body">Thoughts, stories and JAMstack</p>
+                        
+                        
+                    </section>
+                    
+                </div>
+            </aside>
+        
+
+    </div>
+</section>
+
+
+
+    
+    <footer class="gh-footer gh-outer">
+    <div class="gh-footer-inner gh-inner">
+
+        <div class="gh-footer-bar">
+            <span class="gh-footer-logo is-title">
+                
+                    Zola Sveltia Source
+                
+            </span>
+            <nav class="gh-footer-menu">
+                
+            
+<ul class="nav">
+    
+    <li class="nav-home">
+        
+        
+        
+        <a href="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/">Home</a>
+    </li>
+    
+</ul>
+
+            
+            </nav>
+            <div class="gh-footer-copyright">
+                Powered by <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a> Published with <a href="https://github.com/sveltia/sveltia-cms" target="_blank" rel="noopener">Sveltia CMS</a>
+            </div>
+        </div>
+
+        
+    </div>
+</footer>
+
+    
+</div>
+
+
+
+
+
+<script src="https://salif.github.io/zola-themes-collection/demo/zola-sveltia-source/js/source.js?h=3bceafa53269a4c05c1f"></script>
+
+
+
+
+</body>
+</html>

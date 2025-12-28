@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/main.css?h=4da9e10c46a4c1c50301">
+    <meta name="generator" content="Zola">
+    <link rel="icon" href="https://www.getzola.org/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Docs | Page </title>
+</head>
+<body>
+
+<script>
+        fetch('https://api.github.com/repos/getzola/zola/releases/latest')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let release_name = data.name;
+                let html_url = data.html_url;
+                release.innerHTML = `<a href='${html_url}'>${release_name}</a>`;
+            });
+    </script>
+<main>
+    
+    
+        <nav>
+            <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zola_easydocs_theme&#x2F;">
+                        <img src="https://easydocs.codeandmedia.com/logo.svg" alt="logo"/>
+                    </a>
+                <div id="release"></div>
+            <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
+            <div id="trees">
+                <input class="tree-toggle" type="checkbox" id="getting-started"
+                           />
+                    <label class="tree-toggle-label"
+                           for="getting-started">Getting Started</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/installation/">Installation</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/cli-usage/">CLI usage</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/directory-structure/">Directory structure</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/getting-started/configuration/">Configuration</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="content"
+                           checked/>
+                    <label class="tree-toggle-label"
+                           for="content">Content</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/section/">Section</a>
+                            </li>
+
+                            <li class="active">
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/">Page</a>
+                            </li>
+
+                            
+                                    
+                                    
+                                        <ul id="toc">
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#output-paths">Output paths</a>
+                                                    <ul>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#path-from-frontmatter">Path from frontmatter</a>
+                                                                </li>
+                                                            <li>
+                                                                    <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#path-from-filename">Path from filename</a>
+                                                                </li>
+                                                            </ul>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#front-matter">Front matter</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#summary">Summary</a>
+                                                    </li>
+                                            <li><a href="
+                                                        https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/page/#markdown-table">Markdown table</a>
+                                                    </li>
+                                            </ul>
+                                    <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/shortcodes/">Shortcodes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/linking/">Internal links &amp; deep linking</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/table-of-contents/">Table of Contents</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/syntax-highlighting/">Syntax Highlighting</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/search/">Search</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/sass/">Sass</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/multilingual/">Multilingual sites</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="templates"
+                           />
+                    <label class="tree-toggle-label"
+                           for="templates">Templates</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pages-sections/">Sections and Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pagination/">Pagination</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/taxonomies/">Taxonomies</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/feeds/">Feeds</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/sitemap/">Sitemap</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/robots/">Robots.txt</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/404/">404 error page</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/archive/">Archive</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="themes"
+                           />
+                    <label class="tree-toggle-label"
+                           for="themes">Themes</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/installing-and-using-themes/">Installing &amp; using themes</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/creating-a-theme/">Creating a theme</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/themes/extending-a-theme/">Extending a theme</a>
+                            </li>
+
+                            </ul>
+                <input class="tree-toggle" type="checkbox" id="deployment"
+                           />
+                    <label class="tree-toggle-label"
+                           for="deployment">Deployment</label>
+
+                    <ul class="subtree">
+                        <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/overview/">Overview</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/netlify/">Netlify</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/github-pages/">GitHub Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/gitlab-pages/">GitLab Pages</a>
+                            </li>
+
+                            <li >
+                                <a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/deployment/vercel/">Vercel</a>
+                            </li>
+
+                            </ul>
+                </div>
+        </nav>
+    <article>
+
+        <div id="on_right">
+                <span id="search-ico" class="ms-Icon--Search"></span>
+            </div>
+            <div class="search-container">
+                <input id="search" type="search" placeholder="Search as you type...">
+                <div class="search-results">
+                    <div class="search-results__header"></div>
+                    <ul class="search-results__items"></ul>
+                </div>
+            </div>
+        <div id="wrap">
+            
+        <p>A page is any file ending with <code>.md</code> in the <code>content</code> directory, except files
+named <code>_index.md</code>.</p>
+<p>If a file ending with <code>.md</code> is named <code>index.md</code>, it will generate a page
+with the name of its directory (for example, <code>/content/about/index.md</code> would
+create a page at <code>[base_url]/about</code>). (Note the lack of an underscore; if the file
+were named <code>_index.md</code>, then it would create a <strong>section</strong> at <code>[base_url]/about</code>, as
+discussed in a previous part of this documentation.  In contrast, naming the file <code>index.md</code> will
+create a <strong>page</strong> at <code>[base_url]/about</code>).</p>
+<p>If the file is given any name <em>other</em> than <code>index.md</code> or <code>_index.md</code>, then it will
+create a page with that name (without the <code>.md</code>). For example, naming a file in the root of your
+content directory <code>about.md</code> would create a page at <code>[base_url]/about</code>.
+Another exception to this rule is that a filename starting with a datetime (YYYY-mm-dd or <a href="https://www.ietf.org/rfc/rfc3339.txt">an RFC3339 datetime</a>) followed by
+an underscore (<code>_</code>) or a dash (<code>-</code>) will use that date as the page date, unless already set
+in the front matter. The page name will be anything after <code>_</code>/<code>-</code>, so the file <code>2018-10-10-hello-world.md</code> will
+be available at <code>[base_url]/hello-world</code>. Note that the full RFC3339 datetime contains colons, which is not a valid
+character in a filename on Windows.</p>
+<p>As you can see, creating an <code>about.md</code> file is equivalent to creating an
+<code>about/index.md</code> file.  The only difference between the two methods is that creating
+the <code>about</code> directory allows you to use asset co-location, as discussed in the
+<a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/content/overview/#asset-colocation">overview</a> section.</p>
+<h2 id="output-paths">Output paths&nbsp;<a class="anchor" href="#output-paths">&#xE732;</a></h2>
+<p>For any page within your content folder, its output path will be defined by either:</p>
+<ul>
+<li>its <code>slug</code> frontmatter key</li>
+<li>its filename</li>
+</ul>
+<p>Either way, these proposed path will be sanitized before being used.
+If <code>slugify.paths</code> is set to <code>"on"</code> in the site's config - the default - paths are <a href="https://en.wikipedia.org/wiki/Clean_URL#Slug">slugified</a>.
+If it is set to <code>"safe"</code>, only sanitation is performed, with the following characters being removed: <code>&lt;</code>, <code>&gt;</code>, <code>:</code>, <code>/</code>, <code>|</code>, <code>?</code>, <code>*</code>, <code>#</code>, <code>\\</code>, <code>(</code>, <code>)</code>, <code>[</code>, <code>]</code> as well as newlines and tabulations. This ensures that the path can be represented on all operating systems.
+Additionally, trailing whitespace and dots are removed and whitespaces are replaced by <code>_</code>.</p>
+<p>If <code>slugify.paths</code> is set to <code>"off"</code>, no modifications are made.</p>
+<p>If you want URLs containing non-ASCII characters, <code>slugify.paths</code> needs to be set to <code>"safe"</code> or <code>"off"</code>.</p>
+<h3 id="path-from-frontmatter">Path from frontmatter&nbsp;<a class="anchor" href="#path-from-frontmatter">&#xE732;</a></h3>
+<p>The output path for the page will first be read from the <code>slug</code> key in the page's frontmatter.</p>
+<p><strong>Example:</strong> (file <code>content/zines/mlf-kurdistan.md</code>)</p>
+<pre style="background-color:#eff1f5;color:#4f5b66;"><code><span>+++
+</span><span>title = &quot;Le mouvement des Femmes Libres, à la tête de la libération kurde&quot;
+</span><span>slug = &quot;femmes-libres-libération-kurde&quot;
+</span><span>+++
+</span><span>This is my article.
+</span></code></pre>
+<p>This frontmatter will output the article to <code>[base_url]/zines/femmes-libres-libération-kurde</code> with <code>slugify.paths</code> set to <code>"safe"</code> or <code>"off"</code>, and to <code>[base_url]/zines/femmes-libres-liberation-kurde</code> with the default value for <code>slugify.paths</code> of <code>"on"</code>.</p>
+<h3 id="path-from-filename">Path from filename&nbsp;<a class="anchor" href="#path-from-filename">&#xE732;</a></h3>
+<p>When the article's output path is not specified in the frontmatter, it is extracted from the file's path in the content folder. Consider a file <code>content/foo/bar/thing.md</code>. The output path is constructed:</p>
+<ul>
+<li>if the filename is <code>index.md</code>, its parent folder name (<code>bar</code>) is used as output path</li>
+<li>otherwise, the output path is extracted from <code>thing</code> (the filename without the <code>.md</code> extension)</li>
+</ul>
+<p>If the path found starts with a datetime string (<code>YYYY-mm-dd</code> or <a href="https://www.ietf.org/rfc/rfc3339.txt">a RFC3339 datetime</a>) followed by an underscore (<code>_</code>) or a dash (<code>-</code>), this date is removed from the output path and will be used as the page date (unless already set in the front-matter). Note that the full RFC3339 datetime contains colons, which is not a valid character in a filename on Windows.</p>
+<p>The output path extracted from the file path is then slugified or not, depending on the <code>slugify.paths</code> config, as explained previously.</p>
+<p><strong>Example:</strong>
+The file <code>content/blog/2018-10-10-hello-world.md</code> will yield a page at <code>[base_url]/blog/hello-world</code>.</p>
+<h2 id="front-matter">Front matter&nbsp;<a class="anchor" href="#front-matter">&#xE732;</a></h2>
+<p>The TOML front matter is a set of metadata embedded in a file at the beginning of the file enclosed
+by triple pluses (<code>+++</code>).</p>
+<p>Although none of the front matter variables are mandatory, the opening and closing <code>+++</code> are required.</p>
+<p>Note that even though the use of TOML is encouraged, YAML front matter is also supported to ease porting
+legacy content. In this case the embedded metadata must be enclosed by triple minuses (<code>---</code>).</p>
+<p>Here is an example page with all the available variables. The values provided below are the
+default values.</p>
+<pre data-lang="toml" style="background-color:#eff1f5;color:#4f5b66;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">title </span><span>= &quot;&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The date of the post.
+</span><span style="color:#a7adba;"># Two formats are allowed: YYYY-MM-DD (2012-10-02) and RFC3339 (2002-10-02T15:00:00Z).
+</span><span style="color:#a7adba;"># Do not wrap dates in quotes; the line below only indicates that there is no default date.
+</span><span style="color:#a7adba;"># If the section variable `sort_by` is set to `date`, then any page that lacks a `date`
+</span><span style="color:#a7adba;"># will not be rendered.
+</span><span style="color:#a7adba;"># Setting this overrides a date set in the filename.
+</span><span style="color:#bf616a;">date </span><span>=
+</span><span>
+</span><span style="color:#a7adba;"># The last updated date of the post, if different from the date.
+</span><span style="color:#a7adba;"># Same format as `date`.
+</span><span style="color:#bf616a;">updated </span><span>=
+</span><span>
+</span><span style="color:#a7adba;"># The weight as defined on the Section page of the documentation.
+</span><span style="color:#a7adba;"># If the section variable `sort_by` is set to `weight`, then any page that lacks a `weight`
+</span><span style="color:#a7adba;"># will not be rendered.
+</span><span style="color:#bf616a;">weight </span><span>= </span><span style="color:#d08770;">0
+</span><span>
+</span><span style="color:#a7adba;"># A draft page is only loaded if the `--drafts` flag is passed to `zola build`, `zola serve` or `zola check`.
+</span><span style="color:#bf616a;">draft </span><span>= </span><span style="color:#d08770;">false
+</span><span>
+</span><span style="color:#a7adba;"># If set, this slug will be instead of the filename to make the URL.
+</span><span style="color:#a7adba;"># The section path will still be used.
+</span><span style="color:#bf616a;">slug </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The path the content will appear at.
+</span><span style="color:#a7adba;"># If set, it cannot be an empty string and will override both `slug` and the filename.
+</span><span style="color:#a7adba;"># The sections&#39; path won&#39;t be used.
+</span><span style="color:#a7adba;"># It should not start with a `/` and the slash will be removed if it does.
+</span><span style="color:#bf616a;">path </span><span>= &quot;&quot;
+</span><span>
+</span><span style="color:#a7adba;"># Use aliases if you are moving content but want to redirect previous URLs to the
+</span><span style="color:#a7adba;"># current one. This takes an array of paths, not URLs.
+</span><span style="color:#bf616a;">aliases </span><span>= []
+</span><span>
+</span><span style="color:#a7adba;"># When set to &quot;true&quot;, the page will be in the search index. This is only used if
+</span><span style="color:#a7adba;"># `build_search_index` is set to &quot;true&quot; in the Zola configuration and the parent section
+</span><span style="color:#a7adba;"># hasn&#39;t set `in_search_index` to &quot;false&quot; in its front matter.
+</span><span style="color:#bf616a;">in_search_index </span><span>= </span><span style="color:#d08770;">true
+</span><span>
+</span><span style="color:#a7adba;"># Template to use to render this page.
+</span><span style="color:#bf616a;">template </span><span>= &quot;</span><span style="color:#a3be8c;">page.html</span><span>&quot;
+</span><span>
+</span><span style="color:#a7adba;"># The taxonomies for this page. The keys need to be the same as the taxonomy
+</span><span style="color:#a7adba;"># names configured in `config.toml` and the values are an array of String objects. For example,
+</span><span style="color:#a7adba;"># tags = [&quot;rust&quot;, &quot;web&quot;].
+</span><span>[taxonomies]
+</span><span>
+</span><span style="color:#a7adba;"># Your own data.
+</span><span>[extra]
+</span></code></pre>
+<h2 id="summary">Summary&nbsp;<a class="anchor" href="#summary">&#xE732;</a></h2>
+<p>You can ask Zola to create a summary if, for example, you only want to show the first
+paragraph of the page content in a list.</p>
+<p>To do so, add <code>&lt;!-- more --&gt;</code> in your content at the point
+where you want the summary to end. The content up to that point will be
+available separately in the
+<a href="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/templates/pages-sections/#page-variables">template</a>.</p>
+<p>A span element in this position with a <code>continue-reading</code> id is created, so you can link directly to it if needed. For example:
+<code>&lt;a href="{{ page.permalink }}#continue-reading"&gt;Continue Reading&lt;/a&gt;</code>.</p>
+<h2 id="markdown-table">Markdown table&nbsp;<a class="anchor" href="#markdown-table">&#xE732;</a></h2>
+<table><thead><tr><th>Tables</th><th style="text-align: center">Are</th><th style="text-align: right">Cool</th></tr></thead><tbody>
+<tr><td>col 1 is</td><td style="text-align: center">left-aligned</td><td style="text-align: right">$1600</td></tr>
+<tr><td>col 2 is</td><td style="text-align: center">centered</td><td style="text-align: right">$12</td></tr>
+<tr><td>col 3 is</td><td style="text-align: center">right-aligned</td><td style="text-align: right">$1</td></tr>
+</tbody></table>
+
+    
+        </div>
+
+    </article>
+</main>
+
+
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/elasticlunr.min.js" defer></script>
+    <script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/search_index.en.js?h=0e42301d3417045b2151" defer></script>
+<script type="text/javascript" src="https://salif.github.io/zola-themes-collection/demo/zola_easydocs_theme/js.js?h=4dc92bffd1cd35c33565" defer></script>
+
+</body>
+</html>
