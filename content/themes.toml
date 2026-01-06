@@ -1388,6 +1388,70 @@ theme = "austere"
   js = "document.getElementById('info-austere').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "nivis"
+name = "nivis"
+desc = "A clean zola theme for bloggers"
+tags = [ "clean" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-nivis}
+- **Author**: [Resory](https://resorie.github.io/blog/)
+- **License**: MIT
+- **Homepage**: <https://github.com/Resorie/zola-theme-nivis>
+- **Main Live Preview**: <https://resorie.github.io/blog/>
+- **Min Zola version**: 0.21.0
+
+### Installation{#install-nivis}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "nivis"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-nivis.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of nivis Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-nivis.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of nivis Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/nivis/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/Resorie/zola-theme-nivis"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-nivis"
+  js = "document.getElementById('info-nivis').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "kita"
 name = "Kita"
 desc = "Kita is a clean, elegant and simple blog theme for Zola."
@@ -2066,67 +2130,6 @@ theme = "landing-grid"
   newtab = false
   url = "#info-landing-grid"
   js = "document.getElementById('info-landing-grid').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "am-zola-theme"
-name = "AMZola"
-desc = "A Zola theme"
-tags = [ "blog", "minimal" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-am-zola-theme}
-- **License**: MIT
-- **Homepage**: <https://github.com/jel1yspot/am-zola-theme>
-
-### Installation{#install-am-zola-theme}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/Jel1ySpot/am-zola-theme.git themes/am-zola-theme
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/Jel1ySpot/am-zola-theme.git themes/am-zola-theme
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "am-zola-theme"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-am-zola-theme.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of AMZola Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-am-zola-theme.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of AMZola Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/am-zola-theme/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/Jel1ySpot/am-zola-theme"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-am-zola-theme"
-  js = "document.getElementById('info-am-zola-theme').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "BelTree"
@@ -3951,6 +3954,64 @@ theme = "duckling"
   newtab = false
   url = "#info-duckling"
   js = "document.getElementById('info-duckling').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "portio-zola"
+name = "Portio-Zola"
+desc = "Portio-Zola is a minimal, well-formatted and extremely flexible theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-portio-zola}
+- **Author**: Quentin Rodriguez
+- **License**: MIT
+- **Homepage**: <https://github.com/quentin-rodriguez/portio-zola.git>
+- **Main Live Preview**: <https://staticmania.com/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/StaticMania/portio-hugo.git>
+
+### Installation{#install-portio-zola}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
+```
+2. Enable the theme in your `config.toml`
+```toml
+theme = "portio-zola"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-portio-zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Portio-Zola Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/portio-zola/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/quentin-rodriguez/portio-zola"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-portio-zola"
+  js = "document.getElementById('info-portio-zola').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "martinique"
