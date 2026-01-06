@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+# Theme Customization Variables
+# This file contains all customizable values for the Persona theme
+# Modify these variables to customize colors, fonts, dimensions, and spacing
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Font Variables
+--------------------------------------------------------------*/
+:root {
+  /* Font Families */
+  /* 
+  * Font Stack Explanation:
+  * 
+  * DEFAULT FONT (Body Text):
+  * - Long fallback chain ensures consistent appearance across all platforms
+  * - Browser reads left-to-right, uses first available font
+  * - "Roboto" = web font from Google Fonts or CDN
+  * - system-ui = Modern browser's system UI font
+  * - -apple-system = macOS/iOS system font (San Francisco)
+  * - "Segoe UI" = Windows system font
+  * - Roboto = System-installed Roboto (mainly Android)
+  * - "Helvetica Neue" = Older macOS versions
+  * - Arial = Universal fallback, available on nearly all systems
+  * - "Noto Sans" = Google's font for international/multi-language support
+  * - "Liberation Sans" = Linux system font
+  * - sans-serif = Generic family, browser's default sans-serif
+  * - "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" = Proper emoji rendering
+  * 
+  * HEADING & NAV FONTS:
+  * - Shorter fallback chains by design
+  * - Decorative fonts (Raleway, Poppins) have no close substitutes
+  * - Better to fall back to system sans-serif than approximate
+  * - Less critical for consistency since they're smaller content portions
+  * - Strategy: "Use my custom font or just use the default"
+  */
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+
+  /* Font Sizes */
+  --footer-font-size: 14px; /* Font size for footer text */
+  --normal-font-size: 16px; /* Base font size for the website */
+  --subtitle-font-size: 24px; /* Font size for subtitles, such as section titles */
+  --heading-font-size: 32px; /* Base font size for headings */
+  --title-font-size: 64px; /* Base font size for titles, such as hero section titles */
+}
+
+/*--------------------------------------------------------------
+# Color Variables
+--------------------------------------------------------------*/
+:root { 
+  /* Global Colors - Updating these will change the color scheme of the entire website */
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --transparency: 25%; /* Transparency level for color */
+
+  /* Nav Menu Colors - Specific to the navigation menu for more customization options */
+  --nav-color: #45505b;  /* The default color of the main navmenu links */
+  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+
+  /* Header Colors */
+  --header-background-color: color-mix(in srgb, var(--default-color), transparent 96%); /* Background color for the header section of the website */
+  --header-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Dimension Variables
+--------------------------------------------------------------*/
+:root {
+  /* Navigation Menu Dimensions */
+  --nav-icon-size: 56px; /* The size of the navigation menu icons */
+  --nav-menu-width: 140px; /* The width of the navigation menu on desktop */
+  --nav-menu-mobile-width: 300px; /* The width of the navigation menu on mobile */
+  --nav-menu-border-padding: 15px; /* The padding width of the navigation menu */
+  --nav-menu-mobile-border-width: 1px; /* The border width of the navigation menu */
+
+  /* Border Radius */
+  --img-border-radius: 10px; /* Border radius for images */
+
+  /* Button Dimensions */
+  --botton-size: 40px; /* Size of circular buttons */
+  --botton-position-away-from-corner-distance: 15px; /* Default distance of buttons from corners */
+  --botton-position-away-from-corner-horizontal-distance: var(--botton-position-away-from-corner-distance); /* Horizontal distance of buttons from corners */
+  --botton-position-away-from-corner-vertical-distance: 30px; /* Vertical distance of buttons from corners */
+}
+
+/*--------------------------------------------------------------
+# Spacing Variables
+--------------------------------------------------------------*/
+:root {
+  /* Spacing Variables - Define consistent spacing between elements (margins and paddings) */
+  --spacing-xxs: 0.25rem; /* 4px assuming 16px base */
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-xxl: 4rem;    /* 64px */
+}
+
+/*--------------------------------------------------------------
+# Animation and Transition Variables
+--------------------------------------------------------------*/
+:root {
+  /* Transition Variables */
+  --transition-hover-time: 0.3s; /* Transition time for hover effects */
+  --transition-hover-transparency: var(--transparency); /* Transparency level for hover effects */
+}
+
+/*--------------------------------------------------------------
+# Optional Color Presets
+# Uncomment to enable light/dark background variations
+--------------------------------------------------------------*/
+
+/* Light Background */
+/* .light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+} */
+
+/* Dark Background */
+/* .dark-background {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+} */

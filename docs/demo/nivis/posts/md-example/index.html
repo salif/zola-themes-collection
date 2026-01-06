@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown Example | Nivis</title>
+
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/nivis/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Unwrap code blocks for MathJax
+          // 1. Display Math (```math-display ... ```)
+          document.querySelectorAll('code.language-math-display').forEach(el => {
+              const pre = el.parentElement;
+              if (pre.tagName === 'PRE') {
+                  const math = el.textContent.trim();
+                  const div = document.createElement('div');
+                  div.textContent = math;
+                  pre.replaceWith(div);
+              }
+          });
+
+          // 2. Inline Math (`$ ... $`)
+          document.querySelectorAll('code').forEach(el => {
+              if (el.classList.contains('language-math-display')) return;
+              if (el.parentElement.tagName === 'PRE') return;
+
+              const text = el.textContent.trim();
+              // Check if it looks like math: $...$
+              if (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) {
+                  const span = document.createElement('span');
+                  span.textContent = text;
+                  el.replaceWith(span);
+              }
+          });
+          
+          // Trigger MathJax to process the new elements
+          if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+              MathJax.typesetPromise();
+          }
+      });
+  </script>
+  
+
+  
+<!-- Primary Meta Tags -->
+ 
+<meta
+  name="description"
+  content="markdown examples"
+/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Markdown Example | Nivis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/" />
+
+<meta property="article:published_time" content="1980-01-01" />
+<meta property="article:modified_time" content="1980-01-01" />
+
+<meta property="article:section" content="posts" />
+<!--
+  
+    
+      
+        <meta property="article:tag" content="example">
+      
+    
+  
+-->
+
+
+</head>
+
+<body class="body-block">
+  <div id="sidebar-mask" onclick="toggleSidebar()"></div>
+  
+  <div id="sidebar" class="">
+    <div class="logo-title">
+      <div class="title-inner">
+        
+        <div class="title">
+          <h3><a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Nivis</a></h3>
+          <div class="description">
+            <p>A clean zola theme for bloggers</p>
+          </div>
+        </div>
+      </div>
+      <ul class="social-links">
+        
+        <li>
+          <a href="https://github.com/Resorie/zola-theme-nivis" aria-label="Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        
+      </ul>
+      <div class="sidebar-action">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/">About Me</a>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/">Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/">Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/">Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/">Links</a>
+      </nav>
+    </div>
+  </div>
+  
+
+  <div id="main">
+    
+    <div class="page-top animated fadeInDown">
+      <nav class="nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/" class="active">Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/" >About</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/" >Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/" >Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/" >Links</a>
+      </nav>
+      <div class="information">
+        <div class="back_btn">
+          <a onclick="window.history.go(-1)" aria-label="Go back"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="theme_btn">
+          <a onclick="toggleTheme()" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></a>
+        </div>
+        <div class="feed_btn">
+          <a class="feed-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          <div class="feed-dropdown">
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/atom.xml" target="_blank">Atom</a>
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/rss.xml" target="_blank">RSS</a>
+          </div>
+        </div>
+        <div class="avatar_btn">
+          <a onclick="toggleSidebar()" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="autopagerize_page_element">
+      <div class="content animated fadeIn ">
+         
+
+<article class="content-article">
+  <main class="article-content">
+    <div class="article-intro-container">
+        <div class="intro-header">
+            <h1 class="heading">Markdown Example</h1>
+            <div class="meta-line">
+                
+                <span class="date">Jan. 01, 1980</span>
+                
+                
+                
+                <span class="separator">/</span>
+                <span class="tags">
+                
+                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/example/">#example</a>
+                
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="intro-body">
+            
+            <div class="intro-abstract">
+                <div class="abstract-title">ABSTRACT</div>
+                <p class="description">markdown examples</p>
+            </div>
+            
+
+            
+            <details class="intro-toc">
+                <summary class="toc-title">CONTENTS</summary>
+                <div class="toc-wrapper">
+                <ul class="toc-list">
+                    <li class="toc-root">
+                        <a href="#" class="active-toc">Markdown Example</a>
+                        
+                        <ul>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#text-basics">Text Basics</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#headings">Headings</a>
+                                
+                                <ul>
+                                    
+                                    <li>
+                                        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#h3">h3</a>
+                                        
+                                        <ul>
+                                            
+                                            <li>
+                                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#h4">h4</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        
+                                    </li>
+                                    
+                                </ul>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#lists-checkboxes">Lists &amp; Checkboxes</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#links-images">Links &amp; Images</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#code-blocks">Code Blocks</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#tables">Tables</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#math-formulas-latex">Math Formulas (LaTeX)</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#blockquotes">Blockquotes</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#github-style-alerts">GitHub-Style Alerts</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#footnotes">Footnotes</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/md-example/#horizontal-rules">Horizontal Rules</a>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                </div>
+            </details>
+            
+        </div>
+    </div>
+    
+    <p>Generated by Gemini3 😄</p>
+<h2 id="text-basics">Text Basics</h2>
+<p>You can make text <strong>bold</strong> or <em>italic</em>.
+You can also use <del>strikethrough</del> or highlight <code>inline code</code> variables.</p>
+<h2 id="headings">Headings</h2>
+<p>Acknowledge that we recommend using <code>h1</code> (in markdown, single <code>#</code>) only for the title (that is, the <code>title</code> attribute in front matter). The titles in post content should start with <code>h2</code>.</p>
+<h3 id="h3">h3</h3>
+<h4 id="h4">h4</h4>
+<p><code>h5</code> and <code>h6</code> are not recommended to use. (Actually I didn't implement a style for them lol) Try use lists to replace them.</p>
+<h2 id="lists-checkboxes">Lists &amp; Checkboxes</h2>
+<p><strong>Unordered List:</strong></p>
+<ul>
+<li>Apple</li>
+<li>Banana
+<ul>
+<li>Cavendish</li>
+<li>Plantain</li>
+</ul>
+</li>
+<li>Cherry</li>
+</ul>
+<p><strong>Ordered List:</strong></p>
+<ol>
+<li>Initialize repo</li>
+<li>Stage files</li>
+<li>Commit</li>
+</ol>
+<p><strong>Task List:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Draft content</li>
+<li><input disabled="" type="checkbox"/>
+Review for typos</li>
+<li><input disabled="" type="checkbox"/>
+Publish</li>
+</ul>
+<h2 id="links-images">Links &amp; Images</h2>
+<p><a href="https://www.google.com">Click here for Google</a></p>
+<p><img src="https://via.placeholder.com/150" alt="Placeholder Image" title="Tooltip Text" /></p>
+<h2 id="code-blocks">Code Blocks</h2>
+<p><strong>Python:</strong></p>
+<pre data-lang="python" class="language-python z-code"><code class="language-python" data-lang="python"><span class="z-source z-python"><span class="z-meta z-function z-python"><span class="z-storage z-type z-function z-python"><span class="z-keyword z-declaration z-function z-python">def</span></span> <span class="z-entity z-name z-function z-python"><span class="z-meta z-generic-name z-python">greet</span></span></span><span class="z-meta z-function z-parameters z-python"><span class="z-punctuation z-section z-parameters z-begin z-python">(</span></span><span class="z-meta z-function z-parameters z-python"><span class="z-variable z-parameter z-python">name</span><span class="z-punctuation z-section z-parameters z-end z-python">)</span></span><span class="z-meta z-function z-python"><span class="z-punctuation z-section z-function z-begin z-python">:</span></span>
+</span><span class="z-source z-python">    <span class="z-keyword z-control z-flow z-return z-python">return</span> <span class="z-storage z-type z-string z-python">f</span><span class="z-meta z-string z-interpolated z-python"><span class="z-string z-quoted z-double z-python"><span class="z-punctuation z-definition z-string z-begin z-python">&quot;</span></span></span><span class="z-meta z-string z-interpolated z-python"><span class="z-string z-quoted z-double z-python">Hello, </span><span class="z-meta z-interpolation z-python"><span class="z-punctuation z-section z-interpolation z-begin z-python">{</span><span class="z-source z-python z-embedded"><span class="z-meta z-qualified-name z-python"><span class="z-meta z-generic-name z-python">name</span></span></span></span><span class="z-meta z-interpolation z-python"><span class="z-punctuation z-section z-interpolation z-end z-python">}</span></span><span class="z-string z-quoted z-double z-python">!<span class="z-punctuation z-definition z-string z-end z-python">&quot;</span></span></span>
+</span></code></pre>
+<p><strong>JavaScript:</strong></p>
+<pre data-lang="javascript" class="language-javascript z-code"><code class="language-javascript" data-lang="javascript"><span class="z-source z-ts"><span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">numbers</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span><span class="z-meta z-array z-literal z-ts"> <span class="z-meta z-brace z-square z-ts">[</span><span class="z-constant z-numeric z-decimal z-ts">1</span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-constant z-numeric z-decimal z-ts">2</span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-constant z-numeric z-decimal z-ts">3</span><span class="z-meta z-brace z-square z-ts">]</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span><span class="z-source z-ts"><span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">numbers</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-dom z-ts">forEach</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-arrow z-ts"><span class="z-variable z-parameter z-ts">num</span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> </span><span class="z-meta z-function-call z-ts"><span class="z-support z-class z-console z-ts">console</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-console z-ts">log</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">num</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+</span></code></pre>
+<h2 id="tables">Tables</h2>
+<table><thead><tr><th>Feature</th><th>Supported</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Tables</td><td>Yes</td><td>Pipes and dashes</td></tr>
+<tr><td>Alignment</td><td>Yes</td><td>Colons define it</td></tr>
+<tr><td>Complexity</td><td>Low</td><td>Keep it simple</td></tr>
+</tbody></table>
+<h2 id="math-formulas-latex">Math Formulas (LaTeX)</h2>
+<p>Markdown renders math using LaTeX syntax. Refer to the <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/configure/">configuration post</a> for how to use it.</p>
+<p><strong>Inline:</strong> The mass-energy equivalence is <code>$e=mc^2$</code>.</p>
+<p><strong>Block (Display):</strong></p>
+<pre data-lang="math-display" class="language-math-display z-code"><code class="language-math-display" data-lang="math-display"><span class="z-text z-tex z-math z-display"><span class="z-text z-tex z-math z-display">$</span><span class="z-text z-tex z-math z-display">$</span>
+</span><span class="z-text z-tex z-math z-display"><span class="z-text z-tex z-math z-display">f</span><span class="z-text z-tex z-math z-display">(</span><span class="z-text z-tex z-math z-display">x</span><span class="z-text z-tex z-math z-display">)</span><span class="z-text z-tex z-math z-display">=</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display">n</span><span class="z-text z-tex z-math z-display">t</span><span class="z-text z-tex z-math z-display">_</span><span class="z-text z-tex z-math z-display">{</span><span class="z-text z-tex z-math z-display">-</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display">n</span><span class="z-text z-tex z-math z-display">f</span><span class="z-text z-tex z-math z-display">t</span><span class="z-text z-tex z-math z-display">y</span><span class="z-text z-tex z-math z-display">}</span><span class="z-text z-tex z-math z-display">^</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display">n</span><span class="z-text z-tex z-math z-display">f</span><span class="z-text z-tex z-math z-display">t</span><span class="z-text z-tex z-math z-display">y</span><span class="z-text z-tex z-math z-display"> </span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">h</span><span class="z-text z-tex z-math z-display">a</span><span class="z-text z-tex z-math z-display">t</span><span class="z-text z-tex z-math z-display"> </span><span class="z-text z-tex z-math z-display">f</span><span class="z-text z-tex z-math z-display">(</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">x</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display">)</span><span class="z-text z-tex z-math z-display">e</span><span class="z-text z-tex z-math z-display">^</span><span class="z-text z-tex z-math z-display">{</span><span class="z-text z-tex z-math z-display">2</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">p</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display"> </span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">x</span><span class="z-text z-tex z-math z-display">i</span><span class="z-text z-tex z-math z-display"> </span><span class="z-text z-tex z-math z-display">x</span><span class="z-text z-tex z-math z-display">}</span><span class="z-text z-tex z-math z-display">d</span><span class="z-text z-tex z-math z-display">\</span><span class="z-text z-tex z-math z-display">x</span><span class="z-text z-tex z-math z-display">i</span>
+</span><span class="z-text z-tex z-math z-display"><span class="z-text z-tex z-math z-display">$</span><span class="z-text z-tex z-math z-display">$</span>
+</span></code></pre>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>"Code is like humor. When you have to explain it, it’s bad."
+— <em>Cory House</em></p>
+</blockquote>
+<h2 id="github-style-alerts">GitHub-Style Alerts</h2>
+<blockquote class="markdown-alert-note">
+<p>This is a note useful for the reader.</p>
+</blockquote>
+<blockquote class="markdown-alert-tip">
+<p>Here is a helpful tip to improve your workflow.</p>
+</blockquote>
+<blockquote class="markdown-alert-important">
+<p>This information is crucial for correct functionality.</p>
+</blockquote>
+<blockquote class="markdown-alert-warning">
+<p>Be careful! This action might have side effects.</p>
+</blockquote>
+<blockquote class="markdown-alert-caution">
+<p>This action causes data loss. Proceed with extreme care.</p>
+</blockquote>
+<h2 id="footnotes">Footnotes</h2>
+<p>Here is a sentence with a footnote reference<sup class="footnote-reference" id="fr-1-1"><a href="#fn-1">1</a></sup>.</p>
+<h2 id="horizontal-rules">Horizontal Rules</h2>
+<hr />
+<p>(The line above is a horizontal rule)</p>
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn-1">
+<p>This is the actual footnote content at the bottom of the page. <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
+</section>
+
+  </main>
+  <section class="article-action-block">
+    <!-- AddToAny BEGIN -->
+    <div class="addtoany-block">
+      <a
+        href="https://www.addtoany.com/share#url=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;title=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img class="button" src="https://static.addtoany.com/buttons/a2a.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/mastodon?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;linkname=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/mastodon.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/telegram?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;linkname=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/telegram.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/twitter?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;linkname=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/twitter.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/facebook?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;linkname=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/facebook.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/line?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;md-example&#x2F;&amp;linkname=Markdown Example"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img class="button" src="https://static.addtoany.com/buttons/line.svg"
+      /></a>
+    </div>
+    <!-- AddToAny END -->
+    
+  </section>
+  <br />
+</article>
+
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-content">
+        <span>Based on theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var mask = document.getElementById("sidebar-mask");
+      sidebar.classList.toggle("open");
+      mask.classList.toggle("open");
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById("theme-icon");
+      if (body.getAttribute("data-theme") === "dark") {
+        body.setAttribute("data-theme", "light");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.setAttribute("data-theme", "dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Initialize theme
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.body.setAttribute("data-theme", "dark");
+        // Icon update will happen after DOM load if we put this script at the end, 
+        // but since this is inline at the end of body, we might need to wait for DOMContentLoaded if the icon isn't ready?
+        // Actually, this script is at the end of body, so elements should be parsed.
+        const icon = document.getElementById("theme-icon");
+        if (icon) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+      }
+    })();
+
+    // Footnote Navigation
+    document.addEventListener("DOMContentLoaded", function() {
+        // Code Block Language Label
+        document.querySelectorAll('pre code').forEach(code => {
+            const pre = code.parentElement;
+            if (!pre.hasAttribute('data-lang')) {
+                const classes = code.className.split(' ');
+                for (const cls of classes) {
+                    if (cls.startsWith('language-')) {
+                        pre.setAttribute('data-lang', cls.replace('language-', ''));
+                        break;
+                    }
+                }
+            }
+        });
+    });
+  </script>
+
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+</body>
+
+</html>

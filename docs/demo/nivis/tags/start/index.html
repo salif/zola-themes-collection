@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>start | Nivis</title>
+
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/nivis/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Unwrap code blocks for MathJax
+          // 1. Display Math (```math-display ... ```)
+          document.querySelectorAll('code.language-math-display').forEach(el => {
+              const pre = el.parentElement;
+              if (pre.tagName === 'PRE') {
+                  const math = el.textContent.trim();
+                  const div = document.createElement('div');
+                  div.textContent = math;
+                  pre.replaceWith(div);
+              }
+          });
+
+          // 2. Inline Math (`$ ... $`)
+          document.querySelectorAll('code').forEach(el => {
+              if (el.classList.contains('language-math-display')) return;
+              if (el.parentElement.tagName === 'PRE') return;
+
+              const text = el.textContent.trim();
+              // Check if it looks like math: $...$
+              if (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) {
+                  const span = document.createElement('span');
+                  span.textContent = text;
+                  el.replaceWith(span);
+              }
+          });
+          
+          // Trigger MathJax to process the new elements
+          if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+              MathJax.typesetPromise();
+          }
+      });
+  </script>
+  
+
+  
+<!-- Primary Meta Tags -->
+<meta
+  name="description"
+  content="Start | Nivis"
+/>
+
+<!-- Open Graph / Facebook -->
+<meta
+  property="og:title"
+  content="Start | Nivis"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/nivis/tags/start/" />
+
+<!-- Twitter -->
+
+</head>
+
+<body class="body-block">
+  <div id="sidebar-mask" onclick="toggleSidebar()"></div>
+  
+  <div id="sidebar" class="">
+    <div class="logo-title">
+      <div class="title-inner">
+        
+        <div class="title">
+          <h3><a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Nivis</a></h3>
+          <div class="description">
+            <p>A clean zola theme for bloggers</p>
+          </div>
+        </div>
+      </div>
+      <ul class="social-links">
+        
+        <li>
+          <a href="https://github.com/Resorie/zola-theme-nivis" aria-label="Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        
+      </ul>
+      <div class="sidebar-action">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/">About Me</a>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/">Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/">Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/">Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/">Links</a>
+      </nav>
+    </div>
+  </div>
+  
+
+  <div id="main">
+    
+    <div class="page-top animated fadeInDown">
+      <nav class="nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/" >Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/" >About</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/" >Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/" class="active">Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/" >Links</a>
+      </nav>
+      <div class="information">
+        <div class="back_btn">
+          <a onclick="window.history.go(-1)" aria-label="Go back"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="theme_btn">
+          <a onclick="toggleTheme()" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></a>
+        </div>
+        <div class="feed_btn">
+          <a class="feed-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          <div class="feed-dropdown">
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/atom.xml" target="_blank">Atom</a>
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/rss.xml" target="_blank">RSS</a>
+          </div>
+        </div>
+        <div class="avatar_btn">
+          <a onclick="toggleSidebar()" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="autopagerize_page_element">
+      <div class="content animated fadeIn ">
+        
+<main class="article-list">
+  <div class="ad"> </div>
+  <article class="article-block title-block">
+    <h2 class="heading"><span class="hash">#</span>start</h2>
+    <aside class="page">
+      Page 1 / 1
+    </aside>
+  </article>
+   
+<article class="article-block">  
+  
+  <div class="article-content">
+    <div class="article-header">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/get-start/" class="title-link">
+            <h2 class="heading">Getting Started</h2>
+        </a>
+    </div>
+    
+    <div class="article-summary">
+        <p class="description">getting started with nivis</p>
+    </div>
+
+    <div class="meta-line">
+        
+        
+        
+        <span class="date">Jan. 01, 1980</span>
+        
+        
+        
+        <span class="separator">/</span>
+        <span class="tags">
+        
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/start/">#start</a>
+        
+        </span>
+        
+    </div>
+  </div>
+</article>
+ 
+
+  <div class="ad"> </div>
+
+  <div class="pagination-footer">
+     
+<aside class="paginator">
+        
+  <a class="link -highlight" href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;tags&#x2F;start&#x2F;page&#x2F;1"
+    ><span class="number">1</span></a
+  >
+   
+</aside>
+ 
+  </div>
+</main>
+
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-content">
+        <span>Based on theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var mask = document.getElementById("sidebar-mask");
+      sidebar.classList.toggle("open");
+      mask.classList.toggle("open");
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById("theme-icon");
+      if (body.getAttribute("data-theme") === "dark") {
+        body.setAttribute("data-theme", "light");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.setAttribute("data-theme", "dark");
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Initialize theme
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.body.setAttribute("data-theme", "dark");
+        // Icon update will happen after DOM load if we put this script at the end, 
+        // but since this is inline at the end of body, we might need to wait for DOMContentLoaded if the icon isn't ready?
+        // Actually, this script is at the end of body, so elements should be parsed.
+        const icon = document.getElementById("theme-icon");
+        if (icon) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+      }
+    })();
+
+    // Footnote Navigation
+    document.addEventListener("DOMContentLoaded", function() {
+        // Code Block Language Label
+        document.querySelectorAll('pre code').forEach(code => {
+            const pre = code.parentElement;
+            if (!pre.hasAttribute('data-lang')) {
+                const classes = code.className.split(' ');
+                for (const cls of classes) {
+                    if (cls.startsWith('language-')) {
+                        pre.setAttribute('data-lang', cls.replace('language-', ''));
+                        break;
+                    }
+                }
+            }
+        });
+    });
+  </script>
+
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+</body>
+
+</html>

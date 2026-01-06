@@ -1554,6 +1554,72 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-nivis">nivis</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-nivis.webp"
+        alt="Light mode screenshot of nivis Zola theme demo website"
+        width="1360" height="765" />
+      <img src="./screenshots/dark-nivis.webp"
+        alt="Dark mode screenshot of nivis Zola theme demo website"
+        width="1360" height="765" />
+    <p>A clean zola theme for bloggers</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-nivis">Info</h3>
+<ul>
+<li><strong>Author</strong>: <a rel="noopener" target="_blank" href="https://resorie.github.io/blog/">Resory</a></li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/Resorie/zola-theme-nivis">https://github.com/Resorie/zola-theme-nivis</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://resorie.github.io/blog/">https://resorie.github.io/blog/</a></li>
+<li><strong>Min Zola version</strong>: 0.21.0</li>
+</ul>
+<h3 id="install-nivis">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">nivis</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+      <span>#clean</span>
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/nivis/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://github.com/Resorie/zola-theme-nivis"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-nivis"
+        onclick="document.getElementById('info-nivis').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-kita">Kita</h2>
   <div class="not-prose">
       <img src="./screenshots/light-kita.webp"
@@ -2264,70 +2330,6 @@ Be sure to follow the instructions found on your chosen theme's documentation to
         class="underline"
         href="#info-landing-grid"
         onclick="document.getElementById('info-landing-grid').parentElement.setAttribute('open', true); this.style.display='none';"
-      >Info</a>
-    </div>
-  </div>
-</div>
-<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
-  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-am-zola-theme">AMZola</h2>
-  <div class="not-prose">
-      <img src="./screenshots/light-am-zola-theme.webp"
-        alt="Light mode screenshot of AMZola Zola theme demo website"
-        width="1360" height="765" />
-      <img src="./screenshots/dark-am-zola-theme.webp"
-        alt="Dark mode screenshot of AMZola Zola theme demo website"
-        width="1360" height="765" />
-    <p>A Zola theme</p>
-  </div>
-  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-<h3 id="info-am-zola-theme">Info</h3>
-<ul>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/jel1yspot/am-zola-theme">https://github.com/jel1yspot/am-zola-theme</a></li>
-</ul>
-<h3 id="install-am-zola-theme">Installation</h3>
-<p>Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
-<ol start="0">
-<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
-<li>Download the theme</li>
-</ol>
-<ul>
-<li>Option A: Add the theme as a git submodule:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://github.com/Jel1ySpot/am-zola-theme.git themes/am-zola-theme
-</span></code></pre>
-<ul>
-<li>Option B: Clone the theme into your themes directory:</li>
-</ul>
-<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://github.com/Jel1ySpot/am-zola-theme.git themes/am-zola-theme
-</span></code></pre>
-<ol start="2">
-<li>Enable the theme in your <code>config.toml</code></li>
-</ol>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">am-zola-theme</span><span style="color:#556633;">&quot;
-</span></code></pre>
-</details>
-  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
-    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
-      <span>#blog</span>
-      <span>#minimal</span>
-    </div>
-    <div class="flex flex-wrap gap-x-2">
-      <a
-        class="underline"
-        href="./demo/am-zola-theme/"
-        target="_blank"
-      >Live Preview</a>
-      <a
-        class="underline"
-        href="https://github.com/Jel1ySpot/am-zola-theme"
-        target="_blank"
-      >Repository</a>
-      <a
-        class="underline"
-        href="#info-am-zola-theme"
-        onclick="document.getElementById('info-am-zola-theme').parentElement.setAttribute('open', true); this.style.display='none';"
       >Info</a>
     </div>
   </div>
@@ -4276,6 +4278,69 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   </div>
 </div>
 <div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
+  <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-portio-zola">Portio-Zola</h2>
+  <div class="not-prose">
+      <img src="./screenshots/light-portio-zola.webp"
+        alt="Light mode screenshot of Portio-Zola Zola theme demo website"
+        width="1360" height="765" />
+    <p>Portio-Zola is a minimal, well-formatted and extremely flexible theme</p>
+  </div>
+  <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+<h3 id="info-portio-zola">Info</h3>
+<ul>
+<li><strong>Author</strong>: Quentin Rodriguez</li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a rel="noopener" target="_blank" href="https://github.com/quentin-rodriguez/portio-zola.git">https://github.com/quentin-rodriguez/portio-zola.git</a></li>
+<li><strong>Main Live Preview</strong>: <a rel="noopener" target="_blank" href="https://staticmania.com/">https://staticmania.com/</a></li>
+<li><strong>Min Zola version</strong>: 0.20.0</li>
+<li><strong>Original</strong>: <a rel="noopener" target="_blank" href="https://github.com/StaticMania/portio-hugo.git">https://github.com/StaticMania/portio-hugo.git</a></li>
+</ul>
+<h3 id="install-portio-zola">Installation</h3>
+<p>Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.</p>
+<ol start="0">
+<li>Create a new Zola site: <code>zola init</code> and initialize a Git repository: <code>git init</code></li>
+<li>Download the theme</li>
+</ol>
+<ul>
+<li>Option A: Add the theme as a git submodule:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> submodule add https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
+</span></code></pre>
+<ul>
+<li>Option B: Clone the theme into your themes directory:</li>
+</ul>
+<pre data-lang="sh" style="background-color:#151515;color:#e8e8d3;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#ffb964;">git</span><span> clone https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
+</span></code></pre>
+<ol start="2">
+<li>Enable the theme in your <code>config.toml</code></li>
+</ol>
+<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#ffb964;">theme </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">portio-zola</span><span style="color:#556633;">&quot;
+</span></code></pre>
+</details>
+  <div class="not-prose my-2 flex flex-wrap items-center justify-between">
+    <div class="flex flex-wrap gap-x-2 text-sm opacity-80">
+    </div>
+    <div class="flex flex-wrap gap-x-2">
+      <a
+        class="underline"
+        href="./demo/portio-zola/"
+        target="_blank"
+      >Live Preview</a>
+      <a
+        class="underline"
+        href="https://codeberg.org/quentin-rodriguez/portio-zola"
+        target="_blank"
+      >Repository</a>
+      <a
+        class="underline"
+        href="#info-portio-zola"
+        onclick="document.getElementById('info-portio-zola').parentElement.setAttribute('open', true); this.style.display='none';"
+      >Info</a>
+    </div>
+  </div>
+</div>
+<div class="text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
   <h2 class="not-prose my-2 text-xl font-bold text-black dark:text-white" id="theme-martinique">Martinique</h2>
   <div class="not-prose">
       <img src="./screenshots/light-martinique.webp"
@@ -4795,7 +4860,7 @@ Be sure to follow the instructions found on your chosen theme's documentation to
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2024">2024</time> - <time datetime="2025">2025</time>
+  © <time datetime="2024">2024</time> - <time datetime="2026">2026</time>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

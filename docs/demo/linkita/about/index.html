@@ -202,12 +202,12 @@
 Linkita is based on <a href="https://github.com/st1020/kita">Kita</a>
 and <a href="https://github.com/nanxiaobei/hugo-paper">Hugo-Paper</a> and is multilingual and SEO friendly.</p>
 <ul>
-<li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a>
-and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
-<li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
 <li>See the <a href="https://github.com/salif/linkita-start">quickstart repository</a>.</li>
 <li>See a <a href="https://salif.github.io/linkita/">live preview</a> and
 <a href="https://codeberg.org/salif/linkita-demo">its source code</a>.</li>
+<li>Open bug reports and feature requests on <a href="https://codeberg.org/salif/linkita/issues">Codeberg</a>.</li>
+<li>The source code is available on <a href="https://codeberg.org/salif/linkita">Codeberg</a>
+and mirrored on <a href="https://github.com/salif/linkita">GitHub</a>.</li>
 </ul>
 <h2 id="features">Features</h2>
 <ul>
@@ -268,7 +268,7 @@ This gives you a complete blog setup with all the essential configuration ready 
 <p>If you use the <code>linkita</code> branch of the theme, check the
 <a href="https://codeberg.org/salif/linkita/src/branch/linkita/changelog/linkita.md">changelog/linkita.md</a> file.<br />
 Otherwise, find the changelog file for your version in the <code>changelog</code> directory.</p>
-<p>If you switch to newer version, there may be breaking changes that require manual involvement.</p>
+<p>If you switch to a newer version, there may be breaking changes that require manual involvement.</p>
 <h2 id="usage">Usage</h2>
 <p>Linkita uses the following front matter variables.
 All variables are optional.
@@ -296,9 +296,9 @@ Set the ones you need.</p>
 </span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#ffb964;">description </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span style="color:#888888;"># The date of the post
-</span><span style="color:#ffb964;">date </span><span>= </span><span style="color:#7697d6;">2025-12-30
+</span><span style="color:#ffb964;">date </span><span>= </span><span style="color:#7697d6;">2026-12-30
 </span><span style="color:#888888;"># The last updated date of the post
-</span><span style="color:#ffb964;">updated </span><span>= </span><span style="color:#7697d6;">2025-12-31
+</span><span style="color:#ffb964;">updated </span><span>= </span><span style="color:#7697d6;">2026-12-31
 </span><span>
 </span><span>[</span><span style="color:#ffb964;">taxonomies</span><span>]
 </span><span style="color:#ffb964;">categories </span><span>= []
@@ -350,7 +350,7 @@ For French, the file name is <code>content/_index.fr.md</code>.</p>
 <p>Create a <code>content/blog/hello.md</code> file:</p>
 <pre data-lang="md" data-name="content/blog/hello.md" style="background-color:#151515;color:#e8e8d3;" class="language-md "><code class="language-md" data-lang="md" data-name="content/blog/hello.md"><span>+++
 </span><span>title = &quot;Title&quot;
-</span><span>date = 2025-12-30
+</span><span>date = 2026-12-30
 </span><span>+++
 </span><span>
 </span><span>Summary </span><span style="color:#888888;">&lt;!-- more --&gt;
@@ -396,7 +396,7 @@ If you choose this option you should set taxonomies in each post.</p>
 </span><span>+++
 </span></code></pre>
 <h3 id="inject-support">Inject support</h3>
-<p>You can easily use inject to add new features to your side without modifying the theme itself.</p>
+<p>You can easily use inject to add new features to your site without modifying the theme itself.</p>
 <p>To use inject, you need to add some HTML files to the <code>templates/injects</code> directory.</p>
 <p>The available inject points are: <code>head.html</code>, <code>head_end.html</code>, <code>header_nav.html</code>,
 <code>body_start.html</code>, <code>body_end.html</code>, <code>page_start.html</code>, <code>page_end.html</code>, <code>footer.html</code>.</p>
@@ -525,7 +525,7 @@ You can customize this behavior using the <code>extra.taxonomy_sorting</code> va
 </span><span style="color:#888888;"># Default value: false
 </span><span style="color:#ffb964;">use_cdn </span><span>= false
 </span><span>
-</span><span style="color:#888888;"># Use relative urls.
+</span><span style="color:#888888;"># Use relative URLs.
 </span><span style="color:#888888;"># It doesn&#39;t apply for content yet.
 </span><span style="color:#888888;"># Default value: false
 </span><span style="color:#ffb964;">relative_urls </span><span>= false
@@ -616,7 +616,7 @@ instead of <code>$BASE_URL</code>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#888888;"># Replace &quot;your_username&quot; with your username.
 </span><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">profiles</span><span>.</span><span style="color:#ffb964;">your_username</span><span>]
 </span><span>
-</span><span style="color:#888888;"># The URL of avatar.
+</span><span style="color:#888888;"># The URL of the avatar.
 </span><span style="color:#888888;"># e.g. &quot;icons/github.svg&quot;
 </span><span style="color:#ffb964;">avatar_url </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
@@ -670,7 +670,7 @@ instead of <code>$BASE_URL</code>.</p>
 <pre data-lang="toml" data-name="config.toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="config.toml"><span style="color:#888888;"># Replace &quot;your_username&quot; with your username.
 </span><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">profiles</span><span>.</span><span style="color:#ffb964;">your_username</span><span>.</span><span style="color:#ffb964;">open_graph</span><span>]
 </span><span>
-</span><span style="color:#888888;"># The URL of social image.
+</span><span style="color:#888888;"># The URL of the social image.
 </span><span style="color:#ffb964;">image </span><span>= </span><span style="color:#556633;">&quot;&quot;
 </span><span>
 </span><span style="color:#888888;"># A description of what is in the social image.
@@ -835,7 +835,7 @@ Only available when <code>extra.comment</code> in the front matter or <code>extr
 </span></code></pre>
 <h2 id="contributing">Contributing</h2>
 <p>This project is under the <a href="https://codeberg.org/salif/linkita/src/branch/linkita/LICENSE">MIT License</a>.</p>
-<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">Github</a>.
+<p>Pull requests are welcome on <a href="https://codeberg.org/salif/linkita">Codeberg</a> and <a href="https://github.com/salif/linkita">GitHub</a>.
 The main branch is <code>linkita</code>.</p>
 <h3 id="localization">Localization</h3>
 <p>Feel free to contribute new translations or improve existing ones.</p>
@@ -846,7 +846,7 @@ See <a href="https://localizely.com/iso-639-1-list/">ISO 639-1</a> codes.</p>
 </span></code></pre>
 <p>See also the <code>static/i18n/menu.json</code> file and
 the <a href="https://codeberg.org/salif/linkita-demo">demo repository</a>.</p>
-<p>Live preview is available in following languages:</p>
+<p>Live preview is available in the following languages:</p>
 <p><a href="https://salif.github.io/linkita/ar/">Arabic</a>,
 <a href="https://salif.github.io/linkita/bg/">Bulgarian</a>,
 <a href="https://salif.github.io/linkita/cs/">Czech</a>,
@@ -871,8 +871,7 @@ the <a href="https://codeberg.org/salif/linkita-demo">demo repository</a>.</p>
 <p>Linkita is one of several Zola themes I maintain.
 Other themes include:</p>
 <ul>
-<li><a href="https://codeberg.org/salif/tukan">Tukan</a> – Fork of zola-blog-theme, inspired from Toucan theme.</li>
-<li><a href="https://codeberg.org/salif/trankwilo">Trankwilo</a> – Fork of the Goyo theme, for documentation.</li>
+<li><a href="https://codeberg.org/salif/tukan">Tukan</a> – Fork of zola-blog-theme, inspired by the Toucan theme.</li>
 </ul>
 
 </section>
@@ -882,7 +881,7 @@ Other themes include:</p>
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2025">2025</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

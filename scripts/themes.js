@@ -3,18 +3,6 @@ import fs from "fs"
 import path from "path"
 import { execa } from "execa"
 
-const demoRepoThemes = new Map([
-	["linkita", "https://codeberg.org/salif/linkita.git"],
-	["tabi", "https://github.com/welpo/tabi.git"],
-	["serene", "https://github.com/isunjn/serene.git"],
-	["project-portfolio", "https://codeberg.org/winterstein/zola-theme-project-portfolio.git"],
-	["daisy", "https://codeberg.org/winterstein/zola-theme-daisy.git"],
-	["noobping", "https://github.com/noobping/zola-theme.git"],
-	["rilling_dev", "https://github.com/RillingDev/rilling.dev_theme.git"],
-	["landing-grid", "https://github.com/fastup-one/landing-grid-zola.git"],
-])
-
-
 let cmds = {}
 const errors = []
 const warnings = []
@@ -136,23 +124,22 @@ function readThemeInfo(theme, TOML) {
 	if (!theme.path.startsWith("themes/")) return
 	const themeName = theme.path.substring(7)
 	const themeInfo = {}
-	if (demoRepoThemes.has(themeName)) {
-		themeInfo.clone = demoRepoThemes.get(themeName)
+	let themeTomlPath
+	if (theme.tu) {
+		themeInfo.clone = theme.tu
+		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml")
 	} else {
 		themeInfo.clone = theme.url
+		themeTomlPath = path.join(theme.path, "theme.toml")
 	}
 	themeInfo.repo = themeInfo.clone.endsWith(".git") ?
 		themeInfo.clone.substring(0, themeInfo.clone.length - 4) :
 		themeInfo.clone
-	let themeTomlPath = path.join(theme.path, "theme.toml")
-	if (!fs.existsSync(themeTomlPath)) {
-		themeTomlPath = path.join(theme.path, "themes", themeName, "theme.toml")
-	}
+
 	const themeToml = TOML.parse(fs.readFileSync(themeTomlPath, "utf8"))
 	themeInfo.name = IfFalseIfTrue(themeToml.name, themeName, themeToml.name)
 	themeInfo.description = IfFalseIfTrue(themeToml.description, "", themeToml.description)
 	themeInfo.tags = (undefined == themeToml.tags || !Array.isArray(themeToml.tags)) ? [] : themeToml.tags
-	themeInfo.license = themeToml.license
 	themeInfo.homepage = IfFalseIfTrue(themeToml.homepage, themeInfo.repo, themeToml.homepage)
 	themeInfo.demo = themeToml.demo
 	themeInfo.minVersion = themeToml.min_version
@@ -161,6 +148,13 @@ function readThemeInfo(theme, TOML) {
 	themeInfo.originalRepo = themeToml.original?.repo
 	if (themeInfo.authorHomepage && !themeInfo.authorHomepage.includes("://")) {
 		themeInfo.authorHomepage = "https://" + themeInfo.authorHomepage
+	}
+	if (themeToml.license) {
+		themeInfo.license = themeToml.license
+	} else if (themeToml.licence) {
+		themeInfo.license = themeToml.licence
+	} else {
+		errors.push(`${theme.path} license is undefined`)
 	}
 	const themeDetails = `<details style='display: inline-block;'><summary class='not-prose' ` +
 		`style='list-style-type: none; display: none;'></summary>
