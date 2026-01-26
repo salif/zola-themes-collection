@@ -2,67 +2,82 @@
 
 set unstable := true
 
-demo_base_url := "https://salif.github.io/zola-themes-collection/demo/"
-local_base_url := "http://127.0.0.1:1111/demo/"
+public_base_prefix := "https://salif.github.io/zola-themes-collection/demo/"
+local_base_prefix := "http://127.0.0.1:1111/demo/"
 browser := "chromium"
-font := "Roboto"
 ext := "webp"
+font := "Roboto"
 this_file := source_file()
 this := just_executable() + " -f " + quote(this_file)
 scripts := source_directory() / "scripts"
 node_modules := scripts / "node_modules"
+bin := scripts / ".bin"
+zola_version := "0.22.1"
 
-# export PATH := node_modules / ".bin" + PATH_VAR_SEP + env_var("PATH")
+export PATH := bin / zola_version + PATH_VAR_SEP + node_modules / ".bin" + PATH_VAR_SEP + env_var("PATH")
 
-_: && check-commands
+_:
     @{{ this }} --list --unsorted
 
-[private]
-[script("bash")]
-check-commands:
-    set -eu
-    COMMANDS=(git zola node cwebp);
-    for COMMAND in "${COMMANDS[@]}"; do
-        if ! command -v "${COMMAND}" 2>&1 >/dev/null; then
-            printf "%sWarning: '%s' is not installed or not in PATH\n%s%s\n" \
-                "{{ style("warning") }}" "${COMMAND}" \
-                "Try 'npm install' inside 'scripts' directory" "{{ NORMAL }}" >&2;
-        fi;
-    done;
+[group("help")]
+[script("node")]
+status_short:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setArgs({
+        local_base_prefix: "{{ local_base_prefix }}", public_base_prefix: "{{ public_base_prefix }}",
+        bin: "{{ bin }}", browser: "{{ browser }}", ext: "{{ ext }}", font: "{{ font }}",
+    })
+    m.justStatusShort()
+
+[group("help")]
+[script("node")]
+status:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.justStatus()
 
 [group("build")]
 [script("node")]
-demo-checkbuild-all:
-    import {buildDemoAll} from "{{ scripts }}/themes.js";
-    buildDemoAll("{{ local_base_url }}", false, {zola: "zola"});
+demo_build path base_prefix=public_base_prefix:
+    import { ThemeManager, Do } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({bin: "{{ bin }}"})
+    m.justDemoBuild("{{ path }}", Do.INSTALL)
 
 [group("build")]
 [script("node")]
-demo-checkbuild path:
-    import {buildDemo} from "{{ scripts }}/themes.js";
-    buildDemo("{{ path }}", "{{ local_base_url }}", false, {zola: "zola"});
+demo_build_all base_prefix=public_base_prefix:
+    import { ThemeManager, Do } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({bin: "{{ bin }}"})
+    m.justDemoBuildAll(Do.INSTALL)
 
 [group("build")]
 [script("node")]
-demo-build-all base_url=demo_base_url:
-    import {buildDemoAll} from "{{ scripts }}/themes.js";
-    buildDemoAll("{{ base_url }}", true, {zola: "zola"});
+check_build path base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({bin: "{{ bin }}"})
+    const [exitCode, version] = m.justCheckBuild("{{ path }}")
+    console.log("VERSION {{ path }}: " + version)
+    process.exit(exitCode)
 
 [group("build")]
 [script("node")]
-demo-build path base_url=demo_base_url:
-    import {buildDemo} from "{{ scripts }}/themes.js";
-    buildDemo("{{ path }}", "{{ base_url }}", true, {zola: "zola"});
+check_build_all base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({bin: "{{ bin }}"})
+    m.justCheckBuildAll()
 
 [group("build")]
 [script("node")]
-update-data:
-    import {updateData} from "{{ scripts }}/themes.js";
-    updateData();
-
-[group("build")]
-[script("node")]
-remove-demo-all:
+demo_remove_all:
     import fs from "fs"
     import path from "path"
     const demos = fs.readdirSync(path.resolve("static", "demo"),
@@ -72,59 +87,88 @@ remove-demo-all:
         fs.rmSync(path.join(demo.parentPath, demo.name), { recursive: true, force: true })
     }
 
-[group("screenshot")]
-[private]
+[group("build")]
 [script("node")]
-screenshot-changed mode:
-    import {execaSync} from "{{node_modules}}/execa/index.js"
-    const themes = await execaSync`git diff --cached --name-only`
-    themes.stdout.split("\n").filter(e=>e.startsWith("themes/")).forEach(e=>{
-        const theme = e.substr("themes/".length)
-        execaSync({verbose: 'full'})("{{just_executable()}}", ["browser=brave", "screenshot", theme, "{{mode}}"])
+data_update:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ public_base_prefix }}")
+    m.setArgs({bin: "{{ bin }}", ext: "{{ ext }}"})
+    m.justDataUpdate()
+
+[group("screenshot")]
+[script("node")]
+screenshot_changed mode browser=browser base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({browser: "{{ browser }}", ext: "{{ ext }}", font: "{{ font }}"})
+    m.getChangedThemes().forEach(theme => {
+        m.justScreenshot(theme.path, "{{ mode }}")
     })
 
 [group("screenshot")]
-screenshot-all-dark url=local_base_url: (screenshot-all "dark" url)
-
-[group("screenshot")]
-screenshot-all-light url=local_base_url: (screenshot-all "light" url)
-
-[group("screenshot")]
-[private]
-screenshot-all mode="dark" url=local_base_url:
-    find static/demo -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | xargs -I {} \
-        {{ this }} screenshot '{}' '{{ mode }}' '{{ url }}'
-
-[group("screenshot")]
-screenshot name mode="dark" url=local_base_url:
-    {{ browser }} --headless --screenshot=/tmp/ztc.png \
-        --hide-scrollbars --system-font-family="{{ font }}" --window-size=1360,888 "{{ url }}{{ name }}/"
-    cwebp -lossless -crop 0 0 1360 765 /tmp/ztc.png -o "static/screenshots/{{ mode }}-{{ name }}.{{ ext }}"
-    rm -f /tmp/ztc.png
+[script("node")]
+screenshot_all_dark browser=browser base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({browser: "{{ browser }}", ext: "{{ ext }}", font: "{{ font }}"})
+    m.themes.forEach(theme => {
+        m.justScreenshot(theme.path, "dark")
+    })
 
 [group("screenshot")]
 [script("node")]
-screenshots-to-fix:
-    import {checkScreenshots} from "{{ scripts }}/themes.js";
-    checkScreenshots(".{{ ext }}");
+screenshot_all_light browser=browser base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({browser: "{{ browser }}", ext: "{{ ext }}", font: "{{ font }}"})
+    m.themes.forEach(theme => {
+        m.justScreenshot(theme.path, "light")
+    })
+
+[group("screenshot")]
+[script("node")]
+screenshot path mode browser=browser base_prefix=local_base_prefix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    m.setBasePrefix("{{ base_prefix }}")
+    m.setArgs({browser: "{{ browser }}", ext: "{{ ext }}", font: "{{ font }}"})
+    m.justScreenshot("{{ path }}", "{{ mode }}")
+
+[group("screenshot")]
+[script("node")]
+screenshots_to_fix:
+    import { ThemeManager } from "{{ scripts }}/ThemeManager.js"
+    const m = new ThemeManager()
+    const [toAdd, toDelete] = m.checkScreenshots(".{{ ext }}")
+    m.printCheckedScreenshots(toAdd, toDelete)
 
 [group("build")]
-local-test-all: (demo-build-all local_base_url) update-data
+local_test_all: (demo_build_all local_base_prefix) data_update
     zola serve
 
 [confirm]
 [private]
-docker-build:
+docker_build:
     docker build -t zola-ztc -f Dockerfile .
 
 [private]
-docker-test:
+docker_test:
     docker run --rm -v "$PWD:/src" \
     zola-ztc:latest sh -c \
         "just"
 
 [group("help")]
-submodule-remove path: && screenshots-to-fix
+install_zola version=zola_version ar='x86_64-unknown-linux-gnu':
+    mkdir -p "{{ bin }}/{{ version }}"
+    curl -s -L "https://github.com/getzola/zola/releases/download/v{{ version }}/zola-v{{ version }}-{{ ar }}.tar.gz" | \
+        tar xvzf - -C "{{ bin }}/{{ version }}"
+
+[group("help")]
+submodule_remove path: && screenshots_to_fix
     @git diff --quiet .gitmodules
     test -d '{{ path }}'
     git submodule deinit -f '{{ path }}'
@@ -140,19 +184,26 @@ submodule-add url name:
     git submodule add -- '{{ url }}' 'themes/{{ name }}'
     git config -f .gitmodules submodule.'themes/{{ name }}'.ignore dirty
     git config -f .gitmodules submodule.'themes/{{ name }}'.color both
-    {{ this }} demo-checkbuild 'themes/{{ name }}'
+    git config -f .gitmodules submodule.'themes/{{ name }}'.zola {{ zola_version }}
+    {{ this }} check_build 'themes/{{ name }}'
     git add .gitmodules
 
 [group("help")]
-submodule-update-all:
+submodule_update_all:
     @git diff --quiet .gitmodules
     git submodule update --remote
     git submodule foreach --recursive git submodule update --init
     git submodule summary
 
+[group("help")]
+submodule_dates:
+    for t in themes/*; do \
+        git log --diff-filter=A --pretty=format:"%ad" --date=short -- "$t"; \
+    done
+
 [group("push")]
 [script("node")]
-fix-public-dir:
+fix_public_dir:
     import fs from "fs"
     const filesToDelete = fs.globSync(["docs/demo/**/*.mp4", "docs/demo/**/*.webm", "docs/demo/*/robots.txt"])
     for (const fileToDelete of filesToDelete) {
@@ -162,20 +213,20 @@ fix-public-dir:
 
 [confirm]
 [group("push")]
-gh-pages: && remove-demo-all (demo-build-all demo_base_url) screenshots-to-fix update-data gh-pages-2
+gh_pages: && demo_remove_all (demo_build_all public_base_prefix) screenshots_to_fix data_update gh_pages_2
     git diff --cached --quiet
     git switch gh-pages
     git merge main -X theirs --no-ff --no-commit
 
 [group("push")]
 [private]
-gh-pages-2: && fix-public-dir gh-pages-3
+gh_pages_2: && fix_public_dir gh_pages_3
     rm -rf docs
     zola build -o docs
 
 [group("push")]
 [private]
-gh-pages-3:
+gh_pages_3:
     git add docs
     git merge --continue
     git push
