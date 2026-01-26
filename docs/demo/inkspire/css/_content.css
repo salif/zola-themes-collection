@@ -1,0 +1,541 @@
+/* ==========================================================================
+   CONTENT STYLES - Style Guide Elements
+   ==========================================================================
+
+   Styles for markdown content elements including typography, code blocks,
+   tables, blockquotes, lists, and media elements.
+   ========================================================================== */
+
+/* ==========================================================================
+   TYPOGRAPHY - Headings
+   ========================================================================== */
+
+.content h1 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--space-6);
+}
+
+.content h2 {
+    font-size: var(--font-size-3xl);
+    border-bottom: 2px solid var(--theme-border-light);
+    padding-bottom: var(--space-3);
+    margin-top: var(--space-12);
+}
+
+.content h3 {
+    font-size: var(--font-size-xl);
+    margin-top: var(--space-8);
+}
+
+.content h4 {
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-6);
+}
+
+.content h5 {
+    font-size: var(--font-size-md);
+}
+
+.content h6 {
+    font-size: var(--font-size-base);
+    color: var(--theme-text-secondary);
+}
+
+/* ==========================================================================
+   PARAGRAPHS & TEXT
+   ========================================================================== */
+
+.content p {
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
+    color: var(--theme-body-color);
+    margin-bottom: var(--space-5);
+}
+
+.content strong {
+    font-weight: var(--font-weight-semibold);
+    color: var(--theme-text-primary);
+}
+
+.content em {
+    font-style: italic;
+}
+
+.content del {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   LINKS
+   ========================================================================== */
+
+.content a {
+    color: var(--theme-link-color);
+    text-decoration: none;
+    font-weight: var(--theme-link-weight);
+    transition: color var(--theme-transition-fast) var(--theme-transition-ease);
+    border-bottom: 1px solid transparent;
+}
+
+.content a:hover {
+    color: var(--theme-link-hover);
+    border-bottom-color: var(--theme-link-hover);
+}
+
+/* ==========================================================================
+   HORIZONTAL RULE
+   ========================================================================== */
+
+.content hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--theme-border-default) 20%,
+        var(--theme-border-default) 80%,
+        transparent
+    );
+    margin: var(--space-16) 0;
+}
+
+/* ==========================================================================
+   LISTS
+   ========================================================================== */
+
+.content ul,
+.content ol {
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-8);
+}
+
+.content ul {
+    list-style-type: disc;
+}
+
+.content ol {
+    list-style-type: decimal;
+}
+
+.content li {
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
+    color: var(--theme-body-color);
+    margin-bottom: var(--space-2);
+}
+
+.content li > ul,
+.content li > ol {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+/* Nested lists */
+.content ul ul {
+    list-style-type: circle;
+}
+
+.content ul ul ul {
+    list-style-type: square;
+}
+
+/* Task lists */
+.content ul.task-list,
+.content ul:has(> li > input[type="checkbox"]) {
+    list-style-type: none;
+    padding-left: var(--space-4);
+}
+
+.content ul.task-list li,
+.content ul:has(> li > input[type="checkbox"]) li {
+    position: relative;
+    padding-left: 0;
+}
+
+.content ul li input[type="checkbox"] {
+    margin-right: var(--space-3);
+    cursor: pointer;
+    width: 1.125rem;
+    height: 1.125rem;
+    accent-color: var(--theme-primary);
+}
+
+/* ==========================================================================
+   DEFINITION LISTS
+   ========================================================================== */
+
+.content dl {
+    margin-bottom: var(--theme-content-gap);
+}
+
+.content dt {
+    font-weight: var(--font-weight-semibold);
+    color: var(--theme-text-primary);
+    margin-top: var(--space-4);
+}
+
+.content dd {
+    margin-left: var(--space-6);
+    margin-bottom: var(--space-3);
+    color: var(--theme-body-color);
+}
+
+/* ==========================================================================
+   BLOCKQUOTES & CALLOUTS
+   ========================================================================== */
+
+.content blockquote {
+    position: relative;
+    margin: var(--space-8) 0;
+    padding: var(--space-6) var(--space-8);
+    background: var(--theme-bg-secondary);
+    border-left: 4px solid var(--theme-primary);
+    border-radius: var(--radius-md);
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
+}
+
+.content blockquote p {
+    margin-bottom: var(--space-4);
+}
+
+.content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Callout variations based on emoji */
+.content blockquote p:first-child:has(+ p) {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+}
+
+/* Info callout (ℹ️) */
+.content blockquote:has(p:first-child:contains("ℹ️")) {
+    background: #eff6ff;
+    border-left-color: #3b82f6;
+}
+
+/* Success callout (✅) */
+.content blockquote:has(p:first-child:contains("✅")) {
+    background: #f0fdf4;
+    border-left-color: #22c55e;
+}
+
+/* Warning callout (⚠️) */
+.content blockquote:has(p:first-child:contains("⚠️")) {
+    background: #fffbeb;
+    border-left-color: #f59e0b;
+}
+
+/* Error callout (🚫) */
+.content blockquote:has(p:first-child:contains("🚫")) {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+/* ==========================================================================
+   CODE - Inline & Blocks
+   ========================================================================== */
+
+/* Inline code */
+.content code {
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
+    background: var(--theme-bg-secondary);
+    color: var(--theme-primary);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--theme-border-light);
+}
+
+/* Code blocks */
+.content pre {
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #1e293b !important;
+}
+
+.content pre code {
+    display: block;
+    padding: var(--space-6);
+    background: transparent !important;
+    color: #e2e8f0;
+    border: none;
+    border-radius: 0;
+    overflow-x: auto;
+    line-height: 1.7;
+    font-size: var(--font-size-sm);
+    tab-size: 4;
+    font-family: var(--font-family-mono);
+}
+
+/* Zola's syntax highlighting uses inline styles, so we need !important */
+.content pre code[data-lang]::before {
+    content: attr(data-lang);
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    margin: calc(-1 * var(--space-6)) calc(-1 * var(--space-6)) var(--space-4);
+    background: #0f172a;
+    color: #94a3b8;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    border-bottom: 1px solid #334155;
+}
+
+/* ==========================================================================
+   SYNTAX HIGHLIGHTING
+   ==========================================================================
+
+   Zola uses syntect for syntax highlighting with inline styles.
+   The highlight_theme in config.toml controls the color scheme.
+   Current theme: base16-ocean-dark
+   ========================================================================== */
+
+/* Scrollbar for code blocks */
+.content pre code::-webkit-scrollbar {
+    height: 8px;
+}
+
+.content pre code::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+.content pre code::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+.content pre code::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+.content table {
+    width: 100%;
+    margin: var(--space-8) 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.content thead {
+    background: var(--theme-button-bg);
+    color: var(--theme-button-color);
+}
+
+.content th {
+    padding: var(--space-4) var(--space-6);
+    font-weight: var(--font-weight-semibold);
+    text-align: left;
+    font-size: var(--font-size-sm);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.content td {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--theme-body-size);
+    color: var(--theme-body-color);
+    border-top: 1px solid var(--theme-border-light);
+}
+
+.content tbody tr {
+    background: var(--theme-bg-primary);
+    transition: background var(--theme-transition-fast)
+        var(--theme-transition-ease);
+}
+
+.content tbody tr:hover {
+    background: var(--theme-bg-secondary);
+}
+
+.content tbody tr:nth-child(even) {
+    background: var(--theme-bg-secondary);
+}
+
+.content tbody tr:nth-child(even):hover {
+    background: var(--color-gray-200);
+}
+
+/* Table alignment */
+.content th[align="center"],
+.content td[align="center"] {
+    text-align: center;
+}
+
+.content th[align="right"],
+.content td[align="right"] {
+    text-align: right;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+    .content table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* ==========================================================================
+   DETAILS / TOGGLE
+   ========================================================================== */
+
+.content details {
+    margin: var(--space-8) 0;
+    padding: var(--space-6);
+    background: var(--theme-bg-secondary);
+    border: 1px solid var(--theme-border-default);
+    border-radius: var(--radius-lg);
+}
+
+.content details summary {
+    font-weight: var(--font-weight-semibold);
+    color: var(--theme-text-primary);
+    cursor: pointer;
+    user-select: none;
+    padding: var(--space-2) var(--space-4);
+    margin: calc(-1 * var(--space-2)) calc(-1 * var(--space-4));
+    border-radius: var(--radius-md);
+    transition: background var(--theme-transition-fast)
+        var(--theme-transition-ease);
+}
+
+.content details summary:hover {
+    background: var(--color-gray-200);
+}
+
+.content details summary::marker {
+    color: var(--theme-primary);
+}
+
+.content details[open] summary {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--theme-border-light);
+}
+
+.content details[open] {
+    padding-bottom: var(--space-6);
+}
+
+/* ==========================================================================
+   MEDIA - Images, Video, Audio
+   ========================================================================== */
+
+/* Images */
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    margin: var(--space-8) 0;
+    box-shadow: var(--shadow-md);
+}
+
+.content figure {
+    margin: var(--space-8) 0;
+}
+
+.content figure img {
+    margin: 0;
+}
+
+.content figcaption {
+    margin-top: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--theme-text-tertiary);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Video embeds */
+.content .video-wrapper,
+.content iframe {
+    max-width: 100%;
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.content iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* Audio player */
+.content audio {
+    width: 100%;
+    margin: var(--space-8) 0;
+    border-radius: var(--radius-lg);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .content h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .content h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .content h4,
+    .content h5,
+    .content h6 {
+        font-size: var(--font-size-base);
+    }
+
+    .content p,
+    .content li {
+        font-size: var(--font-size-base);
+    }
+
+    .content pre code {
+        font-size: var(--font-size-xs);
+        padding: var(--space-4);
+    }
+
+    .content blockquote {
+        padding: var(--space-4) var(--space-6);
+    }
+}
+
+/* ==========================================================================
+   UTILITY CLASSES FOR CONTENT
+   ========================================================================== */
+
+/* Center content */
+.content .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Max width constraints */
+.content .max-w-md {
+    max-width: 768px;
+}
+
+.content .max-w-lg {
+    max-width: 1024px;
+}
+
+.content .max-w-xl {
+    max-width: 1280px;
+}

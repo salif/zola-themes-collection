@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Zola vs Hugo: Choosing Between Two Speed Demons</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Zola vs Hugo: Choosing Between Two Speed Demons</h1>
+    </header>
+    <div class="container content"><p>When you're picking a static site generator and performance matters, the conversation usually narrows down to two contenders: Hugo and Zola. Both are exceptionally fast, both compile to single binaries, and both can handle large sites without breaking a sweat. So how do you choose?</p>
+<h2 id="the-single-binary-promise">The Single Binary Promise</h2>
+<p>Let's start with what they share: neither Hugo nor Zola requires you to install a language runtime. No npm, no Ruby gems, no Python virtual environments. You download a binary, add it to your path, and you're building sites. This is a massive advantage over Jekyll or Gatsby.</p>
+<p>Hugo is written in Go. Zola is written in Rust. From a user perspective, this distinction rarely matters, except that Rust's reputation for safety means Zola crashes are exceptionally rare—though to be fair, Hugo is rock-solid too.</p>
+<h2 id="build-speed-both-winners">Build Speed: Both Winners</h2>
+<p>The truth? Both are absurdly fast. Hugo claims to build sites in milliseconds. Zola does the same. For most projects under a few thousand pages, the difference is imperceptible. You'll spend more time waiting for your browser to refresh than for either tool to rebuild.</p>
+<p>Where they diverge is in what comes next. Hugo's speed has led to massive sites—think 50,000+ pages. Zola is fast enough for most use cases, but it hasn't been battle-tested at that scale the same way Hugo has.</p>
+<h2 id="ecosystem-size-vs-simplicity">Ecosystem: Size vs Simplicity</h2>
+<p>Hugo wins on ecosystem size, and it's not close. There are hundreds of themes, extensive documentation, and a large community. If you're building a documentation site, Hugo's ecosystem has mature solutions ready to use.</p>
+<p>Zola's ecosystem is deliberately smaller. There are fewer themes, fewer plugins, and a smaller community. This sounds like a disadvantage until you realize it's also freeing. You're not sifting through outdated themes or debugging plugin conflicts. You build what you need.</p>
+<p>The question is: do you want a marketplace or a workshop?</p>
+<h2 id="templating-go-templates-vs-tera">Templating: Go Templates vs Tera</h2>
+<p>Hugo uses Go's template language. It's powerful but has a learning curve, especially if you're not familiar with Go. The syntax can feel verbose, and some operations that seem simple require looking up documentation.</p>
+<p>Zola uses Tera, which is based on Jinja2. If you've worked with Python, Django, or even Ansible, you'll recognize the patterns immediately. Filters, macros, and template inheritance work intuitively. The syntax is cleaner and more consistent.</p>
+<p>This is subjective, but for most developers, Tera is easier to pick up and more pleasant to work with.</p>
+<h2 id="content-organization">Content Organization</h2>
+<p>Hugo gives you tremendous flexibility in how you organize content. You can create custom content types, define complex taxonomies, and build intricate site structures. This power comes with complexity—Hugo's content model has more concepts to learn.</p>
+<p>Zola is more opinionated. You have sections, pages, and taxonomies. It's simpler but less flexible. For blogs, documentation, and portfolios, this simplicity is usually an advantage. For complex sites with unusual structures, Hugo's flexibility might be necessary.</p>
+<h2 id="multilingual-support">Multilingual Support</h2>
+<p>Both support multiple languages, but they approach it differently.</p>
+<p>Hugo has mature multilingual support with extensive configuration options. You can fine-tune how languages are handled, create language-specific menus, and manage translations with precision. It's comprehensive but requires more setup.</p>
+<p>Zola's multilingual support is straightforward and built-in. You create content in different languages, and Zola handles the routing. It's less configurable but requires almost no setup. For most multilingual sites, Zola's approach is sufficient and much simpler.</p>
+<h2 id="built-in-features-vs-extensibility">Built-in Features vs Extensibility</h2>
+<p>Zola ships with Sass compilation, syntax highlighting, and image processing out of the box. You don't install plugins for these features—they're just there.</p>
+<p>Hugo requires external tools for some of these tasks or uses Hugo Pipes and Hugo Modules. It's more modular, which gives you control but adds configuration complexity.</p>
+<h2 id="documentation-and-community">Documentation and Community</h2>
+<p>Hugo's documentation is extensive but can be overwhelming. There's a lot to learn, and finding the right approach for your use case sometimes means reading through multiple sections.</p>
+<p>Zola's documentation is more concise and organized. It's easier to find what you need quickly, though advanced use cases might require checking GitHub discussions.</p>
+<p>Community size favors Hugo significantly. More Stack Overflow answers, more blog posts, more people who've solved the problem you're facing.</p>
+<h2 id="when-to-choose-hugo">When to Choose Hugo</h2>
+<p>Pick Hugo if you:</p>
+<ul>
+<li>Need proven scalability for massive sites (10,000+ pages)</li>
+<li>Want a rich ecosystem of themes and tools</li>
+<li>Require complex content modeling and relationships</li>
+<li>Need extensive third-party integrations</li>
+<li>Value the safety of following the most popular option</li>
+</ul>
+<h2 id="when-to-choose-zola">When to Choose Zola</h2>
+<p>Pick Zola if you:</p>
+<ul>
+<li>Want the simplest possible setup and maintenance</li>
+<li>Prefer building your own designs over adapting themes</li>
+<li>Like clean, intuitive templating syntax</li>
+<li>Need built-in Sass and don't want to configure build pipelines</li>
+<li>Value a focused tool over an extensive ecosystem</li>
+<li>Want straightforward multilingual support</li>
+</ul>
+<h2 id="the-real-difference">The Real Difference</h2>
+<p>Hugo is a Swiss Army knife—it can do almost anything, but you need to learn which blade to use. Zola is a scalpel—it does fewer things, but it does them precisely and with minimal fuss.</p>
+<p>Neither choice is wrong. The question is whether your project needs Hugo's power and ecosystem, or whether Zola's simplicity and elegance will let you ship faster and maintain easier.</p>
+<p>For most blogs and documentation sites, Zola is enough. For complex, large-scale projects or when you want maximum flexibility, Hugo delivers. Choose based on your project's needs, not the tool's capabilities.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  
+  
+  
+  
+  
+
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="generator" content="Zola v0.22.1">
+
+  
+    <meta name="description" content="Deconstructing the math of investment: estimate the annualized rate of return with the IRR algorithm and its Rust implementation.">
+  
+
+  <title>Zolarwind</title>
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/css/generated.css">
+  
+  <link rel="stylesheet" id="code-highlighting-light" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/giallo-light.css">
+  <link rel="stylesheet" id="code-highlighting-dark" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/giallo-dark.css" disabled>
+  
+    <link rel="icon" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/img/yin-yang.svg" />
+  
+
+  
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/atom.xml" />
+  
+
+  <script defer src="https://salif.github.io/zola-themes-collection/demo/zolarwind/js/zolarwind/logic.js" integrity="sha384-NiYmNtSrcRZmkrc3s&#x2F;khYJreFfznYohKEfD79qH8gNzmBpYIg04Y6yxau+Q7KPv0"></script>
+  
+    <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/js/katex/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T">
+    <script defer src="https://salif.github.io/zola-themes-collection/demo/zolarwind/js/katex/katex.min.js" integrity="sha384-+W9OcrYK2&#x2F;bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt&#x2F;FrPsUgaBTLLkVf33qWt"></script>
+    <script defer src="https://salif.github.io/zola-themes-collection/demo/zolarwind/js/katex/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"></script>
+    <script defer src="https://salif.github.io/zola-themes-collection/demo/zolarwind/js/katex-config.js" integrity="sha384-nvMU92JREtcI6oa8M5sYH7zIpj3Sj8Lm+jqpbEM3qFFZnbRTncJiX0qgBmStmTdZ"></script>
+  
+  
+</head>
+<body>
+  
+
+  
+
+
+<header class="sticky top-0 w-full z-10">
+  <nav class="bg-neutral-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 border-b-1 border-neutral-700">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <a href="https://salif.github.io/zola-themes-collection/demo/zolarwind" aria-label="Go to homepage">
+              <div class="h-8 w-8 text-neutral-200 hover:text-neutral-50 fill-current">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                  <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-8 flex items-center space-x-2">
+              
+                
+                  
+                    <a class="px-3 py-2 rounded-md font-medium text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-700 focus:bg-neutral-200" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/imprint" title="Imprint">Imprint</a>
+                  
+                
+                  
+                    <a class="px-3 py-2 rounded-md font-medium text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-700 focus:bg-neutral-200" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/about" title="About">About</a>
+                  
+                
+              
+              
+                <a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/search" aria-label="Search" title="Search" class="flex items-center justify-center cursor-pointer p-2 rounded-full text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-700 focus:bg-neutral-200 transition ease-in-out duration-250">
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                  </svg>
+                </a>
+              
+              
+  <button aria-label="Toggle dark&#x2F;light mode" class="flex items-center justify-center cursor-pointer p-2 rounded-full text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-700 focus:bg-neutral-200 transition ease-in-out duration-250">
+    <span class="hidden theme-icon-sun w-6 h-6" title="Switch to light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path></svg>
+    </span>
+    <span class="theme-icon-moon w-6 h-6" title="Switch to dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path></svg>
+    </span>
+  </button>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="-mr-2 flex items-center space-x-1 md:hidden">
+          
+            <a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/search" aria-label="Search" title="Search" class="inline-flex items-center justify-center p-2 rounded-md text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:bg-neutral-200 focus:text-neutral-800">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </a>
+          
+          
+  <button aria-label="Toggle dark&#x2F;light mode" class="flex items-center justify-center cursor-pointer p-2 rounded-full text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-700 focus:bg-neutral-200 transition ease-in-out duration-250">
+    <span class="hidden theme-icon-sun w-6 h-6" title="Switch to light mode">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path></svg>
+    </span>
+    <span class="theme-icon-moon w-6 h-6" title="Switch to dark mode">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path></svg>
+    </span>
+  </button>
+
+
+          <button id="toggleMobileMenu" class="icon inline-flex items-center justify-center p-2 rounded-md text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:bg-neutral-200 focus:text-neutral-800" aria-label="Menu">
+            <span id="mobile-icon-menu-unselected">
+              <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </span>
+            <span id="mobile-icon-menu-selected" class="hidden">
+              <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+      <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 sm:px-3">
+        
+          
+            <a class="mt-1 block px-3 py-2 rounded-md font-medium text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-800 focus:bg-neutral-200" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/imprint" title="Imprint">Imprint</a>
+          
+        
+          
+            <a class="mt-1 block px-3 py-2 rounded-md font-medium text-neutral-200 hover:text-neutral-50 hover:bg-neutral-700 focus:outline-none focus:text-neutral-800 focus:bg-neutral-200" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/about" title="About">About</a>
+          
+        
+      </div>
+    
+  </nav>
+</header>
+
+  <div id="content">
+    
+
+
+
+
+  
+
+
+  <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+    <article
+      class="prose"
+      data-clipboard-copy="Copy to clipboard"
+      data-clipboard-copied="Copied to clipboard"
+      data-clipboard-error="Error copying to clipboard"
+    >
+      <div class="h-48 rounded-md shadow-md">
+        <img class="h-48 w-full object-cover" src="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/banner.jpg" alt="Internal Rate of Return Calculation">
+      </div>
+      <h1>Internal Rate of Return Calculation</h1>
+      <div>
+        <p>
+          <span class="mr-2 text-sm">
+            <time datetime="2023-07-29">July 29, 2023</time> &middot;
+            2,289 words &middot;
+            12 minutes reading time
+          </span>
+          <span class="text-sm leading-5 font-medium text-primary-600">
+
+  
+    
+      <span class="mr-2 badge badge-primary"><a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/tags/rust/">rust</a></span>
+    
+      <span class="mr-2 badge badge-primary"><a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/tags/math/">math</a></span>
+    
+  
+
+</span>
+
+        </p>
+      </div>
+
+      <div>
+        <p>The internal rate of return (IRR) is a potent financial measure used in financial analysis, accounting, and portfolio management to gauge the profitability of investments.
+It's like the heartbeat of an investment -- an indicator of health, the higher it is, the better the investment.
+This powerful tool can help investors compare different investment options, assisting in making informed decisions about where to allocate their capital.
+Especially when cash flows are irregular, as often is the case in real-world scenarios, IRR becomes invaluable.
+This article will first explain the concept and calculations behind IRR and then demonstrate how to implement an IRR algorithm in Rust.</p>
+<h2 id="irr-vs-xirr-terminology">IRR vs. XIRR terminology</h2>
+<p>The IRR is the rate of return that makes the net present value (NPV) of all cash flows (both positive and negative) from a particular investment equal to zero.
+It's sometimes used for cash flows at regular, usually annual, intervals.
+I will not make this assumption in this article.
+While Microsoft uses the name XIRR for its Excel function, I will use the term IRR throughout this article, even though the cash flows do not occur at regular intervals.</p>
+<h2 id="example-data-and-validation">Example data and validation</h2>
+<p>A crucial part of implementing a financial algorithm like IRR is validation -- that is, making sure that your algorithm is producing correct and expected results.
+One effective way to validate your implementation is by comparing its outputs to those of <a rel="external" href="https://support.microsoft.com/en-gb/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d">Microsoft Excel's XIRR function</a>.
+I will use the data from the Excel example.
+Using Excel's XIRR function to compute the internal rate of return for this specific data set yields a result of 
+
+
+
+
+
+<span class="math math-inline">$37.34\%$</span>
+
+.</p>
+<table><thead><tr><th style="text-align: right">$\textbf{i}$</th><th>ISO Date $\textbf{d}$</th><th style="text-align: right">Years since first cash flow $\textbf{y}$</th><th style="text-align: right">Payment $\textbf{p}$</th></tr></thead><tbody>
+<tr><td style="text-align: right">1</td><td>2008-01-01</td><td style="text-align: right">0.0000</td><td style="text-align: right">-10,000</td></tr>
+<tr><td style="text-align: right">2</td><td>2008-03-01</td><td style="text-align: right">0.1644</td><td style="text-align: right">2,750</td></tr>
+<tr><td style="text-align: right">3</td><td>2008-10-30</td><td style="text-align: right">0.8301</td><td style="text-align: right">4,250</td></tr>
+<tr><td style="text-align: right">4</td><td>2009-02-15</td><td style="text-align: right">1.1260</td><td style="text-align: right">3,250</td></tr>
+<tr><td style="text-align: right">5</td><td>2009-04-01</td><td style="text-align: right">1.2493</td><td style="text-align: right">2,750</td></tr>
+</tbody></table>
+<h2 id="how-irr-works">How IRR works</h2>
+<p>The IRR is calculated by finding the rate of return that would make the net present value (NPV) of an investment equal to zero.
+The NPV is the sum of the present values of all future cash flows from an investment.
+The derivative of the NPV is used to find the IRR.
+The derivative of the NPV is the rate of change of the NPV with respect to the interest rate.</p>
+<p>The IRR algorithm is an instance of the <a rel="external" href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton-Raphson method</a>,
+which is a root-finding algorithm that produces successively better approximations to the roots (or zeroes) of a real-valued function.
+To calculate the IRR, you need an array with pairs of data: one is the date of a cash flow, and the other is its payment amount.
+You also need an initial guess for the IRR rate, which is often set as 
+
+
+
+
+
+<span class="math math-inline">$10\%$</span>
+
+ or $0.1$.</p>
+<p>Here's the general process of the algorithm:</p>
+<ol>
+<li><strong>Compute the net present value (NPV)</strong>: The NPV is calculated by summing the present values of the individual cash flows.</li>
+<li><strong>Compute the derivative of the NPV</strong>: The derivative of the NPV with respect to the rate is created by differentiating the NPV formula and summing these values.</li>
+<li><strong>Update the guess</strong>: The next guess for the rate is calculated by subtracting the ratio of the NPV to its derivative from the current guess.</li>
+<li><strong>Iterate until convergence</strong>: These steps are repeated until the change in guesses is below a certain tolerance, or until a maximum number of iterations is reached.
+At this point, the guess for the rate is considered to be the IRR.</li>
+</ol>
+<h2 id="compute-the-net-present-value-npv">Compute the net present value (NPV)</h2>
+<p>Here, $y_i$ represents the number of years that have passed since the first cash flow,
+calculated as the difference in days between the date of the $i$-th cash flow $d_i$ and the date of the first cash flow $d_1$,
+divided by 365 (days in one year).
+I have pre-calculated it in the table above:</p>
+<p>$$y_i = \frac{d_i - d_1}{365}$$</p>
+<p>The NPV is the sum of all payments, where the correct interest rate $irr$ is applied.
+Its value is 0 after all transaction have been concluded:</p>
+<p>$$\mathit{NPV} = \sum_{i = 1}^{m} \frac{p_i}{(1 + irr)^{y_i}}$$</p>
+<p>When you <a rel="external" href="https://www.wolframalpha.com/input?i=plot+-10000*%281%2F%281+%2B+x%29%5E%280.0000%29%29+%2B+2750*%281%2F%281+%2B+x%29%5E%280.1644%29%29+%2B+4250*%281%2F%281+%2B+x%29%5E%280.8301%29%29+%2B+3250*%281%2F%281+%2B+x%29%5E%281.1260%29%29+%2B+2750*%281%2F%281+%2B+x%29%5E%281.2493%29%29+from+x%3D-0.1+to+0.9">plot</a> the NPV function as a function of $irr$,
+you are essentially varying the interest rate and observing how it affects the NPV.
+Here's what you see on the graph below, which plots the NPV as a function of the rate with the values from the table above:</p>
+<ul>
+<li><strong>X-axis</strong>: The x-axis represents the interest rate $irr$.
+It typically ranges from 
+
+
+
+
+
+<span class="math math-inline">$0\%$</span>
+
+ to a reasonable upper limit, depending on the context of your problem.</li>
+<li><strong>Y-axis</strong>: The y-axis represents the net present value NPV.
+It's the cumulative sum of the discounted cash flows according to the given formula.</li>
+<li><strong>Shape of the curve</strong>: The curve of the NPV function will generally be downward-sloping.
+This is because as you increase the interest rate $irr$, the present value of future cash flows decreases.
+Higher interest rates mean that future cash flows are being discounted more heavily, which reduces their present value.</li>
+<li><strong>Break-even point</strong>: There will be a point on the graph where the NPV curve intersects the x-axis.
+It's where our $irr$ satisfies the condition $\mathit{NPV} = 0$.
+For our data, it is somewhere between $0.35$ and $0.40$, or 
+
+
+
+
+
+<span class="math math-inline">$35\%$</span>
+
+ and 
+
+
+
+
+
+<span class="math math-inline">$40\%$</span>
+
+.</li>
+</ul>
+<div class="light-dark-image">
+  <img src="irr-npv-function-light.webp" alt="Plot of the NPV as a function of the rate with the values from the table" />
+  <img src="irr-npv-function-dark.webp" alt="Plot of the NPV as a function of the rate with the values from the table" />
+</div>
+<p>The above formula is a sum of function terms.
+Applying the <a rel="external" href="https://en.wikipedia.org/wiki/Superposition_principle">superposition principle</a>,
+we can split the sum into individual function terms, which look all the same.
+For each cash flow, we have a function term, which is the present value of the cash flow.
+The important part is that we can apply this principle to the NPV function <strong>and</strong> the derivative of the NPV function.</p>
+<p>With $irr$ written as $x$, each function term looks like this, where $p_i$ and $y_i$ are just constants.
+$f_i(x)$ represents the NPV for a single cash flow, the $i$-th one:</p>
+<p>$$f_i(x) = \frac{p_i}{(1 + x)^{y_i}}$$</p>
+<p>The amount $p_i$ is discounted in the NPV calculation to reflect the time value of money. Here's an explanation for why that's done:</p>
+<ul>
+<li><strong>Time value of money</strong>: Money available today is worth more than the same amount in the future because of its potential earning capacity.
+This core principle of finance holds that, provided money can earn interest, any amount of money is worth more the sooner it is received.</li>
+<li><strong>Discounting future cash flows</strong>: In the context of the internal rate of return (IRR) and net present value (NPV), this principle is applied to future cash flows.
+The $p_i$ represents a payment (cash flow) at some future date. To compare this future value to present values,
+it needs to be discounted back to its value in today's terms.</li>
+<li><strong>The discount factor</strong>: The expression $\frac{1}{(1 + x)^{y_i}}$ serves as a discount factor, where $x$ is the internal rate of return, and $y_i$ is the number of years that have passed since the first cash flow.
+This factor is derived from the formula for compounding interest in reverse (discounting rather than compounding).</li>
+<li><strong>Sum of discounted payments</strong>: The NPV is the sum of these discounted payments. By discounting each future cash flow back to its present value,
+the NPV provides a consistent basis for comparing the value of cash flows across different time periods.</li>
+<li><strong>Understanding the equation</strong>: The equation $f_i(x) = \frac{p_i}{(1 + x)^{y_i}}$ represents the present value of the $i$-th cash flow.
+It shows how each cash flow is discounted back to present value terms using the discount factor.</li>
+</ul>
+<p>Discounting the $p_i$ in the NPV calculation allows for a proper comparison of cash flows across different time periods,
+taking into account the time value of money and the specific internal rate of return (IRR) required from the investment.
+It ensures that future cash flows are appropriately weighed against the potential earning capacity of money in the present.</p>
+<h3 id="but-what-happens-if">But what happens if ...</h3>
+<p>The expression $(1 + x)^{y_i}$ can become a problem if $x &lt; -1$ (less than 
+
+
+
+
+
+<span class="math math-inline">$-100\%$</span>
+
+), because raising a negative number to a non-integer power will result in a complex number.
+Within the realm of real numbers, this operation is undefined.
+For example, consider a case where $x = -1.1$ and $y_i$ is a floating point number like $0.4$.
+Then, $(1 + x)$ will be negative, and raising it to the $y_i$ power <a rel="external" href="https://www.wolframalpha.com/input?i=%281+-+1.1%29%5E%280.4%29">produces a complex value</a>:
+${(1 - 1.1)}^{0.4} \approx 0.12 + 0.38 i$</p>
+<p>In the context of finance and the calculation of IRR, it doesn't make sense to have complex numbers as they don't have a practical interpretation in terms of cash flows or discount rates.
+Therefore, you would typically ensure that the rate $x$ stays within the range where the calculation remains within the realm of real numbers.
+If you're working with cash flows and discount rates, you may want to either avoid or handle situations where $x &lt; -1$ by constraining the value of $x$ within a reasonable range or taking some other specific action if $x$ falls outside that range.</p>
+<p>In practice, it's rare that you would come across this scenario.</p>
+<h2 id="compute-the-derivative-of-the-npv">Compute the derivative of the NPV</h2>
+<p>We can now apply the <a rel="external" href="https://www.wolframalpha.com/input?i=derivative+of+a+%2F+%28%281+%2B+x%29%5Eb%29">basic differentiation rules</a> to get the derivative of $f_i(x)$.
+It represents the derivative of the NPV for a single cash flow, also the $i$-th one:</p>
+<p>$$f_i'(x) = \frac{-y_i \cdot p_i}{(1 + x)^{y_i + 1}}$$</p>
+<h2 id="update-the-guess">Update the guess</h2>
+<p>The <a rel="external" href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton-Raphson method</a> is an iterative process used to locate the roots of a differentiable function, i.e. a solution for $x$ where $f(x) = 0$.
+The method begins with an initial estimate $x_n$, which is then refined into a more accurate guess, $x_{n+1}$.
+This stage is where the NPV and its derivative come into play.
+Instead of solely employing $f_i(x_n)$ and $f_i'(x_n)$ for a single cash flow, we incorporate all the cash flows by adding up the NPV terms and derivative terms respectively:</p>
+<p>$$x_{n+1} = x_{n} - \frac{\sum_{i = 1}^{m} f_i(x_n)}{\sum_{i = 1}^{m} f_i'(x_n)} $$</p>
+<h2 id="iterate-until-convergence">Iterate until convergence</h2>
+<p>Instead of improving the result indefinitely, you stop when the difference between $x_n$ and $x_{n+1}$ is smaller than or equal to a given $\epsilon$, i.e. $\left| x_n - x_{n+1} \right| \le \epsilon$.
+It's usually a very small number, like $0.000001$ ($1.0 e^{-6}$).
+This is the value used in Microsoft Excel's XIRR function.</p>
+<p>It's also worth noting that despite using the exact derivative, the IRR algorithm is still an approximation method.
+It may not always converge to a solution, especially for cash flow series that have multiple changes in sign.
+In these cases, it may be necessary to provide a good initial guess for the rate, or to use a different method to compute the internal rate of return.</p>
+<h2 id="implementation-in-rust">Implementation in Rust</h2>
+<p>Let's move towards translating our theoretical understanding into a concrete implementation using Rust.
+We'll focus on implementing the IRR calculation algorithm by applying the findings and formulas mentioned in the previous sections.
+The final output should be close to Excel's XIRR function result within an acceptable tolerance range.</p>
+<pre class="giallo z-code"><code data-lang="rust"><span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> We use the chrono crate for date handling: https://docs.rs/chrono/latest/chrono</span></span>
+<span class="giallo-l"><span class="z-keyword">use</span><span class="z-entity z-name"> chrono</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name">prelude</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-keyword z-keyword z-operator">*</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Function to calculate the number of days between two dates</span></span>
+<span class="giallo-l"><span class="z-keyword">fn</span><span class="z-entity z-name z-function"> days_between</span><span>(</span><span class="z-variable z-other z-variable">start_date</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> NaiveDate</span><span>,</span><span class="z-variable z-other z-variable"> end_date</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> NaiveDate</span><span>)</span><span class="z-keyword z-keyword z-operator"> -&gt;</span><span class="z-entity z-name"> i64</span><span> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Calculate the duration between the two dates</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    let</span><span class="z-variable z-other z-variable"> duration</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> end_date</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">signed_duration_since</span><span>(</span><span class="z-variable z-other z-variable">start_date</span><span>)</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Return the duration in days</span></span>
+<span class="giallo-l"><span class="z-variable z-other z-variable">    duration</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">num_days</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Main function to calculate the internal rate of return</span></span>
+<span class="giallo-l"><span class="z-keyword">fn</span><span class="z-entity z-name z-function"> calculate_irr</span><span>(</span><span class="z-variable z-other z-variable">transactions</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-keyword z-keyword z-operator"> &amp;</span><span>[</span><span>(</span><span class="z-entity z-name">f64</span><span>,</span><span class="z-entity z-name"> f64</span><span>)</span><span>]</span><span>,</span><span class="z-variable z-other z-variable"> initial_guess</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> f64</span><span>)</span><span class="z-keyword z-keyword z-operator"> -&gt;</span><span class="z-entity z-name"> f64</span><span> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Start with initial guess for the IRR</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    let</span><span class="z-storage"> mut</span><span class="z-variable z-other z-variable"> x</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> initial_guess</span><span>;</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    const</span><span class="z-constant z-constant z-other"> MAX_TRIES</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> usize</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 100</span><span>;</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    const</span><span class="z-constant z-constant z-other"> EPSILON</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> f64</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 1</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">0</span><span class="z-keyword z-keyword z-operator">e</span><span class="z-keyword z-keyword z-operator">-</span><span class="z-constant z-constant z-numeric">6</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Loop until a maximum number of iterations is reached</span></span>
+<span class="giallo-l"><span class="z-keyword">    for</span><span class="z-variable z-other z-variable"> _</span><span class="z-keyword"> in</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-keyword z-keyword z-operator">..</span><span class="z-constant z-constant z-other">MAX_TRIES</span><span> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">        //</span><span class="z-comment"> Calculate NPV and its derivative for each cash flow and sum them up</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">        let</span><span> (</span><span class="z-variable z-other z-variable">fx</span><span>,</span><span class="z-variable z-other z-variable"> dfx</span><span>)</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> transactions</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">iter</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span class="z-keyword z-keyword z-operator">            .</span><span class="z-entity z-name z-function">map</span><span>(</span><span class="z-keyword z-keyword z-operator">|</span><span>(</span><span class="z-variable z-other z-variable">years</span><span>,</span><span class="z-variable z-other z-variable"> amount</span><span>)</span><span class="z-keyword z-keyword z-operator">|</span><span> {</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">                let</span><span class="z-variable z-other z-variable"> fx</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> amount</span><span class="z-keyword z-keyword z-operator"> /</span><span> (</span><span class="z-constant z-constant z-numeric">1_</span><span class="z-entity z-name">f64</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> x</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">powf</span><span>(</span><span class="z-keyword z-keyword z-operator">*</span><span class="z-variable z-other z-variable">years</span><span>)</span><span>;</span><span class="z-punctuation z-definition z-comment z-comment">                  //</span><span class="z-comment"> NPV of the cash flow</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">                let</span><span class="z-variable z-other z-variable"> dfx</span><span class="z-keyword z-keyword z-operator"> =</span><span> (</span><span class="z-keyword z-keyword z-operator">-</span><span class="z-variable z-other z-variable">years</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-variable z-other z-variable"> amount</span><span>)</span><span class="z-keyword z-keyword z-operator"> /</span><span> (</span><span class="z-constant z-constant z-numeric">1_</span><span class="z-entity z-name">f64</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> x</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">powf</span><span>(</span><span class="z-variable z-other z-variable">years</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-constant z-constant z-numeric"> 1</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">0</span><span>)</span><span>;</span><span class="z-punctuation z-definition z-comment z-comment"> //</span><span class="z-comment"> Derivative of NPV                                                       </span></span>
+<span class="giallo-l"><span>                (</span><span class="z-variable z-other z-variable">fx</span><span>,</span><span class="z-variable z-other z-variable"> dfx</span><span>)</span><span class="z-punctuation z-definition z-comment z-comment">                                                    //</span><span class="z-comment"> Return both values for a single cash flow</span></span>
+<span class="giallo-l"><span>            }</span><span>)</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">            //</span><span class="z-comment"> Sum up all NPVs and derivatives for all cash flows (reduce to a tuple of two sums)</span></span>
+<span class="giallo-l"><span class="z-keyword z-keyword z-operator">            .</span><span class="z-entity z-name z-function">fold</span><span>(</span><span>(</span><span class="z-constant z-constant z-numeric">0_</span><span class="z-entity z-name">f64</span><span>,</span><span class="z-constant z-constant z-numeric"> 0_</span><span class="z-entity z-name">f64</span><span>)</span><span>,</span><span class="z-keyword z-keyword z-operator"> |</span><span>(</span><span class="z-variable z-other z-variable">fx_acc</span><span>,</span><span class="z-variable z-other z-variable"> dfx_acc</span><span>)</span><span>,</span><span> (</span><span class="z-variable z-other z-variable">fx</span><span>,</span><span class="z-variable z-other z-variable"> dfx</span><span>)</span><span class="z-keyword z-keyword z-operator">|</span><span> (</span><span class="z-variable z-other z-variable">fx_acc</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> fx</span><span>,</span><span class="z-variable z-other z-variable"> dfx_acc</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> dfx</span><span>)</span><span>)</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">        //</span><span class="z-comment"> Calculate the new guess</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">        let</span><span class="z-variable z-other z-variable"> new_x</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> x</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-variable z-other z-variable"> fx</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-variable z-other z-variable"> dfx</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">        //</span><span class="z-comment"> Calculate the difference between the new and the old guess</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">        let</span><span class="z-variable z-other z-variable"> epsilon</span><span class="z-keyword z-keyword z-operator"> =</span><span> (</span><span class="z-variable z-other z-variable">new_x</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-variable z-other z-variable"> x</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">abs</span><span>(</span><span>)</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">        //</span><span class="z-comment"> If the difference is smaller than or equal to the tolerance, we are done</span></span>
+<span class="giallo-l"><span class="z-keyword">        if</span><span class="z-variable z-other z-variable"> epsilon</span><span class="z-keyword z-keyword z-operator"> &lt;=</span><span class="z-constant z-constant z-other"> EPSILON</span><span> {</span></span>
+<span class="giallo-l"><span class="z-keyword">            return</span><span class="z-variable z-other z-variable"> x</span><span>;</span></span>
+<span class="giallo-l"><span>        }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">        //</span><span class="z-comment"> Continue the loop with the new guess</span></span>
+<span class="giallo-l"><span class="z-variable z-other z-variable">        x</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> new_x</span><span>;</span></span>
+<span class="giallo-l"><span>    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Return a non-number if the algorithm didn&#39;t converge (see &quot;Iterate until convergence&quot; in article)</span></span>
+<span class="giallo-l"><span class="z-entity z-name">    f64</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-constant z-constant z-other">NAN</span></span>
+<span class="giallo-l"><span>}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Define the main function and our example transactions</span></span>
+<span class="giallo-l"><span class="z-keyword">fn</span><span class="z-entity z-name z-function"> main</span><span>(</span><span>)</span><span> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Example from Microsoft Excel documentation:</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> https://support.microsoft.com/en-gb/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> The internal rate of return is 0.373362535 or 37.34%</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    let</span><span class="z-variable z-other z-variable"> cashflows</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-entity z-name z-function"> vec!</span><span>[</span></span>
+<span class="giallo-l"><span>        (</span><span class="z-entity z-name">NaiveDate</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name z-function">from_ymd_opt</span><span>(</span><span class="z-constant z-constant z-numeric">2008</span><span>,</span><span class="z-constant z-constant z-numeric">  1</span><span>,</span><span class="z-constant z-constant z-numeric">  1</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">unwrap</span><span>(</span><span>)</span><span>,</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-constant z-constant z-numeric">10_000</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">00</span><span>)</span><span>,</span></span>
+<span class="giallo-l"><span>        (</span><span class="z-entity z-name">NaiveDate</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name z-function">from_ymd_opt</span><span>(</span><span class="z-constant z-constant z-numeric">2008</span><span>,</span><span class="z-constant z-constant z-numeric">  3</span><span>,</span><span class="z-constant z-constant z-numeric">  1</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">unwrap</span><span>(</span><span>)</span><span>,</span><span class="z-constant z-constant z-numeric">   2_750</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">00</span><span>)</span><span>,</span></span>
+<span class="giallo-l"><span>        (</span><span class="z-entity z-name">NaiveDate</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name z-function">from_ymd_opt</span><span>(</span><span class="z-constant z-constant z-numeric">2008</span><span>,</span><span class="z-constant z-constant z-numeric"> 10</span><span>,</span><span class="z-constant z-constant z-numeric"> 30</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">unwrap</span><span>(</span><span>)</span><span>,</span><span class="z-constant z-constant z-numeric">   4_250</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">00</span><span>)</span><span>,</span></span>
+<span class="giallo-l"><span>        (</span><span class="z-entity z-name">NaiveDate</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name z-function">from_ymd_opt</span><span>(</span><span class="z-constant z-constant z-numeric">2009</span><span>,</span><span class="z-constant z-constant z-numeric">  2</span><span>,</span><span class="z-constant z-constant z-numeric"> 15</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">unwrap</span><span>(</span><span>)</span><span>,</span><span class="z-constant z-constant z-numeric">   3_250</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">00</span><span>)</span><span>,</span></span>
+<span class="giallo-l"><span>        (</span><span class="z-entity z-name">NaiveDate</span><span class="z-keyword z-keyword z-operator">::</span><span class="z-entity z-name z-function">from_ymd_opt</span><span>(</span><span class="z-constant z-constant z-numeric">2009</span><span>,</span><span class="z-constant z-constant z-numeric">  4</span><span>,</span><span class="z-constant z-constant z-numeric">  1</span><span>)</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">unwrap</span><span>(</span><span>)</span><span>,</span><span class="z-constant z-constant z-numeric">   2_750</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">00</span><span>)</span><span>,</span></span>
+<span class="giallo-l"><span>    ]</span><span>;</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Pre-calculate the years since first cash flow for each cash flow</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    let</span><span class="z-variable z-other z-variable"> transactions</span><span class="z-keyword z-keyword z-operator">:</span><span class="z-entity z-name"> Vec</span><span>&lt;</span><span>(</span><span class="z-entity z-name">f64</span><span>,</span><span class="z-entity z-name"> f64</span><span>)</span><span>&gt;</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> cashflows</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-entity z-name z-function">iter</span><span>(</span><span>)</span></span>
+<span class="giallo-l"><span class="z-keyword z-keyword z-operator">        .</span><span class="z-entity z-name z-function">map</span><span>(</span><span class="z-keyword z-keyword z-operator">|</span><span>(</span><span class="z-variable z-other z-variable">date</span><span>,</span><span class="z-variable z-other z-variable"> amount</span><span>)</span><span class="z-keyword z-keyword z-operator">|</span><span> (</span><span class="z-entity z-name z-function">days_between</span><span>(</span><span class="z-variable z-other z-variable">cashflows</span><span>[</span><span class="z-constant z-constant z-numeric">0</span><span>]</span><span class="z-keyword z-keyword z-operator">.</span><span class="z-constant z-constant z-numeric">0</span><span>,</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-variable z-other z-variable">date</span><span>)</span><span class="z-keyword"> as</span><span class="z-entity z-name"> f64</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-constant z-constant z-numeric"> 365</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">0</span><span>,</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-variable z-other z-variable">amount</span><span>)</span><span>)</span></span>
+<span class="giallo-l"><span class="z-keyword z-keyword z-operator">        .</span><span class="z-entity z-name z-function">collect</span><span>(</span><span>)</span><span>;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Call our IRR calculation function and print the result</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Expected result is 37.34%</span></span>
+<span class="giallo-l"><span class="z-entity z-name z-function">    println!</span><span>(</span><span class="z-string">&quot;</span><span class="z-string">IRR with Newton-Raphson: </span><span class="z-string">{</span><span class="z-string">:.2</span><span class="z-string">}</span><span class="z-string">%</span><span class="z-string">&quot;</span><span>,</span><span class="z-entity z-name z-function"> calculate_irr</span><span>(</span><span class="z-keyword z-keyword z-operator">&amp;</span><span class="z-variable z-other z-variable">transactions</span><span>,</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">1</span><span>)</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-constant z-constant z-numeric"> 100</span><span class="z-constant z-punctuation z-separator">.</span><span class="z-constant z-constant z-numeric">0</span><span>)</span><span>;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre>
+<p>The <code>calculate_irr</code> function is where the heart of our IRR calculation lives.
+It starts by defining the initial guess for the IRR, then enters a loop that calculates the new guess, checks for convergence, and continues the loop if not converged.
+Finally, if the algorithm fails to converge, it returns a non-number.
+The main function uses an example transaction set and calls our <code>calculate_irr</code> function.</p>
+<h2 id="bonus-implementation-in-javascript">Bonus: implementation in JavaScript</h2>
+<p>JavaScript runs natively in all modern browsers and is the <em>lingua franca</em> of the web.
+By translating the Rust code into JavaScript, the IRR calculation will be easily usable on virtually any device, regardless of operating system or hardware.
+This way, it should be possible to use it in a web application, or even in a mobile app using a framework like <a rel="external" href="https://reactnative.dev">React Native</a>.
+Maybe you want to write a financial app that runs on iOS, Android, and the web?</p>
+<pre class="giallo z-code"><code data-lang="javascript"><span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Function to calculate the number of days between two dates</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage z-type z-function">function</span><span class="z-entity z-name z-function"> daysBetween</span><span>(</span><span class="z-variable z-variable z-parameter">start</span><span class="z-punctuation z-separator">,</span><span class="z-variable z-variable z-parameter"> end</span><span>)</span><span class="z-meta z-block"> {</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">  const</span><span class="z-variable z-other z-constant z-variable"> millisecondsPerDay</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 1000</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-constant z-constant z-numeric"> 60</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-constant z-constant z-numeric"> 60</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-constant z-constant z-numeric"> 24</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">  const</span><span class="z-variable z-other z-constant z-variable"> millisBetween</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> end</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-entity z-name z-function">getTime</span><span class="z-meta z-block">(</span><span class="z-meta z-block">)</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-variable z-other z-variable"> start</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-entity z-name z-function">getTime</span><span class="z-meta z-block">(</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-keyword">  return</span><span class="z-variable z-other z-variable"> millisBetween</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-variable z-other z-variable"> millisecondsPerDay</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-meta z-block">}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Main function to calculate the internal rate of return</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage z-type z-function">function</span><span class="z-entity z-name z-function"> calculateIRR</span><span>(</span><span class="z-variable z-variable z-parameter">transactions</span><span class="z-punctuation z-separator">,</span><span class="z-variable z-variable z-parameter"> initialGuess</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">1</span><span>)</span><span class="z-meta z-block"> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">  //</span><span class="z-comment"> Start with initial guess for the IRR</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">  let</span><span class="z-variable z-other z-variable"> x</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> initialGuess</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">  const</span><span class="z-variable z-other z-constant z-variable"> MAX_TRIES</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 100</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">  const</span><span class="z-variable z-other z-constant z-variable"> EPSILON</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 1</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">0e-6</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">  //</span><span class="z-comment"> Loop until a maximum number of iterations is reached</span></span>
+<span class="giallo-l"><span class="z-keyword">  for</span><span class="z-meta z-block"> (</span><span class="z-storage z-type z-storage">let</span><span class="z-variable z-other z-variable"> tries</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-meta z-block z-punctuation z-terminator">;</span><span class="z-variable z-other z-variable"> tries</span><span class="z-keyword z-keyword z-operator"> &lt;</span><span class="z-variable z-other z-constant z-variable"> MAX_TRIES</span><span class="z-meta z-block z-punctuation z-terminator">;</span><span class="z-variable z-other z-variable"> tries</span><span class="z-keyword z-keyword z-operator"> +=</span><span class="z-constant z-constant z-numeric"> 1</span><span class="z-meta z-block">)</span><span class="z-meta z-block"> {</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Calculate NPV and its derivative for each cash flow and sum them up</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    const</span><span class="z-meta z-block"> {</span><span class="z-variable z-other z-constant z-variable"> fxs</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-variable z-other z-constant z-variable"> dfxs</span><span class="z-meta z-block"> }</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> transactions</span></span>
+<span class="giallo-l"><span class="z-meta z-block z-punctuation z-accessor">      .</span><span class="z-entity z-name z-function">map</span><span class="z-meta z-block">(</span><span class="z-meta z-block">(</span><span class="z-variable z-variable z-parameter">tx</span><span class="z-meta z-block">)</span><span class="z-storage z-type z-storage z-type z-function"> =&gt;</span><span class="z-meta z-block"> {</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">        const</span><span class="z-variable z-other z-constant z-variable"> fx</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> tx</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">amount</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-meta z-block"> (</span><span class="z-meta z-block">(</span><span class="z-constant z-constant z-numeric">1</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">0</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> x</span><span class="z-meta z-block">)</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-keyword z-keyword z-operator">*</span><span class="z-variable z-other z-variable"> tx</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">years</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-terminator">;</span><span class="z-punctuation z-definition z-comment z-comment">                      //</span><span class="z-comment"> NPV of the cash flow</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">        const</span><span class="z-variable z-other z-constant z-variable"> dfx</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-meta z-block"> (</span><span class="z-keyword z-keyword z-operator">-</span><span class="z-variable z-other z-variable">tx</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">years</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-variable z-other z-variable"> tx</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">amount</span><span class="z-meta z-block">)</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-meta z-block"> (</span><span class="z-meta z-block">(</span><span class="z-constant z-constant z-numeric">1</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">0</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> x</span><span class="z-meta z-block">)</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-keyword z-keyword z-operator">*</span><span class="z-meta z-block"> (</span><span class="z-variable z-other z-variable">tx</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">years</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-constant z-constant z-numeric"> 1</span><span class="z-meta z-block">)</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-terminator">;</span><span class="z-punctuation z-definition z-comment z-comment"> //</span><span class="z-comment"> Derivative of NPV</span></span>
+<span class="giallo-l"><span class="z-keyword">        return</span><span class="z-meta z-block"> {</span><span class="z-variable z-other z-variable"> fx</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-variable z-other z-variable"> dfx</span><span class="z-meta z-block"> }</span><span class="z-meta z-block z-punctuation z-terminator">;</span><span class="z-punctuation z-definition z-comment z-comment">                                                  //</span><span class="z-comment"> Return both values for a single cash flow</span></span>
+<span class="giallo-l"><span class="z-meta z-block">      }</span><span class="z-meta z-block">)</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">      //</span><span class="z-comment"> Sum up all NPVs and derivatives for all cash flows (reduce to an object with two sums)</span></span>
+<span class="giallo-l"><span class="z-meta z-block z-punctuation z-accessor">      .</span><span class="z-entity z-name z-function">reduce</span><span class="z-meta z-block">(</span><span class="z-meta z-block">(</span><span class="z-variable z-variable z-parameter">acc</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-variable z-variable z-parameter"> obj</span><span class="z-meta z-block">)</span><span class="z-storage z-type z-storage z-type z-function"> =&gt;</span><span class="z-meta z-block"> (</span><span class="z-meta z-block">{</span><span class="z-meta z-object z-member"> fxs</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-variable z-other z-variable"> acc</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">fxs</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> obj</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">fx</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> dfxs</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-variable z-other z-variable"> acc</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">dfxs</span><span class="z-keyword z-keyword z-operator"> +</span><span class="z-variable z-other z-variable"> obj</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">dfx</span><span class="z-meta z-block"> }</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-meta z-block"> {</span><span class="z-meta z-object z-member"> fxs</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-meta z-block z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> dfxs</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric"> 0</span><span class="z-meta z-block"> }</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Calculate the new guess</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    const</span><span class="z-variable z-other z-constant z-variable"> xNew</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> x</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-variable z-other z-variable"> fxs</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-variable z-other z-variable"> dfxs</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Calculate the difference between the new and the old guess</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">    const</span><span class="z-variable z-other z-constant z-variable"> epsilon</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> Math</span><span class="z-meta z-block z-punctuation z-accessor">.</span><span class="z-entity z-name z-function">abs</span><span class="z-meta z-block">(</span><span class="z-variable z-other z-variable">xNew</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-variable z-other z-variable"> x</span><span class="z-meta z-block">)</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> If the difference is smaller than or equal to the tolerance, we are done</span></span>
+<span class="giallo-l"><span class="z-keyword">    if</span><span class="z-meta z-block"> (</span><span class="z-variable z-other z-variable">epsilon</span><span class="z-keyword z-keyword z-operator"> &lt;=</span><span class="z-variable z-other z-constant z-variable"> EPSILON</span><span class="z-meta z-block">)</span><span class="z-meta z-block"> {</span></span>
+<span class="giallo-l"><span class="z-keyword">      return</span><span class="z-variable z-other z-variable"> x</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-meta z-block">    }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">    //</span><span class="z-comment"> Continue the loop with the new guess</span></span>
+<span class="giallo-l"><span class="z-variable z-other z-variable">    x</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> xNew</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-meta z-block">  }</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">  //</span><span class="z-comment"> Return a non-number if the algorithm didn&#39;t converge</span></span>
+<span class="giallo-l"><span class="z-keyword">  return</span><span class="z-constant z-constant z-language"> NaN</span><span class="z-meta z-block z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-meta z-block">}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Example from Microsoft Excel documentation:</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> https://support.microsoft.com/en-gb/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> The internal rate of return is 0.373362535 or 37.34%</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">const</span><span class="z-variable z-other z-constant z-variable"> cashflows</span><span class="z-keyword z-keyword z-operator"> =</span><span> [</span></span>
+<span class="giallo-l"><span>  {</span><span class="z-meta z-object z-member"> date</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> new</span><span class="z-entity z-name z-function"> Date</span><span class="z-meta z-object z-member">(</span><span class="z-string">&#39;</span><span class="z-string">2008-01-01</span><span class="z-string">&#39;</span><span class="z-meta z-object z-member">)</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> -</span><span class="z-constant z-constant z-numeric">10000</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">00</span><span> }</span><span class="z-punctuation z-separator">,</span></span>
+<span class="giallo-l"><span>  {</span><span class="z-meta z-object z-member"> date</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> new</span><span class="z-entity z-name z-function"> Date</span><span class="z-meta z-object z-member">(</span><span class="z-string">&#39;</span><span class="z-string">2008-03-01</span><span class="z-string">&#39;</span><span class="z-meta z-object z-member">)</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric">   2750</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">00</span><span> }</span><span class="z-punctuation z-separator">,</span></span>
+<span class="giallo-l"><span>  {</span><span class="z-meta z-object z-member"> date</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> new</span><span class="z-entity z-name z-function"> Date</span><span class="z-meta z-object z-member">(</span><span class="z-string">&#39;</span><span class="z-string">2008-10-30</span><span class="z-string">&#39;</span><span class="z-meta z-object z-member">)</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric">   4250</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">00</span><span> }</span><span class="z-punctuation z-separator">,</span></span>
+<span class="giallo-l"><span>  {</span><span class="z-meta z-object z-member"> date</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> new</span><span class="z-entity z-name z-function"> Date</span><span class="z-meta z-object z-member">(</span><span class="z-string">&#39;</span><span class="z-string">2009-02-15</span><span class="z-string">&#39;</span><span class="z-meta z-object z-member">)</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric">   3250</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">00</span><span> }</span><span class="z-punctuation z-separator">,</span></span>
+<span class="giallo-l"><span>  {</span><span class="z-meta z-object z-member"> date</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-keyword z-keyword z-operator"> new</span><span class="z-entity z-name z-function"> Date</span><span class="z-meta z-object z-member">(</span><span class="z-string">&#39;</span><span class="z-string">2009-04-01</span><span class="z-string">&#39;</span><span class="z-meta z-object z-member">)</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-constant z-constant z-numeric">   2750</span><span class="z-constant z-constant z-numeric">.</span><span class="z-constant z-constant z-numeric">00</span><span> }</span></span>
+<span class="giallo-l"><span>]</span><span class="z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Pre-calculate the years since first cash flow for each cash flow</span></span>
+<span class="giallo-l"><span class="z-storage z-type z-storage">const</span><span class="z-variable z-other z-constant z-variable"> transactions</span><span class="z-keyword z-keyword z-operator"> =</span><span class="z-variable z-other z-variable"> cashflows</span></span>
+<span class="giallo-l"><span class="z-punctuation z-accessor">  .</span><span class="z-entity z-name z-function">map</span><span>(</span><span>(</span><span class="z-variable z-variable z-parameter">cf</span><span>)</span><span class="z-storage z-type z-storage z-type z-function"> =&gt;</span><span> (</span><span>{</span><span class="z-meta z-object z-member"> years</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-entity z-name z-function"> daysBetween</span><span class="z-meta z-object z-member">(</span><span class="z-variable z-other z-variable">cashflows</span><span class="z-meta z-object z-member">[</span><span class="z-constant z-constant z-numeric">0</span><span class="z-meta z-object z-member">]</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">date</span><span class="z-meta z-object z-member z-punctuation z-separator">,</span><span class="z-variable z-other z-variable"> cf</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">date</span><span class="z-meta z-object z-member">)</span><span class="z-keyword z-keyword z-operator"> /</span><span class="z-constant z-constant z-numeric"> 365</span><span class="z-punctuation z-separator">,</span><span class="z-meta z-object z-member"> amount</span><span class="z-meta z-object z-member z-punctuation z-separator">:</span><span class="z-variable z-other z-variable"> cf</span><span class="z-meta z-object z-member z-punctuation z-accessor">.</span><span class="z-variable z-other z-variable">amount</span><span> }</span><span>)</span><span>)</span><span class="z-punctuation z-terminator">;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Call our IRR calculation function and print the result</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment z-comment">//</span><span class="z-comment"> Expected result is 37.34%</span></span>
+<span class="giallo-l"><span class="z-variable z-other z-variable">console</span><span class="z-punctuation z-accessor">.</span><span class="z-entity z-name z-function">log</span><span>(</span><span class="z-string">`</span><span class="z-string">IRR with Newton-Raphson: </span><span class="z-string z-punctuation z-definition z-template-expression">${</span><span class="z-string z-meta z-embedded">(</span><span class="z-entity z-name z-function">calculateIRR</span><span class="z-string z-meta z-embedded">(</span><span class="z-variable z-other z-variable">transactions</span><span class="z-string z-meta z-embedded">)</span><span class="z-keyword z-keyword z-operator"> *</span><span class="z-constant z-constant z-numeric"> 100</span><span class="z-string z-meta z-embedded">)</span><span class="z-string z-punctuation z-accessor">.</span><span class="z-entity z-name z-function">toFixed</span><span class="z-string z-meta z-embedded">(</span><span class="z-constant z-constant z-numeric">2</span><span class="z-string z-meta z-embedded">)</span><span class="z-string z-punctuation z-definition z-template-expression">}</span><span class="z-string">%</span><span class="z-string">`</span><span>)</span><span class="z-punctuation z-terminator">;</span></span></code></pre><h2 id="conclusion">Conclusion</h2>
+<p>The internal rate of return (IRR) is an instrumental financial measure that helps investors compare and decide between different investment opportunities.
+Calculating it can get complex due to irregular cash flows, making a detailed understanding of the underlying algorithm crucial.
+This article dived into the mathematics behind IRR calculation and provided a concrete implementation using the Rust programming language.
+Remember, IRR is not just a number but an insight into the potential of an investment, assisting you in making informed financial decisions.</p>
+<p>If you have any questions, need further clarification, or want to give feedback: please let me know.</p>
+
+      </div>
+    </article>
+  </div>
+
+  
+
+  <script type="application/ld+json">
+{
+   "@context": "https://schema.org"
+  ,"@type": "BlogPosting"
+  ,"mainEntityOfPage": {
+     "@type": "WebPage"
+    ,"@id": "https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/"
+  }
+  ,"headline": "Internal Rate of Return Calculation"
+  ,"datePublished": "2023-07-29"
+  ,"dateModified": "2023-07-29"
+
+  ,"author": [
+    
+      {
+         "@type": "Person"
+        ,"name": "Thomas Weitzel"
+      }
+      
+    
+  ]
+  ,"publisher": {
+     "@type": "Person"
+    ,"name": "Thomas Weitzel"
+  }
+  
+  ,"description": "Deconstructing the math of investment: estimate the annualized rate of return with the IRR algorithm and its Rust implementation."
+  ,"articleBody": "The internal rate of return (IRR) is a potent financial measure used in financial analysis, accounting, and portfolio management to gauge the profitability of investments.\nIt's like the heartbeat of an investment -- an indicator of health, the higher it is, the better the investment.\nThis powerful tool can help investors compare different investment options, assisting in making informed decisions about where to allocate their capital.\nEspecially when cash flows are irregular, as often is the case in real-world scenarios, IRR becomes invaluable.\nThis article will first explain the concept and calculations behind IRR and then demonstrate how to implement an IRR algorithm in Rust.\nIRR vs. XIRR terminology\nThe IRR is the rate of return that makes the net present value (NPV) of all cash flows (both positive and negative) from a particular investment equal to zero.\nIt's sometimes used for cash flows at regular, usually annual, intervals.\nI will not make this assumption in this article.\nWhile Microsoft uses the name XIRR for its Excel function, I will use the term IRR throughout this article, even though the cash flows do not occur at regular intervals.\nExample data and validation\nA crucial part of implementing a financial algorithm like IRR is validation -- that is, making sure that your algorithm is producing correct and expected results.\nOne effective way to validate your implementation is by comparing its outputs to those of Microsoft Excel's XIRR function.\nI will use the data from the Excel example.\nUsing Excel's XIRR function to compute the internal rate of return for this specific data set yields a result of \n\n\n\n\n\n$37.34\\%$\n\n.\n$\\textbf{i}$ISO Date $\\textbf{d}$Years since first cash flow $\\textbf{y}$Payment $\\textbf{p}$\n12008-01-010.0000-10,000\n22008-03-010.16442,750\n32008-10-300.83014,250\n42009-02-151.12603,250\n52009-04-011.24932,750\n\nHow IRR works\nThe IRR is calculated by finding the rate of return that would make the net present value (NPV) of an investment equal to zero.\nThe NPV is the sum of the present values of all future cash flows from an investment.\nThe derivative of the NPV is used to find the IRR.\nThe derivative of the NPV is the rate of change of the NPV with respect to the interest rate.\nThe IRR algorithm is an instance of the Newton-Raphson method,\nwhich is a root-finding algorithm that produces successively better approximations to the roots (or zeroes) of a real-valued function.\nTo calculate the IRR, you need an array with pairs of data: one is the date of a cash flow, and the other is its payment amount.\nYou also need an initial guess for the IRR rate, which is often set as \n\n\n\n\n\n$10\\%$\n\n or $0.1$.\nHere's the general process of the algorithm:\n\nCompute the net present value (NPV): The NPV is calculated by summing the present values of the individual cash flows.\nCompute the derivative of the NPV: The derivative of the NPV with respect to the rate is created by differentiating the NPV formula and summing these values.\nUpdate the guess: The next guess for the rate is calculated by subtracting the ratio of the NPV to its derivative from the current guess.\nIterate until convergence: These steps are repeated until the change in guesses is below a certain tolerance, or until a maximum number of iterations is reached.\nAt this point, the guess for the rate is considered to be the IRR.\n\nCompute the net present value (NPV)\nHere, $y_i$ represents the number of years that have passed since the first cash flow,\ncalculated as the difference in days between the date of the $i$-th cash flow $d_i$ and the date of the first cash flow $d_1$,\ndivided by 365 (days in one year).\nI have pre-calculated it in the table above:\n$$y_i = \\frac{d_i - d_1}{365}$$\nThe NPV is the sum of all payments, where the correct interest rate $irr$ is applied.\nIts value is 0 after all transaction have been concluded:\n$$\\mathit{NPV} = \\sum_{i = 1}^{m} \\frac{p_i}{(1 + irr)^{y_i}}$$\nWhen you plot the NPV function as a function of $irr$,\nyou are essentially varying the interest rate and observing how it affects the NPV.\nHere's what you see on the graph below, which plots the NPV as a function of the rate with the values from the table above:\n\nX-axis: The x-axis represents the interest rate $irr$.\nIt typically ranges from \n\n\n\n\n\n$0\\%$\n\n to a reasonable upper limit, depending on the context of your problem.\nY-axis: The y-axis represents the net present value NPV.\nIt's the cumulative sum of the discounted cash flows according to the given formula.\nShape of the curve: The curve of the NPV function will generally be downward-sloping.\nThis is because as you increase the interest rate $irr$, the present value of future cash flows decreases.\nHigher interest rates mean that future cash flows are being discounted more heavily, which reduces their present value.\nBreak-even point: There will be a point on the graph where the NPV curve intersects the x-axis.\nIt's where our $irr$ satisfies the condition $\\mathit{NPV} = 0$.\nFor our data, it is somewhere between $0.35$ and $0.40$, or \n\n\n\n\n\n$35\\%$\n\n and \n\n\n\n\n\n$40\\%$\n\n.\n\n\n  \n  \n\nThe above formula is a sum of function terms.\nApplying the superposition principle,\nwe can split the sum into individual function terms, which look all the same.\nFor each cash flow, we have a function term, which is the present value of the cash flow.\nThe important part is that we can apply this principle to the NPV function and the derivative of the NPV function.\nWith $irr$ written as $x$, each function term looks like this, where $p_i$ and $y_i$ are just constants.\n$f_i(x)$ represents the NPV for a single cash flow, the $i$-th one:\n$$f_i(x) = \\frac{p_i}{(1 + x)^{y_i}}$$\nThe amount $p_i$ is discounted in the NPV calculation to reflect the time value of money. Here's an explanation for why that's done:\n\nTime value of money: Money available today is worth more than the same amount in the future because of its potential earning capacity.\nThis core principle of finance holds that, provided money can earn interest, any amount of money is worth more the sooner it is received.\nDiscounting future cash flows: In the context of the internal rate of return (IRR) and net present value (NPV), this principle is applied to future cash flows.\nThe $p_i$ represents a payment (cash flow) at some future date. To compare this future value to present values,\nit needs to be discounted back to its value in today's terms.\nThe discount factor: The expression $\\frac{1}{(1 + x)^{y_i}}$ serves as a discount factor, where $x$ is the internal rate of return, and $y_i$ is the number of years that have passed since the first cash flow.\nThis factor is derived from the formula for compounding interest in reverse (discounting rather than compounding).\nSum of discounted payments: The NPV is the sum of these discounted payments. By discounting each future cash flow back to its present value,\nthe NPV provides a consistent basis for comparing the value of cash flows across different time periods.\nUnderstanding the equation: The equation $f_i(x) = \\frac{p_i}{(1 + x)^{y_i}}$ represents the present value of the $i$-th cash flow.\nIt shows how each cash flow is discounted back to present value terms using the discount factor.\n\nDiscounting the $p_i$ in the NPV calculation allows for a proper comparison of cash flows across different time periods,\ntaking into account the time value of money and the specific internal rate of return (IRR) required from the investment.\nIt ensures that future cash flows are appropriately weighed against the potential earning capacity of money in the present.\nBut what happens if ...\nThe expression $(1 + x)^{y_i}$ can become a problem if $x &lt; -1$ (less than \n\n\n\n\n\n$-100\\%$\n\n), because raising a negative number to a non-integer power will result in a complex number.\nWithin the realm of real numbers, this operation is undefined.\nFor example, consider a case where $x = -1.1$ and $y_i$ is a floating point number like $0.4$.\nThen, $(1 + x)$ will be negative, and raising it to the $y_i$ power produces a complex value:\n${(1 - 1.1)}^{0.4} \\approx 0.12 + 0.38 i$\nIn the context of finance and the calculation of IRR, it doesn't make sense to have complex numbers as they don't have a practical interpretation in terms of cash flows or discount rates.\nTherefore, you would typically ensure that the rate $x$ stays within the range where the calculation remains within the realm of real numbers.\nIf you're working with cash flows and discount rates, you may want to either avoid or handle situations where $x &lt; -1$ by constraining the value of $x$ within a reasonable range or taking some other specific action if $x$ falls outside that range.\nIn practice, it's rare that you would come across this scenario.\nCompute the derivative of the NPV\nWe can now apply the basic differentiation rules to get the derivative of $f_i(x)$.\nIt represents the derivative of the NPV for a single cash flow, also the $i$-th one:\n$$f_i'(x) = \\frac{-y_i \\cdot p_i}{(1 + x)^{y_i + 1}}$$\nUpdate the guess\nThe Newton-Raphson method is an iterative process used to locate the roots of a differentiable function, i.e. a solution for $x$ where $f(x) = 0$.\nThe method begins with an initial estimate $x_n$, which is then refined into a more accurate guess, $x_{n+1}$.\nThis stage is where the NPV and its derivative come into play.\nInstead of solely employing $f_i(x_n)$ and $f_i'(x_n)$ for a single cash flow, we incorporate all the cash flows by adding up the NPV terms and derivative terms respectively:\n$$x_{n+1} = x_{n} - \\frac{\\sum_{i = 1}^{m} f_i(x_n)}{\\sum_{i = 1}^{m} f_i'(x_n)} $$\nIterate until convergence\nInstead of improving the result indefinitely, you stop when the difference between $x_n$ and $x_{n+1}$ is smaller than or equal to a given $\\epsilon$, i.e. $\\left| x_n - x_{n+1} \\right| \\le \\epsilon$.\nIt's usually a very small number, like $0.000001$ ($1.0 e^{-6}$).\nThis is the value used in Microsoft Excel's XIRR function.\nIt's also worth noting that despite using the exact derivative, the IRR algorithm is still an approximation method.\nIt may not always converge to a solution, especially for cash flow series that have multiple changes in sign.\nIn these cases, it may be necessary to provide a good initial guess for the rate, or to use a different method to compute the internal rate of return.\nImplementation in Rust\nLet's move towards translating our theoretical understanding into a concrete implementation using Rust.\nWe'll focus on implementing the IRR calculation algorithm by applying the findings and formulas mentioned in the previous sections.\nThe final output should be close to Excel's XIRR function result within an acceptable tolerance range.\n// We use the chrono crate for date handling: https://docs.rs/chrono/latest/chrono\nuse chrono::prelude::*;\n\n// Function to calculate the number of days between two dates\nfn days_between(start_date: NaiveDate, end_date: NaiveDate) -&gt; i64 {\n    // Calculate the duration between the two dates\n    let duration = end_date.signed_duration_since(start_date);\n\n    // Return the duration in days\n    duration.num_days()\n}\n\n// Main function to calculate the internal rate of return\nfn calculate_irr(transactions: &amp;[(f64, f64)], initial_guess: f64) -&gt; f64 {\n    // Start with initial guess for the IRR\n    let mut x = initial_guess;\n    const MAX_TRIES: usize = 100;\n    const EPSILON: f64 = 1.0e-6;\n\n    // Loop until a maximum number of iterations is reached\n    for _ in 0..MAX_TRIES {\n        // Calculate NPV and its derivative for each cash flow and sum them up\n        let (fx, dfx) = transactions.iter()\n            .map(|(years, amount)| {\n                let fx = amount / (1_f64 + x).powf(*years);                  // NPV of the cash flow\n                let dfx = (-years * amount) / (1_f64 + x).powf(years + 1.0); // Derivative of NPV                                                       \n                (fx, dfx)                                                    // Return both values for a single cash flow\n            })\n            // Sum up all NPVs and derivatives for all cash flows (reduce to a tuple of two sums)\n            .fold((0_f64, 0_f64), |(fx_acc, dfx_acc), (fx, dfx)| (fx_acc + fx, dfx_acc + dfx));\n\n        // Calculate the new guess\n        let new_x = x - fx / dfx;\n\n        // Calculate the difference between the new and the old guess\n        let epsilon = (new_x - x).abs();\n\n        // If the difference is smaller than or equal to the tolerance, we are done\n        if epsilon &lt;= EPSILON {\n            return x;\n        }\n\n        // Continue the loop with the new guess\n        x = new_x;\n    }\n\n    // Return a non-number if the algorithm didn&#39;t converge (see &quot;Iterate until convergence&quot; in article)\n    f64::NAN\n}\n\n// Define the main function and our example transactions\nfn main() {\n    // Example from Microsoft Excel documentation:\n    // https://support.microsoft.com/en-gb/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d\n    // The internal rate of return is 0.373362535 or 37.34%\n    let cashflows = vec![\n        (NaiveDate::from_ymd_opt(2008,  1,  1).unwrap(), -10_000.00),\n        (NaiveDate::from_ymd_opt(2008,  3,  1).unwrap(),   2_750.00),\n        (NaiveDate::from_ymd_opt(2008, 10, 30).unwrap(),   4_250.00),\n        (NaiveDate::from_ymd_opt(2009,  2, 15).unwrap(),   3_250.00),\n        (NaiveDate::from_ymd_opt(2009,  4,  1).unwrap(),   2_750.00),\n    ];\n    // Pre-calculate the years since first cash flow for each cash flow\n    let transactions: Vec&lt;(f64, f64)&gt; = cashflows.iter()\n        .map(|(date, amount)| (days_between(cashflows[0].0, *date) as f64 / 365.0, *amount))\n        .collect();\n\n    // Call our IRR calculation function and print the result\n    // Expected result is 37.34%\n    println!(&quot;IRR with Newton-Raphson: {:.2}%&quot;, calculate_irr(&amp;transactions, 0.1) * 100.0);\n}\nThe calculate_irr function is where the heart of our IRR calculation lives.\nIt starts by defining the initial guess for the IRR, then enters a loop that calculates the new guess, checks for convergence, and continues the loop if not converged.\nFinally, if the algorithm fails to converge, it returns a non-number.\nThe main function uses an example transaction set and calls our calculate_irr function.\nBonus: implementation in JavaScript\nJavaScript runs natively in all modern browsers and is the lingua franca of the web.\nBy translating the Rust code into JavaScript, the IRR calculation will be easily usable on virtually any device, regardless of operating system or hardware.\nThis way, it should be possible to use it in a web application, or even in a mobile app using a framework like React Native.\nMaybe you want to write a financial app that runs on iOS, Android, and the web?\n// Function to calculate the number of days between two dates\nfunction daysBetween(start, end) {\n  const millisecondsPerDay = 1000 * 60 * 60 * 24;\n  const millisBetween = end.getTime() - start.getTime();\n  return millisBetween / millisecondsPerDay;\n}\n\n// Main function to calculate the internal rate of return\nfunction calculateIRR(transactions, initialGuess = 0.1) {\n  // Start with initial guess for the IRR\n  let x = initialGuess;\n  const MAX_TRIES = 100;\n  const EPSILON = 1.0e-6;\n\n  // Loop until a maximum number of iterations is reached\n  for (let tries = 0; tries &lt; MAX_TRIES; tries += 1) {\n    // Calculate NPV and its derivative for each cash flow and sum them up\n    const { fxs, dfxs } = transactions\n      .map((tx) =&gt; {\n        const fx = tx.amount / ((1.0 + x) ** tx.years);                      // NPV of the cash flow\n        const dfx = (-tx.years * tx.amount) / ((1.0 + x) ** (tx.years + 1)); // Derivative of NPV\n        return { fx, dfx };                                                  // Return both values for a single cash flow\n      })\n      // Sum up all NPVs and derivatives for all cash flows (reduce to an object with two sums)\n      .reduce((acc, obj) =&gt; ({ fxs: acc.fxs + obj.fx, dfxs: acc.dfxs + obj.dfx }), { fxs: 0, dfxs: 0 });\n\n    // Calculate the new guess\n    const xNew = x - fxs / dfxs;\n\n    // Calculate the difference between the new and the old guess\n    const epsilon = Math.abs(xNew - x);\n\n    // If the difference is smaller than or equal to the tolerance, we are done\n    if (epsilon &lt;= EPSILON) {\n      return x;\n    }\n\n    // Continue the loop with the new guess\n    x = xNew;\n  }\n\n  // Return a non-number if the algorithm didn&#39;t converge\n  return NaN;\n}\n\n// Example from Microsoft Excel documentation:\n// https://support.microsoft.com/en-gb/office/xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d\n// The internal rate of return is 0.373362535 or 37.34%\nconst cashflows = [\n  { date: new Date(&#39;2008-01-01&#39;), amount: -10000.00 },\n  { date: new Date(&#39;2008-03-01&#39;), amount:   2750.00 },\n  { date: new Date(&#39;2008-10-30&#39;), amount:   4250.00 },\n  { date: new Date(&#39;2009-02-15&#39;), amount:   3250.00 },\n  { date: new Date(&#39;2009-04-01&#39;), amount:   2750.00 }\n];\n// Pre-calculate the years since first cash flow for each cash flow\nconst transactions = cashflows\n  .map((cf) =&gt; ({ years: daysBetween(cashflows[0].date, cf.date) / 365, amount: cf.amount }));\n\n// Call our IRR calculation function and print the result\n// Expected result is 37.34%\nconsole.log(`IRR with Newton-Raphson: ${(calculateIRR(transactions) * 100).toFixed(2)}%`);Conclusion\nThe internal rate of return (IRR) is an instrumental financial measure that helps investors compare and decide between different investment opportunities.\nCalculating it can get complex due to irregular cash flows, making a detailed understanding of the underlying algorithm crucial.\nThis article dived into the mathematics behind IRR calculation and provided a concrete implementation using the Rust programming language.\nRemember, IRR is not just a number but an insight into the potential of an investment, assisting you in making informed financial decisions.\nIf you have any questions, need further clarification, or want to give feedback: please let me know.\n"
+  
+    ,"image": "https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/banner.jpg"
+  
+}
+</script>
+
+
+
+  </div>
+  <footer>
+  <!-- Social Media Icons -->
+  
+    <ul class="mt-4 flex justify-center space-x-8">
+      
+        
+          <li>
+            <a
+              
+              href="https:&#x2F;&#x2F;github.com&#x2F;thomasweitzel" title="Github"
+              class="text-neutral-500 hover:text-neutral-400">
+              <span class="sr-only">github</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 1024 1024"><path d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)"/></svg>
+            </a>
+          </li>
+        
+      
+        
+          <li>
+            <a
+              
+              href="https:&#x2F;&#x2F;stackoverflow.com&#x2F;u&#x2F;188291" title="Stackoverflow"
+              class="text-neutral-500 hover:text-neutral-400">
+              <span class="sr-only">stackoverflow</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 73.099998 86.599998"><g transform="translate(-22.6,-14.9)"><path d="m 84.4,93.8 0,-23.2 7.7,0 0,30.9 -69.5,0 0,-30.9 7.7,0 0,23.2 z"/><path d="m 38.8,68.4 37.8,7.9 1.6,-7.6 -37.8,-7.9 -1.6,7.6 z m 5,-18 35,16.3 3.2,-7 -35,-16.4 -3.2,7.1 z M 53.5,33.2 83.2,57.9 88.1,52 58.4,27.3 53.5,33.2 Z m 19.2,-18.3 -6.2,4.6 23,31 6.2,-4.6 -23,-31 z M 38,86 l 38.6,0 0,-7.7 -38.6,0 0,7.7 z"/></g></svg>
+            </a>
+          </li>
+        
+      
+        
+          <li>
+            <a
+              
+                rel="me"
+              
+              href="https:&#x2F;&#x2F;fosstodon.org&#x2F;@tweitzel" title="Mastodon"
+              class="text-neutral-500 hover:text-neutral-400">
+              <span class="sr-only">mastodon</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 18.656 20"><path d="M18.656 6.566c0-4.339-2.843-5.61-2.843-5.61C14.38.298 11.919.021 9.362 0h-.063c-2.557.021-5.016.298-6.45.956 0 0-2.843 1.272-2.843 5.61 0 .993-.02 2.181.012 3.441.103 4.243.778 8.425 4.7 9.463 1.81.479 3.363.579 4.613.51 2.268-.126 3.54-.809 3.54-.809l-.074-1.646s-1.621.511-3.441.449c-1.804-.062-3.707-.194-4-2.409a4.523 4.523 0 0 1-.04-.621s1.77.433 4.015.536c1.372.063 2.658-.08 3.965-.236 2.506-.299 4.688-1.843 4.962-3.254.434-2.223.398-5.424.398-5.424zm-3.353 5.59h-2.081V7.057c0-1.075-.452-1.62-1.357-1.62-1 0-1.501.647-1.501 1.927v2.791h-2.07V7.364c0-1.28-.5-1.927-1.501-1.927-.905 0-1.357.546-1.357 1.62v5.099H3.355V6.903c0-1.074.273-1.927.823-2.558.566-.631 1.307-.955 2.228-.955 1.065 0 1.872.409 2.405 1.228l.518.869.519-.869c.533-.819 1.34-1.228 2.405-1.228.92 0 1.662.324 2.228.955.549.631.822 1.484.822 2.558z"/></svg>
+            </a>
+          </li>
+        
+      
+    </ul>
+  
+  <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center">
+    
+      <p class="text-center text-base leading-6">
+        
+          
+          <a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/privacy">Privacy Policy</a>
+        
+           &middot; 
+          <a href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/terms">Terms</a>
+        
+      </p>
+    
+    
+    <div class="mt-4">
+      <p class="text-center text-base leading-6 text-neutral-500">
+        Copyright 2026 by Thomas Weitzel
+      </p>
+    </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

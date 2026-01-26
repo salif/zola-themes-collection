@@ -58,7 +58,7 @@
             <h1>Example content 1</h1><time>15 May 2019</time>
             <h2 id="inline-html-elements"><a class="zola-anchor" href="#inline-html-elements" aria-label="Anchor link for: inline-html-elements">🔗</a>
 Inline HTML elements</h2>
-<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+<p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a rel="external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
 <ul>
 <li><strong>To bold text</strong>, use <code>&lt;strong&gt;</code>.</li>
 <li><em>To italicize text</em>, use <code>&lt;em&gt;</code>.</li>
@@ -71,11 +71,9 @@ Inline HTML elements</h2>
 <span id="continue-reading"></span><h2 id="footnotes"><a class="zola-anchor" href="#footnotes" aria-label="Anchor link for: footnotes">🔗</a>
 Footnotes</h2>
 <p>Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number<sup class="footnote-reference"><a href="#fn-sample_footnote">1</a></sup> will lead you to a footnote. The syntax looks like:</p>
-<pre data-lang="md" style="background-color:#272822;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span>Clicking this number[^fn-sample_footnote]
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #272822;"><code data-lang="markdown"><span class="giallo-l"><span>Clicking this number[</span><span style="color: #AE81FF;">^fn-sample_footnote</span><span>]</span></span></code></pre>
 <p>Each footnote needs the <code>^fn-</code> prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:</p>
-<pre data-lang="md" style="background-color:#272822;color:#f8f8f2;" class="language-md "><code class="language-md" data-lang="md"><span>[^fn-sample_footnote]: Handy! Now click the return link to go back.
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #272822;"><code data-lang="markdown"><span class="giallo-l"><span>[</span><span style="color: #AE81FF;">^fn-sample_footnote</span><span>]: Handy! Now click the return link to go back.</span></span></code></pre>
 <p>You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.</p>
 <h2 id="heading"><a class="zola-anchor" href="#heading" aria-label="Anchor link for: heading">🔗</a>
 Heading</h2>
@@ -83,25 +81,23 @@ Heading</h2>
 <h3 id="code"><a class="zola-anchor" href="#code" aria-label="Anchor link for: code">🔗</a>
 Code</h3>
 <p>Inline code is available with the <code>&lt;code&gt;</code> element. Snippets of multiple lines of code are supported through Pygments. Longer lines will automatically scroll horizontally when needed.</p>
-<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#75715e;">// Example can be run directly in your JavaScript console
-</span><span>
-</span><span style="color:#75715e;">// Create a function that takes two arguments and returns the sum of those arguments
-</span><span style="font-style:italic;color:#66d9ef;">var </span><span>adder </span><span style="color:#f92672;">= new </span><span>Function(</span><span style="color:#e6db74;">&quot;a&quot;</span><span>, </span><span style="color:#e6db74;">&quot;b&quot;</span><span>, </span><span style="color:#e6db74;">&quot;return a + b&quot;</span><span>);
-</span><span>
-</span><span style="color:#75715e;">// Call the function
-</span><span style="color:#a6e22e;">adder</span><span>(</span><span style="color:#ae81ff;">2</span><span>, </span><span style="color:#ae81ff;">6</span><span>);
-</span><span style="color:#75715e;">// &gt; 8
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #272822;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #88846F;">// Example can be run directly in your JavaScript console</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #88846F;">// Create a function that takes two arguments and returns the sum of those arguments</span></span>
+<span class="giallo-l"><span style="color: #66D9EF;font-style: italic;">var</span><span> adder</span><span style="color: #F92672;"> = new</span><span style="color: #A6E22E;"> Function</span><span>(</span><span style="color: #E6DB74;">&quot;a&quot;</span><span>,</span><span style="color: #E6DB74;"> &quot;b&quot;</span><span>,</span><span style="color: #E6DB74;"> &quot;return a + b&quot;</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #88846F;">// Call the function</span></span>
+<span class="giallo-l"><span style="color: #A6E22E;">adder</span><span>(</span><span style="color: #AE81FF;">2</span><span>,</span><span style="color: #AE81FF;"> 6</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #88846F;">// &gt; 8</span></span></code></pre>
 <p>You may also optionally show code snippets with line numbers. Add <code>linenos</code> to the Pygments tags.</p>
-<pre data-lang="js" style="background-color:#272822;color:#f8f8f2;" class="language-js "><code class="language-js" data-lang="js"><span style="color:#75715e;">// Example can be run directly in your JavaScript console
-</span><span>
-</span><span style="color:#75715e;">// Create a function that takes two arguments and returns the sum of those arguments
-</span><span style="font-style:italic;color:#66d9ef;">var </span><span>adder </span><span style="color:#f92672;">= new </span><span>Function(</span><span style="color:#e6db74;">&quot;a&quot;</span><span>, </span><span style="color:#e6db74;">&quot;b&quot;</span><span>, </span><span style="color:#e6db74;">&quot;return a + b&quot;</span><span>);
-</span><span>
-</span><span style="color:#75715e;">// Call the function
-</span><span style="color:#a6e22e;">adder</span><span>(</span><span style="color:#ae81ff;">2</span><span>, </span><span style="color:#ae81ff;">6</span><span>);
-</span><span style="color:#75715e;">// &gt; 8
-</span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #272822;"><code data-lang="javascript"><span class="giallo-l"><span style="color: #88846F;">// Example can be run directly in your JavaScript console</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #88846F;">// Create a function that takes two arguments and returns the sum of those arguments</span></span>
+<span class="giallo-l"><span style="color: #66D9EF;font-style: italic;">var</span><span> adder</span><span style="color: #F92672;"> = new</span><span style="color: #A6E22E;"> Function</span><span>(</span><span style="color: #E6DB74;">&quot;a&quot;</span><span>,</span><span style="color: #E6DB74;"> &quot;b&quot;</span><span>,</span><span style="color: #E6DB74;"> &quot;return a + b&quot;</span><span>);</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #88846F;">// Call the function</span></span>
+<span class="giallo-l"><span style="color: #A6E22E;">adder</span><span>(</span><span style="color: #AE81FF;">2</span><span>,</span><span style="color: #AE81FF;"> 6</span><span>);</span></span>
+<span class="giallo-l"><span style="color: #88846F;">// &gt; 8</span></span></code></pre>
 <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
 <h3 id="gists-via-github-pages"><a class="zola-anchor" href="#gists-via-github-pages" aria-label="Anchor link for: gists-via-github-pages">🔗</a>
 Gists via GitHub Pages</h3>

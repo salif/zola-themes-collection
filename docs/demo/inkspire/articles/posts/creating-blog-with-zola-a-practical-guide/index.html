@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Creating a Blog with Zola: A Practical Guide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Creating a Blog with Zola: A Practical Guide</h1>
+    </header>
+    <div class="container content"><p>Building a blog with Zola is straightforward, but there are patterns and decisions that aren't immediately obvious from the documentation. This guide walks through creating a real blog, covering the practical choices you'll face and the solutions that work well.</p>
+<h2 id="getting-started-installation-and-project-setup">Getting Started: Installation and Project Setup</h2>
+<p>First, install Zola. Download the binary for your platform from the releases page, or use a package manager:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># macOS
+</span><span style="color:#bf616a;">brew</span><span> install zola
+</span><span>
+</span><span style="color:#65737e;"># Linux
+</span><span style="color:#bf616a;">snap</span><span> install zola</span><span style="color:#bf616a;"> --edge
+</span><span>
+</span><span style="color:#65737e;"># Or download the binary directly
+</span></code></pre>
+<p>Create your project:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> init my-blog
+</span><span style="color:#96b5b4;">cd</span><span> my-blog
+</span></code></pre>
+<p>Zola will ask a few questions. For a blog, answer:</p>
+<ul>
+<li>URL: Your production URL (you can change this later)</li>
+<li>Sass compilation: Yes</li>
+<li>Syntax highlighting: Yes</li>
+</ul>
+<p>Your directory structure looks like this:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>my-blog/
+</span><span>├── config.toml
+</span><span>├── content/
+</span><span>├── sass/
+</span><span>├── static/
+</span><span>├── templates/
+</span><span>└── themes/
+</span></code></pre>
+<h2 id="configuration-the-foundation">Configuration: The Foundation</h2>
+<p>Open <code>config.toml</code> and configure the essentials:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#bf616a;">base_url </span><span>= &quot;</span><span style="color:#a3be8c;">https://yourdomain.com</span><span>&quot;
+</span><span style="color:#bf616a;">title </span><span>= &quot;</span><span style="color:#a3be8c;">Your Blog Name</span><span>&quot;
+</span><span style="color:#bf616a;">description </span><span>= &quot;</span><span style="color:#a3be8c;">A brief description of your blog</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Compile Sass files
+</span><span style="color:#bf616a;">compile_sass </span><span>= </span><span style="color:#d08770;">true
+</span><span>
+</span><span style="color:#65737e;"># Enable syntax highlighting for code blocks
+</span><span style="color:#bf616a;">highlight_code </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">highlight_theme </span><span>= &quot;</span><span style="color:#a3be8c;">base16-ocean-dark</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Generate RSS feed
+</span><span style="color:#bf616a;">generate_feed </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">feed_filename </span><span>= &quot;</span><span style="color:#a3be8c;">rss.xml</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Taxonomies (tags and categories)
+</span><span style="color:#bf616a;">taxonomies </span><span>= [
+</span><span>    {</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">tags</span><span>&quot;, </span><span style="color:#bf616a;">feed </span><span>= </span><span style="color:#d08770;">true</span><span>},
+</span><span>    {</span><span style="color:#bf616a;">name </span><span>= &quot;</span><span style="color:#a3be8c;">categories</span><span>&quot;, </span><span style="color:#bf616a;">feed </span><span>= </span><span style="color:#d08770;">true</span><span>},
+</span><span>]
+</span><span>
+</span><span>[markdown]
+</span><span style="color:#65737e;"># Enable smart punctuation and other features
+</span><span style="color:#bf616a;">smart_punctuation </span><span>= </span><span style="color:#d08770;">true
+</span><span style="color:#bf616a;">highlight_code </span><span>= </span><span style="color:#d08770;">true
+</span><span>
+</span><span>[extra]
+</span><span style="color:#65737e;"># Add any custom variables you need
+</span><span style="color:#bf616a;">author </span><span>= &quot;</span><span style="color:#a3be8c;">Your Name</span><span>&quot;
+</span><span style="color:#bf616a;">github </span><span>= &quot;</span><span style="color:#a3be8c;">https://github.com/yourusername</span><span>&quot;
+</span><span style="color:#bf616a;">twitter </span><span>= &quot;</span><span style="color:#a3be8c;">yourusername</span><span>&quot;
+</span></code></pre>
+<p>This configuration gives you a solid foundation: RSS feeds, taxonomies for organizing content, and code highlighting.</p>
+<h2 id="content-structure-organizing-your-posts">Content Structure: Organizing Your Posts</h2>
+<p>Create a blog section in <code>content/blog/</code>:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir -p</span><span> content/blog
+</span></code></pre>
+<p>Create <code>content/blog/_index.md</code>:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Blog&quot;
+</span><span>sort_by = &quot;date&quot;
+</span><span>template = &quot;blog.html&quot;
+</span><span>page_template = &quot;blog-page.html&quot;
+</span><span>paginate_by = 10
+</span><span>+++
+</span><span>
+</span><span>Welcome to my blog where I write about web development, programming, and technology.
+</span></code></pre>
+<p>This file defines how the blog section behaves:</p>
+<ul>
+<li><code>sort_by = "date"</code> orders posts by publication date</li>
+<li><code>paginate_by = 10</code> creates pagination every 10 posts</li>
+<li><code>template</code> defines the list view</li>
+<li><code>page_template</code> defines individual post view</li>
+</ul>
+<h2 id="creating-your-first-post">Creating Your First Post</h2>
+<p>Create <code>content/blog/hello-world.md</code>:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Hello World: Starting a New Blog&quot;
+</span><span>date = 2025-11-16
+</span><span>description = &quot;My first post on this new blog built with Zola&quot;
+</span><span>[taxonomies]
+</span><span>tags = [&quot;meta&quot;, &quot;blogging&quot;]
+</span><span>categories = [&quot;General&quot;]
+</span><span>
+</span><span>[extra]
+</span><span>featured = true
+</span><span>+++
+</span><span>
+</span><span>Welcome to my blog! This is my first post built with Zola, and I&#39;m excited to share what I&#39;m learning.
+</span><span>
+</span><span style="color:#65737e;">&lt;!-- more --&gt;
+</span><span>
+</span><span style="color:#8fa1b3;">## Why Zola?
+</span><span>
+</span><span>I chose Zola for several reasons:
+</span><span style="color:#bf616a;">- Fast builds
+</span><span style="color:#bf616a;">- Zero dependencies
+</span><span style="color:#bf616a;">- Simple configuration
+</span><span style="color:#bf616a;">- Great multilingual support
+</span><span style="color:#bf616a;">
+</span><span style="color:#8fa1b3;">## What&#39;s Next?
+</span><span>
+</span><span>I plan to write about web development, share tutorials, and document my learning journey.
+</span><span>
+</span><span>Stay tuned for more content!
+</span></code></pre>
+<p>The <code>&lt;!-- more --&gt;</code> tag creates a summary break. Text before it appears in post previews.</p>
+<h2 id="templates-building-the-blog-layout">Templates: Building the Blog Layout</h2>
+<p>Create <code>templates/base.html</code> as your foundation:</p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!</span><span style="color:#b48ead;">DOCTYPE </span><span style="color:#d08770;">html</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">html </span><span style="color:#d08770;">lang</span><span>=&quot;</span><span style="color:#a3be8c;">{{ lang | default(value=</span><span>&quot;</span><span style="color:#d08770;">en</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span style="color:#d08770;">) }}</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">charset</span><span>=&quot;</span><span style="color:#a3be8c;">UTF-8</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">name</span><span>=&quot;</span><span style="color:#a3be8c;">viewport</span><span>&quot; </span><span style="color:#d08770;">content</span><span>=&quot;</span><span style="color:#a3be8c;">width=device-width, initial-scale=1.0</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">title</span><span>&gt;{% block title %}{{ config.title }}{% endblock %}&lt;/</span><span style="color:#bf616a;">title</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">name</span><span>=&quot;</span><span style="color:#a3be8c;">description</span><span>&quot; </span><span style="color:#d08770;">content</span><span>=&quot;</span><span style="color:#a3be8c;">{% block description %}{{ config.description }}{% endblock %}</span><span>&quot;&gt;
+</span><span>    
+</span><span>    {% if config.generate_feed %}
+</span><span>    &lt;</span><span style="color:#bf616a;">link </span><span style="color:#d08770;">rel</span><span>=&quot;</span><span style="color:#a3be8c;">alternate</span><span>&quot; </span><span style="color:#d08770;">type</span><span>=&quot;</span><span style="color:#a3be8c;">application/rss+xml</span><span>&quot; </span><span style="color:#d08770;">title</span><span>=&quot;</span><span style="color:#a3be8c;">RSS</span><span>&quot; </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">#</span><span>&quot;&gt;
+</span><span>    {% endif %}
+</span><span>    
+</span><span>    &lt;</span><span style="color:#bf616a;">link </span><span style="color:#d08770;">rel</span><span>=&quot;</span><span style="color:#a3be8c;">/</span><span>&quot;&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">header</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">nav</span><span>&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">#</span><span>&quot;&gt;{{ config.title }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">#</span><span>&quot;&gt;Blog&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">#</span><span>&quot;&gt;About&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        &lt;/</span><span style="color:#bf616a;">nav</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">header</span><span>&gt;
+</span><span>    
+</span><span>    &lt;</span><span style="color:#bf616a;">main</span><span>&gt;
+</span><span>        {% block content %}{% endblock %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">main</span><span>&gt;
+</span><span>    
+</span><span>    &lt;</span><span style="color:#bf616a;">footer</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">p</span><span>&gt;</span><span style="color:#8fa1b3;">&amp;</span><span style="color:#d08770;">copy;</span><span> {{ now() | date(format=&quot;%Y&quot;) }} {{ config.extra.author }}&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">footer</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<p>Create <code>templates/blog.html</code> for the blog list:</p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
+</span><span>{% block description %}{{ section.description | default(value=config.description) }}{% endblock %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">blog-list</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">h1</span><span>&gt;{{ section.title }}&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>    
+</span><span>    {{ section.content | safe }}
+</span><span>    
+</span><span>    {% if section.pages %}
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">posts</span><span>&quot;&gt;
+</span><span>        {% for page in section.pages %}
+</span><span>        &lt;</span><span style="color:#bf616a;">article </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">post-preview</span><span>&quot;&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">h2</span><span>&gt;&lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.permalink }}</span><span>&quot;&gt;{{ page.title }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;&lt;/</span><span style="color:#bf616a;">h2</span><span>&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">time </span><span style="color:#d08770;">datetime</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.date }}</span><span>&quot;&gt;{{ page.date | date(format=&quot;%B %d, %Y&quot;) }}&lt;/</span><span style="color:#bf616a;">time</span><span>&gt;
+</span><span>            
+</span><span>            {% if page.summary %}
+</span><span>            &lt;</span><span style="color:#bf616a;">p</span><span>&gt;{{ page.summary | safe }}&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>            {% elif page.description %}
+</span><span>            &lt;</span><span style="color:#bf616a;">p</span><span>&gt;{{ page.description }}&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>            {% endif %}
+</span><span>            
+</span><span>            {% if page.taxonomies.tags %}
+</span><span>            &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">tags</span><span>&quot;&gt;
+</span><span>                {% for tag in page.taxonomies.tags %}
+</span><span>                &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ get_taxonomy_url(kind=</span><span>&quot;</span><span style="color:#d08770;">tags</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span style="color:#d08770;">, name</span><span>=</span><span style="color:#a3be8c;">tag) </span><span style="color:#d08770;">}}</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span>&gt;#{{ tag }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>                {% endfor %}
+</span><span>            &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>            {% endif %}
+</span><span>            
+</span><span>            &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.permalink }}</span><span>&quot;&gt;Read more →&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        &lt;/</span><span style="color:#bf616a;">article</span><span>&gt;
+</span><span>        {% endfor %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>    {% endif %}
+</span><span>    
+</span><span>    {% if paginator %}
+</span><span>    &lt;</span><span style="color:#bf616a;">nav </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">pagination</span><span>&quot;&gt;
+</span><span>        {% if paginator.previous %}
+</span><span>        &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ paginator.previous }}</span><span>&quot;&gt;← Newer&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        {% endif %}
+</span><span>        
+</span><span>        &lt;</span><span style="color:#bf616a;">span</span><span>&gt;Page {{ paginator.current_index }} of {{ paginator.number_pagers }}&lt;/</span><span style="color:#bf616a;">span</span><span>&gt;
+</span><span>        
+</span><span>        {% if paginator.next %}
+</span><span>        &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ paginator.next }}</span><span>&quot;&gt;Older →&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        {% endif %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">nav</span><span>&gt;
+</span><span>    {% endif %}
+</span><span>&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>{% endblock %}
+</span></code></pre>
+<p>Create <code>templates/blog-page.html</code> for individual posts:</p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+</span><span>{% block description %}{{ page.description | default(value=page.summary) }}{% endblock %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">article </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">blog-post</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">header</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">h1</span><span>&gt;{{ page.title }}&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">post-meta</span><span>&quot;&gt;
+</span><span>            &lt;</span><span style="color:#bf616a;">time </span><span style="color:#d08770;">datetime</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.date }}</span><span>&quot;&gt;{{ page.date | date(format=&quot;%B %d, %Y&quot;) }}&lt;/</span><span style="color:#bf616a;">time</span><span>&gt;
+</span><span>            {% if page.extra.reading_time %}
+</span><span>            &lt;</span><span style="color:#bf616a;">span</span><span>&gt;• {{ page.reading_time }} min read&lt;/</span><span style="color:#bf616a;">span</span><span>&gt;
+</span><span>            {% endif %}
+</span><span>        &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>        
+</span><span>        {% if page.taxonomies.tags %}
+</span><span>        &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">tags</span><span>&quot;&gt;
+</span><span>            {% for tag in page.taxonomies.tags %}
+</span><span>            &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ get_taxonomy_url(kind=</span><span>&quot;</span><span style="color:#d08770;">tags</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span style="color:#d08770;">, name</span><span>=</span><span style="color:#a3be8c;">tag) </span><span style="color:#d08770;">}}</span><span style="background-color:#bf616a;color:#2b303b;">&quot;</span><span>&gt;#{{ tag }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>            {% endfor %}
+</span><span>        &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>        {% endif %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">header</span><span>&gt;
+</span><span>    
+</span><span>    &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">post-content</span><span>&quot;&gt;
+</span><span>        {{ page.content | safe }}
+</span><span>    &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>    
+</span><span>    {% if page.earlier or page.later %}
+</span><span>    &lt;</span><span style="color:#bf616a;">nav </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">post-navigation</span><span>&quot;&gt;
+</span><span>        {% if page.earlier %}
+</span><span>        &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.earlier.permalink }}</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">prev</span><span>&quot;&gt;← {{ page.earlier.title }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        {% endif %}
+</span><span>        {% if page.later %}
+</span><span>        &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.later.permalink }}</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">next</span><span>&quot;&gt;{{ page.later.title }} →&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>        {% endif %}
+</span><span>    &lt;/</span><span style="color:#bf616a;">nav</span><span>&gt;
+</span><span>    {% endif %}
+</span><span>&lt;/</span><span style="color:#bf616a;">article</span><span>&gt;
+</span><span>{% endblock %}
+</span></code></pre>
+<h2 id="styling-with-sass">Styling with Sass</h2>
+<p>Create <code>sass/style.scss</code>:</p>
+<pre data-lang="scss" style="background-color:#2b303b;color:#c0c5ce;" class="language-scss "><code class="language-scss" data-lang="scss"><span style="color:#65737e;">// Variables
+</span><span>$</span><span style="color:#bf616a;">primary-color</span><span>: </span><span style="color:#96b5b4;">#2563eb</span><span>;
+</span><span>$</span><span style="color:#bf616a;">text-color</span><span>: </span><span style="color:#96b5b4;">#1f2937</span><span>;
+</span><span>$</span><span style="color:#bf616a;">background</span><span>: </span><span style="color:#96b5b4;">#ffffff</span><span>;
+</span><span>$</span><span style="color:#bf616a;">border-color</span><span>: </span><span style="color:#96b5b4;">#e5e7eb</span><span>;
+</span><span>$</span><span style="color:#bf616a;">max-width</span><span>: </span><span style="color:#d08770;">800px</span><span>;
+</span><span>
+</span><span style="color:#65737e;">// Base styles
+</span><span style="color:#bf616a;">* </span><span>{
+</span><span>    margin: </span><span style="color:#d08770;">0</span><span>;
+</span><span>    padding: </span><span style="color:#d08770;">0</span><span>;
+</span><span>    box-sizing: border-box;
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">body </span><span>{
+</span><span>    font-family: system-ui, </span><span style="color:#a3be8c;">-apple-system</span><span>, sans-serif;
+</span><span>    line-height: </span><span style="color:#d08770;">1.6</span><span>;
+</span><span>    color: $</span><span style="color:#bf616a;">text-color</span><span>;
+</span><span>    background: $</span><span style="color:#bf616a;">background</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// Layout
+</span><span style="color:#bf616a;">header </span><span>{
+</span><span>    border-bottom: </span><span style="color:#d08770;">1px </span><span>solid $</span><span style="color:#bf616a;">border-color</span><span>;
+</span><span>    padding: </span><span style="color:#d08770;">1rem 0</span><span>;
+</span><span>    
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">nav </span><span>{
+</span><span>        max-width: $</span><span style="color:#bf616a;">max-width</span><span>;
+</span><span>        margin: </span><span style="color:#d08770;">0 </span><span>auto;
+</span><span>        padding: </span><span style="color:#d08770;">0 1rem</span><span>;
+</span><span>        display: flex;
+</span><span>        gap: </span><span style="color:#d08770;">2rem</span><span>;
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">a </span><span>{
+</span><span>            text-decoration: none;
+</span><span>            color: $</span><span style="color:#bf616a;">text-color</span><span>;
+</span><span>            font-weight: </span><span style="color:#d08770;">500</span><span>;
+</span><span>            
+</span><span style="color:#b48ead;">            </span><span>&amp;</span><span style="color:#8fa1b3;">:</span><span style="color:#b48ead;">hover </span><span>{
+</span><span>                color: $</span><span style="color:#bf616a;">primary-color</span><span>;
+</span><span>            }
+</span><span>            
+</span><span style="color:#b48ead;">            </span><span>&amp;</span><span style="color:#8fa1b3;">:</span><span style="color:#b48ead;">first-child </span><span>{
+</span><span>                font-weight: </span><span style="color:#d08770;">700</span><span>;
+</span><span>                margin-right: auto;
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">main </span><span>{
+</span><span>    max-width: $</span><span style="color:#bf616a;">max-width</span><span>;
+</span><span>    margin: </span><span style="color:#d08770;">2rem </span><span>auto;
+</span><span>    padding: </span><span style="color:#d08770;">0 1rem</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#bf616a;">footer </span><span>{
+</span><span>    border-top: </span><span style="color:#d08770;">1px </span><span>solid $</span><span style="color:#bf616a;">border-color</span><span>;
+</span><span>    padding: </span><span style="color:#d08770;">2rem 1rem</span><span>;
+</span><span>    text-align: center;
+</span><span>    color: </span><span style="color:#96b5b4;">#6b7280</span><span>;
+</span><span>    margin-top: </span><span style="color:#d08770;">4rem</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// Blog styles
+</span><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">post-preview </span><span>{
+</span><span>    margin-bottom: </span><span style="color:#d08770;">3rem</span><span>;
+</span><span>    
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">h2 </span><span>{
+</span><span>        margin-bottom: </span><span style="color:#d08770;">0.5rem</span><span>;
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">a </span><span>{
+</span><span>            color: $</span><span style="color:#bf616a;">text-color</span><span>;
+</span><span>            text-decoration: none;
+</span><span>            
+</span><span style="color:#b48ead;">            </span><span>&amp;</span><span style="color:#8fa1b3;">:</span><span style="color:#b48ead;">hover </span><span>{
+</span><span>                color: $</span><span style="color:#bf616a;">primary-color</span><span>;
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>    
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">time </span><span>{
+</span><span>        color: </span><span style="color:#96b5b4;">#6b7280</span><span>;
+</span><span>        font-size: </span><span style="color:#d08770;">0.9rem</span><span>;
+</span><span>    }
+</span><span>    
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">p </span><span>{
+</span><span>        margin: </span><span style="color:#d08770;">1rem 0</span><span>;
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">blog-post </span><span>{
+</span><span style="color:#b48ead;">    </span><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">post-content </span><span>{
+</span><span>        margin: </span><span style="color:#d08770;">2rem 0</span><span>;
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">h2</span><span style="color:#b48ead;">, </span><span style="color:#bf616a;">h3 </span><span>{
+</span><span>            margin: </span><span style="color:#d08770;">2rem 0 1rem</span><span>;
+</span><span>        }
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">p </span><span>{
+</span><span>            margin: </span><span style="color:#d08770;">1rem 0</span><span>;
+</span><span>        }
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">code </span><span>{
+</span><span>            background: </span><span style="color:#96b5b4;">#f3f4f6</span><span>;
+</span><span>            padding: </span><span style="color:#d08770;">0.2rem 0.4rem</span><span>;
+</span><span>            border-radius: </span><span style="color:#d08770;">3px</span><span>;
+</span><span>            font-size: </span><span style="color:#d08770;">0.9em</span><span>;
+</span><span>        }
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span style="color:#bf616a;">pre </span><span>{
+</span><span>            background: </span><span style="color:#96b5b4;">#1f2937</span><span>;
+</span><span>            color: </span><span style="color:#96b5b4;">#f3f4f6</span><span>;
+</span><span>            padding: </span><span style="color:#d08770;">1rem</span><span>;
+</span><span>            border-radius: </span><span style="color:#d08770;">5px</span><span>;
+</span><span>            overflow-x: auto;
+</span><span>            
+</span><span style="color:#b48ead;">            </span><span style="color:#bf616a;">code </span><span>{
+</span><span>                background: none;
+</span><span>                padding: </span><span style="color:#d08770;">0</span><span>;
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">tags </span><span>{
+</span><span>    display: flex;
+</span><span>    gap: </span><span style="color:#d08770;">0.5rem</span><span>;
+</span><span>    flex-wrap: wrap;
+</span><span>    margin: </span><span style="color:#d08770;">1rem 0</span><span>;
+</span><span>    
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">a </span><span>{
+</span><span>        background: </span><span style="color:#96b5b4;">#f3f4f6</span><span>;
+</span><span>        padding: </span><span style="color:#d08770;">0.25rem 0.75rem</span><span>;
+</span><span>        border-radius: </span><span style="color:#d08770;">3px</span><span>;
+</span><span>        text-decoration: none;
+</span><span>        color: $</span><span style="color:#bf616a;">text-color</span><span>;
+</span><span>        font-size: </span><span style="color:#d08770;">0.9rem</span><span>;
+</span><span>        
+</span><span style="color:#b48ead;">        </span><span>&amp;</span><span style="color:#8fa1b3;">:</span><span style="color:#b48ead;">hover </span><span>{
+</span><span>            background: $</span><span style="color:#bf616a;">primary-color</span><span>;
+</span><span>            color: white;
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#8fa1b3;">.</span><span style="color:#d08770;">pagination </span><span>{
+</span><span>    display: flex;
+</span><span>    justify-content: space-between;
+</span><span>    align-items: center;
+</span><span>    margin: </span><span style="color:#d08770;">3rem 0</span><span>;
+</span><span>    padding: </span><span style="color:#d08770;">1rem 0</span><span>;
+</span><span>    border-top: </span><span style="color:#d08770;">1px </span><span>solid $</span><span style="color:#bf616a;">border-color</span><span>;
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// Responsive
+</span><span style="color:#b48ead;">@media </span><span>(max-width: </span><span style="color:#d08770;">768px</span><span>) {
+</span><span style="color:#b48ead;">    </span><span style="color:#bf616a;">header nav </span><span>{
+</span><span>        flex-direction: column;
+</span><span>        gap: </span><span style="color:#d08770;">1rem</span><span>;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="adding-homepage">Adding Homepage</h2>
+<p>Create <code>content/_index.md</code>:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Home&quot;
+</span><span>template = &quot;index.html&quot;
+</span><span>+++
+</span></code></pre>
+<p>Create <code>templates/index.html</code>:</p>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">home</span><span>&quot;&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">h1</span><span>&gt;Welcome to {{ config.title }}&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">p </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">intro</span><span>&quot;&gt;{{ config.description }}&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>    
+</span><span>    {% set blog_section = get_section(path=&quot;blog/_index.md&quot;) %}
+</span><span>    {% if blog_section.pages %}
+</span><span>    &lt;</span><span style="color:#bf616a;">section </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">recent-posts</span><span>&quot;&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">h2</span><span>&gt;Recent Posts&lt;/</span><span style="color:#bf616a;">h2</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">div </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">posts</span><span>&quot;&gt;
+</span><span>            {% for page in blog_section.pages | slice(end=5) %}
+</span><span>            &lt;</span><span style="color:#bf616a;">article </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">post-preview</span><span>&quot;&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">h3</span><span>&gt;&lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.permalink }}</span><span>&quot;&gt;{{ page.title }}&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;&lt;/</span><span style="color:#bf616a;">h3</span><span>&gt;
+</span><span>                &lt;</span><span style="color:#bf616a;">time </span><span style="color:#d08770;">datetime</span><span>=&quot;</span><span style="color:#a3be8c;">{{ page.date }}</span><span>&quot;&gt;{{ page.date | date(format=&quot;%B %d, %Y&quot;) }}&lt;/</span><span style="color:#bf616a;">time</span><span>&gt;
+</span><span>                {% if page.description %}
+</span><span>                &lt;</span><span style="color:#bf616a;">p</span><span>&gt;{{ page.description }}&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>                {% endif %}
+</span><span>            &lt;/</span><span style="color:#bf616a;">article</span><span>&gt;
+</span><span>            {% endfor %}
+</span><span>        &lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>        &lt;</span><span style="color:#bf616a;">a </span><span style="color:#d08770;">href</span><span>=&quot;</span><span style="color:#a3be8c;">#</span><span>&quot; </span><span style="color:#d08770;">class</span><span>=&quot;</span><span style="color:#a3be8c;">view-all</span><span>&quot;&gt;View all posts →&lt;/</span><span style="color:#bf616a;">a</span><span>&gt;
+</span><span>    &lt;/</span><span style="color:#bf616a;">section</span><span>&gt;
+</span><span>    {% endif %}
+</span><span>&lt;/</span><span style="color:#bf616a;">div</span><span>&gt;
+</span><span>{% endblock %}
+</span></code></pre>
+<h2 id="running-your-blog">Running Your Blog</h2>
+<p>Start the development server:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> serve
+</span></code></pre>
+<p>Visit <code>http://127.0.0.1:1111</code> to see your blog. Changes to content and templates reload automatically.</p>
+<h2 id="building-for-production">Building for Production</h2>
+<p>Build your site for deployment:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> build
+</span></code></pre>
+<p>The static site is generated in the <code>public/</code> directory. Upload these files to any static hosting service.</p>
+<h2 id="deployment-to-github-pages">Deployment to GitHub Pages</h2>
+<p>Create <code>.github/workflows/deploy.yml</code>:</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Deploy to GitHub Pages
+</span><span>
+</span><span style="color:#d08770;">on</span><span>:
+</span><span>  </span><span style="color:#bf616a;">push</span><span>:
+</span><span>    </span><span style="color:#bf616a;">branches</span><span>: [</span><span style="color:#a3be8c;">main</span><span>]
+</span><span>
+</span><span style="color:#bf616a;">jobs</span><span>:
+</span><span>  </span><span style="color:#bf616a;">build</span><span>:
+</span><span>    </span><span style="color:#bf616a;">runs-on</span><span>: </span><span style="color:#a3be8c;">ubuntu-latest
+</span><span>    </span><span style="color:#bf616a;">steps</span><span>:
+</span><span>      - </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">actions/checkout@v2
+</span><span>      
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Install Zola
+</span><span>        </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#b48ead;">|
+</span><span style="color:#a3be8c;">          wget https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+</span><span style="color:#a3be8c;">          tar xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+</span><span style="color:#a3be8c;">          sudo mv zola /usr/local/bin/
+</span><span style="color:#a3be8c;">      
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Build
+</span><span>        </span><span style="color:#bf616a;">run</span><span>: </span><span style="color:#a3be8c;">zola build
+</span><span>      
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Deploy
+</span><span>        </span><span style="color:#bf616a;">uses</span><span>: </span><span style="color:#a3be8c;">peaceiris/actions-gh-pages@v3
+</span><span>        </span><span style="color:#bf616a;">with</span><span>:
+</span><span>          </span><span style="color:#bf616a;">github_token</span><span>: </span><span style="color:#a3be8c;">${{ secrets.GITHUB_TOKEN }}
+</span><span>          </span><span style="color:#bf616a;">publish_dir</span><span>: </span><span style="color:#a3be8c;">./public
+</span></code></pre>
+<p>Push to GitHub, enable GitHub Pages in your repository settings, and your blog deploys automatically on every push.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Your blog is now functional. Consider adding:</p>
+<p><strong>Featured posts</strong>: Add a <code>featured</code> field to front matter and filter in templates
+<strong>Reading time</strong>: Use <code>{{ page.reading_time }}</code> to show estimated reading time
+<strong>Table of contents</strong>: Enable <code>insert_anchor_links = "left"</code> in config for heading anchors
+<strong>Search</strong>: Implement search with Zola's search index feature
+<strong>Comments</strong>: Integrate a commenting system like utterances or Disqus
+<strong>Analytics</strong>: Add analytics with a simple script include</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Creating a blog with Zola is refreshingly straightforward:</p>
+<ol>
+<li><strong>Content is just Markdown</strong> with front matter—no complex APIs or abstractions</li>
+<li><strong>Templates are Tera</strong>—if you know Jinja2, you already know 90% of what you need</li>
+<li><strong>Built-in features eliminate plugins</strong>—Sass, syntax highlighting, RSS, and taxonomies work out of the box</li>
+<li><strong>Fast iteration</strong>—changes appear instantly during development</li>
+<li><strong>Simple deployment</strong>—static files can be hosted anywhere</li>
+</ol>
+<p>The key to productive Zola development is embracing its opinions. The structure might feel restrictive at first, but it eliminates decision fatigue and lets you focus on content.</p>
+<p>Start simple, write content, and expand as you need more features. Zola gets out of your way and lets you build.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

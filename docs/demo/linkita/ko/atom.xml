@@ -42,7 +42,7 @@
         <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/ko/math-typesetting/"/>
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/ko/math-typesetting/</id>
         
-        <summary type="html">&lt;p&gt;Linkita 테마는 &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;를 사용하여 $\LaTeX$ 수학 공식을 지원합니다.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Linkita 테마는 &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;를 사용하여 $\LaTeX$ 수학 공식을 지원합니다.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="ko">
@@ -62,27 +62,25 @@
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/ko/shortcodes/</id>
         
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/ko/shortcodes/">&lt;p&gt;Linkita 테마는 여러 숏코드(shortcode)를 제공합니다.&lt;&#x2F;p&gt;
-&lt;p&gt;숏코드에 대해 처음 들어보셨나요? 더 많은 정보는 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola 문서&lt;&#x2F;a&gt;를 참조하세요.&lt;&#x2F;p&gt;
+&lt;p&gt;숏코드에 대해 처음 들어보셨나요? 더 많은 정보는 &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola 문서&lt;&#x2F;a&gt;를 참조하세요.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;페이지에서 Mermaid를 사용하려면, 페이지의 프론트매터에서 &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt;로 설정해야 합니다.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;페이지 제목&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;페이지 제목&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;mermaid&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;그런 다음 &lt;code&gt;mermaid()&lt;&#x2F;code&gt; 숏코드를 다음과 같이 사용할 수 있습니다:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;graph TD;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;C;
-&lt;&#x2F;span&gt;&lt;span&gt;B--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;C--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;graph TD;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;B;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;C;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;B--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;C--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;이것은 다음과 같이 렌더링됩니다:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   graph TD;
@@ -93,24 +91,23 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;또한, &lt;code&gt;mermaid()&lt;&#x2F;code&gt; 숏코드 안에 코드 블록을 사용할 수 있으며, 이 코드 블록은 무시됩니다.&lt;&#x2F;p&gt;
 &lt;p&gt;코드 블록을 사용하면 포맷터가 Mermaid의 서식을 깨뜨리는 것을 방지할 수 있습니다.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
-&lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
-&lt;&#x2F;span&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-&lt;&#x2F;span&gt;&lt;span&gt;    loop Healthcheck
-&lt;&#x2F;span&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria
-&lt;&#x2F;span&gt;&lt;span&gt;    end
-&lt;&#x2F;span&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!
-&lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
-&lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
-&lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span&gt;```
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;sequenceDiagram&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Alice&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Bob&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    loop Healthcheck&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    end&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;이것은 다음과 같이 렌더링됩니다:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   
@@ -130,10 +127,9 @@ sequenceDiagram
 &lt;h2 id=&quot;gyeonggo-sangja&quot;&gt;경고 상자&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;admonition()&lt;&#x2F;code&gt; 숏코드는 페이지에 공지를 띄울 수 있도록 배너를 표시합니다.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;admonition()&lt;&#x2F;code&gt; 숏코드는 다음과 같이 사용할 수 있습니다:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;팁&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;`tip` 타입의 경고 상자입니다.
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;팁&amp;quot;) %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt; 타입의 경고 상자입니다.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;경고 상자 숏코드에는 12가지 다른 타입이 있습니다:&lt;&#x2F;p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;admonition.css?h=98c1477488c4b2c9d71a&quot; type=&quot;text&#x2F;css&quot;&gt;
@@ -354,10 +350,8 @@ sequenceDiagram
 &lt;&#x2F;div&gt;
 &lt;h2 id=&quot;gaelreori&quot;&gt;갤러리&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;gallery()&lt;&#x2F;code&gt; 숏코드는 페이지 에셋의 모든 이미지를 표시하는 매우 간단한 HTML 전용 클릭형 사진 갤러리입니다.&lt;&#x2F;p&gt;
-&lt;p&gt;이 숏코드는 &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola 문서&lt;&#x2F;a&gt;에서 가져왔습니다.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
+&lt;p&gt;이 숏코드는 &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola 문서&lt;&#x2F;a&gt;에서 가져왔습니다.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ gallery() }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
 
   &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;ko&#x2F;shortcodes&#x2F;01-zola.png&quot; target=&quot;_blank&quot;&gt;
     &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;01-zola.b673627618ae4d9e.png&quot; alt=&quot;갤러리 데모 이미지&quot; &#x2F;&gt;
@@ -387,24 +381,22 @@ sequenceDiagram
 &lt;h2 id=&quot;peurojegteu&quot;&gt;프로젝트&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;code&gt;projects()&lt;&#x2F;code&gt; 숏코드를 사용하면 프로젝트 페이지를 만들 수 있습니다.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;index.md&lt;&#x2F;code&gt; 파일을 만드세요:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;내 프로젝트&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;title = &amp;quot;내 프로젝트&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;description = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;&lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;data.toml&lt;&#x2F;code&gt; 파일을 만드세요:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;desc &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;links &lt;&#x2F;span&gt;&lt;span&gt;= [
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;desc&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;links&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;이것은 다음과 같이 표시됩니다:&lt;&#x2F;p&gt;
 
 &lt;div class=&quot;not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5&quot;&gt;

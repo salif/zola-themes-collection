@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shortcodes | Nivis</title>
+
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
+  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/nivis/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      chtml: {
+        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const MATH_LANGS = ['math', 'math-display'];
+
+          // 1. Display Math (``` ... ```)
+          document.querySelectorAll('pre code').forEach(el => {
+              let lang = el.dataset.lang || '';
+              if (!lang) {
+                  el.classList.forEach(cls => {
+                      if (cls.startsWith('language-')) lang = cls.replace('language-', '');
+                  });
+              }
+              
+              if (MATH_LANGS.includes(lang.toLowerCase())) {
+                  const pre = el.parentElement;
+                  const div = document.createElement('div');
+                  div.textContent = el.textContent.trim();
+                  pre.replaceWith(div);
+              }
+          });
+
+          // 2. Inline Math (`$ ... $`)
+          document.querySelectorAll('code').forEach(el => {
+              if (el.parentElement.tagName === 'PRE') return;
+
+              const text = el.textContent.trim();
+              // Check if it looks like math: $...$
+              if (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) {
+                  const span = document.createElement('span');
+                  span.textContent = text;
+                  el.replaceWith(span);
+              }
+          });
+          
+          // Trigger MathJax to process the new elements
+          if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
+              MathJax.typesetPromise();
+          }
+      });
+  </script>
+  
+
+  
+<!-- Primary Meta Tags -->
+ 
+<meta
+  name="description"
+  content="shortcodes in Nivis theme"
+/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:title" content="Shortcodes | Nivis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://salif.github.io/zola-themes-collection/demo/nivis/posts/shortcodes/" />
+
+<meta property="article:published_time" content="1980-01-01" />
+<meta property="article:modified_time" content="1980-01-01" />
+
+<meta property="article:section" content="posts" />
+<!--
+  
+    
+      
+        <meta property="article:tag" content="guide">
+      
+    
+  
+-->
+
+
+</head>
+
+<body class="body-block">
+  <div id="sidebar-mask" onclick="toggleSidebar()"></div>
+  
+  <div id="sidebar" class="">
+    <div class="logo-title">
+      <div class="title-inner">
+        
+        <div class="title">
+          <h3><a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Nivis</a></h3>
+          <div class="description">
+            <p>A clean zola theme for bloggers</p>
+          </div>
+        </div>
+      </div>
+      <ul class="social-links">
+        
+        <li>
+          <a href="https://github.com/Resorie/zola-theme-nivis" aria-label="Github">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        
+      </ul>
+      <div class="sidebar-action">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/">About Me</a>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/">Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/">Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/">Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/">Links</a>
+      </nav>
+    </div>
+  </div>
+  
+
+  <div id="main">
+    
+    <div class="page-top animated fadeInDown">
+      <nav class="nav">
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/">Home</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/" class="active">Posts</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/about/" >About</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/archive/" >Archives</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/" >Categories</a>
+        <a href="https://salif.github.io/zola-themes-collection/demo/nivis/links/" >Links</a>
+      </nav>
+      <div class="information">
+        <div class="back_btn">
+          <a onclick="window.history.go(-1)" aria-label="Go back"><i class="fas fa-chevron-left"></i></a>
+        </div>
+        <div class="theme_btn">
+          <a onclick="toggleTheme()" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></a>
+        </div>
+        <div class="feed_btn">
+          <a class="feed-icon" aria-label="RSS Feed"><i class="fas fa-rss"></i></a>
+          <div class="feed-dropdown">
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/atom.xml" target="_blank">Atom</a>
+            <a href="https://salif.github.io/zola-themes-collection/demo/nivis/rss.xml" target="_blank">RSS</a>
+          </div>
+        </div>
+        <div class="avatar_btn">
+          <a onclick="toggleSidebar()" aria-label="Toggle sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="autopagerize_page_element">
+      <div class="content animated fadeIn ">
+         
+
+<article class="content-article">
+  <main class="article-content">
+    <div class="article-intro-container">
+        <div class="intro-header">
+            <h1 class="heading">Shortcodes</h1>
+            <div class="meta-line">
+                
+                <span class="date">Jan. 01, 1980</span>
+                
+                
+                
+                <span class="separator">/</span>
+                <span class="tags">
+                
+                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/tags/guide/">#guide</a>
+                
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="intro-body">
+            
+            <div class="intro-abstract">
+                <div class="abstract-title">ABSTRACT</div>
+                <p class="description">shortcodes in Nivis theme</p>
+            </div>
+            
+
+            
+            <details class="intro-toc">
+                <summary class="toc-title">CONTENTS</summary>
+                <div class="toc-wrapper">
+                <ul class="toc-list">
+                    <li class="toc-root">
+                        <a href="#" class="active-toc">Shortcodes</a>
+                        
+                        <ul>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/shortcodes/#images">Images</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/shortcodes/#collapse">Collapse</a>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                </div>
+            </details>
+            
+        </div>
+    </div>
+    
+    <p>Nivis provides various shortcodes for you to use in your posts.</p>
+<h2 id="images">Images</h2>
+<p>To place an image in your post with alt text and message.</p>
+<p>Template:</p>
+<pre class="giallo z-code"><code data-lang="markdown"><span class="giallo-l"><span>{{ image(src=&quot;img src&quot;, alt=&quot;alt text&quot;, caption=&quot;caption text&quot;) }}</span></span></code></pre>
+<p>Example:</p>
+ 
+<figure >
+  <img src="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;img src" alt="alt text" />
+  <figcaption>caption text</figcaption>
+</figure>
+
+<h2 id="collapse">Collapse</h2>
+<p>To place a collapse box in your post. Folded up by default, set <code>unfold</code> to true to unfold it by default.</p>
+<p>Template:</p>
+<pre class="giallo z-code"><code data-lang="markdown"><span class="giallo-l"><span>{% collapse(summary=&quot;Summary&quot;) %}</span></span>
+<span class="giallo-l"><span>Content hidden by default.</span></span>
+<span class="giallo-l"><span>{% end %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% collapse(summary=&quot;Summary&quot;, unfold=true) %}</span></span>
+<span class="giallo-l"><span>Content shown by default.</span></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
+<p>Example:</p>
+<details class="collapse-block" >
+  <summary class="collapse-summary">
+    <span class="collapse-title">Summary</span>
+    <span class="collapse-icon"></span>
+  </summary>
+  <div class="collapse-content"><p>Content hidden by default.</p>
+</div>
+</details>
+<details class="collapse-block" open>
+  <summary class="collapse-summary">
+    <span class="collapse-title">Summary</span>
+    <span class="collapse-icon"></span>
+  </summary>
+  <div class="collapse-content"><p>Content shown by default.</p>
+</div>
+</details>
+
+  </main>
+  <section class="article-action-block">
+    <!-- AddToAny BEGIN -->
+    <div class="addtoany-block">
+      <a
+        href="https://www.addtoany.com/share#url=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;title=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img class="button" src="https://static.addtoany.com/buttons/a2a.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/mastodon?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;linkname=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/mastodon.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/telegram?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;linkname=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/telegram.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/twitter?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;linkname=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/twitter.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/facebook?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;linkname=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img
+          class="button"
+          src="https://static.addtoany.com/buttons/facebook.svg"
+      /></a>
+      <a
+        href="https://www.addtoany.com/add_to/line?linkurl=https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;nivis&#x2F;posts&#x2F;shortcodes&#x2F;&amp;linkname=Shortcodes"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        ><img class="button" src="https://static.addtoany.com/buttons/line.svg"
+      /></a>
+    </div>
+    <!-- AddToAny END -->
+    
+  </section>
+  <br />
+</article>
+
+      </div>
+    </div>
+    <div class="page-footer">
+      <div class="footer-content">
+        <span>With theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var mask = document.getElementById("sidebar-mask");
+      sidebar.classList.toggle("open");
+      mask.classList.toggle("open");
+    }
+
+    const getPreferredScheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    function updateThemeIcon(scheme) {
+      const themeIcon = document.getElementById("theme-icon");
+      if (themeIcon) {
+        if (scheme === 'dark') {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+        }
+      }
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const systemScheme = getPreferredScheme();
+      const currentInlineScheme = root.style.colorScheme;
+      
+      // Calculate effective scheme
+      const effectiveScheme = currentInlineScheme || systemScheme;
+      const targetScheme = effectiveScheme === 'dark' ? 'light' : 'dark';
+
+      root.style.colorScheme = targetScheme;
+      localStorage.setItem("theme", targetScheme);
+      updateThemeIcon(targetScheme);
+    }
+
+    // Initialize theme
+    (function() {
+      const savedTheme = localStorage.getItem("theme");
+      const systemTheme = getPreferredScheme();
+      
+      if (savedTheme) {
+        document.documentElement.style.colorScheme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        updateThemeIcon(systemTheme);
+      }
+
+      // Listen for system changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem("theme")) {
+          const newScheme = e.matches ? 'dark' : 'light';
+          updateThemeIcon(newScheme);
+        }
+      });
+    })();
+
+    // Footnote Navigation & Code Block Label
+    document.addEventListener("DOMContentLoaded", function() {
+        const MATH_LANGS = ['math', 'math-display', 'tex', 'latex'];
+
+        // Code Block Language Label
+        document.querySelectorAll('pre code').forEach(code => {
+            const pre = code.parentElement;
+            let lang = pre.getAttribute('data-lang');
+
+            // 1. Try to recover lang if not on pre
+            if (!lang) {
+                const codeLang = code.getAttribute('data-lang');
+                if (codeLang) {
+                    lang = codeLang;
+                } else {
+                    const classes = code.className.split(' ');
+                    for (const cls of classes) {
+                        if (cls.startsWith('language-')) {
+                            lang = cls.replace('language-', '');
+                            break;
+                        }
+                    }
+                }
+                if (lang) pre.setAttribute('data-lang', lang);
+            }
+
+            // 2. Process Math Blocks
+            if (lang && MATH_LANGS.includes(lang.toLowerCase())) {
+                const div = document.createElement('div');
+                div.classList.add('math-display');
+                let mathContent = code.textContent.trim();
+                
+                // Auto-wrap if typical delimiters are missing
+                if (!mathContent.startsWith('$$') && !mathContent.startsWith('\\[')) {
+                    mathContent = '$$' + mathContent + '$$';
+                }
+                
+                div.textContent = mathContent;
+                pre.replaceWith(div);
+            }
+        });
+
+        // 3. Process Inline Math
+        // Zola (or Markdown) often renders `$E=mc^2$` as <code>$E=mc^2$</code>.
+        // We need to unwrap this code tag so MathJax can process it without code styling.
+        document.querySelectorAll(':not(pre) > code').forEach(code => {
+            const text = code.textContent.trim();
+            // Check for $...$ (and not $$...$$) or \(...\)
+            if ( (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) ||
+                 (text.startsWith('\\(') && text.endsWith('\\)')) ) {
+                 const span = document.createElement('span');
+                 span.textContent = text;
+                 code.replaceWith(span);
+            }
+        });
+    });
+  </script>
+
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+</body>
+
+</html>

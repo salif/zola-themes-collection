@@ -53,7 +53,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -289,9 +289,9 @@
 </blockquote>
 <h2 id="enlaces">Enlaces</h2>
 <p>Para crear un enlace, encierra el texto del enlace entre corchetes y luego síguelo inmediatamente con la URL entre paréntesis.</p>
-<p><a href="https://github.com">GitHub</a></p>
+<p><a rel="external" href="https://github.com">GitHub</a></p>
 <p>Para convertir rápidamente una URL o dirección de correo electrónico en un enlace, enciérrala entre corchetes angulares.</p>
-<p><a href="https://github.com">https://github.com</a></p>
+<p><a rel="external" href="https://github.com">https://github.com</a></p>
 <h2 id="imagenes">Imágenes</h2>
 <p><img src="../../images/markdown-syntax.png" alt="Guía de Markdown" /></p>
 <h2 id="tablas">Tablas</h2>
@@ -306,30 +306,26 @@
 </tbody></table>
 <h2 id="bloques-de-codigo">Bloques de código</h2>
 <h4 id="bloque-de-codigo-con-acentos-graves">Bloque de código con acentos graves</h4>
-<pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
-</span><span>&lt;</span><span style="color:#ffb964;">html lang</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">en</span><span style="color:#556633;">&quot;</span><span>&gt;
-</span><span>  &lt;</span><span style="color:#ffb964;">head</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">meta charset</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">utf-8</span><span style="color:#556633;">&quot; </span><span>/&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">title</span><span>&gt;Documento HTML5 de Ejemplo&lt;/</span><span style="color:#ffb964;">title</span><span>&gt;
-</span><span>  &lt;/</span><span style="color:#ffb964;">head</span><span>&gt;
-</span><span>  &lt;</span><span style="color:#ffb964;">body</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">p</span><span>&gt;Prueba&lt;/</span><span style="color:#ffb964;">p</span><span>&gt;
-</span><span>  &lt;/</span><span style="color:#ffb964;">body</span><span>&gt;
-</span><span>&lt;/</span><span style="color:#ffb964;">html</span><span>&gt;
-</span></code></pre>
-<h4 id="bloque-de-codigo-con-sangria-de-cuatro-espacios">Bloque de código con sangría de cuatro espacios</h4>
-<pre style="background-color:#151515;color:#e8e8d3;"><code><span>&lt;!doctype html&gt;
-</span><span>&lt;html lang=&quot;en&quot;&gt;
-</span><span>&lt;head&gt;
-</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
-</span><span>  &lt;title&gt;Documento HTML5 de Ejemplo&lt;/title&gt;
-</span><span>&lt;/head&gt;
-</span><span>&lt;body&gt;
-</span><span>  &lt;p&gt;Prueba&lt;/p&gt;
-</span><span>&lt;/body&gt;
-</span><span>&lt;/html&gt;
-</span></code></pre>
-<h2 id="tipos-de-listas">Tipos de listas</h2>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="html"><span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;!</span><span style="color: light-dark(#800000, #7EE787);">doctype</span><span style="color: light-dark(#E50000, #79C0FF);"> html</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;</span><span style="color: light-dark(#800000, #7EE787);">html</span><span style="color: light-dark(#E50000, #79C0FF);"> lang</span><span>=</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#0000FF, #A5D6FF);">en</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;</span><span style="color: light-dark(#800000, #7EE787);">head</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">meta</span><span style="color: light-dark(#E50000, #79C0FF);"> charset</span><span>=</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#0000FF, #A5D6FF);">utf-8</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#800000, #E6EDF3);"> /&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">title</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span><span>Documento HTML5 de Ejemplo</span><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">title</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;/</span><span style="color: light-dark(#800000, #7EE787);">head</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;</span><span style="color: light-dark(#800000, #7EE787);">body</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">p</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span><span>Prueba</span><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">p</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;/</span><span style="color: light-dark(#800000, #7EE787);">body</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">html</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span></code></pre><h4 id="bloque-de-codigo-con-sangria-de-cuatro-espacios">Bloque de código con sangría de cuatro espacios</h4>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="plain"><span class="giallo-l"><span>&lt;!doctype html&gt;</span></span>
+<span class="giallo-l"><span>&lt;html lang=&quot;en&quot;&gt;</span></span>
+<span class="giallo-l"><span>&lt;head&gt;</span></span>
+<span class="giallo-l"><span>  &lt;meta charset=&quot;utf-8&quot;&gt;</span></span>
+<span class="giallo-l"><span>  &lt;title&gt;Documento HTML5 de Ejemplo&lt;/title&gt;</span></span>
+<span class="giallo-l"><span>&lt;/head&gt;</span></span>
+<span class="giallo-l"><span>&lt;body&gt;</span></span>
+<span class="giallo-l"><span>  &lt;p&gt;Prueba&lt;/p&gt;</span></span>
+<span class="giallo-l"><span>&lt;/body&gt;</span></span>
+<span class="giallo-l"><span>&lt;/html&gt;</span></span></code></pre><h2 id="tipos-de-listas">Tipos de listas</h2>
 <h4 id="lista-ordenada">Lista ordenada</h4>
 <ol>
 <li>Primer elemento</li>
@@ -367,7 +363,7 @@
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn-1">
-<p>La cita anterior está extraída de la <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">charla</a> de Rob Pike durante el Gopherfest, el 18 de noviembre de 2015. <a href="#fr-1-1">↩</a></p>
+<p>La cita anterior está extraída de la <a rel="external" href="https://www.youtube.com/watch?v=PAAkCSZUG1c">charla</a> de Rob Pike durante el Gopherfest, el 18 de noviembre de 2015. <a href="#fr-1-1">↩</a></p>
 </li>
 </ol>
 </section>
@@ -422,7 +418,7 @@
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

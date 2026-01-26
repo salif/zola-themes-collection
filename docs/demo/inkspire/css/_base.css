@@ -1,0 +1,460 @@
+/**
+ * ============================================================================
+ * THEME VARIABLES - Base CSS Custom Properties
+ * ============================================================================
+ *
+ * This file contains all customizable CSS variables for the theme.
+ * Modify these values to customize the entire theme appearance.
+ *
+ * Usage in your CSS:
+ * color: var(--color-primary);
+ * font-size: var(--font-size-lg);
+ *
+ * ============================================================================
+ */
+/* ==========================================================================
+  IMPORT FONTS
+  ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* ============================================================================
+ * QUICK THEME CONFIGURATION
+ * ============================================================================
+ *
+ * This section contains the most commonly customized theme variables.
+ * Change these values to quickly customize your theme's appearance.
+ * All variables used across different components are collected here for
+ * easy access and configuration.
+ *
+ * ============================================================================ */
+
+:root {
+    /* ╔═══════════════════════════════════════════════════════════════════════╗
+       ║                     🎨 THEME CONFIGURATION                            ║
+       ║                                                                       ║
+       ║  Customize these variables to change the entire theme appearance.    ║
+       ║  All component styles reference these unified theme variables.       ║
+       ║                                                                       ║
+       ║  Organization:                                                        ║
+       ║  1. Theme Colors - Brand colors used across all components          ║
+       ║  2. Typography - Font sizes and weights unified                      ║
+       ║  3. Spacing & Layout - Consistent spacing system                     ║
+       ║  4. Interactive Elements - Buttons, links, hovers                    ║
+       ║  5. Component Styles - Specific component customization             ║
+       ╚═══════════════════════════════════════════════════════════════════════╝ */
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       1. THEME COLORS
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Primary theme colors - Used for accents, links, and primary actions */
+    --theme-primary: #3b82f6; /* Main brand color */
+    --theme-primary-hover: #2563eb; /* Hover state for primary color */
+    --theme-accent: #ec4899; /* Accent color (pink) for highlights */
+
+    /* Background colors - Unified backgrounds across all pages */
+    --theme-bg-primary: #ffffff; /* Main background (body, cards) */
+    --theme-bg-secondary: #f9fafb; /* Secondary background (surfaces, footer) */
+    --theme-bg-elevated: #ffffff; /* Elevated surfaces (modals, dropdowns) */
+
+    /* Text colors - Unified text hierarchy */
+    --theme-text-primary: #111827; /* Main text color (headings, important text) */
+    --theme-text-secondary: #4b5563; /* Secondary text (descriptions, meta info) */
+    --theme-text-tertiary: #6b7280; /* Tertiary text (timestamps, subtle info) */
+    --theme-text-muted: #9ca3af; /* Muted text (disabled, placeholders) */
+
+    /* Border colors - Unified borders across components */
+    --theme-border-light: #f3f4f6; /* Light borders */
+    --theme-border-default: #e5e7eb; /* Default borders */
+    --theme-border-medium: #d1d5db; /* Medium borders */
+    --theme-border-dark: #9ca3af; /* Dark borders */
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       2. TYPOGRAPHY - Unified Font System
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Page titles - Large headings on main pages */
+    --theme-title-size: 3rem; /* 48px - Used for page titles */
+    --theme-title-weight: 400; /* Normal weight for elegant look */
+    --theme-title-color: var(--theme-text-primary);
+
+    /* Section headings - Section titles and important headings */
+    --theme-heading-size: 1.875rem; /* 30px - Used for section headings */
+    --theme-heading-weight: 400; /* Normal weight */
+    --theme-heading-color: var(--theme-text-primary);
+
+    /* Card/Post titles - Titles in cards and post listings */
+    --theme-card-title-size: 1.5rem; /* 24px - Used for card/post titles */
+    --theme-card-title-weight: 500; /* Medium weight */
+    --theme-card-title-color: var(--theme-text-primary);
+    --theme-card-title-hover: var(--theme-text-secondary);
+
+    /* Body text - Regular content text */
+    --theme-body-size: 1.125rem; /* 18px - Readable body text */
+    --theme-body-color: var(--theme-text-secondary);
+    --theme-body-line-height: 1.75; /* Relaxed line height for readability */
+
+    /* Meta text - Small supplementary text */
+    --theme-meta-size: 0.875rem; /* 14px - Used for dates, tags, counts */
+    --theme-meta-color: var(--theme-text-tertiary);
+    --theme-meta-weight: 400;
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       3. SPACING & LAYOUT - Consistent Spacing System
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Section spacing - Space between major sections */
+    --theme-section-gap: 4rem; /* 64px - Space between sections */
+    --theme-section-padding: 3rem 1rem; /* Vertical and horizontal padding */
+
+    /* Card spacing - Unified card spacing */
+    --theme-card-padding: 2rem; /* 32px - Internal card padding */
+    --theme-card-gap: 2rem; /* 32px - Gap between cards */
+    --theme-card-radius: 0.5rem; /* 8px - Card border radius */
+
+    /* Content spacing - General content spacing */
+    --theme-content-gap: 1.5rem; /* 24px - Gap between content elements */
+    --theme-element-gap: 0.75rem; /* 12px - Gap between small elements */
+
+    /* Container widths - Page content widths */
+    --theme-container-narrow: 768px; /* Narrow content (footer, forms) */
+    --theme-container-default: 1024px; /* Default content width */
+    --theme-container-wide: 1280px; /* Wide content width */
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       4. INTERACTIVE ELEMENTS - Buttons, Links, and Interactions
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Buttons - Unified button styles */
+    --theme-button-bg: #111827; /* Button background (dark) */
+    --theme-button-color: #ffffff; /* Button text color (white) */
+    --theme-button-hover-bg: #374151; /* Button hover background */
+    --theme-button-padding: 0.75rem 1.5rem; /* Button padding */
+    --theme-button-radius: 0.25rem; /* Button border radius */
+    --theme-button-weight: 400; /* Button font weight */
+
+    /* Links - Unified link styles */
+    --theme-link-color: var(--theme-accent); /* Link color (pink accent) */
+    --theme-link-hover: var(--theme-text-primary); /* Link hover color */
+    --theme-link-weight: 500; /* Link font weight (medium) */
+
+    /* Navigation links - Header navigation specific */
+    --theme-nav-link-color: var(--theme-text-secondary);
+    --theme-nav-link-hover: var(--theme-text-primary);
+    --theme-nav-link-underline: var(--theme-text-primary);
+
+    /* Hover effects - Unified hover transformations */
+    --theme-hover-lift: translateY(-8px); /* Card lift on hover */
+    --theme-hover-scale: scale(1.05); /* Image scale on hover */
+    --theme-hover-shift: translateX(0.75rem); /* Horizontal shift on hover */
+
+    /* Transitions - Unified animation durations */
+    --theme-transition-fast: 150ms; /* Fast transitions */
+    --theme-transition-normal: 300ms; /* Normal transitions */
+    --theme-transition-slow: 500ms; /* Slow transitions */
+    --theme-transition-ease: cubic-bezier(0.4, 0, 0.2, 1); /* Easing function */
+
+    /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       5. COMPONENT SPECIFIC STYLES
+       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+    /* Header/Navbar - Navigation bar styles */
+    --theme-navbar-height: 4rem; /* 64px - Navbar height */
+    --theme-navbar-bg: var(--theme-bg-primary);
+    --theme-navbar-padding: 0.5rem 1rem;
+    --theme-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --theme-logo-size: 1.25rem; /* 20px - Logo text size */
+
+    /* Dropdown menus */
+    --theme-dropdown-bg: var(--theme-bg-elevated);
+    --theme-dropdown-width: 12rem; /* 192px */
+    --theme-dropdown-radius: 0.5rem;
+    --theme-dropdown-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --theme-dropdown-item-hover: var(--theme-bg-secondary);
+
+    /* Cards - Featured and regular cards */
+    --theme-card-bg: var(--theme-bg-secondary);
+    --theme-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --theme-card-hover-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --theme-card-border: 1px solid var(--theme-border-default);
+    --theme-card-image-height: 20rem; /* 320px */
+
+    /* Badge - Category/Featured badges */
+    --theme-badge-bg: var(--theme-button-bg);
+    --theme-badge-color: var(--theme-button-color);
+    --theme-badge-padding: 0.5rem 1rem;
+    --theme-badge-radius: var(--theme-button-radius);
+    --theme-badge-size: var(--theme-meta-size);
+
+    /* Footer - Footer section styles */
+    --theme-footer-bg: var(--theme-bg-secondary);
+    --theme-footer-border: 1px solid var(--theme-border-default);
+    --theme-footer-padding: 4rem 2rem 3rem;
+
+    /* Newsletter form */
+    --theme-newsletter-title-size: var(--theme-heading-size);
+    --theme-input-bg: var(--theme-bg-primary);
+    --theme-input-border: 1px solid var(--theme-border-default);
+    --theme-input-radius: 0.25rem;
+    --theme-input-padding: 0.75rem 1rem;
+    --theme-input-focus-border: var(--theme-border-medium);
+
+    /* Tags/Categories - Tag card styles */
+    --theme-tag-card-bg: var(--theme-bg-elevated);
+    --theme-tag-card-border: 1px solid var(--theme-border-default);
+    --theme-tag-card-hover-border: var(--theme-primary);
+    --theme-tag-card-radius: 1.5rem; /* 24px - More rounded for tags */
+    --theme-tag-card-padding: var(--theme-card-padding);
+    --theme-tag-icon-size: 3rem; /* 48px - Large emoji/icon */
+    --theme-tag-name-size: var(--theme-card-title-size);
+    --theme-tag-count-size: var(--theme-body-size);
+
+    /* Pagination - Page navigation styles */
+    --theme-pagination-color: #666666;
+    --theme-pagination-hover: #1a1a1a;
+    --theme-pagination-active-bg: #f0f0f0;
+    --theme-pagination-active-color: #1a1a1a;
+    --theme-pagination-size: 2.25rem; /* 36px - Click target size */
+    --theme-pagination-radius: var(--theme-card-radius);
+
+    /* Timeline - About page timeline */
+    --theme-timeline-gap: 1.25rem; /* 20px */
+    --theme-timeline-year-width: 140px;
+    --theme-timeline-year-weight: 700; /* Bold for years */
+
+    /* Hero section - Large intro sections */
+    --theme-hero-title-size: 3.75rem; /* 60px - Extra large hero titles */
+    --theme-hero-subtitle-size: var(--theme-meta-size);
+    --theme-intro-bg: var(--theme-bg-secondary);
+    --theme-intro-padding: 1.25rem 2rem;
+    --theme-intro-radius: 1rem; /* 16px */
+    --theme-intro-shadow: var(--theme-card-shadow);
+
+    /* ═══════════════════════════════════════════════════════════════════════
+       END OF THEME CONFIGURATION
+       ═══════════════════════════════════════════════════════════════════════ */
+
+    /* ==========================================================================
+     COLOR SYSTEM
+     ========================================================================== */
+
+    /* ---- Primary Brand Colors ---- */
+    --color-primary: #3b82f6;
+    --color-primary-dark: #2563eb;
+
+    /* ---- Accent Colors ---- */
+    --color-accent-1: #06b6d4;
+
+    /* ---- Neutral Colors (Grayscale) ---- */
+    --color-white: #ffffff;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-900: #111827;
+
+    /* ---- Semantic Colors ---- */
+    --color-error: #ef4444;
+
+    /* ==========================================================================
+     BACKGROUND COLORS
+     ========================================================================== */
+
+    --bg-body: var(--color-white);
+    --bg-body-light: var(--color-gray-50);
+    --bg-surface: var(--color-gray-50);
+
+    /* ==========================================================================
+     TEXT COLORS
+     ========================================================================== */
+
+    --text-primary: var(--color-gray-900);
+
+    /* ==========================================================================
+     BORDER COLORS
+     ========================================================================== */
+
+    --border-color: var(--color-gray-200);
+    --border-color-focus: var(--color-primary);
+
+    /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+    /* ---- Font Families ---- */
+
+    --font-family-base:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    --font-family-heading: var(--font-family-base);
+    --font-family-mono: "IBM Plex Mono";
+
+    /* ---- Font Sizes ---- */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-md: 1.125rem; /* 18px */
+    --font-size-lg: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-3xl: 2.25rem; /* 36px */
+    --font-size-4xl: 3rem; /* 48px */
+    --font-size-normal: 1rem; /* 16px - alias for base */
+
+    /* ---- Font Weights ---- */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* ---- Line Heights ---- */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+
+    /* ---- Letter Spacing ---- */
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
+
+    /* ==========================================================================
+     SPACING SYSTEM
+     ========================================================================== */
+
+    --space-0: 0;
+    --space-1: 0.25rem; /* 4px */
+    --space-2: 0.5rem; /* 8px */
+    --space-3: 0.75rem; /* 12px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+    --space-8: 2rem; /* 32px */
+    --space-10: 2.5rem; /* 40px */
+    --space-12: 3rem; /* 48px */
+    --space-16: 4rem; /* 64px */
+    --space-24: 6rem; /* 96px */
+    --space-32: 8rem; /* 128px */
+
+    /* ==========================================================================
+     SIZING
+     ========================================================================== */
+
+    /* ---- Container Widths ---- */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+
+    /* ---- Common Element Sizes ---- */
+    --size-icon-sm: 1rem; /* 16px */
+    --size-icon-lg: 2rem; /* 32px */
+
+    /* ==========================================================================
+     BORDER RADIUS
+     ========================================================================== */
+
+    --radius-lg: 0.5rem; /* 8px */
+    --radius-md: 0.375rem; /* 6px */
+    --radius-xl: 0.75rem; /* 12px */
+
+    /* ==========================================================================
+     BORDERS
+     ========================================================================== */
+
+    --border-width-1: 1px;
+    --border-width-2: 2px;
+
+    /* ---- Common Border Styles ---- */
+    --border-default: var(--border-width-1) solid var(--border-color);
+    --border-focus: var(--border-width-2) solid var(--border-color-focus);
+
+    /* ==========================================================================
+     SHADOWS
+     ========================================================================== */
+
+    --shadow-sm:
+        0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    /* ==========================================================================
+     Z-INDEX LAYERS
+     ========================================================================== */
+
+    --z-index-badge: 500;
+    --z-index-nav: 1000;
+    --z-index-dropdown: 1010;
+
+    /* ==========================================================================
+     TRANSITIONS & ANIMATIONS
+     ========================================================================== */
+
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ==========================================================================
+     BREAKPOINTS (for use in media queries)
+     ========================================================================== */
+
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+
+    /* ==========================================================================
+     OPACITY
+     ========================================================================== */
+
+    --opacity-0: 0;
+    --opacity-100: 1;
+
+    /* ==========================================================================
+     COMPONENT-SPECIFIC VARIABLES
+     ========================================================================== */
+
+    /* ---- Buttons ---- */
+    --button-padding-md: var(--space-3) var(--space-6);
+
+    /* ---- Tags ---- */
+    --tags-grid-min-width: 280px;
+}
+
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+
+body {
+    font-family: var(--font-family-mono);
+    background-color: var(--bg-body-light);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: var(--container-lg);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-4);
+}
+
+.container .content {
+    max-width: var(--container-md);
+    padding: var(--space-4);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-mono);
+    font-weight: var(--font-weight-normal);
+    color: var(--theme-text-primary);
+    line-height: var(--line-height-tight);
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-4);
+}

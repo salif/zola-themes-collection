@@ -11,8 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
   <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
@@ -30,27 +29,36 @@
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      chtml: {
+        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
       }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
   <script>
       document.addEventListener("DOMContentLoaded", function() {
-          // Unwrap code blocks for MathJax
-          // 1. Display Math (```math-display ... ```)
-          document.querySelectorAll('code.language-math-display').forEach(el => {
-              const pre = el.parentElement;
-              if (pre.tagName === 'PRE') {
-                  const math = el.textContent.trim();
+          const MATH_LANGS = ['math', 'math-display'];
+
+          // 1. Display Math (``` ... ```)
+          document.querySelectorAll('pre code').forEach(el => {
+              let lang = el.dataset.lang || '';
+              if (!lang) {
+                  el.classList.forEach(cls => {
+                      if (cls.startsWith('language-')) lang = cls.replace('language-', '');
+                  });
+              }
+              
+              if (MATH_LANGS.includes(lang.toLowerCase())) {
+                  const pre = el.parentElement;
                   const div = document.createElement('div');
-                  div.textContent = math;
+                  div.textContent = el.textContent.trim();
                   pre.replaceWith(div);
               }
           });
 
           // 2. Inline Math (`$ ... $`)
           document.querySelectorAll('code').forEach(el => {
-              if (el.classList.contains('language-math-display')) return;
               if (el.parentElement.tagName === 'PRE') return;
 
               const text = el.textContent.trim();
@@ -130,7 +138,7 @@
     </div>
     <div class="page-footer">
       <div class="footer-content">
-        <span>Based on theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+        <span>With theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
       </div>
     </div>
   </div>
@@ -143,53 +151,109 @@
       mask.classList.toggle("open");
     }
 
-    function toggleTheme() {
-      const body = document.body;
-      const icon = document.getElementById("theme-icon");
-      if (body.getAttribute("data-theme") === "dark") {
-        body.setAttribute("data-theme", "light");
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem("theme", "light");
-      } else {
-        body.setAttribute("data-theme", "dark");
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem("theme", "dark");
+    const getPreferredScheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    function updateThemeIcon(scheme) {
+      const themeIcon = document.getElementById("theme-icon");
+      if (themeIcon) {
+        if (scheme === 'dark') {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+        }
       }
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const systemScheme = getPreferredScheme();
+      const currentInlineScheme = root.style.colorScheme;
+      
+      // Calculate effective scheme
+      const effectiveScheme = currentInlineScheme || systemScheme;
+      const targetScheme = effectiveScheme === 'dark' ? 'light' : 'dark';
+
+      root.style.colorScheme = targetScheme;
+      localStorage.setItem("theme", targetScheme);
+      updateThemeIcon(targetScheme);
     }
 
     // Initialize theme
     (function() {
       const savedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const systemTheme = getPreferredScheme();
       
-      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-        document.body.setAttribute("data-theme", "dark");
-        // Icon update will happen after DOM load if we put this script at the end, 
-        // but since this is inline at the end of body, we might need to wait for DOMContentLoaded if the icon isn't ready?
-        // Actually, this script is at the end of body, so elements should be parsed.
-        const icon = document.getElementById("theme-icon");
-        if (icon) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-        }
+      if (savedTheme) {
+        document.documentElement.style.colorScheme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        updateThemeIcon(systemTheme);
       }
+
+      // Listen for system changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem("theme")) {
+          const newScheme = e.matches ? 'dark' : 'light';
+          updateThemeIcon(newScheme);
+        }
+      });
     })();
 
-    // Footnote Navigation
+    // Footnote Navigation & Code Block Label
     document.addEventListener("DOMContentLoaded", function() {
+        const MATH_LANGS = ['math', 'math-display', 'tex', 'latex'];
+
         // Code Block Language Label
         document.querySelectorAll('pre code').forEach(code => {
             const pre = code.parentElement;
-            if (!pre.hasAttribute('data-lang')) {
-                const classes = code.className.split(' ');
-                for (const cls of classes) {
-                    if (cls.startsWith('language-')) {
-                        pre.setAttribute('data-lang', cls.replace('language-', ''));
-                        break;
+            let lang = pre.getAttribute('data-lang');
+
+            // 1. Try to recover lang if not on pre
+            if (!lang) {
+                const codeLang = code.getAttribute('data-lang');
+                if (codeLang) {
+                    lang = codeLang;
+                } else {
+                    const classes = code.className.split(' ');
+                    for (const cls of classes) {
+                        if (cls.startsWith('language-')) {
+                            lang = cls.replace('language-', '');
+                            break;
+                        }
                     }
                 }
+                if (lang) pre.setAttribute('data-lang', lang);
+            }
+
+            // 2. Process Math Blocks
+            if (lang && MATH_LANGS.includes(lang.toLowerCase())) {
+                const div = document.createElement('div');
+                div.classList.add('math-display');
+                let mathContent = code.textContent.trim();
+                
+                // Auto-wrap if typical delimiters are missing
+                if (!mathContent.startsWith('$$') && !mathContent.startsWith('\\[')) {
+                    mathContent = '$$' + mathContent + '$$';
+                }
+                
+                div.textContent = mathContent;
+                pre.replaceWith(div);
+            }
+        });
+
+        // 3. Process Inline Math
+        // Zola (or Markdown) often renders `$E=mc^2$` as <code>$E=mc^2$</code>.
+        // We need to unwrap this code tag so MathJax can process it without code styling.
+        document.querySelectorAll(':not(pre) > code').forEach(code => {
+            const text = code.textContent.trim();
+            // Check for $...$ (and not $$...$$) or \(...\)
+            if ( (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) ||
+                 (text.startsWith('\\(') && text.endsWith('\\)')) ) {
+                 const span = document.createElement('span');
+                 span.textContent = text;
+                 code.replaceWith(span);
             }
         });
     });

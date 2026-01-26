@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Como pasé una semana con Zola</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/es/" class="nav-link">Inicio</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/es/articles" class="nav-link">Artículos</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/es/about" class="nav-link">Acerca de</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Páginas</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/es/tags" class="dropdown-item">Etiquetas</a>
+                                
+                                    <a href="/es/categories" class="dropdown-item">Categorías</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/"  class="dropdown-item" >English</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/es/" class="mobile-nav-item mobile-nav-link">Inicio</a>
+                        
+                    
+                        
+                            <a href="/es/articles" class="mobile-nav-item mobile-nav-link">Artículos</a>
+                        
+                    
+                        
+                            <a href="/es/about" class="mobile-nav-item mobile-nav-link">Acerca de</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Páginas</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/es/tags" class="mobile-dropdown-link">Etiquetas</a>
+                                    
+                                        <a href="/es/categories" class="mobile-dropdown-link">Categorías</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Como pasé una semana con Zola</h1>
+    </header>
+    <div class="container content"><p>Llevaba meses posponiendo la reconstrucción de mi blog. Sabía que quería alejarme de mi configuración actual, pero cada generador de sitios estáticos que miraba parecía requerir demasiada sobrecarga. Entonces me encontré con Zola, y algo sobre la propuesta de "binario único, cero dependencias" me hizo lo suficientemente curioso como para darle una oportunidad real.</p>
+<p>Me di una semana. Siete días para evaluar Zola, reconstruir mi sitio y decidir si esta era la herramienta que había estado buscando. Aquí está lo que realmente sucedió.</p>
+<h2 id="dia-1-configuracion-y-primeras-impresiones">Día 1: Configuración y primeras impresiones</h2>
+<p>La instalación fue casi anticlimática. Descargar un binario, añadirlo a mi PATH, ejecutar <code>zola init</code>. Sin entorno virtual, sin esperar la barra de progreso de npm install, sin resolución de dependencias. Simplemente... listo.</p>
+<p>Pasé el resto del día uno leyendo la documentación y configurando la estructura básica. Los docs están bien organizados y sorprendentemente concisos. En unas pocas horas, tenía un sitio básico funcionando con <code>zola serve</code>, y la recarga en vivo era notablemente rápida. No rápido "lo suficiente"—realmente rápido.</p>
+<p>La sintaxis de plantillas Tera se sintió inmediatamente familiar. Si has usado Jinja2 (y yo lo he hecho), básicamente ya estás entrenado. Armé una plantilla base simple y un diseño de post, y estaba renderizando Markdown para la noche.</p>
+<p><strong>Veredicto del día 1:</strong> Esto es refrescantemente simple. Cautelosamente optimista.</p>
+<h2 id="dia-2-migracion-de-contenido-y-estructura">Día 2: Migración de contenido y estructura</h2>
+<p>Pasé el día dos migrando mis posts de blog existentes y descubriendo el modelo de contenido de Zola. Aquí es donde la estructura dogmática se hizo aparente.</p>
+<p>Zola quiere que organices el contenido en secciones. Cada sección es un directorio con un archivo <code>_index.md</code>. Las páginas son archivos markdown individuales. Es más estructurado que simplemente tirar archivos markdown en cualquier lugar, pero una vez que entendí el patrón, tuvo sentido.</p>
+<p>El formato del front matter era ligeramente diferente de lo que estaba usando antes, así que escribí un script rápido para convertir mis posts. Nada complicado—principalmente ajustando formatos de fecha y campos de metadatos.</p>
+<p>Lo que me sorprendió fue lo rápido que Zola reconstruía el sitio incluso mientras añadía más contenido. Estoy acostumbrado a que los SSG se ralenticen a medida que crece el contenido. Zola simplemente... no lo hizo.</p>
+<p><strong>Veredicto del día 2:</strong> La estructura dogmática requiere algo de ajuste pero vale la pena en claridad.</p>
+<h2 id="dia-3-soporte-multilingue">Día 3: Soporte multilingüe</h2>
+<p>Necesitaba que mi sitio funcionara tanto en inglés como en español. Aquí es donde esperaba dolor, porque el soporte multilingüe suele ser una idea tardía o una pesadilla de configuración compleja.</p>
+<p>El soporte multilingüe de Zola es sorprendentemente directo. Añades <code>default_language</code> a tu configuración, defines tus idiomas y creas contenido con códigos de idioma en los nombres de archivo (como <code>about.es.md</code>). Eso es todo. Zola maneja el enrutamiento y el cambio.</p>
+<p>Pasé tal vez dos horas configurando esto, incluyendo crear versiones traducidas de mis plantillas. El cambio de idioma simplemente funcionó. Sin plugins, sin reglas de enrutamiento complejas, sin confusión.</p>
+<p><strong>Veredicto del día 3:</strong> Así es como el soporte multilingüe debería funcionar en todas partes.</p>
+<h2 id="dia-4-construyendo-las-funcionalidades-que-realmente-quiero">Día 4: Construyendo las funcionalidades que realmente quiero</h2>
+<p>El día cuatro se trató de construir las funcionalidades que realmente necesitaba: una sección de posts destacados, paginación apropiada, páginas de etiquetas y feeds RSS.</p>
+<p>RSS ya estaba integrado. Solo habilitarlo en la configuración. Listo.</p>
+<p>La paginación está integrada. Añade unas pocas líneas a tu plantilla. Listo.</p>
+<p>Las taxonomías (etiquetas, categorías) son conceptos de primera clase. Configúralas una vez, úsalas en todas partes.</p>
+<p>La sección de posts destacados requirió un poco más de reflexión. Añadí un campo <code>featured</code> al front matter de mis posts, luego filtré los posts en mi plantilla:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{% set featured = section.pages | filter(attribute=&quot;extra.featured&quot;, value=true) %}
+</span></code></pre>
+<p>Limpio, legible, funciona perfectamente. Para el final del día cuatro, mi sitio tenía todas las funcionalidades que quería, y no había escrito ningún plugin o script externo.</p>
+<p><strong>Veredicto del día 4:</strong> Las funcionalidades integradas cubren el 90% de lo que realmente necesitas.</p>
+<h2 id="dia-5-estilizacion-con-sass">Día 5: Estilización con Sass</h2>
+<p>No me encanta escribir CSS, pero sí me gusta Sass para organización y variables. Zola compila Sass desde el principio.</p>
+<p>Creé un directorio <code>sass</code>, escribí mis estilos con anidación y variables, y Zola simplemente lo manejó. Sin configuración de webpack, sin dependencias adicionales, sin scripts de compilación. Se compiló al guardar y los cambios aparecieron inmediatamente.</p>
+<p>Aquí es donde la filosofía de "baterías incluidas" realmente hizo clic. Cada vez que esperaba necesitar una herramienta o plugin extra, Zola ya lo tenía integrado.</p>
+<p><strong>Veredicto del día 5:</strong> Cuanto más uso Zola, menos tengo que configurar.</p>
+<h2 id="dia-6-pulido-y-refinamientos">Día 6: Pulido y refinamientos</h2>
+<p>El día seis fue limpieza: mejorar plantillas, añadir metadatos apropiados, probar la compilación con diferente contenido, y asegurarme de que todo funcionara correctamente.</p>
+<p>Experimenté con los shortcodes de Zola para incrustar contenido en Markdown. Son directos—define una plantilla, llámala desde markdown. Construí un par para galerías de imágenes y ejemplos de código.</p>
+<p>También probé la compilación de producción. La salida es limpia, mínima y rápida. Zola no añade JavaScript innecesario o hinchazón. Lo que construyes es lo que obtienes.</p>
+<p><strong>Veredicto del día 6:</strong> El pulido está en los detalles que Zola hizo bien.</p>
+<h2 id="dia-7-despliegue-y-reflexion">Día 7: Despliegue y reflexión</h2>
+<p>El día final se trató del despliegue. Empujé a GitHub, configuré una GitHub Action simple que descarga Zola, construye el sitio y despliega a GitHub Pages. Todo el script CI es de unas 15 líneas.</p>
+<p>Sin instalar Node.js en CI, sin pip instalando dependencias, sin capas de caché para acelerar compilaciones repetidas. Descargar un binario, ejecutar un comando, desplegar.</p>
+<p>Mientras miraba lo que había construido en una semana, me di cuenta de algo: había pasado la mayor parte de mi tiempo construyendo mi sitio, no configurando mi herramienta de compilación. No estaba depurando conflictos de plugins o luchando con documentación complicada. Estaba escribiendo plantillas, estilizando páginas y migrando contenido.</p>
+<p><strong>Veredicto del día 7:</strong> Esto es lo que he estado buscando.</p>
+<h2 id="lo-que-aprendi-sobre-zola">Lo que aprendí sobre Zola</h2>
+<p><strong>La velocidad es real.</strong> No es marketing. Las reconstrucciones son genuinamente lo suficientemente rápidas como para que el ciclo de retroalimentación se sienta instantáneo. Esto importa más de lo que pensarías—te mantiene en flujo en lugar de esperar.</p>
+<p><strong>Baterías incluidas funciona.</strong> Estoy acostumbrado a que los generadores de sitios estáticos sean núcleos mínimos que extiendes con plugins. El enfoque de Zola de incluir todo es diferente, pero es eficiente. Nunca tuve que evaluar plugins o preocuparme por compatibilidad.</p>
+<p><strong>La estructura dogmática ayuda.</strong> Al principio, el modelo de contenido estructurado de Zola se sintió restrictivo. Para el día tres, lo aprecié. Las restricciones hacen las cosas predecibles, y predecible significa menos tiempo decidiendo cómo organizar las cosas.</p>
+<p><strong>Tera es excelente.</strong> Las plantillas son lo suficientemente poderosas para cualquier cosa que necesitara pero lo suficientemente simples para leer seis meses después. La inspiración de Jinja2 fue la decisión correcta.</p>
+<p><strong>Cero dependencias no es solo una característica—es una filosofía.</strong> No gestionar versiones de Python, paquetes npm o entornos virtuales eliminó una categoría completa de problemas. Mi proyecto es mi contenido y mis plantillas. Eso es todo.</p>
+<h2 id="lo-que-extrane-brevemente">Lo que extrañé (brevemente)</h2>
+<p>El ecosistema de plugins. Cuando quería algo personalizado, tenía que construirlo en plantillas en lugar de buscar un plugin. Esto estuvo bien en realidad—Tera es lo suficientemente capaz—pero hubo momentos en los que deseé un script de Python o paquete npm.</p>
+<p>El ecosistema de temas es más pequeño. Construí mi propio diseño, que de todos modos quería hacer, pero si esperas tomar un tema pulido e irte, las opciones son limitadas.</p>
+<h2 id="el-veredicto">El veredicto</h2>
+<p>Siete días después, me quedo con Zola.</p>
+<p>Esto no es porque Zola haga cosas que otros generadores de sitios estáticos no puedan—es porque Zola hace menos cosas pero las hace con menos fricción. La simplicidad no es simplista; es intencional.</p>
+<p>Llegué escéptico de que una herramienta pudiera ser tanto poderosa como simple. Zola me demostró que estaba equivocado siendo dogmática sobre las cosas correctas y flexible sobre todo lo demás.</p>
+<p>Mi blog está en vivo, las compilaciones son rápidas, el desarrollo es agradable, y tengo cero dependencias que mantener. Si eso suena atractivo, dale a Zola una semana. Podrías sorprenderte de cuánto puedes construir cuando la herramienta se quita del medio.</p>
+<h2 id="recursos-que-ayudaron">Recursos que ayudaron</h2>
+<ul>
+<li>La documentación oficial de Zola (comienza aquí)</li>
+<li>La documentación de plantillas Tera (para plantillas avanzadas)</li>
+<li>Las discusiones de GitHub de Zola (comunidad útil)</li>
+<li>Sitios de ejemplo en el showcase de Zola (ver implementaciones reales ayuda)</li>
+</ul>
+<p>¿Recomendaría Zola? Si quieres simplicidad, velocidad, y no necesitas ecosistemas de plugins extensos, absolutamente. Si necesitas integraciones complejas con Python o quieres miles de temas para elegir, busca en otro lugar.</p>
+<p>Para mí, Zola dio en el punto ideal: lo suficientemente poderoso para lo que necesito, lo suficientemente simple para mantenerse fuera de mi camino. Una semana fue suficiente para estar convencido.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/es/articles" class="footer-link">Artículos</a></li>
+            
+                <li class="footer-links"><a href="/es/about" class="footer-link">Acerca de</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Zola vs Astro: Traditional SSG Meets Modern JavaScript</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Zola vs Astro: Traditional SSG Meets Modern JavaScript</h1>
+    </header>
+    <div class="container content"><p>At first glance, comparing Zola and Astro might seem odd. One is a traditional static site generator built in Rust. The other is a modern JavaScript framework with an islands architecture. But both excel at building fast static sites, and both claim to make the process simpler. The question is: which kind of simplicity do you need?</p>
+<h2 id="philosophy-everything-included-vs-bring-your-own">Philosophy: Everything Included vs Bring Your Own</h2>
+<p>Zola ships as a single binary with everything built-in. Download one file, and you have templating, Sass compilation, syntax highlighting, image processing, and live reload. No npm, no node_modules, no build configuration.</p>
+<p>Astro is a JavaScript framework that embraces the npm ecosystem. You install it via npm, configure it through JavaScript, and extend it with integrations. Want to use React components? Install the React integration. Need Tailwind? Add it. The philosophy is composition over inclusion.</p>
+<p>This isn't a value judgment—it's a fundamental difference in approach. Zola says "here's everything you need." Astro says "here's a foundation, add what you want."</p>
+<h2 id="installation-and-setup">Installation and Setup</h2>
+<p>Getting started with Zola:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Download binary
+</span><span style="color:#65737e;"># Add to PATH
+</span><span style="color:#bf616a;">zola</span><span> init my-site
+</span><span style="color:#bf616a;">zola</span><span> serve
+</span></code></pre>
+<p>Getting started with Astro:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">npm</span><span> create astro@latest
+</span><span style="color:#65737e;"># Answer interactive prompts
+</span><span style="color:#bf616a;">npm</span><span> run dev
+</span></code></pre>
+<p>Zola's approach means no node_modules folder, no package.json, no dependency updates. Your project is just your content and templates.</p>
+<p>Astro's approach means you're in the JavaScript ecosystem with all its benefits and complexities. You get access to npm packages, but you also manage dependencies.</p>
+<h2 id="component-model-templates-vs-javascript-components">Component Model: Templates vs JavaScript Components</h2>
+<p>Zola uses Tera templates. You write HTML with template syntax for loops, conditionals, and macros. It's server-side templating—what you write is what gets rendered to HTML.</p>
+<p>Astro lets you write components in Astro syntax (which looks like JSX) and can integrate React, Vue, Svelte, or Solid components. You can mix and match frameworks in the same project. This is powerful if you want to reuse existing components or prefer a component-driven architecture.</p>
+<p>Here's the trade-off: Zola's templates are simpler but less powerful for interactive components. Astro's components are more complex but give you the full JavaScript ecosystem.</p>
+<h2 id="content-management">Content Management</h2>
+<p>Both use Markdown for content, but they handle it differently.</p>
+<p>Zola has a structured content model with sections and pages. Front matter is strict but predictable. You organize content by directories, and Zola automatically generates routes. It's opinionated about structure, which reduces decisions.</p>
+<p>Astro is more flexible. You can put Markdown files anywhere, use content collections for structured data, or pull content from CMSs or APIs at build time. This flexibility is useful for complex sites but requires more decision-making.</p>
+<h2 id="performance-both-fast-different-reasons">Performance: Both Fast, Different Reasons</h2>
+<p>Zola is fast because it's Rust. Build times are measured in milliseconds. It rebuilds incrementally during development, and changes appear nearly instantly.</p>
+<p>Astro is fast because it ships zero JavaScript by default. Your site is pure HTML and CSS unless you opt into client-side interactivity. When you do add JavaScript, Astro's islands architecture only hydrates the components that need it.</p>
+<p>In practice, both produce fast sites. Zola achieves this through traditional static generation. Astro achieves it through clever JavaScript optimization.</p>
+<h2 id="interactivity-and-javascript">Interactivity and JavaScript</h2>
+<p>This is where the paths diverge significantly.</p>
+<p>Zola doesn't have a story for complex client-side interactivity. You can add vanilla JavaScript, but if you need a React component or Vue widget, you're integrating it manually. Zola excels at static, content-focused sites.</p>
+<p>Astro was built for partial hydration. You can have an entirely static blog post with one interactive widget that loads React only for that component. This is Astro's killer feature—progressive enhancement through islands architecture.</p>
+<p>If your site is mostly static with occasional interactivity, Astro gives you a clear path forward. If your site is entirely static, Zola's simplicity might be preferable.</p>
+<h2 id="styling-and-assets">Styling and Assets</h2>
+<p>Zola has built-in Sass compilation. Write <code>.scss</code> files, and Zola handles them. For other assets, you put them in the static folder, and they're copied as-is.</p>
+<p>Astro integrates with modern tooling. You can use Tailwind, CSS-in-JS, CSS Modules, or whatever the JavaScript ecosystem offers. Asset optimization happens through Vite, Astro's build tool.</p>
+<p>Zola's approach is simpler but more limited. Astro's approach gives you more options but requires configuration.</p>
+<h2 id="ecosystem-and-integrations">Ecosystem and Integrations</h2>
+<p>Zola's ecosystem is minimal. There are some themes and a small community. You're mostly building from scratch or adapting existing HTML/CSS templates.</p>
+<p>Astro's ecosystem is growing rapidly. There are integrations for CMSs, image optimization, analytics, and more. You can use any npm package. The community is active, and new integrations appear regularly.</p>
+<p>If you want to integrate with modern web development tools—TypeScript, Tailwind, MDX, image optimization, analytics—Astro makes this straightforward. With Zola, you're on your own.</p>
+<h2 id="multilingual-sites">Multilingual Sites</h2>
+<p>Zola has first-class multilingual support. Create content in multiple languages, and Zola handles routing and structure automatically. It's straightforward and requires minimal configuration.</p>
+<p>Astro supports multilingual sites through routing configuration and content collections. It's more manual but also more flexible. You control exactly how languages are handled.</p>
+<h2 id="learning-curve">Learning Curve</h2>
+<p>Zola's learning curve is gentle if you know HTML and are comfortable with template syntax. There's one templating language to learn (Tera), and the mental model is simple: templates render content to HTML.</p>
+<p>Astro's learning curve depends on your JavaScript experience. If you're comfortable with modern JavaScript, JSX, and component thinking, Astro feels natural. If you're new to this ecosystem, there's more to learn: component syntax, props, islands, integrations.</p>
+<h2 id="developer-experience">Developer Experience</h2>
+<p>Zola's DX is about simplicity. Fast builds, simple mental model, no toolchain configuration. You focus on content and templates. The live reload is nearly instant.</p>
+<p>Astro's DX is about power and flexibility. You get TypeScript support, component frameworks, modern tooling, and extensive integrations. The development server is fast, and error messages are helpful.</p>
+<h2 id="when-to-choose-astro">When to Choose Astro</h2>
+<p>Pick Astro if you:</p>
+<ul>
+<li>Need to mix static content with interactive components</li>
+<li>Want to use React, Vue, or Svelte components</li>
+<li>Need integration with modern JavaScript tooling</li>
+<li>Plan to pull content from APIs or CMSs</li>
+<li>Want TypeScript support out of the box</li>
+<li>Need to progressively enhance static pages with interactivity</li>
+<li>Are comfortable with npm and JavaScript tooling</li>
+</ul>
+<h2 id="when-to-choose-zola">When to Choose Zola</h2>
+<p>Pick Zola if you:</p>
+<ul>
+<li>Want zero dependency installation and maintenance</li>
+<li>Are building a content-focused site (blog, docs, portfolio)</li>
+<li>Prefer simplicity over flexibility</li>
+<li>Don't need complex client-side interactivity</li>
+<li>Want built-in Sass without configuration</li>
+<li>Value fast builds with minimal tooling</li>
+<li>Prefer a single binary over a JavaScript toolchain</li>
+</ul>
+<h2 id="the-real-decision-point">The Real Decision Point</h2>
+<p>The choice between Zola and Astro isn't about which is better—it's about which model fits your project and preferences.</p>
+<p>Choose based on your site's needs:</p>
+<ul>
+<li>Pure static content with minimal interactivity? Zola's simplicity shines.</li>
+<li>Mix of static content and interactive components? Astro's islands architecture is perfect.</li>
+<li>Want to avoid JavaScript tooling entirely? Zola gives you that.</li>
+<li>Need the JavaScript ecosystem and its packages? Astro provides access.</li>
+</ul>
+<p>Both will give you fast, performant sites. Zola does it with traditional static generation and zero dependencies. Astro does it with modern JavaScript tooling and optional interactivity.</p>
+<p>Neither is wrong. Pick the one that matches how you want to work, not just what you want to build.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

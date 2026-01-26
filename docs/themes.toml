@@ -28,7 +28,7 @@ git submodule add https://codeberg.org/salif/linkita.git themes/linkita
 ```sh
 git clone https://codeberg.org/salif/linkita.git themes/linkita
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "linkita"
 ```
@@ -92,7 +92,7 @@ git submodule add https://codeberg.org/daudix/duckquill.git themes/duckquill
 ```sh
 git clone https://codeberg.org/daudix/duckquill.git themes/duckquill
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "duckquill"
 ```
@@ -128,6 +128,70 @@ theme = "duckquill"
   js = "document.getElementById('info-duckquill').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "zolarwind"
+name = "Zolarwind"
+desc = "A GDPR-friendly Zola blog theme: no third-party requests, Tailwind CSS, KaTeX, Mermaid, localization"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zolarwind}
+- **Author**: [Thomas Weitzel](https://weitzel.dev)
+- **License**: MIT
+- **Homepage**: <https://github.com/thomasweitzel/zolarwind>
+- **Main Live Preview**: <https://pureandroid.com>
+- **Min Zola version**: 0.22.1
+
+### Installation{#install-zolarwind}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/thomasweitzel/zolarwind.git themes/zolarwind
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/thomasweitzel/zolarwind.git themes/zolarwind
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "zolarwind"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zolarwind.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Zolarwind Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zolarwind.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Zolarwind Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zolarwind/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/thomasweitzel/zolarwind"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zolarwind"
+  js = "document.getElementById('info-zolarwind').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "tabi"
 name = "tabi"
 desc = "tabi is an accessible Zola theme with search, multi-language support, optional JavaScript, a perfect Lighthouse score, and comprehensive documentation. Crafted for personal websites and blogs."
@@ -156,7 +220,7 @@ git submodule add https://github.com/welpo/tabi.git themes/tabi
 ```sh
 git clone https://github.com/welpo/tabi.git themes/tabi
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "tabi"
 ```
@@ -220,7 +284,7 @@ git submodule add https://github.com/not-matthias/apollo.git themes/apollo
 ```sh
 git clone https://github.com/not-matthias/apollo.git themes/apollo
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "apollo"
 ```
@@ -256,6 +320,307 @@ theme = "apollo"
   js = "document.getElementById('info-apollo').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "marisa-theme"
+name = "marisa-theme"
+desc = "A non-opinionated theme with convenient features for personal sites and small indie teams."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-marisa-theme}
+- **Author**: [David Frank](https://marisa.club)
+- **License**: MIT
+- **Homepage**: <https://codeberg.org/bitinn/marisa-theme>
+- **Main Live Preview**: <https://theme.marisa.club>
+- **Min Zola version**: 0.21.0
+
+### Installation{#install-marisa-theme}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "marisa-theme"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-marisa-theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of marisa-theme Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-marisa-theme.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of marisa-theme Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/marisa-theme/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://codeberg.org/bitinn/marisa-theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-marisa-theme"
+  js = "document.getElementById('info-marisa-theme').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "zap"
+name = "Zap"
+desc = "A fast, ultra-minimal Zola theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zap}
+- **Author**: [jimmyff](https://www.jimmyff.co.uk)
+- **License**: MIT
+- **Homepage**: <https://github.com/jimmyff/zola-zap>
+- **Main Live Preview**: <https://www.jimmyff.co.uk/zola-zap/>
+- **Min Zola version**: 0.17.0
+
+### Installation{#install-zap}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jimmyff/zola-zap.git themes/zap
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jimmyff/zola-zap.git themes/zap
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "zap"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-zap.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Zap Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zap.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Zap Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zap/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jimmyff/zola-zap"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zap"
+  js = "document.getElementById('info-zap').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "terminus"
+name = "terminus"
+desc = "A dark duotone retro theme for Zola"
+tags = [ "dark", "blog", "minimal", "personal", "responsive", "seo" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-terminus}
+- **Author**: [Eyal Kalderon](https://eyalkalderon.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/ebkalderon/terminus>
+- **Main Live Preview**: <https://ebkalderon.github.io/terminus/>
+- **Min Zola version**: 0.20.0
+- **Original**: <https://github.com/panr/hugo-theme-terminal>
+
+### Installation{#install-terminus}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/ebkalderon/terminus.git themes/terminus
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/ebkalderon/terminus.git themes/terminus
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "terminus"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-terminus.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of terminus Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/terminus/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/ebkalderon/terminus"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-terminus"
+  js = "document.getElementById('info-terminus').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "radion"
+name = "radion"
+desc = "A sleek, modern blog theme."
+tags = [ "SEO", "search", "accessible" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-radion}
+- **Author**: [Micah Kepe](https://micahkepe.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/micahkepe/radion>
+- **Main Live Preview**: <https://micahkepe.com/radion/>
+- **Min Zola version**: 0.20.0
+
+### Installation{#install-radion}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/micahkepe/radion.git themes/radion
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/micahkepe/radion.git themes/radion
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "radion"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-radion.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of radion Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/radion/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/micahkepe/radion"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-radion"
+  js = "document.getElementById('info-radion').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "hacker"
+name = "zola-hacker"
+desc = "Hacker is a theme for Zola"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-hacker}
+- **Author**: [Vladimir Loskutov](https://github.com/en9inerd)
+- **License**: MIT
+- **Homepage**: <https://github.com/en9inerd/zola-hacker>
+- **Main Live Preview**: <https://zola-hacker.enginerd.io/>
+- **Min Zola version**: 0.19.1
+- **Original**: <https://github.com/pages-themes/hacker>
+
+### Installation{#install-hacker}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/en9inerd/zola-hacker.git themes/hacker
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "hacker"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-hacker.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of zola-hacker Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/hacker/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/en9inerd/zola-hacker"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-hacker"
+  js = "document.getElementById('info-hacker').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "zola-fodoks-theme"
 name = "adidoks"
 desc = "AdiDoks is a Zola theme helping you build modern documentation."
@@ -285,7 +650,7 @@ git submodule add https://github.com/PartialShawn/zola-fodoks-theme.git themes/z
 ```sh
 git clone https://github.com/PartialShawn/zola-fodoks-theme.git themes/zola-fodoks-theme
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-fodoks-theme"
 ```
@@ -349,7 +714,7 @@ git submodule add https://codeberg.org/winterstein/zola-theme-daisy.git themes/d
 ```sh
 git clone https://codeberg.org/winterstein/zola-theme-daisy.git themes/daisy
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "daisy"
 ```
@@ -413,7 +778,7 @@ git submodule add https://codeberg.org/winterstein/zola-theme-project-portfolio.
 ```sh
 git clone https://codeberg.org/winterstein/zola-theme-project-portfolio.git themes/project-portfolio
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "project-portfolio"
 ```
@@ -477,7 +842,7 @@ git submodule add https://github.com/srliu3264/MATbook.git themes/MATbook
 ```sh
 git clone https://github.com/srliu3264/MATbook.git themes/MATbook
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "MATbook"
 ```
@@ -541,7 +906,7 @@ git submodule add https://github.com/dongryul-kim/olivine.git themes/olivine
 ```sh
 git clone https://github.com/dongryul-kim/olivine.git themes/olivine
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "olivine"
 ```
@@ -577,248 +942,28 @@ theme = "olivine"
   js = "document.getElementById('info-olivine').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "terminus"
-name = "terminus"
-desc = "A dark duotone retro theme for Zola"
-tags = [ "dark", "blog", "minimal", "personal", "responsive", "seo" ]
+theme = "austere"
+name = "austere"
+desc = "A minimal theme for Zola with a focus on writing."
+tags = [
+  "dark",
+  "blog",
+  "minimal",
+  "personal",
+  "responsive",
+  "seo",
+  "writing"
+]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
 
-### Info{#info-terminus}
-- **Author**: [Eyal Kalderon](https://eyalkalderon.com)
+### Info{#info-austere}
+- **Author**: [tomwrw](https://www.tomwrw.com)
 - **License**: MIT
-- **Homepage**: <https://github.com/ebkalderon/terminus>
-- **Main Live Preview**: <https://ebkalderon.github.io/terminus/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/panr/hugo-theme-terminal>
-
-### Installation{#install-terminus}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/ebkalderon/terminus.git themes/terminus
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/ebkalderon/terminus.git themes/terminus
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "terminus"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-terminus.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of terminus Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/terminus/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/ebkalderon/terminus"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-terminus"
-  js = "document.getElementById('info-terminus').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "radion"
-name = "radion"
-desc = "A sleek, modern blog theme."
-tags = [ "SEO", "search", "accessible" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-radion}
-- **Author**: [Micah Kepe](https://micahkepe.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/micahkepe/radion>
-- **Main Live Preview**: <https://micahkepe.com/radion/>
-- **Min Zola version**: 0.20.0
-
-### Installation{#install-radion}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/micahkepe/radion.git themes/radion
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/micahkepe/radion.git themes/radion
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "radion"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-radion.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of radion Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/radion/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/micahkepe/radion"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-radion"
-  js = "document.getElementById('info-radion').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "hacker"
-name = "zola-hacker"
-desc = "Hacker is a theme for Zola"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-hacker}
-- **Author**: [Vladimir Loskutov](https://github.com/en9inerd)
-- **License**: MIT
-- **Homepage**: <https://github.com/en9inerd/zola-hacker>
-- **Main Live Preview**: <https://zola-hacker.enginerd.io/>
-- **Min Zola version**: 0.19.1
-- **Original**: <https://github.com/pages-themes/hacker>
-
-### Installation{#install-hacker}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/en9inerd/zola-hacker.git themes/hacker
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/en9inerd/zola-hacker.git themes/hacker
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "hacker"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-hacker.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of zola-hacker Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/hacker/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/en9inerd/zola-hacker"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-hacker"
-  js = "document.getElementById('info-hacker').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "CyberWalk"
-name = "CyberWalk"
-desc = "A dark, glowing, cyberpunk-themed Zola theme for developers and technical writers."
-tags = [ "blog", "cyberpunk", "dark", "terminal", "portfolio" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-CyberWalk}
-- **License**: MIT
-- **Homepage**: <https://github.com/plantacerium/zola-theme-cyber-walk>
-
-### Installation{#install-CyberWalk}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/plantacerium/zola-theme-cyber-walk.git themes/CyberWalk
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/plantacerium/zola-theme-cyber-walk.git themes/CyberWalk
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "CyberWalk"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-CyberWalk.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of CyberWalk Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/CyberWalk/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/plantacerium/zola-theme-cyber-walk"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-CyberWalk"
-  js = "document.getElementById('info-CyberWalk').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "zap"
-name = "Zap"
-desc = "A fast, ultra-minimal Zola theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-zap}
-- **Author**: [jimmyff](https://www.jimmyff.co.uk)
-- **License**: MIT
-- **Homepage**: <https://github.com/jimmyff/zola-zap>
-- **Main Live Preview**: <https://www.jimmyff.co.uk/zola-zap/>
+- **Homepage**: <https://github.com/tomwrw/austere-theme-zola>
 - **Min Zola version**: 0.17.0
 
-### Installation{#install-zap}
+### Installation{#install-austere}
 Some themes require additional configuration before they can work properly.
 Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
 
@@ -826,110 +971,46 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://github.com/jimmyff/zola-zap.git themes/zap
+git submodule add https://github.com/tomwrw/austere-theme-zola.git themes/austere
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://github.com/jimmyff/zola-zap.git themes/zap
+git clone https://github.com/tomwrw/austere-theme-zola.git themes/austere
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
-theme = "zap"
+theme = "austere"
 ```
 
 </details>"""
 
   [[project.screenshots]]
-  src = "./screenshots/light-zap.webp"
+  src = "./screenshots/light-austere.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Light mode screenshot of Zap Zola theme demo website"
+  alt = "Light mode screenshot of austere Zola theme demo website"
 
   [[project.screenshots]]
-  src = "./screenshots/dark-zap.webp"
+  src = "./screenshots/dark-austere.webp"
   type = "image/webp"
   width = "1360"
   height = "765"
-  alt = "Dark mode screenshot of Zap Zola theme demo website"
+  alt = "Dark mode screenshot of austere Zola theme demo website"
 
   [[project.links]]
   name = "Live Preview"
-  url = "./demo/zap/"
+  url = "./demo/austere/"
 
   [[project.links]]
   name = "Repository"
-  url = "https://github.com/jimmyff/zola-zap"
+  url = "https://github.com/tomwrw/austere-theme-zola"
 
   [[project.links]]
   name = "Info"
   newtab = false
-  url = "#info-zap"
-  js = "document.getElementById('info-zap').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "marisa-theme"
-name = "marisa-theme"
-desc = "A non-opinionated theme with convenient features for personal sites and small indie teams."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-marisa-theme}
-- **Author**: [David Frank](https://marisa.club)
-- **License**: MIT
-- **Homepage**: <https://codeberg.org/bitinn/marisa-theme>
-- **Main Live Preview**: <https://theme.marisa.club>
-- **Min Zola version**: 0.21.0
-
-### Installation{#install-marisa-theme}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/bitinn/marisa-theme.git themes/marisa-theme
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "marisa-theme"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-marisa-theme.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of marisa-theme Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-marisa-theme.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of marisa-theme Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/marisa-theme/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/bitinn/marisa-theme"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-marisa-theme"
-  js = "document.getElementById('info-marisa-theme').parentElement.setAttribute('open', true); this.style.display='none';"
+  url = "#info-austere"
+  js = "document.getElementById('info-austere').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "rilling_dev"
@@ -960,7 +1041,7 @@ git submodule add https://github.com/RillingDev/rilling.dev_theme.git themes/ril
 ```sh
 git clone https://github.com/RillingDev/rilling.dev_theme.git themes/rilling_dev
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "rilling_dev"
 ```
@@ -1025,7 +1106,7 @@ git submodule add https://github.com/semanticdata/mabuya.git themes/mabuya
 ```sh
 git clone https://github.com/semanticdata/mabuya.git themes/mabuya
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "mabuya"
 ```
@@ -1089,7 +1170,7 @@ git submodule add https://github.com/jieiku/abridge.git themes/abridge
 ```sh
 git clone https://github.com/jieiku/abridge.git themes/abridge
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "abridge"
 ```
@@ -1148,13 +1229,13 @@ Be sure to follow the instructions found on your chosen theme's documentation to
 1. Download the theme
   - Option A: Add the theme as a git submodule:
 ```sh
-git submodule add https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+git submodule add https://codeberg.org/alinnow/zola-bearblog.git themes/zola-bearblog
 ```
   - Option B: Clone the theme into your themes directory:
 ```sh
-git clone https://codeberg.org/alanpearce/zola-bearblog.git themes/zola-bearblog
+git clone https://codeberg.org/alinnow/zola-bearblog.git themes/zola-bearblog
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-bearblog"
 ```
@@ -1181,7 +1262,7 @@ theme = "zola-bearblog"
 
   [[project.links]]
   name = "Repository"
-  url = "https://codeberg.org/alanpearce/zola-bearblog"
+  url = "https://codeberg.org/alinnow/zola-bearblog"
 
   [[project.links]]
   name = "Info"
@@ -1218,7 +1299,7 @@ git submodule add https://github.com/isunjn/serene.git themes/serene
 ```sh
 git clone https://github.com/isunjn/serene.git themes/serene
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "serene"
 ```
@@ -1254,204 +1335,6 @@ theme = "serene"
   js = "document.getElementById('info-serene').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
-theme = "halcyon"
-name = "halcyon"
-desc = "Clean and simple personal site/blog theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-halcyon}
-- **Author**: [M0ddr](https://github.com/m0ddr)
-- **License**: MIT
-- **Homepage**: <https://github.com/m0ddr/halcyon>
-- **Min Zola version**: 0.1.0
-
-### Installation{#install-halcyon}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/m0ddr/halcyon.git themes/halcyon
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/m0ddr/halcyon.git themes/halcyon
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "halcyon"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-halcyon.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of halcyon Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-halcyon.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of halcyon Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/halcyon/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/m0ddr/halcyon"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-halcyon"
-  js = "document.getElementById('info-halcyon').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "austere"
-name = "austere"
-desc = "A minimal theme for Zola with a focus on writing."
-tags = [
-  "dark",
-  "blog",
-  "minimal",
-  "personal",
-  "responsive",
-  "seo",
-  "writing"
-]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-austere}
-- **Author**: [tomwrw](https://www.tomwrw.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/tomwrw/austere-theme-zola>
-- **Min Zola version**: 0.17.0
-
-### Installation{#install-austere}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/tomwrw/austere-theme-zola.git themes/austere
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/tomwrw/austere-theme-zola.git themes/austere
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "austere"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-austere.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of austere Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-austere.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of austere Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/austere/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/tomwrw/austere-theme-zola"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-austere"
-  js = "document.getElementById('info-austere').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "nivis"
-name = "nivis"
-desc = "A clean zola theme for bloggers"
-tags = [ "clean" ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-nivis}
-- **Author**: [Resory](https://resorie.github.io/blog/)
-- **License**: MIT
-- **Homepage**: <https://github.com/Resorie/zola-theme-nivis>
-- **Main Live Preview**: <https://resorie.github.io/blog/>
-- **Min Zola version**: 0.21.0
-
-### Installation{#install-nivis}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/Resorie/zola-theme-nivis.git themes/nivis
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/Resorie/zola-theme-nivis.git themes/nivis
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "nivis"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-nivis.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of nivis Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-nivis.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of nivis Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/nivis/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/Resorie/zola-theme-nivis"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-nivis"
-  js = "document.getElementById('info-nivis').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
 theme = "kita"
 name = "Kita"
 desc = "Kita is a clean, elegant and simple blog theme for Zola."
@@ -1481,7 +1364,7 @@ git submodule add https://github.com/st1020/kita.git themes/kita
 ```sh
 git clone https://github.com/st1020/kita.git themes/kita
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "kita"
 ```
@@ -1546,7 +1429,7 @@ git submodule add https://github.com/dawnandrew100/zola-theme-papermod-2.git the
 ```sh
 git clone https://github.com/dawnandrew100/zola-theme-papermod-2.git themes/papermod_2
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "papermod_2"
 ```
@@ -1618,7 +1501,7 @@ git submodule add https://github.com/edwardzcn-decade/cela.git themes/cela
 ```sh
 git clone https://github.com/edwardzcn-decade/cela.git themes/cela
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "cela"
 ```
@@ -1683,7 +1566,7 @@ git submodule add https://codeberg.org/salif/tukan.git themes/tukan
 ```sh
 git clone https://codeberg.org/salif/tukan.git themes/tukan
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "tukan"
 ```
@@ -1740,7 +1623,7 @@ git submodule add https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
 ```sh
 git clone https://github.com/4yuinfo/zola-theme_jiufen.git themes/jiufen
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "jiufen"
 ```
@@ -1797,7 +1680,7 @@ git submodule add https://codeberg.org/plaublin/researchlab.git themes/researchl
 ```sh
 git clone https://codeberg.org/plaublin/researchlab.git themes/researchlab
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "researchlab"
 ```
@@ -1855,7 +1738,7 @@ git submodule add https://github.com/paberr/vonge-zola-theme.git themes/vonge
 ```sh
 git clone https://github.com/paberr/vonge-zola-theme.git themes/vonge
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "vonge"
 ```
@@ -1882,197 +1765,6 @@ theme = "vonge"
   newtab = false
   url = "#info-vonge"
   js = "document.getElementById('info-vonge').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "academic-paper"
-name = "Academic Paper"
-desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-academic-paper}
-- **Author**: [Alexander Terenin](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-paper>
-- **Main Live Preview**: <https://aterenin.github.io/academic-paper>
-- **Min Zola version**: 0.18.0
-
-### Installation{#install-academic-paper}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "academic-paper"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-academic-paper.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of Academic Paper Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-academic-paper.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of Academic Paper Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/academic-paper/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-paper"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-academic-paper"
-  js = "document.getElementById('info-academic-paper').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "academic-workshop"
-name = "Academic Workshop"
-desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-academic-workshop}
-- **Author**: [Alexander Terein](https://avt.im)
-- **License**: MIT
-- **Homepage**: <https://github.com/aterenin/academic-workshop>
-- **Main Live Preview**: <https://aterenin.github.io/academic-workshop>
-- **Min Zola version**: 0.18.0
-
-### Installation{#install-academic-workshop}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "academic-workshop"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-academic-workshop.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of Academic Workshop Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-academic-workshop.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of Academic Workshop Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/academic-workshop/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/aterenin/academic-workshop"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-academic-workshop"
-  js = "document.getElementById('info-academic-workshop').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "devnzt"
-name = "devnzt"
-desc = "A simple zola theme for personal use."
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-devnzt}
-- **Author**: [devendrn](https://devendrn.github.io/)
-- **License**: MIT
-- **Homepage**: <https://github.com/devendrn/devnzt/>
-- **Min Zola version**: 0.18.0
-
-### Installation{#install-devnzt}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/devendrn/devnzt.git themes/devnzt
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/devendrn/devnzt.git themes/devnzt
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "devnzt"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-devnzt.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of devnzt Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-devnzt.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of devnzt Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/devnzt/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/devendrn/devnzt"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-devnzt"
-  js = "document.getElementById('info-devnzt').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "landing-grid"
@@ -2103,7 +1795,7 @@ git submodule add https://github.com/fastup-one/landing-grid-zola.git themes/lan
 ```sh
 git clone https://github.com/fastup-one/landing-grid-zola.git themes/landing-grid
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "landing-grid"
 ```
@@ -2160,7 +1852,7 @@ git submodule add https://github.com/cx48/BelTree.git themes/BelTree
 ```sh
 git clone https://github.com/cx48/BelTree.git themes/BelTree
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "BelTree"
 ```
@@ -2217,7 +1909,7 @@ git submodule add https://github.com/cx48/BelResume.git themes/BelResume
 ```sh
 git clone https://github.com/cx48/BelResume.git themes/BelResume
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "BelResume"
 ```
@@ -2287,7 +1979,7 @@ git submodule add https://github.com/jskaza/peritus.git themes/peritus
 ```sh
 git clone https://github.com/jskaza/peritus.git themes/peritus
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "peritus"
 ```
@@ -2342,7 +2034,7 @@ git submodule add https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume
 ```sh
 git clone https://git.sr.ht/~xyhhx/zola-theme-sidney-professional-resume themes/sidney-professional-resume
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "sidney-professional-resume"
 ```
@@ -2399,7 +2091,7 @@ git submodule add https://github.com/inhzus/zola-futu.git themes/zola-futu
 ```sh
 git clone https://github.com/inhzus/zola-futu.git themes/zola-futu
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-futu"
 ```
@@ -2456,7 +2148,7 @@ git submodule add https://github.com/getzola/book.git themes/book
 ```sh
 git clone https://github.com/getzola/book.git themes/book
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "book"
 ```
@@ -2514,7 +2206,7 @@ git submodule add https://github.com/semanticdata/zola-minimal.git themes/zola-m
 ```sh
 git clone https://github.com/semanticdata/zola-minimal.git themes/zola-minimal
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-minimal"
 ```
@@ -2572,7 +2264,7 @@ git submodule add https://github.com/adfaure/kodama-theme.git themes/kodama-them
 ```sh
 git clone https://github.com/adfaure/kodama-theme.git themes/kodama-theme
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "kodama-theme"
 ```
@@ -2630,7 +2322,7 @@ git submodule add https://github.com/unicornfantasian/zola-sveltia-source.git th
 ```sh
 git clone https://github.com/unicornfantasian/zola-sveltia-source.git themes/zola-sveltia-source
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-sveltia-source"
 ```
@@ -2657,6 +2349,128 @@ theme = "zola-sveltia-source"
   newtab = false
   url = "#info-zola-sveltia-source"
   js = "document.getElementById('info-zola-sveltia-source').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "portio-zola"
+name = "Portio-Zola"
+desc = "Portio-Zola is a minimal, well-formatted and extremely flexible theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-portio-zola}
+- **Author**: [quentin-rodriguez](https://github.com/quentin-rodriguez)
+- **License**: MIT
+- **Homepage**: <https://github.com/quentin-rodriguez/portio-zola.git>
+- **Main Live Preview**: <https://quentin-rodriguez.github.io/portio-zola>
+- **Min Zola version**: 0.21.0
+- **Original**: <https://github.com/StaticMania/portio-hugo.git>
+
+### Installation{#install-portio-zola}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/quentin-rodriguez/portio-zola.git themes/portio-zola
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/quentin-rodriguez/portio-zola.git themes/portio-zola
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "portio-zola"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-portio-zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Portio-Zola Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/portio-zola/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/quentin-rodriguez/portio-zola"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-portio-zola"
+  js = "document.getElementById('info-portio-zola').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "inkspire"
+name = "Inkspire"
+desc = "A classic blog theme for modern developers"
+tags = [
+  "blog",
+  "developer",
+  "design",
+  "modern",
+  "responsive",
+  "minimal",
+  "minimalistic"
+]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-inkspire}
+- **Author**: [Jose Garcia](https://josegarcia.dev)
+- **License**: CC-BY-NC-SA-4.0
+- **Homepage**: <https://github.com/josegarcia/inkspire>
+- **Min Zola version**: 0.4.0
+
+### Installation{#install-inkspire}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jose-garcia86/inkspire.git themes/inkspire
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jose-garcia86/inkspire.git themes/inkspire
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "inkspire"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-inkspire.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Inkspire Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/inkspire/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jose-garcia86/inkspire"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-inkspire"
+  js = "document.getElementById('info-inkspire').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zola_easydocs_theme"
@@ -2687,7 +2501,7 @@ git submodule add https://github.com/codeandmedia/zola_easydocs_theme.git themes
 ```sh
 git clone https://github.com/codeandmedia/zola_easydocs_theme.git themes/zola_easydocs_theme
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola_easydocs_theme"
 ```
@@ -2714,6 +2528,70 @@ theme = "zola_easydocs_theme"
   newtab = false
   url = "#info-zola_easydocs_theme"
   js = "document.getElementById('info-zola_easydocs_theme').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "nivis"
+name = "nivis"
+desc = "A clean zola theme for bloggers"
+tags = [ "Clean", "Blog", "Responsive" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-nivis}
+- **Author**: [Resory](https://resorie.github.io/blog/)
+- **License**: MIT
+- **Homepage**: <https://github.com/Resorie/zola-theme-nivis>
+- **Main Live Preview**: <https://resorie.github.io/blog/>
+- **Min Zola version**: 0.21.0
+
+### Installation{#install-nivis}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/Resorie/zola-theme-nivis.git themes/nivis
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "nivis"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-nivis.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of nivis Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-nivis.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of nivis Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/nivis/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/Resorie/zola-theme-nivis"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-nivis"
+  js = "document.getElementById('info-nivis').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "noobping"
@@ -2743,7 +2621,7 @@ git submodule add https://github.com/noobping/zola-theme.git themes/noobping
 ```sh
 git clone https://github.com/noobping/zola-theme.git themes/noobping
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "noobping"
 ```
@@ -2779,6 +2657,260 @@ theme = "noobping"
   js = "document.getElementById('info-noobping').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "academic-paper"
+name = "Academic Paper"
+desc = "A Zola theme for a blog-post-style website to facilitate scientific communication of your academic paper"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-academic-paper}
+- **Author**: [Alexander Terenin](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-paper>
+- **Main Live Preview**: <https://aterenin.github.io/academic-paper>
+- **Min Zola version**: 0.18.0
+
+### Installation{#install-academic-paper}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-paper.git themes/academic-paper
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "academic-paper"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-academic-paper.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Academic Paper Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-academic-paper.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Academic Paper Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/academic-paper/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-paper"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-academic-paper"
+  js = "document.getElementById('info-academic-paper').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "academic-workshop"
+name = "Academic Workshop"
+desc = "A Zola theme for a website to list the schedule of your scientific workshop or seminar series"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-academic-workshop}
+- **Author**: [Alexander Terein](https://avt.im)
+- **License**: MIT
+- **Homepage**: <https://github.com/aterenin/academic-workshop>
+- **Main Live Preview**: <https://aterenin.github.io/academic-workshop>
+- **Min Zola version**: 0.18.0
+
+### Installation{#install-academic-workshop}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/aterenin/academic-workshop.git themes/academic-workshop
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "academic-workshop"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-academic-workshop.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Academic Workshop Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-academic-workshop.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Academic Workshop Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/academic-workshop/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/aterenin/academic-workshop"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-academic-workshop"
+  js = "document.getElementById('info-academic-workshop').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "devnzt"
+name = "devnzt"
+desc = "A simple zola theme for personal use."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-devnzt}
+- **Author**: [devendrn](https://devendrn.github.io/)
+- **License**: MIT
+- **Homepage**: <https://github.com/devendrn/devnzt/>
+- **Min Zola version**: 0.18.0
+
+### Installation{#install-devnzt}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/devendrn/devnzt.git themes/devnzt
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/devendrn/devnzt.git themes/devnzt
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "devnzt"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-devnzt.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of devnzt Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-devnzt.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of devnzt Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/devnzt/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/devendrn/devnzt"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-devnzt"
+  js = "document.getElementById('info-devnzt').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "prairie"
+name = "prairie"
+desc = "a clean zola theme for blogging and projects"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-prairie}
+- **Author**: [jordan butterwick](https://butterwick.tech)
+- **License**: mit
+- **Homepage**: <https://github.com/jbutterwick/prairie>
+- **Min Zola version**: 0.16.1
+
+### Installation{#install-prairie}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jbutterwick/prairie.git themes/prairie
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jbutterwick/prairie.git themes/prairie
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "prairie"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-prairie.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of prairie Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-prairie.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of prairie Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/prairie/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jbutterwick/prairie"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-prairie"
+  js = "document.getElementById('info-prairie').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "modus"
 name = "modus"
 desc = "An opinionated Zola theme using the colour palette of the Modus themes"
@@ -2807,7 +2939,7 @@ git submodule add https://github.com/etoal83/zola-modus.git themes/modus
 ```sh
 git clone https://github.com/etoal83/zola-modus.git themes/modus
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "modus"
 ```
@@ -2871,7 +3003,7 @@ git submodule add https://github.com/InputUsername/zola-hook.git themes/hook
 ```sh
 git clone https://github.com/InputUsername/zola-hook.git themes/hook
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "hook"
 ```
@@ -2935,7 +3067,7 @@ git submodule add https://github.com/un1970ix/ski.git themes/ski
 ```sh
 git clone https://github.com/un1970ix/ski.git themes/ski
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "ski"
 ```
@@ -3000,7 +3132,7 @@ git submodule add https://github.com/eatradish/Seje2.git themes/Seje2
 ```sh
 git clone https://github.com/eatradish/Seje2.git themes/Seje2
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "Seje2"
 ```
@@ -3064,7 +3196,7 @@ git submodule add https://github.com/jsonfry/parchment.git themes/parchment
 ```sh
 git clone https://github.com/jsonfry/parchment.git themes/parchment
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "parchment"
 ```
@@ -3129,7 +3261,7 @@ git submodule add https://github.com/salif/bearplus.git themes/bearplus
 ```sh
 git clone https://github.com/salif/bearplus.git themes/bearplus
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "bearplus"
 ```
@@ -3165,6 +3297,134 @@ theme = "bearplus"
   js = "document.getElementById('info-bearplus').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
+theme = "xuan"
+name = "xuan"
+desc = "Modern, pretty, and clean theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-xuan}
+- **Author**: [jhq223](https://blog.guiio.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/jhq223/xuan>
+- **Main Live Preview**: <https://xuan-theme.jhq223.workers.dev>
+- **Min Zola version**: 0.21.0
+
+### Installation{#install-xuan}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/jhq223/xuan.git themes/xuan
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/jhq223/xuan.git themes/xuan
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "xuan"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-xuan.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of xuan Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-xuan.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of xuan Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/xuan/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/jhq223/xuan"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-xuan"
+  js = "document.getElementById('info-xuan').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "duckling"
+name = "Duckling"
+desc = "Feature-rich and modern theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-duckling}
+- **Author**: [david-swift](https://david.aparoksha.dev)
+- **License**: MIT
+- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
+- **Main Live Preview**: <https://duckling.aparoksha.dev>
+- **Min Zola version**: 0.19.0
+
+### Installation{#install-duckling}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "duckling"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Duckling Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-duckling.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Duckling Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/duckling/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://git.aparoksha.dev/david-swift/duckling"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-duckling"
+  js = "document.getElementById('info-duckling').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
 theme = "terminimal"
 name = "terminimal"
 desc = "A simple, minimal retro theme"
@@ -3194,7 +3454,7 @@ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/t
 ```sh
 git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "terminimal"
 ```
@@ -3251,7 +3511,7 @@ git submodule add https://github.com/DirectorX/dark-magic.git themes/dark-magic
 ```sh
 git clone https://github.com/DirectorX/dark-magic.git themes/dark-magic
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "dark-magic"
 ```
@@ -3307,7 +3567,7 @@ git submodule add https://github.com/CSUwangj/DogFood.git themes/DogFood
 ```sh
 git clone https://github.com/CSUwangj/DogFood.git themes/DogFood
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "DogFood"
 ```
@@ -3364,7 +3624,7 @@ git submodule add https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
 ```sh
 git clone https://github.com/barlog-m/oceanic-zen.git themes/oceanic-zen
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "oceanic-zen"
 ```
@@ -3391,6 +3651,64 @@ theme = "oceanic-zen"
   newtab = false
   url = "#info-oceanic-zen"
   js = "document.getElementById('info-oceanic-zen').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "draczola-bear"
+name = "Draczola Bear"
+desc = "Bear enters the darkness"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-draczola-bear}
+- **Author**: [Siddhant Laddha](https://sid555.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/siddhantladdha/draczola-bear>
+- **Main Live Preview**: <https://sid555.com/draczola-bear/>
+- **Min Zola version**: 0.22.0
+- **Original**: <https://codeberg.org/alanpearce/zola-bearblog>
+
+### Installation{#install-draczola-bear}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/siddhantladdha/draczola-bear.git themes/draczola-bear
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/siddhantladdha/draczola-bear.git themes/draczola-bear
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "draczola-bear"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-draczola-bear.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Draczola Bear Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/draczola-bear/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/siddhantladdha/draczola-bear"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-draczola-bear"
+  js = "document.getElementById('info-draczola-bear').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "zluinav"
@@ -3430,7 +3748,7 @@ git submodule add https://github.com/harrymkt/zluinav.git themes/zluinav
 ```sh
 git clone https://github.com/harrymkt/zluinav.git themes/zluinav
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zluinav"
 ```
@@ -3487,7 +3805,7 @@ git submodule add https://github.com/salif/sandbox.git themes/sandbox
 ```sh
 git clone https://github.com/salif/sandbox.git themes/sandbox
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "sandbox"
 ```
@@ -3544,7 +3862,7 @@ git submodule add https://github.com/DenysVuika/zola-silk.git themes/silk
 ```sh
 git clone https://github.com/DenysVuika/zola-silk.git themes/silk
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "silk"
 ```
@@ -3602,7 +3920,7 @@ git submodule add https://github.com/longfangsong/anatole-zola.git themes/anatol
 ```sh
 git clone https://github.com/longfangsong/anatole-zola.git themes/anatole-zola
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "anatole-zola"
 ```
@@ -3672,7 +3990,7 @@ git submodule add https://github.com/ba11b0y/lekhz.git themes/lekhz
 ```sh
 git clone https://github.com/ba11b0y/lekhz.git themes/lekhz
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "lekhz"
 ```
@@ -3736,7 +4054,7 @@ git submodule add https://github.com/kuznetsov17/pico.git themes/pico
 ```sh
 git clone https://github.com/kuznetsov17/pico.git themes/pico
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "pico"
 ```
@@ -3774,7 +4092,7 @@ theme = "pico"
 [[project]]
 theme = "photography"
 name = "photography theme"
-desc = "a theme for a photography portfolio"
+desc = "a photography portfolio theme with many features, including an AI blocker"
 tags = [ "Blog", "portfolio", "photography", "SEO" ]
 details = """
 <details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
@@ -3799,7 +4117,7 @@ git submodule add https://codeberg.org/arbs09/photography-theme.git themes/photo
 ```sh
 git clone https://codeberg.org/arbs09/photography-theme.git themes/photography
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "photography"
 ```
@@ -3826,192 +4144,6 @@ theme = "photography"
   newtab = false
   url = "#info-photography"
   js = "document.getElementById('info-photography').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "xuan"
-name = "xuan"
-desc = "Modern, pretty, and clean theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-xuan}
-- **Author**: [jhq223](https://blog.guiio.com)
-- **License**: MIT
-- **Homepage**: <https://github.com/jhq223/xuan>
-- **Main Live Preview**: <https://xuan-theme.jhq223.workers.dev>
-- **Min Zola version**: 0.21.0
-
-### Installation{#install-xuan}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://github.com/jhq223/xuan.git themes/xuan
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://github.com/jhq223/xuan.git themes/xuan
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "xuan"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-xuan.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of xuan Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-xuan.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of xuan Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/xuan/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://github.com/jhq223/xuan"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-xuan"
-  js = "document.getElementById('info-xuan').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "duckling"
-name = "Duckling"
-desc = "Feature-rich and modern theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-duckling}
-- **Author**: [david-swift](https://david.aparoksha.dev)
-- **License**: MIT
-- **Homepage**: <https://git.aparoksha.dev/david-swift/duckling>
-- **Main Live Preview**: <https://duckling.aparoksha.dev>
-- **Min Zola version**: 0.19.0
-
-### Installation{#install-duckling}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://git.aparoksha.dev/david-swift/duckling.git themes/duckling
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "duckling"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-duckling.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of Duckling Zola theme demo website"
-
-  [[project.screenshots]]
-  src = "./screenshots/dark-duckling.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Dark mode screenshot of Duckling Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/duckling/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://git.aparoksha.dev/david-swift/duckling"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-duckling"
-  js = "document.getElementById('info-duckling').parentElement.setAttribute('open', true); this.style.display='none';"
-
-[[project]]
-theme = "portio-zola"
-name = "Portio-Zola"
-desc = "Portio-Zola is a minimal, well-formatted and extremely flexible theme"
-tags = [ ]
-details = """
-<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
-
-### Info{#info-portio-zola}
-- **Author**: Quentin Rodriguez
-- **License**: MIT
-- **Homepage**: <https://github.com/quentin-rodriguez/portio-zola.git>
-- **Main Live Preview**: <https://staticmania.com/>
-- **Min Zola version**: 0.20.0
-- **Original**: <https://github.com/StaticMania/portio-hugo.git>
-
-### Installation{#install-portio-zola}
-Some themes require additional configuration before they can work properly.
-Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
-
-0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
-1. Download the theme
-  - Option A: Add the theme as a git submodule:
-```sh
-git submodule add https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
-```
-  - Option B: Clone the theme into your themes directory:
-```sh
-git clone https://codeberg.org/quentin-rodriguez/portio-zola.git themes/portio-zola
-```
-2. Enable the theme in your `config.toml`
-```toml
-theme = "portio-zola"
-```
-
-</details>"""
-
-  [[project.screenshots]]
-  src = "./screenshots/light-portio-zola.webp"
-  type = "image/webp"
-  width = "1360"
-  height = "765"
-  alt = "Light mode screenshot of Portio-Zola Zola theme demo website"
-
-  [[project.links]]
-  name = "Live Preview"
-  url = "./demo/portio-zola/"
-
-  [[project.links]]
-  name = "Repository"
-  url = "https://codeberg.org/quentin-rodriguez/portio-zola"
-
-  [[project.links]]
-  name = "Info"
-  newtab = false
-  url = "#info-portio-zola"
-  js = "document.getElementById('info-portio-zola').parentElement.setAttribute('open', true); this.style.display='none';"
 
 [[project]]
 theme = "martinique"
@@ -4041,7 +4173,7 @@ git submodule add https://codeberg.org/martinlarsson/martinique.git themes/marti
 ```sh
 git clone https://codeberg.org/martinlarsson/martinique.git themes/martinique
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "martinique"
 ```
@@ -4105,7 +4237,7 @@ git submodule add https://github.com/Myxogastria0808/coffee.git themes/coffee
 ```sh
 git clone https://github.com/Myxogastria0808/coffee.git themes/coffee
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "coffee"
 ```
@@ -4162,7 +4294,7 @@ git submodule add https://github.com/Myxogastria0808/coast.git themes/coast
 ```sh
 git clone https://github.com/Myxogastria0808/coast.git themes/coast
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "coast"
 ```
@@ -4219,7 +4351,7 @@ git submodule add https://gitlab.com/cyril-marpaud/hayflow.git themes/hayflow
 ```sh
 git clone https://gitlab.com/cyril-marpaud/hayflow.git themes/hayflow
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "hayflow"
 ```
@@ -4277,7 +4409,7 @@ git submodule add https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
 ```sh
 git clone https://codeberg.org/janbaudisch/zola-hallo.git themes/hallo
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "hallo"
 ```
@@ -4334,7 +4466,7 @@ git submodule add https://github.com/hanson-hschang/persona-zola-theme.git theme
 ```sh
 git clone https://github.com/hanson-hschang/persona-zola-theme.git themes/persona
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "persona"
 ```
@@ -4391,7 +4523,7 @@ git submodule add https://github.com/VishalRashmika/OnePageAPI.git themes/OnePag
 ```sh
 git clone https://github.com/VishalRashmika/OnePageAPI.git themes/OnePageAPI
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "OnePageAPI"
 ```
@@ -4448,7 +4580,7 @@ git submodule add https://github.com/ctrlok/zola-pechersk.git themes/zola-pecher
 ```sh
 git clone https://github.com/ctrlok/zola-pechersk.git themes/zola-pechersk
 ```
-2. Enable the theme in your `config.toml`
+2. Enable the theme in your `zola.toml` or `config.toml` file:
 ```toml
 theme = "zola-pechersk"
 ```
@@ -4482,3 +4614,354 @@ theme = "zola-pechersk"
   newtab = false
   url = "#info-zola-pechersk"
   js = "document.getElementById('info-zola-pechersk').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "snakedown"
+name = "Snakedown"
+desc = "A theme for hosting python documentation and API references"
+tags = [ "docs", "python", "api" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-snakedown}
+- **Author**: [Sam Vente](https://slowcoder.org)
+- **License**: MIT
+- **Homepage**: <https://github.com/savente93/zola-snakedown-theme>
+- **Min Zola version**: 0.21.0
+- **Original**: <https://github.com/pydata/pydata-sphinx-theme>
+
+### Installation{#install-snakedown}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/savente93/zola-snakedown-theme.git themes/snakedown
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/savente93/zola-snakedown-theme.git themes/snakedown
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "snakedown"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-snakedown.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Snakedown Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/snakedown/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/savente93/zola-snakedown-theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-snakedown"
+  js = "document.getElementById('info-snakedown').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "pixam-zola"
+name = "pixam-zola"
+desc = "Pixam's Zola theme"
+tags = [ "blog" ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-pixam-zola}
+- **Author**: [Pixam](https://pixam.blog/)
+- **License**: MIT
+- **Homepage**: <https://github.com/pixambi/pixam-zola>
+- **Main Live Preview**: <https://pixambi.github.io/pixam-zola/>
+- **Min Zola version**: 0.22.0
+
+### Installation{#install-pixam-zola}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/pixambi/pixam-zola.git themes/pixam-zola
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/pixambi/pixam-zola.git themes/pixam-zola
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "pixam-zola"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-pixam-zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of pixam-zola Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/pixam-zola/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/pixambi/pixam-zola"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-pixam-zola"
+  js = "document.getElementById('info-pixam-zola').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "Ergo"
+name = "Ergo"
+desc = "A simple blog Theme focused on writing, inspired by svbtle"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-Ergo}
+- **Author**: [Andrew Plaza](https://liquidthink.net)
+- **License**: MIT
+- **Homepage**: <https://github.com/insipx/Ergo>
+- **Main Live Preview**: <https://ergo.liquidthink.net>
+- **Min Zola version**: 0.4.1
+
+### Installation{#install-Ergo}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/insipx/Ergo.git themes/Ergo
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/insipx/Ergo.git themes/Ergo
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "Ergo"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-Ergo.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Ergo Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/Ergo/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/insipx/Ergo"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-Ergo"
+  js = "document.getElementById('info-Ergo').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "hermit_zola"
+name = "Hermit_Zola"
+desc = "Minimal Zola theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-hermit_zola}
+- **Author**: [VersBinarii](https://versbinarii.gitlab.io/blog/)
+- **License**: MIT
+- **Homepage**: <https://github.com/VersBinarii/hermit_zola>
+- **Main Live Preview**: <https://versbinarii.gitlab.io/blog/>
+- **Min Zola version**: 0.4.0
+- **Original**: <https://github.com/Track3/hermit>
+
+### Installation{#install-hermit_zola}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/VersBinarii/hermit_zola.git themes/hermit_zola
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/VersBinarii/hermit_zola.git themes/hermit_zola
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "hermit_zola"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-hermit_zola.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Hermit_Zola Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/hermit_zola/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/VersBinarii/hermit_zola"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-hermit_zola"
+  js = "document.getElementById('info-hermit_zola').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "zola.386"
+name = "zola.386"
+desc = "Zola port of the BOOTSTRA.386 theme."
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-zola.386}
+- **Author**: [José Lopes](https://github.com/lopes)
+- **License**: MIT
+- **Homepage**: <https://github.com/lopes/zola.386>
+- **Main Live Preview**: <https://zola386.netlify.com>
+- **Min Zola version**: 0.10.1
+
+### Installation{#install-zola.386}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/lopes/zola.386.git themes/zola.386
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/lopes/zola.386.git themes/zola.386
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "zola.386"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-zola.386.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of zola.386 Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/zola.386/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/lopes/zola.386"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-zola.386"
+  js = "document.getElementById('info-zola.386').parentElement.setAttribute('open', true); this.style.display='none';"
+
+[[project]]
+theme = "anpu"
+name = "Anpu"
+desc = "A port of the Hugo Anubis theme"
+tags = [ ]
+details = """
+<details style='display: inline-block;'><summary class='not-prose' style='list-style-type: none; display: none;'></summary>
+
+### Info{#info-anpu}
+- **Author**: [Rostislav Raykov](https://zbrox.com)
+- **License**: MIT
+- **Homepage**: <https://github.com/zbrox/anpu-zola-theme>
+- **Main Live Preview**: <https://anpu-zola-theme.vercel.app>
+- **Min Zola version**: 0.11.0
+- **Original**: <https://github.com/mitrichius/hugo-theme-anubis>
+
+### Installation{#install-anpu}
+Some themes require additional configuration before they can work properly.
+Be sure to follow the instructions found on your chosen theme's documentation to properly configure the theme.
+
+0. Create a new Zola site: `zola init` and initialize a Git repository: `git init`
+1. Download the theme
+  - Option A: Add the theme as a git submodule:
+```sh
+git submodule add https://github.com/zbrox/anpu-zola-theme.git themes/anpu
+```
+  - Option B: Clone the theme into your themes directory:
+```sh
+git clone https://github.com/zbrox/anpu-zola-theme.git themes/anpu
+```
+2. Enable the theme in your `zola.toml` or `config.toml` file:
+```toml
+theme = "anpu"
+```
+
+</details>"""
+
+  [[project.screenshots]]
+  src = "./screenshots/light-anpu.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Light mode screenshot of Anpu Zola theme demo website"
+
+  [[project.screenshots]]
+  src = "./screenshots/dark-anpu.webp"
+  type = "image/webp"
+  width = "1360"
+  height = "765"
+  alt = "Dark mode screenshot of Anpu Zola theme demo website"
+
+  [[project.links]]
+  name = "Live Preview"
+  url = "./demo/anpu/"
+
+  [[project.links]]
+  name = "Repository"
+  url = "https://github.com/zbrox/anpu-zola-theme"
+
+  [[project.links]]
+  name = "Info"
+  newtab = false
+  url = "#info-anpu"
+  js = "document.getElementById('info-anpu').parentElement.setAttribute('open', true); this.style.display='none';"

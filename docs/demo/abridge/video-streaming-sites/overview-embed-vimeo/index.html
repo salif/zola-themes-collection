@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <script src="https://salif.github.io/zola-themes-collection/demo/abridge/js/theme.min.js" integrity="sha384-pb++s6uBRKaQv+iAXpgA/H3IlpLZdO14tTwuCI7uXmz4aaZdByoCcM+6BhynMq/1"></script>
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/abridge.css?h=17d1d14ae374495df55a" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/abridge.css?h=11008b611808be942688" />
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,6 +47,7 @@
   <meta property="og:updated_time" content="2021-05-07" />
   <meta name="twitter:site" content="@your-user-name" />
   <meta name="twitter:creator" content="@your-user-name" />
+  <script defer src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
   <script defer src="https://salif.github.io/zola-themes-collection/demo/abridge/js/abridge.min.js?h=e0f9a881a665c86cce9c" integrity="sha384-QF67y7RnPkuDrJNQqn3/7nYxqxWkW/qHI7zN0WTES1aXbf+TotoByRBb835fUE6U"></script>
   <noscript><link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/abridge/nojs.css" /></noscript>
 </head>
@@ -60,7 +61,7 @@
           <ul><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/archive/"> Posts </a></li><li><a class="s110" href="https://salif.github.io/zola-themes-collection/demo/abridge/tags/"> Tags </a></li>
             <li><div class="dropdown"><i class="svgs world" type="reset"></i>
                 <div class="dropdown-content">
-                <span>English</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge//frvideo-streaming-sites/overview-embed-vimeo/">Français</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge//esvideo-streaming-sites/overview-embed-vimeo/">Español</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge//ptvideo-streaming-sites/overview-embed-vimeo/">Português</a></div>
+                <span>English</span><a href="https://salif.github.io/zola-themes-collection/demo/abridge//ptvideo-streaming-sites/overview-embed-vimeo/">Português</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge//esvideo-streaming-sites/overview-embed-vimeo/">Español</a><a href="https://salif.github.io/zola-themes-collection/demo/abridge//frvideo-streaming-sites/overview-embed-vimeo/">Français</a></div>
             </div></li><li><i type="reset" id="mode" class="js svgs adjust"></i></ul>
         </div>
 
@@ -107,8 +108,7 @@
 <p>Zola has many shortcodes, and new are easily added, this example shows vimeo.</p>
 <span id="continue-reading"></span><h2 id="vimeo">Vimeo</h2>
 <h3 id="usage">Usage</h3>
-<pre data-lang="rs" class="language-rs z-code"><code class="language-rs" data-lang="rs"><span class="z-source z-rust"><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-begin z-rust">{</span> <span class="z-support z-function z-rust">vimeo</span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-begin z-rust">(</span>id<span class="z-keyword z-operator z-assignment z-rust">=</span><span class="z-string z-quoted z-double z-rust"><span class="z-punctuation z-definition z-string z-begin z-rust">&quot;</span>514402648<span class="z-punctuation z-definition z-string z-end z-rust">&quot;</span></span></span><span class="z-meta z-group z-rust"><span class="z-punctuation z-section z-group z-end z-rust">)</span></span> </span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span></span><span class="z-meta z-block z-rust"><span class="z-punctuation z-section z-block z-end z-rust">}</span></span>
-</span></code></pre>
+<pre class="giallo" style="color: #FFFFFF; background-color: #262335;"><code data-lang="rust"><span class="giallo-l"><span>{{</span><span style="color: #36F9F6;"> vimeo</span><span>(</span><span style="color: #FF7EDB;">id</span><span style="color: #FFFFFFEE;">=</span><span style="color: #FF8B39;">&quot;514402648&quot;</span><span>) }}</span></span></code></pre>
 <ul>
 <li><code>id</code> - the video id (mandatory)</li>
 <li><code>class</code> - a class to add to the &lt;div&gt; surrounding the iframe (optional)</li>
@@ -119,12 +119,10 @@
 <li><code>cookie</code> - set to "true" if you want tracking cookies, otherwise it defaults to false.</li>
 </ul>
 <h3 id="output">Output</h3>
-<pre data-lang="html" class="language-html z-code"><code class="language-html" data-lang="html"><span class="z-text z-html z-basic"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">div</span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">yv</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
-</span><span class="z-text z-html z-basic">    <span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;</span><span class="z-entity z-name z-tag z-block z-any z-html">iframe</span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">src</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>https://player.vimeo.com/video/514402648?embedded=true&amp;dnt=1<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">title</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span>Vimeo<span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-class z-html"><span class="z-entity z-other z-attribute-name z-class z-html">class</span><span class="z-punctuation z-separator z-key-value z-html">=</span><span class="z-string z-quoted z-double z-html"><span class="z-punctuation z-definition z-string z-begin z-html">&quot;</span></span><span class="z-string z-quoted z-double z-html"><span class="z-meta z-class-name z-html">yvi</span><span class="z-punctuation z-definition z-string z-end z-html">&quot;</span></span></span> <span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">webkitallowfullscreen</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">mozallowfullscreen</span> </span><span class="z-meta z-attribute-with-value z-html"><span class="z-entity z-other z-attribute-name z-html">allowfullscreen</span></span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">iframe</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
-</span><span class="z-text z-html z-basic"><span class="z-meta z-tag z-block z-any z-html"><span class="z-punctuation z-definition z-tag z-begin z-html">&lt;/</span><span class="z-entity z-name z-tag z-block z-any z-html">div</span><span class="z-punctuation z-definition z-tag z-end z-html">&gt;</span></span>
-</span><span class="z-text z-html z-basic">
-</span></code></pre>
-<div class="yv">
+<pre class="giallo" style="color: #FFFFFF; background-color: #262335;"><code data-lang="html"><span class="giallo-l"><span style="color: #36F9F6;">&lt;</span><span style="color: #72F1B8;">div</span><span style="color: #FEDE5D;font-style: italic;"> class</span><span style="color: #B6B1B1;">=</span><span style="color: #FF8B39;">&quot;yv&quot;</span><span style="color: #36F9F6;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #36F9F6;">    &lt;</span><span style="color: #72F1B8;">iframe</span><span style="color: #FEDE5D;font-style: italic;"> src</span><span style="color: #B6B1B1;">=</span><span style="color: #FF8B39;">&quot;https://player.vimeo.com/video/514402648?embedded=true&amp;dnt=1&quot;</span><span style="color: #FEDE5D;font-style: italic;"> title</span><span style="color: #B6B1B1;">=</span><span style="color: #FF8B39;">&quot;Vimeo&quot;</span><span style="color: #FEDE5D;font-style: italic;"> class</span><span style="color: #B6B1B1;">=</span><span style="color: #FF8B39;">&quot;yvi&quot;</span><span style="color: #FEDE5D;font-style: italic;"> webkitallowfullscreen mozallowfullscreen allowfullscreen</span><span style="color: #36F9F6;">&gt;&lt;/</span><span style="color: #72F1B8;">iframe</span><span style="color: #36F9F6;">&gt;</span></span>
+<span class="giallo-l"><span style="color: #36F9F6;">&lt;/</span><span style="color: #72F1B8;">div</span><span style="color: #36F9F6;">&gt;</span></span>
+<span class="giallo-l"></span></code></pre><div class="yv">
     <iframe src="https://player.vimeo.com/video/514402648?embedded=true&dnt=1" title="Vimeo" class="yvi" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 

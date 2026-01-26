@@ -55,7 +55,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -223,27 +223,25 @@
 
   <!-- Content -->
   <section><p>林基塔主题提供了多种简码。</p>
-<p>没听说过简码？请参阅 <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola 文档</a> 获取更多信息。</p>
+<p>没听说过简码？请参阅 <a rel="external" href="https://www.getzola.org/documentation/content/shortcodes/">Zola 文档</a> 获取更多信息。</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>要在页面中使用 Mermaid，您需要在页面的 frontmatter 中设置 <code>extra.mermaid = true</code>。</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">您的页面标题</span><span style="color:#556633;">&quot;
-</span><span>
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span style="color:#ffb964;">mermaid </span><span>= true
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">title</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">您的页面标题</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">mermaid</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span></code></pre>
 <p>然后您可以使用 <code>mermaid()</code> 简码，例如：</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>graph TD;
-</span><span>A--&gt;B;
-</span><span>A--&gt;C;
-</span><span>B--&gt;D;
-</span><span>C--&gt;D;
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>graph TD;</span></span>
+<span class="giallo-l"><span>A--&gt;B;</span></span>
+<span class="giallo-l"><span>A--&gt;C;</span></span>
+<span class="giallo-l"><span>B--&gt;D;</span></span>
+<span class="giallo-l"><span>C--&gt;D;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>这将被渲染为：</p>
 <pre class="mermaid bg-inherit" translate="no">
   graph TD;
@@ -254,24 +252,23 @@ C--&gt;D;
 </pre>
 <p>此外，您可以在 <code>mermaid()</code> 简码内使用代码块，代码块将被忽略。</p>
 <p>代码块可以防止格式化程序破坏 mermaid 的格式。</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>```</span><span style="color:#7697d6;">mermaid
-</span><span>sequenceDiagram
-</span><span>    participant Alice
-</span><span>    participant Bob
-</span><span>    Alice-&gt;&gt;John: Hello John, how are you?
-</span><span>    loop Healthcheck
-</span><span>        John-&gt;&gt;John: Fight against hypochondria
-</span><span>    end
-</span><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!
-</span><span>    John--&gt;&gt;Alice: Great!
-</span><span>    John-&gt;&gt;Bob: How about you?
-</span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>```</span><span>mermaid</span></span>
+<span class="giallo-l"><span>sequenceDiagram</span></span>
+<span class="giallo-l"><span>    participant Alice</span></span>
+<span class="giallo-l"><span>    participant Bob</span></span>
+<span class="giallo-l"><span>    Alice-&gt;&gt;John: Hello John, how are you?</span></span>
+<span class="giallo-l"><span>    loop Healthcheck</span></span>
+<span class="giallo-l"><span>        John-&gt;&gt;John: Fight against hypochondria</span></span>
+<span class="giallo-l"><span>    end</span></span>
+<span class="giallo-l"><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!</span></span>
+<span class="giallo-l"><span>    John--&gt;&gt;Alice: Great!</span></span>
+<span class="giallo-l"><span>    John-&gt;&gt;Bob: How about you?</span></span>
+<span class="giallo-l"><span>    Bob--&gt;&gt;John: Jolly good!</span></span>
+<span class="giallo-l"><span>```</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>这将被渲染为：</p>
 <pre class="mermaid bg-inherit" translate="no">
   
@@ -291,10 +288,9 @@ sequenceDiagram
 <h2 id="ti-shi-kuang">提示框</h2>
 <p><code>admonition()</code> 简码显示一个横幅，帮助您在页面中放置提示。</p>
 <p>您可以像这样使用 <code>admonition()</code> 简码：</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;tip&quot;) %}
-</span><span>`tip` 提示框。
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% admonition(type=&quot;tip&quot;, title=&quot;tip&quot;) %}</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #79C0FF);">`</span><span style="color: light-dark(#800000, #79C0FF);">tip</span><span style="color: light-dark(#800000, #79C0FF);">`</span><span> 提示框。</span></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>提示框简码有 12 种不同的类型：</p>
 
 <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/admonition.css?h=98c1477488c4b2c9d71a" type="text/css">
@@ -515,10 +511,8 @@ sequenceDiagram
 </div>
 <h2 id="hua-lang">画廊</h2>
 <p><code>gallery()</code> 简码是一个非常简单的纯 HTML 可点击图片画廊，用于显示页面资源中的所有图像。</p>
-<p>它来自 <a href="https://www.getzola.org/documentation/content/image-processing/">Zola 文档</a></p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
-</span></code></pre>
-<div class="not-prose flex flex-wrap gap-2">
+<p>它来自 <a rel="external" href="https://www.getzola.org/documentation/content/image-processing/">Zola 文档</a></p>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{{ gallery() }}</span></span></code></pre><div class="not-prose flex flex-wrap gap-2">
 
   <a href="https://salif.github.io/zola-themes-collection/demo/linkita/zh/shortcodes/01-zola.png" target="_blank">
     <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/01-zola.b673627618ae4d9e.png" alt="画廊的演示图片" />
@@ -548,24 +542,22 @@ sequenceDiagram
 <h2 id="xiang-mu">项目</h2>
 <p><code>projects()</code> 短代码允许您为您的项目创建一个页面。</p>
 <p>创建一个 <code>content/pages/projects/index.md</code> 文件：</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;我的项目&quot;
-</span><span>description = &quot;&quot;
-</span><span>path = &quot;projects&quot;
-</span><span>+++
-</span><span>
-</span><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;我的项目&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;&quot;</span></span>
+<span class="giallo-l"><span>path = &quot;projects&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}</span></span></code></pre>
 <p>创建一个 <code>content/pages/projects/data.toml</code> 文件：</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
-</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
-</span><span style="color:#ffb964;">links </span><span>= [
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>]
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span>[[</span><span style="color: light-dark(#000000, #FFA657);">project</span><span>]]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">desc</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">Lorem ipsum dolor sit.</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">tags</span><span> =</span><span> [</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">ipsum</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">links</span><span> =</span><span> [</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">homepage</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">source</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>]</span></span></code></pre>
 <p>这将显示为：</p>
 
 <div class="not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
@@ -641,7 +633,7 @@ sequenceDiagram
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

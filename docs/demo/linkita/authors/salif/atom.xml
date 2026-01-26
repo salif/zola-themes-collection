@@ -44,92 +44,86 @@
         <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/extra-frontmatter/"/>
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/extra-frontmatter/</id>
         
-        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/extra-frontmatter/">&lt;pre data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Enable comments.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;comment &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Enable KaTeX support.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;math &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Enable Mermaid support.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: config.extra.page_summary_on_paginator
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;page_summary_on_paginator &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value:
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;#  config.extra.page_info or config.extra.page_info_on_paginator
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;page_info &lt;&#x2F;span&gt;&lt;span&gt;= []
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: config.extra.toc
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;toc &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# For the archive.html template.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;section &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;_index.md&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;cover&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Path to the cover image.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;image &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# A description of the cover image.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;alt &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Width of the cover image in pixels.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: get_image_metadata()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;width &lt;&#x2F;span&gt;&lt;span&gt;=
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Height of the cover image in pixels.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: get_image_metadata()
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;height &lt;&#x2F;span&gt;&lt;span&gt;=
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;open-graph-variables&quot;&gt;Open Graph variables&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;open_graph&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# When the article is out of date after.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# e.g. 2024-02-29
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;expiration_time &lt;&#x2F;span&gt;&lt;span&gt;=
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Describes the tier status for an article.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# e.g. &amp;quot;free&amp;quot;, &amp;quot;locked&amp;quot;, or &amp;quot;metered&amp;quot;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;content_tier &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Defines the location to target for the article.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# e.g. [&amp;quot;county:COUNTY&amp;quot;] or [&amp;quot;city:CITY,COUNTY&amp;quot;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;locations &lt;&#x2F;span&gt;&lt;span&gt;= []
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# A high-level section name. e.g. &amp;quot;Technology&amp;quot;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;section &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Indicates whether the article is an opinion piece or not.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Type: boolean. No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;opinion &lt;&#x2F;span&gt;&lt;span&gt;=
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set only if different from canonical page URL.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: current_url
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;h2 id=&quot;sitemap-variables&quot;&gt;Sitemap variables&lt;&#x2F;h2&gt;
-&lt;pre data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;sitemap&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Set only if different from &amp;quot;page.updated&amp;quot;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Default value: page.updated
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;updated &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Valid values: &amp;quot;always&amp;quot;, &amp;quot;hourly&amp;quot;, &amp;quot;daily&amp;quot;,
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# &amp;quot;weekly&amp;quot;, &amp;quot;monthly&amp;quot;, &amp;quot;yearly&amp;quot;, &amp;quot;never&amp;quot;.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;changefreq &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# Valid values range from 0.0 to 1.0.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# The default priority of a page is 0.5.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#888888;&quot;&gt;# No default value.
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;priority &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-</content>
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/extra-frontmatter/">&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Enable comments.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;comment&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Enable KaTeX support.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;math&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Enable Mermaid support.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;mermaid&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: config.extra.page_summary_on_paginator&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;page_summary_on_paginator&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;  config.extra.page_info or config.extra.page_info_on_paginator&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;page_info&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: config.extra.toc&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;toc&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; For the archive.html template.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;section&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;_index.md&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;cover&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Path to the cover image.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;image&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; A description of the cover image.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;alt&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Width of the cover image in pixels.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: get_image_metadata()&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;width&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Height of the cover image in pixels.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: get_image_metadata()&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;height&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;open-graph-variables&quot;&gt;Open Graph variables&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;open_graph&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; When the article is out of date after.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; e.g. 2024-02-29&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;expiration_time&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Describes the tier status for an article.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; e.g. &amp;quot;free&amp;quot;, &amp;quot;locked&amp;quot;, or &amp;quot;metered&amp;quot;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;content_tier&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Defines the location to target for the article.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; e.g. [&amp;quot;county:COUNTY&amp;quot;] or [&amp;quot;city:CITY,COUNTY&amp;quot;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;locations&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; A high-level section name. e.g. &amp;quot;Technology&amp;quot;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;section&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Indicates whether the article is an opinion piece or not.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Type: boolean. No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;opinion&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Set only if different from canonical page URL.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: current_url&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;sitemap-variables&quot;&gt;Sitemap variables&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot; data-name=&quot;frontmatter&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;sitemap&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Set only if different from &amp;quot;page.updated&amp;quot;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Default value: page.updated&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;updated&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Valid values: &amp;quot;always&amp;quot;, &amp;quot;hourly&amp;quot;, &amp;quot;daily&amp;quot;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; &amp;quot;weekly&amp;quot;, &amp;quot;monthly&amp;quot;, &amp;quot;yearly&amp;quot;, &amp;quot;never&amp;quot;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;changefreq&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; Valid values range from 0.0 to 1.0.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; The default priority of a page is 0.5.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt;#&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#008000, #8B949E);&quot;&gt; No default value.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;priority&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
         
     </entry>
     <entry xml:lang="en">
@@ -167,7 +161,7 @@
         <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/math-typesetting/"/>
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/math-typesetting/</id>
         
-        <summary type="html">&lt;p&gt;Linkita theme supports $\LaTeX$ mathematical formulas using &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Linkita theme supports $\LaTeX$ mathematical formulas using &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="en">
@@ -187,27 +181,25 @@
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/shortcodes/</id>
         
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/shortcodes/">&lt;p&gt;The Linkita theme providers multiple shortcodes.&lt;&#x2F;p&gt;
-&lt;p&gt;Never heard of shortcodes? See &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
+&lt;p&gt;Never heard of shortcodes? See &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;To use Mermaid in your page, you have to set &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; in the frontmatter of page.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Your page title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;Your page title&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;mermaid&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Then you can use the &lt;code&gt;mermaid()&lt;&#x2F;code&gt; shortcodes like:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;graph TD;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;C;
-&lt;&#x2F;span&gt;&lt;span&gt;B--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;C--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;graph TD;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;B;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;C;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;B--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;C--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will be rendered as:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   graph TD;
@@ -218,24 +210,23 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;In addition, you can use code block inside &lt;code&gt;mermaid()&lt;&#x2F;code&gt; shortcodes and the code block will be ignored.&lt;&#x2F;p&gt;
 &lt;p&gt;The code block prevents formatter from breaking mermaid&#x27;s formatting.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
-&lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
-&lt;&#x2F;span&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-&lt;&#x2F;span&gt;&lt;span&gt;    loop Healthcheck
-&lt;&#x2F;span&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria
-&lt;&#x2F;span&gt;&lt;span&gt;    end
-&lt;&#x2F;span&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!
-&lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
-&lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
-&lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span&gt;```
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;sequenceDiagram&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Alice&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Bob&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    loop Healthcheck&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    end&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will be rendered as:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   
@@ -255,10 +246,9 @@ sequenceDiagram
 &lt;h2 id=&quot;admonition&quot;&gt;Admonition&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;admonition()&lt;&#x2F;code&gt; shortcode displays a banner to help you put notice in your page.&lt;&#x2F;p&gt;
 &lt;p&gt;You can use the &lt;code&gt;admonition()&lt;&#x2F;code&gt; shortcode like:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;The `tip` admonition.
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;tip&amp;quot;) %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;The &lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt; admonition.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The admonition shortcode has 12 different types:&lt;&#x2F;p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;admonition.css?h=98c1477488c4b2c9d71a&quot; type=&quot;text&#x2F;css&quot;&gt;
@@ -479,10 +469,8 @@ sequenceDiagram
 &lt;&#x2F;div&gt;
 &lt;h2 id=&quot;gallery&quot;&gt;Gallery&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;gallery()&lt;&#x2F;code&gt; shortcode is very simple html-only clickable picture gallery that displays all images from the page assets.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s from &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
+&lt;p&gt;It&#x27;s from &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;Zola documentation&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ gallery() }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
 
   &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;shortcodes&#x2F;01-zola.png&quot; target=&quot;_blank&quot;&gt;
     &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;01-zola.b673627618ae4d9e.png&quot; alt=&quot;Demo image for the gallery&quot; &#x2F;&gt;
@@ -512,24 +500,22 @@ sequenceDiagram
 &lt;h2 id=&quot;projects&quot;&gt;Projects&lt;&#x2F;h2&gt;
 &lt;p&gt;The &lt;code&gt;projects()&lt;&#x2F;code&gt; shortcode allows you to make a page for your project.&lt;&#x2F;p&gt;
 &lt;p&gt;Create a &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;index.md&lt;&#x2F;code&gt; file:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;My Projects&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;title = &amp;quot;My Projects&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;description = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Create a &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;data.toml&lt;&#x2F;code&gt; file:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;desc &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;links &lt;&#x2F;span&gt;&lt;span&gt;= [
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;desc&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;links&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;This will be displayed as:&lt;&#x2F;p&gt;
 
 &lt;div class=&quot;not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5&quot;&gt;

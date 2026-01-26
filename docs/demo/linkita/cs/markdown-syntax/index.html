@@ -53,7 +53,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -278,9 +278,9 @@
 </blockquote>
 <h2 id="odkazy">Odkazy</h2>
 <p>Chcete-li vytvořit odkaz, vložte text odkazu do hranatých závorek a hned za něj do kulatých závorek vložte URL adresu.</p>
-<p><a href="https://github.com">GitHub</a></p>
+<p><a rel="external" href="https://github.com">GitHub</a></p>
 <p>Chcete-li rychle přeměnit URL adresu nebo e-mailovou adresu na odkaz, vložte ji do lomených závorek.</p>
-<p><a href="https://github.com">https://github.com</a></p>
+<p><a rel="external" href="https://github.com">https://github.com</a></p>
 <h2 id="obrazky">Obrázky</h2>
 <p><img src="../../images/markdown-syntax.png" alt="Průvodce Markdownem" /></p>
 <h2 id="tabulky">Tabulky</h2>
@@ -295,30 +295,26 @@
 </tbody></table>
 <h2 id="bloky-kodu">Bloky kódu</h2>
 <h4 id="blok-kodu-s-obracenymi-apostrofy">Blok kódu s obrácenými apostrofy</h4>
-<pre data-lang="html" style="background-color:#151515;color:#e8e8d3;" class="language-html "><code class="language-html" data-lang="html"><span>&lt;!doctype html&gt;
-</span><span>&lt;</span><span style="color:#ffb964;">html lang</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">en</span><span style="color:#556633;">&quot;</span><span>&gt;
-</span><span>  &lt;</span><span style="color:#ffb964;">head</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">meta charset</span><span>=</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">utf-8</span><span style="color:#556633;">&quot; </span><span>/&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">title</span><span>&gt;Example HTML5 Document&lt;/</span><span style="color:#ffb964;">title</span><span>&gt;
-</span><span>  &lt;/</span><span style="color:#ffb964;">head</span><span>&gt;
-</span><span>  &lt;</span><span style="color:#ffb964;">body</span><span>&gt;
-</span><span>    &lt;</span><span style="color:#ffb964;">p</span><span>&gt;Test&lt;/</span><span style="color:#ffb964;">p</span><span>&gt;
-</span><span>  &lt;/</span><span style="color:#ffb964;">body</span><span>&gt;
-</span><span>&lt;/</span><span style="color:#ffb964;">html</span><span>&gt;
-</span></code></pre>
-<h4 id="blok-kodu-odsazeny-ctyrmi-mezerami">Blok kódu odsazený čtyřmi mezerami</h4>
-<pre style="background-color:#151515;color:#e8e8d3;"><code><span>&lt;!doctype html&gt;
-</span><span>&lt;html lang=&quot;en&quot;&gt;
-</span><span>&lt;head&gt;
-</span><span>  &lt;meta charset=&quot;utf-8&quot;&gt;
-</span><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
-</span><span>&lt;/head&gt;
-</span><span>&lt;body&gt;
-</span><span>  &lt;p&gt;Test&lt;/p&gt;
-</span><span>&lt;/body&gt;
-</span><span>&lt;/html&gt;
-</span></code></pre>
-<h2 id="typy-seznamu">Typy seznamů</h2>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="html"><span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;!</span><span style="color: light-dark(#800000, #7EE787);">doctype</span><span style="color: light-dark(#E50000, #79C0FF);"> html</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;</span><span style="color: light-dark(#800000, #7EE787);">html</span><span style="color: light-dark(#E50000, #79C0FF);"> lang</span><span>=</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#0000FF, #A5D6FF);">en</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;</span><span style="color: light-dark(#800000, #7EE787);">head</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">meta</span><span style="color: light-dark(#E50000, #79C0FF);"> charset</span><span>=</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#0000FF, #A5D6FF);">utf-8</span><span style="color: light-dark(#0000FF, #A5D6FF);">&quot;</span><span style="color: light-dark(#800000, #E6EDF3);"> /&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">title</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span><span>Example HTML5 Document</span><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">title</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;/</span><span style="color: light-dark(#800000, #7EE787);">head</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;</span><span style="color: light-dark(#800000, #7EE787);">body</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">    &lt;</span><span style="color: light-dark(#800000, #7EE787);">p</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span><span>Test</span><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">p</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">  &lt;/</span><span style="color: light-dark(#800000, #7EE787);">body</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #E6EDF3);">&lt;/</span><span style="color: light-dark(#800000, #7EE787);">html</span><span style="color: light-dark(#800000, #E6EDF3);">&gt;</span></span></code></pre><h4 id="blok-kodu-odsazeny-ctyrmi-mezerami">Blok kódu odsazený čtyřmi mezerami</h4>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="plain"><span class="giallo-l"><span>&lt;!doctype html&gt;</span></span>
+<span class="giallo-l"><span>&lt;html lang=&quot;en&quot;&gt;</span></span>
+<span class="giallo-l"><span>&lt;head&gt;</span></span>
+<span class="giallo-l"><span>  &lt;meta charset=&quot;utf-8&quot;&gt;</span></span>
+<span class="giallo-l"><span>  &lt;title&gt;Example HTML5 Document&lt;/title&gt;</span></span>
+<span class="giallo-l"><span>&lt;/head&gt;</span></span>
+<span class="giallo-l"><span>&lt;body&gt;</span></span>
+<span class="giallo-l"><span>  &lt;p&gt;Test&lt;/p&gt;</span></span>
+<span class="giallo-l"><span>&lt;/body&gt;</span></span>
+<span class="giallo-l"><span>&lt;/html&gt;</span></span></code></pre><h2 id="typy-seznamu">Typy seznamů</h2>
 <h4 id="cislovany-seznam">Číslovaný seznam</h4>
 <ol>
 <li>První položka</li>
@@ -356,7 +352,7 @@
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn-1">
-<p>Výše uvedený citát je úryvkem z <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">přednášky</a> Roba Pikea během Gopherfestu, 18. listopadu 2015. <a href="#fr-1-1">↩</a></p>
+<p>Výše uvedený citát je úryvkem z <a rel="external" href="https://www.youtube.com/watch?v=PAAkCSZUG1c">přednášky</a> Roba Pikea během Gopherfestu, 18. listopadu 2015. <a href="#fr-1-1">↩</a></p>
 </li>
 </ol>
 </section>
@@ -411,7 +407,7 @@
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

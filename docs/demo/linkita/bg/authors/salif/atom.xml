@@ -42,7 +42,7 @@
         <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/linkita/bg/math-typesetting/"/>
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/bg/math-typesetting/</id>
         
-        <summary type="html">&lt;p&gt;Темата Линкита поддържа $\LaTeX$ математически формули, използвайки &lt;a href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
+        <summary type="html">&lt;p&gt;Темата Линкита поддържа $\LaTeX$ математически формули, използвайки &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;</summary>
         
     </entry>
     <entry xml:lang="bg">
@@ -62,27 +62,25 @@
         <id>https://salif.github.io/zola-themes-collection/demo/linkita/bg/shortcodes/</id>
         
         <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/linkita/bg/shortcodes/">&lt;p&gt;Темата Линкита предоставя множество шорткодове.&lt;&#x2F;p&gt;
-&lt;p&gt;Ако не сте чували за шорткодове, вижте &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt; за повече информация.&lt;&#x2F;p&gt;
+&lt;p&gt;Ако не сте чували за шорткодове, вижте &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;shortcodes&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt; за повече информация.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;mermaid-header&quot;&gt;Mermaid&lt;&#x2F;h2&gt;
 &lt;p&gt;За да използвате Mermaid във вашата страница, трябва да зададете &lt;code&gt;extra.mermaid = true&lt;&#x2F;code&gt; в предните данни (frontmatter) на страницата.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Заглавие&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;mermaid &lt;&#x2F;span&gt;&lt;span&gt;= true
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;Заглавие&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;mermaid&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#0000FF, #79C0FF);&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#CD3131, #FFA198);&quot;&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;След това можете да използвате шорткодовете &lt;code&gt;mermaid()&lt;&#x2F;code&gt; ето така:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;graph TD;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;B;
-&lt;&#x2F;span&gt;&lt;span&gt;A--&amp;gt;C;
-&lt;&#x2F;span&gt;&lt;span&gt;B--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;C--&amp;gt;D;
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;graph TD;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;B;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;A--&amp;gt;C;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;B--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;C--&amp;gt;D;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Това ще бъде изобразено така:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   graph TD;
@@ -93,24 +91,23 @@ C--&amp;gt;D;
 &lt;&#x2F;pre&gt;
 &lt;p&gt;Освен това, можете да използвате блок с код вътре в шорткодовете &lt;code&gt;mermaid()&lt;&#x2F;code&gt; и блокът с код ще бъде игнориран.&lt;&#x2F;p&gt;
 &lt;p&gt;Блокът с код предотвратява форматирането на Mermaid от форматиращия инструмент.&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% mermaid() %}
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span style=&quot;color:#7697d6;&quot;&gt;mermaid
-&lt;&#x2F;span&gt;&lt;span&gt;sequenceDiagram
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Alice
-&lt;&#x2F;span&gt;&lt;span&gt;    participant Bob
-&lt;&#x2F;span&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
-&lt;&#x2F;span&gt;&lt;span&gt;    loop Healthcheck
-&lt;&#x2F;span&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria
-&lt;&#x2F;span&gt;&lt;span&gt;    end
-&lt;&#x2F;span&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!
-&lt;&#x2F;span&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!
-&lt;&#x2F;span&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?
-&lt;&#x2F;span&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!
-&lt;&#x2F;span&gt;&lt;span&gt;```
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% mermaid() %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;span&gt;mermaid&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;sequenceDiagram&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Alice&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    participant Bob&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Alice-&amp;gt;&amp;gt;John: Hello John, how are you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    loop Healthcheck&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        John-&amp;gt;&amp;gt;John: Fight against hypochondria&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    end&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Note right of John: Rational thoughts &amp;lt;br&#x2F;&amp;gt;prevail!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John--&amp;gt;&amp;gt;Alice: Great!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    John-&amp;gt;&amp;gt;Bob: How about you?&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    Bob--&amp;gt;&amp;gt;John: Jolly good!&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;```&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Това ще бъде изобразено така:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;mermaid bg-inherit&quot; translate=&quot;no&quot;&gt;
   
@@ -130,10 +127,9 @@ sequenceDiagram
 &lt;h2 id=&quot;preduprezhdenie&quot;&gt;Предупреждение&lt;&#x2F;h2&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;admonition()&lt;&#x2F;code&gt; показва банер, който ви помага да поставите известие на вашата страница.&lt;&#x2F;p&gt;
 &lt;p&gt;Можете да използвате шорткодът &lt;code&gt;admonition()&lt;&#x2F;code&gt; по този начин:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;съвет&amp;quot;) %}
-&lt;&#x2F;span&gt;&lt;span&gt;Предупреждението `tip`.
-&lt;&#x2F;span&gt;&lt;span&gt;{% end %}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% admonition(type=&amp;quot;tip&amp;quot;, title=&amp;quot;съвет&amp;quot;) %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Предупреждението &lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;tip&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#800000, #79C0FF);&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{% end %}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;admonition&lt;&#x2F;code&gt; има 12 различни типа:&lt;&#x2F;p&gt;
 
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;admonition.css?h=98c1477488c4b2c9d71a&quot; type=&quot;text&#x2F;css&quot;&gt;
@@ -354,10 +350,8 @@ sequenceDiagram
 &lt;&#x2F;div&gt;
 &lt;h2 id=&quot;galeriia&quot;&gt;Галерия&lt;&#x2F;h2&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;gallery()&lt;&#x2F;code&gt; е много проста, само с HTML, галерия с изображения, която показва всички изображения от „assets“ на страницата.&lt;&#x2F;p&gt;
-&lt;p&gt;Взето е от &lt;a href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;{{ gallery() }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
+&lt;p&gt;Взето е от &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;content&#x2F;image-processing&#x2F;&quot;&gt;документацията на Зола&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ gallery() }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;div class=&quot;not-prose flex flex-wrap gap-2&quot;&gt;
 
   &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;bg&#x2F;shortcodes&#x2F;01-zola.png&quot; target=&quot;_blank&quot;&gt;
     &lt;img class=&quot;rounded-lg&quot; src=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;linkita&#x2F;processed_images&#x2F;01-zola.b673627618ae4d9e.png&quot; alt=&quot;Демо изображение за галерията&quot; &#x2F;&gt;
@@ -387,24 +381,22 @@ sequenceDiagram
 &lt;h2 id=&quot;proekti&quot;&gt;Проекти&lt;&#x2F;h2&gt;
 &lt;p&gt;Шорткодът &lt;code&gt;projects()&lt;&#x2F;code&gt; ви позволява да създадете страница за вашите проекти.&lt;&#x2F;p&gt;
 &lt;p&gt;Създайте файл &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Моите проекти&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;
-&lt;&#x2F;span&gt;&lt;span&gt;+++
-&lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;title = &amp;quot;Моите проекти&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;description = &amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;path = &amp;quot;projects&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{{ projects(path=&amp;quot;data.toml&amp;quot;, format=&amp;quot;toml&amp;quot;) }}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Създайте файл &lt;code&gt;content&#x2F;pages&#x2F;projects&#x2F;data.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#151515;color:#e8e8d3;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;desc &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;links &lt;&#x2F;span&gt;&lt;span&gt;= [
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;    { &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#ffb964;&quot;&gt;url &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#99ad6a;&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color:#556633;&quot;&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span&gt;},
-&lt;&#x2F;span&gt;&lt;span&gt;]
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;[[&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#000000, #FFA657);&quot;&gt;project&lt;&#x2F;span&gt;&lt;span&gt;]]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;desc&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;Lorem ipsum dolor sit.&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;lorem&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;ipsum&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt;links&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;homepage&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; name&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;source&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#001080, #E6EDF3);&quot;&gt; url&lt;&#x2F;span&gt;&lt;span&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt; &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;https:&#x2F;&#x2F;example.com&lt;&#x2F;span&gt;&lt;span style=&quot;color: light-dark(#A31515, #A5D6FF);&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Това ще бъде показано така:&lt;&#x2F;p&gt;
 
 &lt;div class=&quot;not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5&quot;&gt;

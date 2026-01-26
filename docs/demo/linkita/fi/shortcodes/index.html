@@ -55,7 +55,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -234,27 +234,25 @@
 
   <!-- Content -->
   <section><p>Linkita-teema tarjoaa useita pikakoodeja.</p>
-<p>Etkö ole koskaan kuullut pikakoodeista? Katso lisätietoja <a href="https://www.getzola.org/documentation/content/shortcodes/">Zolan dokumentaatiosta</a>.</p>
+<p>Etkö ole koskaan kuullut pikakoodeista? Katso lisätietoja <a rel="external" href="https://www.getzola.org/documentation/content/shortcodes/">Zolan dokumentaatiosta</a>.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>Käyttääksesi Mermaidia sivullasi, sinun tulee asettaa <code>extra.mermaid = true</code> sivun frontmatter-osioon.</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Sivusi otsikko</span><span style="color:#556633;">&quot;
-</span><span>
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span style="color:#ffb964;">mermaid </span><span>= true
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">title</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">Sivusi otsikko</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">mermaid</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span></code></pre>
 <p>Sitten voit käyttää <code>mermaid()</code>-pikakoodeja näin:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>graph TD;
-</span><span>A--&gt;B;
-</span><span>A--&gt;C;
-</span><span>B--&gt;D;
-</span><span>C--&gt;D;
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>graph TD;</span></span>
+<span class="giallo-l"><span>A--&gt;B;</span></span>
+<span class="giallo-l"><span>A--&gt;C;</span></span>
+<span class="giallo-l"><span>B--&gt;D;</span></span>
+<span class="giallo-l"><span>C--&gt;D;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>Tämä renderöidään seuraavasti:</p>
 <pre class="mermaid bg-inherit" translate="no">
   graph TD;
@@ -265,24 +263,23 @@ C--&gt;D;
 </pre>
 <p>Lisäksi voit käyttää koodilohkoa <code>mermaid()</code>-pikakoodien sisällä, jolloin koodilohko jätetään huomiotta.</p>
 <p>Koodilohko estää muotoilutyökalua rikkomasta Mermaidin muotoilua.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>```</span><span style="color:#7697d6;">mermaid
-</span><span>sequenceDiagram
-</span><span>    participant Alice
-</span><span>    participant Bob
-</span><span>    Alice-&gt;&gt;John: Hello John, how are you?
-</span><span>    loop Healthcheck
-</span><span>        John-&gt;&gt;John: Fight against hypochondria
-</span><span>    end
-</span><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!
-</span><span>    John--&gt;&gt;Alice: Great!
-</span><span>    John-&gt;&gt;Bob: How about you?
-</span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>```</span><span>mermaid</span></span>
+<span class="giallo-l"><span>sequenceDiagram</span></span>
+<span class="giallo-l"><span>    participant Alice</span></span>
+<span class="giallo-l"><span>    participant Bob</span></span>
+<span class="giallo-l"><span>    Alice-&gt;&gt;John: Hello John, how are you?</span></span>
+<span class="giallo-l"><span>    loop Healthcheck</span></span>
+<span class="giallo-l"><span>        John-&gt;&gt;John: Fight against hypochondria</span></span>
+<span class="giallo-l"><span>    end</span></span>
+<span class="giallo-l"><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!</span></span>
+<span class="giallo-l"><span>    John--&gt;&gt;Alice: Great!</span></span>
+<span class="giallo-l"><span>    John-&gt;&gt;Bob: How about you?</span></span>
+<span class="giallo-l"><span>    Bob--&gt;&gt;John: Jolly good!</span></span>
+<span class="giallo-l"><span>```</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>Tämä renderöidään seuraavasti:</p>
 <pre class="mermaid bg-inherit" translate="no">
   
@@ -302,10 +299,9 @@ sequenceDiagram
 <h2 id="huomautukset">Huomautukset</h2>
 <p><code>admonition()</code>-pikakoodi näyttää bannerin, jonka avulla voit lisätä huomautuksia sivullesi.</p>
 <p>Voit käyttää <code>admonition()</code>-pikakoodia näin:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;vinkki&quot;) %}
-</span><span>`tip`-huomautus.
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% admonition(type=&quot;tip&quot;, title=&quot;vinkki&quot;) %}</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #79C0FF);">`</span><span style="color: light-dark(#800000, #79C0FF);">tip</span><span style="color: light-dark(#800000, #79C0FF);">`</span><span>-huomautus.</span></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>Huomautus-pikakoodilla on 12 eri tyyppiä:</p>
 
 <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/admonition.css?h=98c1477488c4b2c9d71a" type="text/css">
@@ -526,10 +522,8 @@ sequenceDiagram
 </div>
 <h2 id="galleria">Galleria</h2>
 <p><code>gallery()</code>-pikakoodi on hyvin yksinkertainen, vain HTML:ää käyttävä klikattava kuvagalleria, joka näyttää kaikki kuvat sivun resursseista.</p>
-<p>Se on <a href="https://www.getzola.org/documentation/content/image-processing/">Zolan dokumentaatiosta</a>.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
-</span></code></pre>
-<div class="not-prose flex flex-wrap gap-2">
+<p>Se on <a rel="external" href="https://www.getzola.org/documentation/content/image-processing/">Zolan dokumentaatiosta</a>.</p>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{{ gallery() }}</span></span></code></pre><div class="not-prose flex flex-wrap gap-2">
 
   <a href="https://salif.github.io/zola-themes-collection/demo/linkita/fi/shortcodes/01-zola.png" target="_blank">
     <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/01-zola.b673627618ae4d9e.png" alt="Demonstraatiokuva gallerialle" />
@@ -559,24 +553,22 @@ sequenceDiagram
 <h2 id="projektit">Projektit</h2>
 <p><code>projects()</code>-pikakoodin avulla voit luoda sivun projekteillesi.</p>
 <p>Luo <code>content/pages/projects/index.md</code>-tiedosto:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;Projektini&quot;
-</span><span>description = &quot;&quot;
-</span><span>path = &quot;projektit&quot;
-</span><span>+++
-</span><span>
-</span><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;Projektini&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;&quot;</span></span>
+<span class="giallo-l"><span>path = &quot;projektit&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}</span></span></code></pre>
 <p>Luo <code>content/pages/projects/data.toml</code>-tiedosto:</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
-</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
-</span><span style="color:#ffb964;">links </span><span>= [
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>]
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span>[[</span><span style="color: light-dark(#000000, #FFA657);">project</span><span>]]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">desc</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">Lorem ipsum dolor sit.</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">tags</span><span> =</span><span> [</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">ipsum</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">links</span><span> =</span><span> [</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">homepage</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">source</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>]</span></span></code></pre>
 <p>Tämä näytetään seuraavasti:</p>
 
 <div class="not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
@@ -652,7 +644,7 @@ sequenceDiagram
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

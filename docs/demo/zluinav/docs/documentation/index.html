@@ -72,8 +72,8 @@
 <p><strong>Note</strong>: documentations can be sorted by the method you like. Even multiple sort methods can be used in multiple subsections. Zluinav documentation uses weight and title sort styles. Please note that when using weight, you also need to set for subsections.</p>
 <h2 id="setup"><a class="zola-anchor" href="#setup">Setup</a></h2>
 <p>First, create first documentation section in content folder, and add _index.md to it containing the following frontmadder. For this documentation, we will create docs folder.</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">+++
-title = &quot;Your Documentation Main Section&#x27;s Title&quot;
+<pre><code data-lang="toml">+++
+title = &quot;Your Documentation Main Section&#39;s Title&quot;
 template = &quot;doc.html&quot;
 page_template = &quot;docpage.html&quot;
 sort_by = &quot;weight&quot;
@@ -82,7 +82,7 @@ Further content for the main documentation section goes here
 </code></pre>
 <p>Now, you can create pages with md extention in your documentation folder. Any page within the first section (docs) in this case, is a part of the first section.</p>
 <p>You can write documentation as you normally would do, for example:</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">+++
+<pre><code data-lang="toml">+++
 title = &quot;Page1&quot;
 weight = 1
 +++
@@ -92,7 +92,7 @@ Hello!
 <p>You can also have subsections inside the main one. However, you cannot have more than 1 sections inside a subsection. For example, you cannot have docs/a/b, but you can have docs/a, and docs/b, etc.</p>
 <p>Lets create a subfolder name test inside the main documentation section (docs) in this case.</p>
 <p>In the test folder, we will add _index.md with the following content.</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">+++
+<pre><code data-lang="toml">+++
 title = &quot;Testing&quot;
 render = false
 sort_by = &quot;weight&quot;
@@ -103,7 +103,7 @@ weight = 1
 <p>You also need to set <code>sort_by</code> in subsection.</p>
 <p>We set weight to 1 because we want to display test section first after main documentation section.</p>
 <p>After that, you can write a short description related to that subsection. Do not write long texts in this file, because this will display at the top of the list containing pages related to this section.</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">+++
+<pre><code data-lang="toml">+++
 title = &quot;Testing&quot;
 render = false
 sort_by = &quot;weight&quot;

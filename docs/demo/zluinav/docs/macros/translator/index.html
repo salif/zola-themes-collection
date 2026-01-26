@@ -84,7 +84,7 @@
 <li><code>language</code>(string) optional: a string containing the language name defined in config languages if different from the current language, useful to display names in a list, for instance, <code>en</code> When specifying the language it will be loaded. As such, <code>tr</code> is not required when this is used.</li>
 </ul>
 <p>Example:</p>
-<pre data-lang="html" class="language-html "><code class="language-html" data-lang="html">{%- import &quot;macros&#x2F;translator.html&quot; as tran %}
+<pre><code data-lang="html">{%- import &quot;macros/translator.html&quot; as tran %}
 {%- set translated = tran::get(language = &quot;my&quot;, key = &quot;test&quot;, def = &quot;Testing&quot;) %}
 {{ test }}
 </code></pre>

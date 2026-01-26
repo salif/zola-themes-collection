@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dracula Code Samples | Draczola ʕ•ᴥ•ʔ Blog</title>
+  <meta name="title" content="Dracula Code Samples">
+<meta name="description" content="A Zola-theme based on Bear Blog in Dracula colors (A universal dark theme)">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+  
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/css/dracula.css" />
+  <link id="giallo-dark" rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/giallo-dark.css" />
+  
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/css/style.css" />
+</head>
+<body>
+  <header>
+  <nav class="lang" aria-label="language">
+        <span class="active">English</span>
+        <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/de/blog/dracula-code-samples/" hreflang="de" lang="de">Deutsch</a>
+  </nav>
+  <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/" class="title">
+    <h1>Draczola ʕ•ᴥ•ʔ Blog</h1>
+  </a>
+  <nav aria-label="site">
+      <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/">Home</a>
+      <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/bear/">Bear</a>
+      <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/zola/">Zola</a>
+      <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/blog/">Blog</a>
+  </nav>
+</header>
+<h1>Dracula Code Samples</h1>
+      <p>
+        <i>
+          <time datetime="2020-01-03T00:00:00+00:00" pubdate>2020-01-03</time>
+        </i>
+      </p>
+  <main>
+    <pre class="giallo z-code"><code data-lang="python"><span class="giallo-l"><span class="z-punctuation z-definition z-comment">#</span><span class="z-comment"> Once upon a time...</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-storage">class</span><span class="z-entity z-name z-type z-class"> Vampire</span><span>:</span></span>
+<span class="giallo-l"><span class="z-storage">  def</span><span class="z-support z-function z-magic"> __init__</span><span>(</span><span class="z-variable z-parameter z-function z-language z-special">self</span><span>,</span><span class="z-variable z-parameter"> props</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-variable z-language">    self</span><span>.</span><span>location</span><span class="z-keyword"> =</span><span> props</span><span class="z-punctuation z-definition z-arguments z-begin">[</span><span class="z-punctuation z-definition z-string z-begin">&#39;</span><span class="z-string">location</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation z-definition z-arguments z-end">]</span></span>
+<span class="giallo-l"><span class="z-variable z-language">    self</span><span>.</span><span>birthDate</span><span class="z-keyword"> =</span><span> props</span><span class="z-punctuation z-definition z-arguments z-begin">[</span><span class="z-punctuation z-definition z-string z-begin">&#39;</span><span class="z-string">birthDate</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation z-definition z-arguments z-end">]</span></span>
+<span class="giallo-l"><span class="z-variable z-language">    self</span><span>.</span><span>deathDate</span><span class="z-keyword"> =</span><span> props</span><span class="z-punctuation z-definition z-arguments z-begin">[</span><span class="z-punctuation z-definition z-string z-begin">&#39;</span><span class="z-string">deathDate</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation z-definition z-arguments z-end">]</span></span>
+<span class="giallo-l"><span class="z-variable z-language">    self</span><span>.</span><span>weaknesses</span><span class="z-keyword"> =</span><span> props</span><span class="z-punctuation z-definition z-arguments z-begin">[</span><span class="z-punctuation z-definition z-string z-begin">&#39;</span><span class="z-string">weaknesses</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation z-definition z-arguments z-end">]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-storage">  def</span><span class="z-entity z-name z-function"> get_age</span><span>(</span><span class="z-variable z-parameter z-function z-language z-special">self</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-keyword">    return</span><span class="z-variable z-language"> self</span><span>.</span><span>calc_age</span><span class="z-punctuation z-definition z-arguments z-begin">(</span><span class="z-punctuation z-definition z-arguments z-end">)</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-storage">  def</span><span class="z-entity z-name z-function"> calc_age</span><span>(</span><span class="z-variable z-parameter z-function z-language z-special">self</span><span>)</span><span>:</span></span>
+<span class="giallo-l"><span class="z-keyword">    return</span><span class="z-variable z-language"> self</span><span>.</span><span>deathDate</span><span class="z-keyword"> -</span><span class="z-variable z-language"> self</span><span>.</span><span>birthDate</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment">#</span><span class="z-comment"> ...there was a guy named Vlad</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>Dracula</span><span class="z-keyword"> =</span><span> Vampire</span><span class="z-punctuation z-definition z-arguments z-begin">(</span><span class="z-punctuation">{</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-string z-begin">  &#39;</span><span class="z-string">location</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">:</span><span class="z-punctuation z-definition z-string z-begin"> &#39;</span><span class="z-string">Transylvania</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">,</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-string z-begin">  &#39;</span><span class="z-string">birthDate</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">:</span><span class="z-constant"> 1428</span><span class="z-punctuation">,</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-string z-begin">  &#39;</span><span class="z-string">deathDate</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">:</span><span class="z-constant"> 1476</span><span class="z-punctuation">,</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-string z-begin">  &#39;</span><span class="z-string">weaknesses</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">:</span><span class="z-punctuation"> [</span><span class="z-punctuation z-definition z-string z-begin">&#39;</span><span class="z-string">Sunlight</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">,</span><span class="z-punctuation z-definition z-string z-begin"> &#39;</span><span class="z-string">Garlic</span><span class="z-punctuation z-definition z-string z-end">&#39;</span><span class="z-punctuation">]</span></span>
+<span class="giallo-l"><span class="z-punctuation">}</span><span class="z-punctuation z-definition z-arguments z-end">)</span></span></code></pre><pre class="giallo z-code"><code data-lang="html"><span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 1</span><span>&lt;!</span><span class="z-entity z-name z-tag">doctype</span><span class="z-entity z-other z-attribute-name"> html</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 2</span><span>&lt;</span><span class="z-entity z-name z-tag">html</span><span class="z-entity z-other z-attribute-name"> lang</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">en</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 3</span><span>  &lt;</span><span class="z-entity z-name z-tag">head</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 4</span><span>    &lt;</span><span class="z-entity z-name z-tag">meta</span><span class="z-entity z-other z-attribute-name"> charset</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">UTF-8</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 5</span><span>    &lt;</span><span class="z-entity z-name z-tag">title</span><span>&gt;</span><span>Dracula</span><span>&lt;/</span><span class="z-entity z-name z-tag">title</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 6</span><span>  &lt;/</span><span class="z-entity z-name z-tag">head</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 7</span><span>  &lt;</span><span class="z-entity z-name z-tag">body</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 8</span><span class="z-punctuation z-definition z-comment">    &lt;!--</span><span class="z-comment"> Once upon a time... </span><span class="z-punctuation z-definition z-comment">--&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln"> 9</span><span>    &lt;</span><span class="z-entity z-name z-tag">h1</span><span>&gt;</span><span>Vampires</span><span>&lt;/</span><span class="z-entity z-name z-tag">h1</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">10</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">11</span><span>    &lt;</span><span class="z-entity z-name z-tag">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">12</span><span>      &lt;</span><span class="z-entity z-name z-tag">label</span><span class="z-entity z-other z-attribute-name"> for</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">location</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span><span>Location</span><span>&lt;/</span><span class="z-entity z-name z-tag">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">13</span><span>      &lt;</span><span class="z-entity z-name z-tag">input</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">text</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> name</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">location</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> value</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">Transylvania</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">14</span><span>      &lt;</span><span class="z-entity z-name z-tag">label</span><span class="z-entity z-other z-attribute-name"> for</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">birthDate</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span><span>Birth Date:</span><span>&lt;/</span><span class="z-entity z-name z-tag">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">15</span><span>      &lt;</span><span class="z-entity z-name z-tag">input</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">number</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> name</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">birthDate</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> value</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">1428</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">16</span><span>      &lt;</span><span class="z-entity z-name z-tag">label</span><span class="z-entity z-other z-attribute-name"> for</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">deathDate</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span><span>Death Date:</span><span>&lt;/</span><span class="z-entity z-name z-tag">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">17</span><span>      &lt;</span><span class="z-entity z-name z-tag">input</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">number</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> name</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">deathDate</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> value</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">1476</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">18</span><span>      &lt;</span><span class="z-entity z-name z-tag">label</span><span class="z-entity z-other z-attribute-name"> for</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">weaknesses</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span><span>Weaknesses:</span><span>&lt;/</span><span class="z-entity z-name z-tag">label</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">19</span><span>      &lt;</span><span class="z-entity z-name z-tag">input</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">checkbox</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> name</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">weaknesses</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> value</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">Sunlight</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> checked</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">20</span><span>      &lt;</span><span class="z-entity z-name z-tag">input</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">checkbox</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> name</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">weaknesses</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> value</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">Garlic</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-entity z-other z-attribute-name"> checked</span><span> /&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">21</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">22</span><span>      &lt;</span><span class="z-entity z-name z-tag">button</span><span class="z-entity z-other z-attribute-name"> type</span><span class="z-punctuation z-separator z-key-value">=</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">submit</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>&gt;</span><span>Submit</span><span>&lt;/</span><span class="z-entity z-name z-tag">button</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">23</span><span>    &lt;/</span><span class="z-entity z-name z-tag">form</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">24</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">25</span><span>    &lt;</span><span class="z-entity z-name z-tag">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">26</span><span class="z-punctuation z-definition z-comment">      //</span><span class="z-comment"> ...there was a guy named Vlad</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">27</span><span class="z-storage">      const</span><span class="z-variable z-other z-constant z-js"> form</span><span class="z-keyword"> =</span><span class="z-variable"> document</span><span class="z-punctuation">.</span><span class="z-entity z-name z-function">querySelector</span><span class="z-meta z-brace z-round">(</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">form</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span class="z-meta z-brace z-round">)</span><span>;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">28</span><span class="z-variable">      form</span><span class="z-punctuation">.</span><span class="z-entity z-name z-function">addEventListener</span><span class="z-meta z-brace z-round">(</span><span class="z-punctuation z-definition z-string z-begin">&quot;</span><span class="z-string">submit</span><span class="z-punctuation z-definition z-string z-end">&quot;</span><span>,</span><span> (</span><span class="z-variable z-parameter">e</span><span>)</span><span class="z-storage"> =&gt;</span><span> {</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">29</span><span class="z-storage">        const</span><span> {</span><span class="z-variable z-other z-constant z-js"> birthDate</span><span>,</span><span class="z-variable z-other z-constant z-js"> deathDate</span><span> }</span><span class="z-keyword"> =</span><span class="z-variable"> e</span><span>.</span><span class="z-variable">target</span><span>;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">30</span><span class="z-storage">        const</span><span class="z-variable z-other z-constant z-js"> age</span><span class="z-keyword"> =</span><span class="z-variable"> deathDate</span><span>.</span><span class="z-variable">value</span><span class="z-keyword"> -</span><span class="z-variable"> birthDate</span><span>.</span><span class="z-variable">value</span><span>;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">31</span><span>      }</span><span class="z-meta z-brace z-round">)</span><span>;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">32</span><span>    &lt;</span><span>/</span><span class="z-entity z-name z-tag">script</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">33</span><span>  &lt;/</span><span class="z-entity z-name z-tag">body</span><span>&gt;</span></span>
+<span class="giallo-l"><span aria-hidden="true" class="giallo-ln">34</span><span>&lt;/</span><span class="z-entity z-name z-tag">html</span><span>&gt;</span></span></code></pre><pre class="giallo z-code"><code data-lang="markdown"><span class="giallo-l"><span class="z-punctuation z-definition z-comment">&lt;!--</span></span>
+<span class="giallo-l"><span class="z-comment">  Once a upon a time...</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment">--&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-markup z-heading">#</span><span class="z-markup z-heading"> Vampires</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>|</span><span> Name</span><span>       |</span><span> Value</span><span>            |</span></span>
+<span class="giallo-l"><span>|</span><span> ----------</span><span> |</span><span> ----------------</span><span> |</span></span>
+<span class="giallo-l"><span>|</span><span> location</span><span>   |</span><span> Transylvania</span><span>     |</span></span>
+<span class="giallo-l"><span>|</span><span> birth date</span><span> |</span><span> 1428</span><span>             |</span></span>
+<span class="giallo-l"><span>|</span><span> death date</span><span> |</span><span> 1476</span><span>             |</span></span>
+<span class="giallo-l"><span>|</span><span> weaknesses</span><span> |</span><span> Sunlight, Garlic</span><span> |</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment">&lt;!--</span><span class="z-comment"> ...There was a guy named Vlad </span><span class="z-punctuation z-definition z-comment">--&gt;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-markup z-quote">&gt;</span><span class="z-markup z-quote"> The </span><span class="z-markup z-bold">**</span><span class="z-markup z-bold">age</span><span class="z-markup z-bold">**</span><span class="z-markup z-quote"> is the </span><span class="z-markup z-inline z-raw">`</span><span class="z-markup z-inline z-raw">deathDate</span><span class="z-markup z-inline z-raw">`</span><span class="z-markup z-quote"> minus the </span><span class="z-markup z-inline z-raw">`</span><span class="z-markup z-inline z-raw">birthDate</span><span class="z-markup z-inline z-raw">`</span></span></code></pre>
+  </main>
+  <p>
+        Tags:
+          <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/tags/markdown/">#markdown</a>
+          <a href="https://salif.github.io/zola-themes-collection/demo/draczola-bear/tags/syntax/">#syntax</a>
+  </p>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: {
+        '[+]': [['$', '$']]},
+    displayMath: [
+        ['$$', '$$'],
+        ['\\[', '\\]']
+    ],
+    processEscapes: true,
+    }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+<footer>
+Made with <a href="https://github.com/siddhantladdha/draczola-bear">Draczola ʕ•ᴥ•ʔ Bear</a>
+<br>
+This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+</footer><script src="https://salif.github.io/zola-themes-collection/demo/draczola-bear/js/copy_code.js"></script></body>
+</html>

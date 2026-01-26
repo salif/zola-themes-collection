@@ -11,8 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkaibright/dist/LXGWBright-Regular/result.css' />
   <link rel='stylesheet' href='https://chinese-fonts-cdn.deno.dev/packages/syst/dist/SourceHanSerifCN/result.css' />
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/8.5.10/mmenu.min.css">
@@ -30,27 +29,36 @@
       },
       options: {
         skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      chtml: {
+        fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
       }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js"></script>
   <script>
       document.addEventListener("DOMContentLoaded", function() {
-          // Unwrap code blocks for MathJax
-          // 1. Display Math (```math-display ... ```)
-          document.querySelectorAll('code.language-math-display').forEach(el => {
-              const pre = el.parentElement;
-              if (pre.tagName === 'PRE') {
-                  const math = el.textContent.trim();
+          const MATH_LANGS = ['math', 'math-display'];
+
+          // 1. Display Math (``` ... ```)
+          document.querySelectorAll('pre code').forEach(el => {
+              let lang = el.dataset.lang || '';
+              if (!lang) {
+                  el.classList.forEach(cls => {
+                      if (cls.startsWith('language-')) lang = cls.replace('language-', '');
+                  });
+              }
+              
+              if (MATH_LANGS.includes(lang.toLowerCase())) {
+                  const pre = el.parentElement;
                   const div = document.createElement('div');
-                  div.textContent = math;
+                  div.textContent = el.textContent.trim();
                   pre.replaceWith(div);
               }
           });
 
           // 2. Inline Math (`$ ... $`)
           document.querySelectorAll('code').forEach(el => {
-              if (el.classList.contains('language-math-display')) return;
               if (el.parentElement.tagName === 'PRE') return;
 
               const text = el.textContent.trim();
@@ -202,24 +210,81 @@
             
 
             
+            <details class="intro-toc">
+                <summary class="toc-title">CONTENTS</summary>
+                <div class="toc-wrapper">
+                <ul class="toc-list">
+                    <li class="toc-root">
+                        <a href="#" class="active-toc">Getting Started</a>
+                        
+                        <ul>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/get-start/#installation">Installation</a>
+                                
+                            </li>
+                            
+                            <li>
+                                <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/get-start/#basic-configs">Basic Configs</a>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+                </div>
+            </details>
+            
         </div>
     </div>
     
-    <p>Use <code>git submodule</code> to add the theme to your site:</p>
-<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> submodule add<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>b</span> master<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>depth</span><span class="z-keyword z-operator z-assignment z-option z-shell">=</span>1 https://github.com/Resorie/zola-theme-nivis.git themes/nivis/</span>
-</span><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> submodule update<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>init</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>recursive</span></span>
-</span></code></pre>
+    <h2 id="installation">Installation</h2>
+<p>Use <code>git submodule</code> to add the theme to your site:</p>
+<pre class="giallo z-code"><code data-lang="shellscript"><span class="giallo-l"><span class="z-entity z-name z-function">git</span><span class="z-string"> submodule</span><span class="z-string"> add</span><span class="z-constant"> -</span><span class="z-constant">b</span><span class="z-string"> master</span><span class="z-constant"> -</span><span class="z-constant">-depth=1</span><span class="z-string"> https://github.com/Resorie/zola-theme-nivis.git</span><span class="z-string"> themes/nivis/</span></span>
+<span class="giallo-l"><span class="z-entity z-name z-function">git</span><span class="z-string"> submodule</span><span class="z-string"> update</span><span class="z-constant"> -</span><span class="z-constant">-init</span><span class="z-constant"> -</span><span class="z-constant">-recursive</span></span></code></pre>
 <p>Then, change your theme config in <code>config.toml</code>:</p>
-<pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">theme</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span>nivis<span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-</span></code></pre>
+<pre class="giallo z-code"><code data-lang="toml"><span class="giallo-l"><span class="z-variable">theme</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">nivis</span><span class="z-punctuation z-string">&quot;</span></span></code></pre>
 <p>Start your site by copying the example content into your site folder:</p>
-<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">cp</span></span><span class="z-meta z-function-call z-arguments z-shell"><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> -</span>r</span> themes/nivis/content content</span>
-</span></code></pre>
+<pre class="giallo z-code"><code data-lang="shellscript"><span class="giallo-l"><span class="z-entity z-name z-function">cp</span><span class="z-constant"> -</span><span class="z-constant">r</span><span class="z-string"> themes/nivis/content</span><span class="z-string"> content</span></span></code></pre>
 <p>If you want to update the nivis theme, run the following command:</p>
-<pre data-lang="bash" class="language-bash z-code"><code class="language-bash" data-lang="bash"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> submodule update<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>remote</span><span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>merge</span></span>
-</span></code></pre>
-<p>Move on to <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/configure/">Configuraion</a> for configuraions.</p>
-<p>If you like this theme, please give it a star on <a href="https://github.com/Resorie/zola-theme-nivis">github</a>. 😘</p>
+<pre class="giallo z-code"><code data-lang="shellscript"><span class="giallo-l"><span class="z-entity z-name z-function">git</span><span class="z-string"> submodule</span><span class="z-string"> update</span><span class="z-constant"> -</span><span class="z-constant">-remote</span><span class="z-constant"> -</span><span class="z-constant">-merge</span></span></code></pre><h2 id="basic-configs">Basic Configs</h2>
+<p>The following is a basic template for your <code>config.toml</code>:</p>
+<pre class="giallo z-code"><code data-lang="toml"><span class="giallo-l"><span class="z-variable">base_url</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">https://yours.site</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-variable">title</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">Your Title</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-variable">description</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">Your blog</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-variable">theme</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">nivis</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-variable">generate_feeds</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant"> true</span></span>
+<span class="giallo-l"><span class="z-variable">feed_filenames</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-definition z-array"> [</span><span class="z-punctuation z-string">&quot;</span><span class="z-string">rss.xml</span><span class="z-punctuation z-string">&quot;</span><span>,</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">atom.xml</span><span class="z-punctuation z-string">&quot;</span><span class="z-punctuation z-definition z-array">]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-variable">compile_sass</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-variable">taxonomies</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-definition z-array"> [</span><span>{</span><span class="z-variable"> name</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">tags</span><span class="z-punctuation z-string">&quot;</span><span>,</span><span class="z-variable"> paginate_by</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant z-numeric"> 5</span><span> }</span><span class="z-punctuation z-definition z-array">]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span class="z-entity z-name z-section">markdown</span><span>]</span></span>
+<span class="giallo-l"><span class="z-variable">render_emoji</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant"> true</span></span>
+<span class="giallo-l"><span class="z-variable">github_alerts</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant"> true</span></span>
+<span class="giallo-l"><span class="z-variable">bottom_footnotes</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-constant"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span class="z-entity z-name z-section">markdown</span><span>.</span><span class="z-entity z-name z-section">highlighting</span><span>]</span></span>
+<span class="giallo-l"><span class="z-variable">style</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">class</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-variable">light_theme</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">one-light</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-variable">dark_theme</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">one-dark-pro</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span class="z-entity z-name z-section">extra</span><span>]</span></span>
+<span class="giallo-l"><span class="z-variable">main_section</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">posts</span><span class="z-punctuation z-string">&quot;</span></span>
+<span class="giallo-l"><span class="z-variable">avatar</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">images/avatar.jpeg</span><span class="z-punctuation z-string">&quot;</span><span class="z-punctuation z-definition z-comment"> #</span><span class="z-comment"> In static/ folder</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-comment">#</span><span class="z-comment"> Social links</span></span>
+<span class="giallo-l"><span class="z-variable">social_links</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-definition z-array"> [</span></span>
+<span class="giallo-l"><span>    {</span><span class="z-variable"> name</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">github</span><span class="z-punctuation z-string">&quot;</span><span>,</span><span class="z-variable"> url</span><span class="z-punctuation z-separator z-key-value"> =</span><span class="z-punctuation z-string"> &quot;</span><span class="z-string">https://github.com/your_username</span><span class="z-punctuation z-string">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span class="z-punctuation z-definition z-array">]</span></span></code></pre>
+<p>Move on to <a href="https://salif.github.io/zola-themes-collection/demo/nivis/posts/configure/">Configuraion</a> for advanced configuraions.</p>
+<hr />
+<p>If you like this theme, please give it a star on <a rel="external" href="https://github.com/Resorie/zola-theme-nivis">github</a>. 😘</p>
 
   </main>
   <section class="article-action-block">
@@ -280,7 +345,7 @@
     </div>
     <div class="page-footer">
       <div class="footer-content">
-        <span>Based on theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
+        <span>With theme <a href="https://github.com/Resorie/zola-theme-nivis">Nivis</a><span class="separator">/</span>Powered by <a href="https://www.getzola.org/" target="_blank">Zola</a></span>
       </div>
     </div>
   </div>
@@ -293,53 +358,109 @@
       mask.classList.toggle("open");
     }
 
-    function toggleTheme() {
-      const body = document.body;
-      const icon = document.getElementById("theme-icon");
-      if (body.getAttribute("data-theme") === "dark") {
-        body.setAttribute("data-theme", "light");
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem("theme", "light");
-      } else {
-        body.setAttribute("data-theme", "dark");
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem("theme", "dark");
+    const getPreferredScheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    function updateThemeIcon(scheme) {
+      const themeIcon = document.getElementById("theme-icon");
+      if (themeIcon) {
+        if (scheme === 'dark') {
+          themeIcon.classList.remove("fa-moon");
+          themeIcon.classList.add("fa-sun");
+        } else {
+          themeIcon.classList.remove("fa-sun");
+          themeIcon.classList.add("fa-moon");
+        }
       }
+    }
+
+    function toggleTheme() {
+      const root = document.documentElement;
+      const systemScheme = getPreferredScheme();
+      const currentInlineScheme = root.style.colorScheme;
+      
+      // Calculate effective scheme
+      const effectiveScheme = currentInlineScheme || systemScheme;
+      const targetScheme = effectiveScheme === 'dark' ? 'light' : 'dark';
+
+      root.style.colorScheme = targetScheme;
+      localStorage.setItem("theme", targetScheme);
+      updateThemeIcon(targetScheme);
     }
 
     // Initialize theme
     (function() {
       const savedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const systemTheme = getPreferredScheme();
       
-      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-        document.body.setAttribute("data-theme", "dark");
-        // Icon update will happen after DOM load if we put this script at the end, 
-        // but since this is inline at the end of body, we might need to wait for DOMContentLoaded if the icon isn't ready?
-        // Actually, this script is at the end of body, so elements should be parsed.
-        const icon = document.getElementById("theme-icon");
-        if (icon) {
-            icon.classList.remove("fa-moon");
-            icon.classList.add("fa-sun");
-        }
+      if (savedTheme) {
+        document.documentElement.style.colorScheme = savedTheme;
+        updateThemeIcon(savedTheme);
+      } else {
+        updateThemeIcon(systemTheme);
       }
+
+      // Listen for system changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem("theme")) {
+          const newScheme = e.matches ? 'dark' : 'light';
+          updateThemeIcon(newScheme);
+        }
+      });
     })();
 
-    // Footnote Navigation
+    // Footnote Navigation & Code Block Label
     document.addEventListener("DOMContentLoaded", function() {
+        const MATH_LANGS = ['math', 'math-display', 'tex', 'latex'];
+
         // Code Block Language Label
         document.querySelectorAll('pre code').forEach(code => {
             const pre = code.parentElement;
-            if (!pre.hasAttribute('data-lang')) {
-                const classes = code.className.split(' ');
-                for (const cls of classes) {
-                    if (cls.startsWith('language-')) {
-                        pre.setAttribute('data-lang', cls.replace('language-', ''));
-                        break;
+            let lang = pre.getAttribute('data-lang');
+
+            // 1. Try to recover lang if not on pre
+            if (!lang) {
+                const codeLang = code.getAttribute('data-lang');
+                if (codeLang) {
+                    lang = codeLang;
+                } else {
+                    const classes = code.className.split(' ');
+                    for (const cls of classes) {
+                        if (cls.startsWith('language-')) {
+                            lang = cls.replace('language-', '');
+                            break;
+                        }
                     }
                 }
+                if (lang) pre.setAttribute('data-lang', lang);
+            }
+
+            // 2. Process Math Blocks
+            if (lang && MATH_LANGS.includes(lang.toLowerCase())) {
+                const div = document.createElement('div');
+                div.classList.add('math-display');
+                let mathContent = code.textContent.trim();
+                
+                // Auto-wrap if typical delimiters are missing
+                if (!mathContent.startsWith('$$') && !mathContent.startsWith('\\[')) {
+                    mathContent = '$$' + mathContent + '$$';
+                }
+                
+                div.textContent = mathContent;
+                pre.replaceWith(div);
+            }
+        });
+
+        // 3. Process Inline Math
+        // Zola (or Markdown) often renders `$E=mc^2$` as <code>$E=mc^2$</code>.
+        // We need to unwrap this code tag so MathJax can process it without code styling.
+        document.querySelectorAll(':not(pre) > code').forEach(code => {
+            const text = code.textContent.trim();
+            // Check for $...$ (and not $$...$$) or \(...\)
+            if ( (text.startsWith('$') && text.endsWith('$') && !text.startsWith('$$')) ||
+                 (text.startsWith('\\(') && text.endsWith('\\)')) ) {
+                 const span = document.createElement('span');
+                 span.textContent = text;
+                 code.replaceWith(span);
             }
         });
     });

@@ -1,0 +1,233 @@
+:root {
+  /* mappings for website */
+  --background-color: var(--background);
+  --heading-color: var(--pink);
+  --text-color: var(--foreground);
+  --link-color: var(--cyan);
+  --link-visited-color: var(--purple);
+  --code-background-color: var(--background-dark);
+  --code-color: var(--foreground);
+  --blockquote-border-color: var(--orange);
+  --mark-background-color: var(--yellow);
+  --mark-color: var(--background);
+  --selection-background-color: var(--yellow);
+  --selection-color: var(--background);
+  --success-color: var(--green);
+}
+
+:root {
+    --width: 800px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  nav span.active {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* Source: https://picostitch.com/blog/2025/05/allow2copy/ */
+
+  pre:has(> code) {
+    position: relative;
+  }
+
+  pre code::after {
+    content: "[copy]";
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0.5em;
+  }
+
+  pre.copied code::after {
+    content: "[copied]";
+    color: var(--success-color);
+  }
+
+  pre code {
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 0.875rem;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  .giallo-l {
+    display: inline-block;
+    min-height: 1lh;
+    width: 100%;
+  }
+
+  .giallo-ln {
+    display: inline-block;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0.4em;
+    min-width: 3ch;
+    text-align: right;
+    opacity: 0.8;
+  }
+
+  mark {
+    background-color: var(--mark-background-color);
+    color: var(--mark-color);
+  }
+
+  blockquote {
+    border-left: 1px solid var(--blockquote-border-color);
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+  /* blog post list */
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--link-visited-color);
+  }
+
+  .tags {
+    font-size: smaller;
+  }
+
+  .footnote-definition {
+    display: flex;
+    margin-top: 1em;
+  }
+
+  .footnote-definition-label {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+    vertical-align: baseline;
+  }
+
+  .footnote-definition-label::after {
+    content: "."
+  }
+
+  .footnote-definition > p {
+    margin: 0;
+  }
+
+  ::selection,
+  ::-moz-selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-color);
+}

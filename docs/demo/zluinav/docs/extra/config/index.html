@@ -68,7 +68,7 @@
 </nav>
 <main id="mainc" data-pagefind-body>
 <h1 id="extra-config-variables"><a class="zola-anchor" href="#extra-config-variables">Extra Config Variables</a></h1>
-<p>These variables must be set under <code>extra</code> object of the config. If they are not set, the default values will be used from the <a href="https://github.com/harrymkt/zluinav/blob/main/theme.toml">theme.toml</a>.</p>
+<p>These variables must be set under <code>extra</code> object of the config. If they are not set, the default values will be used from the <a rel="external" href="https://github.com/harrymkt/zluinav/blob/main/theme.toml">theme.toml</a>.</p>
 <h2 id="tr-path"><a class="zola-anchor" href="#tr-path">tr_path</a></h2>
 <p>The path where language TOML files are stored, default is "langs".</p>
 <h2 id="title-sep"><a class="zola-anchor" href="#title-sep">title_sep</a></h2>
@@ -106,18 +106,18 @@
 </li>
 </ul>
 <p>Example navigation:</p>
-<pre data-lang="toml" class="language-toml "><code class="language-toml" data-lang="toml">[[extra.menus.main]]
+<pre><code data-lang="toml">[[extra.menus.main]]
   name = &quot;Home&quot;
-  url = &quot;&#x2F;.l.&#x2F;&quot;
+  url = &quot;/.l./&quot;
   key = &quot;h&quot;
   id = &quot;nav1&quot;
 [[extra.menus.main]]
   name = &quot;Documentation&quot;
-  url = &quot;&#x2F;.l.&#x2F;docs&quot;
+  url = &quot;/.l./docs&quot;
   id = &quot;nav2&quot;
 [[extra.menus.main]]
   name = &quot;Blog&quot;
-  url = &quot;&#x2F;.l.&#x2F;blog&quot;
+  url = &quot;/.l./blog&quot;
   id = &quot;nav3&quot;
   # Lets add class attribute to blog
   [extra.menus.main.attributes]

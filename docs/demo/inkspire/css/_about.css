@@ -1,0 +1,208 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(var(--space-5));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.header {
+    margin-bottom: var(--theme-section-gap);
+}
+
+.intro-text {
+    background-color: var(--theme-intro-bg);
+    padding: var(--theme-intro-padding);
+    border-radius: var(--theme-intro-radius);
+    text-align: center;
+    font-size: var(--theme-body-size);
+    color: var(--theme-text-primary);
+    box-shadow: var(--theme-intro-shadow);
+}
+
+/* Hero Section */
+.hero-title {
+    font-size: var(--theme-hero-title-size);
+    font-weight: var(--theme-title-weight);
+    margin-bottom: var(--space-0);
+    color: var(--theme-title-color);
+}
+
+.hero-subtitle {
+    font-size: var(--theme-hero-subtitle-size);
+    color: var(--theme-text-secondary);
+    font-weight: var(--font-weight-normal);
+}
+
+/* Sections */
+.section {
+    margin-bottom: var(--theme-section-gap);
+}
+
+.section-content {
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
+    color: var(--theme-body-color);
+}
+
+.section-content p {
+    margin-bottom: var(--space-5);
+}
+
+.link {
+    color: var(--theme-link-color);
+    text-decoration: none;
+    font-weight: var(--theme-link-weight);
+    transition: color var(--theme-transition-normal)
+        var(--theme-transition-ease);
+}
+
+.link:hover {
+    color: var(--theme-link-hover);
+    text-decoration: underline;
+}
+
+/* Bio Timeline */
+.bio-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--theme-timeline-gap);
+}
+
+.timeline-item {
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-4) 0;
+    transition: transform var(--theme-transition-normal)
+        var(--theme-transition-ease);
+}
+
+.timeline-item:hover {
+    transform: var(--theme-hover-shift);
+}
+
+.year {
+    font-weight: var(--theme-timeline-year-weight);
+    color: var(--theme-text-primary);
+    min-width: var(--theme-timeline-year-width);
+    flex-shrink: 0;
+}
+
+.event {
+    color: var(--theme-body-color);
+    flex: 1;
+}
+
+/* Interests */
+.interests {
+    font-size: var(--theme-body-size);
+    line-height: var(--theme-body-line-height);
+}
+
+.highlight {
+    color: var(--theme-link-color);
+    font-weight: var(--theme-link-weight);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: var(--font-size-base);
+        padding: var(--space-4) var(--space-5);
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: var(--space-16);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-md);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .section-content {
+        font-size: var(--font-size-base);
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    .year {
+        min-width: auto;
+        font-size: var(--font-size-sm);
+    }
+
+    .cta-button {
+        padding: var(--space-3) var(--space-8);
+        font-size: var(--font-size-base);
+        width: 100%;
+        justify-content: center;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .interests {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: var(--space-3);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-surface);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-1);
+}

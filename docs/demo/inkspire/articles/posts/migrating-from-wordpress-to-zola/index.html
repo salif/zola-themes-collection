@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Migrating from WordPress to Zola: A Practical Guide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Migrating from WordPress to Zola: A Practical Guide</h1>
+    </header>
+    <div class="container content"><p>I recently migrated a WordPress blog that had been running for years to Zola. The process took about a weekend, and the results were worth it: faster load times, zero maintenance overhead, and complete control over the output. Here's everything I learned.</p>
+<h2 id="why-leave-wordpress">Why Leave WordPress?</h2>
+<p>WordPress is powerful, but that power comes with weight. My site was:</p>
+<ul>
+<li>Running on a VPS that needed updates and monitoring</li>
+<li>Using multiple plugins that occasionally broke after updates</li>
+<li>Loading slowly despite caching plugins</li>
+<li>Vulnerable to security issues requiring constant vigilance</li>
+<li>Costing monthly hosting fees</li>
+</ul>
+<p>The blog was 95% static content. I wasn't using most of WordPress's dynamic features. A static site made more sense.</p>
+<h2 id="understanding-what-you-re-trading">Understanding What You're Trading</h2>
+<p><strong>What you lose:</strong></p>
+<ul>
+<li>Dynamic comments (replaceable with external services)</li>
+<li>Admin dashboard for editing (you'll edit markdown files)</li>
+<li>Plugin ecosystem (you build what you need)</li>
+<li>WYSIWYG editor (you'll write in markdown)</li>
+<li>Easy updates from browser (you'll push to git)</li>
+</ul>
+<p><strong>What you gain:</strong></p>
+<ul>
+<li>Near-instant page loads</li>
+<li>Zero server maintenance</li>
+<li>No security vulnerabilities</li>
+<li>Free hosting options (GitHub Pages, Netlify, Cloudflare Pages)</li>
+<li>Complete control over output</li>
+<li>Version control for all content</li>
+<li>Ability to work offline</li>
+</ul>
+<p>If you write in markdown and are comfortable with git, this trade-off is favorable.</p>
+<h2 id="step-1-export-your-wordpress-content">Step 1: Export Your WordPress Content</h2>
+<p>WordPress has a built-in export tool:</p>
+<ol>
+<li>Go to Tools → Export in WordPress admin</li>
+<li>Select "All content"</li>
+<li>Download the XML file</li>
+</ol>
+<p>This gives you a file with all posts, pages, comments, and metadata.</p>
+<p>You can also use plugins like "WordPress to Jekyll Exporter" which exports directly to markdown, though you'll still need to adapt the format for Zola.</p>
+<h2 id="step-2-convert-content-to-markdown">Step 2: Convert Content to Markdown</h2>
+<p>WordPress exports to XML. Zola needs markdown with front matter. You have options:</p>
+<p><strong>Option A: Use an existing converter</strong></p>
+<p>Tools like <code>wordpress-export-to-markdown</code> (npm package) can help:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">npm</span><span> install</span><span style="color:#bf616a;"> -g</span><span> wordpress-export-to-markdown
+</span><span style="color:#bf616a;">wordpress-export-to-markdown --input</span><span>=export.xml</span><span style="color:#bf616a;"> --output</span><span>=content/blog
+</span></code></pre>
+<p><strong>Option B: Write a conversion script</strong></p>
+<p>I wrote a Python script to process the XML and convert to Zola-compatible markdown:</p>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>xml.etree.ElementTree </span><span style="color:#b48ead;">as </span><span style="color:#bf616a;">ET
+</span><span style="color:#b48ead;">from </span><span>html2text </span><span style="color:#b48ead;">import </span><span>html2text
+</span><span style="color:#b48ead;">from </span><span>datetime </span><span style="color:#b48ead;">import </span><span>datetime
+</span><span style="color:#b48ead;">import </span><span>os
+</span><span style="color:#b48ead;">import </span><span>re
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">clean_filename</span><span>(</span><span style="color:#bf616a;">title</span><span>):
+</span><span>    </span><span style="color:#65737e;"># Convert title to valid filename
+</span><span>    filename = title.</span><span style="color:#bf616a;">lower</span><span>()
+</span><span>    filename = re.</span><span style="color:#bf616a;">sub</span><span>(</span><span style="color:#b48ead;">r</span><span>&#39;</span><span style="color:#d08770;">[</span><span>^</span><span style="color:#d08770;">a-z0-9]</span><span>+&#39;, &#39;</span><span style="color:#a3be8c;">-</span><span>&#39;, filename)
+</span><span>    </span><span style="color:#b48ead;">return </span><span>filename.</span><span style="color:#bf616a;">strip</span><span>(&#39;</span><span style="color:#a3be8c;">-</span><span>&#39;)
+</span><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">convert_wordpress_export</span><span>(</span><span style="color:#bf616a;">xml_file</span><span>, </span><span style="color:#bf616a;">output_dir</span><span>):
+</span><span>    tree = ET.</span><span style="color:#bf616a;">parse</span><span>(xml_file)
+</span><span>    root = tree.</span><span style="color:#bf616a;">getroot</span><span>()
+</span><span>    
+</span><span>    </span><span style="color:#65737e;"># WordPress XML namespaces
+</span><span>    namespaces = {
+</span><span>        &#39;</span><span style="color:#a3be8c;">content</span><span>&#39;: &#39;</span><span style="color:#a3be8c;">http://purl.org/rss/1.0/modules/content/</span><span>&#39;,
+</span><span>        &#39;</span><span style="color:#a3be8c;">wp</span><span>&#39;: &#39;</span><span style="color:#a3be8c;">http://wordpress.org/export/1.2/</span><span>&#39;
+</span><span>    }
+</span><span>    
+</span><span>    </span><span style="color:#b48ead;">for </span><span>item </span><span style="color:#b48ead;">in </span><span>root.</span><span style="color:#bf616a;">findall</span><span>(&#39;</span><span style="color:#a3be8c;">.//item</span><span>&#39;):
+</span><span>        </span><span style="color:#65737e;"># Get post data
+</span><span>        title = item.</span><span style="color:#bf616a;">find</span><span>(&#39;</span><span style="color:#a3be8c;">title</span><span>&#39;).text
+</span><span>        post_type = item.</span><span style="color:#bf616a;">find</span><span>(&#39;</span><span style="color:#a3be8c;">wp:post_type</span><span>&#39;, namespaces).text
+</span><span>        status = item.</span><span style="color:#bf616a;">find</span><span>(&#39;</span><span style="color:#a3be8c;">wp:status</span><span>&#39;, namespaces).text
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Only process published posts
+</span><span>        </span><span style="color:#b48ead;">if </span><span>post_type != &#39;</span><span style="color:#a3be8c;">post</span><span>&#39; or status != &#39;</span><span style="color:#a3be8c;">publish</span><span>&#39;:
+</span><span>            </span><span style="color:#b48ead;">continue
+</span><span>            
+</span><span>        </span><span style="color:#65737e;"># Get content
+</span><span>        content_html = item.</span><span style="color:#bf616a;">find</span><span>(&#39;</span><span style="color:#a3be8c;">content:encoded</span><span>&#39;, namespaces).text or &#39;&#39;
+</span><span>        content_md = </span><span style="color:#bf616a;">html2text</span><span>(content_html)
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Get metadata
+</span><span>        date_str = item.</span><span style="color:#bf616a;">find</span><span>(&#39;</span><span style="color:#a3be8c;">wp:post_date</span><span>&#39;, namespaces).text
+</span><span>        date = datetime.</span><span style="color:#bf616a;">strptime</span><span>(date_str, &#39;</span><span style="color:#d08770;">%Y</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%m</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%d %H</span><span style="color:#a3be8c;">:</span><span style="color:#d08770;">%M</span><span style="color:#a3be8c;">:</span><span style="color:#d08770;">%S</span><span>&#39;)
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Get categories and tags
+</span><span>        categories = []
+</span><span>        tags = []
+</span><span>        </span><span style="color:#b48ead;">for </span><span>category </span><span style="color:#b48ead;">in </span><span>item.</span><span style="color:#bf616a;">findall</span><span>(&#39;</span><span style="color:#a3be8c;">category</span><span>&#39;):
+</span><span>            domain = category.</span><span style="color:#bf616a;">get</span><span>(&#39;</span><span style="color:#a3be8c;">domain</span><span>&#39;)
+</span><span>            name = category.text
+</span><span>            </span><span style="color:#b48ead;">if </span><span>domain == &#39;</span><span style="color:#a3be8c;">category</span><span>&#39;:
+</span><span>                categories.</span><span style="color:#bf616a;">append</span><span>(name)
+</span><span>            </span><span style="color:#b48ead;">elif </span><span>domain == &#39;</span><span style="color:#a3be8c;">post_tag</span><span>&#39;:
+</span><span>                tags.</span><span style="color:#bf616a;">append</span><span>(name)
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Create filename
+</span><span>        filename = </span><span style="color:#b48ead;">f</span><span>&quot;{date.</span><span style="color:#bf616a;">strftime</span><span>(&#39;</span><span style="color:#d08770;">%Y</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%m</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%d</span><span>&#39;)}</span><span style="color:#a3be8c;">-</span><span>{</span><span style="color:#bf616a;">clean_filename</span><span>(title)}</span><span style="color:#a3be8c;">.md</span><span>&quot;
+</span><span>        filepath = os.path.</span><span style="color:#bf616a;">join</span><span>(output_dir, filename)
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Create front matter
+</span><span>        front_matter = </span><span style="color:#b48ead;">f</span><span>&quot;&quot;&quot;</span><span style="color:#a3be8c;">+++
+</span><span style="color:#a3be8c;">title = &quot;</span><span>{title}</span><span style="color:#a3be8c;">&quot;
+</span><span style="color:#a3be8c;">date = </span><span>{date.</span><span style="color:#bf616a;">strftime</span><span>(&#39;</span><span style="color:#d08770;">%Y</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%m</span><span style="color:#a3be8c;">-</span><span style="color:#d08770;">%d</span><span>&#39;)}
+</span><span>&quot;&quot;&quot;
+</span><span>        
+</span><span>        </span><span style="color:#b48ead;">if </span><span>categories:
+</span><span>            front_matter += </span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#96b5b4;">\n</span><span style="color:#a3be8c;">[taxonomies]</span><span style="color:#96b5b4;">\n</span><span>&quot;
+</span><span>            </span><span style="color:#b48ead;">if </span><span>tags:
+</span><span>                front_matter += </span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">tags = </span><span>{tags}</span><span style="color:#96b5b4;">\n</span><span>&#39;
+</span><span>            </span><span style="color:#b48ead;">if </span><span>categories:
+</span><span>                front_matter += </span><span style="color:#b48ead;">f</span><span>&#39;</span><span style="color:#a3be8c;">categories = </span><span>{categories}</span><span style="color:#96b5b4;">\n</span><span>&#39;
+</span><span>        
+</span><span>        front_matter += &quot;</span><span style="color:#a3be8c;">+++</span><span style="color:#96b5b4;">\n\n</span><span>&quot;
+</span><span>        
+</span><span>        </span><span style="color:#65737e;"># Write file
+</span><span>        </span><span style="color:#b48ead;">with </span><span style="color:#96b5b4;">open</span><span>(filepath, &#39;</span><span style="color:#a3be8c;">w</span><span>&#39;, </span><span style="color:#bf616a;">encoding</span><span>=&#39;</span><span style="color:#a3be8c;">utf-8</span><span>&#39;) </span><span style="color:#b48ead;">as </span><span>f:
+</span><span>            f.</span><span style="color:#bf616a;">write</span><span>(front_matter + content_md)
+</span><span>        
+</span><span>        </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Converted: </span><span>{title}&quot;)
+</span><span>
+</span><span style="color:#65737e;"># Usage
+</span><span style="color:#bf616a;">convert_wordpress_export</span><span>(&#39;</span><span style="color:#a3be8c;">export.xml</span><span>&#39;, &#39;</span><span style="color:#a3be8c;">content/blog</span><span>&#39;)
+</span></code></pre>
+<p>Install required package: <code>pip install html2text</code></p>
+<p>This script:</p>
+<ul>
+<li>Parses the WordPress XML</li>
+<li>Converts HTML content to markdown</li>
+<li>Creates proper front matter</li>
+<li>Organizes files with dates in filenames</li>
+<li>Preserves categories and tags</li>
+</ul>
+<h2 id="step-3-handle-images-and-media">Step 3: Handle Images and Media</h2>
+<p>WordPress stores images in <code>wp-content/uploads/YEAR/MONTH/</code>. You need to:</p>
+<p><strong>1. Download all images:</strong></p>
+<p>Use wget or a WordPress plugin to download your media library:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">wget -r -np -nH --cut-dirs</span><span>=3</span><span style="color:#bf616a;"> -R</span><span> index.html \
+</span><span>  https://yoursite.com/wp-content/uploads/
+</span></code></pre>
+<p><strong>2. Move to Zola's static directory:</strong></p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mv</span><span> uploads static/images
+</span></code></pre>
+<p><strong>3. Update image references:</strong></p>
+<p>Your converted markdown will have references like:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>![Alt text](https://yoursite.com/wp-content/uploads/2023/05/image.jpg)
+</span></code></pre>
+<p>Update them to:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>![Alt text](/images/2023/05/image.jpg)
+</span></code></pre>
+<p>Use find and replace or a script:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># In your content directory
+</span><span style="color:#bf616a;">find</span><span> .</span><span style="color:#bf616a;"> -name </span><span>&quot;</span><span style="color:#a3be8c;">*.md</span><span>&quot;</span><span style="color:#bf616a;"> -type</span><span> f</span><span style="color:#bf616a;"> -exec</span><span> sed</span><span style="color:#bf616a;"> -i </span><span>\
+</span><span>  &#39;</span><span style="color:#a3be8c;">s|https://yoursite.com/wp-content/uploads|/images|g</span><span>&#39; {} +
+</span></code></pre>
+<h2 id="step-4-set-up-zola-structure">Step 4: Set Up Zola Structure</h2>
+<p>Create your Zola site:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> init my-site
+</span><span style="color:#96b5b4;">cd</span><span> my-site
+</span></code></pre>
+<p>Move converted posts:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir -p</span><span> content/blog
+</span><span style="color:#bf616a;">mv</span><span> ../converted-posts/*.md content/blog/
+</span></code></pre>
+<p>Create <code>content/blog/_index.md</code>:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;Blog&quot;
+</span><span>sort_by = &quot;date&quot;
+</span><span>template = &quot;blog.html&quot;
+</span><span>page_template = &quot;blog-page.html&quot;
+</span><span>paginate_by = 10
+</span><span>+++
+</span></code></pre>
+<h2 id="step-5-handle-url-structure">Step 5: Handle URL Structure</h2>
+<p>WordPress typically uses URLs like:</p>
+<ul>
+<li><code>yoursite.com/2023/05/post-title/</code></li>
+<li><code>yoursite.com/category/tech/post-title/</code></li>
+</ul>
+<p>Zola defaults to:</p>
+<ul>
+<li><code>yoursite.com/blog/post-title/</code></li>
+</ul>
+<p><strong>Option 1: Accept new URLs and set up redirects</strong></p>
+<p>Create a <code>_redirects</code> file for Netlify or use meta refresh in HTML:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>/2023/05/old-post-title/ /blog/old-post-title/ 301
+</span></code></pre>
+<p><strong>Option 2: Match WordPress structure</strong></p>
+<p>Configure Zola's <code>config.toml</code>:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[slugify]
+</span><span style="color:#bf616a;">paths </span><span>= &quot;</span><span style="color:#a3be8c;">safe</span><span>&quot;
+</span><span style="color:#bf616a;">taxonomies </span><span>= &quot;</span><span style="color:#a3be8c;">safe</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># In your section front matter
+</span><span>[extra]
+</span><span style="color:#65737e;"># You can customize paths per post
+</span></code></pre>
+<p>Or in individual posts, set custom paths:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>title = &quot;My Post&quot;
+</span><span>date = 2023-05-15
+</span><span>path = &quot;2023/05/my-post&quot;
+</span><span>+++
+</span></code></pre>
+<h2 id="step-6-migrate-comments">Step 6: Migrate Comments</h2>
+<p>WordPress comments can't directly transfer to static sites. Options:</p>
+<p><strong>1. Use a third-party service:</strong></p>
+<ul>
+<li>Disqus (free, but ads)</li>
+<li>Utterances (GitHub-based, clean)</li>
+<li>Commento (open-source, self-hostable)</li>
+</ul>
+<p><strong>2. Export and display statically:</strong></p>
+<p>Export comments from WordPress, convert to markdown, and display them as static content at the bottom of posts.</p>
+<p><strong>3. Disable comments:</strong></p>
+<p>If comments weren't active or valuable, simply don't include them.</p>
+<p>I chose Utterances for its simplicity and GitHub integration.</p>
+<h2 id="step-7-create-templates">Step 7: Create Templates</h2>
+<p>Build basic templates matching your WordPress design:</p>
+<p><strong>Base template</strong> (<code>templates/base.html</code>):</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>&lt;!DOCTYPE html&gt;
+</span><span>&lt;html lang=&quot;en&quot;&gt;
+</span><span>&lt;head&gt;
+</span><span>    &lt;meta charset=&quot;UTF-8&quot;&gt;
+</span><span>    &lt;title&gt;{% block title %}{{ config.title }}{% endblock %}&lt;/title&gt;
+</span><span>    &lt;link rel=&quot;stylesheet&quot; href=&quot;#&quot;&gt;
+</span><span>&lt;/head&gt;
+</span><span>&lt;body&gt;
+</span><span>    &lt;header&gt;
+</span><span>        &lt;nav&gt;
+</span><span>            &lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+</span><span>            &lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+</span><span>        &lt;/nav&gt;
+</span><span>    &lt;/header&gt;
+</span><span>    &lt;main&gt;
+</span><span>        {% block content %}{% endblock %}
+</span><span>    &lt;/main&gt;
+</span><span>&lt;/body&gt;
+</span><span>&lt;/html&gt;
+</span></code></pre>
+<p><strong>Blog post template</strong> (<code>templates/blog-page.html</code>):</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>{% extends &quot;base.html&quot; %}
+</span><span>
+</span><span>{% block content %}
+</span><span>&lt;article&gt;
+</span><span>    &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
+</span><span>    &lt;time&gt;{{ page.date | date(format=&quot;%B %d, %Y&quot;) }}&lt;/time&gt;
+</span><span>    
+</span><span>    &lt;div class=&quot;content&quot;&gt;
+</span><span>        {{ page.content | safe }}
+</span><span>    &lt;/div&gt;
+</span><span>    
+</span><span>    {% if page.taxonomies.tags %}
+</span><span>    &lt;div class=&quot;tags&quot;&gt;
+</span><span>        {% for tag in page.taxonomies.tags %}
+</span><span>        &lt;a href=&quot;{{ get_taxonomy_url(kind=&quot;tags&quot;, name=tag) }}&quot;&gt;#{{ tag }}&lt;/a&gt;
+</span><span>        {% endfor %}
+</span><span>    &lt;/div&gt;
+</span><span>    {% endif %}
+</span><span>&lt;/article&gt;
+</span><span>{% endblock %}
+</span></code></pre>
+<h2 id="step-8-style-migration">Step 8: Style Migration</h2>
+<p>Export your WordPress CSS or recreate the design. If you used a theme, you might need to rebuild styles from scratch.</p>
+<p>Zola compiles Sass, so use that for organization:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir</span><span> sass
+</span><span style="color:#65737e;"># Create sass/style.scss with your styles
+</span></code></pre>
+<h2 id="step-9-test-everything">Step 9: Test Everything</h2>
+<p>Before going live:</p>
+<ol>
+<li>
+<p><strong>Check all internal links:</strong></p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> check
+</span></code></pre>
+</li>
+<li>
+<p><strong>Verify images load:</strong></p>
+<ul>
+<li>Look for broken image links</li>
+<li>Ensure paths are correct</li>
+</ul>
+</li>
+<li>
+<p><strong>Test on local server:</strong></p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> serve
+</span></code></pre>
+</li>
+<li>
+<p><strong>Review post formatting:</strong></p>
+<ul>
+<li>Check markdown rendering</li>
+<li>Verify code blocks</li>
+<li>Test list formatting</li>
+</ul>
+</li>
+<li>
+<p><strong>Validate RSS feed:</strong></p>
+<ul>
+<li>Check <code>public/rss.xml</code> after build</li>
+</ul>
+</li>
+</ol>
+<h2 id="step-10-deploy">Step 10: Deploy</h2>
+<p>Build the site:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">zola</span><span> build
+</span></code></pre>
+<p>Deploy the <code>public/</code> directory to:</p>
+<ul>
+<li><strong>GitHub Pages</strong> (free)</li>
+<li><strong>Netlify</strong> (free, easy continuous deployment)</li>
+<li><strong>Cloudflare Pages</strong> (free, fast CDN)</li>
+<li><strong>Any static host</strong></li>
+</ul>
+<p>For Netlify, create <code>netlify.toml</code>:</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[build]
+</span><span style="color:#bf616a;">command </span><span>= &quot;</span><span style="color:#a3be8c;">zola build</span><span>&quot;
+</span><span style="color:#bf616a;">publish </span><span>= &quot;</span><span style="color:#a3be8c;">public</span><span>&quot;
+</span><span>
+</span><span>[build.environment]
+</span><span style="color:#bf616a;">ZOLA_VERSION </span><span>= &quot;</span><span style="color:#a3be8c;">0.18.0</span><span>&quot;
+</span><span>
+</span><span>[[redirects]]
+</span><span style="color:#bf616a;">from </span><span>= &quot;</span><span style="color:#a3be8c;">/wp-content/uploads/*</span><span>&quot;
+</span><span style="color:#bf616a;">to </span><span>= &quot;</span><span style="color:#a3be8c;">/images/:splat</span><span>&quot;
+</span><span style="color:#bf616a;">status </span><span>= </span><span style="color:#d08770;">301
+</span></code></pre>
+<h2 id="post-migration-checklist">Post-Migration Checklist</h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+All posts migrated and rendering correctly</li>
+<li><input disabled="" type="checkbox"/>
+Images loading from new paths</li>
+<li><input disabled="" type="checkbox"/>
+RSS feed working</li>
+<li><input disabled="" type="checkbox"/>
+Internal links updated</li>
+<li><input disabled="" type="checkbox"/>
+URL redirects configured</li>
+<li><input disabled="" type="checkbox"/>
+Comments solution implemented (if wanted)</li>
+<li><input disabled="" type="checkbox"/>
+Analytics added (if needed)</li>
+<li><input disabled="" type="checkbox"/>
+Search functionality (if needed)</li>
+<li><input disabled="" type="checkbox"/>
+Domain pointed to new host</li>
+<li><input disabled="" type="checkbox"/>
+SSL certificate configured</li>
+<li><input disabled="" type="checkbox"/>
+Old WordPress site backed up before shutdown</li>
+</ul>
+<h2 id="what-i-learned">What I Learned</h2>
+<p><strong>Week 1 after migration:</strong></p>
+<ul>
+<li>Pages loaded 10x faster</li>
+<li>No more plugin update anxiety</li>
+<li>Editing in markdown felt liberating</li>
+<li>Git history for all content was valuable</li>
+</ul>
+<p><strong>Month 1:</strong></p>
+<ul>
+<li>Zero maintenance time spent</li>
+<li>Hosting costs dropped to $0</li>
+<li>Could work on posts offline</li>
+<li>Deploy workflow became natural</li>
+</ul>
+<p><strong>Month 6:</strong></p>
+<ul>
+<li>Never looked back</li>
+<li>Writing more because the friction is gone</li>
+<li>Site is still fast, no degradation</li>
+<li>No security worries</li>
+</ul>
+<h2 id="common-issues-and-solutions">Common Issues and Solutions</h2>
+<p><strong>Problem: HTML in converted markdown looks messy</strong></p>
+<p>Solution: Clean up the markdown manually or improve your conversion script. Some HTML is fine—Zola renders it.</p>
+<p><strong>Problem: WordPress shortcodes don't convert</strong></p>
+<p>Solution: Replace WordPress shortcodes with equivalent HTML or Zola shortcodes. Create custom shortcodes for complex elements.</p>
+<p><strong>Problem: Featured images missing</strong></p>
+<p>Solution: WordPress featured images need special handling. Extract them from the XML and add to front matter:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
+</span><span>[extra]
+</span><span>featured_image = &quot;/images/2023/05/featured.jpg&quot;
+</span><span>+++
+</span></code></pre>
+<p><strong>Problem: Categories and tags not working</strong></p>
+<p>Solution: Ensure taxonomies are configured in <code>config.toml</code> and properly formatted in front matter.</p>
+<h2 id="is-migration-worth-it">Is Migration Worth It?</h2>
+<p>For me: absolutely. The trade-offs favor static generation when:</p>
+<ul>
+<li>Your site is mostly static content</li>
+<li>You're comfortable with markdown and git</li>
+<li>You want maximum performance</li>
+<li>You want to minimize maintenance</li>
+<li>Hosting costs matter</li>
+</ul>
+<p>It's not worth it if:</p>
+<ul>
+<li>You need complex user interactions</li>
+<li>Multiple non-technical people need to edit content</li>
+<li>You heavily use WordPress-specific plugins</li>
+<li>You're not comfortable with command-line tools</li>
+</ul>
+<h2 id="resources-that-helped">Resources That Helped</h2>
+<ul>
+<li>Zola documentation (comprehensive)</li>
+<li>html2text Python library (HTML to markdown conversion)</li>
+<li>wordpress-export-to-markdown npm package</li>
+<li>Utterances for comments</li>
+<li>Netlify for hosting and deployment</li>
+</ul>
+<p>The migration took one weekend of focused work. Six months later, I have zero regrets. The site is faster, cheaper to run, and more enjoyable to maintain. If your WordPress site is primarily a blog with static content, Zola is a compelling alternative.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

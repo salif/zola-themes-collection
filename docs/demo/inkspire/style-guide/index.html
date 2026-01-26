@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Style Guide</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Style Guide</h1>
+    </header>
+    <div class="container content"><p>Welcome to our Style Guide! This document is designed to ensure consistency, readability, and maintainability across all your projects. Whether you are a developer, designer, or content creator, adhering to these guidelines will help us create a cohesive and high-quality product.</p>
+<h1 id="headings">Headings</h1>
+<p>Header tags are what keep your content away from absolute chaos in terms of visual organization. They help your readers understand your writing, they help search engines determine your content.</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h5 id="heading-6">Heading 6</h5>
+<h1 id="horizontal-rule">Horizontal Rule</h1>
+<hr />
+<h1 id="text-level-semantics">Text-Level Semantics</h1>
+<p>In Markdown, text-level semantics refer to the HTML elements and syntax used to convey meaning and structure within a block of text. These elements help to enhance the readability and accessibility of the content by providing context and emphasis.</p>
+<h3 id="italic">Italic</h3>
+<p>Surround text with single asterisks (<code>*</code>) or underscores (<code>_</code>).</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-style:italic;color:#b48ead;">*Italic text*</span><span> or </span><span style="font-style:italic;color:#b48ead;">_Italic text_
+</span></code></pre>
+<p><em>Italic text</em> or <em>Italic text</em></p>
+<h3 id="bold">Bold</h3>
+<p>Surround text with double asterisks (<code>**</code>) or underscores (<code>__</code>).</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#ebcb8b;">**Bold text**</span><span> or </span><span style="font-weight:bold;color:#ebcb8b;">__Bold text__
+</span></code></pre>
+<p><strong>Bold text</strong> or <strong>Bold text</strong></p>
+<h3 id="bold-and-italic">Bold and Italic</h3>
+<p>Surround text with triple asterisks (<code>***</code>) or underscores (<code>___</code>).</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#ebcb8b;">**</span><span style="font-style:italic;color:#b48ead;">*Bold and Italic text*</span><span style="font-weight:bold;color:#ebcb8b;">**</span><span> or </span><span style="font-weight:bold;color:#ebcb8b;">__</span><span style="font-style:italic;color:#b48ead;">_Bold and Italic text_</span><span style="font-weight:bold;color:#ebcb8b;">__
+</span></code></pre>
+<p><em><strong>Bold and Italic text</strong></em> or <em><strong>Bold and Italic text</strong></em></p>
+<h3 id="strikethrough">Strikethrough</h3>
+<p>Surround text with double tildes (<code>~~</code>).</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>~~Strikethrough text~~
+</span></code></pre>
+<p><del>Strikethrough text</del></p>
+<h3 id="inline-code">Inline Code</h3>
+<p>Surround text with backticks (<code>`</code>).</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#a3be8c;">`Inline code`
+</span></code></pre>
+<p><code>Inline code</code></p>
+<h3 id="links">Links</h3>
+<p>Use square brackets for the link text and parentheses for the URL.</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#d08770;">[Link text](https://example.com)
+</span></code></pre>
+<p><a class="" href="https://example.com">Link text</a></p>
+<h1 id="lists">Lists</h1>
+<p>Markdown supports both <strong>unordered</strong> and <strong>ordered</strong> lists, as well as <strong>nested lists</strong>. Below is a comprehensive style guide.</p>
+<h3 id="1-unordered-lists">1. Unordered Lists</h3>
+<h4 id="white-check-mark-syntax">✅ Syntax</h4>
+<p>Use a hyphen (<code>-</code>), asterisk (<code>*</code>), or plus (<code>+</code>) followed by a space:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- Item one
+</span><span style="color:#bf616a;">- Item two
+</span><span style="color:#bf616a;">- Item three
+</span></code></pre>
+<p>✅ <strong>Preferred:</strong> Use <code>-</code> consistently for simplicity and readability.</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- Apples
+</span><span style="color:#bf616a;">- Oranges
+</span><span style="color:#bf616a;">- Bananas
+</span></code></pre>
+<ul>
+<li>Apples</li>
+<li>Oranges</li>
+<li>Bananas</li>
+</ul>
+<h4 id="no-entry-sign-avoid">🚫 Avoid</h4>
+<p>Inconsistent bullet characters:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- Apples
+</span><span style="color:#bf616a;">* Oranges
+</span><span style="color:#bf616a;">+ Bananas
+</span></code></pre>
+<h3 id="2-ordered-lists">2. Ordered Lists</h3>
+<h4 id="white-check-mark-syntax-1">✅ Syntax</h4>
+<p>Use numbers followed by a period and a space:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">1. First item
+</span><span style="color:#bf616a;">2. Second item
+</span><span style="color:#bf616a;">3. Third item
+</span></code></pre>
+<p><strong>Tip:</strong> Markdown auto-corrects numbering, but it’s best to keep numbers accurate for clarity when editing.</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">1. Wake up
+</span><span style="color:#bf616a;">2. Make coffee
+</span><span style="color:#bf616a;">3. Start work
+</span></code></pre>
+<ol>
+<li>Wake up</li>
+<li>Make coffee</li>
+<li>Start work</li>
+</ol>
+<h4 id="no-entry-sign-avoid-1">🚫 Avoid</h4>
+<p>Skipping numbers or mixing bullets:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">1. Wake up
+</span><span style="color:#bf616a;">3. Make coffee
+</span><span style="color:#bf616a;">- Start work
+</span></code></pre>
+<h3 id="3-nested-lists">3. Nested Lists</h3>
+<h4 id="white-check-mark-syntax-2">✅ Syntax</h4>
+<p>Indent sub-items with <strong>two spaces</strong> (or four if your renderer requires it):</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- Fruit
+</span><span style="color:#bf616a;">  - Apple
+</span><span style="color:#bf616a;">  - Banana
+</span><span style="color:#bf616a;">- Vegetables
+</span><span style="color:#bf616a;">  - Carrot
+</span><span style="color:#bf616a;">  - Lettuce
+</span></code></pre>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Vegetables
+<ul>
+<li>Carrot</li>
+<li>Lettuce</li>
+</ul>
+</li>
+</ul>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">1. Morning routine
+</span><span style="color:#bf616a;">   - Brush teeth
+</span><span style="color:#bf616a;">   - Shower
+</span><span style="color:#bf616a;">2. Work tasks
+</span><span style="color:#bf616a;">   - Check emails
+</span><span style="color:#bf616a;">   - Attend meetings
+</span></code></pre>
+<ol>
+<li>Morning routine
+<ul>
+<li>Brush teeth</li>
+<li>Shower</li>
+</ul>
+</li>
+<li>Work tasks
+<ul>
+<li>Check emails</li>
+<li>Attend meetings</li>
+</ul>
+</li>
+</ol>
+<h4 id="no-entry-sign-avoid-2">🚫 Avoid</h4>
+<p>Inconsistent indentation:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- Fruit
+</span><span style="color:#bf616a;">    - Apple
+</span><span style="color:#bf616a;">  - Banana
+</span></code></pre>
+<h3 id="4-task-lists-github-flavored-markdown">4. Task Lists (GitHub Flavored Markdown)</h3>
+<h4 id="white-check-mark-syntax-3">✅ Syntax</h4>
+<p>Use <code>- [ ]</code> for incomplete and <code>- [x]</code> for completed tasks:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- [x] Write proposal
+</span><span style="color:#bf616a;">- [ ] Review notes
+</span><span style="color:#bf616a;">- [ ] Submit draft
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#8fa1b3;">#### To-Do List
+</span><span>
+</span><span style="color:#bf616a;">- [x] Finish Markdown guide
+</span><span style="color:#bf616a;">- [ ] Upload to repository
+</span><span style="color:#bf616a;">- [ ] Share with team
+</span></code></pre>
+<h4 id="to-do-list">To-Do List</h4>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Finish Markdown guide</li>
+<li><input disabled="" type="checkbox"/>
+Upload to repository</li>
+<li><input disabled="" type="checkbox"/>
+Share with team</li>
+</ul>
+<h3 id="5-styling-inside-lists">5. Styling Inside Lists</h3>
+<p>You can combine other Markdown syntax inside list items.</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Bold item**</span><span style="color:#bf616a;"> for emphasis
+</span><span style="color:#bf616a;">- </span><span style="font-style:italic;color:#b48ead;">*Italic item*</span><span style="color:#bf616a;"> for subtle emphasis
+</span><span style="color:#bf616a;">- </span><span style="color:#a3be8c;">`Code item`</span><span style="color:#bf616a;"> for commands or code
+</span><span style="color:#bf616a;">- </span><span style="color:#d08770;">[Linked item](https://example.com)
+</span></code></pre>
+<ul>
+<li><strong>Bold item</strong> for emphasis</li>
+<li><em>Italic item</em> for subtle emphasis</li>
+<li><code>Code item</code> for commands or code</li>
+<li><a class="" href="https://example.com">Linked item</a></li>
+</ul>
+<h1 id="definitions">Definitions</h1>
+<p>Markdown does not have a native syntax for definitions like HTML’s <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, and <code>&lt;dd&gt;</code>. However, there are <strong>common conventions and workarounds</strong> used in various Markdown renderers (like GitHub or Markdown processors with plugin support).</p>
+<h3 id="1-basic-definition-format-plain-markdown">1. Basic Definition Format (Plain Markdown)</h3>
+<h4 id="white-check-mark-syntax-4">✅ Syntax</h4>
+<p>Use <strong>bold</strong> or <strong>italic</strong> for the term, followed by a colon and its definition:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#ebcb8b;">**Term**</span><span>: Definition of the term.
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="font-weight:bold;color:#ebcb8b;">**Markdown**</span><span>: A lightweight markup language for formatting text.
+</span><span style="font-weight:bold;color:#ebcb8b;">**GitHub**</span><span>: A platform for hosting and collaborating on code.
+</span></code></pre>
+<p><strong>Markdown</strong>: A lightweight markup language for formatting text.</p>
+<p><strong>GitHub</strong>: A platform for hosting and collaborating on code.</p>
+<p>✅ This is readable and compatible with all Markdown renderers.</p>
+<h3 id="2-bullet-list-format-for-definitions">2. Bullet List Format for Definitions</h3>
+<p>Use a bullet point with bolded terms and indented definitions:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Term**  
+</span><span style="color:#bf616a;">  Definition goes here.
+</span></code></pre>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Open Source**  
+</span><span style="color:#bf616a;">  Software that is freely available and can be modified by anyone.
+</span><span style="color:#bf616a;">
+</span><span style="color:#bf616a;">- </span><span style="font-weight:bold;color:#ebcb8b;">**Repository**  
+</span><span style="color:#bf616a;">  A storage location for software packages or source code.
+</span></code></pre>
+<ul>
+<li>
+<p><strong>Open Source</strong><br />
+Software that is freely available and can be modified by anyone.</p>
+</li>
+<li>
+<p><strong>Repository</strong><br />
+A storage location for software packages or source code.</p>
+</li>
+</ul>
+<p>✅ This approach improves visual separation and readability.</p>
+<h1 id="callouts">Callouts</h1>
+<p>Ever find yourself wanting to add extra styling to important information in your posts? Well, now you can with callout cards. Each callout card can include an emoji, any length of text with styles and links, and a custom background color.</p>
+<blockquote>
+<p>ℹ️
+Create your own platform on the web. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.</p>
+</blockquote>
+<blockquote>
+<p>✅
+Create your own platform on the web. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.</p>
+</blockquote>
+<blockquote>
+<p>⚠️
+Create your own platform on the web. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.</p>
+</blockquote>
+<blockquote>
+<p>🚫
+Create your own platform on the web. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.</p>
+</blockquote>
+<h1 id="quotes">Quotes</h1>
+<p>You can make quotes stand out with two types of blockquote styles that can be applied directly in the editor.</p>
+<blockquote>
+<p>Ghost is a fully open source, adaptable platform for building and running a modern online publication. We power blogs, magazines and journalists from Zappos to Sky News.</p>
+</blockquote>
+<h1 id="details-toggle">Details (Toggle)</h1>
+<p>Markdown doesn't support HTML <code>&lt;details&gt;</code> directly — we need to use a shortcode. Toggle elements are useful for FAQs, spoilers, code explanations, or optional sections in documents. To display one include this in your Markdown:</p>
+<p>✅ Syntax: wrap up the opening <code>&lt;detail&gt;</code> and closing <code>&lt;/detail&gt;</code> element withing <code>{{ }}</code></p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>  &lt; details summary=&quot;See the details&quot; &gt;
+</span><span>    1. Open the **file**  
+</span><span>    2. Edit the configuration  
+</span><span>    3. Save and close
+</span><span>  &lt;/details&gt;
+</span></code></pre>
+<p>📝 Example:</p>
+<p>{{&lt; details summary="See the details" &gt;}}</p>
+<ol>
+<li>Open the <strong>file</strong></li>
+<li>Edit the configuration</li>
+<li>Save and close
+{{&lt; /details &gt;}}</li>
+</ol>
+<h1 id="code-blocks">Code Blocks</h1>
+<p>Markdown supports inline code and fenced code blocks, allowing you to format and highlight source code clearly. This guide explains how to use them properly with examples in various programming languages.</p>
+<h3 id="1-inline-code">1. Inline code</h3>
+<h4 id="white-check-mark-syntax-5">✅ Syntax</h4>
+<p>Use backticks (`) to enclose short code snippets within a sentence:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>Use the </span><span style="color:#a3be8c;">`print()`</span><span> function to display output in Python.
+</span></code></pre>
+<p>Use the <code>print()</code> function to display output in Python.</p>
+<p>✅ Ideal for short commands, filenames, or variable names.</p>
+<h3 id="2-code-blocks">2. Code Blocks</h3>
+<h4 id="white-check-mark-syntax-6">✅ Syntax</h4>
+<p>Use triple backticks (```) to create a code block. Specify the language for syntax highlighting:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>    ```python 
+</span><span>        print(&quot;Hello, world!&quot;)
+</span><span>    ```
+</span></code></pre>
+<p>🧠 Tip: Always specify the language to improve readability.</p>
+<h4 id="examples">Examples</h4>
+<h5 id="python">Python</h5>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>  </span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">greet</span><span>(</span><span style="color:#bf616a;">name</span><span>):
+</span><span>    </span><span style="color:#96b5b4;">print</span><span>(</span><span style="color:#b48ead;">f</span><span>&quot;</span><span style="color:#a3be8c;">Hello, </span><span>{name}</span><span style="color:#a3be8c;">!</span><span>&quot;)
+</span></code></pre>
+<h5 id="javascript">JavaScript</h5>
+<pre data-lang="javascript" style="background-color:#2b303b;color:#c0c5ce;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>  </span><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">greet</span><span>(</span><span style="color:#bf616a;">name</span><span>) {
+</span><span>    </span><span style="color:#ebcb8b;">console</span><span>.</span><span style="color:#96b5b4;">log</span><span>(&quot;</span><span style="color:#a3be8c;">Hello, </span><span>&quot; + </span><span style="color:#bf616a;">name </span><span>+ &quot;</span><span style="color:#a3be8c;">!</span><span>&quot;);
+</span><span>  }
+</span></code></pre>
+<h5 id="html">HTML</h5>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span>  &lt;!</span><span style="color:#b48ead;">DOCTYPE </span><span style="color:#d08770;">html</span><span>&gt;
+</span><span>  &lt;</span><span style="color:#bf616a;">html</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">head</span><span>&gt;&lt;</span><span style="color:#bf616a;">title</span><span>&gt;My Page&lt;/</span><span style="color:#bf616a;">title</span><span>&gt;&lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">body</span><span>&gt;Hello World!&lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>  &lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<h5 id="css">CSS</h5>
+<pre data-lang="css" style="background-color:#2b303b;color:#c0c5ce;" class="language-css "><code class="language-css" data-lang="css"><span>  </span><span style="color:#bf616a;">body </span><span>{
+</span><span>    font-family: sans-serif;
+</span><span>    color: </span><span style="color:#96b5b4;">#333</span><span>;
+</span><span>  }
+</span></code></pre>
+<h1 id="tables">Tables</h1>
+<p>Markdown allows you to create simple, readable tables using a pipe (|) and dash (-) syntax. This guide explains the structure, alignment options, and advanced tips.</p>
+<h3 id="1-basic-table-structure">1. Basic Table Structure</h3>
+<h4 id="white-check-mark-syntax-7">✅ Syntax</h4>
+<p>Use | to separate columns and - to define the header:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>  | Column 1 | Column 2 | Column 3 |
+</span><span>  |----------|----------|----------|
+</span><span>  | Value 1  | Value 2  | Value 3  |
+</span><span>  | Value 4  | Value 5  | Value 6  |
+</span></code></pre>
+<table><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody>
+<tr><td>Value 1</td><td>Value 2</td><td>Value 3</td></tr>
+<tr><td>Value 4</td><td>Value 5</td><td>Value 6</td></tr>
+</tbody></table>
+<h3 id="2-aligning-text">2. Aligning Text</h3>
+<h4 id="white-check-mark-syntax-8">✅ Syntax</h4>
+<p>You can control column alignment by placing colons (:) in the separator row:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>  | Left Align | Center Align | Right Align |
+</span><span>  |:-----------|:------------:|------------:|
+</span><span>  | A          | B            | C           |
+</span></code></pre>
+<table><thead><tr><th style="text-align: left">Left Align</th><th style="text-align: center">Center Align</th><th style="text-align: right">Right Align</th></tr></thead><tbody>
+<tr><td style="text-align: left">A</td><td style="text-align: center">B</td><td style="text-align: right">C</td></tr>
+<tr><td style="text-align: left">D</td><td style="text-align: center">E</td><td style="text-align: right">F</td></tr>
+</tbody></table>
+<h3 id="3-escaping-pipes">3. Escaping Pipes (|)</h3>
+<h4 id="white-check-mark-syntax-9">✅ Syntax</h4>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>  | Language | Example             |
+</span><span>  |----------|---------------------|
+</span><span>  | Markdown | A </span><span style="color:#96b5b4;">\|</span><span> B </span><span style="color:#96b5b4;">\|</span><span> C         |
+</span></code></pre>
+<table><thead><tr><th>Language</th><th>Example</th></tr></thead><tbody>
+<tr><td>Markdown</td><td>A | B | C</td></tr>
+</tbody></table>
+<h1 id="media">Media</h1>
+<h3 id="1-images">1. Images</h3>
+<p>✅ Syntax (Standard Markdown)</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>  ![Alt text](image-url.jpg &quot;Optional Title&quot;)
+</span></code></pre>
+<p>📝 Example:</p>
+<p><img src="/images/image-example.jpg" alt="Alt text" title="Optional Title" /></p>
+<p>🧠 Tip:</p>
+<ul>
+<li>Alt text improves accessibility.</li>
+<li>The optional "Title" appears as a tooltip.</li>
+</ul>
+<h3 id="2-image-with-html-attributes">2. Image with HTML Attributes</h3>
+<p>Use HTML figure shortcode to specify size, style, or alignment:</p>
+<p>✅ Syntax: wrap up the folowing HTML withing <code>{{ }}</code></p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>  &lt; figure
+</span><span>    src=&quot;/images/image-example02.jpg&quot;
+</span><span>    alt=&quot;A photograph the Volcan Landscape Tenerife Spain&quot;
+</span><span>    caption=&quot;Volcan Landscape Tenerife Spain&quot;
+</span><span>    class=&quot;mx-auto max-w-md&quot;
+</span><span>  &gt;
+</span></code></pre>
+<p>{{&lt; figure
+src="/images/image-example02.jpg"
+alt="A photograph the Volcan Landscape Tenerife Spain"
+caption="Volcan Landscape Tenerife Spain"
+class="mx-auto max-w-md"</p>
+<blockquote>
+<p>}}</p>
+</blockquote>
+<h3 id="3-embedding-youtube-videos">3. Embedding Youtube Videos</h3>
+<p>Markdown does not support videos natively, so use a shortcode instead. To display a YouTube video with this URL: <code>https://www.youtube.com/watch?v=0RKpf3rK57I</code> include this in your Markdown:</p>
+<p>✅ Syntax: wrap up the folowing shortcode withing <code>{{ }}</code></p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>  &lt; youtube 0RKpf3rK57I &gt;
+</span></code></pre>
+<p>{{&lt; youtube 0RKpf3rK57I &gt;}}</p>
+<h3 id="4-embedding-youtube-with-html-attributes">4. Embedding Youtube with HTML Attributes</h3>
+<p>✅ Syntax: wrap up the folowing shortcode withing <code>{{ }}</code></p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>  &lt; youtube id=0RKpf3rK57I start=30 end=60 loading=lazy &gt;
+</span></code></pre>
+<p>{{&lt; youtube id=0RKpf3rK57I class="mx-auto max-w-lg h-96" loading=lazy &gt;}}</p>
+<h3 id="5-embedding-audio">5. Embedding Audio</h3>
+<p>Markdown doesn't support audio directly — we need to use a shortcode. To display an Audio player with include this in your Markdown:</p>
+<p>✅ Syntax: wrap up the folowing shortcode withing <code>{{ }}</code></p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>  &lt; audio src=&quot;/audio/audio-example.mp3&quot; &gt;
+</span></code></pre>
+<p>{{&lt; audio src="/audio/audio-example.mp3" &gt;}}</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

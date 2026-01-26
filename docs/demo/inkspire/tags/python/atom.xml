@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Inkspire - Python</title>
+    <subtitle>A elegant and modern theme for Zola</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/inkspire/tags/python/atom.xml" />
+    <link
+        rel="alternate"
+        type="text/html"
+        href="https://salif.github.io/zola-themes-collection/demo/inkspire/"
+    />
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated
+    >2025-11-13T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/inkspire/tags/python/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Zola vs Pelican: Rust Simplicity Meets Python Flexibility</title>
+        <published>2025-11-13T00:00:00+00:00</published>
+        <updated
+        >2025-11-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Jose Garcia
+            
+          </name>
+        </author>
+        
+        <link
+            rel="alternate"
+            type="text/html"
+            href="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-pelican-rust-simplicity-meets-python-flexibility/"
+        />
+        <id>https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-pelican-rust-simplicity-meets-python-flexibility/</id>
+        
+        <content
+            type="html"
+            xml:base="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-pelican-rust-simplicity-meets-python-flexibility/"
+        >&lt;p&gt;Pelican has been around since 2010, making it one of the oldest static site generators still actively maintained. It brought Python&#x27;s philosophy to static sites and has powered thousands of blogs. Zola is the new contender, built in Rust with a focus on speed and simplicity. Both are excellent tools, but they represent different eras and philosophies of web development.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installation-virtual-environments-vs-single-binary&quot;&gt;Installation: Virtual Environments vs Single Binary&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican is a Python package. The typical installation looks like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;python -m&lt;&#x2F;span&gt;&lt;span&gt; venv pelican-env
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;source&lt;&#x2F;span&gt;&lt;span&gt; pelican-env&#x2F;bin&#x2F;activate
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pip&lt;&#x2F;span&gt;&lt;span&gt; install pelican&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;markdown&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pelican-quickstart
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You need Python installed, you&#x27;ll create a virtual environment (or you should), and you&#x27;ll manage dependencies through pip. This is standard for Python projects, but it&#x27;s still setup overhead.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola is a single binary:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Download binary
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Add to PATH
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init my-site
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;No Python, no virtual environment, no pip. One executable that contains everything. Update Zola by downloading a new binary. Your project has no external dependencies.&lt;&#x2F;p&gt;
+&lt;p&gt;This difference matters more than it might seem. With Pelican, you&#x27;re managing Python versions, virtual environments, and dependency conflicts. With Zola, you download one file and you&#x27;re done.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;templating-both-use-jinja-style-syntax&quot;&gt;Templating: Both Use Jinja-Style Syntax&lt;&#x2F;h2&gt;
+&lt;p&gt;Here&#x27;s where things get interesting: both Pelican and Zola use Jinja-inspired templating.&lt;&#x2F;p&gt;
+&lt;p&gt;Pelican uses actual Jinja2, Python&#x27;s most popular templating engine. If you&#x27;ve worked with Flask or Django, you already know how to template in Pelican. The ecosystem of Jinja2 filters and extensions is available.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola uses Tera, which is based on Jinja2 but implemented in Rust. The syntax is nearly identical. If you know Jinja2, you&#x27;ll understand Tera immediately. The differences are minor—a few filters work differently, and some advanced Jinja2 features aren&#x27;t available.&lt;&#x2F;p&gt;
+&lt;p&gt;In practice, this means the transition from Pelican to Zola (or vice versa) involves minimal template rewriting. Your mental model transfers directly.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;build-speed-not-even-close&quot;&gt;Build Speed: Not Even Close&lt;&#x2F;h2&gt;
+&lt;p&gt;This is where Rust shows its strength.&lt;&#x2F;p&gt;
+&lt;p&gt;Pelican&#x27;s build speed is acceptable for small to medium sites. For larger sites—think hundreds or thousands of posts—build times can stretch into minutes. Python&#x27;s interpreted nature and Pelican&#x27;s plugin architecture add overhead.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola rebuilds sites in milliseconds. Even with thousands of pages, builds are measured in seconds, not minutes. During development, changes appear almost instantly. This difference becomes more pronounced as your site grows.&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re migrating from Pelican and suddenly your builds complete in a fraction of the time, that&#x27;s not a mistake—that&#x27;s Rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plugin-ecosystem-extensibility-vs-built-in-features&quot;&gt;Plugin Ecosystem: Extensibility vs Built-In Features&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican has a mature plugin ecosystem. Need RSS feeds? There&#x27;s a plugin. Want to integrate with external services? There&#x27;s probably a plugin. Need custom content processing? Write a Python plugin.&lt;&#x2F;p&gt;
+&lt;p&gt;This extensibility is Pelican&#x27;s strength. If you&#x27;re comfortable with Python, you can extend Pelican to do almost anything. The plugin API is well-documented, and there are dozens of existing plugins to learn from.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola takes the opposite approach: no plugins. Everything you need is built-in. Sass compilation? Included. Syntax highlighting? Built-in. Image processing? It&#x27;s there. Taxonomies and pagination? Already implemented.&lt;&#x2F;p&gt;
+&lt;p&gt;The trade-off is clear: Pelican gives you extensibility through Python. Zola gives you completeness through built-in features. If what you need is already in Zola, you&#x27;re set. If you need custom behavior, Pelican&#x27;s plugin system is more flexible.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;content-organization-and-metadata&quot;&gt;Content Organization and Metadata&lt;&#x2F;h2&gt;
+&lt;p&gt;Both use Markdown with front matter, but they organize content differently.&lt;&#x2F;p&gt;
+&lt;p&gt;Pelican&#x27;s content model is flexible but loose. You can organize files however you want, and Pelican will process them. Metadata is defined in the front matter, and you can add arbitrary custom fields. Categories and tags work as you&#x27;d expect from a blog platform.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola has a more structured content model with explicit sections and pages. The directory structure maps directly to URL structure. This is more opinionated but also more predictable. Taxonomies (categories, tags, etc.) are first-class concepts with dedicated configuration.&lt;&#x2F;p&gt;
+&lt;p&gt;Pelican&#x27;s flexibility is useful for complex or unusual site structures. Zola&#x27;s structure is clearer for straightforward blogs and documentation.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;python-integration-pelican-s-unique-advantage&quot;&gt;Python Integration: Pelican&#x27;s Unique Advantage&lt;&#x2F;h2&gt;
+&lt;p&gt;Here&#x27;s something Zola can&#x27;t match: Pelican is Python, which means you can integrate Python code directly.&lt;&#x2F;p&gt;
+&lt;p&gt;Want to process data with pandas and generate posts from it? Easy in Pelican. Need to pull data from a Python API client? Write a plugin. Want to use Python&#x27;s scientific or data visualization libraries? They&#x27;re available.&lt;&#x2F;p&gt;
+&lt;p&gt;This integration is powerful if you&#x27;re already in the Python ecosystem. If your workflow involves Python data processing, Jupyter notebooks, or scientific computing, Pelican lets you leverage those tools directly.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola offers no equivalent. It&#x27;s a standalone binary with no scripting layer. What you get is what&#x27;s built-in.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;theme-ecosystem&quot;&gt;Theme Ecosystem&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican has a substantial collection of themes accumulated over more than a decade. Some are dated, but there are mature, well-maintained options. The community has had years to refine designs.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola&#x27;s theme ecosystem is smaller and newer. There are good themes available, but fewer options overall. You&#x27;re more likely to build your own or heavily customize what exists.&lt;&#x2F;p&gt;
+&lt;p&gt;If you want to grab a theme and start writing immediately, Pelican offers more choices. If you prefer building your own design, both work fine.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;documentation-and-community&quot;&gt;Documentation and Community&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican&#x27;s documentation is comprehensive but shows its age. It&#x27;s complete, but finding specific information sometimes requires reading through multiple sections. The community is established—most questions have been answered somewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola&#x27;s documentation is modern, well-organized, and easier to navigate. It&#x27;s written for today&#x27;s web development practices. The community is smaller but active and helpful.&lt;&#x2F;p&gt;
+&lt;p&gt;Stack Overflow and blog posts favor Pelican due to its age, but Zola&#x27;s GitHub discussions are responsive.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;multilingual-sites&quot;&gt;Multilingual Sites&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican supports multiple languages through configuration and the i18n subsites plugin. It works but requires setup and understanding of how Pelican handles translations.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola has built-in multilingual support that requires minimal configuration. You create content in different languages, and Zola handles routing automatically. It&#x27;s simpler and more intuitive.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;&#x2F;h2&gt;
+&lt;p&gt;Pelican uses a Python configuration file (&lt;code&gt;pelicanconf.py&lt;&#x2F;code&gt;). It&#x27;s flexible—you can run Python code in your config—but it&#x27;s also verbose. Configuration can become complex.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola uses TOML. It&#x27;s simpler and more declarative. What you see is what you get. There&#x27;s no code execution in config files, which makes them easier to understand but less flexible.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deployment-and-ci-cd&quot;&gt;Deployment and CI&#x2F;CD&lt;&#x2F;h2&gt;
+&lt;p&gt;Both deploy easily to static hosting, but there&#x27;s a practical difference.&lt;&#x2F;p&gt;
+&lt;p&gt;Pelican requires a Python environment in your CI&#x2F;CD pipeline. You install Python, set up a virtual environment, install dependencies, then build. This works fine but adds steps.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola is a single binary. Download it in CI, run it, done. Many CI systems have Zola pre-installed or available through simple package managers. The deployment script is shorter.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;when-to-choose-pelican&quot;&gt;When to Choose Pelican&lt;&#x2F;h2&gt;
+&lt;p&gt;Pick Pelican if you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Are already comfortable with Python and its ecosystem&lt;&#x2F;li&gt;
+&lt;li&gt;Need to integrate Python libraries or data processing&lt;&#x2F;li&gt;
+&lt;li&gt;Want extensive plugin extensibility&lt;&#x2F;li&gt;
+&lt;li&gt;Prefer proven, mature technology&lt;&#x2F;li&gt;
+&lt;li&gt;Need specific plugins that already exist&lt;&#x2F;li&gt;
+&lt;li&gt;Work in a Python-heavy environment&lt;&#x2F;li&gt;
+&lt;li&gt;Don&#x27;t mind managing Python dependencies&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;when-to-choose-zola&quot;&gt;When to Choose Zola&lt;&#x2F;h2&gt;
+&lt;p&gt;Pick Zola if you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Want zero-dependency installation and deployment&lt;&#x2F;li&gt;
+&lt;li&gt;Value fast build times, especially for larger sites&lt;&#x2F;li&gt;
+&lt;li&gt;Prefer built-in features over plugins&lt;&#x2F;li&gt;
+&lt;li&gt;Want straightforward multilingual support&lt;&#x2F;li&gt;
+&lt;li&gt;Like modern, clean documentation&lt;&#x2F;li&gt;
+&lt;li&gt;Need simple configuration&lt;&#x2F;li&gt;
+&lt;li&gt;Want to avoid dependency management&lt;&#x2F;li&gt;
+&lt;li&gt;Don&#x27;t require Python-specific integrations&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;migration-path&quot;&gt;Migration Path&lt;&#x2F;h2&gt;
+&lt;p&gt;If you&#x27;re considering moving from Pelican to Zola, the good news is that templates will mostly transfer. Both use Jinja-style syntax, so your template knowledge carries over. Content is Markdown in both, though you&#x27;ll need to adjust front matter format.&lt;&#x2F;p&gt;
+&lt;p&gt;The main work is replicating any custom Pelican plugins you rely on. If you use standard features, migration is straightforward. If you have complex Python integrations, staying with Pelican might make more sense.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-real-question&quot;&gt;The Real Question&lt;&#x2F;h2&gt;
+&lt;p&gt;Choosing between Pelican and Zola isn&#x27;t about which is objectively better—it&#x27;s about which fits your context.&lt;&#x2F;p&gt;
+&lt;p&gt;Are you embedded in the Python ecosystem? Do you need Python integrations? Do you value extensibility through code? Pelican makes sense.&lt;&#x2F;p&gt;
+&lt;p&gt;Do you want simplicity? Do build times matter? Do you prefer minimal dependencies and modern tooling? Zola is compelling.&lt;&#x2F;p&gt;
+&lt;p&gt;Both will give you a fast static site. Pelican does it with Python&#x27;s flexibility and maturity. Zola does it with Rust&#x27;s speed and simplicity.&lt;&#x2F;p&gt;
+&lt;p&gt;Pick based on your workflow and priorities, not just the tool&#x27;s features. Sometimes the right choice is the one that gets out of your way and lets you focus on writing.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

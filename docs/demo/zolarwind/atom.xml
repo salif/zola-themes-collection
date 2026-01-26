@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title></title>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-01-14T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Search</title>
+        <published>2026-01-14T00:00:00+00:00</published>
+        <updated>2026-01-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/search/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/search/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/search/"></content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Diagrams with Mermaid</title>
+        <published>2023-09-26T00:00:00+00:00</published>
+        <updated>2023-09-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/">&lt;h2 id=&quot;what-are-mermaid-diagrams&quot;&gt;What are Mermaid diagrams&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&quot;&gt;Mermaid&lt;&#x2F;a&gt; is a syntax similar to Markdown where you can use text to describe and automatically generate diagrams.
+With Mermaid, you can generate
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;flowchart.html&quot;&gt;Flow charts&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;classDiagram.html&quot;&gt;UML diagrams&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;pie.html&quot;&gt;Pie charts&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;gantt.html&quot;&gt;Gantt diagrams&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;entityRelationshipDiagram.html&quot;&gt;Entity Relationship diagrams&lt;&#x2F;a&gt;,
+and more.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-entity-relationship-diagram-example&quot;&gt;An Entity Relationship diagram example&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;
+  
+    %%{ init: {&#x27;theme&#x27;: &#x27;forest&#x27;} }%%
+  
+  erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINEITEM : contains
+    PRODUCT ||--o{ LINEITEM : is_listed_in
+    CUSTOMER {
+        string Name
+        string Email
+        string Address
+    }
+    PRODUCT {
+        string ProductName
+        float Price
+    }
+    ORDER {
+        date DateOrdered
+        string Status
+    }
+    LINEITEM {
+        int Quantity
+    }
+&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;using-mermaid-in-your-blog-post&quot;&gt;Using Mermaid in your blog post&lt;&#x2F;h2&gt;
+&lt;p&gt;The diagram shortcode allows you to easily embed Mermaid diagrams in your blog posts, with an option to configure its appearance.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
+&lt;p&gt;To use the shortcode in your blog post, you would use the following format:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Replace &lt;em&gt;Your Mermaid diagram code here&lt;&#x2F;em&gt; with your actual Mermaid diagram code.&lt;&#x2F;p&gt;
+&lt;p&gt;To load the necessary JavaScript to render the Mermaid diagram, you need to enable it in the front matter of your blog post by setting the value for &lt;code&gt;extra.diagram&lt;&#x2F;code&gt; to &lt;code&gt;true&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;configuring-the-appearance&quot;&gt;Configuring the Appearance&lt;&#x2F;h3&gt;
+&lt;p&gt;The shortcode supports an optional &lt;code&gt;init&lt;&#x2F;code&gt; parameter, that allows you to specify configuration options for Mermaid,
+particularly changing the appearance of the diagrams through the theme.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, to apply the &lt;code&gt;forest&lt;&#x2F;code&gt; theme:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;providing-init-configuration&quot;&gt;Providing init Configuration&lt;&#x2F;h3&gt;
+&lt;p&gt;When using the &lt;code&gt;init&lt;&#x2F;code&gt; parameter, the configuration should be a string wrapped in double quotes.
+Inside this string, use single quotes for keys and values.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a more advanced example with multiple configuration options:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;, &amp;#39;themeVariables&amp;#39;: {&amp;#39;primaryColor&amp;#39;: &amp;#39;#FF0000&amp;#39;}}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In this example, we&#x27;re using the &lt;code&gt;forest&lt;&#x2F;code&gt; theme and changing the primary color to red (&lt;code&gt;#FF0000&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;: Ensure that you use single quotes inside the double quotes for the configuration to work correctly.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;&#x2F;h3&gt;
+&lt;p&gt;Use the shortcode by enclosing your Mermaid diagram code with it.
+To change the look of the Mermaid theme, provide values for the &lt;code&gt;init&lt;&#x2F;code&gt; parameter.
+Always enclose the &lt;code&gt;init&lt;&#x2F;code&gt; value with double quotes, and use single quotes inside the configuration string.
+With this shortcode in place, integrating and customizing Mermaid diagrams in your blog posts becomes easy.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;explaining-mermaid-diagram-code&quot;&gt;Explaining Mermaid diagram code&lt;&#x2F;h2&gt;
+&lt;p&gt;Here is how the diagram rendered above is embedded in this blog post as a code block.
+Because it is the same code as the diagram above, extra care has to be taken to prevent Mermaid from rendering it as a diagram.
+There is a &lt;code&gt;showcode()&lt;&#x2F;code&gt; shortcode to prevent Mermaid from rendering it as a diagram.
+Use &lt;code&gt;SC_OPEN&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;SC_CLOSE&lt;&#x2F;code&gt; for &lt;code&gt;{%&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;%}&lt;&#x2F;code&gt; and &lt;code&gt;EX_OPEN&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;EX_CLOSE&lt;&#x2F;code&gt; for &lt;code&gt;{{&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;}}&lt;&#x2F;code&gt; inside the fenced block.&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    CUSTOMER&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;o&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; places&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; contains&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    PRODUCT&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;o&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; is_listed_in&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    CUSTOMER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Name&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Email&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Address&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    PRODUCT&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; ProductName&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        float&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Price&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        date&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; DateOrdered&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Status&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        int&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Quantity&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Internal Rate of Return Calculation</title>
+        <published>2023-07-29T00:00:00+00:00</published>
+        <updated>2023-07-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/calculating-internal-interest-rate/">&lt;p&gt;The internal rate of return (IRR) is a potent financial measure used in financial analysis, accounting, and portfolio management to gauge the profitability of investments.
+It&#x27;s like the heartbeat of an investment -- an indicator of health, the higher it is, the better the investment.
+This powerful tool can help investors compare different investment options, assisting in making informed decisions about where to allocate their capital.
+Especially when cash flows are irregular, as often is the case in real-world scenarios, IRR becomes invaluable.
+This article will first explain the concept and calculations behind IRR and then demonstrate how to implement an IRR algorithm in Rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;irr-vs-xirr-terminology&quot;&gt;IRR vs. XIRR terminology&lt;&#x2F;h2&gt;
+&lt;p&gt;The IRR is the rate of return that makes the net present value (NPV) of all cash flows (both positive and negative) from a particular investment equal to zero.
+It&#x27;s sometimes used for cash flows at regular, usually annual, intervals.
+I will not make this assumption in this article.
+While Microsoft uses the name XIRR for its Excel function, I will use the term IRR throughout this article, even though the cash flows do not occur at regular intervals.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example-data-and-validation&quot;&gt;Example data and validation&lt;&#x2F;h2&gt;
+&lt;p&gt;A crucial part of implementing a financial algorithm like IRR is validation -- that is, making sure that your algorithm is producing correct and expected results.
+One effective way to validate your implementation is by comparing its outputs to those of &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;support.microsoft.com&#x2F;en-gb&#x2F;office&#x2F;xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d&quot;&gt;Microsoft Excel&#x27;s XIRR function&lt;&#x2F;a&gt;.
+I will use the data from the Excel example.
+Using Excel&#x27;s XIRR function to compute the internal rate of return for this specific data set yields a result of 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$37.34\%$&lt;&#x2F;span&gt;
+
+.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&quot;text-align: right&quot;&gt;$\textbf{i}$&lt;&#x2F;th&gt;&lt;th&gt;ISO Date $\textbf{d}$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Years since first cash flow $\textbf{y}$&lt;&#x2F;th&gt;&lt;th style=&quot;text-align: right&quot;&gt;Payment $\textbf{p}$&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;1&lt;&#x2F;td&gt;&lt;td&gt;2008-01-01&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;0.0000&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;-10,000&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;2&lt;&#x2F;td&gt;&lt;td&gt;2008-03-01&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;0.1644&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2,750&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;3&lt;&#x2F;td&gt;&lt;td&gt;2008-10-30&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;0.8301&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;4,250&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;4&lt;&#x2F;td&gt;&lt;td&gt;2009-02-15&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1.1260&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;3,250&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td style=&quot;text-align: right&quot;&gt;5&lt;&#x2F;td&gt;&lt;td&gt;2009-04-01&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;1.2493&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;2,750&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;h2 id=&quot;how-irr-works&quot;&gt;How IRR works&lt;&#x2F;h2&gt;
+&lt;p&gt;The IRR is calculated by finding the rate of return that would make the net present value (NPV) of an investment equal to zero.
+The NPV is the sum of the present values of all future cash flows from an investment.
+The derivative of the NPV is used to find the IRR.
+The derivative of the NPV is the rate of change of the NPV with respect to the interest rate.&lt;&#x2F;p&gt;
+&lt;p&gt;The IRR algorithm is an instance of the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Newton%27s_method&quot;&gt;Newton-Raphson method&lt;&#x2F;a&gt;,
+which is a root-finding algorithm that produces successively better approximations to the roots (or zeroes) of a real-valued function.
+To calculate the IRR, you need an array with pairs of data: one is the date of a cash flow, and the other is its payment amount.
+You also need an initial guess for the IRR rate, which is often set as 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$10\%$&lt;&#x2F;span&gt;
+
+ or $0.1$.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the general process of the algorithm:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Compute the net present value (NPV)&lt;&#x2F;strong&gt;: The NPV is calculated by summing the present values of the individual cash flows.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Compute the derivative of the NPV&lt;&#x2F;strong&gt;: The derivative of the NPV with respect to the rate is created by differentiating the NPV formula and summing these values.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Update the guess&lt;&#x2F;strong&gt;: The next guess for the rate is calculated by subtracting the ratio of the NPV to its derivative from the current guess.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Iterate until convergence&lt;&#x2F;strong&gt;: These steps are repeated until the change in guesses is below a certain tolerance, or until a maximum number of iterations is reached.
+At this point, the guess for the rate is considered to be the IRR.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;compute-the-net-present-value-npv&quot;&gt;Compute the net present value (NPV)&lt;&#x2F;h2&gt;
+&lt;p&gt;Here, $y_i$ represents the number of years that have passed since the first cash flow,
+calculated as the difference in days between the date of the $i$-th cash flow $d_i$ and the date of the first cash flow $d_1$,
+divided by 365 (days in one year).
+I have pre-calculated it in the table above:&lt;&#x2F;p&gt;
+&lt;p&gt;$$y_i = \frac{d_i - d_1}{365}$$&lt;&#x2F;p&gt;
+&lt;p&gt;The NPV is the sum of all payments, where the correct interest rate $irr$ is applied.
+Its value is 0 after all transaction have been concluded:&lt;&#x2F;p&gt;
+&lt;p&gt;$$\mathit{NPV} = \sum_{i = 1}^{m} \frac{p_i}{(1 + irr)^{y_i}}$$&lt;&#x2F;p&gt;
+&lt;p&gt;When you &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.wolframalpha.com&#x2F;input?i=plot+-10000*%281%2F%281+%2B+x%29%5E%280.0000%29%29+%2B+2750*%281%2F%281+%2B+x%29%5E%280.1644%29%29+%2B+4250*%281%2F%281+%2B+x%29%5E%280.8301%29%29+%2B+3250*%281%2F%281+%2B+x%29%5E%281.1260%29%29+%2B+2750*%281%2F%281+%2B+x%29%5E%281.2493%29%29+from+x%3D-0.1+to+0.9&quot;&gt;plot&lt;&#x2F;a&gt; the NPV function as a function of $irr$,
+you are essentially varying the interest rate and observing how it affects the NPV.
+Here&#x27;s what you see on the graph below, which plots the NPV as a function of the rate with the values from the table above:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;X-axis&lt;&#x2F;strong&gt;: The x-axis represents the interest rate $irr$.
+It typically ranges from 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$0\%$&lt;&#x2F;span&gt;
+
+ to a reasonable upper limit, depending on the context of your problem.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Y-axis&lt;&#x2F;strong&gt;: The y-axis represents the net present value NPV.
+It&#x27;s the cumulative sum of the discounted cash flows according to the given formula.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shape of the curve&lt;&#x2F;strong&gt;: The curve of the NPV function will generally be downward-sloping.
+This is because as you increase the interest rate $irr$, the present value of future cash flows decreases.
+Higher interest rates mean that future cash flows are being discounted more heavily, which reduces their present value.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Break-even point&lt;&#x2F;strong&gt;: There will be a point on the graph where the NPV curve intersects the x-axis.
+It&#x27;s where our $irr$ satisfies the condition $\mathit{NPV} = 0$.
+For our data, it is somewhere between $0.35$ and $0.40$, or 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$35\%$&lt;&#x2F;span&gt;
+
+ and 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$40\%$&lt;&#x2F;span&gt;
+
+.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;div class=&quot;light-dark-image&quot;&gt;
+  &lt;img src=&quot;irr-npv-function-light.webp&quot; alt=&quot;Plot of the NPV as a function of the rate with the values from the table&quot; &#x2F;&gt;
+  &lt;img src=&quot;irr-npv-function-dark.webp&quot; alt=&quot;Plot of the NPV as a function of the rate with the values from the table&quot; &#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;The above formula is a sum of function terms.
+Applying the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Superposition_principle&quot;&gt;superposition principle&lt;&#x2F;a&gt;,
+we can split the sum into individual function terms, which look all the same.
+For each cash flow, we have a function term, which is the present value of the cash flow.
+The important part is that we can apply this principle to the NPV function &lt;strong&gt;and&lt;&#x2F;strong&gt; the derivative of the NPV function.&lt;&#x2F;p&gt;
+&lt;p&gt;With $irr$ written as $x$, each function term looks like this, where $p_i$ and $y_i$ are just constants.
+$f_i(x)$ represents the NPV for a single cash flow, the $i$-th one:&lt;&#x2F;p&gt;
+&lt;p&gt;$$f_i(x) = \frac{p_i}{(1 + x)^{y_i}}$$&lt;&#x2F;p&gt;
+&lt;p&gt;The amount $p_i$ is discounted in the NPV calculation to reflect the time value of money. Here&#x27;s an explanation for why that&#x27;s done:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Time value of money&lt;&#x2F;strong&gt;: Money available today is worth more than the same amount in the future because of its potential earning capacity.
+This core principle of finance holds that, provided money can earn interest, any amount of money is worth more the sooner it is received.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Discounting future cash flows&lt;&#x2F;strong&gt;: In the context of the internal rate of return (IRR) and net present value (NPV), this principle is applied to future cash flows.
+The $p_i$ represents a payment (cash flow) at some future date. To compare this future value to present values,
+it needs to be discounted back to its value in today&#x27;s terms.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;The discount factor&lt;&#x2F;strong&gt;: The expression $\frac{1}{(1 + x)^{y_i}}$ serves as a discount factor, where $x$ is the internal rate of return, and $y_i$ is the number of years that have passed since the first cash flow.
+This factor is derived from the formula for compounding interest in reverse (discounting rather than compounding).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sum of discounted payments&lt;&#x2F;strong&gt;: The NPV is the sum of these discounted payments. By discounting each future cash flow back to its present value,
+the NPV provides a consistent basis for comparing the value of cash flows across different time periods.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Understanding the equation&lt;&#x2F;strong&gt;: The equation $f_i(x) = \frac{p_i}{(1 + x)^{y_i}}$ represents the present value of the $i$-th cash flow.
+It shows how each cash flow is discounted back to present value terms using the discount factor.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Discounting the $p_i$ in the NPV calculation allows for a proper comparison of cash flows across different time periods,
+taking into account the time value of money and the specific internal rate of return (IRR) required from the investment.
+It ensures that future cash flows are appropriately weighed against the potential earning capacity of money in the present.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;but-what-happens-if&quot;&gt;But what happens if ...&lt;&#x2F;h3&gt;
+&lt;p&gt;The expression $(1 + x)^{y_i}$ can become a problem if $x &amp;lt; -1$ (less than 
+
+
+
+
+
+&lt;span class=&quot;math math-inline&quot;&gt;$-100\%$&lt;&#x2F;span&gt;
+
+), because raising a negative number to a non-integer power will result in a complex number.
+Within the realm of real numbers, this operation is undefined.
+For example, consider a case where $x = -1.1$ and $y_i$ is a floating point number like $0.4$.
+Then, $(1 + x)$ will be negative, and raising it to the $y_i$ power &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.wolframalpha.com&#x2F;input?i=%281+-+1.1%29%5E%280.4%29&quot;&gt;produces a complex value&lt;&#x2F;a&gt;:
+${(1 - 1.1)}^{0.4} \approx 0.12 + 0.38 i$&lt;&#x2F;p&gt;
+&lt;p&gt;In the context of finance and the calculation of IRR, it doesn&#x27;t make sense to have complex numbers as they don&#x27;t have a practical interpretation in terms of cash flows or discount rates.
+Therefore, you would typically ensure that the rate $x$ stays within the range where the calculation remains within the realm of real numbers.
+If you&#x27;re working with cash flows and discount rates, you may want to either avoid or handle situations where $x &amp;lt; -1$ by constraining the value of $x$ within a reasonable range or taking some other specific action if $x$ falls outside that range.&lt;&#x2F;p&gt;
+&lt;p&gt;In practice, it&#x27;s rare that you would come across this scenario.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;compute-the-derivative-of-the-npv&quot;&gt;Compute the derivative of the NPV&lt;&#x2F;h2&gt;
+&lt;p&gt;We can now apply the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.wolframalpha.com&#x2F;input?i=derivative+of+a+%2F+%28%281+%2B+x%29%5Eb%29&quot;&gt;basic differentiation rules&lt;&#x2F;a&gt; to get the derivative of $f_i(x)$.
+It represents the derivative of the NPV for a single cash flow, also the $i$-th one:&lt;&#x2F;p&gt;
+&lt;p&gt;$$f_i&#x27;(x) = \frac{-y_i \cdot p_i}{(1 + x)^{y_i + 1}}$$&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;update-the-guess&quot;&gt;Update the guess&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Newton%27s_method&quot;&gt;Newton-Raphson method&lt;&#x2F;a&gt; is an iterative process used to locate the roots of a differentiable function, i.e. a solution for $x$ where $f(x) = 0$.
+The method begins with an initial estimate $x_n$, which is then refined into a more accurate guess, $x_{n+1}$.
+This stage is where the NPV and its derivative come into play.
+Instead of solely employing $f_i(x_n)$ and $f_i&#x27;(x_n)$ for a single cash flow, we incorporate all the cash flows by adding up the NPV terms and derivative terms respectively:&lt;&#x2F;p&gt;
+&lt;p&gt;$$x_{n+1} = x_{n} - \frac{\sum_{i = 1}^{m} f_i(x_n)}{\sum_{i = 1}^{m} f_i&#x27;(x_n)} $$&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;iterate-until-convergence&quot;&gt;Iterate until convergence&lt;&#x2F;h2&gt;
+&lt;p&gt;Instead of improving the result indefinitely, you stop when the difference between $x_n$ and $x_{n+1}$ is smaller than or equal to a given $\epsilon$, i.e. $\left| x_n - x_{n+1} \right| \le \epsilon$.
+It&#x27;s usually a very small number, like $0.000001$ ($1.0 e^{-6}$).
+This is the value used in Microsoft Excel&#x27;s XIRR function.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s also worth noting that despite using the exact derivative, the IRR algorithm is still an approximation method.
+It may not always converge to a solution, especially for cash flow series that have multiple changes in sign.
+In these cases, it may be necessary to provide a good initial guess for the rate, or to use a different method to compute the internal rate of return.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;implementation-in-rust&quot;&gt;Implementation in Rust&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s move towards translating our theoretical understanding into a concrete implementation using Rust.
+We&#x27;ll focus on implementing the IRR calculation algorithm by applying the findings and formulas mentioned in the previous sections.
+The final output should be close to Excel&#x27;s XIRR function result within an acceptable tolerance range.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; We use the chrono crate for date handling: https:&#x2F;&#x2F;docs.rs&#x2F;chrono&#x2F;latest&#x2F;chrono&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;use&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; chrono&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;prelude&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Function to calculate the number of days between two dates&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; days_between&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;start_date&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; NaiveDate&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end_date&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; NaiveDate&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; i64&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate the duration between the two dates&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; duration&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end_date&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;signed_duration_since&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;start_date&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Return the duration in days&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;    duration&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;num_days&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Main function to calculate the internal rate of return&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; calculate_irr&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; initial_guess&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Start with initial guess for the IRR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    let&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage&quot;&gt; mut&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; initial_guess&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    const&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-other&quot;&gt; MAX_TRIES&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; usize&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    const&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-other&quot;&gt; EPSILON&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;e&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;-&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;6&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Loop until a maximum number of iterations is reached&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; _&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; in&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;..&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-other&quot;&gt;MAX_TRIES&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;        &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate NPV and its derivative for each cash flow and sum them up&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;        let&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;            .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;                let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; fx&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1_&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;powf&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;*&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;                  &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; NPV of the cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;                let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;-&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1_&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;powf&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt; &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Derivative of NPV                                                       &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;                (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;                                                    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Return both values for a single cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;            }&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;            &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Sum up all NPVs and derivatives for all cash flows (reduce to a tuple of two sums)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;            .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;fold&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0_&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0_&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; |&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx_acc&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx_acc&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx_acc&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; fx&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx_acc&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;        &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate the new guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;        let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; new_x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; fx&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;        &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate the difference between the new and the old guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;        let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; epsilon&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;new_x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;abs&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;        &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; If the difference is smaller than or equal to the tolerance, we are done&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;        if&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; epsilon&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;lt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-other&quot;&gt; EPSILON&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;            return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;        &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Continue the loop with the new guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; new_x&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Return a non-number if the algorithm didn&amp;#39;t converge (see &amp;quot;Iterate until convergence&amp;quot; in article)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;    f64&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-other&quot;&gt;NAN&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Define the main function and our example transactions&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; main&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Example from Microsoft Excel documentation:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; https:&#x2F;&#x2F;support.microsoft.com&#x2F;en-gb&#x2F;office&#x2F;xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; The internal rate of return is 0.373362535 or 37.34%&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; cashflows&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; vec!&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;NaiveDate&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;from_ymd_opt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2008&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  1&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;10_000&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;NaiveDate&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;from_ymd_opt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2008&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  3&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   2_750&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;NaiveDate&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;from_ymd_opt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2008&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 10&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 30&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   4_250&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;NaiveDate&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;from_ymd_opt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2009&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  2&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 15&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   3_250&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;        (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;NaiveDate&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;::&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;from_ymd_opt&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2009&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  4&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;  1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   2_750&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;    ]&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Pre-calculate the years since first cash flow for each cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; Vec&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; cashflows&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;iter&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;        .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;date&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;days_between&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;cashflows&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;date&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; as&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; f64&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 365&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;amount&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;        .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;collect&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Call our IRR calculation function and print the result&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Expected result is 37.34%&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;    println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;IRR with Newton-Raphson: &lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;:.2&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; calculate_irr&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;transactions&lt;&#x2F;span&gt;&lt;span&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-punctuation z-separator&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;calculate_irr&lt;&#x2F;code&gt; function is where the heart of our IRR calculation lives.
+It starts by defining the initial guess for the IRR, then enters a loop that calculates the new guess, checks for convergence, and continues the loop if not converged.
+Finally, if the algorithm fails to converge, it returns a non-number.
+The main function uses an example transaction set and calls our &lt;code&gt;calculate_irr&lt;&#x2F;code&gt; function.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;bonus-implementation-in-javascript&quot;&gt;Bonus: implementation in JavaScript&lt;&#x2F;h2&gt;
+&lt;p&gt;JavaScript runs natively in all modern browsers and is the &lt;em&gt;lingua franca&lt;&#x2F;em&gt; of the web.
+By translating the Rust code into JavaScript, the IRR calculation will be easily usable on virtually any device, regardless of operating system or hardware.
+This way, it should be possible to use it in a web application, or even in a mobile app using a framework like &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;reactnative.dev&quot;&gt;React Native&lt;&#x2F;a&gt;.
+Maybe you want to write a financial app that runs on iOS, Android, and the web?&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Function to calculate the number of days between two dates&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt;function&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; daysBetween&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;start&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; end&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; millisecondsPerDay&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1000&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 60&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 60&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 24&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; millisBetween&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;getTime&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; start&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;getTime&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; millisBetween&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; millisecondsPerDay&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Main function to calculate the internal rate of return&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt;function&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; calculateIRR&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; initialGuess&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;  &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Start with initial guess for the IRR&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; initialGuess&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; MAX_TRIES&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; EPSILON&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0e-6&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;  &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Loop until a maximum number of iterations is reached&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  for&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tries&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tries&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; MAX_TRIES&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tries&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +=&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate NPV and its derivative for each cash flow and sum them up&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    const&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; fxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; dfxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; transactions&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;      .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;map&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;        const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; fx&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;*&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;                      &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; NPV of the cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;        const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;-&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;*&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;tx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;years&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt; &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Derivative of NPV&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;        return&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; fx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;                                                  &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Return both values for a single cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;      }&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;      &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Sum up all NPVs and derivatives for all cash flows (reduce to an object with two sums)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;      .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;reduce&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;acc&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; obj&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; fxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; acc&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; obj&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;fx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; dfxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; acc&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;dfxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; obj&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;dfx&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; fxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; dfxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate the new guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; xNew&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; fxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; dfxs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Calculate the difference between the new and the old guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;    const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; epsilon&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Math&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;abs&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;xNew&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; If the difference is smaller than or equal to the tolerance, we are done&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;epsilon&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;lt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; EPSILON&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;      return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;    &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Continue the loop with the new guess&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;    x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; xNew&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;  }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;  &#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Return a non-number if the algorithm didn&amp;#39;t converge&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-language&quot;&gt; NaN&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Example from Microsoft Excel documentation:&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; https:&#x2F;&#x2F;support.microsoft.com&#x2F;en-gb&#x2F;office&#x2F;xirr-function-de1242ec-6477-445b-b11b-a303ad9adc9d&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; The internal rate of return is 0.373362535 or 37.34%&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; cashflows&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; new&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; Date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;2008-01-01&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;10000&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; new&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; Date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;2008-03-01&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   2750&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; new&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; Date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;2008-10-30&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   4250&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; new&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; Date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;2009-02-15&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   3250&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  {&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; new&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; Date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;2009-04-01&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;   2750&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;00&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Pre-calculate the years since first cash flow for each cash flow&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; cashflows&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;  .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;cf&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; years&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; daysBetween&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;cashflows&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;0&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;]&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; cf&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;date&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 365&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member&quot;&gt; amount&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-separator&quot;&gt;:&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; cf&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-object z-member z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;amount&lt;&#x2F;span&gt;&lt;span&gt; }&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Call our IRR calculation function and print the result&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Expected result is 37.34%&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;console&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;`&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;IRR with Newton-Raphson: &lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-punctuation z-definition z-template-expression&quot;&gt;${&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;calculateIRR&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;transactions&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 100&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;toFixed&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-meta z-embedded&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-string z-punctuation z-definition z-template-expression&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;`&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;The internal rate of return (IRR) is an instrumental financial measure that helps investors compare and decide between different investment opportunities.
+Calculating it can get complex due to irregular cash flows, making a detailed understanding of the underlying algorithm crucial.
+This article dived into the mathematics behind IRR calculation and provided a concrete implementation using the Rust programming language.
+Remember, IRR is not just a number but an insight into the potential of an investment, assisting you in making informed financial decisions.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have any questions, need further clarification, or want to give feedback: please let me know.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The Game of Fifteen</title>
+        <published>2020-06-11T00:00:00+00:00</published>
+        <updated>2020-06-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/game-of-fifteen/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/game-of-fifteen/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/game-of-fifteen/">&lt;p&gt;The Game of Fifteen is a sliding puzzle that consists of a square with tiles numbered from 1 to 15 in random order with one tile missing.
+To solve the puzzle, you must place the tiles in order by moving tiles to the empty space.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;how-to-play&quot;&gt;How to play&lt;&#x2F;h2&gt;
+&lt;p&gt;Play the game online by clicking&#x2F;tapping on the tile you want to move.
+Only tiles neighboring the empty space can be moved.
+Once you solve the puzzle, the tiles will not move anymore.
+Just play a new game by clicking the button.
+I can guarantee you that every game presented here is solvable.
+Read below for an explanation.&lt;&#x2F;p&gt;
+&lt;p&gt;Hint: if your browser doesn&#x27;t display the board correctly, try clearing your browser cache and try again.&lt;&#x2F;p&gt;
+&lt;div id=&quot;board&quot;&gt;
+    &lt;div class=&quot;m-4 grid grid-flow-row grid-cols-4 grid-rows-4 h-64 w-64 gap-1&quot;&gt;
+        &lt;div id=&quot;f0&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f1&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f2&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f3&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f4&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f5&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f6&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f7&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f8&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f9&quot;  class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f10&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f11&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f12&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f13&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f14&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;f15&quot; class=&quot;&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;mt-4&quot;&gt;
+    &lt;button id=&quot;playButton&quot; class=&quot;py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-neutral-950 bg-primary-300 shadow-sm hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-950 active:bg-primary-600 transition duration-150 ease-in-out&quot;&gt;
+        new game
+    &lt;&#x2F;button&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;parity-of-a-permutation&quot;&gt;Parity of a permutation&lt;&#x2F;h2&gt;
+&lt;p&gt;For the Game of Fifteen, a permutation of the numbers 1 to 15 is a state of the game if read line by line - like a book.
+Some smart people have figured out, that an even parity (is dividable by 2, like 42) is an invariant of a solvable permutation of the Game of Fifteen.
+In computer science, an invariant is a condition that is always true, i.e. doesn&#x27;t change for a section of code.&lt;&#x2F;p&gt;
+&lt;p&gt;The parity of a permutation is simply the number of inversions.
+An inversion happens when an element with a lower index has a higher value than a value at a higher index.&lt;&#x2F;p&gt;
+&lt;p&gt;Examples:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1, 2, 3&lt;&#x2F;code&gt; has no inversions, all elements are in order&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;2, 3, 1&lt;&#x2F;code&gt; has two inversions, because &lt;code&gt;2&lt;&#x2F;code&gt; is greater than &lt;code&gt;1&lt;&#x2F;code&gt; and &lt;code&gt;3&lt;&#x2F;code&gt; is greater than &lt;code&gt;1&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;1, 3, 2&lt;&#x2F;code&gt; has only one inversion, &lt;code&gt;3&lt;&#x2F;code&gt; is greater than &lt;code&gt;2&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;There are about 1.3 Trillion (Billion for us people in Central Europe) possible permutations of the numbers 1 to 15.
+Only half of them have an even parity.
+When we calculate a random permutation for the start of a game, it then makes sense to filter out all the permutations with an odd parity.
+Because we do not want to present an unsolvable game.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is a fragment of source code that calculates the parity and checks if it&#x27;s even for the examples from above.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; for (let i = 0; i &amp;lt; limit; i += 1) {...} vs&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; range0(limit).forEach((i) =&amp;gt; {...})&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; range0&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;limit&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; [&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;...&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;Array&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;limit&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;keys&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; isEvenPermutation&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; parity&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; %&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 2&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ===&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; parity&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; range0&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;p&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable&quot;&gt;length&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;  .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;map&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;i&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; range0&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;p&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable&quot;&gt;length&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;    .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;filter&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;j&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; i&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; j&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;amp;&amp;amp;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; p&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;i&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; p&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;j&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;    .&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-variable&quot;&gt;length&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;  )&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;  .&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;reduce&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; v&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; v&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; true, 0 inversions&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;console&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;isEvenPermutation&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 2&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 3&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; true, 2 inversions&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;console&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;isEvenPermutation&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;2&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 3&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; false, 1 inversion&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;console&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-accessor&quot;&gt;.&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;log&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;isEvenPermutation&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;1&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 3&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 2&lt;&#x2F;span&gt;&lt;span&gt;]&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;source-code&quot;&gt;Source code&lt;&#x2F;h2&gt;
+&lt;p&gt;I have created this &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;gist.github.com&#x2F;thomasweitzel&#x2F;3fd3197616f0299a2935972edd68bd4a&quot;&gt;GitHub Gist&lt;&#x2F;a&gt; with the complete HTML page including the JavaScript source code.
+It runs in the browser and uses just &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;tailwindcss.com&quot;&gt;Tailwind CSS&lt;&#x2F;a&gt; for styling and plain ES6-style JavaScript.
+The source code can be used for all square board sizes, not only 4 by 4.
+You have to adjust the boards GUI or dynamically generate it - it&#x27;s easy.&lt;&#x2F;p&gt;
+&lt;div class=&quot;hidden bg-neutral-50 bg-neutral-100 bg-neutral-200 bg-neutral-300 bg-neutral-400 bg-neutral-500 bg-neutral-600 bg-neutral-700 bg-neutral-800 bg-neutral-900 bg-neutral-950 bg-primary-50 bg-primary-100 bg-primary-200 bg-primary-300 bg-primary-400 bg-primary-500 bg-primary-600 bg-primary-700 bg-primary-800 bg-primary-900 bg-primary-950 bg-ok-50 bg-ok-100 bg-ok-200 bg-ok-300 bg-ok-400 bg-ok-500 bg-ok-600 bg-ok-700 bg-ok-800 bg-ok-900 bg-ok-950 bg-warn-50 bg-warn-100 bg-warn-200 bg-warn-300 bg-warn-400 bg-warn-500 bg-warn-600 bg-warn-700 bg-warn-800 bg-warn-900 bg-warn-950 bg-fail-50 bg-fail-100 bg-fail-200 bg-fail-300 bg-fail-400 bg-fail-500 bg-fail-600 bg-fail-700 bg-fail-800 bg-fail-900 bg-fail-950 text-neutral-50 text-neutral-100 text-neutral-200 text-neutral-300 text-neutral-400 text-neutral-500 text-neutral-600 text-neutral-700 text-neutral-800 text-neutral-900 text-neutral-950 text-primary-50 text-primary-100 text-primary-200 text-primary-300 text-primary-400 text-primary-500 text-primary-600 text-primary-700 text-primary-800 text-primary-900 text-primary-950 text-ok-50 text-ok-100 text-ok-200 text-ok-300 text-ok-400 text-ok-500 text-ok-600 text-ok-700 text-ok-800 text-ok-900 text-ok-950 text-warn-50 text-warn-100 text-warn-200 text-warn-300 text-warn-400 text-warn-500 text-warn-600 text-warn-700 text-warn-800 text-warn-900 text-warn-950 text-fail-50 text-fail-100 text-fail-200 text-fail-300 text-fail-400 text-fail-500 text-fail-600 text-fail-700 text-fail-800 text-fail-900 text-fail-950 border-neutral-50 border-neutral-100 border-neutral-200 border-neutral-300 border-neutral-400 border-neutral-500 border-neutral-600 border-neutral-700 border-neutral-800 border-neutral-900 border-neutral-950 border-primary-50 border-primary-100 border-primary-200 border-primary-300 border-primary-400 border-primary-500 border-primary-600 border-primary-700 border-primary-800 border-primary-900 border-primary-950 border-ok-50 border-ok-100 border-ok-200 border-ok-300 border-ok-400 border-ok-500 border-ok-600 border-ok-700 border-ok-800 border-ok-900 border-ok-950 border-warn-50 border-warn-100 border-warn-200 border-warn-300 border-warn-400 border-warn-500 border-warn-600 border-warn-700 border-warn-800 border-warn-900 border-warn-950 border-fail-50 border-fail-100 border-fail-200 border-fail-300 border-fail-400 border-fail-500 border-fail-600 border-fail-700 border-fail-800 border-fail-900 border-fail-950&quot;&gt;&lt;&#x2F;div&gt;
+&lt;script src=&quot;game-of-fifteen.js&quot; integrity=&quot;sha384-JxrdBI5c+wPKQv&#x2F;3jeIZHhvFK5u658hFW&#x2F;SaEFvVQZkE3Obo6boo+t3mu8dXS&#x2F;ts&quot;&gt;&lt;&#x2F;script&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Terms</title>
+        <published>2020-01-08T00:00:00+00:00</published>
+        <updated>2020-01-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/terms/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/terms/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/terms/">&lt;p&gt;&lt;em&gt;These terms have been last updated on January 8, 2020&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;All content on this web site is for informational purposes only.&lt;&#x2F;p&gt;
+&lt;p&gt;As the owner of this web site, I ...&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;make no representations as to the accuracy or completeness of any information on this site or by following any link.&lt;&#x2F;li&gt;
+&lt;li&gt;will not be liable for any errors or omissions in this information, nor for the availability of this information.&lt;&#x2F;li&gt;
+&lt;li&gt;will not be liable for any losses, injuries, or damages from the display or use of this information.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;These terms are subject to change at any time and without notice.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Tail Recursion with Trampoline</title>
+        <published>2019-03-16T00:00:00+00:00</published>
+        <updated>2019-03-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/tail-recursion-with-trampoline/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/tail-recursion-with-trampoline/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/tail-recursion-with-trampoline/">&lt;p&gt;In case your platform lacks support for proper tail call optimization, and you want to do functional programming, you might run into stack space problems.
+This can be mitigated, but you have to find a way yourself to make it work.
+The specific platform I&#x27;m writing about here is &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;about&quot;&gt;Node.js&lt;&#x2F;a&gt;.
+After a little introduction, I show one well-known solution to the problem.&lt;&#x2F;p&gt;
+&lt;p&gt;In functional programming, recursion is a fundamental concept to handle mutability.
+Pure functional languages like Haskell do not allow mutation of variables, so you have to come up with a different solution to the problem.
+What you do is called &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;alvinalexander.com&#x2F;scala&#x2F;functional-programming-simplified-book&quot;&gt;update as you copy&lt;&#x2F;a&gt;.
+You create new variables by calculating their values from the values of existing ones.
+But you never assign a new value to a variable that already has one.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recursion&quot;&gt;Recursion&lt;&#x2F;h2&gt;
+&lt;p&gt;To simplify the reasoning, I will assume that a function does not rely on or modify external state, i.e. values of variables outside of its body.
+Math is organized this way: &lt;code&gt;1 + 2 = 3&lt;&#x2F;code&gt; independently of e.g. the current weather outside.
+It&#x27;s always true, no matter what.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to write a useful recursive function, you have to make sure that it:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;eventually returns with a value (terminates)&lt;&#x2F;li&gt;
+&lt;li&gt;calls itself&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;By using these criteria for a recursive function, you can see that it has to either call itself or terminate.
+When it terminates, it&#x27;s done, and you have a value.
+Otherwise, it will call itself, and you get another stack frame with this call.
+Depending on the number of calls this function makes to itself, the used stack space grows, and you might eventually run out of stack space.
+This is not a good thing!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tail-recursion&quot;&gt;Tail recursion&lt;&#x2F;h2&gt;
+&lt;p&gt;What if you do not need the current stack frame anymore, once you make your recursive call?
+You could immediately forget it, throw it away, or reuse it, thereby saving stack space.
+But you have to make sure that you need no information from this stack frame once you have made your next call.
+This can be accomplished by returning the recursive call alone, not adding to it or modifying it once it returns, so the return value can be directly passed on.
+Now you have what&#x27;s called a tail-recursive function.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tail-call-optimization&quot;&gt;Tail call optimization&lt;&#x2F;h2&gt;
+&lt;p&gt;Once you have made sure that your function is tail-recursive, your runtime environment or compiler can optimize the calls in such a way,
+that the existing stack frame is reused by the next call.
+The stack thereby never grows, and you have eliminated the potential for a stack overflow.
+But it&#x27;s not enough that it can be optimized, it has to be actually done.
+And that&#x27;s where the problem starts.&lt;&#x2F;p&gt;
+&lt;p&gt;Not every runtime environment or compiler performs tail call optimization.
+As of this writing two of the platforms that I use do not support tail call optimization out-of-the-box:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;nodejs.org&#x2F;en&quot;&gt;Node.js&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Java Virtual Machine (JVM) with &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;openjdk.java.net&#x2F;projects&#x2F;jdk8u&quot;&gt;Java 8&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The JVM does support tail call optimization when used with Kotlin or Scala though.&lt;&#x2F;p&gt;
+&lt;p&gt;Not all is lost: were tail call optimization is not directly supported you can implement a workaround that is straight forward.
+It&#x27;s effective in saving you from stack overflow errors.
+The rest of this article shows you how to implement it.
+It&#x27;s known under the name &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tail_call#Through_trampolining&quot;&gt;trampoline device&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I use the factorial function and implement it in different ways, starting with a loop that mutates values.
+Factorial is defined for natural numbers without the 0 (1, 2, 3, ...).
+&lt;code&gt;Factorial(n)&lt;&#x2F;code&gt; calculates the product of all numbers between &lt;code&gt;1&lt;&#x2F;code&gt; and &lt;code&gt;n&lt;&#x2F;code&gt;.
+It serves as an example that I chose because it&#x27;s easy to understand.
+I&#x27;ll then transform it to a recursive function and show you how to make this function tail-recursive.
+Afterwards I introduce the trampoline device and apply it to a function that is the modified tail-recursive function.
+Let&#x27;s start.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;loop&quot;&gt;Loop&lt;&#x2F;h2&gt;
+&lt;p&gt;If you&#x27;re an &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Imperative_programming&quot;&gt;imperative programmer&lt;&#x2F;a&gt; you would implement the factorial function with a loop.
+You start with a variable &lt;code&gt;result&lt;&#x2F;code&gt; that has the value &lt;code&gt;1&lt;&#x2F;code&gt; and then have a for-loop that starts at &lt;code&gt;2&lt;&#x2F;code&gt; and goes up to &lt;code&gt;n&lt;&#x2F;code&gt;.
+In the body of the for-loop you modify &lt;code&gt;result&lt;&#x2F;code&gt; and set it to a value that was its previous value multiplied by whatever value your loop-variable has.
+If you are done with the loop you return the &lt;code&gt;result&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; loopFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; result&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  for&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; i&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 2&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; i&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;lt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; n&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; i&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +=&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; result&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *=&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; i&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; result&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Something to note here is that your &lt;code&gt;result&lt;&#x2F;code&gt; variable does not contain the result.
+It holds the result only when the execution reaches the return statement.
+How do you effectively name a variable that has different meanings during its life cycle?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recursive-with-info-left-on-the-stack&quot;&gt;Recursive with info left on the stack&lt;&#x2F;h2&gt;
+&lt;p&gt;How do you slice a carrot?
+Although there are many possible ways to do it, one would be to cut off one slice from one end and then repeat the procedure with the rest of the carrot, until there&#x27;s nothing left.
+You do the same with whatever is left until you reach the terminating condition.
+It&#x27;s a recursive definition.
+And it&#x27;s essentially what you do to calculate the factorial in a recursive way.&lt;&#x2F;p&gt;
+&lt;p&gt;To calculate the factorial of &lt;code&gt;n&lt;&#x2F;code&gt; you multiply &lt;code&gt;n&lt;&#x2F;code&gt; with the factorial of &lt;code&gt;n - 1&lt;&#x2F;code&gt;.
+You now have to calculate the factorial of &lt;code&gt;n - 1&lt;&#x2F;code&gt;.
+And so on.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; stackFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; stackFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You need the result of &lt;code&gt;stackFactorial(n - 1)&lt;&#x2F;code&gt; before you can return from the function call, because you have to multiply it with &lt;code&gt;n&lt;&#x2F;code&gt; before that can happen.
+What &lt;code&gt;n&lt;&#x2F;code&gt; actually is, is stored in the context of your &lt;strong&gt;current&lt;&#x2F;strong&gt; stack frame.
+The next call will have another stack frame, where &lt;code&gt;n&lt;&#x2F;code&gt; has another value.
+Because you cannot forget the &lt;code&gt;n&lt;&#x2F;code&gt; of the current call, the current stack frame has to stay around.&lt;&#x2F;p&gt;
+&lt;p&gt;With large &lt;code&gt;n&lt;&#x2F;code&gt; this can lead to a situation where you get an error and the entire process stops: &lt;code&gt;RangeError: Maximum call stack size exceeded&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recursive-without-info-left-on-the-stack&quot;&gt;Recursive without info left on the stack&lt;&#x2F;h2&gt;
+&lt;p&gt;What can be done about it?
+As a first step, you can eliminate the need for the current stack frame once you made the next call.
+But you somehow have to preserve information that&#x27;s needed.
+The solution is to pass all required information on to the next recursive call.&lt;&#x2F;p&gt;
+&lt;p&gt;An extra parameter is needed to hold this information.
+It&#x27;s commonly called an aggregator, or &lt;code&gt;agg&lt;&#x2F;code&gt; for short.
+For multiplication, you start at &lt;code&gt;1&lt;&#x2F;code&gt; (identity, &lt;code&gt;n * 1 === n&lt;&#x2F;code&gt; and &lt;code&gt;1 * n === n&lt;&#x2F;code&gt;).
+Along the way, you multiply the aggregator with the current value of &lt;code&gt;n&lt;&#x2F;code&gt;, thereby keeping track of how far you&#x27;ve come with the product.
+The aggregator will look like this over time:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;1&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;1 * n&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;1 * n * (n - 1)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;1 * n * (n - 1) * (n - 2)&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;etc.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;When you finally hit &lt;code&gt;1&lt;&#x2F;code&gt; for &lt;code&gt;n&lt;&#x2F;code&gt;, you simply return the aggregator, because it already contains the correct result.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; tailFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; tailFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; n&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;As you can see, the call &lt;code&gt;tailFactorial(...)&lt;&#x2F;code&gt; is directly returned, no information from the current stack frame is required anymore.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;alternative-function-signature&quot;&gt;Alternative function signature&lt;&#x2F;h2&gt;
+&lt;p&gt;Even though you invoke &lt;code&gt;tailFactorial(5)&lt;&#x2F;code&gt;, the definition has two parameters, &lt;code&gt;n&lt;&#x2F;code&gt; and &lt;code&gt;agg&lt;&#x2F;code&gt;.
+The aggregator has a default value, so you need not provide it.
+But since it&#x27;s exposed in the function&#x27;s interface, someone can call &lt;code&gt;tailFactorial(5, 0)&lt;&#x2F;code&gt; and get a wrong result.
+Because nobody should mess with &lt;code&gt;agg&lt;&#x2F;code&gt;, it&#x27;s better to hide it.&lt;&#x2F;p&gt;
+&lt;p&gt;Wrap it with a function that only allows the parameter &lt;code&gt;n&lt;&#x2F;code&gt; and make it an inner function of that wrapper function.
+Within that wrapper function, pass the call on to the inner function.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Alternative way (not exposing the aggregator)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; tailFactorialAlt&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; innerTailFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;    if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; innerTailFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;x&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; x&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;  }&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; innerTailFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I will not use this alternative function signature, because it&#x27;s too verbose and not helping me make my point.
+Still, I highly recommend that you do not expose parameters in your function interface that are neither needed nor intended for public access.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;returning-a-function-without-calling-it&quot;&gt;Returning a function without calling it&lt;&#x2F;h2&gt;
+&lt;p&gt;Instead of having the tail-recursive function make the tail call itself, it returns a function (with no arguments) that can call the recursive function with all arguments already in place.
+This is called a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Thunk#Functional_programming&quot;&gt;thunk&lt;&#x2F;a&gt;.
+You then simply have someone to call that thunk, because the tail call is no longer made by the function.
+If that&#x27;s returning another function, you call it again. And again.
+Until the final value is returned.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; thunkFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; &amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; thunkFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; *&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; n&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; agg&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Since the function returns either a value or another function without calling it, it is neither recursive nor tail-recursive anymore.
+The stack cannot grow, and you will not run out of it.
+But if your first call does not give you the final result, you end up with just another function and not with the result.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;device-for-pulling-out-functions-and-calling-them&quot;&gt;Device for pulling out functions and calling them&lt;&#x2F;h2&gt;
+&lt;p&gt;Since you simply pull functions&#x2F;thunks out of your factorial function until the final value is returned (instead of yet another function), you have to set up a device that&#x27;s doing just that.
+The device is called a trampoline, and it is handed a function that returns either thunks or a final value.
+If a call to that function results in another function, it is called for as long as the returned type is a function.
+Otherwise, it returns the final result.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; trampoline&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; fn&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;...&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;args&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;  let&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; res&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; fn&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;...&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;args&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  while&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;res&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; instanceof&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; Function&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; res&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; res&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; res&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;putting-it-into-action&quot;&gt;Putting it into action&lt;&#x2F;h2&gt;
+&lt;p&gt;You have two things right now, a function that is returning thunks and another function that can call these thunks for as long as needed, i.e. the final result is returned.
+The last thing that&#x27;s left to do is to join these two functions together.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; trampolineFactorial&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; trampoline&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;thunkFactorial&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-comment&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt;&lt;span class=&quot;z-comment&quot;&gt; Example call&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt;trampolineFactorial&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt;5&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;All this is for Node.js and JavaScript.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tail-recursive-fibonacci-numbers&quot;&gt;Tail recursive Fibonacci numbers&lt;&#x2F;h2&gt;
+&lt;p&gt;The Fibonacci sequence is defined like this: &lt;code&gt;F(0) = 0&lt;&#x2F;code&gt; and &lt;code&gt;F(1) = 1&lt;&#x2F;code&gt;.
+For all &lt;code&gt;n &amp;gt; 1&lt;&#x2F;code&gt; you calculate them with &lt;code&gt;F(n) = F(n - 1) + F(n - 2)&lt;&#x2F;code&gt;.
+This is a recursive definition.&lt;&#x2F;p&gt;
+&lt;p&gt;What is different from the factorial example used above?
+You need two independent information, the two previous values of the function.
+When you want to solve the problem with tail recursion, instead of one aggregator parameter, you need to pass two aggregator parameters to the function: the two previous values.
+As a rule, you need an additional parameter for every additional information that you need in the body of your function.&lt;&#x2F;p&gt;
+&lt;p&gt;Interestingly, &lt;code&gt;n&lt;&#x2F;code&gt; is used as a counter, going down to &lt;code&gt;1&lt;&#x2F;code&gt;, but the function works its way up to the higher values.
+For each call, the &lt;code&gt;previous&lt;&#x2F;code&gt; value becomes the &lt;code&gt;current&lt;&#x2F;code&gt; value from the previous call, while the &lt;code&gt;current&lt;&#x2F;code&gt; value is set to &lt;code&gt;current + previous&lt;&#x2F;code&gt;.
+Until the function terminates for &lt;code&gt;n === 1&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-storage z-type z-storage&quot;&gt;const&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; F&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; previous&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-variable z-parameter&quot;&gt; current&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-storage z-type z-function&quot;&gt; =&amp;gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ===&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; previous&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  if&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; (&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ===&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword&quot;&gt; return&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; current&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;  return&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; F&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;n&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; -&lt;&#x2F;span&gt;&lt;span class=&quot;z-constant z-constant z-numeric&quot;&gt; 1&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; current&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt;,&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; current&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; +&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; previous&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator&quot;&gt;;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;You can wrap it in a function with only one parameter for &lt;code&gt;n&lt;&#x2F;code&gt;, which hides the aggregators &lt;code&gt;current&lt;&#x2F;code&gt; and &lt;code&gt;next&lt;&#x2F;code&gt; if you want.
+Like in the example above, the original function becomes an inner function of the wrapper function.&lt;&#x2F;p&gt;
+&lt;p&gt;As I recently found out, Fibonacci numbers also have a &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fibonacci_number#Matrix_form&quot;&gt;closed-form expression&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+&lt;div class=&quot;math math-display&quot;&gt;$$F_{n}={\cfrac {1}{\sqrt {5}}}\left({\cfrac {1+{\sqrt {5}}}{2}}\right)^{n}-{\cfrac {1}{\sqrt {5}}}\left({\cfrac {1-{\sqrt {5}}}{2}}\right)^{n}$$&lt;&#x2F;div&gt;
+
+&lt;p&gt;As an aside: we were &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.mountaingoatsoftware.com&#x2F;agile&#x2F;planning-poker&quot;&gt;estimating story points&lt;&#x2F;a&gt; during a sprint planing.
+Story points roughly follow the Fibonacci numbers, so it&#x27;s natural that the topic pops up from time to time.
+Someone was asking if there was a closed-form expression for Fibonacci numbers, so we searched for an answer. And voilà ...&lt;&#x2F;p&gt;
+&lt;p&gt;Using the trampoline device together with the modified tail-recursive Fibonacci function is left as an exercise for the reader.
+Hint: you have to modify the tail-recursive Fibonacci function to return a function&#x2F;thunk instead of returning the result of a recursive function call.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final thoughts&lt;&#x2F;h2&gt;
+&lt;p&gt;I use the trampoline device because Node.js does not support tail call optimization (TCO).
+At one point I thought that Node.js would eventually support TCO through its use of Google&#x27;s V8 engine. Google was actively working on supporting TCO in V8.
+But it turned out that Google is &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.chromestatus.com&#x2F;feature&#x2F;5516876633341952&quot;&gt;no longer pursuing&lt;&#x2F;a&gt; this path.
+Since tail-recursive functions are particularly useful in functional programming, it&#x27;s extremely frustrating to see so little progress.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About</title>
+        <published>2019-03-11T00:00:00+00:00</published>
+        <updated>2019-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/about/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/about/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/about/">&lt;h2 id=&quot;who-am-i&quot;&gt;Who am I?&lt;&#x2F;h2&gt;
+&lt;p&gt;My name is &lt;strong&gt;Thomas Weitzel&lt;&#x2F;strong&gt;.
+When people have trouble pronouncing my last name, I suggest to try &lt;em&gt;White Cell&lt;&#x2F;em&gt;.
+If you want to call me by my nickname, that&#x27;s fine, too.
+It is &lt;strong&gt;Thomy&lt;&#x2F;strong&gt;, pronounced like &lt;em&gt;Tommy&lt;&#x2F;em&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I work as an independent software developer since more than twenty years.
+Industries I&#x27;ve worked in include Finance, Health Care, Automotive, Military, and Government.
+Mostly I worked on internal projects, but also some software products.
+My mother tongue is German.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-the-topic&quot;&gt;What&#x27;s the topic?&lt;&#x2F;h2&gt;
+&lt;p&gt;This blog covers my findings while exploring various aspects of programming in general, with a special focus on functional programming.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-motivation&quot;&gt;The motivation?&lt;&#x2F;h2&gt;
+&lt;p&gt;Why do people climb mountains?
+British mountaineer George Mallory famously answered: &lt;em&gt;Because they&#x27;re there&lt;&#x2F;em&gt;.
+They want to reach the top faster, in a more efficient or elegant way, differently than anybody else, or even at all.
+That&#x27;s how you approach problem-solving in programming.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-to-expect&quot;&gt;What to expect&lt;&#x2F;h2&gt;
+&lt;p&gt;Since I&#x27;m coming from an object-oriented background, expect all sorts of problems I&#x27;m stumbling into and then getting out of.
+C, C++, and Java were my first professionally used programming languages.
+Later I switched to Scala, and even later to Kotlin.
+I had, and still have, a lot to learn, even more to unlearn, and I&#x27;m not nearly done yet.
+If you&#x27;re having a similar background, maybe you can get something out of my mistakes and the occasional success.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;do-or-not-do-there-is-no-try-yoda&quot;&gt;&lt;em&gt;Do, or not do. There is no try&lt;&#x2F;em&gt;. – Yoda&lt;&#x2F;h2&gt;
+&lt;p&gt;The decision is not between doing something or not.
+It&#x27;s that &lt;em&gt;trying&lt;&#x2F;em&gt; is something more than just any attempt.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Imprint</title>
+        <published>2019-03-11T00:00:00+00:00</published>
+        <updated>2019-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/imprint/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/imprint/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/imprint/">&lt;!-- Add two spaces after each line to enforce line break --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Thomas Weitzel&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;em&gt;Theodor-Heuss-Str. 21&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;em&gt;63225 Langen (Hesse)&lt;&#x2F;em&gt;&lt;br &#x2F;&gt;
+&lt;em&gt;Germany&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Copying and redistribution of all my pages for private, non-commercial use is permitted provided this notice is attached.
+See section &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zolarwind&#x2F;pages&#x2F;imprint&#x2F;#copyright&quot;&gt;Copyright&lt;&#x2F;a&gt; for more information.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;disclaimer&quot;&gt;Disclaimer&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;liability-for-content&quot;&gt;Liability for content&lt;&#x2F;h3&gt;
+&lt;p&gt;As a service provider I&#x27;m responsible according to Article 7(1) TMG (Germany) for my own contents on these pages according to the general laws.
+According to Article 8 to 10 TMG (Germany) I am not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate an illegal activity.
+Obligations to remove or block the use of information under general law remain unaffected.
+A liability in this regard is only possible from the date of knowledge of a specific infringement.
+Upon notification of violations, I will remove such content immediately.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;liability-for-links&quot;&gt;Liability for links&lt;&#x2F;h3&gt;
+&lt;p&gt;My website contains links to external websites of third parties over whose contents I have no influence.
+Therefore, I&#x27;m not liable for these external contents.
+The provider or operator of these pages is always responsible for the contents of the linked pages.
+At the time of linking I have checked the linked pages for possible legal violations.
+Illegal content was not recognizable at the time of linking.
+A permanent control of the content of the linked pages is not reasonable without concrete evidence of an infringement.
+Upon notification of violations, I will remove such links immediately.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;copyright&quot;&gt;Copyright&lt;&#x2F;h3&gt;
+&lt;p&gt;The content and works created by me on these pages are subject to copyright law.
+Reproduction, adaptation, distribution, and any kind of exploitation outside the limits of copyright require my written consent.
+Downloads and copies of these pages are for private, non-commercial use only.
+As far as it wasn&#x27;t me who created the contents on these pages, I respect the copyright of third parties.
+In particular, content of third parties is marked as such.
+Still, should you be aware of a copyright infringement, please let me know.
+Upon notification of violations, I will remove such content immediately.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Privacy Policy</title>
+        <published>2019-03-11T00:00:00+00:00</published>
+        <updated>2019-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/privacy/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/privacy/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/pages/privacy/">&lt;h3 id=&quot;data-protection&quot;&gt;Data protection&lt;&#x2F;h3&gt;
+&lt;p&gt;The use of my website is possible without providing personal data.
+If you contact me by email, providing personal data is voluntary.
+These data will not be disclosed to third parties without your explicit consent.&lt;&#x2F;p&gt;
+&lt;p&gt;Data transmission in the Internet (e.g.
+in the communication by email) can have security gaps.
+A complete protection of the data from access by third parties is not possible.
+The use of contact data published in the imprint by third parties for sending me unsolicited advertising and information materials is hereby prohibited.
+I reserve the right to take legal action in the event of unsolicited promotional information, such as spam emails.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;hosting&quot;&gt;Hosting&lt;&#x2F;h3&gt;
+&lt;p&gt;I host my website at netcup. The provider is netcup GmbH, Daimlerstr. 25, 76185 Karlsruhe, referred to as &quot;netcup&quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Details on netcup&#x27;s privacy policy can be found on their homepage under &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.netcup.eu&#x2F;kontakt&#x2F;datenschutzerklaerung.php&quot;&gt;privacy policy&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The use of netcup is based on Article 6(1)(f) GDPR.
+I have a legitimate interest that my website is available to visitors as reliably as possible.
+If consent was requested, data processing takes place exclusively based on Article 6(1)(a) GDPR.
+Consent can be revoked at any time.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;data-processing&quot;&gt;Data processing&lt;&#x2F;h3&gt;
+&lt;p&gt;I have signed a data processing contract with netcup.
+This contract is required by privacy law and guarantees, that data of visitors of my website will be processed in compliance with the GDPR.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;responsible-controller&quot;&gt;Responsible controller&lt;&#x2F;h3&gt;
+&lt;p&gt;The person responsible for data processing on this website is the person named in the &lt;a href=&quot;https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;zolarwind&#x2F;pages&#x2F;imprint&#x2F;&quot;&gt;imprint&lt;&#x2F;a&gt;.
+The &quot;responsible controller&quot; means the natural or legal person who decides on the processing of data (for example: name, address, or email addresses).&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;information-cancellation-deletion&quot;&gt;Information, cancellation, deletion&lt;&#x2F;h3&gt;
+&lt;p&gt;At any time you have the right to free information about your stored personal data, its origins, recipients, and the purpose of the data processing, as well as a right to correction or deletion of this data.
+You can contact me at any time via the address given in the imprint for further questions on the subject of your personal data.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;log-files-on-the-server&quot;&gt;Log files on the server&lt;&#x2F;h3&gt;
+&lt;p&gt;The web server stores information in its log files, some of which your browser transmits to me.
+These are:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;the IP address of your computer&lt;&#x2F;li&gt;
+&lt;li&gt;the time of the request&lt;&#x2F;li&gt;
+&lt;li&gt;the name of the requested page&lt;&#x2F;li&gt;
+&lt;li&gt;a status code (if the request was successful or not)&lt;&#x2F;li&gt;
+&lt;li&gt;the referrer URL&lt;&#x2F;li&gt;
+&lt;li&gt;the browser type, browser version and other information sent by your browser&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;This data can not be used to identify a specific person.
+I will not merge this data with other data sources.
+I reserve the right to check this data retrospectively, if I become aware of illegal use of my website.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ssl-encryption&quot;&gt;SSL encryption&lt;&#x2F;h3&gt;
+&lt;p&gt;This site uses SSL encryption for security reasons and to protect the transmission of sensitive content, such as the requests you send to me.
+An encrypted connection can be recognized by the fact that the address in the address bar of the browser starts with &lt;code&gt;https:&#x2F;&#x2F;&lt;&#x2F;code&gt; and a lock symbol nearby.
+If SSL encryption is enabled, the data you submit to me can not be read by third parties.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cookies&quot;&gt;Cookies&lt;&#x2F;h3&gt;
+&lt;p&gt;This site does not use cookies.
+KaTeX and Mermaid are loaded locally and do not set cookies.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;embedded-content-from-other-websites&quot;&gt;Embedded content from other websites&lt;&#x2F;h3&gt;
+&lt;p&gt;This site does not embed third-party content by default.
+If I add embedded content (e.g. videos, pictures, comments, etc.), it behaves just as if you visited the other website.
+Those websites may collect information about you, use cookies, embed additional tracking services, and record your interaction with the embedded content, if you have an account and are logged in to that site.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;what-rights-do-you-have-to-your-data&quot;&gt;What rights do you have to your data?&lt;&#x2F;h3&gt;
+&lt;p&gt;You may request that I export your personal information, including any data you have provided to me.
+In addition, you may request the deletion of any personal information I have stored about you.
+This does not include the data that I need to keep for administrative, legal, or security-related purposes.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -29,7 +29,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -171,92 +171,86 @@
 </nav>
 
   <!-- Content -->
-  <section><pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span>
-</span><span style="color:#888888;"># Enable comments.
-</span><span style="color:#ffb964;">comment </span><span>= true
-</span><span>
-</span><span style="color:#888888;"># Enable KaTeX support.
-</span><span style="color:#ffb964;">math </span><span>= true
-</span><span>
-</span><span style="color:#888888;"># Enable Mermaid support.
-</span><span style="color:#ffb964;">mermaid </span><span>= true
-</span><span>
-</span><span style="color:#888888;"># Default value: config.extra.page_summary_on_paginator
-</span><span style="color:#ffb964;">page_summary_on_paginator </span><span>= true
-</span><span>
-</span><span style="color:#888888;"># Default value:
-</span><span style="color:#888888;">#  config.extra.page_info or config.extra.page_info_on_paginator
-</span><span style="color:#ffb964;">page_info </span><span>= []
-</span><span>
-</span><span style="color:#888888;"># Default value: config.extra.toc
-</span><span style="color:#ffb964;">toc </span><span>= true
-</span><span>
-</span><span style="color:#888888;"># For the archive.html template.
-</span><span style="color:#ffb964;">section </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">_index.md</span><span style="color:#556633;">&quot;
-</span><span>
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">cover</span><span>]
-</span><span>
-</span><span style="color:#888888;"># Path to the cover image.
-</span><span style="color:#ffb964;">image </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span style="color:#888888;"># A description of the cover image.
-</span><span style="color:#ffb964;">alt </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span>
-</span><span style="color:#888888;"># Width of the cover image in pixels.
-</span><span style="color:#888888;"># Default value: get_image_metadata()
-</span><span style="color:#ffb964;">width </span><span>=
-</span><span style="color:#888888;"># Height of the cover image in pixels.
-</span><span style="color:#888888;"># Default value: get_image_metadata()
-</span><span style="color:#ffb964;">height </span><span>=
-</span></code></pre>
-<h2 id="open-graph-variables">Open Graph variables</h2>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">open_graph</span><span>]
-</span><span>
-</span><span style="color:#888888;"># When the article is out of date after.
-</span><span style="color:#888888;"># e.g. 2024-02-29
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">expiration_time </span><span>=
-</span><span>
-</span><span style="color:#888888;"># Describes the tier status for an article.
-</span><span style="color:#888888;"># e.g. &quot;free&quot;, &quot;locked&quot;, or &quot;metered&quot;.
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">content_tier </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span>
-</span><span style="color:#888888;"># Defines the location to target for the article.
-</span><span style="color:#888888;"># e.g. [&quot;county:COUNTY&quot;] or [&quot;city:CITY,COUNTY&quot;]
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">locations </span><span>= []
-</span><span>
-</span><span style="color:#888888;"># A high-level section name. e.g. &quot;Technology&quot;.
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">section </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span>
-</span><span style="color:#888888;"># Indicates whether the article is an opinion piece or not.
-</span><span style="color:#888888;"># Type: boolean. No default value.
-</span><span style="color:#ffb964;">opinion </span><span>=
-</span><span>
-</span><span style="color:#888888;"># Set only if different from canonical page URL.
-</span><span style="color:#888888;"># Default value: current_url
-</span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span></code></pre>
-<h2 id="sitemap-variables">Sitemap variables</h2>
-<pre data-lang="toml" data-name="frontmatter" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml" data-name="frontmatter"><span>[</span><span style="color:#ffb964;">extra</span><span>.</span><span style="color:#ffb964;">sitemap</span><span>]
-</span><span>
-</span><span style="color:#888888;"># Set only if different from &quot;page.updated&quot;.
-</span><span style="color:#888888;"># Default value: page.updated
-</span><span style="color:#ffb964;">updated </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span>
-</span><span style="color:#888888;"># Valid values: &quot;always&quot;, &quot;hourly&quot;, &quot;daily&quot;,
-</span><span style="color:#888888;"># &quot;weekly&quot;, &quot;monthly&quot;, &quot;yearly&quot;, &quot;never&quot;.
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">changefreq </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span><span>
-</span><span style="color:#888888;"># Valid values range from 0.0 to 1.0.
-</span><span style="color:#888888;"># The default priority of a page is 0.5.
-</span><span style="color:#888888;"># No default value.
-</span><span style="color:#ffb964;">priority </span><span>= </span><span style="color:#556633;">&quot;&quot;
-</span></code></pre>
-</section>
+  <section><pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml" data-name="frontmatter"><span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Enable comments.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">comment</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Enable KaTeX support.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">math</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Enable Mermaid support.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">mermaid</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: config.extra.page_summary_on_paginator</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">page_summary_on_paginator</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value:</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);">  config.extra.page_info or config.extra.page_info_on_paginator</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">page_info</span><span> =</span><span> [</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: config.extra.toc</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">toc</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> For the archive.html template.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">section</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">_index.md</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>.</span><span style="color: light-dark(#000000, #FFA657);">cover</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Path to the cover image.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">image</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> A description of the cover image.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">alt</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Width of the cover image in pixels.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: get_image_metadata()</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">width</span><span> =</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Height of the cover image in pixels.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: get_image_metadata()</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">height</span><span> =</span></span></code></pre><h2 id="open-graph-variables">Open Graph variables</h2>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml" data-name="frontmatter"><span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>.</span><span style="color: light-dark(#000000, #FFA657);">open_graph</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> When the article is out of date after.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> e.g. 2024-02-29</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">expiration_time</span><span> =</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Describes the tier status for an article.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> e.g. &quot;free&quot;, &quot;locked&quot;, or &quot;metered&quot;.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">content_tier</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Defines the location to target for the article.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> e.g. [&quot;county:COUNTY&quot;] or [&quot;city:CITY,COUNTY&quot;]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">locations</span><span> =</span><span> [</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> A high-level section name. e.g. &quot;Technology&quot;.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">section</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Indicates whether the article is an opinion piece or not.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Type: boolean. No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">opinion</span><span> =</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Set only if different from canonical page URL.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: current_url</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span></code></pre><h2 id="sitemap-variables">Sitemap variables</h2>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml" data-name="frontmatter"><span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>.</span><span style="color: light-dark(#000000, #FFA657);">sitemap</span><span>]</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Set only if different from &quot;page.updated&quot;.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Default value: page.updated</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">updated</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Valid values: &quot;always&quot;, &quot;hourly&quot;, &quot;daily&quot;,</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> &quot;weekly&quot;, &quot;monthly&quot;, &quot;yearly&quot;, &quot;never&quot;.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">changefreq</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> Valid values range from 0.0 to 1.0.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> The default priority of a page is 0.5.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#008000, #8B949E);">#</span><span style="color: light-dark(#008000, #8B949E);"> No default value.</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">priority</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span></code></pre></section>
   <hr />
   <!-- Post Taxonomies -->
 <footer class="mt-12 flex flex-col" tabindex="-1" accesskey="_">
@@ -291,7 +285,7 @@
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

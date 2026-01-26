@@ -1,12 +1,19 @@
 // Based on https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
 document.addEventListener("DOMContentLoaded", function () {
-	let blocks = document.querySelectorAll("pre[class^='language-']");
+	// Support both Zola 0.21 (pre[class^='language-']) and 0.22 (pre.giallo)
+	let zola22Blocks = Array.from(document.querySelectorAll("pre.giallo"));
+	let zola21Blocks = Array.from(document.querySelectorAll("pre[class^='language-']"));
+	let blocks = [...zola22Blocks, ...zola21Blocks].filter(block => !block.closest("div.crt"));
 
 	blocks.forEach((block) => {
 		if (navigator.clipboard) {
 			// Code block header title
 			let title = document.createElement("span");
-			let lang = block.getAttribute("data-name") || block.getAttribute("data-lang");
+			// Try to get language from code element (Zola 0.22) or from pre element (Zola 0.21)
+			let codeElement = block.querySelector("code");
+			let lang = (codeElement && (codeElement.getAttribute("data-name") || codeElement.getAttribute("data-lang")))
+			           || block.getAttribute("data-name")
+			           || block.getAttribute("data-lang");
 			title.innerHTML = lang;
 
 			// Copy button icon

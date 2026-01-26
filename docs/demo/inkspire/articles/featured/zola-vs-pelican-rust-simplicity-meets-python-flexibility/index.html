@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Zola vs Pelican: Rust Simplicity Meets Python Flexibility</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/inkspire/css/styles.css" />
+        
+    </head>
+    <body>
+        <header>
+    <!-- Mobile Menu Backdrop -->
+    <div class="mobile-menu-backdrop"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                    <span class="logo-text">Inkspire</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="desktop-nav">
+                
+                
+                    
+                
+
+                
+                    <li class="">
+                        
+                            <a href="/" class="nav-link">Home</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/articles" class="nav-link">Articles</a>
+                        
+                    </li>
+                
+                    <li class="">
+                        
+                            <a href="/about" class="nav-link">About</a>
+                        
+                    </li>
+                
+                    <li class=" dropdown-container ">
+                        
+                            <button class="nav-link dropdown-trigger">
+                                <span>Pages</span>
+                                <svg class="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu">
+                                
+                                    <a href="/tags" class="dropdown-item">Tags</a>
+                                
+                                    <a href="/categories" class="dropdown-item">Categories</a>
+                                
+                            </div>
+                        
+                    </li>
+                
+            </ul>
+
+            <!-- Language Switcher -->
+            
+            <div class="desktop-lang dropdown-container">
+                <button type="button" id="lang-btn" class="logo-icon nav-link dropdown-trigger">
+                    <svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 -960 960 960">
+                    <path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu">
+                    
+                    <li class="dropdown-item">
+                        <a  href="/es"  class="dropdown-item" >Español</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+
+            <!-- Mobile Hamburger Menu -->
+            <button class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <!-- Close Button -->
+            <button class="mobile-close-btn">
+                <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <div class="mobile-menu-content">
+                <!-- Logo -->
+                <div class="mobile-logo">
+                    <a href="https:&#x2F;&#x2F;salif.github.io&#x2F;zola-themes-collection&#x2F;demo&#x2F;inkspire&#x2F;" class="logo-link">
+                        <span class="logo-text">Inkspire</span>
+                    </a>
+                </div>
+
+                <div class="mobile-nav-links">
+                    
+                        
+                            <a href="/" class="mobile-nav-item mobile-nav-link">Home</a>
+                        
+                    
+                        
+                            <a href="/articles" class="mobile-nav-item mobile-nav-link">Articles</a>
+                        
+                    
+                        
+                            <a href="/about" class="mobile-nav-item mobile-nav-link">About</a>
+                        
+                    
+                        
+                            <!-- Mobile Dropdown -->
+                            <div class="mobile-dropdown mobile-nav-item">
+                                <button class="mobile-nav-link mobile-dropdown-trigger">
+                                    <span>Pages</span>
+                                    <svg class="mobile-dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="mobile-dropdown-content">
+                                    
+                                        <a href="/tags" class="mobile-dropdown-link">Tags</a>
+                                    
+                                        <a href="/categories" class="mobile-dropdown-link">Categories</a>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+        <main>
+<div class="container">
+    <header>
+        <h1 class="container content section-title">Zola vs Pelican: Rust Simplicity Meets Python Flexibility</h1>
+    </header>
+    <div class="container content"><p>Pelican has been around since 2010, making it one of the oldest static site generators still actively maintained. It brought Python's philosophy to static sites and has powered thousands of blogs. Zola is the new contender, built in Rust with a focus on speed and simplicity. Both are excellent tools, but they represent different eras and philosophies of web development.</p>
+<h2 id="installation-virtual-environments-vs-single-binary">Installation: Virtual Environments vs Single Binary</h2>
+<p>Pelican is a Python package. The typical installation looks like this:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">python -m</span><span> venv pelican-env
+</span><span style="color:#96b5b4;">source</span><span> pelican-env/bin/activate
+</span><span style="color:#bf616a;">pip</span><span> install pelican</span><span style="color:#b48ead;">[</span><span>markdown</span><span style="color:#b48ead;">]
+</span><span style="color:#bf616a;">pelican-quickstart
+</span></code></pre>
+<p>You need Python installed, you'll create a virtual environment (or you should), and you'll manage dependencies through pip. This is standard for Python projects, but it's still setup overhead.</p>
+<p>Zola is a single binary:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Download binary
+</span><span style="color:#65737e;"># Add to PATH
+</span><span style="color:#bf616a;">zola</span><span> init my-site
+</span></code></pre>
+<p>No Python, no virtual environment, no pip. One executable that contains everything. Update Zola by downloading a new binary. Your project has no external dependencies.</p>
+<p>This difference matters more than it might seem. With Pelican, you're managing Python versions, virtual environments, and dependency conflicts. With Zola, you download one file and you're done.</p>
+<h2 id="templating-both-use-jinja-style-syntax">Templating: Both Use Jinja-Style Syntax</h2>
+<p>Here's where things get interesting: both Pelican and Zola use Jinja-inspired templating.</p>
+<p>Pelican uses actual Jinja2, Python's most popular templating engine. If you've worked with Flask or Django, you already know how to template in Pelican. The ecosystem of Jinja2 filters and extensions is available.</p>
+<p>Zola uses Tera, which is based on Jinja2 but implemented in Rust. The syntax is nearly identical. If you know Jinja2, you'll understand Tera immediately. The differences are minor—a few filters work differently, and some advanced Jinja2 features aren't available.</p>
+<p>In practice, this means the transition from Pelican to Zola (or vice versa) involves minimal template rewriting. Your mental model transfers directly.</p>
+<h2 id="build-speed-not-even-close">Build Speed: Not Even Close</h2>
+<p>This is where Rust shows its strength.</p>
+<p>Pelican's build speed is acceptable for small to medium sites. For larger sites—think hundreds or thousands of posts—build times can stretch into minutes. Python's interpreted nature and Pelican's plugin architecture add overhead.</p>
+<p>Zola rebuilds sites in milliseconds. Even with thousands of pages, builds are measured in seconds, not minutes. During development, changes appear almost instantly. This difference becomes more pronounced as your site grows.</p>
+<p>If you're migrating from Pelican and suddenly your builds complete in a fraction of the time, that's not a mistake—that's Rust.</p>
+<h2 id="plugin-ecosystem-extensibility-vs-built-in-features">Plugin Ecosystem: Extensibility vs Built-In Features</h2>
+<p>Pelican has a mature plugin ecosystem. Need RSS feeds? There's a plugin. Want to integrate with external services? There's probably a plugin. Need custom content processing? Write a Python plugin.</p>
+<p>This extensibility is Pelican's strength. If you're comfortable with Python, you can extend Pelican to do almost anything. The plugin API is well-documented, and there are dozens of existing plugins to learn from.</p>
+<p>Zola takes the opposite approach: no plugins. Everything you need is built-in. Sass compilation? Included. Syntax highlighting? Built-in. Image processing? It's there. Taxonomies and pagination? Already implemented.</p>
+<p>The trade-off is clear: Pelican gives you extensibility through Python. Zola gives you completeness through built-in features. If what you need is already in Zola, you're set. If you need custom behavior, Pelican's plugin system is more flexible.</p>
+<h2 id="content-organization-and-metadata">Content Organization and Metadata</h2>
+<p>Both use Markdown with front matter, but they organize content differently.</p>
+<p>Pelican's content model is flexible but loose. You can organize files however you want, and Pelican will process them. Metadata is defined in the front matter, and you can add arbitrary custom fields. Categories and tags work as you'd expect from a blog platform.</p>
+<p>Zola has a more structured content model with explicit sections and pages. The directory structure maps directly to URL structure. This is more opinionated but also more predictable. Taxonomies (categories, tags, etc.) are first-class concepts with dedicated configuration.</p>
+<p>Pelican's flexibility is useful for complex or unusual site structures. Zola's structure is clearer for straightforward blogs and documentation.</p>
+<h2 id="python-integration-pelican-s-unique-advantage">Python Integration: Pelican's Unique Advantage</h2>
+<p>Here's something Zola can't match: Pelican is Python, which means you can integrate Python code directly.</p>
+<p>Want to process data with pandas and generate posts from it? Easy in Pelican. Need to pull data from a Python API client? Write a plugin. Want to use Python's scientific or data visualization libraries? They're available.</p>
+<p>This integration is powerful if you're already in the Python ecosystem. If your workflow involves Python data processing, Jupyter notebooks, or scientific computing, Pelican lets you leverage those tools directly.</p>
+<p>Zola offers no equivalent. It's a standalone binary with no scripting layer. What you get is what's built-in.</p>
+<h2 id="theme-ecosystem">Theme Ecosystem</h2>
+<p>Pelican has a substantial collection of themes accumulated over more than a decade. Some are dated, but there are mature, well-maintained options. The community has had years to refine designs.</p>
+<p>Zola's theme ecosystem is smaller and newer. There are good themes available, but fewer options overall. You're more likely to build your own or heavily customize what exists.</p>
+<p>If you want to grab a theme and start writing immediately, Pelican offers more choices. If you prefer building your own design, both work fine.</p>
+<h2 id="documentation-and-community">Documentation and Community</h2>
+<p>Pelican's documentation is comprehensive but shows its age. It's complete, but finding specific information sometimes requires reading through multiple sections. The community is established—most questions have been answered somewhere.</p>
+<p>Zola's documentation is modern, well-organized, and easier to navigate. It's written for today's web development practices. The community is smaller but active and helpful.</p>
+<p>Stack Overflow and blog posts favor Pelican due to its age, but Zola's GitHub discussions are responsive.</p>
+<h2 id="multilingual-sites">Multilingual Sites</h2>
+<p>Pelican supports multiple languages through configuration and the i18n subsites plugin. It works but requires setup and understanding of how Pelican handles translations.</p>
+<p>Zola has built-in multilingual support that requires minimal configuration. You create content in different languages, and Zola handles routing automatically. It's simpler and more intuitive.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Pelican uses a Python configuration file (<code>pelicanconf.py</code>). It's flexible—you can run Python code in your config—but it's also verbose. Configuration can become complex.</p>
+<p>Zola uses TOML. It's simpler and more declarative. What you see is what you get. There's no code execution in config files, which makes them easier to understand but less flexible.</p>
+<h2 id="deployment-and-ci-cd">Deployment and CI/CD</h2>
+<p>Both deploy easily to static hosting, but there's a practical difference.</p>
+<p>Pelican requires a Python environment in your CI/CD pipeline. You install Python, set up a virtual environment, install dependencies, then build. This works fine but adds steps.</p>
+<p>Zola is a single binary. Download it in CI, run it, done. Many CI systems have Zola pre-installed or available through simple package managers. The deployment script is shorter.</p>
+<h2 id="when-to-choose-pelican">When to Choose Pelican</h2>
+<p>Pick Pelican if you:</p>
+<ul>
+<li>Are already comfortable with Python and its ecosystem</li>
+<li>Need to integrate Python libraries or data processing</li>
+<li>Want extensive plugin extensibility</li>
+<li>Prefer proven, mature technology</li>
+<li>Need specific plugins that already exist</li>
+<li>Work in a Python-heavy environment</li>
+<li>Don't mind managing Python dependencies</li>
+</ul>
+<h2 id="when-to-choose-zola">When to Choose Zola</h2>
+<p>Pick Zola if you:</p>
+<ul>
+<li>Want zero-dependency installation and deployment</li>
+<li>Value fast build times, especially for larger sites</li>
+<li>Prefer built-in features over plugins</li>
+<li>Want straightforward multilingual support</li>
+<li>Like modern, clean documentation</li>
+<li>Need simple configuration</li>
+<li>Want to avoid dependency management</li>
+<li>Don't require Python-specific integrations</li>
+</ul>
+<h2 id="migration-path">Migration Path</h2>
+<p>If you're considering moving from Pelican to Zola, the good news is that templates will mostly transfer. Both use Jinja-style syntax, so your template knowledge carries over. Content is Markdown in both, though you'll need to adjust front matter format.</p>
+<p>The main work is replicating any custom Pelican plugins you rely on. If you use standard features, migration is straightforward. If you have complex Python integrations, staying with Pelican might make more sense.</p>
+<h2 id="the-real-question">The Real Question</h2>
+<p>Choosing between Pelican and Zola isn't about which is objectively better—it's about which fits your context.</p>
+<p>Are you embedded in the Python ecosystem? Do you need Python integrations? Do you value extensibility through code? Pelican makes sense.</p>
+<p>Do you want simplicity? Do build times matter? Do you prefer minimal dependencies and modern tooling? Zola is compelling.</p>
+<p>Both will give you a fast static site. Pelican does it with Python's flexibility and maturity. Zola does it with Rust's speed and simplicity.</p>
+<p>Pick based on your workflow and priorities, not just the tool's features. Sometimes the right choice is the one that gets out of your way and lets you focus on writing.</p>
+</div>
+</div>
+</main>
+        <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Subscribe to the newsletter</h2>
+            <p class="newsletter-description">
+                Get notified when new articles are published. No spam,
+                unsubscribe anytime.
+            </p>
+
+            <form class="newsletter-form" action="#" method="post">
+                <div class="form-group">
+                    <input
+                        type="email"
+                        class="newsletter-input"
+                        placeholder="your@email.com"
+                        required
+                        aria-label="Email address"
+                    />
+                    <button type="submit" class="newsletter-button">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Links & Info -->
+        <ul class="footer-content">
+            
+            
+                
+            
+            
+                <li class="footer-links"><a href="/articles" class="footer-link">Articles</a></li>
+            
+                <li class="footer-links"><a href="/about" class="footer-link">About</a></li>
+            
+                <li class="footer-links"><a href="/atom.xml" class="footer-link">RSS</a></li>
+            
+                <li class="footer-links"><a href="/style-guide" class="footer-link">Style Guide</a></li>
+            
+
+        </ul>
+        <div class="footer-info">
+            <p class="copyright">© 2025 Clubhype. Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="#">Inkspire</a>.</p>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="https://salif.github.io/zola-themes-collection/demo/inkspire/js/main.js"></script>
+    </body>
+</html>

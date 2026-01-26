@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Inkspire - JavaScript</title>
+    <subtitle>A elegant and modern theme for Zola</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/inkspire/tags/javascript/atom.xml" />
+    <link
+        rel="alternate"
+        type="text/html"
+        href="https://salif.github.io/zola-themes-collection/demo/inkspire/"
+    />
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated
+    >2025-11-15T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/inkspire/tags/javascript/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Zola vs Astro: Traditional SSG Meets Modern JavaScript</title>
+        <published>2025-11-15T00:00:00+00:00</published>
+        <updated
+        >2025-11-15T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Jose Garcia
+            
+          </name>
+        </author>
+        
+        <link
+            rel="alternate"
+            type="text/html"
+            href="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-astro-traditional-ssg-meets-modern-javascript/"
+        />
+        <id>https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-astro-traditional-ssg-meets-modern-javascript/</id>
+        
+        <content
+            type="html"
+            xml:base="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/featured/zola-vs-astro-traditional-ssg-meets-modern-javascript/"
+        >&lt;p&gt;At first glance, comparing Zola and Astro might seem odd. One is a traditional static site generator built in Rust. The other is a modern JavaScript framework with an islands architecture. But both excel at building fast static sites, and both claim to make the process simpler. The question is: which kind of simplicity do you need?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;philosophy-everything-included-vs-bring-your-own&quot;&gt;Philosophy: Everything Included vs Bring Your Own&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola ships as a single binary with everything built-in. Download one file, and you have templating, Sass compilation, syntax highlighting, image processing, and live reload. No npm, no node_modules, no build configuration.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro is a JavaScript framework that embraces the npm ecosystem. You install it via npm, configure it through JavaScript, and extend it with integrations. Want to use React components? Install the React integration. Need Tailwind? Add it. The philosophy is composition over inclusion.&lt;&#x2F;p&gt;
+&lt;p&gt;This isn&#x27;t a value judgment—it&#x27;s a fundamental difference in approach. Zola says &quot;here&#x27;s everything you need.&quot; Astro says &quot;here&#x27;s a foundation, add what you want.&quot;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installation-and-setup&quot;&gt;Installation and Setup&lt;&#x2F;h2&gt;
+&lt;p&gt;Getting started with Zola:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Download binary
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Add to PATH
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init my-site
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Getting started with Astro:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; create astro@latest
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Answer interactive prompts
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; run dev
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Zola&#x27;s approach means no node_modules folder, no package.json, no dependency updates. Your project is just your content and templates.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro&#x27;s approach means you&#x27;re in the JavaScript ecosystem with all its benefits and complexities. You get access to npm packages, but you also manage dependencies.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;component-model-templates-vs-javascript-components&quot;&gt;Component Model: Templates vs JavaScript Components&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola uses Tera templates. You write HTML with template syntax for loops, conditionals, and macros. It&#x27;s server-side templating—what you write is what gets rendered to HTML.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro lets you write components in Astro syntax (which looks like JSX) and can integrate React, Vue, Svelte, or Solid components. You can mix and match frameworks in the same project. This is powerful if you want to reuse existing components or prefer a component-driven architecture.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s the trade-off: Zola&#x27;s templates are simpler but less powerful for interactive components. Astro&#x27;s components are more complex but give you the full JavaScript ecosystem.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;content-management&quot;&gt;Content Management&lt;&#x2F;h2&gt;
+&lt;p&gt;Both use Markdown for content, but they handle it differently.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola has a structured content model with sections and pages. Front matter is strict but predictable. You organize content by directories, and Zola automatically generates routes. It&#x27;s opinionated about structure, which reduces decisions.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro is more flexible. You can put Markdown files anywhere, use content collections for structured data, or pull content from CMSs or APIs at build time. This flexibility is useful for complex sites but requires more decision-making.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;performance-both-fast-different-reasons&quot;&gt;Performance: Both Fast, Different Reasons&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola is fast because it&#x27;s Rust. Build times are measured in milliseconds. It rebuilds incrementally during development, and changes appear nearly instantly.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro is fast because it ships zero JavaScript by default. Your site is pure HTML and CSS unless you opt into client-side interactivity. When you do add JavaScript, Astro&#x27;s islands architecture only hydrates the components that need it.&lt;&#x2F;p&gt;
+&lt;p&gt;In practice, both produce fast sites. Zola achieves this through traditional static generation. Astro achieves it through clever JavaScript optimization.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;interactivity-and-javascript&quot;&gt;Interactivity and JavaScript&lt;&#x2F;h2&gt;
+&lt;p&gt;This is where the paths diverge significantly.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola doesn&#x27;t have a story for complex client-side interactivity. You can add vanilla JavaScript, but if you need a React component or Vue widget, you&#x27;re integrating it manually. Zola excels at static, content-focused sites.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro was built for partial hydration. You can have an entirely static blog post with one interactive widget that loads React only for that component. This is Astro&#x27;s killer feature—progressive enhancement through islands architecture.&lt;&#x2F;p&gt;
+&lt;p&gt;If your site is mostly static with occasional interactivity, Astro gives you a clear path forward. If your site is entirely static, Zola&#x27;s simplicity might be preferable.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;styling-and-assets&quot;&gt;Styling and Assets&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola has built-in Sass compilation. Write &lt;code&gt;.scss&lt;&#x2F;code&gt; files, and Zola handles them. For other assets, you put them in the static folder, and they&#x27;re copied as-is.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro integrates with modern tooling. You can use Tailwind, CSS-in-JS, CSS Modules, or whatever the JavaScript ecosystem offers. Asset optimization happens through Vite, Astro&#x27;s build tool.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola&#x27;s approach is simpler but more limited. Astro&#x27;s approach gives you more options but requires configuration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ecosystem-and-integrations&quot;&gt;Ecosystem and Integrations&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola&#x27;s ecosystem is minimal. There are some themes and a small community. You&#x27;re mostly building from scratch or adapting existing HTML&#x2F;CSS templates.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro&#x27;s ecosystem is growing rapidly. There are integrations for CMSs, image optimization, analytics, and more. You can use any npm package. The community is active, and new integrations appear regularly.&lt;&#x2F;p&gt;
+&lt;p&gt;If you want to integrate with modern web development tools—TypeScript, Tailwind, MDX, image optimization, analytics—Astro makes this straightforward. With Zola, you&#x27;re on your own.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;multilingual-sites&quot;&gt;Multilingual Sites&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola has first-class multilingual support. Create content in multiple languages, and Zola handles routing and structure automatically. It&#x27;s straightforward and requires minimal configuration.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro supports multilingual sites through routing configuration and content collections. It&#x27;s more manual but also more flexible. You control exactly how languages are handled.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;learning-curve&quot;&gt;Learning Curve&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola&#x27;s learning curve is gentle if you know HTML and are comfortable with template syntax. There&#x27;s one templating language to learn (Tera), and the mental model is simple: templates render content to HTML.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro&#x27;s learning curve depends on your JavaScript experience. If you&#x27;re comfortable with modern JavaScript, JSX, and component thinking, Astro feels natural. If you&#x27;re new to this ecosystem, there&#x27;s more to learn: component syntax, props, islands, integrations.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;developer-experience&quot;&gt;Developer Experience&lt;&#x2F;h2&gt;
+&lt;p&gt;Zola&#x27;s DX is about simplicity. Fast builds, simple mental model, no toolchain configuration. You focus on content and templates. The live reload is nearly instant.&lt;&#x2F;p&gt;
+&lt;p&gt;Astro&#x27;s DX is about power and flexibility. You get TypeScript support, component frameworks, modern tooling, and extensive integrations. The development server is fast, and error messages are helpful.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;when-to-choose-astro&quot;&gt;When to Choose Astro&lt;&#x2F;h2&gt;
+&lt;p&gt;Pick Astro if you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Need to mix static content with interactive components&lt;&#x2F;li&gt;
+&lt;li&gt;Want to use React, Vue, or Svelte components&lt;&#x2F;li&gt;
+&lt;li&gt;Need integration with modern JavaScript tooling&lt;&#x2F;li&gt;
+&lt;li&gt;Plan to pull content from APIs or CMSs&lt;&#x2F;li&gt;
+&lt;li&gt;Want TypeScript support out of the box&lt;&#x2F;li&gt;
+&lt;li&gt;Need to progressively enhance static pages with interactivity&lt;&#x2F;li&gt;
+&lt;li&gt;Are comfortable with npm and JavaScript tooling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;when-to-choose-zola&quot;&gt;When to Choose Zola&lt;&#x2F;h2&gt;
+&lt;p&gt;Pick Zola if you:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Want zero dependency installation and maintenance&lt;&#x2F;li&gt;
+&lt;li&gt;Are building a content-focused site (blog, docs, portfolio)&lt;&#x2F;li&gt;
+&lt;li&gt;Prefer simplicity over flexibility&lt;&#x2F;li&gt;
+&lt;li&gt;Don&#x27;t need complex client-side interactivity&lt;&#x2F;li&gt;
+&lt;li&gt;Want built-in Sass without configuration&lt;&#x2F;li&gt;
+&lt;li&gt;Value fast builds with minimal tooling&lt;&#x2F;li&gt;
+&lt;li&gt;Prefer a single binary over a JavaScript toolchain&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-real-decision-point&quot;&gt;The Real Decision Point&lt;&#x2F;h2&gt;
+&lt;p&gt;The choice between Zola and Astro isn&#x27;t about which is better—it&#x27;s about which model fits your project and preferences.&lt;&#x2F;p&gt;
+&lt;p&gt;Choose based on your site&#x27;s needs:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pure static content with minimal interactivity? Zola&#x27;s simplicity shines.&lt;&#x2F;li&gt;
+&lt;li&gt;Mix of static content and interactive components? Astro&#x27;s islands architecture is perfect.&lt;&#x2F;li&gt;
+&lt;li&gt;Want to avoid JavaScript tooling entirely? Zola gives you that.&lt;&#x2F;li&gt;
+&lt;li&gt;Need the JavaScript ecosystem and its packages? Astro provides access.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Both will give you fast, performant sites. Zola does it with traditional static generation and zero dependencies. Astro does it with modern JavaScript tooling and optional interactivity.&lt;&#x2F;p&gt;
+&lt;p&gt;Neither is wrong. Pick the one that matches how you want to work, not just what you want to build.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

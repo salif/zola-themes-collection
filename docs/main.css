@@ -1569,10 +1569,6 @@ a {
 sup a {
   text-underline-offset: 1px;
 }
-.giscus-frame {
-  --color-scheme: inherit;
-  color-scheme: var(--color-scheme) !important;
-}
 .header {
   background-color: var(--header);
 }
@@ -1636,6 +1632,26 @@ sup a {
 }
 .horizontal-scroll {
   overflow-x: auto;
+}
+.giscus-frame, pre.giallo {
+  color-scheme: light !important;
+  &:where(.dark, .dark *) {
+    color-scheme: dark !important;
+  }
+}
+.giallo-l {
+  display: inline-block;
+  min-height: 1lh;
+  min-width: 100%;
+}
+.giallo-ln {
+  margin-right: 0.4em;
+  display: inline-block;
+  min-width: 3ch;
+  text-align: right;
+  opacity: 80%;
+  -webkit-user-select: none;
+  user-select: none;
 }
 @property --tw-space-x-reverse {
   syntax: "*";

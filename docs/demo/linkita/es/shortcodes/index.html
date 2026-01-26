@@ -55,7 +55,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -234,27 +234,25 @@
 
   <!-- Content -->
   <section><p>El tema Linkita proporciona múltiples shortcodes.</p>
-<p>¿Nunca has oído hablar de los shortcodes? Consulta la <a href="https://www.getzola.org/documentation/content/shortcodes/">documentación de Zola</a> para más información.</p>
+<p>¿Nunca has oído hablar de los shortcodes? Consulta la <a rel="external" href="https://www.getzola.org/documentation/content/shortcodes/">documentación de Zola</a> para más información.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>Para usar Mermaid en tu página, tienes que establecer <code>extra.mermaid = true</code> en el frontmatter de la página.</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">El título de tu página</span><span style="color:#556633;">&quot;
-</span><span>
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span style="color:#ffb964;">mermaid </span><span>= true
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">title</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">El título de tu página</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">mermaid</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span></code></pre>
 <p>Luego puedes usar los shortcodes <code>mermaid()</code> así:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>graph TD;
-</span><span>A--&gt;B;
-</span><span>A--&gt;C;
-</span><span>B--&gt;D;
-</span><span>C--&gt;D;
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>graph TD;</span></span>
+<span class="giallo-l"><span>A--&gt;B;</span></span>
+<span class="giallo-l"><span>A--&gt;C;</span></span>
+<span class="giallo-l"><span>B--&gt;D;</span></span>
+<span class="giallo-l"><span>C--&gt;D;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>Esto se renderizará como:</p>
 <pre class="mermaid bg-inherit" translate="no">
   graph TD;
@@ -265,24 +263,23 @@ C--&gt;D;
 </pre>
 <p>Además, puedes usar un bloque de código dentro de los shortcodes <code>mermaid()</code> y el bloque de código será ignorado.</p>
 <p>El bloque de código evita que el formateador rompa el formato de Mermaid.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>```</span><span style="color:#7697d6;">mermaid
-</span><span>sequenceDiagram
-</span><span>    participant Alice
-</span><span>    participant Bob
-</span><span>    Alice-&gt;&gt;John: Hello John, how are you?
-</span><span>    loop Healthcheck
-</span><span>        John-&gt;&gt;John: Fight against hypochondria
-</span><span>    end
-</span><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!
-</span><span>    John--&gt;&gt;Alice: Great!
-</span><span>    John-&gt;&gt;Bob: How about you?
-</span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>```</span><span>mermaid</span></span>
+<span class="giallo-l"><span>sequenceDiagram</span></span>
+<span class="giallo-l"><span>    participant Alice</span></span>
+<span class="giallo-l"><span>    participant Bob</span></span>
+<span class="giallo-l"><span>    Alice-&gt;&gt;John: Hello John, how are you?</span></span>
+<span class="giallo-l"><span>    loop Healthcheck</span></span>
+<span class="giallo-l"><span>        John-&gt;&gt;John: Fight against hypochondria</span></span>
+<span class="giallo-l"><span>    end</span></span>
+<span class="giallo-l"><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!</span></span>
+<span class="giallo-l"><span>    John--&gt;&gt;Alice: Great!</span></span>
+<span class="giallo-l"><span>    John-&gt;&gt;Bob: How about you?</span></span>
+<span class="giallo-l"><span>    Bob--&gt;&gt;John: Jolly good!</span></span>
+<span class="giallo-l"><span>```</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>Esto se renderizará como:</p>
 <pre class="mermaid bg-inherit" translate="no">
   
@@ -302,10 +299,9 @@ sequenceDiagram
 <h2 id="admonition">Admonition</h2>
 <p>El shortcode <code>admonition()</code> muestra un banner para ayudarte a poner avisos en tu página.</p>
 <p>Puedes usar el shortcode <code>admonition()</code> así:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;consejo&quot;) %}
-</span><span>La admonition de tipo `tip`.
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% admonition(type=&quot;tip&quot;, title=&quot;consejo&quot;) %}</span></span>
+<span class="giallo-l"><span>La admonition de tipo </span><span style="color: light-dark(#800000, #79C0FF);">`</span><span style="color: light-dark(#800000, #79C0FF);">tip</span><span style="color: light-dark(#800000, #79C0FF);">`</span><span>.</span></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>El shortcode de admonition tiene 12 tipos diferentes:</p>
 
 <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/admonition.css?h=98c1477488c4b2c9d71a" type="text/css">
@@ -526,10 +522,8 @@ sequenceDiagram
 </div>
 <h2 id="galeria">Galería</h2>
 <p>El shortcode <code>gallery()</code> es una galería de imágenes clicable muy simple, solo con HTML, que muestra todas las imágenes de los assets de la página.</p>
-<p>Proviene de la <a href="https://www.getzola.org/documentation/content/image-processing/">documentación de Zola</a></p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
-</span></code></pre>
-<div class="not-prose flex flex-wrap gap-2">
+<p>Proviene de la <a rel="external" href="https://www.getzola.org/documentation/content/image-processing/">documentación de Zola</a></p>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{{ gallery() }}</span></span></code></pre><div class="not-prose flex flex-wrap gap-2">
 
   <a href="https://salif.github.io/zola-themes-collection/demo/linkita/es/shortcodes/01-zola.png" target="_blank">
     <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/01-zola.b673627618ae4d9e.png" alt="Imagen de demostración para la galería" />
@@ -559,24 +553,22 @@ sequenceDiagram
 <h2 id="proyectos">Proyectos</h2>
 <p>El shortcode <code>projects()</code> te permite crear una página para tu proyecto.</p>
 <p>Crea un archivo <code>content/pages/projects/index.md</code>:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;Mis Proyectos&quot;
-</span><span>description = &quot;&quot;
-</span><span>path = &quot;projects&quot;
-</span><span>+++
-</span><span>
-</span><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;Mis Proyectos&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;&quot;</span></span>
+<span class="giallo-l"><span>path = &quot;projects&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}</span></span></code></pre>
 <p>Crea un archivo <code>content/pages/projects/data.toml</code>:</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
-</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
-</span><span style="color:#ffb964;">links </span><span>= [
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>]
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span>[[</span><span style="color: light-dark(#000000, #FFA657);">project</span><span>]]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">desc</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">Lorem ipsum dolor sit.</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">tags</span><span> =</span><span> [</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">ipsum</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">links</span><span> =</span><span> [</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">homepage</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">source</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>]</span></span></code></pre>
 <p>Esto se mostrará como:</p>
 
 <div class="not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
@@ -652,7 +644,7 @@ sequenceDiagram
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

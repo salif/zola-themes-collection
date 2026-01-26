@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Inkspire - Simple Post</title>
+    <subtitle>A elegant and modern theme for Zola</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/inkspire/categories/simple-post/atom.xml" />
+    <link
+        rel="alternate"
+        type="text/html"
+        href="https://salif.github.io/zola-themes-collection/demo/inkspire/"
+    />
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated
+    >2025-11-21T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/inkspire/categories/simple-post/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Migrating from WordPress to Zola: A Practical Guide</title>
+        <published>2025-11-21T00:00:00+00:00</published>
+        <updated
+        >2025-11-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Jose Garcia
+            
+          </name>
+        </author>
+        
+        <link
+            rel="alternate"
+            type="text/html"
+            href="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/migrating-from-wordpress-to-zola/"
+        />
+        <id>https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/migrating-from-wordpress-to-zola/</id>
+        
+        <content
+            type="html"
+            xml:base="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/migrating-from-wordpress-to-zola/"
+        >&lt;p&gt;I recently migrated a WordPress blog that had been running for years to Zola. The process took about a weekend, and the results were worth it: faster load times, zero maintenance overhead, and complete control over the output. Here&#x27;s everything I learned.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-leave-wordpress&quot;&gt;Why Leave WordPress?&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress is powerful, but that power comes with weight. My site was:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Running on a VPS that needed updates and monitoring&lt;&#x2F;li&gt;
+&lt;li&gt;Using multiple plugins that occasionally broke after updates&lt;&#x2F;li&gt;
+&lt;li&gt;Loading slowly despite caching plugins&lt;&#x2F;li&gt;
+&lt;li&gt;Vulnerable to security issues requiring constant vigilance&lt;&#x2F;li&gt;
+&lt;li&gt;Costing monthly hosting fees&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The blog was 95% static content. I wasn&#x27;t using most of WordPress&#x27;s dynamic features. A static site made more sense.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;understanding-what-you-re-trading&quot;&gt;Understanding What You&#x27;re Trading&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;What you lose:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dynamic comments (replaceable with external services)&lt;&#x2F;li&gt;
+&lt;li&gt;Admin dashboard for editing (you&#x27;ll edit markdown files)&lt;&#x2F;li&gt;
+&lt;li&gt;Plugin ecosystem (you build what you need)&lt;&#x2F;li&gt;
+&lt;li&gt;WYSIWYG editor (you&#x27;ll write in markdown)&lt;&#x2F;li&gt;
+&lt;li&gt;Easy updates from browser (you&#x27;ll push to git)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;What you gain:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Near-instant page loads&lt;&#x2F;li&gt;
+&lt;li&gt;Zero server maintenance&lt;&#x2F;li&gt;
+&lt;li&gt;No security vulnerabilities&lt;&#x2F;li&gt;
+&lt;li&gt;Free hosting options (GitHub Pages, Netlify, Cloudflare Pages)&lt;&#x2F;li&gt;
+&lt;li&gt;Complete control over output&lt;&#x2F;li&gt;
+&lt;li&gt;Version control for all content&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to work offline&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;If you write in markdown and are comfortable with git, this trade-off is favorable.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;step-1-export-your-wordpress-content&quot;&gt;Step 1: Export Your WordPress Content&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress has a built-in export tool:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to Tools → Export in WordPress admin&lt;&#x2F;li&gt;
+&lt;li&gt;Select &quot;All content&quot;&lt;&#x2F;li&gt;
+&lt;li&gt;Download the XML file&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This gives you a file with all posts, pages, comments, and metadata.&lt;&#x2F;p&gt;
+&lt;p&gt;You can also use plugins like &quot;WordPress to Jekyll Exporter&quot; which exports directly to markdown, though you&#x27;ll still need to adapt the format for Zola.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;step-2-convert-content-to-markdown&quot;&gt;Step 2: Convert Content to Markdown&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress exports to XML. Zola needs markdown with front matter. You have options:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Option A: Use an existing converter&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Tools like &lt;code&gt;wordpress-export-to-markdown&lt;&#x2F;code&gt; (npm package) can help:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;npm&lt;&#x2F;span&gt;&lt;span&gt; install&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -g&lt;&#x2F;span&gt;&lt;span&gt; wordpress-export-to-markdown
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;wordpress-export-to-markdown --input&lt;&#x2F;span&gt;&lt;span&gt;=export.xml&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --output&lt;&#x2F;span&gt;&lt;span&gt;=content&#x2F;blog
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Option B: Write a conversion script&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I wrote a Python script to process the XML and convert to Zola-compatible markdown:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;xml.etree.ElementTree &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ET
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;html2text &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;html2text
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;datetime &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;datetime
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;os
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;re
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;clean_filename&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Convert title to valid filename
+&lt;&#x2F;span&gt;&lt;span&gt;    filename = title.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;lower&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    filename = re.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;sub&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;r&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;^&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;a-z0-9]&lt;&#x2F;span&gt;&lt;span&gt;+&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, filename)
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;filename.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;strip&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;convert_wordpress_export&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;xml_file&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;output_dir&lt;&#x2F;span&gt;&lt;span&gt;):
+&lt;&#x2F;span&gt;&lt;span&gt;    tree = ET.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;parse&lt;&#x2F;span&gt;&lt;span&gt;(xml_file)
+&lt;&#x2F;span&gt;&lt;span&gt;    root = tree.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;getroot&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# WordPress XML namespaces
+&lt;&#x2F;span&gt;&lt;span&gt;    namespaces = {
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;purl.org&#x2F;rss&#x2F;1.0&#x2F;modules&#x2F;content&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;,
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;wp&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;: &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;http:&#x2F;&#x2F;wordpress.org&#x2F;export&#x2F;1.2&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;item &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;root.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;findall&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.&#x2F;&#x2F;item&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;):
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Get post data
+&lt;&#x2F;span&gt;&lt;span&gt;        title = item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;).text
+&lt;&#x2F;span&gt;&lt;span&gt;        post_type = item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;wp:post_type&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, namespaces).text
+&lt;&#x2F;span&gt;&lt;span&gt;        status = item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;wp:status&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, namespaces).text
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Only process published posts
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;post_type != &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; or status != &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;publish&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;:
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;continue
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Get content
+&lt;&#x2F;span&gt;&lt;span&gt;        content_html = item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;content:encoded&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, namespaces).text or &amp;#39;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;        content_md = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;html2text&lt;&#x2F;span&gt;&lt;span&gt;(content_html)
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Get metadata
+&lt;&#x2F;span&gt;&lt;span&gt;        date_str = item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;wp:post_date&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, namespaces).text
+&lt;&#x2F;span&gt;&lt;span&gt;        date = datetime.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;strptime&lt;&#x2F;span&gt;&lt;span&gt;(date_str, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%Y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%m&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%d %H&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%M&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%S&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Get categories and tags
+&lt;&#x2F;span&gt;&lt;span&gt;        categories = []
+&lt;&#x2F;span&gt;&lt;span&gt;        tags = []
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;category &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span&gt;item.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;findall&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;category&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;):
+&lt;&#x2F;span&gt;&lt;span&gt;            domain = category.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;get&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;domain&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;span&gt;            name = category.text
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;domain == &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;category&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;:
+&lt;&#x2F;span&gt;&lt;span&gt;                categories.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span&gt;(name)
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;domain == &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post_tag&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;:
+&lt;&#x2F;span&gt;&lt;span&gt;                tags.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;append&lt;&#x2F;span&gt;&lt;span&gt;(name)
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Create filename
+&lt;&#x2F;span&gt;&lt;span&gt;        filename = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;{date.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;strftime&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%Y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%m&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;clean_filename&lt;&#x2F;span&gt;&lt;span&gt;(title)}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.md&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        filepath = os.path.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;join&lt;&#x2F;span&gt;&lt;span&gt;(output_dir, filename)
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Create front matter
+&lt;&#x2F;span&gt;&lt;span&gt;        front_matter = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+++
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;title = &amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;{title}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;date = &lt;&#x2F;span&gt;&lt;span&gt;{date.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;strftime&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%Y&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%m&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;categories:
+&lt;&#x2F;span&gt;&lt;span&gt;            front_matter += &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;[taxonomies]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;tags:
+&lt;&#x2F;span&gt;&lt;span&gt;                front_matter += &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags = &lt;&#x2F;span&gt;&lt;span&gt;{tags}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;categories:
+&lt;&#x2F;span&gt;&lt;span&gt;                front_matter += &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;categories = &lt;&#x2F;span&gt;&lt;span&gt;{categories}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        front_matter += &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;+++&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;\n\n&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Write file
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;with &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;open&lt;&#x2F;span&gt;&lt;span&gt;(filepath, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;w&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;encoding&lt;&#x2F;span&gt;&lt;span&gt;=&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;utf-8&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span&gt;f:
+&lt;&#x2F;span&gt;&lt;span&gt;            f.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;write&lt;&#x2F;span&gt;&lt;span&gt;(front_matter + content_md)
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;print&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Converted: &lt;&#x2F;span&gt;&lt;span&gt;{title}&amp;quot;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Usage
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;convert_wordpress_export&lt;&#x2F;span&gt;&lt;span&gt;(&amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;export.xml&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;, &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;content&#x2F;blog&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Install required package: &lt;code&gt;pip install html2text&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This script:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Parses the WordPress XML&lt;&#x2F;li&gt;
+&lt;li&gt;Converts HTML content to markdown&lt;&#x2F;li&gt;
+&lt;li&gt;Creates proper front matter&lt;&#x2F;li&gt;
+&lt;li&gt;Organizes files with dates in filenames&lt;&#x2F;li&gt;
+&lt;li&gt;Preserves categories and tags&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;step-3-handle-images-and-media&quot;&gt;Step 3: Handle Images and Media&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress stores images in &lt;code&gt;wp-content&#x2F;uploads&#x2F;YEAR&#x2F;MONTH&#x2F;&lt;&#x2F;code&gt;. You need to:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1. Download all images:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Use wget or a WordPress plugin to download your media library:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;wget -r -np -nH --cut-dirs&lt;&#x2F;span&gt;&lt;span&gt;=3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -R&lt;&#x2F;span&gt;&lt;span&gt; index.html \
+&lt;&#x2F;span&gt;&lt;span&gt;  https:&#x2F;&#x2F;yoursite.com&#x2F;wp-content&#x2F;uploads&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;2. Move to Zola&#x27;s static directory:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; uploads static&#x2F;images
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;3. Update image references:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Your converted markdown will have references like:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;![Alt text](https:&#x2F;&#x2F;yoursite.com&#x2F;wp-content&#x2F;uploads&#x2F;2023&#x2F;05&#x2F;image.jpg)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Update them to:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;![Alt text](&#x2F;images&#x2F;2023&#x2F;05&#x2F;image.jpg)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Use find and replace or a script:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# In your content directory
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;find&lt;&#x2F;span&gt;&lt;span&gt; .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -name &lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;*.md&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -type&lt;&#x2F;span&gt;&lt;span&gt; f&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -exec&lt;&#x2F;span&gt;&lt;span&gt; sed&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; -i &lt;&#x2F;span&gt;&lt;span&gt;\
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;#39;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;s|https:&#x2F;&#x2F;yoursite.com&#x2F;wp-content&#x2F;uploads|&#x2F;images|g&lt;&#x2F;span&gt;&lt;span&gt;&amp;#39; {} +
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;step-4-set-up-zola-structure&quot;&gt;Step 4: Set Up Zola Structure&lt;&#x2F;h2&gt;
+&lt;p&gt;Create your Zola site:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init my-site
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-site
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Move converted posts:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir -p&lt;&#x2F;span&gt;&lt;span&gt; content&#x2F;blog
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mv&lt;&#x2F;span&gt;&lt;span&gt; ..&#x2F;converted-posts&#x2F;*.md content&#x2F;blog&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create &lt;code&gt;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Blog&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;sort_by = &amp;quot;date&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;template = &amp;quot;blog.html&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;page_template = &amp;quot;blog-page.html&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;paginate_by = 10
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;step-5-handle-url-structure&quot;&gt;Step 5: Handle URL Structure&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress typically uses URLs like:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yoursite.com&#x2F;2023&#x2F;05&#x2F;post-title&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;yoursite.com&#x2F;category&#x2F;tech&#x2F;post-title&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Zola defaults to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yoursite.com&#x2F;blog&#x2F;post-title&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Option 1: Accept new URLs and set up redirects&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Create a &lt;code&gt;_redirects&lt;&#x2F;code&gt; file for Netlify or use meta refresh in HTML:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&#x2F;2023&#x2F;05&#x2F;old-post-title&#x2F; &#x2F;blog&#x2F;old-post-title&#x2F; 301
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Option 2: Match WordPress structure&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Configure Zola&#x27;s &lt;code&gt;config.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[slugify]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;paths &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;safe&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;taxonomies &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;safe&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# In your section front matter
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# You can customize paths per post
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Or in individual posts, set custom paths:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;My Post&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;date = 2023-05-15
+&lt;&#x2F;span&gt;&lt;span&gt;path = &amp;quot;2023&#x2F;05&#x2F;my-post&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;step-6-migrate-comments&quot;&gt;Step 6: Migrate Comments&lt;&#x2F;h2&gt;
+&lt;p&gt;WordPress comments can&#x27;t directly transfer to static sites. Options:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;1. Use a third-party service:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Disqus (free, but ads)&lt;&#x2F;li&gt;
+&lt;li&gt;Utterances (GitHub-based, clean)&lt;&#x2F;li&gt;
+&lt;li&gt;Commento (open-source, self-hostable)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Export and display statically:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Export comments from WordPress, convert to markdown, and display them as static content at the bottom of posts.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;3. Disable comments:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If comments weren&#x27;t active or valuable, simply don&#x27;t include them.&lt;&#x2F;p&gt;
+&lt;p&gt;I chose Utterances for its simplicity and GitHub integration.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;step-7-create-templates&quot;&gt;Step 7: Create Templates&lt;&#x2F;h2&gt;
+&lt;p&gt;Build basic templates matching your WordPress design:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Base template&lt;&#x2F;strong&gt; (&lt;code&gt;templates&#x2F;base.html&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;head&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;title&amp;gt;{% block title %}{{ config.title }}{% endblock %}&amp;lt;&#x2F;title&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;#&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;head&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;body&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;header&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;nav&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Home&amp;lt;&#x2F;a&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;Blog&amp;lt;&#x2F;a&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;nav&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;header&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;main&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% block content %}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;main&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;body&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;html&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Blog post template&lt;&#x2F;strong&gt; (&lt;code&gt;templates&#x2F;blog-page.html&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;{% extends &amp;quot;base.html&amp;quot; %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block content %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;article&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;h1&amp;gt;{{ page.title }}&amp;lt;&#x2F;h1&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;time&amp;gt;{{ page.date | date(format=&amp;quot;%B %d, %Y&amp;quot;) }}&amp;lt;&#x2F;time&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {{ page.content | safe }}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% for tag in page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;a href=&amp;quot;{{ get_taxonomy_url(kind=&amp;quot;tags&amp;quot;, name=tag) }}&amp;quot;&amp;gt;#{{ tag }}&amp;lt;&#x2F;a&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endfor %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;div&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;article&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% endblock %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;step-8-style-migration&quot;&gt;Step 8: Style Migration&lt;&#x2F;h2&gt;
+&lt;p&gt;Export your WordPress CSS or recreate the design. If you used a theme, you might need to rebuild styles from scratch.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola compiles Sass, so use that for organization:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir&lt;&#x2F;span&gt;&lt;span&gt; sass
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Create sass&#x2F;style.scss with your styles
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;step-9-test-everything&quot;&gt;Step 9: Test Everything&lt;&#x2F;h2&gt;
+&lt;p&gt;Before going live:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Check all internal links:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; check
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Verify images load:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Look for broken image links&lt;&#x2F;li&gt;
+&lt;li&gt;Ensure paths are correct&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Test on local server:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Review post formatting:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check markdown rendering&lt;&#x2F;li&gt;
+&lt;li&gt;Verify code blocks&lt;&#x2F;li&gt;
+&lt;li&gt;Test list formatting&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Validate RSS feed:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check &lt;code&gt;public&#x2F;rss.xml&lt;&#x2F;code&gt; after build&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;step-10-deploy&quot;&gt;Step 10: Deploy&lt;&#x2F;h2&gt;
+&lt;p&gt;Build the site:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; build
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Deploy the &lt;code&gt;public&#x2F;&lt;&#x2F;code&gt; directory to:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;&#x2F;strong&gt; (free)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Netlify&lt;&#x2F;strong&gt; (free, easy continuous deployment)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cloudflare Pages&lt;&#x2F;strong&gt; (free, fast CDN)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Any static host&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For Netlify, create &lt;code&gt;netlify.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[build]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;command &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;zola build&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;publish &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;public&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[build.environment]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;ZOLA_VERSION &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;0.18.0&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[[redirects]]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;wp-content&#x2F;uploads&#x2F;*&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;to &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;images&#x2F;:splat&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;status &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;301
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;post-migration-checklist&quot;&gt;Post-Migration Checklist&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+All posts migrated and rendering correctly&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Images loading from new paths&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+RSS feed working&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Internal links updated&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+URL redirects configured&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Comments solution implemented (if wanted)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Analytics added (if needed)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Search functionality (if needed)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Domain pointed to new host&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+SSL certificate configured&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&#x2F;&gt;
+Old WordPress site backed up before shutdown&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-i-learned&quot;&gt;What I Learned&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Week 1 after migration:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pages loaded 10x faster&lt;&#x2F;li&gt;
+&lt;li&gt;No more plugin update anxiety&lt;&#x2F;li&gt;
+&lt;li&gt;Editing in markdown felt liberating&lt;&#x2F;li&gt;
+&lt;li&gt;Git history for all content was valuable&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Month 1:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Zero maintenance time spent&lt;&#x2F;li&gt;
+&lt;li&gt;Hosting costs dropped to $0&lt;&#x2F;li&gt;
+&lt;li&gt;Could work on posts offline&lt;&#x2F;li&gt;
+&lt;li&gt;Deploy workflow became natural&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;strong&gt;Month 6:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Never looked back&lt;&#x2F;li&gt;
+&lt;li&gt;Writing more because the friction is gone&lt;&#x2F;li&gt;
+&lt;li&gt;Site is still fast, no degradation&lt;&#x2F;li&gt;
+&lt;li&gt;No security worries&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;common-issues-and-solutions&quot;&gt;Common Issues and Solutions&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;Problem: HTML in converted markdown looks messy&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Solution: Clean up the markdown manually or improve your conversion script. Some HTML is fine—Zola renders it.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem: WordPress shortcodes don&#x27;t convert&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Solution: Replace WordPress shortcodes with equivalent HTML or Zola shortcodes. Create custom shortcodes for complex elements.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem: Featured images missing&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Solution: WordPress featured images need special handling. Extract them from the XML and add to front matter:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span&gt;featured_image = &amp;quot;&#x2F;images&#x2F;2023&#x2F;05&#x2F;featured.jpg&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;Problem: Categories and tags not working&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Solution: Ensure taxonomies are configured in &lt;code&gt;config.toml&lt;&#x2F;code&gt; and properly formatted in front matter.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;is-migration-worth-it&quot;&gt;Is Migration Worth It?&lt;&#x2F;h2&gt;
+&lt;p&gt;For me: absolutely. The trade-offs favor static generation when:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your site is mostly static content&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;re comfortable with markdown and git&lt;&#x2F;li&gt;
+&lt;li&gt;You want maximum performance&lt;&#x2F;li&gt;
+&lt;li&gt;You want to minimize maintenance&lt;&#x2F;li&gt;
+&lt;li&gt;Hosting costs matter&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It&#x27;s not worth it if:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;You need complex user interactions&lt;&#x2F;li&gt;
+&lt;li&gt;Multiple non-technical people need to edit content&lt;&#x2F;li&gt;
+&lt;li&gt;You heavily use WordPress-specific plugins&lt;&#x2F;li&gt;
+&lt;li&gt;You&#x27;re not comfortable with command-line tools&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;resources-that-helped&quot;&gt;Resources That Helped&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Zola documentation (comprehensive)&lt;&#x2F;li&gt;
+&lt;li&gt;html2text Python library (HTML to markdown conversion)&lt;&#x2F;li&gt;
+&lt;li&gt;wordpress-export-to-markdown npm package&lt;&#x2F;li&gt;
+&lt;li&gt;Utterances for comments&lt;&#x2F;li&gt;
+&lt;li&gt;Netlify for hosting and deployment&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The migration took one weekend of focused work. Six months later, I have zero regrets. The site is faster, cheaper to run, and more enjoyable to maintain. If your WordPress site is primarily a blog with static content, Zola is a compelling alternative.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How I Spent One Week with Zola</title>
+        <published>2025-11-20T00:00:00+00:00</published>
+        <updated
+        >2025-11-20T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Jose Garcia
+            
+          </name>
+        </author>
+        
+        <link
+            rel="alternate"
+            type="text/html"
+            href="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/how-i-spent-one-week-with-zola/"
+        />
+        <id>https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/how-i-spent-one-week-with-zola/</id>
+        
+        <content
+            type="html"
+            xml:base="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/how-i-spent-one-week-with-zola/"
+        >&lt;p&gt;I&#x27;ve been putting off rebuilding my blog for months. I knew I wanted to move away from my current setup, but every static site generator I looked at felt like it required too much overhead. Then I came across Zola, and something about the &quot;single binary, zero dependencies&quot; pitch made me curious enough to give it a real shot.&lt;&#x2F;p&gt;
+&lt;p&gt;I gave myself one week. Seven days to evaluate Zola, rebuild my site, and decide if this was the tool I&#x27;d been looking for. Here&#x27;s what actually happened.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-1-setup-and-first-impressions&quot;&gt;Day 1: Setup and First Impressions&lt;&#x2F;h2&gt;
+&lt;p&gt;The installation was almost anticlimactic. Download a binary, add it to my PATH, run &lt;code&gt;zola init&lt;&#x2F;code&gt;. No virtual environment, no npm install waiting for the progress bar, no dependency resolution. Just... done.&lt;&#x2F;p&gt;
+&lt;p&gt;I spent the rest of day one reading through the documentation and setting up the basic structure. The docs are well-organized and surprisingly concise. Within a few hours, I had a basic site running with &lt;code&gt;zola serve&lt;&#x2F;code&gt;, and the live reload was noticeably fast. Not &quot;fast enough&quot; fast—actually fast.&lt;&#x2F;p&gt;
+&lt;p&gt;The Tera templating syntax felt immediately familiar. If you&#x27;ve used Jinja2 (and I have), you&#x27;re basically already trained. I threw together a simple base template and a post layout, and I was rendering Markdown by evening.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 1 verdict:&lt;&#x2F;strong&gt; This is refreshingly simple. Cautiously optimistic.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-2-content-migration-and-structure&quot;&gt;Day 2: Content Migration and Structure&lt;&#x2F;h2&gt;
+&lt;p&gt;I spent day two migrating my existing blog posts and figuring out Zola&#x27;s content model. This is where the opinionated structure became apparent.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola wants you to organize content into sections. Each section is a directory with an &lt;code&gt;_index.md&lt;&#x2F;code&gt; file. Pages are individual markdown files. It&#x27;s more structured than just dumping markdown files wherever, but once I understood the pattern, it made sense.&lt;&#x2F;p&gt;
+&lt;p&gt;The front matter format was slightly different from what I was using before, so I wrote a quick script to convert my posts. Nothing complicated—mostly adjusting date formats and metadata fields.&lt;&#x2F;p&gt;
+&lt;p&gt;What surprised me was how fast Zola rebuilt the site even as I was adding more content. I&#x27;m used to SSGs slowing down as content grows. Zola just... didn&#x27;t.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 2 verdict:&lt;&#x2F;strong&gt; The opinionated structure takes some adjustment but pays off in clarity.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-3-multilingual-support&quot;&gt;Day 3: Multilingual Support&lt;&#x2F;h2&gt;
+&lt;p&gt;I needed my site to work in both English and Spanish. This is where I expected pain, because multilingual support is usually either an afterthought or a complex configuration nightmare.&lt;&#x2F;p&gt;
+&lt;p&gt;Zola&#x27;s multilingual support is shockingly straightforward. You add &lt;code&gt;default_language&lt;&#x2F;code&gt; to your config, define your languages, and create content with language codes in the filenames (like &lt;code&gt;about.es.md&lt;&#x2F;code&gt;). That&#x27;s it. Zola handles the routing and switching.&lt;&#x2F;p&gt;
+&lt;p&gt;I spent maybe two hours setting this up, including creating translated versions of my templates. The language switching just worked. No plugins, no complex routing rules, no confusion.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 3 verdict:&lt;&#x2F;strong&gt; This is how multilingual support should work everywhere.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-4-building-the-features-i-actually-want&quot;&gt;Day 4: Building the Features I Actually Want&lt;&#x2F;h2&gt;
+&lt;p&gt;Day four was about building the features I actually needed: a featured posts section, proper pagination, tag pages, and RSS feeds.&lt;&#x2F;p&gt;
+&lt;p&gt;RSS was already built-in. Just enable it in the config. Done.&lt;&#x2F;p&gt;
+&lt;p&gt;Pagination is built-in. Add a few lines to your template. Done.&lt;&#x2F;p&gt;
+&lt;p&gt;Taxonomies (tags, categories) are first-class concepts. Configure them once, use them everywhere.&lt;&#x2F;p&gt;
+&lt;p&gt;The featured posts section required a bit more thought. I added a &lt;code&gt;featured&lt;&#x2F;code&gt; field to my post front matter, then filtered posts in my template:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;{% set featured = section.pages | filter(attribute=&amp;quot;extra.featured&amp;quot;, value=true) %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Clean, readable, works perfectly. By the end of day four, my site had all the features I wanted, and I hadn&#x27;t written any plugins or external scripts.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 4 verdict:&lt;&#x2F;strong&gt; Built-in features cover 90% of what you actually need.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-5-styling-with-sass&quot;&gt;Day 5: Styling with Sass&lt;&#x2F;h2&gt;
+&lt;p&gt;I don&#x27;t love writing CSS, but I do like Sass for organization and variables. Zola compiles Sass out of the box.&lt;&#x2F;p&gt;
+&lt;p&gt;I created a &lt;code&gt;sass&lt;&#x2F;code&gt; directory, wrote my styles with nesting and variables, and Zola just handled it. No webpack configuration, no additional dependencies, no build scripts. It compiled on save and the changes appeared immediately.&lt;&#x2F;p&gt;
+&lt;p&gt;This is where the &quot;batteries included&quot; philosophy really clicked. Every time I expected to need an extra tool or plugin, Zola already had it built-in.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 5 verdict:&lt;&#x2F;strong&gt; The more I use Zola, the less I have to configure.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-6-polish-and-refinements&quot;&gt;Day 6: Polish and Refinements&lt;&#x2F;h2&gt;
+&lt;p&gt;Day six was cleanup: improving templates, adding proper metadata, testing the build on different content, and making sure everything worked correctly.&lt;&#x2F;p&gt;
+&lt;p&gt;I experimented with Zola&#x27;s shortcodes for embedding content in Markdown. They&#x27;re straightforward—define a template, call it from markdown. I built a couple for image galleries and code examples.&lt;&#x2F;p&gt;
+&lt;p&gt;I also tested the production build. The output is clean, minimal, and fast. Zola doesn&#x27;t add unnecessary JavaScript or bloat. What you build is what you get.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 6 verdict:&lt;&#x2F;strong&gt; The polish is in the details Zola got right.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-7-deployment-and-reflection&quot;&gt;Day 7: Deployment and Reflection&lt;&#x2F;h2&gt;
+&lt;p&gt;The final day was about deployment. I pushed to GitHub, set up a simple GitHub Action that downloads Zola, builds the site, and deploys to GitHub Pages. The entire CI script is about 15 lines.&lt;&#x2F;p&gt;
+&lt;p&gt;No installing Node.js in CI, no pip installing dependencies, no caching layers to speed up repeated builds. Download one binary, run one command, deploy.&lt;&#x2F;p&gt;
+&lt;p&gt;As I looked at what I&#x27;d built in a week, I realized something: I&#x27;d spent most of my time building my site, not configuring my build tool. I wasn&#x27;t debugging plugin conflicts or wrestling with complicated documentation. I was writing templates, styling pages, and migrating content.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Day 7 verdict:&lt;&#x2F;strong&gt; This is what I&#x27;ve been looking for.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-i-learned-about-zola&quot;&gt;What I Learned About Zola&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;strong&gt;The speed is real.&lt;&#x2F;strong&gt; It&#x27;s not marketing. Rebuilds are genuinely fast enough that the feedback loop feels instant. This matters more than you&#x27;d think—it keeps you in flow instead of waiting.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Batteries included works.&lt;&#x2F;strong&gt; I&#x27;m used to static site generators being minimal cores that you extend with plugins. Zola&#x27;s approach of including everything is different, but it&#x27;s efficient. I never had to evaluate plugins or worry about compatibility.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Opinionated structure helps.&lt;&#x2F;strong&gt; At first, Zola&#x27;s structured content model felt restrictive. By day three, I appreciated it. The constraints make things predictable, and predictable means less time deciding how to organize things.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Tera is excellent.&lt;&#x2F;strong&gt; The templating is powerful enough for anything I needed but simple enough to read six months from now. The Jinja2 inspiration was the right call.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Zero dependencies isn&#x27;t just a feature—it&#x27;s a philosophy.&lt;&#x2F;strong&gt; Not managing Python versions, npm packages, or virtual environments removed an entire category of problems. My project is my content and my templates. That&#x27;s it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-i-missed-briefly&quot;&gt;What I Missed (Briefly)&lt;&#x2F;h2&gt;
+&lt;p&gt;The plugin ecosystem. When I wanted something custom, I had to build it in templates rather than reaching for a plugin. This was actually fine—Tera is capable enough—but there were moments where I wished for a Python script or npm package.&lt;&#x2F;p&gt;
+&lt;p&gt;The theme ecosystem is smaller. I built my own design, which I wanted to do anyway, but if you&#x27;re hoping to grab a polished theme and go, options are limited.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-verdict&quot;&gt;The Verdict&lt;&#x2F;h2&gt;
+&lt;p&gt;Seven days in, I&#x27;m keeping Zola.&lt;&#x2F;p&gt;
+&lt;p&gt;This isn&#x27;t because Zola does things other static site generators can&#x27;t—it&#x27;s because Zola does fewer things but does them with less friction. The simplicity isn&#x27;t simplistic; it&#x27;s intentional.&lt;&#x2F;p&gt;
+&lt;p&gt;I came in skeptical that a tool could be both powerful and simple. Zola proved me wrong by being opinionated about the right things and flexible about everything else.&lt;&#x2F;p&gt;
+&lt;p&gt;My blog is live, builds are fast, development is pleasant, and I have zero dependencies to maintain. If that sounds appealing, give Zola a week. You might be surprised how much you can build when the tool gets out of your way.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;resources-that-helped&quot;&gt;Resources That Helped&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The official Zola documentation (start here)&lt;&#x2F;li&gt;
+&lt;li&gt;The Tera template documentation (for advanced templating)&lt;&#x2F;li&gt;
+&lt;li&gt;Zola&#x27;s GitHub discussions (helpful community)&lt;&#x2F;li&gt;
+&lt;li&gt;Example sites in Zola&#x27;s showcase (seeing real implementations helps)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Would I recommend Zola? If you want simplicity, speed, and don&#x27;t need extensive plugin ecosystems, absolutely. If you need complex Python integrations or want thousands of themes to choose from, look elsewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;For me, Zola hit the sweet spot: powerful enough for what I need, simple enough to stay out of my way. One week was enough to be convinced.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Creating a Blog with Zola: A Practical Guide</title>
+        <published>2025-11-19T00:00:00+00:00</published>
+        <updated
+        >2025-11-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Jose Garcia
+            
+          </name>
+        </author>
+        
+        <link
+            rel="alternate"
+            type="text/html"
+            href="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/creating-blog-with-zola-a-practical-guide/"
+        />
+        <id>https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/creating-blog-with-zola-a-practical-guide/</id>
+        
+        <content
+            type="html"
+            xml:base="https://salif.github.io/zola-themes-collection/demo/inkspire/articles/posts/creating-blog-with-zola-a-practical-guide/"
+        >&lt;p&gt;Building a blog with Zola is straightforward, but there are patterns and decisions that aren&#x27;t immediately obvious from the documentation. This guide walks through creating a real blog, covering the practical choices you&#x27;ll face and the solutions that work well.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;getting-started-installation-and-project-setup&quot;&gt;Getting Started: Installation and Project Setup&lt;&#x2F;h2&gt;
+&lt;p&gt;First, install Zola. Download the binary for your platform from the releases page, or use a package manager:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# macOS
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;brew&lt;&#x2F;span&gt;&lt;span&gt; install zola
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Linux
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;snap&lt;&#x2F;span&gt;&lt;span&gt; install zola&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt; --edge
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Or download the binary directly
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create your project:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init my-blog
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; my-blog
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Zola will ask a few questions. For a blog, answer:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;URL: Your production URL (you can change this later)&lt;&#x2F;li&gt;
+&lt;li&gt;Sass compilation: Yes&lt;&#x2F;li&gt;
+&lt;li&gt;Syntax highlighting: Yes&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Your directory structure looks like this:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;my-blog&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;├── content&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── sass&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── static&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;├── templates&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;└── themes&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;configuration-the-foundation&quot;&gt;Configuration: The Foundation&lt;&#x2F;h2&gt;
+&lt;p&gt;Open &lt;code&gt;config.toml&lt;&#x2F;code&gt; and configure the essentials:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;base_url &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;yourdomain.com&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your Blog Name&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;description &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;A brief description of your blog&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Compile Sass files
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;compile_sass &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Enable syntax highlighting for code blocks
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;highlight_code &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;highlight_theme &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;base16-ocean-dark&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Generate RSS feed
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;generate_feed &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;feed_filename &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;rss.xml&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Taxonomies (tags and categories)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;taxonomies &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;feed &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;    {&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;categories&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;feed &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true&lt;&#x2F;span&gt;&lt;span&gt;},
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[markdown]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Enable smart punctuation and other features
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;smart_punctuation &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;highlight_code &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;true
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# Add any custom variables you need
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;author &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Your Name&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;github &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;yourusername&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;twitter &lt;&#x2F;span&gt;&lt;span&gt;= &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;yourusername&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This configuration gives you a solid foundation: RSS feeds, taxonomies for organizing content, and code highlighting.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;content-structure-organizing-your-posts&quot;&gt;Content Structure: Organizing Your Posts&lt;&#x2F;h2&gt;
+&lt;p&gt;Create a blog section in &lt;code&gt;content&#x2F;blog&#x2F;&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;mkdir -p&lt;&#x2F;span&gt;&lt;span&gt; content&#x2F;blog
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create &lt;code&gt;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Blog&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;sort_by = &amp;quot;date&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;template = &amp;quot;blog.html&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;page_template = &amp;quot;blog-page.html&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;paginate_by = 10
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Welcome to my blog where I write about web development, programming, and technology.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This file defines how the blog section behaves:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sort_by = &quot;date&quot;&lt;&#x2F;code&gt; orders posts by publication date&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;paginate_by = 10&lt;&#x2F;code&gt; creates pagination every 10 posts&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;template&lt;&#x2F;code&gt; defines the list view&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;page_template&lt;&#x2F;code&gt; defines individual post view&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;creating-your-first-post&quot;&gt;Creating Your First Post&lt;&#x2F;h2&gt;
+&lt;p&gt;Create &lt;code&gt;content&#x2F;blog&#x2F;hello-world.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Hello World: Starting a New Blog&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;date = 2025-11-16
+&lt;&#x2F;span&gt;&lt;span&gt;description = &amp;quot;My first post on this new blog built with Zola&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;[taxonomies]
+&lt;&#x2F;span&gt;&lt;span&gt;tags = [&amp;quot;meta&amp;quot;, &amp;quot;blogging&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;categories = [&amp;quot;General&amp;quot;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[extra]
+&lt;&#x2F;span&gt;&lt;span&gt;featured = true
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Welcome to my blog! This is my first post built with Zola, and I&amp;#39;m excited to share what I&amp;#39;m learning.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&amp;lt;!-- more --&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## Why Zola?
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;I chose Zola for several reasons:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Fast builds
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Zero dependencies
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Simple configuration
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;- Great multilingual support
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;## What&amp;#39;s Next?
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;I plan to write about web development, share tutorials, and document my learning journey.
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;Stay tuned for more content!
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;&#x2F;code&gt; tag creates a summary break. Text before it appears in post previews.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;templates-building-the-blog-layout&quot;&gt;Templates: Building the Blog Layout&lt;&#x2F;h2&gt;
+&lt;p&gt;Create &lt;code&gt;templates&#x2F;base.html&lt;&#x2F;code&gt; as your foundation:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;&amp;lt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;DOCTYPE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;lang&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ lang | default(value=&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;en&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;) }}&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;charset&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;UTF-8&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;viewport&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;width=device-width, initial-scale=1.0&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{% block title %}{{ config.title }}{% endblock %}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;description&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;content&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{% block description %}{{ config.description }}{% endblock %}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if config.generate_feed %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;link &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;rel&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;alternate&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;application&#x2F;rss+xml&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;RSS&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;#&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;link &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;rel&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&#x2F;&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;#&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ config.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;#&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;Blog&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;#&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;About&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% block content %}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;footer&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;copy;&lt;&#x2F;span&gt;&lt;span&gt; {{ now() | date(format=&amp;quot;%Y&amp;quot;) }} {{ config.extra.author }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;footer&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create &lt;code&gt;templates&#x2F;blog.html&lt;&#x2F;code&gt; for the blog list:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;{% extends &amp;quot;base.html&amp;quot; %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block title %}{{ section.title }} | {{ config.title }}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;{% block description %}{{ section.description | default(value=config.description) }}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block content %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blog-list&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{ section.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {{ section.content | safe }}
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if section.pages %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;posts&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% for page in section.pages %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post-preview&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.permalink }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;datetime&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.date }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.date | date(format=&amp;quot;%B %d, %Y&amp;quot;) }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            {% if page.summary %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{ page.summary | safe }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% elif page.description %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{ page.description }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            {% if page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                {% for tag in page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;                &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ get_taxonomy_url(kind=&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;, name&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tag) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;}}&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;#{{ tag }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                {% endfor %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.permalink }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;Read more →&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endfor %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if paginator %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;pagination&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% if paginator.previous %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ paginator.previous }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;← Newer&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Page {{ paginator.current_index }} of {{ paginator.number_pagers }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        {% if paginator.next %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ paginator.next }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;Older →&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% endblock %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create &lt;code&gt;templates&#x2F;blog-page.html&lt;&#x2F;code&gt; for individual posts:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;{% extends &amp;quot;base.html&amp;quot; %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;{% block description %}{{ page.description | default(value=page.summary) }}{% endblock %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block content %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;blog-post&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{ page.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post-meta&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;datetime&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.date }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.date | date(format=&amp;quot;%B %d, %Y&amp;quot;) }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% if page.extra.reading_time %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;• {{ page.reading_time }} min read&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;span&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span&gt;        {% if page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% for tag in page.taxonomies.tags %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ get_taxonomy_url(kind=&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;tags&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;, name&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;tag) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;}}&lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#bf616a;color:#2b303b;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;#{{ tag }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% endfor %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post-content&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {{ page.content | safe }}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if page.earlier or page.later %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post-navigation&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% if page.earlier %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.earlier.permalink }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;prev&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;← {{ page.earlier.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;        {% if page.later %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.later.permalink }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;next&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.later.title }} →&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% endblock %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;styling-with-sass&quot;&gt;Styling with Sass&lt;&#x2F;h2&gt;
+&lt;p&gt;Create &lt;code&gt;sass&#x2F;style.scss&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;scss&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-scss &quot;&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Variables
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;primary-color&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#2563eb&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;text-color&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#1f2937&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#ffffff&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;border-color&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#e5e7eb&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;$&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;max-width&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;800px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Base styles
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    box-sizing: border-box;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;body &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    font-family: system-ui, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;-apple-system&lt;&#x2F;span&gt;&lt;span&gt;, sans-serif;
+&lt;&#x2F;span&gt;&lt;span&gt;    line-height: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1.6&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;text-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    background: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;background&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Layout
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    border-bottom: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1px &lt;&#x2F;span&gt;&lt;span&gt;solid $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;border-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;nav &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        max-width: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;max-width&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span&gt;auto;
+&lt;&#x2F;span&gt;&lt;span&gt;        padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0 1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        display: flex;
+&lt;&#x2F;span&gt;&lt;span&gt;        gap: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            text-decoration: none;
+&lt;&#x2F;span&gt;&lt;span&gt;            color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;text-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            font-weight: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;500&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;hover &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;                color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;primary-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;first-child &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;                font-weight: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;700&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;                margin-right: auto;
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;main &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    max-width: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;max-width&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2rem &lt;&#x2F;span&gt;&lt;span&gt;auto;
+&lt;&#x2F;span&gt;&lt;span&gt;    padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0 1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;footer &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    border-top: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1px &lt;&#x2F;span&gt;&lt;span&gt;solid $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;border-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2rem 1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    text-align: center;
+&lt;&#x2F;span&gt;&lt;span&gt;    color: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#6b7280&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    margin-top: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;4rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Blog styles
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;post-preview &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    margin-bottom: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        margin-bottom: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.5rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;text-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            text-decoration: none;
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;hover &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;                color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;primary-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        color: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#6b7280&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        font-size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.9rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;blog-post &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;post-content &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h3 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2rem 0 1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;code &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            background: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#f3f4f6&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.2rem 0.4rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            border-radius: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            font-size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.9em&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;pre &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            background: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#1f2937&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            color: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#f3f4f6&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            border-radius: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;5px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            overflow-x: auto;
+&lt;&#x2F;span&gt;&lt;span&gt;            
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;code &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;                background: none;
+&lt;&#x2F;span&gt;&lt;span&gt;                padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            }
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;tags &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    display: flex;
+&lt;&#x2F;span&gt;&lt;span&gt;    gap: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.5rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    flex-wrap: wrap;
+&lt;&#x2F;span&gt;&lt;span&gt;    margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        background: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;#f3f4f6&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.25rem 0.75rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        border-radius: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3px&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        text-decoration: none;
+&lt;&#x2F;span&gt;&lt;span&gt;        color: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;text-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        font-size: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.9rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;        &lt;&#x2F;span&gt;&lt;span&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;:&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;hover &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            background: $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;primary-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;            color: white;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;pagination &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    display: flex;
+&lt;&#x2F;span&gt;&lt;span&gt;    justify-content: space-between;
+&lt;&#x2F;span&gt;&lt;span&gt;    align-items: center;
+&lt;&#x2F;span&gt;&lt;span&gt;    margin: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;3rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    padding: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem 0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    border-top: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1px &lt;&#x2F;span&gt;&lt;span&gt;solid $&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;border-color&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Responsive
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@media &lt;&#x2F;span&gt;&lt;span&gt;(max-width: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;768px&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;header nav &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        flex-direction: column;
+&lt;&#x2F;span&gt;&lt;span&gt;        gap: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1rem&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;adding-homepage&quot;&gt;Adding Homepage&lt;&#x2F;h2&gt;
+&lt;p&gt;Create &lt;code&gt;content&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;markdown&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-markdown &quot;&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;span&gt;title = &amp;quot;Home&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;template = &amp;quot;index.html&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;+++
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create &lt;code&gt;templates&#x2F;index.html&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span&gt;{% extends &amp;quot;base.html&amp;quot; %}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% block content %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;home&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Welcome to {{ config.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;intro&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ config.description }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    
+&lt;&#x2F;span&gt;&lt;span&gt;    {% set blog_section = get_section(path=&amp;quot;blog&#x2F;_index.md&amp;quot;) %}
+&lt;&#x2F;span&gt;&lt;span&gt;    {% if blog_section.pages %}
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;section &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;recent-posts&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;Recent Posts&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h2&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;posts&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% for page in blog_section.pages | slice(end=5) %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;post-preview&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h3&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.permalink }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.title }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;h3&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;datetime&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;{{ page.date }}&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;{{ page.date | date(format=&amp;quot;%B %d, %Y&amp;quot;) }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;time&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                {% if page.description %}
+&lt;&#x2F;span&gt;&lt;span&gt;                &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;{{ page.description }}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;p&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;                {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;            &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;article&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;            {% endfor %}
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;href&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;#&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;class&lt;&#x2F;span&gt;&lt;span&gt;=&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;view-all&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&amp;gt;View all posts →&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;a&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;section&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    {% endif %}
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;{% endblock %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;running-your-blog&quot;&gt;Running Your Blog&lt;&#x2F;h2&gt;
+&lt;p&gt;Start the development server:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Visit &lt;code&gt;http:&#x2F;&#x2F;127.0.0.1:1111&lt;&#x2F;code&gt; to see your blog. Changes to content and templates reload automatically.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;building-for-production&quot;&gt;Building for Production&lt;&#x2F;h2&gt;
+&lt;p&gt;Build your site for deployment:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; build
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The static site is generated in the &lt;code&gt;public&#x2F;&lt;&#x2F;code&gt; directory. Upload these files to any static hosting service.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;deployment-to-github-pages&quot;&gt;Deployment to GitHub Pages&lt;&#x2F;h2&gt;
+&lt;p&gt;Create &lt;code&gt;.github&#x2F;workflows&#x2F;deploy.yml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Deploy to GitHub Pages
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;on&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;push&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;branches&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;jobs&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;runs-on&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;ubuntu-latest
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;steps&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;uses&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;actions&#x2F;checkout@v2
+&lt;&#x2F;span&gt;&lt;span&gt;      
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Install Zola
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;|
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;          wget https:&#x2F;&#x2F;github.com&#x2F;getzola&#x2F;zola&#x2F;releases&#x2F;download&#x2F;v0.18.0&#x2F;zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;          tar xzf zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;          sudo mv zola &#x2F;usr&#x2F;local&#x2F;bin&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;      
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Build
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;run&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;zola build
+&lt;&#x2F;span&gt;&lt;span&gt;      
+&lt;&#x2F;span&gt;&lt;span&gt;      - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Deploy
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;uses&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;peaceiris&#x2F;actions-gh-pages@v3
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;with&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;github_token&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;${{ secrets.GITHUB_TOKEN }}
+&lt;&#x2F;span&gt;&lt;span&gt;          &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;publish_dir&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;.&#x2F;public
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Push to GitHub, enable GitHub Pages in your repository settings, and your blog deploys automatically on every push.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;&#x2F;h2&gt;
+&lt;p&gt;Your blog is now functional. Consider adding:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Featured posts&lt;&#x2F;strong&gt;: Add a &lt;code&gt;featured&lt;&#x2F;code&gt; field to front matter and filter in templates
+&lt;strong&gt;Reading time&lt;&#x2F;strong&gt;: Use &lt;code&gt;{{ page.reading_time }}&lt;&#x2F;code&gt; to show estimated reading time
+&lt;strong&gt;Table of contents&lt;&#x2F;strong&gt;: Enable &lt;code&gt;insert_anchor_links = &quot;left&quot;&lt;&#x2F;code&gt; in config for heading anchors
+&lt;strong&gt;Search&lt;&#x2F;strong&gt;: Implement search with Zola&#x27;s search index feature
+&lt;strong&gt;Comments&lt;&#x2F;strong&gt;: Integrate a commenting system like utterances or Disqus
+&lt;strong&gt;Analytics&lt;&#x2F;strong&gt;: Add analytics with a simple script include&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;key-takeaways&quot;&gt;Key Takeaways&lt;&#x2F;h2&gt;
+&lt;p&gt;Creating a blog with Zola is refreshingly straightforward:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Content is just Markdown&lt;&#x2F;strong&gt; with front matter—no complex APIs or abstractions&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Templates are Tera&lt;&#x2F;strong&gt;—if you know Jinja2, you already know 90% of what you need&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Built-in features eliminate plugins&lt;&#x2F;strong&gt;—Sass, syntax highlighting, RSS, and taxonomies work out of the box&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fast iteration&lt;&#x2F;strong&gt;—changes appear instantly during development&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Simple deployment&lt;&#x2F;strong&gt;—static files can be hosted anywhere&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The key to productive Zola development is embracing its opinions. The structure might feel restrictive at first, but it eliminates decision fatigue and lets you focus on content.&lt;&#x2F;p&gt;
+&lt;p&gt;Start simple, write content, and expand as you need more features. Zola gets out of your way and lets you build.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

@@ -1,0 +1,144 @@
+/* ============================================================================
+         * HEADER SECTION
+         * ============================================================================ */
+
+.header {
+    text-align: center;
+    margin-bottom: var(--theme-section-gap);
+}
+
+.header h1 {
+    font-size: var(--theme-title-size);
+    font-weight: var(--theme-title-weight);
+    margin-bottom: var(--space-4);
+    letter-spacing: var(--letter-spacing-tight);
+    color: var(--theme-title-color);
+}
+
+.header p {
+    font-size: var(--theme-body-size);
+    color: var(--theme-body-color);
+    font-weight: var(--font-weight-normal);
+}
+
+/* ============================================================================
+         * TOPICS COUNT
+         * ============================================================================ */
+
+.topics-count {
+    text-align: left;
+    margin-bottom: var(--space-8);
+    font-size: var(--theme-meta-size);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-wider);
+    color: var(--theme-text-tertiary);
+    text-transform: uppercase;
+}
+
+/* ============================================================================
+         * TAGS GRID
+         * ============================================================================ */
+
+.tags-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--theme-card-gap);
+    margin-bottom: var(--space-10);
+}
+
+/* ============================================================================
+         * TAG CARD
+         * ============================================================================ */
+
+.tag-card {
+    background: var(--theme-tag-card-bg);
+    border: var(--theme-tag-card-border);
+    border-radius: var(--theme-tag-card-radius);
+    padding: var(--theme-tag-card-padding);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--theme-transition-normal) var(--theme-transition-ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.tag-card a {
+    text-decoration: none;
+}
+
+.tag-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        var(--theme-primary) 0%,
+        var(--theme-primary-hover) 100%
+    );
+    opacity: 0;
+    transition: opacity var(--theme-transition-normal)
+        var(--theme-transition-ease);
+}
+
+.tag-card:hover {
+    transform: var(--theme-hover-lift);
+    background: var(--theme-tag-card-bg);
+    border-color: var(--theme-tag-card-hover-border);
+    box-shadow: var(--theme-card-hover-shadow);
+}
+
+.tag-card:hover::before {
+    opacity: 0.05;
+}
+
+.tag-icon {
+    font-size: var(--theme-tag-icon-size);
+    margin-bottom: var(--space-5);
+    display: inline-block;
+    transition: transform var(--theme-transition-normal)
+        var(--theme-transition-ease);
+    position: relative;
+    z-index: 1;
+}
+
+.tag-card:hover .tag-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.tag-name {
+    font-size: var(--theme-tag-name-size);
+    font-weight: var(--theme-tag-name-weight);
+    margin-bottom: var(--space-2);
+    color: var(--theme-tag-name-color);
+    position: relative;
+    z-index: 1;
+}
+
+.tag-count {
+    font-size: var(--theme-body-size);
+    color: var(--theme-body-color);
+    font-weight: var(--font-weight-normal);
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================================
+         * RESPONSIVE DESIGN
+         * ============================================================================ */
+
+/* Tablet: 2 columns */
+@media (min-width: 640px) {
+    .tags-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .tags-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -55,7 +55,7 @@
   <!-- Begin Head inject -->
   
   <!-- End Head inject -->
-  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=80ece4d015818ae93fff" />
+  <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/main.min.css?h=78462684530fb1a48e39" />
   <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/icons.css?h=7dd5ab449fa840fc01e2" />
   <style>:root{--bg: #f4f4f5; --header: #e4e4e7;} :root.dark{--bg: #18181b; --header: #27272a;}</style>
   <meta name="theme-color" data-light="#e4e4e7" data-dark="#27272a" content="#e4e4e7" />
@@ -234,27 +234,25 @@
 
   <!-- Content -->
   <section><p>Linkita 테마는 여러 숏코드(shortcode)를 제공합니다.</p>
-<p>숏코드에 대해 처음 들어보셨나요? 더 많은 정보는 <a href="https://www.getzola.org/documentation/content/shortcodes/">Zola 문서</a>를 참조하세요.</p>
+<p>숏코드에 대해 처음 들어보셨나요? 더 많은 정보는 <a rel="external" href="https://www.getzola.org/documentation/content/shortcodes/">Zola 문서</a>를 참조하세요.</p>
 <h2 id="mermaid-header">Mermaid</h2>
 <p>페이지에서 Mermaid를 사용하려면, 페이지의 프론트매터에서 <code>extra.mermaid = true</code>로 설정해야 합니다.</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>+++
-</span><span style="color:#ffb964;">title </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">페이지 제목</span><span style="color:#556633;">&quot;
-</span><span>
-</span><span>[</span><span style="color:#ffb964;">extra</span><span>]
-</span><span style="color:#ffb964;">mermaid </span><span>= true
-</span><span>+++
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">title</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">페이지 제목</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>[</span><span style="color: light-dark(#000000, #FFA657);">extra</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">mermaid</span><span> =</span><span style="color: light-dark(#0000FF, #79C0FF);"> true</span></span>
+<span class="giallo-l"><span style="color: light-dark(#CD3131, #FFA198);">+++</span></span></code></pre>
 <p>그런 다음 <code>mermaid()</code> 숏코드를 다음과 같이 사용할 수 있습니다:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>graph TD;
-</span><span>A--&gt;B;
-</span><span>A--&gt;C;
-</span><span>B--&gt;D;
-</span><span>C--&gt;D;
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>graph TD;</span></span>
+<span class="giallo-l"><span>A--&gt;B;</span></span>
+<span class="giallo-l"><span>A--&gt;C;</span></span>
+<span class="giallo-l"><span>B--&gt;D;</span></span>
+<span class="giallo-l"><span>C--&gt;D;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>이것은 다음과 같이 렌더링됩니다:</p>
 <pre class="mermaid bg-inherit" translate="no">
   graph TD;
@@ -265,24 +263,23 @@ C--&gt;D;
 </pre>
 <p>또한, <code>mermaid()</code> 숏코드 안에 코드 블록을 사용할 수 있으며, 이 코드 블록은 무시됩니다.</p>
 <p>코드 블록을 사용하면 포맷터가 Mermaid의 서식을 깨뜨리는 것을 방지할 수 있습니다.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% mermaid() %}
-</span><span>
-</span><span>```</span><span style="color:#7697d6;">mermaid
-</span><span>sequenceDiagram
-</span><span>    participant Alice
-</span><span>    participant Bob
-</span><span>    Alice-&gt;&gt;John: Hello John, how are you?
-</span><span>    loop Healthcheck
-</span><span>        John-&gt;&gt;John: Fight against hypochondria
-</span><span>    end
-</span><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!
-</span><span>    John--&gt;&gt;Alice: Great!
-</span><span>    John-&gt;&gt;Bob: How about you?
-</span><span>    Bob--&gt;&gt;John: Jolly good!
-</span><span>```
-</span><span>
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% mermaid() %}</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>```</span><span>mermaid</span></span>
+<span class="giallo-l"><span>sequenceDiagram</span></span>
+<span class="giallo-l"><span>    participant Alice</span></span>
+<span class="giallo-l"><span>    participant Bob</span></span>
+<span class="giallo-l"><span>    Alice-&gt;&gt;John: Hello John, how are you?</span></span>
+<span class="giallo-l"><span>    loop Healthcheck</span></span>
+<span class="giallo-l"><span>        John-&gt;&gt;John: Fight against hypochondria</span></span>
+<span class="giallo-l"><span>    end</span></span>
+<span class="giallo-l"><span>    Note right of John: Rational thoughts &lt;br/&gt;prevail!</span></span>
+<span class="giallo-l"><span>    John--&gt;&gt;Alice: Great!</span></span>
+<span class="giallo-l"><span>    John-&gt;&gt;Bob: How about you?</span></span>
+<span class="giallo-l"><span>    Bob--&gt;&gt;John: Jolly good!</span></span>
+<span class="giallo-l"><span>```</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>이것은 다음과 같이 렌더링됩니다:</p>
 <pre class="mermaid bg-inherit" translate="no">
   
@@ -302,10 +299,9 @@ sequenceDiagram
 <h2 id="gyeonggo-sangja">경고 상자</h2>
 <p><code>admonition()</code> 숏코드는 페이지에 공지를 띄울 수 있도록 배너를 표시합니다.</p>
 <p><code>admonition()</code> 숏코드는 다음과 같이 사용할 수 있습니다:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{% admonition(type=&quot;tip&quot;, title=&quot;팁&quot;) %}
-</span><span>`tip` 타입의 경고 상자입니다.
-</span><span>{% end %}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{% admonition(type=&quot;tip&quot;, title=&quot;팁&quot;) %}</span></span>
+<span class="giallo-l"><span style="color: light-dark(#800000, #79C0FF);">`</span><span style="color: light-dark(#800000, #79C0FF);">tip</span><span style="color: light-dark(#800000, #79C0FF);">`</span><span> 타입의 경고 상자입니다.</span></span>
+<span class="giallo-l"><span>{% end %}</span></span></code></pre>
 <p>경고 상자 숏코드에는 12가지 다른 타입이 있습니다:</p>
 
 <link rel="stylesheet" href="https://salif.github.io/zola-themes-collection/demo/linkita/admonition.css?h=98c1477488c4b2c9d71a" type="text/css">
@@ -526,10 +522,8 @@ sequenceDiagram
 </div>
 <h2 id="gaelreori">갤러리</h2>
 <p><code>gallery()</code> 숏코드는 페이지 에셋의 모든 이미지를 표시하는 매우 간단한 HTML 전용 클릭형 사진 갤러리입니다.</p>
-<p>이 숏코드는 <a href="https://www.getzola.org/documentation/content/image-processing/">Zola 문서</a>에서 가져왔습니다.</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>{{ gallery() }}
-</span></code></pre>
-<div class="not-prose flex flex-wrap gap-2">
+<p>이 숏코드는 <a rel="external" href="https://www.getzola.org/documentation/content/image-processing/">Zola 문서</a>에서 가져왔습니다.</p>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>{{ gallery() }}</span></span></code></pre><div class="not-prose flex flex-wrap gap-2">
 
   <a href="https://salif.github.io/zola-themes-collection/demo/linkita/ko/shortcodes/01-zola.png" target="_blank">
     <img class="rounded-lg" src="https://salif.github.io/zola-themes-collection/demo/linkita/processed_images/01-zola.b673627618ae4d9e.png" alt="갤러리 데모 이미지" />
@@ -559,24 +553,22 @@ sequenceDiagram
 <h2 id="peurojegteu">프로젝트</h2>
 <p><code>projects()</code> 숏코드를 사용하면 프로젝트 페이지를 만들 수 있습니다.</p>
 <p><code>content/pages/projects/index.md</code> 파일을 만드세요:</p>
-<pre data-lang="markdown" style="background-color:#151515;color:#e8e8d3;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span>+++
-</span><span>title = &quot;내 프로젝트&quot;
-</span><span>description = &quot;&quot;
-</span><span>path = &quot;projects&quot;
-</span><span>+++
-</span><span>
-</span><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="markdown"><span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"><span>title = &quot;내 프로젝트&quot;</span></span>
+<span class="giallo-l"><span>description = &quot;&quot;</span></span>
+<span class="giallo-l"><span>path = &quot;projects&quot;</span></span>
+<span class="giallo-l"><span>+++</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span>{{ projects(path=&quot;data.toml&quot;, format=&quot;toml&quot;) }}</span></span></code></pre>
 <p><code>content/pages/projects/data.toml</code> 파일을 만드세요:</p>
-<pre data-lang="toml" style="background-color:#151515;color:#e8e8d3;" class="language-toml "><code class="language-toml" data-lang="toml"><span>[[</span><span style="color:#ffb964;">project</span><span>]]
-</span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">desc </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Lorem ipsum dolor sit.</span><span style="color:#556633;">&quot;
-</span><span style="color:#ffb964;">tags </span><span>= [</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">lorem</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">ipsum</span><span style="color:#556633;">&quot;</span><span>]
-</span><span style="color:#ffb964;">links </span><span>= [
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">homepage</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>    { </span><span style="color:#ffb964;">name </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">source</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">url </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">https://example.com</span><span style="color:#556633;">&quot; </span><span>},
-</span><span>]
-</span></code></pre>
+<pre class="giallo" style="color-scheme: light dark; color: light-dark(#000000, #E6EDF3); background-color: light-dark(#FFFFFF, #0D1117);"><code data-lang="toml"><span class="giallo-l"><span>[[</span><span style="color: light-dark(#000000, #FFA657);">project</span><span>]]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">desc</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">Lorem ipsum dolor sit.</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">tags</span><span> =</span><span> [</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">lorem</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">ipsum</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>]</span></span>
+<span class="giallo-l"><span style="color: light-dark(#001080, #E6EDF3);">links</span><span> =</span><span> [</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">homepage</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>    {</span><span style="color: light-dark(#001080, #E6EDF3);"> name</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">source</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span>,</span><span style="color: light-dark(#001080, #E6EDF3);"> url</span><span> =</span><span style="color: light-dark(#A31515, #A5D6FF);"> &quot;</span><span style="color: light-dark(#A31515, #A5D6FF);">https://example.com</span><span style="color: light-dark(#A31515, #A5D6FF);">&quot;</span><span> }</span><span>,</span></span>
+<span class="giallo-l"><span>]</span></span></code></pre>
 <p>이것은 다음과 같이 표시됩니다:</p>
 
 <div class="not-prose text-base leading-7 block-bg my-4 flex w-full flex-col rounded-lg px-5 py-1.5">
@@ -652,7 +644,7 @@ sequenceDiagram
   <!-- Footer -->
 <footer class="mx-auto flex lg:mt-5 max-w-3xl flex-wrap items-center px-4 py-3 text-sm opacity-60">
   <div class="mr-auto basis-full lg:basis-1/2">
-  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+  © <time datetime="2020">2020</time> - <time datetime="2026">2026</time> Linkita | <a rel="external" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
   </div>
   <div class="flex basis-full lg:basis-1/2 lg:justify-end">
     <span class="mr-6 lg:ml-6">

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - diagram</title>
+    <link rel="self" type="application/atom+xml" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/tags/diagram/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2023-09-26T00:00:00+00:00</updated>
+    <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/tags/diagram/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Diagrams with Mermaid</title>
+        <published>2023-09-26T00:00:00+00:00</published>
+        <updated>2023-09-26T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Thomas Weitzel
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/"/>
+        <id>https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/</id>
+        
+        <content type="html" xml:base="https://salif.github.io/zola-themes-collection/demo/zolarwind/blog/mermaid/">&lt;h2 id=&quot;what-are-mermaid-diagrams&quot;&gt;What are Mermaid diagrams&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&quot;&gt;Mermaid&lt;&#x2F;a&gt; is a syntax similar to Markdown where you can use text to describe and automatically generate diagrams.
+With Mermaid, you can generate
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;flowchart.html&quot;&gt;Flow charts&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;classDiagram.html&quot;&gt;UML diagrams&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;pie.html&quot;&gt;Pie charts&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;gantt.html&quot;&gt;Gantt diagrams&lt;&#x2F;a&gt;,
+&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;mermaid.js.org&#x2F;syntax&#x2F;entityRelationshipDiagram.html&quot;&gt;Entity Relationship diagrams&lt;&#x2F;a&gt;,
+and more.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-entity-relationship-diagram-example&quot;&gt;An Entity Relationship diagram example&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;mermaid&quot;&gt;
+  
+    %%{ init: {&#x27;theme&#x27;: &#x27;forest&#x27;} }%%
+  
+  erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINEITEM : contains
+    PRODUCT ||--o{ LINEITEM : is_listed_in
+    CUSTOMER {
+        string Name
+        string Email
+        string Address
+    }
+    PRODUCT {
+        string ProductName
+        float Price
+    }
+    ORDER {
+        date DateOrdered
+        string Status
+    }
+    LINEITEM {
+        int Quantity
+    }
+&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;using-mermaid-in-your-blog-post&quot;&gt;Using Mermaid in your blog post&lt;&#x2F;h2&gt;
+&lt;p&gt;The diagram shortcode allows you to easily embed Mermaid diagrams in your blog posts, with an option to configure its appearance.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;basic-usage&quot;&gt;Basic Usage&lt;&#x2F;h3&gt;
+&lt;p&gt;To use the shortcode in your blog post, you would use the following format:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Replace &lt;em&gt;Your Mermaid diagram code here&lt;&#x2F;em&gt; with your actual Mermaid diagram code.&lt;&#x2F;p&gt;
+&lt;p&gt;To load the necessary JavaScript to render the Mermaid diagram, you need to enable it in the front matter of your blog post by setting the value for &lt;code&gt;extra.diagram&lt;&#x2F;code&gt; to &lt;code&gt;true&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;ini&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;extra&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-keyword&quot;&gt;diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator&quot;&gt; =&lt;&#x2F;span&gt;&lt;span&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;+++&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;configuring-the-appearance&quot;&gt;Configuring the Appearance&lt;&#x2F;h3&gt;
+&lt;p&gt;The shortcode supports an optional &lt;code&gt;init&lt;&#x2F;code&gt; parameter, that allows you to specify configuration options for Mermaid,
+particularly changing the appearance of the diagrams through the theme.&lt;&#x2F;p&gt;
+&lt;p&gt;For example, to apply the &lt;code&gt;forest&lt;&#x2F;code&gt; theme:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;providing-init-configuration&quot;&gt;Providing init Configuration&lt;&#x2F;h3&gt;
+&lt;p&gt;When using the &lt;code&gt;init&lt;&#x2F;code&gt; parameter, the configuration should be a string wrapped in double quotes.
+Inside this string, use single quotes for keys and values.&lt;&#x2F;p&gt;
+&lt;p&gt;Here&#x27;s a more advanced example with multiple configuration options:&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;, &amp;#39;themeVariables&amp;#39;: {&amp;#39;primaryColor&amp;#39;: &amp;#39;#FF0000&amp;#39;}}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;Your&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Mermaid&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; code&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; here&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;In this example, we&#x27;re using the &lt;code&gt;forest&lt;&#x2F;code&gt; theme and changing the primary color to red (&lt;code&gt;#FF0000&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;: Ensure that you use single quotes inside the double quotes for the configuration to work correctly.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;&#x2F;h3&gt;
+&lt;p&gt;Use the shortcode by enclosing your Mermaid diagram code with it.
+To change the look of the Mermaid theme, provide values for the &lt;code&gt;init&lt;&#x2F;code&gt; parameter.
+Always enclose the &lt;code&gt;init&lt;&#x2F;code&gt; value with double quotes, and use single quotes inside the configuration string.
+With this shortcode in place, integrating and customizing Mermaid diagrams in your blog posts becomes easy.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;explaining-mermaid-diagram-code&quot;&gt;Explaining Mermaid diagram code&lt;&#x2F;h2&gt;
+&lt;p&gt;Here is how the diagram rendered above is embedded in this blog post as a code block.
+Because it is the same code as the diagram above, extra care has to be taken to prevent Mermaid from rendering it as a diagram.
+There is a &lt;code&gt;showcode()&lt;&#x2F;code&gt; shortcode to prevent Mermaid from rendering it as a diagram.
+Use &lt;code&gt;SC_OPEN&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;SC_CLOSE&lt;&#x2F;code&gt; for &lt;code&gt;{%&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;%}&lt;&#x2F;code&gt; and &lt;code&gt;EX_OPEN&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;EX_CLOSE&lt;&#x2F;code&gt; for &lt;code&gt;{{&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;}}&lt;&#x2F;code&gt; inside the fenced block.&lt;&#x2F;p&gt;
+
+
+&lt;pre class=&quot;giallo z-code&quot;&gt;&lt;code data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function&quot;&gt; diagram&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;init&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;=&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;{&amp;#39;theme&amp;#39;: &amp;#39;forest&amp;#39;}&lt;&#x2F;span&gt;&lt;span class=&quot;z-string&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    CUSTOMER&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;o&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; places&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;|&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; contains&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    PRODUCT&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt; ||&lt;&#x2F;span&gt;&lt;span class=&quot;z-keyword z-keyword z-operator&quot;&gt;--&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;o&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;{&lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name&quot;&gt; LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-punctuation z-separator&quot;&gt; :&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; is_listed_in&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    CUSTOMER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Name&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Email&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Address&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    PRODUCT&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; ProductName&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        float&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Price&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    ORDER&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        date&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; DateOrdered&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        string&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Status&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;    LINEITEM&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt;        int&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; Quantity&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-meta z-block&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt;&amp;#123;%&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-variable&quot;&gt; end&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-other z-constant z-variable&quot;&gt; %&amp;#125;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        
+    </entry>
+</feed>
